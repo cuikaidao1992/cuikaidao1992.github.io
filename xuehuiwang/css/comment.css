@@ -360,6 +360,7 @@ body {
 .site-adv {
     height: 100px;
     position: relative;
+    overflow: hidden;
 }
 .site-adv .link_topLayer{height: 100px;display: block}
 .site-adv .toplayer-close {
