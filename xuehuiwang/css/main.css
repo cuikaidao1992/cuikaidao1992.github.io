@@ -261,7 +261,7 @@
     width: 972px;
     height: 460px;
     position: relative;
-    left: 228px;
+    left: 0;
 }
 
 .slide {
@@ -279,7 +279,7 @@
 }
 
 .banner .slide li a img {
-    width: 972px;
+    width: 1200px;
     height: 460px;
 }
 
@@ -293,7 +293,7 @@
     min-width: 37px;
     z-index: 10;
     right: 50%;
-    margin-right: -65px;
+    margin-right: -260px;
 }
 
 .banner .slider-nav li {
@@ -312,7 +312,7 @@
 
 .banner .arrow li {
     position: absolute;
-    left: 50%;
+    left:50%;
     top: 50%;
     opacity: 0;
     width: 41px;
@@ -324,13 +324,13 @@
 
 .banner .arrow li.prev {
     background-position: 0 -97px;
-    margin-left: -486px;
+    margin-left: -258px;
     margin-top: -35px;
 }
 
 .banner .arrow li.next {
     background-position: -70px -97px;
-    margin-left: 445px;
+    margin-left: 672px;
     margin-top: -35px;
 }
 
@@ -362,6 +362,9 @@
     padding-bottom: 5px;
     padding-top: 5px;
     padding-right: 1px;
+}
+.quick_nav li span{
+    font-size: 12px
 }
 .quick_nav li:before, .quick_nav li:after {
     position: absolute;
