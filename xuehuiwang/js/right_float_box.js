@@ -7,7 +7,7 @@ $(function(){
         });
     }else{
         $('#right_float ul li').mouseenter(function(){
-            $(this).find('.up p').stop(false).animate({top:-52},350);
+            $(this).find('.up p').stop(false).animate({top:-43},350);
         }).mouseleave(function(){
             $(this).find('.up p').stop(false).animate({top:0},350);
         });
