@@ -151,29 +151,6 @@ $(function(){
     }).mouseout(function () {
         $(this).removeClass('current')
     });
-    /*$(function () {
-     var headerHeight = $('#header').outerHeight();
-     var navlstHeight = headerHeight + $('#nav-list').outerHeight();
-     $(".small_type>ul>li").mouseover(function () {
-     var Hst = $(this).children(".sub_type").outerHeight();
-     var Hws = window.screen.availHeight;
-     //$(this).addClass("current").siblings().removeClass("current");
-     if (Hst > Hws) {
-     $(this).children(".sub_type").removeClass("fix").addClass("absolute");
-     }
-     });
-
-     /!*$(window).scroll(function () {
-     var val = $(document).scrollTop();
-     if (val > headerHeight)
-     $(".sub_type:not('.absolute')").addClass("fix");
-     else
-     $(".sub_type").removeClass("fix");
-     if (val > navlstHeight)
-     $('.small_type>ul>li').removeClass("current");
-
-     })*!/
-     });*/
     subMenu();
     function subMenu() {
         var $eachLi = $('.each_classify'), h0 = $eachLi.outerHeight();
@@ -217,36 +194,61 @@ $(function(){
                 block.css({'top': t, 'backgroundPosition': '-220px' + ' ' + (-t) + 'px'});
             }
         }
-
-        //ul高度＞banner高度时：
-        /*lastBorder(maxL - 1, true);
-        if (maxL > 8) {
-            $('.classify_all').css({'height': h2, 'overflow': 'hidden'});
-            lastBorder(7, true);
-            $('.classify_all').hover(function () {
-                $(this).css({'height': h1, 'overflow': 'visible'});
-                lastBorder(7, false);
-            }, function () {
-                $(this).css({'height': h2, 'overflow': 'hidden'});
-                lastBorder(7, true);
-            });
-        } else {
-            $('.classify_all').css({'height': h2, 'overflow': 'visible'});
-        }*/
-        /*//判断是否添加下边框虚线 each_classify_inner_last
-        function lastBorder(i, boolean) {
-            if (arguments[1]) {
-                $eachLi.eq(i).find('.each_classify_inner').addClass('each_classify_inner_last');
-            } else {
-                $eachLi.eq(i).find('.each_classify_inner').removeClass('each_classify_inner_last');
-            }
-        }*/
     }
     /*home*/
     $(".nav-item a").mouseenter(function(){
         $(this).find("em").animate({"top":"0"}, 100);
         $(this).find("em").animate({"top":"14px"}, 100);
     });
+    /*畅销好课*/
+    var cxTimer=null;
+    function autoPlay(){
+        cxTimer=setInterval(function(){
+            if($("#mainbox").position().left==0){
+                $("#mainbox").animate({
+                    left:-1200
+                },600);
+                $(".btn-next").addClass("control-disabled");
+                $(".btn-prev").removeClass("control-disabled");
+            }else {
+                $(".btn-prev").addClass("control-disabled");
+                $(".btn-next").removeClass("control-disabled");
+                $("#mainbox").animate({
+                    left:0
+                });
+            }
+        },5000);
+    }
+    autoPlay();
+    $(".btn-next").mouseover(function(){
+        clearInterval(cxTimer);
+    });
+    $(".btn-next").mouseout(function(){
+        autoPlay()
+    });
+
+    $(".btn-prev").mouseover(function(){
+        clearInterval(cxTimer);
+    })
+    $(".btn-prev").mouseout(function(){
+        autoPlay()
+    })
+    $(".btn-next").click(function(){
+        $("#mainbox").animate({
+            left:-1200
+        });
+        $(this).prev().removeClass("control-disabled");
+        $(this).addClass("control-disabled")
+    })
+    $(".btn-prev").click(function(){
+        $("#mainbox").animate({
+            left:0
+        });
+        $(this).next().removeClass("control-disabled");
+        $(this).addClass("control-disabled")
+    });
+
+
     /*教育模块*/
     $(".brick-item").hover(function(){
         $(this).addClass("brick-item-active");
@@ -268,7 +270,7 @@ $(function(){
     var iNow2=0;
     var iNow3=0;
     var iwidth=$(".item-list li").width();
-    $(".control-next").click(function(){
+    $(".group-list .control-next").click(function(){
         var i=$(this).parent().parent().index();
        if(i==0){
            if(iNow0<3){
@@ -304,7 +306,7 @@ $(function(){
            }
        }
     });
-    $(".control-prev").click(function(){
+    $(".group-list .control-prev").click(function(){
         var i=$(this).parent().parent().index();
         if(i==0){
             if(iNow0>0){

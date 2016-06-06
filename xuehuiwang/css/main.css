@@ -463,6 +463,12 @@
 }
 
 /*推荐课程*/
+.c_contmain{
+    width: 1200px;
+    height:315px;
+    overflow: hidden;
+    position: relative;
+}
 .home-promo-list {
     width: 957px;
     float: right;
@@ -600,19 +606,31 @@
 
 .box-hd .more {
     position: absolute;
-    top: 0;
+    top: 24px;
     right: 0
 }
-
-.box-hd .more .more-link {
-    display: inline-block;
-    padding-top: 8px;
-    font-size: 16px;
-    line-height: 50px;
-    color: #424242;
+.xh-controls .control-disabled {
+    cursor: default;
+    color: #e0e0e0;
 }
 
-.box-hd .more .more-link:hover {
+.xh-controls a {
+    float: left;
+    width: 24px;
+    height: 16px;
+    padding: 3px 5px;
+    border: 1px solid #e0e0e0;
+    margin-left: -1px;
+    font-size: 25px;
+    line-height: 16px;
+    display: inline-block;
+    text-align: center;
+    color: #b0b0b0;
+    -webkit-transition: color .5s;
+    transition: color .5s;
+}
+
+.box-hd .more a:hover {
     color: #36d38c;
 }
 
@@ -659,128 +677,14 @@
 }
 
 .mainbox {
-    width: 1200px;
-    margin: 0 auto;
+    width:1200px;
     margin-bottom: 15px;
+    position: absolute;
+    left: 0;
 }
-
-.c_contmain del ul li {
-    -moz-animation: mycontmain 3s; /* Firefox */
-    -webkit-animation: mycontmain 3s; /* Safari and Chrome */
-    -o-animation: mycontmain 3s; /* Opera */
+#mainbox{
+    width:2415px;
 }
-
-@keyframes mycontmain {
-    0% {
-        filter: alpha(opacity=0);
-        -moz-opacity: 0;
-        -khtml-opacity: 0;
-        opacity: 0;
-    }
-    25% {
-        filter: alpha(opacity=100);
-        -moz-opacity: 1;
-        -khtml-opacity: 1;
-        opacity: 1;
-    }
-    50% {
-        filter: alpha(opacity=100);
-        -moz-opacity: 1;
-        -khtml-opacity: 1;
-        opacity: 1;
-    }
-    100% {
-        filter: alpha(opacity=100);
-        -moz-opacity: 1;
-        -khtml-opacity: 1;
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes mycontmain /* Firefox */
-{
-    0% {
-        filter: alpha(opacity=0);
-        -moz-opacity: 0;
-        -khtml-opacity: 0;
-        opacity: 0;
-    }
-    25% {
-        filter: alpha(opacity=100);
-        -moz-opacity: 1;
-        -khtml-opacity: 1;
-        opacity: 1;
-    }
-    50% {
-        filter: alpha(opacity=100);
-        -moz-opacity: 1;
-        -khtml-opacity: 1;
-        opacity: 1;
-    }
-    100% {
-        filter: alpha(opacity=100);
-        -moz-opacity: 1;
-        -khtml-opacity: 1;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes mycontmain /* Safari and Chrome */
-{
-    0% {
-        filter: alpha(opacity=0);
-        -moz-opacity: 0;
-        -khtml-opacity: 0;
-        opacity: 0;
-    }
-    25% {
-        filter: alpha(opacity=100);
-        -moz-opacity: 1;
-        -khtml-opacity: 1;
-        opacity: 1;
-    }
-    50% {
-        filter: alpha(opacity=100);
-        -moz-opacity: 1;
-        -khtml-opacity: 1;
-        opacity: 1;
-    }
-    100% {
-        filter: alpha(opacity=100);
-        -moz-opacity: 1;
-        -khtml-opacity: 1;
-        opacity: 1;
-    }
-}
-
-@-o-keyframes mycontmain /* Opera */
-{
-    0% {
-        filter: alpha(opacity=0);
-        -moz-opacity: 0;
-        -khtml-opacity: 0;
-        opacity: 0;
-    }
-    25% {
-        filter: alpha(opacity=100);
-        -moz-opacity: 1;
-        -khtml-opacity: 1;
-        opacity: 1;
-    }
-    50% {
-        filter: alpha(opacity=100);
-        -moz-opacity: 1;
-        -khtml-opacity: 1;
-        opacity: 1;
-    }
-    100% {
-        filter: alpha(opacity=100);
-        -moz-opacity: 1;
-        -khtml-opacity: 1;
-        opacity: 1;
-    }
-}
-
 .c_contmain ul li {
     float: left;
     width: 228px;
@@ -1687,13 +1591,11 @@
     right: 0;
 }
 .xm-controls-block-small .control {
-    display: block;
     width: 20px;
     height: 24px;
     padding: 12px 0;
     font-size: 20px;
     line-height: 24px;
-    overflow: hidden;
     background-color: #b0b0b0;
     background-color: rgba(66,66,66,0.2);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#33424242", endColorstr="#33424242")\9;
