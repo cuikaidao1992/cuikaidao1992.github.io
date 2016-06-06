@@ -222,6 +222,7 @@
     background: #fff;
     width: 198px;
     position: relative;
+    margin-left: 1px;
     z-index: 100;
 }
 .nav-list .current .side_left_type .title a{

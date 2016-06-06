@@ -405,6 +405,7 @@ body {
 .site-header .flash-img{
     float: left;
     width: 100px;
+    height: 100px;
     padding:0 15px;
 }
 .site-header .header-nav {
