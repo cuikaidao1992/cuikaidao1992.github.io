@@ -404,9 +404,9 @@ body {
 }
 .site-header .flash-img{
     float: left;
-    width: 100px;
+    width: 120px;
+    padding-right: 10px;
     height: 100px;
-    padding:0 15px;
 }
 .site-header .header-nav {
     float: left;
