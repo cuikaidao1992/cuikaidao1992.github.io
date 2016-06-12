@@ -118,7 +118,7 @@ $(function(){
         clearTimeout(subTimer1);
         navSubMenu.addClass("header-nav-menu-active");
         navSubMenu.animate({
-            height:210
+            height:190
         },250);
     }).mouseleave(function(){
         subTimer1=setTimeout(function(){
