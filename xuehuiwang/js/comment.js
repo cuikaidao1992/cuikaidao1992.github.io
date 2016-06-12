@@ -206,7 +206,7 @@ $(function(){
         cxTimer=setInterval(function(){
             if($("#mainbox").position().left==0){
                 $("#mainbox").animate({
-                    left:-1200
+                    left:-1215
                 },600);
                 $(".btn-next").addClass("control-disabled");
                 $(".btn-prev").removeClass("control-disabled");
