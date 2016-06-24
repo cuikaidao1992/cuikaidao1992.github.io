@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/es-icon.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div class="login-content">
+    <div class="login-view" style="display: block">
+        <div class="login-head">
+            <h3>欢迎登录学慧网</h3>
+        </div>
+        <div class="login-body">
+            <div class="xh-input input-username">
+                <input type="text" class="username" name="username" autocomplete="off" autocapitalize="off" autocorrect="off" data-enable-clean="true" data-rule-required="true" placeholder="手机号/用户名/邮箱" data-hp-widgets="1">
+                <i class="es-icon es-icon-person"></i>
+                <span class="xh-err-tips">该用户未注册</span>
+                <span class="xh-icon xh-flag"></span>
+            </div>
+            <div class="xh-input input-password">
+                <input type="password" class="password" name="password" data-rule-required="true" maxlength="20" placeholder="密码" data-hp-widgets="2">
+                <i class="es-icon es-icon-lock1"></i>
+            </div>
+            <div class="for-rem">
+                <a class="xh-input forget-password" href="javascript:;">忘记密码？</a>
+                <label class="rememberme"><input type="hidden"  value="0"><label>
+                    <input type="checkbox" id="loginform-rememberme"> 下次自动登录</label>
+                </label>
+            </div>
+            <div class="submit">
+                <button class="btn" type="submit">登&nbsp;&nbsp;录</button>
+                <p>
+                    还没有账号？
+                    <a href="javascript:;" class="register-now">马上注册</a>
+                </p>
+            </div>
+            <div class="social">
+                <span>社交账号登录：</span>
+                <a href="#" class="es-icon es-icon-qq"></a>
+                <a href="#" class="es-icon es-icon-weixin"></a>
+                <a href="#" class="es-icon es-icon-weibo"></a>
+            </div>
+        </div>
+    </div>
+    <div class="login-view">
+        <a href="javascript:;" class="left es-icon es-icon-chevronleft"></a>
+        <div class="login-head">
+            <h3>选择密码重置方式</h3>
+        </div>
+        <div class="login-body">
+            <div class="reset-choose clearfix">
+                <a class="xh-sms" href="javascript:;">
+                    <p><span class="xh-icon xh-icon-sms"></span></p>
+                    <span class="xh-name">短信</span>
+                </a>
+                <a class="xh-email" href="javascript:;">
+                    <p><span class="xh-icon xh-icon-email"></span></p>
+                    <span class="xh-name">邮箱</span>
+                </a>
+            </div>
+            <div class="social">
+                <span>社交账号登录：</span>
+                <a href="#" class="es-icon es-icon-qq"></a>
+                <a href="#" class="es-icon es-icon-weixin"></a>
+                <a href="#" class="es-icon es-icon-weibo"></a>
+            </div>
+        </div>
+    </div>
+    <div class="login-view">
+        <a href="javascript:;" class="left es-icon es-icon-chevronleft"></a>
+        <div class="login-head">
+            <h3>短息重置密码</h3>
+        </div>
+        <div class="login-body">
+            <div class="xh-input input-telephone">
+                <input class="hp-mobileno" name="mobile" data-enable-clean="true" data-rule-cellphone="true" data-rule-required="true" type="tel" maxlength="11" placeholder="填写手机号" data-hp-widgets="21"><span class="hp-icon hp-icon-del hp-btn-del-name" style="display: none;"></span>
+                <i class="es-icon es-icon-phone1"></i>
+                <span class="hp-err-tips"></span>
+                <span class="hp-flag"></span>
+            </div>
+            <div class="xh-input xh-input-captcha input-half clearfix">
+                <input class="xh-captcha" type="text" maxlength="8" name="captcha" data-rule-captcha="true" data-rule-required="true" placeholder="验证码" data-hp-widgets="22">
+                <span class=" xh-captcha-pic">
+                    <img src="//captcha.yeshj.com/captcha_v2.php?token=c3a8672f91206f80cd1fe782aebfb8d3&amp;w=100&amp;h=30&amp;t=1466648559347">
+                </span>
+                <i class="es-icon es-icon-viewmodule"></i>
+                <span class="hp-err-tips"></span>
+            </div>
+            <div class="xh-input xh-input-dtm input-half clearfix">
+                <input class="hp-dtm" type="text" maxlength="8" name="sms" data-rule-required="true" data-rule-sms="true" placeholder="短信动态码" data-hp-widgets="23">
+                <i class="es-icon es-icon-viewmodule"></i>
+                <span class="get-captcha">获取动态码</span>
+                <!--<span class="hp-err-tips">动态码错误</span>-->
+            </div>
+            <button class="submit-btn">下一步</button>
+            <p class="xh-info-tip">
+                选择问题？请 <a href="#" target="_blank">留言</a>，或者进行 <a href="#">帐号申诉</a>
+            </p>
+        </div>
+    </div>
+    <div class="login-view">
+        <a href="javascript:;" class="left es-icon es-icon-chevronleft"></a>
+        <div class="login-head">
+            <h3>邮箱重置密码</h3>
+        </div>
+        <div class="login-body">
+            <div class="xh-input input-email">
+                <input class="hp-mobileno" name="mobile" data-enable-clean="true" data-rule-cellphone="true" data-rule-required="true" type="tel" maxlength="11" placeholder="邮箱" data-hp-widgets="21"><span class="hp-icon hp-icon-del hp-btn-del-name" style="display: none;"></span>
+                <i class="es-icon es-icon-mail"></i>
+                <span class="hp-err-tips"></span>
+                <span class="hp-flag"></span>
+            </div>
+            <div class="xh-input xh-input-captcha input-half clearfix">
+                <input class="xh-captcha" type="text" maxlength="8" name="captcha" data-rule-captcha="true" data-rule-required="true" placeholder="验证码" data-hp-widgets="22">
+                <span class=" xh-captcha-pic">
+                    <img src="//captcha.yeshj.com/captcha_v2.php?token=c3a8672f91206f80cd1fe782aebfb8d3&amp;w=100&amp;h=30&amp;t=1466648559347">
+                </span>
+                <i class="es-icon es-icon-viewmodule"></i>
+                <span class="hp-err-tips"></span>
+            </div>
+            <button class="submit-btn">下一步</button>
+            <p class="xh-info-tip">
+                选择问题？请 <a href="#" target="_blank">留言</a>，或者进行 <a href="#">帐号申诉</a>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="js/register.js"></script>
+</body>
+</html>

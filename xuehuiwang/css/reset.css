@@ -1,11 +1,16 @@
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+fieldset, button, input, textarea,
+th, td {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
-body{min-width: 1200px}
+body{overflow: hidden;}
 button, input, select, textarea {
     font: 12px/1 microsoft yahei,Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 }
+
 h1 { font-size: 18px;  }
 h2 { font-size: 16px; }
 h3 { font-size: 14px; }
@@ -31,6 +36,7 @@ input:focus, select:focus, textarea:focus{
     outline: none;
 }
 
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -45,21 +51,21 @@ html { overflow-y: scroll; }
 
 img{vertical-align: middle}
 
-body {
-    font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+pre{
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    line-height: 28px;
 }
-
-.clearfix {
-    zoom: 1
-}
-
-.clearfix:after {
-    content: "";
+pre, xmp, plaintext, listing {
     display: block;
-    clear: both
+    font-family: monospace;
+    margin: 1em 0;
 }
-.hide {
-    display: none !important;
-}
-.l{float: left}
-.r{float: right}
+.fl{float: left}
+.fr{float: right}
+body {font: 12px "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;}
+.clearfix{zoom:1}
+.clearfix:after{content: "";display:block;clear:both}

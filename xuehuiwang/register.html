@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/es-icon.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div class="login-content">
+    <div class="register-view" style="display: block">
+        <div class="register-head">
+            <h3>注册学慧网</h3>
+        </div>
+        <div class="register-body">
+            <div class="register-text xh-input">
+                <input type="text" id="register_emailOrMobile" name="emailOrMobile" required="required" class="form-control input-lg" data-url="/register/email_or_mobile/check" placeholder="手机号/邮箱" data-widget-cid="widget-3" data-explain="">
+                <i class="es-icon es-icon-permcontactcal"></i>
+            </div>
+            <div class="input-captcha xh-input clearfix">
+                <input class="captcha" type="text" maxlength="8" name="captcha" data-rule-captcha="true" data-rule-required="true" placeholder="验证码" data-hp-widgets="10">
+                <span class="captcha-pic"><img src="//captcha.yeshj.com/captcha_v2.php?token=052850e3f6aae756bb480a135921159c&amp;w=100&amp;h=30&amp;t=1466583608596"></span>
+                <i class="es-icon es-icon-viewmodule"></i>
+            </div>
+            <div class="xh-input">
+                <input class="password" type="password" name="password" maxlength="20" data-rule-password-length="true" data-rule-password="true" data-rule-required="true" placeholder="设置密码（8-20位字符）" data-hp-widgets="12">
+                <i class="es-icon es-icon-lock1"></i>
+            </div>
+            <div class="xh-input input-code clearfix">
+                <input type="text" name="invite_code" class="invitecode" placeholder="邀请码" data-widget-cid="widget-6" data-explain="">
+                <i class="es-icon es-icon-assignment"></i>
+                <span class="choose">选填</span>
+            </div>
+            <div class="message xh-input clearfix">
+                <input class="message-text" type="text" placeholder="短信验证码">
+                <i class="es-icon es-icon-phone1"></i>
+                <span class="send-captcha">获取短信验证码</span>
+            </div>
+            <div class="submit">
+                <button class="btn" type="submit">注&nbsp;&nbsp;册</button>
+                <p>
+                    注册代表您已经阅读并同意
+                    <a href="#">《学慧网服务协议》</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="register-view">
+        <div class="register-head">
+            <h3>恭喜你注册成功</h3>
+        </div>
+        <div class="rename-body">
+            <div class="success-img">
+                <img src="images/show-img.png">
+            </div>
+            <p class="subtitle">设置您的用户名</p>
+            <div class="xh-input input-correct">
+                <input class="username" name="username" data-enable-clean="true" data-rule-username-start="true" data-rule-username="true" data-rule-required="true" autocapitalize="off" autocorrect="off" type="text" autocomplete="false" maxlength="20" placeholder="填写用户名" data-hp-widgets="31">
+                <i class="es-icon es-icon-person"></i>
+                <span class="xh-icon xh-icon-del btn-del-name"></span>
+                <span class="xh-err-tips">不能以下划线或数字开头</span>
+                <span class="xh-icon xh-flag"></span>
+            </div>
+            <button class="btn btn-continue">确定并进入</button>
+        </div>
+    </div>
+</div>
+<script src="js/register.js"></script>
+</body>
+</html>

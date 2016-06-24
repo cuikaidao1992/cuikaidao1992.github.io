@@ -1,7 +1,3 @@
-body {
-    font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
-}
-
 /*顶部导航*/
 .container {
     width: 1200px;
@@ -14,9 +10,13 @@ body {
     font-size: 12px;
     color: #b0b0b0;
     background: #333;
+    z-index: 1000;
 }
 
 .site-topbar a {
+    padding: 0 5px;
+    font-size: 12px;
+    text-align: center;
     color: #b0b0b0
 }
 
@@ -380,6 +380,7 @@ body {
     position: relative;
     height: 100px;
     z-index: 20;
+    background: #fff;
 }
 
 .site-header .container {
@@ -512,7 +513,9 @@ body {
     border-top: 0;
     background: #fff;
 }
-
+.hide {
+    display: none !important;
+}
 .site-header .search-form .keyword-list ul {
     margin: 0;
     padding: 0;
@@ -738,7 +741,6 @@ body {
 .es-footer {
     width: 100%;
     position: relative;
-    padding-top: 70px;
     background: #f5f5f5;
 
 }
@@ -796,7 +798,7 @@ body {
     font-weight: bolder;
     font-size: 16px;
     display: inline-block;
-    width: 280px;
+    width: 215px;
     margin: 25px 0;
     color: #000;
 }
@@ -827,17 +829,30 @@ body {
 .footer-main .contact-item .iphone-btn {
     width: 95px;
     height: 24px;
+    line-height: 24px;
     display: inline-block;
     border: 1px solid #ff6700;
     color: #ff6700;
     margin: 0 auto
 }
-
+.footer-main .contact-item .iphone-btn span{
+    color: #ff6700;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 .footer-main .contact-item a:hover {
     background: #ff6700;
     color: #fff;
 }
-
+.footer-main .contact-item a:hover span{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #fff;
+}
 .es-footer .copyright {
     background: #212121;
     border-top: 1px solid #444;
