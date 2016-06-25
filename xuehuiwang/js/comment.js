@@ -81,6 +81,22 @@ $(function(){
         });
         timerCart=null;
     });
+    var timerUser=null;
+    $(".user").mouseenter(function(){
+        $(".user-menu").slideDown("fast");
+        $(this).addClass("user-active")
+    }).mouseleave(function(){
+        timerUser=setTimeout(function(){
+            $(".user-menu").slideUp("fast");
+            $(".user").removeClass("user-active")
+        },200)
+    });
+    $(".user-menu").mouseenter(function(){
+        clearTimeout(timerUser)
+    }).mouseleave(function() {
+        $(".user-menu").slideUp("fast");
+        $(".user").removeClass("user-active")
+    })
     /*横导航*/
     var f, a = $("#nav-list").find(".cur").size() > 0 ? $("#nav-list").find(".cur") : 0,
         b = 0,

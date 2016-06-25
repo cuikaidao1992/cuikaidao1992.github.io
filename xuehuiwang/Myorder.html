@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/es-icon.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/myorder.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div class="site-topbar">
+    <div class="container">
+        <div class="topbar-nav">
+            <a rel="nofollow" href="index.html" >学慧网</a>
+            <span class="sep">|</span>
+            <a rel="nofollow" href="" target="_blank">学慧网移动版</a>
+            <span class="sep">|</span>
+            <a rel="nofollow" href="" target="_blank" >问题反馈</a>
+        </div>
+        <div class="topbar-study">
+            <a href="#">学习中心</a>
+        </div>
+        <div class="topbar-order">
+            <a rel="nofollow" class="link link-order" href="Myorder.html" target="_blank" >我的订单</a>
+        </div>
+        <div class="message">
+            <a href="#">
+                <span class="msg_icon">3</span>
+                <i class="es-icon es-icon-notificationson"></i>
+            </a>
+        </div>
+        <div class="topbar-info" style="display:none">
+            <a class="login" href="javascript:;">登录</a>
+            <span class="sep">|</span>
+            <a class="reginster" href="javascript:;">注册</a>
+        </div>
+        <div class="topbar-info" id="J_userInfo">
+                <span class="user">
+                    <a href="#" class="user-name" target="_blank"><span class="name">学慧网</span>
+                        <i class="es-icon es-icon-keyboardarrowdown"></i>
+                    </a>
+                    <ul class="user-menu">
+                        <li>
+                            <a href="#" target="_blank">个人主页</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">个人设置</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">账户中心</a>
+                        </li>
+                        <li>
+                            <a href="#" >退出登录</a>
+                        </li>
+                    </ul>
+                </span>
+            <span class="sep">|</span>
+        </div>
+    </div>
+</div>
+<div class="site-header">
+    <div class="container clearfix">
+        <div class="header-logo">
+            <a class="logo" href="" title="学慧网">学慧网</a>
+        </div>
+        <div class="flash-img">
+            <img src="images/picture.gif">
+        </div>
+        <div class="header-nav" id="header-nav">
+            <ul class="nav-list-top clearfix" id="nav-list">
+                <li class="nav-item">
+                    <a class="link" href="index.html"><span class="text">首页</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item course-select cur">
+                    <a class="link" href="courses.html"><span class="text">选课</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="javascript:;"><span class="text">题库</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="javascript:"><span class="text">资讯</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="javascript:;"><span class="text">小组</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="javascript:;"><span class="text">活动</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="javascript:;"><span class="text">服务</span><span class="arrow"></span></a>
+                </li>
+                <li id="nav_line" style="left: 88px; width: 58px; opacity: 1;"></li>
+            </ul>
+        </div>
+        <div class="header-search">
+            <form class="search-form clearfix" action="" method="get">
+                <input class="search-text" type="search" id="search" name="keyword">
+                <button class="search-btn es-icon es-icon-search"></button>
+                <div class="search-hot-words">
+                    <a href="#">采购师</a>
+                    <a href="#">人力资源管理师</a>
+                </div>
+                <div class="keyword-list hide">
+                    <ul class="result-list">
+                        <li data-key="人力资源管理师">
+                            <a href="#">人力资源管理师</a>
+                        </li>
+                        <li data-key="公共营养师">
+                            <a href="#">公共营养师</a>
+                        </li>
+                        <li data-key="行政管理">
+                            <a href="#">行政管理</a>
+                        </li>
+                        <li data-key="心理咨询师">
+                            <a href="#">心理咨询师</a>
+                        </li>
+                        <li data-key="人力资源管理师">
+                            <a href="#">人力资源管理师</a>
+                        </li>
+                        <li data-key="公共营养师">
+                            <a href="#">公共营养师</a>
+                        </li>
+                        <li data-key="行政管理">
+                            <a href="#">行政管理</a>
+                        </li>
+                        <li data-key="心理咨询师">
+                            <a href="#">心理咨询师</a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="header-nav-menu" style="height: 0px;">
+        <div class="container">
+            <ul class="children-list clearfix">
+                <li class="first">
+                    <div class="figure figure-thumb">
+                        <a href="#">
+                            <img src="images/nav1.jpg">
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#">人力资源管理师</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="#">
+                            <img src="images/nav2.jpg">
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#">公共营养师</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="#">
+                            <img src="images/nav3.jpg">
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#">会计从业资格证</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="#">
+                            <img src="images/nav4.jpg">
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#">远程网络教育</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="#">
+                            <img src="images/nav5.jpg">
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#">幼儿教师资格证</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="#">
+                            <img src="images/nav6.jpg">
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#">更多课程</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="breadcrumb">
+    <div class="container">
+        <div class="subNav-left">
+            <a href="index.html">首页</a>
+            <span class="sep">&gt;</span>
+            <a href="courses.html">账户中心</a>
+        </div>
+    </div>
+</div>
+<div class="site-my-order">
+    <div class="container clearfix">
+        <div class="order-left">
+            <div class="nav-box">
+                <h3>账户中心</h3>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#">我的账户</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">我的订单</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="order-right">
+            <div class="order-list-box">
+                <div class="box-hd clearfix">
+                    <h2>我的订单</h2>
+                    <ul class="filter-list clearfix">
+                        <li class="active first">
+                            <a href="#">全部订单</a>
+                        </li>
+                        <li>
+                            <a href="#">待付款</a>
+                        </li>
+                        <li>
+                            <a href="#">已付款</a>
+                        </li>
+                    </ul>
+                    <form id="user-search-form" class="form-inline well" action="" method="get" novalidate="">
+                        <div class="form-group">
+                            <select class="form-control" name="">
+                                <option value="oneWeek">最近一周</option>
+                                <option value="twoWeeks">最近两周</option>
+                                <option value="oneMonth">最近一个月</option>
+                                <option value="twoMonths">最近两个月</option>
+                                <option value="threeMonths">最近三个月</option>
+                                <option value="" selected="selected">全部记录</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="payWays">
+                                <option value="alipay">支付宝</option>
+                                <option value="wxpay">微信支付</option>
+                                <option value="heepay">网银支付</option>
+                                <option value="quickpay">快捷支付</option>
+                                <option value="none">其他支付</option>
+                                <option value="" selected="selected">支付方式</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="box-bd">
+                    <div class="J_orderList">
+                        <ul class="order-list">
+                            <li class="order-item">
+                                <div class="order-detail">
+                                    <div class="order-summary">
+                                        <div class="order-status wait-pay">待付款</div>
+                                       <!-- <p class="order-desc">
+                                            预售订单：预计将在您支付后4至5周发货
+                                        </p>-->
+                                    </div>
+                                    <table class="order-detail-table">
+                                        <thead>
+                                        <tr>
+                                            <th class="col-main">
+                                                <p class="caption-info">2014年09月30日 20:15<span class="sep">|</span>崔开道<span class="sep">|</span>订单号：<a href="#">C2016050415305644580</a><span class="sep">|</span>在线支付</p> </th>
+                                            <th class="col-sub">
+                                                <p class="caption-price">订单金额：<span class="num">1999.00</span>元</p> </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="order-items">
+                                                <ul class="goods-list">
+                                                    <li>
+                                                        <div class="figure figure-thumb">
+                                                            <a href="#" target="_blank">
+                                                                <img src="images/zx.jpg" width="80" height="80" alt="企业人力资源管理师三级技能-精讲"> </a>
+                                                        </div>
+                                                        <p class="name">
+                                                            <a href="#" target="_blank">购买课程《企业人力资源管理师三级技能-精讲》</a>
+                                                        </p>
+                                                        <p class="price">1999元</p>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td class="order-actions">
+                                                <a class="btn btn-small btn-line-gray" href="#">订单详情</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li class="order-item">
+                                <div class="order-detail">
+                                    <div class="order-summary">
+                                        <div class="order-status non-payment">未付款</div>
+                                        <!-- <p class="order-desc">
+                                             预售订单：预计将在您支付后4至5周发货
+                                         </p>-->
+                                    </div>
+                                    <table class="order-detail-table">
+                                        <thead>
+                                        <tr>
+                                            <th class="col-main">
+                                                <p class="caption-info">2014年09月30日 20:15<span class="sep">|</span>崔开道<span class="sep">|</span>订单号：<a href="#">C2016050415305644580</a><span class="sep">|</span>在线支付</p> </th>
+                                            <th class="col-sub">
+                                                <p class="caption-price">订单金额：<span class="num">1999.00</span>元</p> </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="order-items">
+                                                <ul class="goods-list">
+                                                    <li>
+                                                        <div class="figure figure-thumb">
+                                                            <a href="#" target="_blank">
+                                                                <img src="images/zx.jpg" width="80" height="80" alt="企业人力资源管理师三级技能-精讲"> </a>
+                                                        </div>
+                                                        <p class="name">
+                                                            <a href="#" target="_blank">购买课程《企业人力资源管理师三级技能-精讲》</a>
+                                                        </p>
+                                                        <p class="price">1999元</p>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td class="order-actions">
+                                                <a class="btn btn-small btn-line-gray" href="#">订单详情</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li class="order-item">
+                                <div class="order-detail">
+                                    <div class="order-summary">
+                                        <div class="order-status paid">已付款</div>
+                                        <!-- <p class="order-desc">
+                                             预售订单：预计将在您支付后4至5周发货
+                                         </p>-->
+                                    </div>
+                                    <table class="order-detail-table">
+                                        <thead>
+                                        <tr>
+                                            <th class="col-main">
+                                                <p class="caption-info">2014年09月30日 20:15<span class="sep">|</span>崔开道<span class="sep">|</span>订单号：<a href="#">C2016050415305644580</a><span class="sep">|</span>在线支付</p> </th>
+                                            <th class="col-sub">
+                                                <p class="caption-price">订单金额：<span class="num">1999.00</span>元</p> </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="order-items">
+                                                <ul class="goods-list">
+                                                    <li>
+                                                        <div class="figure figure-thumb">
+                                                            <a href="#" target="_blank">
+                                                                <img src="images/zx.jpg" width="80" height="80" alt="企业人力资源管理师三级技能-精讲"> </a>
+                                                        </div>
+                                                        <p class="name">
+                                                            <a href="#" target="_blank">购买课程《企业人力资源管理师三级技能-精讲》</a>
+                                                        </p>
+                                                        <p class="price">1999元</p>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td class="order-actions">
+                                                <a class="btn btn-small btn-line-gray" href="#">订单详情</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="J_orderListPages">
+                        <div class="xm-pagenavi">
+                            <span class="numbers first">
+                                <span class="es-icon es-icon-chevronleft"></span>
+                            </span>
+                            <span class="numbers current">1</span>
+                            <span class="numbers last">
+                                <span class="es-icon es-icon-chevronright"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal" class="modal in" aria-hidden="false">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">订单详情</h4>
+            </div>
+            <div class="modal-body">
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="detail">
+                        <table class="table table-striped order-table">
+                            <tbody><tr> <th width="25%">订单号</th> <td width="75%">C2016050816270252084</td> </tr>
+                            <tr> <th width="25%">订单状态</th>
+                                <td width="75%">
+                                    未完成
+                                </td>
+                            </tr>
+                            <tr>
+                                <th width="25%">订单名称</th>
+                                <td width="75%">
+                                    购买课程《企业人力资源管理师基础知识-精讲》
+                                </td>
+                            </tr>
+                            <tr> <th width="25%">购买者</th>
+                                <td width="75%">
+                                    <strong>  		<a href="javascript:;" role="show-user" data-toggle="modal" data-target="#modal" data-url="http://www.xuehuiwang.com/admin/user/55414">学慧网前端</a>
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr> <th width="25%">订单价格</th>
+                                <td width="75%">
+                                    <span class="money-text">380.00</span>
+                                    元
+                                </td>
+                            </tr>
+                            <tr> <th width="25%">优惠码</th>
+                                <td width="75%">
+                                    无        </td>
+                            </tr>
+                            <tr> <th width="25%">优惠金额</th>
+                                <td width="75%">
+                                    <span class="money-text">0.00</span>
+                                    元
+                                </td>
+                            </tr>
+                            <tr> <th width="25%">现金支付</th>
+                                <td width="75%">
+                                    <span class="money-text">380.00</span> 元
+                                </td>
+                            </tr>
+                            <tr> <th width="25%">支付方式</th>
+                                <td width="75%">
+                                    支付宝
+                                </td>
+                            </tr>
+                            <tr> <th width="25%">银行编号</th>
+                                <td width="75%">
+                                    暂无
+                                </td>
+                            </tr>
+                            <tr> <th width="25%">创建时间</th> <td width="75%">2016-5-08 16:27:02</td> </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="text-right">
+                    <a href="#" class="btn-link cancel" style="">取消订单</a>
+                    <button type="submit" class="submit">提交订单</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop"></div>
+<script>
+    $(".order-actions").find("a").click(function(){
+        $("#modal").fadeIn();
+        $(".modal-backdrop").fadeIn()
+    })
+    $(".modal-header .close").click(function(){
+        $("#modal").fadeOut();
+        $(".modal-backdrop").fadeOut()
+    })
+</script>
+</body>
+</html>

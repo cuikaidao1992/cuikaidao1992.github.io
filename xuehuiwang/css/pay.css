@@ -1,0 +1,523 @@
+body{
+    background: #f5f5f5;
+}
+#content-container {
+    margin: 30px auto;
+    min-height: 400px;
+}
+.es-wrap {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.es-section {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.es-step {
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+.es-step li {
+    float: left;
+    padding: 15px 0;
+    list-style-type: none;
+    border-bottom: 2px solid #c1c1c1;
+    color: #c1c1c1;
+    font-size: 16px;
+    text-align: center;
+}
+.es-step li.doing {
+    color: #616161;
+}
+.es-step li .number {
+    width: 23px;
+    height: 23px;
+    line-height: 21px;
+    display: inline-block;
+    margin-right: 5px;
+    border: 1px solid #c1c1c1;
+    background-color: #c1c1c1;
+    color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.es-step li.done .number, .es-step li.doing .number {
+    color: #fff;
+    background-color: #46c37b;
+    border-color: #46c37b;
+}
+.es-step li.done, .es-step li.doing {
+    border-color: #46c37b;
+}
+.es-step.es-step-3 li {
+    width: 33.33%;
+}
+
+.order-detail{
+    font-size: 14px;
+    color: #616161;
+}
+
+.order-detail .order-detail {
+    position: relative;
+    height:170px;
+    width: auto;
+    background-color: #fafafa;
+}
+.order-detail .order-img {
+    float: left;
+}
+.order-detail .order-img img {
+    height:170px;
+}
+.order-detail .order-info {
+    float: left;
+    width: 50%;
+    padding-left: 150px;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #616161;
+    line-height: 35px;
+}
+.order-price{
+    float: left;
+    width: 50%;
+    padding-left: 150px;
+    line-height: 32px;
+}
+.order-price span{
+    color: #e83d2c;
+}
+.buyed{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.buyed h3{
+    line-height: 45px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.buyed-info{
+    padding: 6px;
+    background: #fafafa;
+}
+.buyed-img{
+    float: left;
+    width: 120px;
+    padding-right: 20px;
+}
+.buyed-info img{
+    width: 120px;
+}
+
+.buyed-title{
+    float: left;
+    width: 250px;
+    font-size: 16px;
+    line-height: 100px;
+}
+
+.discount{
+    float: right;
+    font-size: 16px;
+    line-height:100px;
+    padding-right: 70px;
+}
+.userinfo{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.userinfo h3{
+    font-size: 16px;
+    line-height: 60px;
+    color: #5a5a5a;
+}
+.userinfo .prompt{
+    margin-left: 15px;
+    font-size: 14px;
+    color: #a1a1a1;
+    font-weight: normal;
+}
+.personal-info{
+    float: left;
+    line-height: 30px;
+    width: 100%;
+    margin-top: 15px;
+}
+.personal-info .user-name{
+    float: left;
+    font-size: 14px;
+    padding-right: 20px;
+    color: #616161;
+}
+.personal-info .name{
+    float: left;
+    line-height: 30px;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    width: 270px;
+    margin-right: 35px;
+}
+.personal-info .phone{
+    float: left;
+    font-weight: bold;
+    margin-right: 30px;
+    color: #616161;
+}
+.personal-info .phone span{
+    font-weight: normal;
+    margin-left: 20px;
+}
+.personal-info .phone i{
+    color: #70d445;
+}
+.personal-info h4{
+    float: left;
+    display: inline-block;
+    font-size: 14px;
+    color: #616161;
+}
+.personal-info .sex {
+    margin-left: 25px;
+}
+.address h4{
+    float: left;
+    margin-top: 20px;
+    line-height: 30px;
+}
+.address input{
+    float: left;
+    width:750px;
+    line-height: 30px;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    margin-right: 35px;
+    color: #000;
+    margin-top: 20px;
+}
+.userinfo .btn{
+    width: 100px;
+    line-height: 36px;
+    color: #fff;
+    background: #bdbdbd;
+    border: none;
+    margin-left: 90px;
+    margin-top: 25px;
+}
+
+.personal-info input:focus {
+    border: 1px solid #44b336;
+}
+
+input:focus {
+    border: 1px solid #44b336;
+}
+.order-item {
+    border-bottom: 0;
+    padding: 50px 50px 50px 0;
+    line-height: 33px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.order-item .order-item-title {
+    float: left;
+    width: 36%;
+    color: #919191;
+}
+
+.order-item .order-item-detail {
+    float: left;
+    width: 45%;
+}
+.order-item .order-item-title .title {
+    font-size: 18px;
+    color: #313131;
+    margin: 0 15px;
+}
+.order-item .order-item-title .privilege {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: url("../images/youhui.png") no-repeat;
+    position: relative;
+    left: 10px;
+    top: 7px;
+}
+.btn-primary {
+    background-color: #46c37b;
+    color: #fff;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 2px;
+}
+.order-item .order-item-price {
+    float: right;
+    width: 19%;
+    font-size: 14px;
+    text-align: right;
+    color: #616161;
+}
+.mrs {
+    margin-right: 5px !important;
+}
+
+/*优惠码*/
+.invite{
+    border: none;
+}
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+.couponCode{
+    width: 150px;
+    background-color: #fafafa;
+    border: 1px solid #f5f5f5;
+    height:20px;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 2px;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    margin-right: 10px;
+}
+.input-group .btn{
+    color: #fff;
+    padding: 6px 12px;
+    height:34px;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    background-color: #ff6700;
+}
+.input-group .btn-link{
+    display: inline-block;
+    width: 52px;
+    line-height: 34px;
+    text-align: center;
+}
+.input-group .btn-link:hover{
+    color: #36d38c;
+}
+
+.order-item-price .price{
+    font-size: 24px;
+}
+.order-item .order-item-title a{
+    color: #70d445;
+}
+.order-item .order-item-title a:hover{
+    color:#36d38c;
+}
+.invite-title{
+     color: #313131;
+    font-size: 18px;
+    margin-right: 40px;
+}
+.price-detail{
+    border-bottom: 1px solid #e0e0e0;
+}
+.price-info{
+    float: right;
+    height: 120px;
+    padding-top: 96px;
+    text-align: right;
+}
+.price-info span{
+    display: inline-block;
+    width: 110px;
+    color: #ff6700;
+}
+.price-info .activity{
+    line-height: 28px;
+}
+.price-info .offset{
+    line-height: 28px;
+}
+.price-info .total-price{
+    padding: 8px 0;
+}
+.price-info .total-price i{
+    font-size: 28px;
+}
+.text-right{
+    float: right;
+    margin-top: 30px;
+}
+.cancel{
+    display:inline-block;
+    width: 30px;
+    padding: 0 10px;
+    line-height: 40px;
+}
+.cancel:hover{
+    color: #36d38c;
+}
+.submit{
+    width: 150px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background: #ff6700;
+    border: none;
+    cursor: pointer;
+}
+.submit a{
+    display: inline-block;
+    color: #fff;
+}
+/*支付2*/
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+.alert-success {
+    border-color: #cddfb4;
+    background-color: #f2fae3;
+    color: #659f13;
+}
+.alert-success .close {
+    cursor: pointer;
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    border: none;
+    background-color: #f2fae3;
+}
+
+.es-icon-done{
+    width: 23px;
+    height: 23px;
+    line-height: 19px;
+    display: inline-block;
+    margin-right: 5px;
+    color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #46c37b;
+    border-color: #46c37b;
+}
+.es-piece .piece-header {
+    position: relative;
+    line-height: 60px;
+    margin: 5px auto;
+    padding: 0 30px 0 15px;
+    color: #313131;
+    font-size: 16px;
+}
+.es-piece .piece-header:after {
+   margin-top: 20px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 4px;
+    height: 16px;
+    background-color: #46c37b;
+}
+
+.form-paytype .check {
+    cursor: pointer;
+    width: 144px;
+    height: 54px;
+    border: 2px solid #f5f5f5;
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 15px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.form-paytype .check a{
+    display: inline-block;
+}
+.form-paytype .check.active {
+    border: 2px solid #70d445;
+}
+.form-paytype .check .icon {
+    display: none;
+    background: url('../images/pay_check_status.png') no-repeat;
+    top: -2px;
+    right: -2px;
+    width: 23px;
+    height: 23px;
+    background-position: 0 0;
+    position: absolute;
+    overflow: hidden;
+}
+.form-paytype .check.active .icon {
+    display: block;
+}
+.order-pay .total-price {
+    text-align: right;
+    font-size: 16px;
+}
+.order-pay .pay-rmb {
+    color: #ff6700;
+    font-size: 20px;
+}
+/*微信支付*/
+.mrl {
+    margin-right: 20px !important;
+}
+.section-wxpay .pay-qrcode-body {
+    border: 1px solid #f5f5f5;
+    margin-bottom: 50px;
+    padding: 20px;
+    text-align: center;
+}
+.section-wxpay .qrcode-img {
+    float: left;
+    width: 19%;
+    margin-left: 24%;
+}
+.section-wxpay .text-qrcode {
+    color: #fff;
+    padding: 5px 10px;
+    background: #46c37b;
+}
+.section-wxpay .qrcode-img-two {
+    float: left;
+    width: 40%;
+}
+.section-wxpay .qrcode-img-two img {
+    margin: 0 auto;
+}
+.section-wxpay .pay-qrcode-footer {
+    padding-right: 30px;
+    font-size: 16px;
+    text-align: right;
+}
+.section-wxpay .pay-qrcode-footer a {
+    font-size: 14px;
+    color: #46c37b;
+    text-decoration: none;
+}
+.section-wxpay .pay-qrcode-footer .pay-rmb {
+    font-size: 24px;
+    color: #e83d2c;
+}
+.section-wxpay .qrcode-img img {
+    width: 100%;
+    margin: 20px auto;
+}

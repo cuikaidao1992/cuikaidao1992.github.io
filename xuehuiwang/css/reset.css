@@ -69,3 +69,7 @@ pre, xmp, plaintext, listing {
 body {font: 12px "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;}
 .clearfix{zoom:1}
 .clearfix:after{content: "";display:block;clear:both}
+.sep, .ndash {
+    margin: 0 .25em;
+    font-family: sans-serif;
+}

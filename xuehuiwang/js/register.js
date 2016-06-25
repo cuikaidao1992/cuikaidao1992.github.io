@@ -30,5 +30,8 @@ $(function(){
     $(".submit").find(".btn").click(function(){
         $(".register-view").eq(0).hide();
         $(".register-view").eq(1).show();
+        if(top.location != this.location){
+            top.location.replace("index2.html");
+        }
     })
 });
