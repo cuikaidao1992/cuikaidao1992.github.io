@@ -81,6 +81,7 @@ $(function(){
         });
         timerCart=null;
     });
+    /*登陆后显示*/
     var timerUser=null;
     $(".user").mouseenter(function(){
         $(".user-menu").slideDown("fast");

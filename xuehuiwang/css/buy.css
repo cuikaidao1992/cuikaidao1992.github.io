@@ -5,6 +5,26 @@ body{
     background-image: url('http://res.c.hjfile.cn/app/course/images/icon-s7ac8ec16a0.png');
     background-repeat: no-repeat;
 }
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 #content-container{
     padding-bottom: 30px;
 }
@@ -1101,6 +1121,95 @@ a.introTestBtn {
     margin: 5px;
     border-radius: 2px
 }
+/*评价*/
+.form-group {
+    margin-bottom: 15px;
+}
+.pull-right {
+    float: right !important;
+}
+
+.btn-primary {
+    border-color: #34a263;
+    background-color: #46c37b;
+    color: #fff;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    color: #616161;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control:focus {
+    border-color: #46c37b;
+    outline: 0;
+}
+.form-control {
+    color: #616161;
+    border-color: #e1e1e1;
+}
+.has-error .form-control {
+    border-color: #a94442;
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+.help-block {
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #a1a1a1;
+}
+.help-block .text-danger {
+    font-size: 14px;
+    color: #e83d2c !important;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group button{
+    float: right;
+}
+#rating-btn{
+    cursor: pointer;
+}
+.form-group .btn-primary {
+    border-color: #34a263;
+    background-color: #46c37b;
+    color: #fff;
+}
+.btn-link {
+    color: #313131;
+}
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
+    border-color: transparent;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-link:hover, .btn-link:focus, .btn-link.focus {
+    color: #46c37b;
+    text-decoration: none;
+}
+.btn-sm, .btn-group-sm > .btn {
+    font-size: 12px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 2px;
+}
+
 /*分页*/
 .nav.nav-tabs {
     position: relative;
@@ -1279,6 +1388,34 @@ a.link-muted {
     padding-bottom: 15px;
 }
 /*问答*/
+.question-title{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.has-error .form-control {
+    border-color: #a94442;
+}
+.form-control {
+    color: #616161;
+    border-color: #e1e1e1;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+   padding-left: 15px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #919191;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
 .caret {
     display: inline-block;
     width: 0;
@@ -1339,26 +1476,6 @@ a.link-muted {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-}
-.btn {
-    display: inline-block;
-    margin-bottom: 0;
-    font-weight: normal;
-    text-align: center;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    background-image: none;
-    border: 1px solid transparent;
-    white-space: nowrap;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    border-radius: 2px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 .btn-default {
     color: #616161;

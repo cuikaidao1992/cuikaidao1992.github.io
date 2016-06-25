@@ -59,7 +59,7 @@
 }
 
 .nav-list li.active a {
-    color: #ff6700;
+    color: #46c37b;
 }
 .nav-list a {
     color: #757575;
@@ -74,7 +74,7 @@
     margin: 0 48px;
 }
 .order-list-boxx .box-hd .filter-list li.tab-active a, .order-list-box .box-hd .filter-list li.active a {
-    color: #ff6700;
+    color: #46c37b;
 }
 
 .form-inline{
@@ -359,7 +359,7 @@
 .modal.in .modal-dialog {
     position: relative;
     width: 600px;
-    margin: 10% auto;
+    margin:10%  auto;
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
@@ -456,7 +456,7 @@ button.close {
     line-height: 40px;
     text-align: center;
     color: #fff;
-    background: #ff6700;
+    background: #46c37b;
     border: none;
     cursor: pointer;
 }

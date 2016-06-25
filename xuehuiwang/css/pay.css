@@ -92,9 +92,6 @@ body{
     padding-left: 150px;
     line-height: 32px;
 }
-.order-price span{
-    color: #e83d2c;
-}
 .buyed{
     padding-bottom: 20px;
     border-bottom: 1px solid #e0e0e0;
@@ -120,13 +117,13 @@ body{
 .buyed-title{
     float: left;
     width: 250px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 100px;
 }
 
 .discount{
     float: right;
-    font-size: 16px;
+    font-size: 14px;
     line-height:100px;
     padding-right: 70px;
 }
@@ -154,7 +151,7 @@ body{
 .personal-info .user-name{
     float: left;
     font-size: 14px;
-    padding-right: 20px;
+    width: 70px;
     color: #616161;
 }
 .personal-info .name{
@@ -298,7 +295,7 @@ input:focus {
     font-size: 14px;
     border: none;
     border-radius: 2px;
-    background-color: #ff6700;
+    background-color: #46c37b;
 }
 .input-group .btn-link{
     display: inline-block;
@@ -364,11 +361,11 @@ input:focus {
     color: #36d38c;
 }
 .submit{
-    width: 150px;
+    width: 120px;
     line-height: 40px;
     text-align: center;
     color: #fff;
-    background: #ff6700;
+    background: #46c37b;
     border: none;
     cursor: pointer;
 }
@@ -520,4 +517,41 @@ input:focus {
 .section-wxpay .qrcode-img img {
     width: 100%;
     margin: 20px auto;
+}
+/*支付完成*/
+.finish-pay{
+    width: 350px;
+    margin: 0 auto;
+    min-height: 300px;
+    padding-top: 30px;
+}
+.left-finish-img{
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+.finish-top h3{
+    float: left;
+    font-size: 25px;
+    padding-left: 50px;
+    line-height: 100px;
+}
+.finish-bottom{
+    padding-left: 150px;
+    margin-top: 30px;
+    line-height: 20px;
+}
+.finish-bottom a{
+    text-decoration:underline;
+    color: #46c37b;
+}
+.return{
+    width: 150px;
+    margin-top: 60px;
+    padding-left: 60px;
+    word-spacing:8px;
+    letter-spacing: 1px
+}
+.return-time{
+    padding: 0 3px;
 }

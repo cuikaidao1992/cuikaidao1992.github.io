@@ -29,27 +29,29 @@
 .small_type {
     float: left;
     width: 228px;
-    height: 460px;
+    height: 440px;
+    padding: 10px 0;
     overflow: hidden;
 }
 
 .small_type .title {
-    line-height: 35px;
     font-weight: normal;
 }
 
 .small_type .title a {
     width: 198px;
-    height: 35px;
-    font-size: 14px;
+   line-height: 16px;
+    font-size: 16px;
     color: #fff;
     transition: color 0s;
     -webkit-transition: color 0s;
     display: inline-block;
 }
 .small_type .hot-item a {
+    margin-top: 14px;
     margin-right: 3px;
     font-size: 12px;
+    line-height: 12px;
     color: #ccc;
     transition: color 0s;
     -webkit-transition: color 0s;
@@ -75,8 +77,8 @@
 .small_type i {
     width: 16px;
     position: absolute;
-    top: 17px;
-    right: 20px;
+    top: 35px;
+    right: 0;
     font-size: 16px;
     line-height: 16px;
     color: rgba(255, 255, 255, 0.5);
@@ -175,7 +177,6 @@
     font-size: 14px;
     font-weight: bold;
     text-align: left;
-
 }
 
 .nav-list .sub_type_dl dt a {
@@ -211,25 +212,30 @@
     left: 0px;
 }
 .nav-list li{
-    padding: 15px 0;
+    height: 88px;
+    font-size: 12px;
+    padding-left: 20px;
+    cursor: pointer;
 }
 .nav-list .side_left_type {
-    line-height: 20px;
-    padding-left: 30px;
-    height: 62px;
+    padding-top: 25px;
+    height: 63px;
+    width: 188px;
+    border-bottom: 1px solid rgba(255,255,255,.2);
 }
-.nav-list .current .side_left_type {
-    background: #fff;
-    width: 198px;
-    position: relative;
-    margin-left: 1px;
+.nav-list .last-type{
+    border-bottom:0
+}
+.nav-list .current{
+    background-color: rgba(7,17,27,.3);
+    width: 208px;
     z-index: 100;
 }
 .nav-list .current .side_left_type .title a{
-    color: #000;
+    color: #fff;
 }
 .nav-list .current .side_left_type .hot-item a{
-    color: #777;
+    color: #fff;
 }
 .nav-list .current .side_left_type .hot-item a:hover{
     color: #36d38c;

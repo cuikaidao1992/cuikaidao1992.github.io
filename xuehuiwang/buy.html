@@ -27,18 +27,26 @@
         <div class="topbar-order">
             <a rel="nofollow" class="link link-order" href="Myorder.html" target="_blank" >我的订单</a>
         </div>
-        <div class="message" style="display: none">
+        <div class="message">
             <a href="#">
                 <span class="msg_icon">3</span>
                 <i class="es-icon es-icon-notificationson"></i>
             </a>
         </div>
-        <div class="topbar-info">
+        <div class="topbar-cart" style="display: none">
+            <a rel="nofollow" class="cart-mini" href="">我收藏的课程</a>
+            <div class="cart-menu">
+                <div class="loading">
+                    <div class="loader">收藏中还没有课程，赶紧选课吧！</div>
+                </div>
+            </div>
+        </div>
+        <div class="topbar-info" style="display:none">
             <a class="login" href="javascript:;">登录</a>
             <span class="sep">|</span>
             <a class="reginster" href="javascript:;">注册</a>
         </div>
-        <div class="topbar-info" id="J_userInfo" style="display:none">
+        <div class="topbar-info" id="J_userInfo">
                 <span class="user">
                     <a href="#" class="user-name" target="_blank"><span class="name">学慧网</span>
                         <i class="es-icon es-icon-keyboardarrowdown"></i>
@@ -334,7 +342,7 @@
                     <div class="fr nav-price-box">
                         <span class="class-price-unit">￥</span>
                         <span class="class-price">7900</span>
-                        <a href="pay.html" class="btnBuy htevent">立即学习</a>
+                        <a href="pay.html" class="btnBuy htevent">立即报名</a>
                     </div>
                     <div class="nav-list clearfix">
                         <a href="javascript:;" class="cur htevent">课程详情</a>
@@ -494,6 +502,33 @@
                     </div>
                 </div>
                 <div class="course-detail-content">
+                    <div class="clearfix" style="display: none" id="revaluation">
+                        <button class="btn btn-primary btn-sm pull-right js-show-review-form">重新评价</button>
+                    </div>
+                    <form id="review-form" method="post" action="" novalidate="novalidate" data-widget-cid="widget-2">
+                        <div class="form-group controls">
+                            请打分：
+                            <span data-rating="0" data-img-path="" class="rating-btn" id="rating-btn">
+                                <img src="images/star-off.png" alt="1" title="很差">&nbsp;
+                                <img src="images/star-off.png" alt="2" title="较差">&nbsp;
+                                <img src="images/star-off.png" alt="3" title="还行">&nbsp;
+                                <img src="images/star-off.png" alt="4" title="推荐">&nbsp;
+                                <img src="images/star-off.png" alt="5" title="力荐">
+                                <input type="hidden" name="score">
+                            </span>
+                            <input type="hidden" name="rating" value="0" data-widget-cid="widget-3" data-explain="">
+                            <div class="help-block" style="display:none;"></div>
+                        </div>
+                        <div class="form-group controls">
+                            <textarea class="form-control" rows="8" data-display="评价详细内容" name="content" data-widget-cid="widget-4" data-explain=""></textarea>
+                            <div class="help-block"><span class="text-danger">请输入评价详细内容</span></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <span class="text-success pull-left" style="display: none;">评价已保存！</span>
+                            <button type="submit" class="btn btn-primary pull-right" data-loading-text="正在保存..." autocomplete="off" id="save">保存</button>
+                            <button class="btn btn-link pull-right js-hide-review-form" type="button">取消</button>
+                        </div>
+                    </form>
                     <div class="js-reviews">
                         <div class="media media-evaluate">
                             <div class="media-left">
@@ -619,7 +654,7 @@
                             </div>
                             <div class="media-body">
                                 <div class="title">
-                                    <a class="link-dark " href="/user/46372">栗芳菲0327</a>2016-03-19
+                                    <a class="link-dark " href="">栗芳菲0327</a>2016-03-19
                                 </div>
                                 <div class="score">
                                     <i class="es-icon es-icon-star color-warning"></i>
@@ -698,8 +733,21 @@
                 <div class="course-detail-content">
                     <div class="nav-filter clearfix">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-default">提问题</button>
+                            <button type="button" class="btn btn-default" id="ask">提问题</button>
                         </div>
+                        <form id="question-form" method="post" action="" novalidate="novalidate" data-widget-cid="widget-2" style="display: none">
+                            <div class="question-title">
+                                <input type="type" id="title" class="form-control" placeholder="问题" ata-display="问题" name="title" value="" data-widget-cid="widget-4">
+                            </div>
+                            <div class="form-group controls">
+                                <textarea class="form-control" rows="8" data-display="评价详细内容" name="content" data-widget-cid="widget-4" data-explain=""></textarea>
+                                <div class="help-block"><span class="text-danger">请输入要提问的内容</span></div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <button type="submit" class="btn btn-primary pull-right" data-loading-text="正在保存..." autocomplete="off">发表</button>
+                                <button class="btn btn-link pull-right js-hide-review-form save" type="button">取消</button>
+                            </div>
+                        </form>
                         <ul class="nav nav-pills nav-pills-sm">
                             <li class="active"><a data-target="#thread-pane" href="#">全部</a></li>
                             <li class="dropdown">

@@ -72,6 +72,23 @@ $(function(){
         });
         timerCart=null;
     });
+    /*登陆后显示*/
+    var timerUser=null;
+    $(".user").mouseenter(function(){
+        $(".user-menu").slideDown("fast");
+        $(this).addClass("user-active")
+    }).mouseleave(function(){
+        timerUser=setTimeout(function(){
+            $(".user-menu").slideUp("fast");
+            $(".user").removeClass("user-active")
+        },200)
+    });
+    $(".user-menu").mouseenter(function(){
+        clearTimeout(timerUser)
+    }).mouseleave(function() {
+        $(".user-menu").slideUp("fast");
+        $(".user").removeClass("user-active")
+    })
     $(".toplayer-close").click(function(){
         $(".site-adv").remove()
     });
@@ -259,7 +276,59 @@ $(function(){
     },function(){
         $(".teacer-btn span").fadeOut()
     })
+    /*评价*/
+    var ratingBtn=document.getElementById("rating-btn");
+    var aImg=ratingBtn.getElementsByTagName("img");
+    var k=-1;
+    for (var i=0;i<aImg.length;i++) {
+        aImg[i].index = i;
+        aImg[i].onmouseover = function () {
+            for (var i = 0; i < aImg.length; i++) {
+                if (i <= this.index) {
+                    $(aImg[i]).attr("src","images/star-on.png");
+                } else {
+                    $(aImg[i]).attr("src","images/star-off.png");
+                }
+            }
+        };
+        aImg[i].onmouseout=function (){
+            if(k>=0){
+                for(var i=0;i<aImg.length;i++){
+                    if(i<=k){
+                        $(aImg[i]).attr("src","images/star-on.png");
+                    }else{
+                        $(aImg[i]).attr("src","images/star-off.png");
+                    }
+                }
 
+            }else {
+                $("#rating-btn").find("img").attr("src","images/star-off.png");
+            }
+        };
+        aImg[i].onclick=function (){
+            k=this.index;
+        }
+    }
+    $("textarea").focus(function(){
+        $(this).parent().removeClass("has-error");
+        $(this).next().hide()
+    })
+    $("textarea").blur(function(){
+        if($(this).text()==""){
+            $(this).parent().addClass("has-error");
+            $(this).next().show()
+        }
+    })
+    $("#save").click(function(){
+        $(this).prev().show();
+        $(this).parent().parent().hide();
+        $(this).parent().parent().prev().show();
+    })
+    /*问答*/
+    $("#ask").click(function(){
+        $(this).parent().hide();
+        $(this).parent().next().show()
+    })
     /*详情*/
     $(".detail").click(function(){
         $("#modalMore").fadeIn();
@@ -270,8 +339,6 @@ $(function(){
         $("#modalMore").fadeOut();
         $(".modal-backdrop").fadeOut()
     })
-
-
 
     /*溢出显示省略号*/
     $(".teacher-info").wordLimit(70);
