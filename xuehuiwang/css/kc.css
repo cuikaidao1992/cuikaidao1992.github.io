@@ -335,16 +335,19 @@
     color: #fff;
     display: block
 }
+
+
 .review-wrapper .buy-collect{
     margin-top: 6px;
 }
 .review-wrapper .buy-collect a{
     height: 20px;
-    margin-top: 5px;
-    padding-right: 20px;
+    width: 20px;
+    margin-top: 1px;
     line-height: 19px;
     color: #fff;
     font-size: 12px;
+    position: absolute;
 }
 
 .review-wrapper .buy-collect i{
@@ -352,18 +355,21 @@
     height: 20px;
     display: inline-block;
     background-image: url("../images/buy-collect.png");
-    position: absolute;
 }
 
+.review-wrapper .buy-btn{
+    left: 15px;
+}
 .review-wrapper .buy{
     background-position: 0 0;
-    left: 15px;
 }
 .review-wrapper .buy:hover{
     background-position: -20px 0;
 }
 .review-wrapper .collect{
     background-position: 0 -18px;
+}
+.review-wrapper .collect-btn{
     right: 15px;
 }
 .review-wrapper .collect:hover{
@@ -374,7 +380,6 @@
     opacity: 1;
     filter: alpha(opacity=100) \9;
 }
-
 .brick-item-l {
     height: 614px;
     width: 228px;
@@ -805,10 +810,9 @@
 /*分页*/
 .text-center{
     text-align: center;
+    background: #f5f5f5;
 }
-.viewList .text-center{
-    background:#f5f5f5;
-}
+
 .pagination .active a{
     cursor: default;
     color: #fff;

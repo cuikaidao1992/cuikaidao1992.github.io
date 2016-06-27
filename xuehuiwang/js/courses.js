@@ -155,15 +155,21 @@ $(function(){
     $(".tool-btn").click(function(){
         $(this).addClass("act");
         $(this).siblings().removeClass("act");
-        $(".viewModule").hide();
-        $(".viewModule").eq($(this).index()).show()
+        $(".viewList").hide();
+        $(".viewList").eq($(this).index()).show()
     })
     /*课程列表下拉菜单*/
     $(".course-category").mouseenter(function(){
-        $(this).find("div").fadeIn()
+        $(this).find("div").show()
     }).mouseleave(function(){
-        $(this).find("div").fadeOut()
-    })
+        $(this).find("div").hide()
+    });
+    $(".all-course-content").find("a").click(function(){
+        $(this).parent().hide();
+    });
+    $(".all-subcourse-content").find("a").click(function(){
+        $(this).parent().hide();
+    });
     /*溢出显示省略号*/
     $(".subtitle").wordLimit(50);
 
@@ -205,6 +211,10 @@ $(function(){
     }).mouseleave(function() {
         $(".user-menu").slideUp("fast");
         $(".user").removeClass("user-active")
+    });
+    $(".all-course-item").click(function(){
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active")
     })
 })
 

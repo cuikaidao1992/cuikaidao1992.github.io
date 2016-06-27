@@ -1,18 +1,13 @@
 /**
  * Created by Administrator on 2016/6/25.
  */
-$(".affirm-btn").click(function(){
-    window.location="pay2.html"
+$(".order-actions").find("a").click(function(){
+    $("#modal").fadeIn();
+    $(".modal-backdrop").fadeIn()
 })
-$(".submit-order").click(function(){
-    window.open("pay3.html")
-});
-$(".code-btn").click(function(){
-    $(this).hide();
-    $(this).next().show()
-});
-$(".close").click(function(){
-    $(this).parent().hide()
+$(".modal-header .close").click(function(){
+    $("#modal").fadeOut();
+    $(".modal-backdrop").fadeOut()
 })
 /*登陆后显示*/
 var timerUser=null;
@@ -31,13 +26,3 @@ $(".user-menu").mouseenter(function(){
     $(".user-menu").slideUp("fast");
     $(".user").removeClass("user-active")
 })
-var n=3;
-var timer=null;
-timer=setInterval(function(){
-    n--;
-    if(n<=0){
-        clearInterval(timer);
-        window.location = "index2.html";
-    }
-    $(".return-time").text(n);
-},1000);

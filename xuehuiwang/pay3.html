@@ -81,24 +81,13 @@
                         </p>
                     </div>
                     <div class="return">
-                        <span class="return-time">10</span>秒返回学慧网首页
+                        <span class="return-time">3</span>秒返回学慧网首页
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script>
-    var n=10;
-    var timer=null;
-    timer=setInterval(function(){
-        n--;
-        if(n<=0){
-            clearInterval(timer);
-            window.location = "index2.html";
-        }
-        $(".return-time").text(n);
-    },1000);
-</script>
+<script src="js/pay.js"></script>
 </body>
 </html>

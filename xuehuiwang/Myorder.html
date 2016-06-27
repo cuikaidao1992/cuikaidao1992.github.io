@@ -37,25 +37,25 @@
             <a class="reginster" href="javascript:;">注册</a>
         </div>
         <div class="topbar-info" id="J_userInfo">
-                <span class="user">
-                    <a href="#" class="user-name" target="_blank"><span class="name">学慧网</span>
-                        <i class="es-icon es-icon-keyboardarrowdown"></i>
-                    </a>
-                    <ul class="user-menu">
-                        <li>
-                            <a href="#" target="_blank">个人主页</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">个人设置</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">账户中心</a>
-                        </li>
-                        <li>
-                            <a href="#" >退出登录</a>
-                        </li>
-                    </ul>
-                </span>
+                    <span class="user">
+                        <a href="#" class="user-name" target="_blank"><span class="name">学慧网</span>
+                            <i class="es-icon es-icon-keyboardarrowdown"></i>
+                        </a>
+                        <ul class="user-menu">
+                            <li>
+                                <a href="#" target="_blank">个人主页</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">个人设置</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">账户中心</a>
+                            </li>
+                            <li>
+                                <a href="#" >退出登录</a>
+                            </li>
+                        </ul>
+                    </span>
             <span class="sep">|</span>
         </div>
     </div>
@@ -483,15 +483,6 @@
     </div>
 </div>
 <div class="modal-backdrop"></div>
-<script>
-    $(".order-actions").find("a").click(function(){
-        $("#modal").fadeIn();
-        $(".modal-backdrop").fadeIn()
-    })
-    $(".modal-header .close").click(function(){
-        $("#modal").fadeOut();
-        $(".modal-backdrop").fadeOut()
-    })
-</script>
+<script src="js/order.js"></script>
 </body>
 </html>

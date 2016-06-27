@@ -272,6 +272,18 @@ $(function(){
     },function(){
         $(this).removeClass("brick-item-active");
     })
+    var c=0;
+    $(".collect-btn").click(function(){
+        $(this).toggleClass("active");
+        c++;
+        if(c==0){
+            $(".loader").text("收藏中还没有课程，赶紧选课吧！")
+        }else {
+            $(".loader").text("您收藏了"+c+"个课程，赶紧登录学习吧")
+        }
+    });
+
+
     /*热门小组*/
     $(".group-item").hover(function(){
         $(this).find(".control").css({

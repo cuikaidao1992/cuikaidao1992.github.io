@@ -72,20 +72,23 @@ body {
 }
 .course-item-list li{
     display: inline-block;
+    height: 45px;
     zoom: 1;
 }
 .course-item-list .active a{
     color: #36d38c;
+    border-bottom: 2px solid #57bc4c;
 }
 
 .course-item-list li a{
     display: block;
-    padding: 15px 33px;
+    padding: 12px 10px;
+    margin: 0 23px;
     color: #616161;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 .course-item-list li a:hover{
     color: #36d38c;
@@ -296,7 +299,8 @@ body {
     color: #36d38c;
 }
 /*列表*/
-.viewModule,.viewMenu{display: none}
+.viewModule > ul{display: none}
+
 .menu-list .list-stark {
     position: relative;
     border-bottom: 1px solid #f2f2f2;
