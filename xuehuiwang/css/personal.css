@@ -274,13 +274,13 @@ body {
 
 .slider .user-pic .set-btn i {
     font-size: 24px;
-    color: #787d82;
+    color: #999;
     opacity: 0.7;
 }
 
 .slider .user-pic .set-btn i:hover {
     opacity: 1;
-    color: #333;
+    color: #fff;
 }
 
 .wrap {
