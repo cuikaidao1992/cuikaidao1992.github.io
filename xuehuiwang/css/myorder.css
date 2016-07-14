@@ -70,9 +70,7 @@
     padding: 36px 0;
     background: #fff;
 }
-.order-list-box{
-    margin: 0 48px;
-}
+
 .order-list-boxx .box-hd .filter-list li.tab-active a, .order-list-box .box-hd .filter-list li.active a {
     color: #46c37b;
 }

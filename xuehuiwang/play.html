@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/es-icon.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="css/play.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div id="header" class="site-topbar">
+    <div class="cd-inner clearfix">
+        <ul class="course-play">
+            <li class="nv nv-goback"><a href="#" class="revert"><i class="es-icon es-icon-chevronleft"></i></a></li>
+            <li class="nv nv-menu">
+                <a href="javascript:;" class="chaptername">课时 1 营养之道谁与争锋</a>
+            </li>
+        </ul>
+        <div class="navbar-user">
+            <form class="navbar-form navbar-right" action="" method="get">
+                <div class="form-group">
+                    <input class="form-control js-search" name="q" placeholder="搜索">
+                    <button class="button es-icon es-icon-search"></button>
+                </div>
+            </form>
+            <ul class="user-nav clearfix">
+                <li class="topbar-info" id="J_userInfo">
+                    <span class="user">
+                        <a href="#" class="user-name" target="_blank"><span class="name">D.C.base</span>
+                            <i class="es-icon es-icon-keyboardarrowdown"></i>
+                        </a>
+                        <ul class="user-menu" style="display: none;">
+                            <li>
+                                <a href="set.html" target="_blank">个人设置</a>
+                            </li>
+                            <li>
+                                <a href="account.html" target="_blank">账户中心</a>
+                            </li>
+                            <li>
+                                <a href="buy.html" target="_blank">我的评价</a>
+                            </li>
+                            <li>
+                                <a href="collect.html" target="_blank">我的收藏</a>
+                            </li>
+                            <li>
+                                <a href="#">退出登录</a>
+                            </li>
+                        </ul>
+                    </span>
+                    <span class="sep">|</span>
+                </li>
+                <li class="message">
+                    <a href="notices.html">
+                        <span class="msg_icon">3</span>
+                        <i class="es-icon es-icon-notificationson"></i>
+                    </a>
+                </li>
+                <li class="letter">
+                    <a href="messages.html">
+                        <i class="es-icon es-icon-mail"></i>
+                    </a>
+                </li>
+                <li class="topbar-oder">
+                    <a href="account.html">我的订单</a>
+                </li>
+                <li class="topbar-study">
+                    <a href="lesson.html">学习中心</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="studyMain" class="video-con">
+    <!--<div id="wrap">
+        <div class="skin"></div>
+    </div>-->
+    <div class="js-box-wrap">
+        <div class="course-video-box">
+            <div class="player playlist-none">
+                <img src="images/play_img.jpg">
+            </div>
+        </div>
+        <div class="dashboard-footer">
+            <a class="btn btn-primary nav-btn next-lesson-btn" href="javascript:" data-role="next-lesson" data-placement="right" title="" data-original-title="下一课时">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </a>
+            <button class="btn btn-primary finish-btn" data-role="finish-lesson">
+                <span class="glyphicon glyphicon-unchecked"></span> 学过了
+            </button>
+        </div>
+    </div>
+    <div class="section-list" style="right: -360px;">
+        <div class="operator">
+            <div class="op chapter"><em class="glyphicon glyphicon-th-list"></em>目录</div>
+            <div class="op notes"><em class="glyphicon glyphicon-edit"></em>笔记</div>
+            <div class="op questions"><em class="glyphicon glyphicon-question-sign"></em>问答</div>
+            <div class="op data"><em class="glyphicon glyphicon-download-alt"></em>资料</div>
+            <div class="op task"><em class="glyphicon glyphicon-list-alt"></em>作业</div>
+            <div class="op evaluate"><em class="glyphicon glyphicon-thumbs-up"></em>评价</div>
+            <div class="op scan">
+                <em class="glyphicon glyphicon-qrcode"></em>扫下
+                <div class="qrcode">
+                    <img src="images/kcm.png">
+                    扫二维码继续学习
+                </div>
+            </div>
+        </div>
+        <div class="nano has-scrollbar" id="course-item-list">
+            <div class="nano-content" tabindex="0" style="right: -17px;">
+                <ul class="period-list">
+                    <li class="period lesson-item lesson-item-14219 item-active" data-id="14219" data-num="1">
+                        <a href="#" title="营养之道谁与争锋">
+                            <i class="es-icon es-icon-undone status-icon color-primary"></i>
+                            <span class="title">   课时1：营养之道谁与争锋</span>
+                            <span class="course-type">
+                              <i class="es-icon es-icon-videocam color-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                <small class="type">回放</small>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="period lesson-item lesson-item-14569" data-id="14569" data-num="2">
+                        <a href="#" title="高效沟通从“心”开始">
+                            <i class="es-icon es-icon-undone status-icon"></i>
+                            <span class="title">   课时2：高效沟通从“心”开始</span>
+                            <span class="course-type">
+                              <i class="es-icon es-icon-videocam" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                <small class="type">回放</small>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="period lesson-item lesson-item-14919" data-id="14919" data-num="3">
+                        <a href="#" title="揭秘面试“读心术”">
+                            <i class="es-icon es-icon-undone status-icon"></i>
+                            <span class="title">   课时3：揭秘面试“读心术”</span>
+                            <span class="course-type">
+                              <i class="es-icon es-icon-videocam" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                <small class="type">回放</small>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nano has-scrollbar" id="data-item-list">
+            <div class="nano-content" tabindex="0" style="right: -17px;">
+                <h5>课时资料</h5>
+                <ul class="media-list toolbar-pane-list">
+                    <li class="empty-item">此课时无资料</li>
+                </ul>
+            </div>
+        </div>
+        <div class="nano has-scrollbar" id="task-item-list">
+            <div class="nano-content" tabindex="0" style="right: -17px;">
+                <ul class="homework-list">
+                    <li class="period homework-pane" data-id="14219" data-num="1">
+                        <h5>课后作业</h5>
+                        <div class="lesson-about">
+                            此课时暂无作业
+                        </div>
+                    </li>
+                    <li class="period homework-pane" data-id="14219" data-num="1">
+                        <h5>课后作业</h5>
+                        <div class="lesson-about">
+                            此课时暂无作业
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--笔记弹窗-->
+<div class="publish clearfix note-pop" id="note-publist" >
+    <div class="publish-wrap publish-wrap-note video-publish-note pop-con">
+        <div class="pop-title">
+            <h3>笔记</h3>
+            <span class="es-icon es-icon-close01 close"></span>
+        </div>
+        <div id="js-note-input-fake" class="textarea-wrap">
+            <textarea data-maxlength="1000" id="js-note-textarea" class="js-placeholder" name="" placeholder="请输入笔记内容..."></textarea>
+            <p class="note-text-counter"><span id="js-note-limit">0</span>/1000</p>
+        </div>
+        <div class="publish-note-btns input-btm clearfix pop-footer">
+            <div class="verify-code clearfix"></div>
+            <input type="button" title="发表" value="保存" id="js-note-submit" class="course-btn">
+            <label for="js-isshare" class="label-checked r"><input type="checkbox" checked="checked" id="js-isshare" class="checked"> 公开</label>
+        </div>
+    </div>
+</div>
+<!--问答弹出框-->
+<div class="publish clearfix qa-pop" id="discus-publish">
+    <div class="publish-wrap publish-wrap-disucss video-publish-qa pop-con">
+        <div class="pop-title">
+            <h3>提问</h3>
+            <span class="es-icon es-icon-close01 close"></span>
+        </div>
+        <div class="qa-control-wrap clearfix">
+            <div class="question-area">
+                <div class="qa-control qa-ipt-title">
+                    <input type="text" id="js-qa-title" maxlength="255" class="js-placeholder autocomplete" placeholder="请输入问题标题">
+                </div>
+            </div>
+        </div>
+        <div class="qa-control-wrap clearfix">
+            <div class="qa-control">
+                <div class="rich-text-editor">
+                    <textarea id="question_content" name="question[content]" class="form-control question_content" rows="5" placeholder="详细描述你的问题" data-image-upload-url=""></textarea>
+                </div>
+            </div>
+        </div>
+        <div id="js-discuss-btm" class="discuss-bottom input-btm clearfix pop-footer">
+            <input id="js-discuss-submit" class="r course-btn" type="button" value="发布">
+        </div>
+    </div>
+</div>
+<!--评价-->
+<div class="publish clearfix qa-pop" id="evaluate-publish">
+    <div class="publish-wrap publish-wrap-disucss video-publish-qa pop-con">
+        <div class="pop-title">
+            <h3>评价</h3>
+            <span class="es-icon es-icon-close01 close"></span>
+        </div>
+        <div class="qa-control-wrap clearfix">
+            <div class="form-group controls">
+                请打分：
+                <span data-rating="0" data-img-path="" class="rating-btn" id="rating-btn">
+                    <img src="images/star-off.png" alt="1" title="很差">&nbsp;
+                    <img src="images/star-off.png" alt="2" title="较差">&nbsp;
+                    <img src="images/star-off.png" alt="3" title="还行">&nbsp;
+                    <img src="images/star-off.png" alt="4" title="推荐">&nbsp;
+                    <img src="images/star-off.png" alt="5" title="力荐">
+                    <input type="hidden" name="score">
+                </span>
+            </div>
+            <div class="qa-control">
+                <div class="rich-text-editor">
+                    <textarea id="evaluate_content" name="" class="form-control question_content" rows="5" placeholder="输入你的评价内容" data-image-upload-url=""></textarea>
+                </div>
+            </div>
+        </div>
+        <div id="js-evaluate-btm" class="discuss-bottom input-btm clearfix pop-footer">
+            <input id="js-evaluate-submit" class="r course-btn" type="button" value="发布">
+        </div>
+    </div>
+</div>
+<script src="js/play.js"></script>
+</body>
+</html>

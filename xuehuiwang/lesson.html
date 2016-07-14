@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学慧网</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/es-icon.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div class="site-topbar">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">学慧网</a>
+        </div>
+        <ul class="nav-item">
+            <li><a href="index.html" target="_self">首页</a></li>
+            <li><a href="courses.html" target="_self">选课</a></li>
+            <li><a href="tiku.html" target="_self">题库</a></li>
+            <li><a href="zixun.html" target="_self">资讯</a></li>
+            <li><a href="#" target="_self">小组</a></li>
+            <li><a href="active.html" target="_self">活动</a></li>
+            <li><a href="#" target="_self">服务</a></li>
+        </ul>
+        <div class="navbar-user">
+            <form class="navbar-form navbar-right" action="" method="get">
+                <div class="form-group">
+                    <input class="form-control js-search" name="q" placeholder="搜索">
+                    <button class="button es-icon es-icon-search"></button>
+                </div>
+            </form>
+            <ul class="user-nav clearfix">
+                <li class="topbar-info" id="J_userInfo">
+                    <span class="user">
+                        <a href="#" class="user-name" target="_blank"><span class="name">D.C.base</span>
+                            <i class="es-icon es-icon-keyboardarrowdown"></i>
+                        </a>
+                        <ul class="user-menu" style="display: none;">
+                            <li>
+                                <a href="set.html" target="_blank">个人设置</a>
+                            </li>
+                            <li>
+                                <a href="account.html" target="_blank">账户中心</a>
+                            </li>
+                            <li>
+                                <a href="buy.html" target="_blank">我的评价</a>
+                            </li>
+                            <li>
+                                <a href="collect.html" target="_blank">我的收藏</a>
+                            </li>
+                            <li>
+                                <a href="#">退出登录</a>
+                            </li>
+                        </ul>
+                    </span>
+                    <span class="sep">|</span>
+                </li>
+                <li class="message">
+                    <a href="notices.html">
+                        <span class="msg_icon">3</span>
+                        <i class="es-icon es-icon-notificationson"></i>
+                    </a>
+                </li>
+                <li class="letter">
+                    <a href="messages.html">
+                        <i class="es-icon es-icon-mail"></i>
+                    </a>
+                </li>
+                <li class="topbar-oder">
+                    <a href="account.html">我的订单</a>
+                </li>
+                <li class="topbar-study">
+                    <a href="lesson.html">学习中心</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="main">
+    <div class="bg-other user-head-info">
+        <div class="user-info">
+            <h3 class="user-name clearfix">
+                <span>D.C.base</span>
+            </h3>
+            <p class="about-info">
+                <span class="gender " title="男"></span>
+                <span class="u-info-credit">
+                    <a href="#"><span>2016-06-29</span>加入学慧网</a>
+                </span>
+                <span class="u-info-title">
+                    <a href="#">人力资源管理二级</a>
+                </span>
+                <span class="u-info-subtitle">
+                    <a href="#">基础取证班</a>
+                </span>
+            </p>
+            <p class="user-desc">
+                <span class="u-info-learn">学习时长 <em>13小时 0分</em></span>
+            </p>
+            <div class="study-info clearfix">
+                <div class="item follows">
+                    <a href="#"><em>18</em></a>
+                    <span>旷课</span>
+                </div>
+                <div class="item followers">
+                    <a href="#"><em>1</em></a>
+                    <span>请假</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="slider">
+            <div class="user-pic" data-is-fans="" data-is-follows="">
+                <div class="user-pic-bg"></div>
+                <img class="img" src="images/user_img.png" alt="">
+                <div class="set-btn">
+                    <a href="set.html">
+                        <i class="es-icon es-icon-setting"></i>
+                    </a>
+                </div>
+            </div>
+            <ul class="menu-list">
+                <li>
+                    <a href="lesson.html" class="active">
+                        <i class="es-icon es-icon-school"></i><span>课程</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="tiku.html">
+                        <i class="es-icon es-icon-mylibrarybooks"></i><span>题库</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="details.html">
+                        <i class="es-icon es-icon-description"></i><span>资料</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="questions.html">
+                        <i class="es-icon es-icon-help1"></i><span>问答</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="notebooks.html">
+                        <i class="es-icon es-icon-edit"></i><span>笔记</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="serve.html">
+                        <i class="es-icon es-icon-people"></i><span>服务</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="account.html">
+                        <i class="es-icon es-icon-person"></i><span>账户</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="collect.html">
+                        <i class="es-icon es-icon-favorite"></i><span>收藏</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="software.html">
+                        <i class="es-icon es-icon-apple"></i><span>软件</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="u-container">
+            <div class="xh-header clearfix">
+                <div class="xh-menu">
+                    <div class="xh-content">
+                        <ul class="xh-tab clearfix">
+                            <li class="xh-cur">
+                                <a href="javascript:;">公共营养学基础知识</a>
+                                <span class="have-course">今日有课</span>
+                                <span class="all-lessons">共38节直播课</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">心理咨询师三级</a>
+                                <span class="all-lessons">共30节直播课</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">企业人力资源管理师</a>
+                                <span class="all-lessons">共28节直播课</span>
+                            </li>
+                            <li class="last">
+                                <a href="javascript:;">中国现代文学史</a>
+                                <span class="all-lessons">共15节直播课</span>
+                            </li>
+                        </ul>
+                        <p class="txt">共5门课程</p>
+                    </div>
+                    <a class="xh-conmore" href="javascript:void(0);">更多<em class="es-icon es-icon-keyboardarrowdown"></em></a>
+                </div>
+                <div class="nav-content">
+                    <div class="favorable">
+                        <em class="label-fav">通知</em>
+                        <span class="title">2科联报直减400元，3科联报直减600元，全科联报直减1000元。</span>
+                        <a class="link jp-show-dialog"><span>详细</span><i class="i-arrow"></i></a>
+                    </div>
+                    <div class="xh-subMenu">
+                        <ul class="xh-sub-tab clearfix">
+                            <li class="xh-sub-cur">
+                                <a href="javascript:;">直播课表</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">课程表/重课表</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">点播视频</a>
+                            </li>
+                        </ul>
+                        <a class="mc-calendar" href="javascript:;"><img src="images/calenderpic.gif" alt="">查看日历</a>
+                    </div>
+                </div>
+            </div>
+            <div class="js-course-list my-space-course" style="display: block">
+                <div class="mc-module">
+                    <div class="mc-teaser clearfix">
+                        <span class="mc-course-date">今日课程</span>
+                        <span class="mc-week">星期一</span>
+                    </div>
+                    <ul class="mc-scroll-area clearfix">
+                        <li class="mc-time-module clearfix">
+                            <span class="mc-timer">
+                                19:30-22:00
+                                19:30-22:00
+                                <span class="mc-static-bg mc-dot mc-progress"></span>
+                            </span>
+                            <div class="lecturer">
+                                <a href="#">
+                                    <img src="images/xs1.jpg">
+                                    <span>老师</span>
+                                </a>
+                            </div>
+                            <div class="mc-class-detail">
+                                <div class="clearfix">
+                                    <dl>
+                                        <dt>
+                                            <a href="javascript:;"> 课时1 HR人力资源管理师基础知识</a>
+                                            <span class="es-qrcode">
+                                                <i class="es-icon es-icon-qrcode"></i>
+                                                <span class="qrcode-popover">
+                                                    <img src="images/kcm.png" alt="">
+                                                    <span class="sweep">扫二维码继续学习</span>
+                                                </span>
+                                            </span>
+                                        </dt>
+                                        <dd class="title"><a href="#">企业人力资源管理师二级技能-精讲</a></dd>
+                                        <dd class="notice">请在课前10分钟内提前进入</dd>
+                                    </dl>
+                                    <div class="mc-view-detail">
+                                        <a href="javascript:;" class="enter-classroom">进入教室</a>
+                                        <a href="javascript:;" class="leave">请假</a>
+                                    </div>
+                                </div>
+                                <div class="mc-line clearfix"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mc-module">
+                    <div class="mc-teaser clearfix">
+                        <span class="mc-course-date">06月29日<em>2016年</em></span>
+                        <span class="mc-week">星期三</span>
+                    </div>
+                    <ul class="mc-scroll-area clearfix">
+                        <li class="mc-time-module clearfix">
+                            <span class="mc-timer">
+                                19:30-22:00
+                                19:30-22:00
+                                <span class="mc-static-bg mc-dot mc-progress"></span>
+                            </span>
+                            <div class="lecturer">
+                                <a href="#">
+                                    <img src="images/xs1.jpg">
+                                    <span>老师</span>
+                                </a>
+                            </div>
+                            <div class="mc-class-detail">
+                                <div class="clearfix">
+                                    <dl>
+                                        <dt>
+                                            <a href="javascript:;">课时1 HR人力资源管理师基础知识</a>
+                                            <span class="es-qrcode">
+                                                <i class="es-icon es-icon-qrcode"></i>
+                                                <span class="qrcode-popover">
+                                                    <img src="images/kcm.png" alt="">
+                                                    <span class="sweep">扫二维码继续学习</span>
+                                                </span>
+                                            </span>
+                                        </dt>
+                                        <dd><a href="#">企业人力资源管理师二级技能</a> </dd>
+                                    </dl>
+                                    <div class="mc-view-detail">
+                                        <a href="javascript:;" class="mc-not-enter">待开始</a>
+                                    </div>
+                                </div>
+                                <div class="mc-line clearfix"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mc-module">
+                    <div class="mc-teaser clearfix">
+                        <span class="mc-course-date">06月29日<em>2016年</em></span>
+                        <span class="mc-week">星期三</span>
+                    </div>
+                    <ul class="mc-scroll-area clearfix">
+                        <li class="mc-time-module clearfix">
+                            <span class="mc-timer">
+                                19:30-22:00
+                                19:30-22:00
+                                <span class="mc-static-bg mc-dot mc-progress"></span>
+                            </span>
+                            <div class="lecturer">
+                                <a href="#">
+                                    <img src="images/xs1.jpg">
+                                    <span>老师</span>
+                                </a>
+                            </div>
+                            <div class="mc-class-detail">
+                                <div class="clearfix">
+                                    <dl>
+                                        <dt>
+                                            <a href="javascript:;">课时1 HR人力资源管理师基础知识</a>
+                                            <span class="es-qrcode">
+                                                <i class="es-icon es-icon-qrcode"></i>
+                                                <span class="qrcode-popover">
+                                                    <img src="images/kcm.png" alt="">
+                                                    <span class="sweep">扫二维码继续学习</span>
+                                                </span>
+                                            </span>
+                                        </dt>
+                                        <dd><a href="#">企业人力资源管理师二级技能</a> </dd>
+                                    </dl>
+                                    <div class="mc-view-detail">
+                                        <a href="javascript:;" class="mc-not-enter">待开始</a>
+                                    </div>
+                                </div>
+                                <div class="mc-line clearfix"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mc-module">
+                    <div class="mc-teaser clearfix">
+                        <span class="mc-course-date">06月29日<em>2016年</em></span>
+                        <span class="mc-week">星期三</span>
+                    </div>
+                    <ul class="mc-scroll-area clearfix">
+                        <li class="mc-time-module clearfix">
+                            <span class="mc-timer">
+                                19:30-22:00
+                                19:30-22:00
+                                <span class="mc-static-bg mc-dot mc-progress"></span>
+                            </span>
+                            <div class="lecturer">
+                                <a href="#">
+                                    <img src="images/xs1.jpg">
+                                    <span>老师</span>
+                                </a>
+                            </div>
+                            <div class="mc-class-detail">
+                                <div class="clearfix">
+                                    <dl>
+                                        <dt>
+                                            <a href="javascript:;">课时1 HR人力资源管理师基础知识</a>
+                                            <span class="es-qrcode">
+                                                <i class="es-icon es-icon-qrcode"></i>
+                                                <span class="qrcode-popover">
+                                                    <img src="images/kcm.png" alt="">
+                                                    <span class="sweep">扫二维码继续学习</span>
+                                                </span>
+                                            </span>
+                                        </dt>
+                                        <dd><a href="#">企业人力资源管理师二级技能</a> </dd>
+                                    </dl>
+                                    <div class="mc-view-detail">
+                                        <a href="javascript:;" class="mc-not-enter">待开始</a>
+                                    </div>
+                                </div>
+                                <div class="mc-line clearfix"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="v-right-tip">
+                    <a href="javascript:;">第2部分课程需升级班型，立即购买</a>
+                </div>
+                <div class="mc-module">
+                    <div class="mc-teaser clearfix">
+                        <span class="mc-course-date">06月29日<em>2016年</em></span>
+                        <span class="mc-week">星期三</span>
+                    </div>
+                    <ul class="mc-scroll-area clearfix">
+                        <li class="mc-time-module clearfix">
+                            <span class="mc-timer">
+                                19:30-22:00
+                                19:30-22:00
+                                <span class="mc-static-bg mc-dot mc-progress"></span>
+                            </span>
+                            <div class="lecturer">
+                                <a href="#">
+                                    <img src="images/xs1.jpg">
+                                    <span>老师</span>
+                                </a>
+                            </div>
+                            <div class="mc-class-detail">
+                                <div class="clearfix">
+                                    <dl>
+                                        <dt>
+                                            <a href="javascript:;">课时1 HR人力资源管理师基础知识</a>
+                                            <span class="es-qrcode">
+                                                <i class="es-icon es-icon-qrcode"></i>
+                                                <span class="qrcode-popover">
+                                                    <img src="images/kcm.png" alt="">
+                                                    <span class="sweep">扫二维码继续学习</span>
+                                                </span>
+                                            </span>
+                                        </dt>
+                                        <dd><a href="#">企业人力资源管理师二级技能</a> </dd>
+                                    </dl>
+                                    <div class="mc-view-detail">
+                                        <a href="javascript:;" class="mc-not-enter">待开始</a>
+                                    </div>
+                                </div>
+                                <div class="mc-line clearfix"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mc-module">
+                    <div class="mc-teaser clearfix">
+                        <span class="mc-course-date">06月29日<em>2016年</em></span>
+                        <span class="mc-week">星期三</span>
+                    </div>
+                    <ul class="mc-scroll-area clearfix">
+                        <li class="mc-time-module clearfix">
+                            <span class="mc-timer">
+                                19:30-22:00
+                                19:30-22:00
+                                <span class="mc-static-bg mc-dot mc-progress"></span>
+                            </span>
+                            <div class="lecturer">
+                                <a href="#">
+                                    <img src="images/xs1.jpg">
+                                    <span>老师</span>
+                                </a>
+                            </div>
+                            <div class="mc-class-detail">
+                                <div class="clearfix">
+                                    <dl>
+                                        <dt>
+                                            <a href="javascript:;">课时1 HR人力资源管理师基础知识</a>
+                                            <span class="es-qrcode">
+                                                <i class="es-icon es-icon-qrcode"></i>
+                                                <span class="qrcode-popover">
+                                                    <img src="images/kcm.png" alt="">
+                                                    <span class="sweep">扫二维码继续学习</span>
+                                                </span>
+                                            </span>
+                                        </dt>
+                                        <dd><a href="#">企业人力资源管理师二级技能</a> </dd>
+                                    </dl>
+                                    <div class="mc-view-detail">
+                                        <a href="javascript:;" class="mc-not-enter">待开始</a>
+                                    </div>
+                                </div>
+                                <div class="mc-line clearfix"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mc-view-more" id="ajaxMoreClass">
+                    <a href="javascript:;" id="moreClass">显示更多</a>
+                </div>
+            </div>
+            <div class="mc-tab-content js-course-list">
+                <div class="cr-view-calendar">
+                    <div class="xhBreadCrumbs">
+                        上次复习到 :
+                        <a href="#" class="xhCourseClick">本科公共课前导课</a> »
+                        <a href="#" target="_blank">本科公共课前导课</a>
+                        <a href="#" class="enter-room" target="_blank"><i class="es-icon es-icon-videocam"></i>进入教室</a>
+                    </div>
+                </div>
+                <div class="course-chapter">
+                    <div class="v-right-info v-right-top1">
+                        <ul>
+                            <li>
+                                <div class="left-time">
+                                    <div class="top">
+                                        <em class="month">3</em>
+                                        <em class="day">18</em>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="live-time">星期一</span>
+                                    </div>
+                                </div>
+                                <div class="course-info">
+                                    <div class="top ">
+                                        <a href="#" target="_blank" title="" class="title">第1节：心理咨询师基础知识-精讲</a>
+                                        <span class="data">2016-03-18   19:00-21:30</span>
+                                    </div>
+                                    <div>
+                                        <a href="#" target="_blank" title="" class="choose">观看重播</a>
+                                    </div>
+                                </div>
+                                <a href="#" target="_blank" class="play"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="v-right-top2">
+                        <div class="v-title open">
+                            <a href="javascript:;">第1部分：课前辅导课程（赠送）</a>
+                            <i class="es-icon es-icon-keyboardarrowdown" ></i>
+                        </div>
+                        <div class="v-right-info">
+                            <ul>
+                                <li>
+                                    <div class="left-time">
+                                        <div class="top">
+                                            <em class="month">3</em>
+                                            <em class="day">18</em>
+                                        </div>
+                                        <div class="bottom">
+                                            <span class="live-time">星期一</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <div class="top ">
+                                            <a href="#" target="_blank" title="" class="title">第1节：基础心理学1</a>
+                                            <span class="data">2016-03-18   19:00-21:30</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" target="_blank" title="" class="choose">观看重播</a>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="play"></a>
+                                </li>
+                                <li>
+                                    <div class="left-time">
+                                        <div class="top">
+                                            <em class="month">3</em>
+                                            <em class="day">18</em>
+                                        </div>
+                                        <div class="bottom">
+                                            <span class="live-time">星期一</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <div class="top ">
+                                            <a href="#" target="_blank" title="" class="title">第1节：基础心理学2</a>
+                                            <span class="data">2016-03-18   19:00-21:30</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" target="_blank" title="" class="choose">观看重播1</a>
+                                            <a href="#" target="_blank" title="" class="choose">观看重播2</a>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="play"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="v-right-top2">
+                        <div class="v-title open">
+                            <a href="javascript:;">第2部分：笔试课程</a>
+                            <i class="es-icon es-icon-keyboardarrowdown"></i>
+                        </div>
+                        <div class="v-right-info">
+                            <ul>
+                                <li>
+                                    <div class="left-time">
+                                        <div class="top">
+                                            <em class="month">3</em>
+                                            <em class="day">18</em>
+                                        </div>
+                                        <div class="bottom">
+                                            <span class="live-time">星期一</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <div class="top ">
+                                            <a href="#" target="_blank" title="" class="title">第1节：社会心理学</a>
+                                            <span class="data">2016-03-21   19:00-21:30</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" target="_blank" title="" class="choose">观看重播</a>
+                                            <a href="#" target="_blank" title="" class="choose">继续作业</a>
+                                            <a href="#" target="_blank" title="" class="choose">旷课</a>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="play"></a>
+                                </li>
+                                <li>
+                                    <div class="left-time">
+                                        <div class="top">
+                                            <em class="month">3</em>
+                                            <em class="day">18</em>
+                                        </div>
+                                        <div class="bottom">
+                                            <span class="live-time">星期一</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <div class="top ">
+                                            <a href="#" target="_blank" title="" class="title">第2节：社会心理学</a>
+                                            <span class="data">2016-03-23   19:00-21:30</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" target="_blank" title="" class="choose">观看重播</a>
+                                            <a href="#" target="_blank" title="" class="choose">家庭作业</a>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="play"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="v-right-tip">
+                        <a href="javascript:;">第3部分课程需升级班型，立即购买</a>
+                    </div>
+                    <div class="v-right-top2">
+                        <div class="v-title open">
+                            <a href="javascript:;">第3部分：发展心理学</a>
+                            <i class="es-icon es-icon-keyboardarrowdown"></i>
+                        </div>
+                        <div class="v-right-info">
+                            <ul>
+                                <li>
+                                    <div class="play pay"></div>
+                                    <div class="course-info">
+                                        <div class="top  upgrade">
+                                            <a title="" class="title">第1节：发展心理学1</a>
+                                            <span class="data">2016-04-27   19:00-21:30</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="play pay"></div>
+                                    <div class="course-info">
+                                        <div class="top  upgrade">
+                                            <a title="" class="title">第2节：发展心理学1</a>
+                                            <span class="data">2016-04-29   19:00-21:30</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mc-tab-content js-course-list">
+                <div class="cr-view-calendar">
+                    <div class="xhBreadCrumbs">
+                        上次复习到 :
+                        <a href="#" class="xhCourseClick" id="ucCourse01">本科公共课前导课</a> »
+                        <a href="#" target="_blank">本科公共课前导课</a>
+                        <a href="#" class="enter-room" target="_blank"><i class="es-icon es-icon-videocam"></i>进入教室</a>
+                    </div>
+                </div>
+                <div class="course-chapter">
+                    <div class="v-right-top2">
+                        <div class="v-title open">
+                            <a href="javascript:;">第1部分：课前辅导课程（赠送）</a>
+                            <i class="es-icon es-icon-keyboardarrowdown" ></i>
+                        </div>
+                        <div class="v-right-info">
+                            <ul>
+                                <li>
+                                    <div class="left-time">
+                                        <div class="top">
+                                            <em class="month">3</em>
+                                            <em class="day">18</em>
+                                        </div>
+                                        <div class="bottom">
+                                            <span class="live-time">星期一</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <div class="top ">
+                                            <a href="#" target="_blank" title="" class="title">第1节：劳动经济学</a>
+                                            <span class="data">2016-03-18   19:00-21:30</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" target="_blank" title="" class="choose">观看视频</a>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="play"></a>
+                                </li>
+                                <li>
+                                    <div class="left-time">
+                                        <div class="top">
+                                            <em class="month">3</em>
+                                            <em class="day">18</em>
+                                        </div>
+                                        <div class="bottom">
+                                            <span class="live-time">星期一</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <div class="top ">
+                                            <a href="#" target="_blank" title="" class="title">第2节：现代企业管理1</a>
+                                            <span class="data">2016-03-18   19:00-21:30</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" target="_blank" title="" class="choose">观看视频</a>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="play"></a>
+                                </li>
+                                <li>
+                                    <div class="left-time">
+                                        <div class="top">
+                                            <em class="month">3</em>
+                                            <em class="day">18</em>
+                                        </div>
+                                        <div class="bottom">
+                                            <span class="live-time">星期一</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <div class="top ">
+                                            <a href="#" target="_blank" title="" class="title">第3节：现代企业管理2</a>
+                                            <span class="data">2016-03-18   19:00-21:30</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" target="_blank" title="" class="choose">观看视频</a>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="play"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-title open">
+                            <a href="javascript:;">第2部分：课前辅导课程（赠送）</a>
+                            <i class="es-icon es-icon-keyboardarrowdown" ></i>
+                        </div>
+                        <div class="v-right-info">
+                            <ul>
+                                <li>
+                                    <div class="left-time">
+                                        <div class="top">
+                                            <em class="month">3</em>
+                                            <em class="day">18</em>
+                                        </div>
+                                        <div class="bottom">
+                                            <span class="live-time">星期一</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <div class="top ">
+                                            <a href="#" target="_blank" title="" class="title">第1节：管理心理学与组织行为学1</a>
+                                            <span class="data">2016-03-18   19:00-21:30</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" target="_blank" title="" class="choose">观看视频</a>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="play"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-title open">
+                            <a href="javascript:;">第3部分：课前辅导课程（赠送）</a>
+                            <i class="es-icon es-icon-keyboardarrowdown" ></i>
+                        </div>
+                        <div class="v-right-info">
+                            <ul>
+                                <li>
+                                    <div class="left-time">
+                                        <div class="top">
+                                            <em class="month">3</em>
+                                            <em class="day">18</em>
+                                        </div>
+                                        <div class="bottom">
+                                            <span class="live-time">星期一</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <div class="top ">
+                                            <a href="#" target="_blank" title="" class="title">第1节：人力资源规划1</a>
+                                            <span class="data">2016-03-18   19:00-21:30</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" target="_blank" title="" class="choose">观看视频</a>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="play"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-title open">
+                            <a href="javascript:;">第4部分：课前辅导课程（赠送）</a>
+                            <i class="es-icon es-icon-keyboardarrowdown" ></i>
+                        </div>
+                        <div class="v-right-info">
+                            <ul>
+                                <li>
+                                    <div class="left-time">
+                                        <div class="top">
+                                            <em class="month">3</em>
+                                            <em class="day">18</em>
+                                        </div>
+                                        <div class="bottom">
+                                            <span class="live-time">星期一</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <div class="top ">
+                                            <a href="#" target="_blank" title="" class="title">第1节：招聘与配置1</a>
+                                            <span class="data">2016-03-18   19:00-21:30</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" target="_blank" title="" class="choose">观看视频</a>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="play"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="v-title open">
+                            <a href="javascript:;">第5部分：课前辅导课程（赠送）</a>
+                            <i class="es-icon es-icon-keyboardarrowdown" ></i>
+                        </div>
+                        <div class="v-right-info">
+                            <ul>
+                                <li>
+                                    <div class="left-time">
+                                        <div class="top">
+                                            <em class="month">3</em>
+                                            <em class="day">18</em>
+                                        </div>
+                                        <div class="bottom">
+                                            <span class="live-time">星期一</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <div class="top ">
+                                            <a href="#" target="_blank" title="" class="title">第1节：培训与开发1</a>
+                                            <span class="data">2016-03-18   19:00-21:30</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" target="_blank" title="" class="choose">观看视频</a>
+                                        </div>
+                                    </div>
+                                    <a href="#" target="_blank" class="play"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="es-footer">
+    <div class="footer-link">
+        <div class="footer-main clearfix">
+            <div class="link-item">
+                <img src="images/road.png" alt="新生上路">
+                <h3>新生上路</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">如何注册</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">如何购课</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">如何赠送</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">学习课程</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="link-item">
+                <img src="images/help.png" alt="帮助中心">
+                <h3>帮助中心</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">账户问题</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">直播须知</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">支付方式</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">常见问题</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">视频观看问题</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link-item">
+                <img src="images/about.png" alt="关于我们">
+                <h3>关于我们</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">了解学慧网</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">联系我们</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self">加入学慧网</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">关注我们</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-item">
+                <p class="phone">400-680-7650</p>
+                <p>周一至周五 9:00-19:00<br>（仅收市话费)</p>
+                <a href="#" class="iphone-btn">
+                    学慧网官方在线客服
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="mts">
+                课程内容版权均归
+                <a href="/">
+                    北京学慧网络教育科技有限公司
+                </a>
+                所有
+                <a class="mlm" href="http://www.miibeian.gov.cn/" target="_blank">
+                    京ICP备15007758号-1    京ICP证150990号
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="calendar" id="calendarDiv"><i id="pp-layer-close" class="es-icon es-icon-close01 cal_close"></i><div class="cal_tit">日历 <a class="cal_todayT" id="back" href="javascript:void(0);">今天</a></div><div class="c_tables"><div class="cal_mons"><i id="left-btn" class="es-icon es-icon-chevronleft cal_mons_l mt10 cal_mons_turn"></i><span class="cal_the_mon">2016-07</span><i id="right-btn" class="es-icon es-icon-chevronright cal_mons_r mt10 cal_mons_turn"></i></div><ul class="cal_weeks clearfix"><li>周一</li><li>周二</li><li>周三</li><li>周四</li><li>周五</li><li>周六</li><li>周日</li></ul><table cellpadding="0" cellspacing="0" class="cal_tab"><tbody><tr><td class="bgeffafb" data-day="2016-06-27" id="td_id_day_2016-06-27"><div class="clearfix"><div class="cal_theday cal_colorgray">27</div></div></td><td class="bgfff" data-day="2016-06-28" id="td_id_day_2016-06-28"><div class="clearfix"><div class="cal_theday cal_colorgray">28</div></div></td><td class="bgeffafb" data-day="2016-06-29" id="td_id_day_2016-06-29"><div class="clearfix"><div class="cal_theday cal_colorgray">29</div></div></td><td class="bgfff" data-day="2016-06-30" id="td_id_day_2016-06-30"><div class="clearfix"><div class="cal_theday cal_colorgray">30</div></div></td><td class="bgeffafb" data-day="2016-07-01" id="td_id_day_2016-07-01"><div class="clearfix"><div class="cal_theday cal_colorgray">1</div></div></td><td class="bgfff" data-day="2016-07-02" id="td_id_day_2016-07-02"><div class="clearfix"><div class="cal_theday bffd7170 mr2 cal_hasbg">今</div></div></td><td class="bgeffafb" data-day="2016-07-03" id="td_id_day_2016-07-03"><div class="clearfix"><div class="cal_theday cal_colorgray">3</div></div></td></tr>
+<tr><td class="bgeffafb" data-day="2016-07-04" id="td_id_day_2016-07-04"><div class="clearfix"><div class="cal_theday cal_colorgray">4</div></div></td><td class="bgfff" data-day="2016-07-05" id="td_id_day_2016-07-05"><div class="clearfix"><div class="cal_theday cal_colorgray">5</div></div></td><td class="bgeffafb" data-day="2016-07-06" id="td_id_day_2016-07-06"><div class="clearfix"><div class="cal_theday cal_colorgray">6</div></div></td><td class="bgfff" data-day="2016-07-07" id="td_id_day_2016-07-07"><div class="clearfix"><div class="cal_theday cal_colorgray">7</div></div></td><td class="bgeffafb" data-day="2016-07-08" id="td_id_day_2016-07-08"><div class="clearfix"><div class="cal_theday cal_colorgray">8</div></div></td><td class="bgfff" data-day="2016-07-09" id="td_id_day_2016-07-09"><div class="clearfix"><div class="cal_theday cal_colorgray">9</div></div></td><td class="bgeffafb" data-day="2016-07-10" id="td_id_day_2016-07-10"><div class="clearfix"><div class="cal_theday cal_colorgray">10</div></div></td></tr>
+<tr><td class="bgeffafb" data-day="2016-07-11" id="td_id_day_2016-07-11"><div class="clearfix"><div class="cal_theday cal_colorgray">11</div></div></td><td class="bgfff" data-day="2016-07-12" id="td_id_day_2016-07-12"><div class="clearfix"><div class="cal_theday cal_colorgray">12</div></div></td><td class="bgeffafb" data-day="2016-07-13" id="td_id_day_2016-07-13"><div class="clearfix"><div class="cal_theday cal_colorgray">13</div></div></td><td class="bgfff" data-day="2016-07-14" id="td_id_day_2016-07-14"><div class="clearfix"><div class="cal_theday cal_colorgray">14</div></div></td><td class="bgeffafb" data-day="2016-07-15" id="td_id_day_2016-07-15"><div class="clearfix"><div class="cal_theday cal_colorgray">15</div></div></td><td class="bgfff" data-day="2016-07-16" id="td_id_day_2016-07-16"><div class="clearfix"><div class="cal_theday cal_colorgray">16</div></div></td><td class="bgeffafb" data-day="2016-07-17" id="td_id_day_2016-07-17"><div class="clearfix"><div class="cal_theday cal_colorgray">17</div></div></td></tr>
+<tr><td class="bgeffafb" data-day="2016-07-18" id="td_id_day_2016-07-18"><div class="clearfix"><div class="cal_theday cal_colorgray">18</div></div></td><td class="bgfff" data-day="2016-07-19" id="td_id_day_2016-07-19"><div class="clearfix"><div class="cal_theday cal_colorgray">19</div></div></td><td class="bgeffafb" data-day="2016-07-20" id="td_id_day_2016-07-20"><div class="clearfix"><div class="cal_theday cal_colorgray">20</div></div></td><td class="bgfff" data-day="2016-07-21" id="td_id_day_2016-07-21"><div class="clearfix"><div class="cal_theday cal_colorgray">21</div></div></td><td class="bgeffafb" data-day="2016-07-22" id="td_id_day_2016-07-22"><div class="clearfix"><div class="cal_theday cal_colorgray">22</div></div></td><td class="bgfff" data-day="2016-07-23" id="td_id_day_2016-07-23"><div class="clearfix"><div class="cal_theday cal_colorgray">23</div></div></td><td class="bgeffafb" data-day="2016-07-24" id="td_id_day_2016-07-24"><div class="clearfix"><div class="cal_theday cal_colorgray">24</div></div></td></tr>
+<tr><td class="bgeffafb" data-day="2016-07-25" id="td_id_day_2016-07-25"><div class="clearfix"><div class="cal_theday cal_colorgray">25</div></div></td><td class="bgfff" data-day="2016-07-26" id="td_id_day_2016-07-26"><div class="clearfix"><div class="cal_theday cal_colorgray">26</div></div></td><td class="bgeffafb" data-day="2016-07-27" id="td_id_day_2016-07-27"><div class="clearfix"><div class="cal_theday cal_colorgray">27</div></div></td><td class="bgfff" data-day="2016-07-28" id="td_id_day_2016-07-28"><div class="clearfix"><div class="cal_theday cal_colorgray">28</div></div></td><td class="bgeffafb" data-day="2016-07-29" id="td_id_day_2016-07-29"><div class="clearfix"><div class="cal_theday cal_colorgray">29</div></div></td><td class="bgfff" data-day="2016-07-30" id="td_id_day_2016-07-30"><div class="clearfix"><div class="cal_theday cal_colorgray">30</div></div></td><td class="bgeffafb" data-day="2016-07-31" id="td_id_day_2016-07-31"><div class="clearfix"><div class="cal_theday cal_colorgray">31</div></div></td></tr></tbody></table></div></div>
+<script src="js/person.js"></script>
+<div class="modal-backdrop"></div>
+</body>
+</html>

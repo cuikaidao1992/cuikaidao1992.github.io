@@ -59,7 +59,7 @@ pre{
     word-wrap: break-word;
     line-height: 28px;
 }
-pre, xmp, plaintext, listing {
+pre{
     display: block;
     font-family: monospace;
     margin: 1em 0;
@@ -73,3 +73,4 @@ body {font: 12px "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sa
     margin: 0 .25em;
     font-family: sans-serif;
 }
+

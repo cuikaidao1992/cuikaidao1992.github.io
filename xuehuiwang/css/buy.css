@@ -1402,7 +1402,7 @@ a.link-muted {
 
 .form-control {
     display: block;
-    width: 100%;
+    width: 98%;
    padding-left: 15px;
     font-size: 14px;
     line-height: 1.42857143;
@@ -1415,7 +1415,9 @@ a.link-muted {
     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-
+#question-form .form-control{
+    width: 98%;
+}
 .caret {
     display: inline-block;
     width: 0;

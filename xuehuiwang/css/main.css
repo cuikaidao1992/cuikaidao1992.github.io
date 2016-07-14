@@ -104,11 +104,12 @@
 }
 
 .nav-list .sub_type {
-    width: 620px;
+    width: 730px;
     display: none;
     height: auto;
     min-height: 460px;
-    background: #fff;
+    /*background: #fff;*/
+    background: url("../images/nav-bg1.png");
     position: absolute;
     left: 228px;
     top: 0px;
@@ -118,6 +119,30 @@
     box-shadow: 0 8px 16px rgba(0,0,0,0.18);
     z-index: 20;
 }
+
+.nav-list .sub_type-1{
+    background: url("../images/nav-bg1.png");
+}
+.nav-list .sub_type-2{
+    background: url("../images/nav-bg2.png");
+}
+.nav-list .sub_type-3{
+    background: url("../images/nav-bg3.png");
+}
+.nav-list .sub_type-4{
+    background: url("../images/nav-bg4.png");
+}
+.nav-list .sub_type-5{
+    background: url("../images/nav-bg5.png");
+}
+
+
+
+
+
+
+
+
 
 .nav-list .sub_type_con {
     margin: 0 50px;

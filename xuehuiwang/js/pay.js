@@ -31,13 +31,8 @@ $(".user-menu").mouseenter(function(){
     $(".user-menu").slideUp("fast");
     $(".user").removeClass("user-active")
 })
-var n=3;
-var timer=null;
-timer=setInterval(function(){
-    n--;
-    if(n<=0){
-        clearInterval(timer);
-        window.location = "index2.html";
-    }
-    $(".return-time").text(n);
-},1000);
+$(".conversation-footer").find("a").click(function(){
+    $("h4").css({
+        background:red
+    })
+})

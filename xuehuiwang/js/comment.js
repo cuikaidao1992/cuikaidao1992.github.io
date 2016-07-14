@@ -101,12 +101,12 @@ $(function(){
     /*横导航*/
     var f, a = $("#nav-list").find(".cur").size() > 0 ? $("#nav-list").find(".cur") : 0,
         b = 0,
-        c = 0,
+        c = 58,
         d = 0,
         e = $("#nav-list").offset().left;
     a && (b = a.offset().left - e, c = a.width(), d = 1, $("#nav_line").css({
         left: b,
-        width: c
+        width: 58
     }).animate({
         opacity: 1
     }, 300)), $("#nav-list .nav-item").on("mouseenter", function () {
@@ -114,13 +114,13 @@ $(function(){
             f = $(this).width();
         a || (b = d, c = f), $("#nav_line").stop().animate({
             left: d,
-            width: f,
+            width: 58,
             opacity: 1
         }, 500)
     }), $("#nav-list").mouseleave(function () {
         $("#nav_line").stop().animate({
             left: b,
-            width: c,
+            width: 58,
             opacity: d
         }, 500)
     }), f = 0, $(window).on("scroll", function () {
@@ -153,7 +153,7 @@ $(function(){
     }).mouseleave(function(){
         $("#nav_line").stop().animate({
             left: b,
-            width: c,
+            width:58,
             opacity: d
         }, 500);
         navSubMenu.removeClass("header-nav-menu-active");
@@ -221,18 +221,20 @@ $(function(){
     var cxTimer=null;
     function autoPlay(){
         cxTimer=setInterval(function(){
-            if($("#mainbox").position().left==0){
-                $("#mainbox").animate({
-                    left:-1215
-                },600);
-                $(".btn-next").addClass("control-disabled");
-                $(".btn-prev").removeClass("control-disabled");
-            }else {
-                $(".btn-prev").addClass("control-disabled");
-                $(".btn-next").removeClass("control-disabled");
-                $("#mainbox").animate({
-                    left:0
-                });
+            if($("#mainbox").position().left){
+                if($("#mainbox").position().left==0){
+                    $("#mainbox").animate({
+                        left:-1215
+                    },600);
+                    $(".btn-next").addClass("control-disabled");
+                    $(".btn-prev").removeClass("control-disabled");
+                }else {
+                    $(".btn-prev").addClass("control-disabled");
+                    $(".btn-next").removeClass("control-disabled");
+                    $("#mainbox").animate({
+                        left:0
+                    });
+                }
             }
         },5000);
     }

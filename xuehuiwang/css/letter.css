@@ -1,0 +1,89 @@
+.private-letter{
+    width: 800px;
+    margin: 20px auto;
+}
+.panel-page {
+    padding: 45px 50px 50px;
+    min-height: 500px;
+    margin-top: 30px;
+}
+.panel-page .panel-heading {
+    background: transparent;
+    border-bottom: none;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+.panel-page .panel-heading h2 {
+    font-size: 25px;
+    margin-top: 0;
+    font-weight: normal;
+}
+.avatar-sm {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 40px !important;
+    height: 40px !important;
+}
+.conversation-list .media-heading {
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.link-dark {
+    color: #313131 !important;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.link-dark:hover {
+    color: #46c37b !important;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.mhm {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+.conversation-list .media .actions {
+    visibility: hidden;
+}
+.conversation-list .media:hover .actions {
+    visibility: visible;
+}
+.conversation-list .media {
+    cursor: pointer;
+}
+
+#message-create-form .controls{
+    width: 650px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #919191;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control {
+    color: #616161;
+    border-color: #e1e1e1;
+}
+
+textarea.form-control {
+    height: auto;
+}
