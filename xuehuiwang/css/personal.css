@@ -234,7 +234,7 @@ body {
     position: absolute;
     top: 115px;
     right: 10px;
-    min-width: 200px;
+    min-width: 100px;
     text-align: right;
 }
 .user-head-info .study-info .item {
@@ -1163,7 +1163,13 @@ body {
     color: #555;;
     border-bottom: 3px solid #36d38c;
 }
-
+.question-bank{
+    padding-bottom: 35px;
+    border-bottom: 1px solid #ddd;
+}
+.question-bank.last{
+    border-bottom:none;
+}
 .question-bank .head .title{
     height: 61px;
     line-height: 72px;
@@ -2933,7 +2939,6 @@ hr {
 .change-main .class-info {
     width: 800px;
     height: 100px;
-    background: #EDEFF0;
     margin-top: 25px;
 }
 
@@ -3106,7 +3111,6 @@ input[type=text], input[type=password] {
 .change-la input {
     font-size: 12px;
     border: 1px solid #ddd;
-    background: #F5F5F5;
     padding: 3px 10px;
     width: 330px;
     float: left;
@@ -3120,7 +3124,6 @@ input[type=text], input[type=password] {
 }
 .change-text textarea {
     border: 1px solid #ddd;
-    background: #F5F5F5;
     margin: 0;
     resize: none;
     width: 340px;
@@ -3182,10 +3185,42 @@ input[type=text], input[type=password] {
     color: #33D28D;
 }
 
-
-
 /*软件*/
-.down-info li:first-child {
+.service-download ul {
+    padding: 40px 0;
+    margin: 0 20px;
+    overflow: hidden;
+    _zoom: 1;
+}
+.service-download ul li {
+    width: 25%;
+    height: 151px;
+    float: left;
+    text-align: center;
+}
+.service-download ul li a {
+    color: #333;
+    display: block;
+    height: 151px;
+}
+
+.service-download ul li img {
+    width: 92px;
+    height: 92px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 17px;
+    margin-bottom: 15px;
+}
+.service-download ul li a {
+    color: #333;
+    display: block;
+    height: 151px;
+}
+
+
+
+/*.down-info li:first-child {
     border: none;
 }
 .down-info li {
@@ -3253,7 +3288,7 @@ input[type=text], input[type=password] {
 
 .down-info li .right .do-btn a:hover {
     background: #48D799;
-}
+}*/
 /*账户*/
 .class-bill-main{
     background: #fff;

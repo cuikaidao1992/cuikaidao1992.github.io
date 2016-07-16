@@ -7,9 +7,7 @@ img{
 body{
     background: #f5f5f5;
 }
-.site-article{
-    margin-top: 20px;
-}
+
 .wrap-left {
     float: left;
     width: 800px;
@@ -533,44 +531,24 @@ body{
     background: #fff;
     margin-bottom: 20px;
 }
-.breadcrumb {
-    padding: 8px 0;
-    margin-bottom: 20px;
-    list-style: none;
-    border-radius: 2px;
-    border-bottom: 1px solid #f5f5f5;
-}
-.breadcrumb > li {
-     display: inline-block;
- }
-
-.breadcrumb > li + li:before {
-    content: "/\00a0";
-    padding: 0 5px;
-    color: #cccccc;
-}
-
-.breadcrumb a {
-    color: #919191;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-.breadcrumb a:hover {
-    color: #46c37b;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-.breadcrumb li.active {
-    color: #919191;
-}
 
 .article-metas {
     overflow: hidden;
+}
+
+.article-author {
+    position: relative;
+    color: #919191;
+    margin: 10px auto;
+    font-size: 14px;
+}
+
+.article-author .author-name a:hover {
+    color: #333;
+}
+
+.article-author .article-time {
+    margin: 0 15px 0 10px;
 }
 
 .pull-left {
@@ -595,9 +573,6 @@ body{
 .article-metas .date .month {
     font-size: 12px;
 }
-.article-metas .metas-body {
-    padding-left: 60px;
-}
 
 .article-metas .metas-body .title {
     margin: 0;
@@ -609,6 +584,7 @@ body{
     word-break: normal;
 }
 .article-metas .metas-body .sns {
+    float: right;
     color: #919191;
     margin: 10px auto;
     font-size: 14px;
@@ -703,25 +679,8 @@ body{
     transform: scale(1,1);
     z-index: 1;
 }
-
-.article-left-btn-group ul li:nth-child(1):hover:before {
-    background-color: #f74864;
-}
-
-.article-left-btn-group ul li:nth-child(2):hover:before {
-    background-color: #1ec354;
-}
-.article-left-btn-group ul li:nth-child(3):hover:before {
-    background-color: #ffce0b;
-}
-.article-left-btn-group ul li:nth-child(4):hover:before {
-    background-color: #3091f4;
-}
-.article-left-btn-group ul li:nth-child(4):hover:before {
-    background-color: #3091f4;
-}
-.article-left-btn-group ul li:nth-child(5):hover:before {
-    background-color: #fbc032;
+.article-left-btn-group ul li:hover:before {
+    background-color: #36d38c;
 }
 
 .article-left-btn-group ul li a:hover i{

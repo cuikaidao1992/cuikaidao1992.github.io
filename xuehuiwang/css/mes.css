@@ -37,9 +37,25 @@
     color: #787d82;
     font-size: 15px;
 }
+
 .n-tab li.active a {
     color: #36d38c;
+    position: relative;
 }
+.n-tab li.active i{
+    position: absolute;
+    padding: 0px 3px;
+    height: 12px;
+    left: 40px;
+    top: 7px;
+    line-height: 12px;
+    background: #c9394a;
+    color: #fff;
+    font-style: normal;
+    font-size: 10px;
+}
+
+
 .n-tab li.active {
     border-color: #36d38c;
 }
@@ -96,8 +112,15 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+
 .no_li_tit a{
     line-height: 25px;
+}
+.no_li_tit .attachment{
+    color: #36d38c;
+}
+.no_li_tit a:hover{
+    color:#000;
 }
 .no_li_time {
     float: left;

@@ -2,7 +2,6 @@ body{
     background: #f5f5f5;
 }
 .site-banner .banner-box{
-    margin-top: 36px;
     height: 500px;
     overflow: hidden;
     -webkit-box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);

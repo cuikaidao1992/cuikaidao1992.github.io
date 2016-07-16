@@ -478,4 +478,15 @@ $(function(){
     $(".over-mask").css({
         height:$(document).height()
     })
+    //回到顶部
+    function showScroll(){
+        $(window).scroll( function() {
+            var scrollValue=$(window).scrollTop();
+            scrollValue > 200 ? $('#backTop').css("display","block"):$('#backTop').fadeOut();
+        });
+        $('#backTop').click(function(){
+            $("html,body").animate({scrollTop:0},500);
+        });
+    }
+    showScroll();
 });

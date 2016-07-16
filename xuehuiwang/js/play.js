@@ -2,7 +2,7 @@
  * Created by Administrator on 2016/7/11.
  */
 var h=$(window).height()-60;
-var w=$(window).width()-377;
+var w=$(window).width()-360;
 $(".js-box-wrap").css({
     height:h,
     width:"100%"
@@ -26,8 +26,10 @@ function onOff(_this){
         });
         $(".op").attr("status","close");
         $(_this).attr("status","open");
-        $(_this).data("onOff",false)
+        $(_this).data("onOff",false);
+        $(_this).addClass("active");
     }else {
+        $(_this).removeClass("active");
         $(".js-box-wrap").css({
             width:"100%"
         });
@@ -115,3 +117,35 @@ for (var i=0;i<aImg.length;i++) {
         k=this.index;
     }
 }
+
+/*登陆后显示*/
+var timerUser=null;
+$(".user").mouseenter(function(){
+    $(".user-menu").slideDown("fast");
+    $(this).addClass("user-active")
+}).mouseleave(function(){
+    timerUser=setTimeout(function(){
+        $(".user-menu").slideUp("fast");
+        $(".user").removeClass("user-active")
+    },200)
+});
+$(".user-menu").mouseenter(function(){
+    clearTimeout(timerUser)
+}).mouseleave(function() {
+    $(".user-menu").slideUp("fast");
+    $(".user").removeClass("user-active")
+});
+$(".all-course-item").click(function(){
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active")
+})
+
+$(".period-list").find(".header").data("onOff",true).click(function(){
+    if($(this).data("onOff")){
+        $(this).siblings().hide();
+        $(this).data("onOff",false)
+    }else {
+        $(this).siblings().show();
+        $(this).data("onOff",true)
+    }
+});

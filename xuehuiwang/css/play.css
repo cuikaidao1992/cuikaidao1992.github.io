@@ -1,3 +1,6 @@
+body{
+    background: #000;
+}
 .course-play{
     float: left;
 }
@@ -29,8 +32,6 @@
     -webkit-transition: all .1s linear;
     transition: all .1s linear;
     position:relative;
-    padding-top: 20px;
-    background: #e5e5e5;
 }
 .skin{
     position: fixed;
@@ -50,23 +51,18 @@
 }
 .video-con {
     position: relative;
-    background-color: #f5f5f5;
     overflow: hidden;
 }
 .course-video-box{
     position: relative;
-    margin: 0 auto;
+    padding-top:20px;
     height: 100%;
-}
-.playlist-none{
-    position: absolute;
-    left: 50%;
-    margin-left: -600px;
+    margin: 0 auto;
+    background: #000;
 }
 .playlist-none img{
-    width:1200px;
+    width: 100%;
 }
-
 /*侧栏*/
 .section-list {
     position: absolute;
@@ -75,11 +71,11 @@
     z-index: 999;
     width: 360px;
     height: 100%;
-    background:#999;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    background: url("../images/bg_sectionlist.png") repeat-x #14191e;
 }
 .section-list .operator {
     position: absolute;
@@ -102,6 +98,10 @@
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+}
+.section-list .operator .op.active{
+    background: #36d38c;
+    color: #fff;
 }
 .section-list .operator .op em {
     position: absolute;
@@ -129,7 +129,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: #fff;
     outline:none;
 }
 .period-list {
@@ -142,6 +141,32 @@
 .period-list > li {
     margin-bottom: 10px;
     padding: 10px 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.period-list .header, .period-list .section {
+    background-color: #f5f5f5;
+    color: #919191;
+}
+.period-list .header .title,.period-list .period .title {
+    padding: 0 30px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.period-list .header .es-icon-toc,.period-list .period i {
+    position: absolute;
+    top: 11px;
+    left: 15px;
+}
+
+.period-list .period .date {
+    position: absolute;
+    top: 11px;
+    right: 20px;
 }
 
 .period-list .item-active i{
@@ -151,8 +176,16 @@
 .period-list .period {
     position: relative;
 }
-.period-list .period:hover, .period-list .period.item-active {
+
+.period-list .period:hover{
     background-color: #f2fae3;
+}
+
+.period-list .period.item-active .title{
+    color: #36d38c;
+}
+.period-list .period.item-active .date{
+    color: #36d38c;
 }
 .period-list .period > a {
     color: #919191;
@@ -181,6 +214,12 @@
 .period-list .period .course-type small {
     margin-top: -3px;
 }
+
+
+
+
+
+
 /*笔记弹窗*/
 input, button, textarea, select {
     border: 0;
