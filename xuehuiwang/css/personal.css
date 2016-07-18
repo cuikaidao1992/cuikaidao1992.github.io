@@ -332,10 +332,6 @@ body {
     -o-transition: all .3s;
 }
 
-.slider .user-pic .friend.r30 {
-    right: 30px;
-}
-
 .slider .user-pic .su-user-pic-bg {
     width: 145px;
     height: 145px;
@@ -391,6 +387,138 @@ body {
     top: 2px;
     font-size: 18px;
 }
+
+
+/*左侧图标*/
+
+.slider ul a i{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("../images/study-icon.png") no-repeat;
+}
+.slider ul a .kc-io{
+    background-position: -4px -2px;
+}
+
+.slider ul li:hover .kc-io{
+    background-position: -30px -2px;
+}
+
+.slider ul li .active .kc-io{
+    background-position: -60px -2px;
+}
+
+
+
+.slider ul a .tk-io{
+    background-position: -4px -22px;
+}
+
+.slider ul li:hover .tk-io{
+    background-position: -30px -22px;
+}
+.slider ul li .active .tk-io{
+    background-position: -60px -22px;
+}
+
+
+
+
+.slider ul a .zl-io{
+    background-position: -4px -42px;
+}
+
+.slider ul li:hover .zl-io{
+    background-position: -30px -42px;
+}
+
+.slider ul li .active .zl-io{
+    background-position: -60px -42px;
+}
+
+
+
+.slider ul a .wd-io{
+    background-position: -4px -62px;
+}
+
+.slider ul li:hover .wd-io{
+    background-position: -30px -62px;
+}
+
+.slider ul li .active .wd-io{
+    background-position: -60px -62px;
+}
+
+
+
+.slider ul a .bj-io{
+    background-position: -4px -82px;
+}
+
+.slider ul li:hover .bj-io{
+    background-position: -30px -82px;
+}
+
+.slider ul li .active .bj-io{
+    background-position: -60px -82px;
+}
+
+
+
+.slider ul a .fw-io{
+    background-position: -4px -102px;
+}
+
+.slider ul li:hover .fw-io{
+    background-position: -30px -102px;
+}
+
+.slider ul li .active .fw-io{
+    background-position: -60px -102px;
+}
+
+
+
+.slider ul a .zh-io{
+    background-position: -4px -122px;
+}
+
+.slider ul li:hover .zh-io{
+    background-position: -30px -122px;
+}
+
+.slider ul li .active .zh-io{
+    background-position: -60px -122px;
+}
+
+
+
+.slider ul a .sc-io{
+    background-position: -4px -142px;
+}
+
+.slider ul li:hover .sc-io{
+    background-position: -30px -142px;
+}
+.slider ul li .active .sc-io{
+    background-position: -60px -142px;
+}
+
+
+.slider ul a .rj-io{
+    background-position: -4px -162px;
+}
+
+.slider ul li:hover .rj-io{
+    background-position: -30px -162px;
+}
+.slider ul li .active .rj-io{
+    background-position: -60px -162px;
+}
+
+
 .u-container {
     margin-left: 220px;
     margin-top: 20px;
@@ -798,7 +926,7 @@ body {
     position: relative;
 }
 .es-qrcode > i {
-    font-size: 20px;
+    font-size: 16px;
     color: #919191;
 }
 
@@ -814,8 +942,8 @@ body {
 }
 
 .es-qrcode .qrcode-popover {
-    top: -1px;
-    left: 2px;
+    top: -3px;
+    left: -1px;
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
     -moz-transform-origin: 0 0;
@@ -3217,78 +3345,6 @@ input[type=text], input[type=password] {
     display: block;
     height: 151px;
 }
-
-
-
-/*.down-info li:first-child {
-    border: none;
-}
-.down-info li {
-    padding-top: 30px;
-    border-top: 1px dotted #ddd;
-    clear: both;
-}
-.down-info li .img {
-    float: left;
-    width: 160px;
-    height: 100px;
-}
-
-.down-info li .img img {
-    width: 160px;
-    height: 100px;
-}
-
-.down-info li .right {
-    float: left;
-    width: 620px;
-    margin-left: 20px;
-}
-
-.down-info li .right .title {
-    margin-bottom: 10px;
-}
-
-.down-info li .right .title a {
-    font-size: 16px;
-    color: #333;
-}
-
-.down-info li .right .infos {
-    margin-bottom: 15px;
-}
-
-.down-info li .right .infos a {
-    font-size: 12px;
-    color: #7F7F7F;
-    line-height: 22px;
-}
-
-.down-info li .right .infos a span {
-    color: #FF794C;
-}
-
-.down-info li .right .do-btn {
-    clear: both;
-    padding-bottom: 30px;
-    height: 30px;
-}
-.down-info li .right .do-btn a {
-    width: 135px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    color: #fff;
-    background: #35D38F;
-    display: block;
-    border-radius: 15px;
-    margin-right: 10px;
-    float: left;
-}
-
-.down-info li .right .do-btn a:hover {
-    background: #48D799;
-}*/
 /*账户*/
 .class-bill-main{
     background: #fff;
