@@ -230,6 +230,7 @@ textarea.input-text {
     padding-left: 40px;
     padding-right: 28px;
     color: #424242;
+    font-size: 14px;
 }
 .feedback-list .title {
     margin: 0;
