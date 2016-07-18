@@ -55,7 +55,7 @@ $(".task").attr("status","close").click(function(){
     onOff(this)
 });
 $(".lesson-item").click(function(){
-    $(this).siblings().removeClass("item-active");
+    $(".lesson-item").removeClass("item-active");
     $(this).addClass("item-active")
 });
 
