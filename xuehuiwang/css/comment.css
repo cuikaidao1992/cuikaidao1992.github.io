@@ -866,118 +866,133 @@
 }
 
 .footer-main .link-item img {
-width: 33px;
-height: 33px;
-position: absolute;
-left: 0;
-top:15px
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    left: 0;
+    top:15px
 }
 
 .footer-main ul {
-padding: 0;
-margin-bottom: 0;
-list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+    list-style-type: none;
 }
 
 .footer-main ul li {
-margin-bottom: 15px;
-width:95px;
-display: inline-block;
+    margin-bottom: 15px;
+    width:95px;
+    display: inline-block;
 }
 
 .footer-main a {
-color: #666;
--webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
-transition: all 0.3s ease;
-font-size: 12px;
+    color: #666;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 12px;
 }
 
 .footer-main a:hover {
-color: #36d38c;
--webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
-transition: all 0.3s ease;
+    color: #36d38c;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .footer-main h3 {
-font-weight: bolder;
-font-size: 16px;
-display: inline-block;
-width: 206px;
-margin: 20px 0;
-color: #000;
+    font-weight: bolder;
+    font-size: 16px;
+    display: inline-block;
+    width: 206px;
+    margin: 20px 0;
+    color: #000;
 }
 
 .footer-main .contact-item {
-float: right;
-width: 250px;
-height: 120px;
-border-left: 1px solid #e0e0e0;
-text-align: center;
-color: #616161;
-margin-top: 20px;
+    float: right;
+    width: 250px;
+    height: 120px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    color: #616161;
+    margin-top: 20px;
 }
 
 .footer-main .contact-item .phone {
-font-size: 26px;
-line-height: 40px;
-color: #ff6700;
-margin: 0;
+    font-size: 26px;
+    line-height: 40px;
+    color: #ff6700;
+    margin: 0;
 }
 
 .footer-main .contact-item p {
-margin: 0 0 16px;
-font-size: 12px;
-color: #616161;
+    margin: 0 0 16px;
+    font-size: 12px;
+    color: #616161;
 }
 
 .footer-main .contact-item .iphone-btn {
-width: 148px;
-height: 24px;
-line-height: 24px;
-display: inline-block;
-border: 1px solid #ff6700;
-color: #ff6700;
-margin: 0 auto
+    width: 148px;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+    margin: 0 auto
+}
+.footer-main .contact-item .iphone-btn i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/phone.png") no-repeat;
+    background-position: -2px 0;
+    position: relative;
+    top:4px
+}
+
+.footer-main .contact-item .iphone-btn:hover i{
+    background-position: -22px 0;
 }
 
 .footer-main .contact-item a:hover {
-background: #ff6700;
-color: #fff;
+    background: #ff6700;
+    color: #fff;
 }
+
 .footer-main .contact-item a:hover span{
--webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
-transition: all 0.3s ease;
-color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #fff;
 }
+
 .es-footer .copyright {
-background: #212121;
-border-top: 1px solid #444;
-text-align: center;
-padding: 5px 0;
-line-height: 25px;
-color: #c1c1c1;
+    background: #212121;
+    border-top: 1px solid #444;
+    text-align: center;
+    padding: 5px 0;
+    line-height: 25px;
+    color: #c1c1c1;
 }
 
 .es-footer .copyright a {
-color: #c1c1c1;
--webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
-transition: all 0.3s ease;
+    color: #c1c1c1;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .es-footer .copyright a:hover {
--webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
-transition: all 0.3s ease;
-color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #fff;
 }
 
 /*右侧固定栏*/

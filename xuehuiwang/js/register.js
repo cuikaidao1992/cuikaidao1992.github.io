@@ -2,36 +2,34 @@
  * Created by Administrator on 2016/6/23.
  */
 $(function(){
-    var login=$(".login-view");
-    $(".forget-password").click(function(){
-        login.hide();
-        login.eq(1).show()
+    $(".login").click(function(){
+        $(".pop_login").fadeIn();
+        $(".login-content").animate({
+            top:150,
+            opacity: 1
+        })
     });
-    $(".xh-sms").click(function(){
-        login.hide();
-        login.eq(2).show()
+    $(".poplogin_close").click(function(){
+        $(".login-content").animate({
+            top:0,
+            opacity:0
+        });
+        $(".pop_login").fadeOut();
     });
-    $(".xh-email").click(function(){
-        login.hide();
-        login.eq(3).show()
+    $("#btn").click(function(){
+        window.location="index2.html";
     });
-    $(".left").eq(0).click(function(){
-        login.hide();
-        login.eq(0).show()
-    })
-    $(".left").eq(1).click(function(){
-        login.hide();
-        login.eq(1).show()
-    })
-    $(".left").eq(2).click(function(){
-        login.hide();
-        login.eq(1).show()
-    })
-    $(".submit").find(".btn").click(function(){
-        $(".register-view").eq(0).hide();
-        $(".register-view").eq(1).show();
-        if(top.location != this.location){
-            top.location.replace("index2.html");
-        }
-    })
+    $(".tab-btn").click(function(){
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+        $(".tab-bd").removeClass("xh-hide");
+        $(".tab-bd").eq($(this).index()).addClass("xh-hide");
+
+    });
+    $(".js-find-password").find("li").click(function(){
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+        $(".form-wrap").hide();
+        $(".form-wrap").eq($(this).index()).show()
+    });
 });

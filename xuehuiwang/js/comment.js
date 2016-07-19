@@ -436,48 +436,6 @@ $(function(){
     function showItemInfo(el){
         $(el).find(".js-family-info").fadeIn("fast");
     }
-    /*登录注册*/
-    $('#xs-pop-login-iframe').load(function() { //方法2
-        var iframeHeight=$(this).contents().height();
-        $(this).height(iframeHeight+'px');
-        var h=$(window).height()/2-iframeHeight/2+$(window).scrollTop();
-        var w=$(window).width()/2-185;
-        $("iframe").css({
-            left:w,
-            top:h,
-            zIndex:1001
-        });
-        $(window).scroll(function(){
-            var h=$(window).height()/2-205+$(window).scrollTop();
-            var w=$(window).width()/2-185;
-            $("iframe").css({
-                left:w,
-                top:h,
-                zIndex:1001
-            });
-        });
-    });
-    $(".login").click(function(){
-        $("iframe")[0].src="logn.html";
-        $(".over-mask").css({
-            display:"block"
-        });
-        $("iframe").css({
-            display:"block"
-        });
-    })
-    $(".reginster").click(function(){
-        $("iframe")[0].src="register.html";
-        $(".over-mask").css({
-            display:"block"
-        });
-        $("iframe").css({
-            display:"block"
-        });
-    });
-    $(".over-mask").css({
-        height:$(document).height()
-    })
     //回到顶部
     function showScroll(){
         $(window).scroll( function() {
