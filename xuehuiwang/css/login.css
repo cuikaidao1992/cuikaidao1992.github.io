@@ -15,11 +15,11 @@
     padding: 0 40px;
 }
 
-.login-head .top-logo {
+.login-title .top-logo {
     float: left;
     overflow: hidden;
 }
-.login-head .top-logo a {
+.login-title .top-logo a {
     display: block;
     font-size: 14px;
     width: 100px;
@@ -30,16 +30,16 @@
 }
 
 
-.login-head .nav-item {
+.login-title .nav-item {
     float: left;
     height: 40px;
 }
 
-.login-head .nav-item li {
+.login-title .nav-item li {
     float: left;
 }
 
-.login-head .nav-item a {
+.login-title .nav-item a {
     position: relative;
     padding: 0 15px;
     display: block;
@@ -52,15 +52,15 @@
     -moz-transition: background-color 0.3s;
     transition: background-color 0.3s;
 }
-.login-head .nav-item a:hover,.login-head .nav-item .active a,.login-head .nav-item a.active {
+.login-title .nav-item a:hover,.login-title .nav-item .active a,.login-title .nav-item a.active {
     color: #fff;
     background-color: #000;
 }
 
-.login-head .top-login {
+.login-title .top-login {
     float: right;
 }
-.login-head .top-login a {
+.login-title .top-login a {
     float: left;
     position: relative;
     padding: 0 15px;
@@ -74,7 +74,7 @@
     -moz-transition: background-color 0.3s;
     transition: background-color 0.3s;
 }
-.login-head .top-login a:hover{
+.login-title .top-login a:hover{
     color: #fff;
     background-color: #000;
 }
@@ -129,6 +129,7 @@
     height: 48px;
     line-height: 48px;
     text-align: center;
+    padding: 20px 0px;
 }
 
 .login-head h3 {
