@@ -1225,30 +1225,6 @@
         </div>
     </div>
 </footer>
-<div class="over-mask"></div>
-<iframe src="logn.html" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="370" height="100%" id="xs-pop-login-iframe" name="xs-pop-login-iframe" style="position: absolute;left: 0;top:0;z-index: 1000"></iframe>
-<script>
-    $('#xs-pop-login-iframe').load(function() {
-        var iframeHeight=$(this).contents().height();
-        $(this).height(iframeHeight+'px');
-        var h=$(window).height()/2-iframeHeight/2+$(window).scrollTop();
-        var w=$(window).width()/2-185;
-        $(this).css({
-            left:w,
-            top:h,
-            zIndex:1001
-        });
-        $(window).scroll(function(){
-            var h=$(window).height()/2-205+$(window).scrollTop();
-            var w=$(window).width()/2-185;
-            $("iframe").css({
-                left:w,
-                top:h,
-                zIndex:1001
-            });
-        });
-    });
-</script>
 <script src="js/courses.js"></script>
 </body>
 </html>

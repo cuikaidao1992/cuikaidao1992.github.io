@@ -72,7 +72,23 @@ $(function(){
         });
         timerCart=null;
     });
-
+    /*登陆后显示*/
+    var timerUser=null;
+    $(".user").mouseenter(function(){
+        $(".user-menu").slideDown("fast");
+        $(this).addClass("user-active")
+    }).mouseleave(function(){
+        timerUser=setTimeout(function(){
+            $(".user-menu").slideUp("fast");
+            $(".user").removeClass("user-active")
+        },200)
+    });
+    $(".user-menu").mouseenter(function(){
+        clearTimeout(timerUser)
+    }).mouseleave(function() {
+        $(".user-menu").slideUp("fast");
+        $(".user").removeClass("user-active")
+    })
     /*横导航*/
     var f, a = $("#nav-list").find(".cur").size() > 0 ? $("#nav-list").find(".cur") : 0,
         b = 0,
@@ -172,49 +188,5 @@ $(function(){
     });
     /*溢出显示省略号*/
     $(".subtitle").wordLimit(50);
-
-    /*登录注册*/
-    $(".login").click(function(){
-        $("iframe")[0].src="logn.html";
-        $(".over-mask").css({
-            display:"block"
-        });
-        $("iframe").css({
-            display:"block"
-        });
-    })
-    $(".reginster").click(function(){
-        $("iframe")[0].src="register.html";
-        $(".over-mask").css({
-            display:"block"
-        });
-        $("iframe").css({
-            display:"block"
-        });
-    })
-    $(".over-mask").css({
-        height:$(document).height()
-    })
-    /*登陆后显示*/
-    var timerUser=null;
-    $(".user").mouseenter(function(){
-        $(".user-menu").slideDown("fast");
-        $(this).addClass("user-active")
-    }).mouseleave(function(){
-        timerUser=setTimeout(function(){
-            $(".user-menu").slideUp("fast");
-            $(".user").removeClass("user-active")
-        },200)
-    });
-    $(".user-menu").mouseenter(function(){
-        clearTimeout(timerUser)
-    }).mouseleave(function() {
-        $(".user-menu").slideUp("fast");
-        $(".user").removeClass("user-active")
-    });
-    $(".all-course-item").click(function(){
-        $(this).siblings().removeClass("active");
-        $(this).addClass("active")
-    })
 })
 

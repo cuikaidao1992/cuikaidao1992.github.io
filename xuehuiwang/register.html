@@ -32,7 +32,7 @@
 <div class="main-register">
     <div class="container">
         <div class="main-register-content">
-            <div class="register-view xs-tab">
+            <div class="register-view xh-tab">
                 <div class="head">
                     <ul class="tab-hd">
                         <li class="tab-btn active">
@@ -44,16 +44,10 @@
                     </ul>
                 </div>
                 <div class="register-content">
-                    <form id="xs_mobile_register" class="xs-member-form tab-bd  xh-hide" action="" method="post">
+                    <form id="xh_mobile_register" class="xh-member-form tab-bd  xh-hide" action="" method="post">
                         <div class="form-group field-registerform-mobile required has-error">
                             <label class="es-icon es-icon-phone1"></label>
                             <input type="text" id="registerform-mobile" class="form-control" name="RegisterForm[mobile]" placeholder="手机号">
-                            <div class="help-block"></div>
-                        </div>
-                        <div class="form-group">
-                            <label class="es-icon es-icon-drafts"></label>
-                            <input type="text" id="registerform-sms_code" class="input-code" name="RegisterForm[sms_code]" placeholder="短信验证码">
-                            <a class="btn btn-sms" href="javascript:;">获取验证码</a>
                             <div class="help-block"></div>
                         </div>
                         <div class="form-group">
@@ -66,7 +60,12 @@
                             <input type="password" class="form-control" name="RegisterForm[password]" placeholder="密码">
                             <div class="help-block"></div>
                         </div>
-
+                        <div class="form-group">
+                            <label class="es-icon es-icon-drafts"></label>
+                            <input type="text" id="registerform-sms_code" class="input-code" name="RegisterForm[sms_code]" placeholder="短信验证码">
+                            <a class="btn btn-sms" href="javascript:;">获取验证码</a>
+                            <div class="help-block"></div>
+                        </div>
                         <div class="form-group">
                             <label class="es-icon es-icon-assignment"></label>
                             <input type="text" name="invite_code" class="invitecode input-code" placeholder="邀请码" data-widget-cid="widget-6" data-explain="">
@@ -82,10 +81,10 @@
                         </div> -->
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary xs-register-btn" name="mobileSubmit" id="mobileSubmitButton">注册并开始学习</button>
+                            <button type="submit" class="btn btn-primary xh-register-btn" name="mobileSubmit" id="mobileSubmitButton">注册并开始学习</button>
                         </div>
                     </form>
-                    <form id="xs_email_register" class="xs-member-form tab-bd" action="" method="post">
+                    <form id="xh_email_register" class="xh-member-form tab-bd" action="" method="post">
                         <div class="form-group field-registerform-email required">
                             <label class="es-icon es-icon-mail"></label>
                             <input type="text" id="registerform-email" class="form-control" name="RegisterForm[email]" placeholder="邮箱">
@@ -116,7 +115,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary xs-register-btn" name="emailSubmit" id="emailSubmitButton">注册并开始学习</button>
+                            <button type="submit" class="btn btn-primary xh-register-btn" name="emailSubmit" id="emailSubmitButton">注册并开始学习</button>
                         </div>
                     </form>
                     <p class="to-login">已经有账号？ <a href="login.html">马上登录</a></p>
