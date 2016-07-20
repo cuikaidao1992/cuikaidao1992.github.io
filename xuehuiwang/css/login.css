@@ -130,6 +130,7 @@
     line-height: 48px;
     text-align: center;
     padding: 20px 0px;
+    box-sizing: content-box;
 }
 
 .login-head h3 {
@@ -161,6 +162,7 @@
     appearance: none;
     -webkit-transition: border .2s ease;
     transition: border .2s ease;
+    box-sizing: content-box;
 }
 .xh-input input:focus {
     border: 1px solid #44b336;

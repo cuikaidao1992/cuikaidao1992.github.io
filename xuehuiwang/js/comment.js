@@ -447,4 +447,19 @@ $(function(){
         });
     }
     showScroll();
+    /*登录*/
+    $(".login").click(function(){
+        $(".pop_login").fadeIn();
+        $(".login-content").animate({
+            top:150,
+            opacity: 1
+        })
+    });
+    $(".poplogin_close").click(function(){
+        $(".login-content").animate({
+            top:0,
+            opacity:0
+        });
+        $(".pop_login").fadeOut();
+    });
 });
