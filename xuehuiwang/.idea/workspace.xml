@@ -66,21 +66,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="active.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="active.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/active.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6889715">
+            <state vertical-scroll-proportion="-19.172413">
               <caret line="258" column="39" selection-start-line="258" selection-start-column="39" selection-end-line="258" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comment.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/comment.js">
+      <file leaf-file-name="courses.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/courses.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="25" selection-start-line="83" selection-start-column="3" selection-end-line="99" selection-end-column="6" />
+            <state vertical-scroll-proportion="269.4138">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="buy.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/buy.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.55638164">
+              <caret line="1077" column="1" selection-start-line="1077" selection-start-column="1" selection-end-line="1077" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -142,7 +152,6 @@
       <list>
         <option value="$PROJECT_DIR$/pay2.html" />
         <option value="$PROJECT_DIR$/pay3.html" />
-        <option value="$PROJECT_DIR$/css/buy.css" />
         <option value="$PROJECT_DIR$/css/mes.css" />
         <option value="$PROJECT_DIR$/js/person.js" />
         <option value="$PROJECT_DIR$/css/feedback.css" />
@@ -191,6 +200,7 @@
         <option value="$PROJECT_DIR$/collect.html" />
         <option value="$PROJECT_DIR$/courses2.html" />
         <option value="$PROJECT_DIR$/active.html" />
+        <option value="$PROJECT_DIR$/css/buy.css" />
       </list>
     </option>
   </component>
@@ -364,7 +374,7 @@
     <frame x="278" y="24" width="1407" height="997" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17165814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17165814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -402,21 +412,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79349184">
-          <caret line="262" column="11" selection-start-line="261" selection-start-column="4" selection-end-line="269" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/es-icon.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17521903">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-31.365458">
@@ -739,14 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/comment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="25" selection-start-line="83" selection-start-column="3" selection-end-line="99" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/courses.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -779,10 +766,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/comment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.430622">
+          <caret line="91" column="25" selection-start-line="83" selection-start-column="3" selection-end-line="99" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/active.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6889715">
+        <state vertical-scroll-proportion="-19.172413">
           <caret line="258" column="39" selection-start-line="258" selection-start-column="39" selection-end-line="258" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/courses.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="269.4138">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/buy.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55638164">
+          <caret line="1077" column="1" selection-start-line="1077" selection-start-column="1" selection-end-line="1077" selection-end-column="1" />
           <folding />
         </state>
       </provider>

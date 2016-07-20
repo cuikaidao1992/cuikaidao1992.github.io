@@ -1077,6 +1077,9 @@ a.introTestBtn {
     top: 2px;
 }
 
+.mls {
+    margin-left: 5px !important;
+}
 
 .period-list > li {
     margin-bottom: 10px;
