@@ -5,19 +5,19 @@
 }
 /*竖导航*/
 .main-nav {
+    width:100%;
     height: 460px;
     position: relative
 }
 
 .nav-list {
-    float: left;
     width: 228px;
     height: 460px;
     border-top: none;
     background: rgba(0,0,0,0.6);
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: 12;
 }
 
@@ -83,7 +83,6 @@
     font-size: 16px;
     line-height: 16px;
     color: rgba(255, 255, 255, 0.5);
-    overflow: hidden;
 }
 
 .small_type .small_type_i1 {
@@ -282,23 +281,18 @@
 
 /*banner*/
 .banner {
-    float: left;
-    width: 972px;
+    width:1200px;
     height: 460px;
     position: relative;
-    left: 0;
 }
 
 .slide {
-    width: 972px;
+    width:100%;
     height: 460px;
 }
 
 .banner .slide li {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 972px;
+    width:100%;
     height: 336px;
     display: none;
 }
@@ -318,7 +312,7 @@
     min-width: 37px;
     z-index: 10;
     right: 50%;
-    margin-right: -260px;
+    margin-right: -155px;
 }
 
 .banner .slider-nav li {
