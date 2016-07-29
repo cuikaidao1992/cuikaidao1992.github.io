@@ -5,9 +5,9 @@
 }
 /*竖导航*/
 .main-nav {
-    width:100%;
+    width:1200px;
     height: 460px;
-    position: relative
+    position: relative;
 }
 
 .nav-list {
@@ -15,6 +15,9 @@
     height: 460px;
     border-top: none;
     background: rgba(0,0,0,0.6);
+    background: #000\9;
+    opacity: .6\9;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60)\9;
     position: absolute;
     top: 0;
     left: 0;
@@ -108,33 +111,32 @@
     display: none;
     height: auto;
     min-height: 460px;
-    /*background: #fff;*/
-    background: url("../images/nav-bg1.png");
     position: absolute;
     left: 228px;
-    top: 0px;
+    top: 0;
     border: 1px solid #e0e0e0;
     border-left:none;
     -webkit-box-shadow: 0 8px 16px rgba(0,0,0,0.18);
     -ms-box-shadow: 0 8px 16px rgba(0,0,0,0.18);
     box-shadow: 0 8px 16px rgba(0,0,0,0.18);
     z-index: 20;
+    background-color: #fff;
 }
 
 .nav-list .sub_type-1{
-    background: url("../images/nav-bg1.png");
+    background-image: url("../images/nav-bg1.png");
 }
 .nav-list .sub_type-2{
-    background: url("../images/nav-bg2.png");
+    background-image: url("../images/nav-bg2.png");
 }
 .nav-list .sub_type-3{
-    background: url("../images/nav-bg3.png");
+    background-image: url("../images/nav-bg3.png");
 }
 .nav-list .sub_type-4{
-    background: url("../images/nav-bg4.png");
+    background-image: url("../images/nav-bg4.png");
 }
 .nav-list .sub_type-5{
-    background: url("../images/nav-bg5.png");
+    background-image: url("../images/nav-bg5.png");
 }
 
 .nav-list .sub_type_con {
@@ -293,7 +295,7 @@
 
 .banner .slide li {
     width:100%;
-    height: 336px;
+    height:462px;
     display: none;
 }
 
@@ -343,13 +345,13 @@
 
 .banner .arrow li.prev {
     background-position: 0 -97px;
-    margin-left: -258px;
+    margin-left: -372px;
     margin-top: -35px;
 }
 
 .banner .arrow li.next {
     background-position: -70px -97px;
-    margin-left: 672px;
+    margin-left: 558px;
     margin-top: -35px;
 }
 
