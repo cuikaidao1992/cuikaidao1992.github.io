@@ -179,6 +179,11 @@
 .register-content .form-group input.input-code {
     width: 152px;
 }
+
+input:focus {
+    border: 1px solid #44b336 !important;
+}
+
 .btn-sms {
     float: right;
     padding: 0;

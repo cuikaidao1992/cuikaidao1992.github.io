@@ -9,8 +9,8 @@
     text-align: center;
 }
 .service-index h3 {
-    font-size: 46px;
     color: #fff;
+    font-size: 0;
 }
 
 .xh-service-box h2 {
@@ -79,6 +79,9 @@
     font-size: 14px;
     line-height: 28px;
     padding: 10px 0;
+    -webkit-transition: 0.3s, color 0.5s;
+    -moz-transition: 0.3s, color 0.5s;
+    transition: 0.3s, color 0.5s;
 }
 .service-self-help .self-help li a:hover span{
     color: #36d38c;

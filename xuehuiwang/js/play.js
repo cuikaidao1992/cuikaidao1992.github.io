@@ -27,9 +27,7 @@ function onOff(_this){
         $(".op").attr("status","close");
         $(_this).attr("status","open");
         $(_this).data("onOff",false);
-        $(_this).addClass("active");
     }else {
-        $(_this).removeClass("active");
         $(".js-box-wrap").css({
             width:"100%"
         });
@@ -39,6 +37,17 @@ function onOff(_this){
         $(_this).attr("status","close");
     }
 }
+
+$(".op").click(function(){
+    if($(this).attr("status")=="close"){
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active")
+    }else {
+        $(this).removeClass("active");
+    }
+
+})
+
 $(".chapter").attr("status","close").click(function(){
     $(".nano").hide();
     $("#course-item-list").show();

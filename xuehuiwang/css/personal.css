@@ -264,7 +264,7 @@ body {
     margin-right: 40px;
 }
 
-.slider .user-pic .set-btn {
+/*.slider .user-pic .set-btn {
     width: 24px;
     height: 24px;
     position: absolute;
@@ -281,6 +281,115 @@ body {
 .slider .user-pic .set-btn i:hover {
     opacity: 1;
     color: #fff;
+}*/
+
+.set-btn{
+    position: absolute;
+    left: 0;
+    top:0;
+    display: none;
+}
+.set-btn .mask{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #000;
+    opacity: .6;
+    filter: alpha(opacity=60);
+}
+
+.set-btn .set-ico{
+    width: 40px;
+    height: 40px;
+    background: url("../images/set-btn.png") no-repeat;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-top: -35px;
+    margin-left: -20px;
+}
+.set-btn p{
+    font-size: 16px;
+    position: absolute;
+    left: 65px;
+    top:120px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.user-pic:hover .set-btn{
+    display: block;
+}
+
+.login-type{
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.login-type span{
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    background: url("../images/log-type.png") no-repeat;
+}
+
+.login-type .qq{
+    background-position: -64px -1px;
+}
+.login-type .weixin{
+    background-position: -1px -1px;
+}
+.su-set-btn{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -70px;
+    margin-top: -69px;
+    display: none;
+}
+.su-set-btn .mask{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #000;
+    opacity: .6;
+    filter: alpha(opacity=60);
+}
+.su-set-btn .set-ico{
+    width: 35px;
+    height: 35px;
+    background: url("../images/set-btn-small.png") no-repeat;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-top: -35px;
+    margin-left: -17.5px;
+}
+.su-set-btn p{
+    font-size: 14px;
+    position: absolute;
+    left: 40px;
+    top:80px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.su-user-pic-bg .user-pic:hover .su-set-btn{
+    display: block;
+}
+
+.su-set-btn .login-type span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url("../images/log-type-small.png") no-repeat;
+}
+
+.su-set-btn .login-type .qq{
+    background-position: -60px -4px;
+}
+.su-set-btn .login-type .weixin{
+    background-position: -10px -4px;
 }
 
 .wrap {
@@ -1112,13 +1221,16 @@ body {
     margin-bottom: 10px;
 }
 .v-right-top2 .v-title {
-    font-size: 16px;
+    font-size: 14px;
     color: #666;
     line-height: 40px;
     padding: 0 30px;
     position: relative;
     background: #FAFAFA;
     margin-bottom: 10px;
+}
+.v-right-top2 .v-title a{
+    font-size: 16px;
 }
 .v-right-top2 .v-title i{
     font-size: 22px;
@@ -2140,6 +2252,7 @@ strong{
 .modal-dialog {
     width: 600px;
     margin: 3% auto;
+    box-sizing: border-box;
 }
 
 .modal.in .modal-dialog {
@@ -2157,10 +2270,12 @@ strong{
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
     background-clip: padding-box;
     outline: 0;
+    padding: 15px;
 }
 
 .modal-header {
-    padding: 15px;
+    padding: 15px 0;
+    text-indent: 15px;
     border-bottom: 1px solid #e5e5e5;
     min-height: 16px;
 }
@@ -3199,10 +3314,6 @@ hr {
 .df_wrap {
     background: #fff;
     height: 330px;
-}
-
-.tc-box {
-    width: 570px;
 }
 
 .change-red {

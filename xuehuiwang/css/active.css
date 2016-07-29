@@ -87,7 +87,11 @@ body{
     color: #333;
 
 }
-
+.activity-content .apply a{
+    -webkit-transition: 0.3s, color 0.5s;
+    -moz-transition: 0.3s, color 0.5s;
+    transition: 0.3s, color 0.5s;
+}
 .activity-content .activity-type {
     float: right;
     height: 30px;

@@ -234,23 +234,8 @@ $(function(){
         })
     })
     /*课程大纲*/
-    var h=0;
-    $(".piece-body .chapter").data("onOff",true).each(function(index,item){
-        $(this).click(function(){
-            if($(this).data("onOff")){
-                h=$(".period-list").eq(index).outerHeight();
-                $(".period-list").eq(index).animate({
-                    height:0
-                })
-                $(".period-list").eq(index).css("overflow","hidden");
-                $(this).data("onOff",false)
-            }else {
-                $(".period-list").eq(index).animate({
-                    height:h
-                })
-                $(this).data("onOff",true)
-            }
-        })
+    $(".piece-body .chapter").click(function(){
+        $(this).next().slideToggle()
     })
     /*评论*/
     var $reviews = $('.js-reviews');

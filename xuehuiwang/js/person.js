@@ -12,13 +12,13 @@ $(function() {
             var curL = $('.wrap').offset().left;
             var curT = $(window).scrollTop();
             if (curT > start&&(curT-250)>0) {//判断滑动高度是否大于页底高度
-                $elem.find('.set-btn').hide();
                 $elem.find('.img').addClass('suimg');
+                $elem.find('.set-btn').addClass('su-set-btn');
                 $elem.find('.user-pic-bg').addClass('su-user-pic-bg');
                 $elem.css('position', 'fixed').css('left', curL + 'px').css('top','-328px');
             }
             else{
-                $elem.find('.set-btn').show();
+                $elem.find('.set-btn').removeClass('su-set-btn');
                 $elem.find('.img').removeClass('suimg');
                 $elem.find('.user-pic-bg').removeClass('su-user-pic-bg');
                 $elem.css('position', 'absolute').css('left', '0').css('top','-210px');
@@ -32,12 +32,12 @@ $(function() {
             var curL = $('.wrap').offset().left;
             var curT = $(window).scrollTop();
             if (curT > start) {
-                $elem.find('.set-btn').hide();
+                $elem.find('.set-btn').addClass('su-set-btn');
                 $elem.find('.img').addClass('suimg');
                 $elem.find('.user-pic-bg').addClass('su-user-pic-bg');
                 $elem.css('position', 'fixed').css('left', curL + 'px').css('top','-50px');
             } else {
-                $elem.find('.set-btn').show();
+                $elem.find('.set-btn').removeClass('su-set-btn');
                 $elem.find('.img').removeClass('suimg');
                 $elem.find('.user-pic-bg').removeClass('su-user-pic-bg');
                 $elem.css('position', 'absolute').css('left', '0').css('top', '-209px'); //-175声明在css中

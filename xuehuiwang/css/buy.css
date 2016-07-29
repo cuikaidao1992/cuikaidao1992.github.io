@@ -1030,7 +1030,8 @@ a.introTestBtn {
     background: #fff;
 }
 /*课程大纲*/
-.chapter{height:40px;background: #f5f5f5;cursor: pointer;padding-left: 15px}
+.chapter{height:40px;background: #f5f5f5;cursor: pointer;padding-left: 15px;margin-top: 10px}
+.chapter:first-child{margin-top: 0}
 .chapter i{color: #333}
 .chapter .title{line-height: 40px;padding-left: 15px;font-size: 16px;color: #919191}
 .fa-list{position: relative;top:0;left: 15px;color: #919191}

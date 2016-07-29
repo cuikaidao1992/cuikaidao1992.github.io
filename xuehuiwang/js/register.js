@@ -22,8 +22,8 @@ $(function(){
     $(".tab-btn").click(function(){
         $(this).siblings().removeClass("active");
         $(this).addClass("active");
-        $(".tab-bd").removeClass("xh-hide");
-        $(".tab-bd").eq($(this).index()).addClass("xh-hide");
+        $(".tab-bd").addClass("xh-hide");
+        $(".tab-bd").eq($(this).index()).removeClass("xh-hide");
 
     });
     $(".js-find-password").find("li").click(function(){

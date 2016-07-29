@@ -311,7 +311,7 @@ input:focus {
 }
 
 input:focus {
-    border: 1px solid #44b336;
+    border: 1px solid #44b336!important;
 }
 .main-login{
    width: 100%;

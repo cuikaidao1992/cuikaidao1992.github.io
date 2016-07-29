@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/es-icon.css">
     <link rel="stylesheet" href="css/comment.css">
     <link rel="stylesheet" href="css/baoming.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="js/jquery-1.12.3.min.js"></script>
 </head>
 <body>
@@ -30,7 +31,7 @@
         <div class="topbar-info">
             <a class="login" href="javascript:;">登录</a>
             <span class="sep">|</span>
-            <a class="reginster" href="javascript:;">注册</a>
+            <a class="reginster" href="register.html">注册</a>
         </div>
     </div>
 </div>
@@ -112,62 +113,62 @@
             <ul class="children-list clearfix">
                 <li class="first">
                     <div class="figure figure-thumb">
-                        <a href="courses2.html">
+                        <a href="courses2.html" target="_blank">
                             <img src="images/nav1.jpg">
                         </a>
                     </div>
                     <div class="title">
-                        <a href="courses2.html">人力资源管理师</a>
+                        <a href="courses2.html" target="_blank">人力资源管理师</a>
                     </div>
                 </li>
                 <li>
                     <div class="figure figure-thumb">
-                        <a href="courses2.html">
+                        <a href="courses2.html" target="_blank">
                             <img src="images/nav2.jpg">
                         </a>
                     </div>
                     <div class="title">
-                        <a href="courses2.html">公共营养师</a>
+                        <a href="courses2.html" target="_blank">公共营养师</a>
                     </div>
                 </li>
                 <li>
                     <div class="figure figure-thumb">
-                        <a href="courses2.html">
+                        <a href="courses2.html" target="_blank">
                             <img src="images/nav3.jpg">
                         </a>
                     </div>
                     <div class="title">
-                        <a href="courses2.html">会计从业资格证</a>
+                        <a href="courses2.html" target="_blank">会计从业资格证</a>
                     </div>
                 </li>
                 <li>
                     <div class="figure figure-thumb">
-                        <a href="#">
+                        <a href="#" target="_blank">
                             <img src="images/nav4.jpg">
                         </a>
                     </div>
                     <div class="title">
-                        <a href="courses2.html">远程网络教育</a>
+                        <a href="courses2.html" target="_blank">远程网络教育</a>
                     </div>
                 </li>
                 <li>
                     <div class="figure figure-thumb">
-                        <a href="courses2.html">
+                        <a href="courses2.html" target="_blank">
                             <img src="images/nav5.jpg">
                         </a>
                     </div>
                     <div class="title">
-                        <a href="courses2.html">幼儿教师资格证</a>
+                        <a href="courses2.html" target="_blank">幼儿教师资格证</a>
                     </div>
                 </li>
                 <li>
                     <div class="figure figure-thumb">
-                        <a href="courses2.html">
+                        <a href="courses2.html" target="_blank">
                             <img src="images/nav6.jpg">
                         </a>
                     </div>
                     <div class="title">
-                        <a href="courses.html">更多课程</a>
+                        <a href="courses.html" target="_blank">更多课程</a>
                     </div>
                 </li>
             </ul>
@@ -786,6 +787,48 @@
         </div>
     </div>
 </footer>
+<!--登录之后显示-->
+<div class="pop_login">
+    <div class="login-content">
+        <div class="login-view" style="display:block" id="welcome">
+            <a href="javascript:void(0);" class="poplogin_close"><i class="es-icon es-icon-close01"></i></a>
+            <div class="login-head">
+                <h3>欢迎登录学慧网</h3>
+            </div>
+            <div class="login-body">
+                <div class="xh-input input-username">
+                    <input type="text" class="username" name="username" autocomplete="off" autocapitalize="off" autocorrect="off" data-enable-clean="true" data-rule-required="true" placeholder="手机号/用户名/邮箱" data-hp-widgets="1">
+                    <i class="es-icon es-icon-person"></i>
+                    <span class="xh-err-tips">该用户未注册</span>
+                    <span class="xh-icon xh-flag"></span>
+                </div>
+                <div class="xh-input input-password">
+                    <input type="password" class="password" name="password" data-rule-required="true" maxlength="20" placeholder="密码" data-hp-widgets="2">
+                    <i class="es-icon es-icon-lock1"></i>
+                </div>
+                <div class="for-rem">
+                    <a class="xh-input forget-password" href="forgot-password.html">忘记密码？</a>
+                    <label class="rememberme"><input type="hidden"  value="0"><label>
+                        <input type="checkbox" id="loginform-rememberme"> 下次自动登录</label>
+                    </label>
+                </div>
+                <div class="submit">
+                    <button class="btn" type="submit" id="btn">登&nbsp;&nbsp;录</button>
+                    <p>
+                        还没有账号？
+                        <a href="register.html" class="register-now">马上注册</a>
+                    </p>
+                </div>
+                <div class="social">
+                    <span>社交账号登录：</span>
+                    <a href="#" class="es-icon es-icon-qq"></a>
+                    <a href="#" class="es-icon es-icon-weixin"></a>
+                    <a href="#" class="es-icon es-icon-weibo"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
     $('#province, #city').citylist({
         data    : data,

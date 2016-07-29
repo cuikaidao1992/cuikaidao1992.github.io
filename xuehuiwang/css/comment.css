@@ -786,7 +786,7 @@
 .site-header .header-nav-menu .children-list li:before {
     position: absolute;
     left: 0;
-    top: 35px;
+    top: 30px;
     z-index: 1;
     width: 1px;
     height: 100px;
@@ -945,12 +945,12 @@
 }
 .footer-main .contact-item .iphone-btn i{
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
     background: url("../images/phone.png") no-repeat;
     background-position: -2px 0;
     position: relative;
-    top:4px
+    top:3px
 }
 
 .footer-main .contact-item .iphone-btn:hover i{
