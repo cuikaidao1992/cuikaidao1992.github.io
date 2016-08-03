@@ -2,6 +2,39 @@
  * Created by Administrator on 2016/6/28.
  */
 $(function() {
+    $.sidebarMenu = function(menu) {
+        var animationSpeed = 300;
+        $(menu).on('click',".v-title", function(e) {
+            var $this = $(this);
+            var checkElement = $this.next();
+            if (checkElement.is('.treeview-menu') && checkElement.is(':visible')) {
+                checkElement.slideUp(animationSpeed, function() {
+                    checkElement.removeClass('menu-open');
+                });
+                checkElement.parent("li").removeClass("active");
+                $(this).children().css({
+                    "transform": "rotate(0)"
+                });
+            }
+            else if ((checkElement.is('.treeview-menu')) && (!checkElement.is(':visible'))) {
+                var parent = $this.parents('ul').first();
+                var ul = parent.find('ul:visible').slideUp(animationSpeed);
+                ul.removeClass('menu-open');
+                var parent_li = $this.parent("li");
+                checkElement.slideDown(animationSpeed, function() {
+                    checkElement.addClass('menu-open');
+                    parent.find('li.active').removeClass('active');
+                    parent_li.addClass('active');
+                });
+                $(this).children().css({
+                    "transform": "rotate(180deg)"
+                });
+            }
+            if (checkElement.is('.treeview-menu')) {
+                e.preventDefault();
+            }
+        });
+    }
     //左侧导航随屏滚
     var clienthight=document.body.clientHeight;//获取浏览器的高度
     var winheight=$(window).height() ;
@@ -144,14 +177,17 @@ $(function() {
     modal($(".modal-pay"),$("#modal-pay"),$(".back"));
     modal($(".modal-questions"),$("#modal-questions"),$(".back"));
     modal($(".bind_mobile"),$("#bind_mobile"),$(".back"));
-
     modal($(".exam-set"),$("#modal-set-exam"),$(".back"));
-
+    modal($(".promotelink"),$("#sharemodal"),$(".back"));
+    modal($(".writeinvitecode"),$("#writemodal"),$(".back"));
     modal($(".btn-line-gray"),$("#modal"),$(".back"));
 
-    /*我的笔记*/
+    $(".class-account-nav").find("li").click(function(){
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active")
+    });
 
-    var h=0;
+    /*我的笔记*/
     $(".notebook-title").find("i").data("onOff",true).each(function(index,item){
         $(this).click(function(){
             if($(this).data("onOff")){
@@ -204,21 +240,8 @@ $(function() {
     $("#cancelEditBtn").click(function(){
         $("#editExamView").hide()
     });
-    $(".open").data("onOff",true).click(function(){
-        if($(this).data("onOff")){
-            $(this).children().css({
-                "transform": "rotate(180deg)"
-            });
-            $(this).next().slideDown();
-            $(this).data("onOff",false)
-        }else {
-            $(this).children().css({
-                "transform": "rotate(0)"
-            });
-            $(this).next().slideUp();
-            $(this).data("onOff",true)
-        }
-    });
+    /*显示隐藏*/
+    $.sidebarMenu($('.v-right-top2'))
 
     $("#n-con").hover(function(){
         $(".operate").fadeIn()

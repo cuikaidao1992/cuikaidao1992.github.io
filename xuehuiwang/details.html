@@ -87,12 +87,12 @@
                 <span class="u-info-credit">
                     <a href="#"><span>2016-06-29</span>加入学慧网</a>
                 </span>
-                <span class="u-info-title">
+                <!--<span class="u-info-title">
                     <a href="#">人力资源管理二级</a>
                 </span>
                 <span class="u-info-subtitle">
                     <a href="#">基础取证班</a>
-                </span>
+                </span>-->
             </p>
             <p class="user-desc">
                 <span class="u-info-learn">学习时长 <em>13小时 0分</em></span>
@@ -174,40 +174,27 @@
                     </a>
                 </li>
             </ul>
-
         </div>
         <div class="u-container">
             <div class="class-main">
-                <div class="notes-title">
+                <div class="notes-title clearfix">
                     <span>学习资料</span>
+                    <form class="search-bj" action="" method="get">
+                        <input class="search-bj-text" type="text" placeholder="查找资料">
+                        <i class="search-ico es-icon es-icon-search"></i>
+                    </form>
                 </div>
                 <div class="change-content">
                     <div class="change-choname">
-                        <ul>
-                            <li class="on"><a href="javascript:void(0)" datatype="0">全部</a></li>
-                            <li class=""><a href="javascript:void(0)" datatype="4">教材</a></li>
-                            <li class=""><a href="javascript:void(0)" datatype="1">讲义</a></li>
-                            <li class="last"><a href="javascript:void(0)" datatype="2">教辅</a></li>
+                        <ul class="clearfix class-account-nav">
+                            <li class="active"><a href="javascript:;">全部</a></li>
+                            <li><a href="javascript:;">教材</a></li>
+                            <li><a href="javascript:;">讲义</a></li>
+                            <li><a href="javascript:;">教辅</a></li>
                         </ul>
                     </div>
                     <div class="change-infos">
                         <div id="learning_list" class="down-text" style="display:block;">
-                            <script type="text/javascript">
-                                $(".f-dn").click(function(){
-                                    var tempVip = $("#tempVip").val();
-                                    var vipStatus = $("#vipStatus").val();
-
-                                    if(tempVip == 1 || vipStatus == -1){
-                                        bugVipPrompt();
-                                    }else{
-                                        var url = $(this).attr("data-url");
-                                        if(url){
-                                            window.location.href = url;
-                                        }
-                                    }
-
-                                })
-                            </script>
                             <div class="down-text" style="display:block;">
                                 <div class="title">
                                     <span class="f-name">文件名</span>
