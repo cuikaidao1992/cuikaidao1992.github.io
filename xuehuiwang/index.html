@@ -1,2607 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>学慧网</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/es-icon.css">
-    <link rel="stylesheet" href="css/comment.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/login.css">
-    <script src="js/jquery-1.12.3.min.js"></script>
-    <script src="js/comment.js"></script>
-    <script src="js/bannerSlide.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网 - 主页</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <script src="js/html5shiv.min.js"></script>
 </head>
-<body>
-    <div class="site-topbar">
-        <div class="container">
-            <div class="topbar-nav">
-                <a rel="nofollow" href="index.html" >学慧网</a>
-                <span class="sep">|</span>
-                <a rel="nofollow" href="" target="_blank">学慧网移动版</a>
-                <span class="sep">|</span>
-                <a rel="nofollow" href="feedback.html" target="_blank" >问题反馈</a>
-            </div>
-            <div class="topbar-cart">
-                <a rel="nofollow" class="cart-mini" href="collect.html">我收藏的课程</a>
-                <div class="cart-menu">
-                    <div class="loading">
-                        <div class="loader">收藏中还没有课程，赶紧选课吧！</div>
-                    </div>
-                </div>
-            </div>
-            <div class="topbar-info">
-                <a class="login" href="javascript:;">登录</a>
-                <span class="sep">|</span>
-                <a class="reginster" href="register.html">注册</a>
-            </div>
-        </div>
-    </div>
-    <div class="site-adv">
-        <a href="#" class="link_topLayer">
-            <img src="images/toplay-last.jpg">
-        </a>
-        <span class="toplayer-close"></span>
-    </div>
-    <div class="site-header">
-        <div class="container clearfix">
-            <div class="header-logo">
-                <a class="logo" href="index.html" title="学慧网">D.C.base</a>
-            </div>
-            <div class="flash-img">
-                <img src="images/picture.gif">
-            </div>
-            <div class="header-nav" id="header-nav">
-                <ul class="nav-list-top clearfix" id="nav-list">
-                    <li class="nav-item cur">
-                        <a class="link" href="index.html"><span class="text">首页</span><span class="arrow"></span></a>
+<body class="fixed-sidebar full-height-layout gray-bg">
+   <div id="wrapper">
+      <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span style="display: inline-block;padding-left: 5px"><img alt="image" class="img-circle" src="images/IMG_1805.JPG" width="64" height="64"/></span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                               <span class="block m-t-xs"><strong class="font-bold">Beaut-zihan</strong></span>
+                                <span class="text-muted text-xs block">超级管理员<b class="caret"></b></span></span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="J_menuItem" href="form_avatar.html">修改头像</a></li>
+                                <li><a class="J_menuItem" href="profile.html">个人资料</a></li>
+                                <li><a class="J_menuItem" href="contacts.html">联系我们</a></li>
+                                <li><a class="J_menuItem" href="mailbox.html">信箱</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">安全退出</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">H+</div>
                     </li>
-                    <li class="nav-item course-select">
-                        <a class="link" href="courses.html"><span class="text">选课</span><span class="arrow"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="link" href="tiku-index.html"><span class="text">题库</span><span class="arrow"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="link" href="zixun.html"><span class="text">资讯</span><span class="arrow"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="link" href="javascript:;"><span class="text">小组</span><span class="arrow"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="link" href="active.html"><span class="text">活动</span><span class="arrow"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="link" href="service.html"><span class="text">服务</span><span class="arrow"></span></a>
-                    </li>
-                    <li id="nav_line"></li>
-                </ul>
-            </div>
-            <div class="header-search">
-                <form class="search-form clearfix" action="" method="get">
-                    <input class="search-text" type="search" id="search" name="keyword">
-                    <button class="search-btn es-icon es-icon-search"></button>
-                    <div class="search-hot-words">
-                        <a  href="#">采购师</a>
-                        <a  href="#">人力资源管理师</a>
-                    </div>
-                    <div class="keyword-list hide">
-                        <ul class="result-list">
-                            <li data-key="人力资源管理师">
-                                <a href="#">人力资源管理师</a>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-user"></i>
+                            <span class="nav-label">用户管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="userManagement/userManagement-用户管理.html">用户管理</a>
                             </li>
-                            <li data-key="公共营养师">
-                                <a href="#">公共营养师</a>
+                            <li>
+                                <a class="J_menuItem" href="userManagement/userManagement-教师管理.html">教师管理</a>
                             </li>
-                            <li data-key="行政管理">
-                                <a href="#">行政管理</a>
+                            <li>
+                                <a class="J_menuItem" href="userManagement/roleManagement-角色管理.html">角色管理</a>
                             </li>
-                            <li data-key="心理咨询师">
-                                <a href="#">心理咨询师</a>
+                            <li>
+                                <a class="J_menuItem" href="userManagement/authorityManagement-权限管理.html">权限管理</a>
                             </li>
-                            <li data-key="人力资源管理师">
-                                <a href="#">人力资源管理师</a>
+                            <li>
+                                <a class="J_menuItem" href="userManagement/userManagement-登录日志.html">日志管理</a>
                             </li>
-                            <li data-key="公共营养师">
-                                <a href="#">公共营养师</a>
-                            </li>
-                            <li data-key="行政管理">
-                                <a href="#">行政管理</a>
-                            </li>
-                            <li data-key="心理咨询师">
-                                <a href="#">心理咨询师</a>
+                            <li>
+                                <a class="J_menuItem" href="userManagement/userManagement-站内信管理.html">站内信管理</a>
                             </li>
                         </ul>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="header-nav-menu">
-            <div class="container">
-                <ul class="children-list clearfix">
-                    <li class="first">
-                        <div class="figure figure-thumb">
-                            <a href="courses2.html" target="_blank">
-                                <img src="images/nav1.jpg" >
-                            </a>
-                        </div>
-                        <div class="title">
-                            <a href="courses2.html" target="_blank">人力资源管理师</a>
-                        </div>
                     </li>
                     <li>
-                        <div class="figure figure-thumb">
-                            <a href="courses2.html" target="_blank">
-                                <img src="images/nav2.jpg" >
-                            </a>
-                        </div>
-                        <div class="title">
-                            <a href="courses2.html" target="_blank">公共营养师</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="figure figure-thumb">
-                            <a href="courses2.html" target="_blank">
-                                <img src="images/nav3.jpg" >
-                            </a>
-                        </div>
-                        <div class="title">
-                            <a href="courses2.html" target="_blank">会计从业资格证</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="figure figure-thumb">
-                            <a href="courses2.html" target="_blank">
-                                <img src="images/nav4.jpg" >
-                            </a>
-                        </div>
-                        <div class="title">
-                            <a href="courses2.html" target="_blank">远程网络教育</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="figure figure-thumb">
-                            <a href="courses2.html" target="_blank">
-                                <img src="images/nav5.jpg" >
-                            </a>
-                        </div>
-                        <div class="title">
-                            <a href="courses2.html" target="_blank">幼儿教师资格证</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="figure figure-thumb">
-                            <a href="courses2.html" target="_blank">
-                                <img src="images/nav6.jpg" >
-                            </a>
-                        </div>
-                        <div class="title">
-                            <a href="courses.html" target="_blank">更多课程</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="site-banner">
-        <div class="container">
-            <div class="main-nav">
-                <div class="nav-list">
-                    <ul class="small_type">
-                        <li>
-                            <div class="side_left_type">
-                                <h3 class="title">
-                                    <a class="db gray03 b" href="courses.html">职业资格</a>
-                                </h3>
-                                <div class="hot-item">
-                                    <a href="courses2.html" target="_blank">人力资源管理师</a>
-                                    <a href="courses2.html" target="_blank">公共营养师</a>
-                                </div>
-                                <i class="es-icon es-icon-chevronright"></i>
-                            </div>
-                            <div class="sub_type sub_type-1">
-                                <div class="sub_type_con">
-                                    <h4><i class="i1"></i>职业资格</h4>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">人力资源管理师</a>
-                                        </dt>
-                                        <dd class="cell">
-                                            <em><a href="courses2.html">三级</a></em>
-                                            <em><a href="courses2.html">二级</a></em>
-                                            <em><a href="courses2.html">一级</a></em>
-                                        </dd>
-                                    </dl>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">公共营养师</a>
-                                        </dt>
-                                        <dd class="cell ">
-                                            <em><a href="courses2.html">三级</a></em>
-                                            <em><a href="courses2.html">二级</a></em>
-                                        </dd>
-                                    </dl>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">心理咨询师</a>
-                                        </dt>
-                                        <dd class="cell">
-                                            <em><a href="courses2.html">三级</a></em>
-                                            <em><a href="courses2.html">二级</a></em>
-                                        </dd>
-                                    </dl>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">理财规划师</a>
-                                        </dt>
-                                        <dd class="cell ">
-                                            <em><a href="courses2.html">三级</a></em>
-                                            <em><a href="courses2.html">二级</a></em>
-                                        </dd>
-                                    </dl>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">物流管理师</a>
-                                        </dt>
-                                        <dd class="cell">
-                                            <em><a href="courses2.html">三级</a></em>
-                                            <em><a href="courses2.html">二级</a></em>
-                                            <em><a href="courses2.html">一级</a></em>
-                                        </dd>
-                                    </dl>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">采购师</a>
-                                        </dt>
-                                        <dd class="cell">
-                                            <em><a href="courses2.html">三级</a></em>
-                                            <em><a href="courses2.html">二级</a></em>
-                                            <em><a href="courses2.html">一级</a></em>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="side_left_type">
-                                <h3 class="title">
-                                    <a class="db gray03" href="courses.html" target="_blank">学历教育</a>
-                                </h3>
-                                <div class="hot-item">
-                                    <a href="courses2.html" target="_blank">自学</a>
-                                    <a href="courses2.html" target="_blank">成考</a>
-                                    <a href="courses2.html" target="_blank">网教</a>
-                                </div>
-                                <i class="es-icon es-icon-chevronright"></i>
-                            </div>
-                            <div class="sub_type sub_type-2">
-                                <div class="sub_type_con">
-                                    <h4><i class="i2"></i>学历教育</h4>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">自学考试</a>
-                                        </dt>
-                                        <dd class="cell ">
-                                            <em><a href="">专科</a></em>
-                                            <em><a href="">本科</a></em>
-                                        </dd>
-                                    </dl>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">成人高考</a>
-                                        </dt>
-                                        <dd class="cell ">
-                                            <em><a href="courses2.html">专科</a></em>
-                                            <em><a href="courses2.html">本科</a></em>
-                                        </dd>
-                                    </dl>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">远程网络教育</a>
-                                        </dt>
-                                        <dd class="cell ">
-                                            <em><a href="courses2.html">本科</a></em>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="side_left_type">
-                                <h3 class="title">
-                                    <a class="db gray03" href="courses.html" target="_blank">财会金融</a>
-                                </h3>
-                                <div class="hot-item">
-                                    <a href="courses2.html" target="_blank">会计从业资格</a>
-                                    <a href="courses2.html" target="_blank">会计职称</a>
-                                </div>
-                                <i class="es-icon es-icon-chevronright"></i>
-                            </div>
-                            <div class="sub_type sub_type-3">
-                                <div class="sub_type_con">
-                                    <h4><i class="i3"></i>财会金融</h4>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">会计从业资格证</a>
-                                        </dt>
-                                        <dd class="cell">
-                                            <em><a href="javascript:;"></a></em>
-                                        </dd>
-                                    </dl>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">会计职称</a>
-                                        </dt>
-                                        <dd class="cell">
-                                            <em><a href="javascript:;"></a></em>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="side_left_type">
-                                <h3 class="title">
-                                    <a class="db gray03 b" href="courses.html" target="_blank">教师资格</a>
-                                </h3>
-                                <div class="hot-item">
-                                    <a href="courses2.html" target="_blank">幼师</a>
-                                    <a href="courses2.html" target="_blank">小学</a>
-                                    <a href="courses2.html" target="_blank">中学</a>
-                                </div>
-                                <i class="es-icon es-icon-chevronright"></i>
-                            </div>
-                            <div class="sub_type sub_type-4">
-                                <div class="sub_type_con">
-                                    <h4><i class="i4"></i>教师资格证</h4>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">幼师教师资格证</a>
-                                        </dt>
-                                        <dd class="cell">
-                                            <em><a href="courses2.html">三级</a></em>
-                                            <em><a href="courses2.html">二级</a></em>
-                                            <em><a href="courses2.html">一级</a></em>
-                                        </dd>
-                                    </dl>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">小学教师资格证</a>
-                                        </dt>
-                                        <dd class="cell">
-                                            <em><a href="courses2.html">三级</a></em>
-                                            <em><a href="courses2.html">二级</a></em>
-                                            <em><a href="courses2.html">一级</a></em>
-                                        </dd>
-                                    </dl>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">中学教师资格证</a>
-                                        </dt>
-                                        <dd class="cell">
-                                            <em><a href="courses2.html">三级</a></em>
-                                            <em><a href="courses2.html">二级</a></em>
-                                            <em><a href="courses2.html">一级</a></em>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="side_left_type last-type">
-                                <h3 class="title">
-                                    <a class="db gray03" href="courses.html" target="_blank">公开课</a>
-                                </h3>
-                                <div class="hot-item">
-                                    <a href="courses2.html" target="_blank">大咖秀</a>
-                                </div>
-                                <i class="es-icon es-icon-chevronright"></i>
-                            </div>
-                            <div class="sub_type sub_type-5">
-                                <div class="sub_type_con">
-                                    <h4><i class="i6"></i>公开课</h4>
-                                    <dl class="sub_type_dl clearfix">
-                                        <dt>
-                                            <a href="courses2.html" target="_blank">大咖秀</a>
-                                        </dt>
-                                        <dd class="cell">
-                                            <em><a href="javascript:;"></a></em>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="banner">
-                    <ul class="slide">
-                        <li style="display: list-item">
-                            <a href="#" class="sel" rel="nofollow" target="_blank">
-                                <img data-original="images/banner1.jpg" alt="" data-color="" src="images/banner1.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="sel" rel="nofollow" target="_blank">
-                                <img class="lazy" data-original="images/banner2.jpg" alt="" data-color="" src="images/banner2.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="sel" rel="nofollow" target="_blank">
-                                <img class="lazy" data-original="images/banner3.jpg" alt="" data-color="" src="images/banner3.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="sel" rel="nofollow" target="_blank">
-                                <img class="lazy" data-original="images/banner4.jpg" alt="" data-color="" src="images/banner5.jpg">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="sel" rel="nofollow" target="_blank">
-                                <img class="lazy" data-original="images/banner5.jpg" alt="" data-color="" src="images/banner4.jpg">
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="slider-nav">
-                        <li class="active"></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <ul class="arrow">
-                        <li class="prev"></li>
-                        <li class="next"></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="recommend clearfix">
-                <ul class="quick_nav">
-                    <li class="nav-item">
-                        <a href="baoming.html" target="_blank">
-                            <em class="m1"></em>
-                            <span>报名入口</span>
+                        <a href="#">
+                            <i class="fa fa-folder-open"></i>
+                            <span class="nav-label">课程管理</span>
+                            <span class="fa arrow"></span>
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="baoming.html" target="_blank">
-                            <em class="m2"></em>
-                            <span>考试日期</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="baoming.html" target="_blank">
-                            <em class="m3"></em>
-                            <span>成绩查询</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="service.html" target="_blank">
-                            <em class="m4"></em>
-                            <span>客服中心</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="service.html" target="_blank">
-                            <em class="m5"></em>
-                            <span>支付帮助</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="service.html" target="_blank">
-                            <em class="m6"></em>
-                            <span>帮助中心</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="home-promo-list clearfix">
-                    <li class="card-transform  item-first">
-                       <a href="#" class="item" target="_blank">
-                           <img src="images/tj1.jpg" alt="中和大咖秀">
-                       </a>
-                    </li>
-                    <li class="card-transform">
-                        <a href="#" class="item" target="_blank">
-                            <img src="images/tj2.jpg" alt="免费公开课">
-                        </a>
-                    </li>
-                    <li class="card-transform">
-                        <a href="#" class="item" target="_blank">
-                            <img src="images/tj3.jpg" alt="注册有礼">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="site-course">
-        <div class="container">
-            <section class="home-brick-box xh-plain-box clearfix">
-                <div class="box-hd">
-                    <h2 class="title">畅销好课</h2>
-                    <div class="more">
-                        <div class="xh-controls clearfix">
-                            <a href="javascript:;" class="btn-prev es-icon es-icon-chevronleft control-disabled"></a>
-                            <a href="javascript:;" class="btn-next es-icon es-icon-chevronright"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="c_contmain">
-                    <ul class="mainbox clearfix" id="mainbox">
-                        <li class="lifirst brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/cx1.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">经典取证班</a>
-                                </h3>
-                                <p class="desc">人力资源管理师二级</p>
-                                <p class="price">
-                                    <span class="num">￥1580</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" class="buy-btn" title="购买" target="_blank">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/cx2.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">经典取证班</a>
-                                </h3>
-                                <p class="desc">人力资源管理师二级</p>
-                                <p class="price">
-                                    <span class="num">￥1580</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" class="buy-btn" title="购买" target="_blank">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/cx3.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">经典取证班</a>
-                                </h3>
-                                <p class="desc">人力资源管理师二级</p>
-                                <p class="price">
-                                    <span class="num">￥1580</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" class="buy-btn" title="购买" target="_blank">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/cx4.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">经典取证班</a>
-                                </h3>
-                                <p class="desc">人力资源管理师二级</p>
-                                <p class="price">
-                                    <span class="num">￥1580</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" class="buy-btn" title="购买" target="_blank">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/cx5.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">经典取证班</a>
-                                </h3>
-                                <p class="desc">人力资源管理师二级</p>
-                                <p class="price">
-                                    <span class="num">￥1580</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" class="buy-btn" title="购买" target="_blank">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/cx6.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">保障通过班</a>
-                                </h3>
-                                <p class="desc">自考行政管理专科</p>
-                                <p class="price">
-                                    <span class="num">￥1580</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" class="buy-btn" title="购买" target="_blank">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/cx7.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">保障通过班</a>
-                                </h3>
-                                <p class="desc">自考行政管理本科</p>
-                                <p class="price">
-                                    <span class="num">￥1580</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/cx8.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">保障通过班</a>
-                                </h3>
-                                <p class="desc">自考汉语言文学专科</p>
-                                <p class="price">
-                                    <span class="num">￥1580</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/cx9.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">保障通过班</a>
-                                </h3>
-                                <p class="desc">自考汉语言文学本科</p>
-                                <p class="price">
-                                    <span class="num">￥1580</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/cx10.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">保障通过班</a>
-                                </h3>
-                                <p class="desc">自考汉语言文学本科</p>
-                                <p class="price">
-                                    <span class="num">￥1580</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="home-brick-box xh-plain-box clearfix">
-                <div class="box-hd">
-                    <h2 class="title">职业教育</h2>
-                    <nav class="hot_nav clearfix">
-                        <ul class="tabs hightbg">
-                            <li class="moving_bg"></li>
-                            <li class="tab_item active">热门推荐</li>
-                            <li class="tab_item">人力资源管理师</li>
-                            <li class="tab_item">公共营养师</li>
-                            <li class="tab_item">心理咨询师</li>
-                            <li class="tab_item">理财规划师</li>
-                            <li class="tab_item">物流管理师</li>
-                            <li class="tab_item">采购师</li>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="courseManagement/courseManagement.html">课程管理</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="">直播管理</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="">课程统计</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="">问答管理</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="">笔记管理</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="">评价管理</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="">分类管理</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="">服务管理</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="">标签管理</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="">通知管理</a>
+                            </li>
                         </ul>
-                    </nav>
-                </div>
-                <div class="box-bd">
-                    <div class="row clearfix">
-                        <div class="edu-left span-first">
-                            <ul class="brick-promo-list clearfix">
-                                <li class="brick-item brick-item-l">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="images/zy.jpg" alt="">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="edu-right">
-                            <ul class="brick-list clearfix">
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/zy1.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="buy.html"  target="_blank">经典取证班</a>
-                                        </h3>
-                                        <p class="desc">人力资源管理师二级</p>
-                                        <p class="price">
-                                            <span class="num">￥1580</span>
-                                            <!--<del><span class="num">￥2000</span></del>-->
-                                        </p>
-                                        <div class="flag flag-new">最新</div>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/zy2.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="buy.html"  target="_blank">经典取证班</a>
-                                        </h3>
-                                        <p class="desc">人力资源管理师二级</p>
-                                        <p class="price">
-                                            <span class="num">￥1580</span>
-                                            <del><span class="num">￥2000</span></del>
-                                        </p>
-                                        <div class="flag flag-saleoff">享9折</div>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/zy3.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="#">经典取证班</a>
-                                        </h3>
-                                        <p class="desc">人力资源管理师二级</p>
-                                        <p class="price">
-                                            <span class="num">￥1580</span>
-                                            <!--<del><span class="num">￥2000</span></del>-->
-                                        </p>
-                                        <div class="flag flag-living">直播中</div>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/zy5.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="#">经典取证班</a>
-                                        </h3>
-                                        <p class="desc">人力资源管理师二级</p>
-                                        <p class="price">
-                                            <span class="num">￥1580</span>
-                                            <!--<del><span class="num">￥2000</span></del>-->
-                                        </p>
-                                        <div class="flag flag-hot">热门</div>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/zy4.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="#">经典取证班</a>
-                                        </h3>
-                                        <p class="desc">人力资源管理师二级</p>
-                                        <p class="price">
-                                            <span class="num">免费</span>
-                                            <del><span class="num">￥2000</span></del>
-                                        </p>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/zy6.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="#">经典取证班</a>
-                                        </h3>
-                                        <p class="desc">人力资源管理师二级</p>
-                                        <p class="price">
-                                            <span class="num">￥1580</span>
-                                            <!--<del><span class="num">￥2000</span></del>-->
-                                        </p>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/zy7.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="#">经典取证班</a>
-                                        </h3>
-                                        <p class="desc">人力资源管理师二级</p>
-                                        <p class="price">
-                                            <span class="num">￥1580</span>
-                                            <!--<del><span class="num">￥2000</span></del>-->
-                                        </p>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-t">
-                                    <a href="buy.html"  target="_blank">
-                                        <div class="figure-img">
-                                            <img src="images/zy8.jpg">
-                                        </div>
-                                        <div class="mask">
-                                            <h3 class="title">人力二级习题册</h3>
-                                            <p class="price"><span class="num">199</span>元</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="brick-item brick-item-s">
-                                    <div class="figure figure-more">
-                                        <a href="javascript:;" target="_blank">
-                                            <i class="more-ico"></i>
-                                        </a>
-                                    </div>
-                                    <a class="more" href="courses.html" target="_blank">更多课程<small>惊喜不断</small></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="home-brick-box xh-plain-box clearfix">
-                <div class="box-hd">
-                    <h2 class="title">学历教育</h2>
-                    <nav class="hot_nav clearfix">
-                        <ul class="tabs hightbg">
-                            <li class="moving_bg">&nbsp;</li>
-                            <li class="tab_item active">热门推荐</li>
-                            <li class="tab_item">行政管理</li>
-                            <li class="tab_item">汉语言文学</li>
-                            <li class="tab_item">人力资源管理</li>
-                            <li class="tab_item">商务管理</li>
-                            <li class="tab_item">金融管理</li>
-                            <li class="tab_item">自学考试</li>
-                            <li class="tab_item">远程网络教育</li>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-edit"></i>
+                            <span class="nav-label">运营管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="" href="#">公告管理</a>
+                            </li>
+                            <li>
+                                <a class="" href="#">数据统计</a>
+                            </li>
+                            <li>
+                                <a class="" href="#">敏感词管理</a>
+                            </li>
                         </ul>
-                    </nav>
-                </div>
-                <div class="box-bd">
-                    <div class="row clearfix">
-                        <div class="edu-left span-first">
-                            <ul class="brick-promo-list clearfix">
-                                <li class="brick-item brick-item-l">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="images/xl.jpg" alt="">
-                                    </a>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="">
+                            <i class="fa fa-bar-chart"></i>
+                            <span class="nav-label">财务管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="">账单管理</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="">课程退款</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-desktop"></i>
+                            <span class="nav-label">系统管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="systemManagement/systemManagement-站点设置.html">站点设置</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="systemManagement/systemManagement-用户管理.html">用户设置</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="systemManagement/systemManagement-课程设置.html">课程设置</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="systemManagement/systemManagement-账务设置.html">账务设置</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="systemManagement/systemManagement-短信设置.html">短信管理</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="systemManagement/systemManagement-IP黑名单.html">IP黑名单</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="systemManagement/systemManagement-发帖限制设置.html">发帖限制管理</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+       <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header pull-left">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="请输入您需要查找的内容 …" class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right pull-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li class="m-t-xs">
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46小时前</small>
+                                            <strong>小四</strong> 这个在日本投降书上签字的军官，建国后一定是个不小的干部吧？
+                                            <br>
+                                            <small class="text-muted">3天前 2014.11.8</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">25小时前</small>
+                                            <strong>国民岳父</strong> 如何看待“男子不满自己爱犬被称为狗，刺伤路人”？——这人比犬还凶
+                                            <br>
+                                            <small class="text-muted">昨天</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a class="J_menuItem" href="#" data-index="16">
+                                            <i class="fa fa-envelope"></i> <strong> 查看所有消息</strong>
+                                        </a>
+                                    </div>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="edu-right">
-                            <ul class="brick-list clearfix">
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/xl1.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="#">名校直通班</a>
-                                        </h3>
-                                        <p class="desc">自考行政管理专科</p>
-                                        <p class="price">
-                                            <span class="num">￥1580</span>
-                                            <!--<del><span class="num">￥2000</span></del>-->
-                                        </p>
-                                        <div class="flag flag-new">最新</div>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/xl2.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="#">名校直通班</a>
-                                        </h3>
-                                        <p class="desc">自考行政管理专科</p>
-                                        <p class="price">
-                                            <span class="num">￥1580</span>
-                                            <del><span class="num">￥2000</span></del>
-                                        </p>
-                                        <div class="flag flag-saleoff">享9折</div>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/xl3.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="#">名校直通班</a>
-                                        </h3>
-                                        <p class="desc">自考行政管理专科</p>
-                                        <p class="price">
-                                            <span class="num">￥1580</span>
-                                            <!--<del><span class="num">￥2000</span></del>-->
-                                        </p>
-                                        <div class="flag flag-living">直播中</div>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/xl5.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="#">名校直通班</a>
-                                        </h3>
-                                        <p class="desc">自考行政管理专科</p>
-                                        <p class="price">
-                                            <span class="num">￥1580</span>
-                                            <!--<del><span class="num">￥2000</span></del>-->
-                                        </p>
-                                        <div class="flag flag-hot">热门</div>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/xl4.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="#">名校直通班</a>
-                                        </h3>
-                                        <p class="desc">自考行政管理专科</p>
-                                        <p class="price">
-                                            <span class="num">免费</span>
-                                            <del><span class="num">￥2000</span></del>
-                                        </p>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/xl6.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="#">名校直通班</a>
-                                        </h3>
-                                        <p class="desc">自考行政管理专科</p>
-                                        <p class="price">
-                                            <span class="num">￥1580</span>
-                                            <!--<del><span class="num">￥2000</span></del>-->
-                                        </p>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-m">
-                                    <div class="figure figure-img">
-                                        <a href="buy.html"  target="_blank">
-                                            <img src="images/xl7.jpg" alt="">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="brick-item-info">
-                                        <h3 class="title">
-                                            <a href="#">名校直通班</a>
-                                        </h3>
-                                        <p class="desc">自考行政管理专科</p>
-                                        <p class="price">
-                                            <span class="num">￥1580</span>
-                                            <!--<del><span class="num">￥2000</span></del>-->
-                                        </p>
-                                    </div>
-                                    <div class="people">
-                                        <i class="people-head"></i>
-                                        <span class="num">7900</span>
-                                    </div>
-                                    <div class="review-wrapper">
-                                        <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                        <p class="buy-collect">
-                                            <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                                <i class="buy"></i>
-                                            </a>
-                                            <a href="javascript:;" class="collect-btn" title="收藏">
-                                                <i class="collect"></i>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="brick-item brick-item-t">
-                                    <a href="javascript:;" target="_blank">
-                                        <div class="figure-img">
-                                            <img src="images/xl8.jpg">
-                                        </div>
-                                        <div class="mask">
-                                            <h3 class="title">自考通过宝典</h3>
-                                            <p class="price"><span class="num">29</span>元</p>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="#">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> 您有16条未读消息
+                                            <span class="pull-right text-muted small">4分钟前</span>
                                         </div>
                                     </a>
                                 </li>
-                                <li class="brick-item brick-item-s">
-                                    <div class="figure figure-more">
-                                        <a href="javascript:;" target="_blank">
-                                            <i class="more-ico"></i>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <div>
+                                            <i class="fa fa-qq fa-fw"></i> 3条新回复
+                                            <span class="pull-right text-muted small">12分钟钱</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a class="J_menuItem" href="#" data-index="17">
+                                            <strong>查看所有 </strong>
+                                            <i class="fa fa-angle-right"></i>
                                         </a>
                                     </div>
-                                    <a class="more" href="courses.html" target="_blank">更多课程<small>惊喜不断</small></a>
                                 </li>
                             </ul>
-                        </div>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="#" class="J_menuItem" data-index="0"><i class="glyphicon glyphicon-shopping-cart"></i> 订单管理</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row content-tabs">
+                <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i></button>
+                <nav class="page-tabs J_menuTabs">
+                    <div class="page-tabs-content">
+                        <a href="javascript:;" class="active J_menuTab" data-id="welcomePage.html">首页</a>
                     </div>
-                </div>
-            </section>
-            <section class="home-brick-box xh-plain-box clearfix">
-                <div class="box-hd">
-                    <h2 class="title">财会金融</h2>
-                </div>
-                <div class="c_contmain">
-                    <ul class="mainbox clearfix">
-                        <li class="lifirst brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/ck1.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">3科精讲班</a>
-                                </h3>
-                                <p class="desc">会计证</p>
-                                <p class="price">
-                                    <span class="num">免费</span>
-                                    <del><span class="num">￥2000</span></del>
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/ck2.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html" target="_blank">3科知识点精讲</a>
-                                </h3>
-                                <p class="desc">会计证</p>
-                                <p class="price">
-                                    <span class="num">￥1980</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/ck3.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">会计基础</a>
-                                </h3>
-                                <p class="desc">知识点精讲</p>
-                                <p class="price">
-                                    <span class="num">￥1980</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/ck4.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">初级会计电算化</a>
-                                </h3>
-                                <p class="desc">知识点精讲</p>
-                                <p class="price">
-                                    <span class="num">￥1980</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="brick-item brick-item-m">
-                            <div class="imgbox figure-img">
-                                <a href="buy.html"  target="_blank">
-                                    <img src="images/ck5.jpg">
-                                    <div class="mask"></div>
-                                </a>
-                            </div>
-                            <div class="brick-item-info">
-                                <h3 class="title">
-                                    <a href="buy.html"  target="_blank">财经法规与会计职业道德</a>
-                                </h3>
-                                <p class="desc">会计证</p>
-                                <p class="price">
-                                    <span class="num">￥1980</span>
-                                    <!--<del><span class="num">￥2000</span></del>-->
-                                </p>
-                            </div>
-                            <div class="people">
-                                <i class="people-head"></i>
-                                <span class="num">7900</span>
-                            </div>
-                            <div class="review-wrapper">
-                                <p class="evaluate">真好，以后多给我们开放一些免费的课程听听....</p>
-                                <p class="buy-collect">
-                                    <a href="pay.html" target="_blank" class="buy-btn" title="购买">
-                                        <i class="buy"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collect-btn" title="收藏">
-                                        <i class="collect"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </li>
+                </nav>
+                <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i>
+                </button>
+                <div class="btn-group roll-nav roll-right">
+                    <button class="dropdown J_tabClose" data-toggle="dropdown">关闭操作<span class="caret"></span></button>
+                    <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                        <li class="J_tabShowActive"><a>定位当前选项卡</a></li>
+                        <li class="divider"></li>
+                        <li class="J_tabCloseAll"><a>关闭全部选项卡</a></li>
+                        <li class="J_tabCloseOther"><a>关闭其他选项卡</a></li>
                     </ul>
                 </div>
-            </section>
-            <section class="home-brick-box xh-plain-box clearfix">
-                <div class="box-hd">
-                    <h2 class="title">热门资讯</h2>
-                </div>
-                <div class="news-list clearfix">
-                    <ul class="clearfix">
-                        <li class="news-item item-first">
-                            <div class="figure figure-img">
-                                <a href="#"><img src="images/zx1.jpg"></a>
-                            </div>
-                            <p class="title">女博士中的颜值担当</p>
-                            <p class="info">网培育了数十万职场精英，如今发展为行业内的领军企业。荣获中国好教育“互联网+品牌影响力在线”</p>
-                            <div class="details">
-                                <a href="#">查看详情</a>
-                            </div>
-                        </li>
-                        <li class="news-item item-second">
-                            <div class="figure figure-img">
-                                <a href="#"><img src="images/zx2.jpg"></a>
-                            </div>
-                            <p class="title">女博士中的颜值担当</p>
-                            <p class="info">网培育了数十万职场精英，如今发展为行业内的领军企业。荣获中国好教育“互联网+品牌影响力在线”</p>
-                            <div class="details">
-                                <a href="#">查看详情</a>
-                            </div>
-                        </li>
-                        <li class="news-item item-third">
-                            <div class="figure figure-img">
-                                <a href="#"><img src="images/zx3.jpg"></a>
-                            </div>
-                            <p class="title">女博士中的颜值担当</p>
-                            <p class="info">网培育了数十万职场精英，如今发展为行业内的领军企业。荣获中国好教育“互联网+品牌影响力在线”</p>
-                            <div class="details">
-                                <a href="#">查看详情</a>
-                            </div>
-                        </li>
-                        <li class="news-item item-fourth">
-                            <div class="figure figure-img">
-                                <a href="#"><img src="images/zx4.jpg"></a>
-                            </div>
-                            <p class="title">女博士中的颜值担当</p>
-                            <p class="info">网培育了数十万职场精英，如今发展为行业内的领军企业。荣获中国好教育“互联网+品牌影响力在线”</p>
-                            <div class="details">
-                                <a href="#">查看详情</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="home-brick-box xh-plain-box clearfix">
-                <div class="box-hd">
-                    <h2 class="title">热门小组</h2>
-                </div>
-                <div class="group-list">
-                    <ul class="clearfix">
-                        <li class="group-item item-first">
-                            <h4 class="title">营养小组</h4>
-                            <div class="xm-carousel-wrapper">
-                                <ul class="item-list clearfix">
-                                    <li>
-                                        <p>1.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img1.jpg" class="thumb">
-                                    </li>
-                                    <li>
-                                        <p>2.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img1.jpg" class="thumb">
-                                    </li>
-                                    <li>
-                                        <p>3.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img1.jpg" class="thumb">
-                                    </li>
-                                    <li>
-                                        <p>4.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img1.jpg" class="thumb">
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="xm-pagers-wrapper">
-                                <ul class="xm-pagers">
-                                    <li class="pager pager-active">
-                                        <span class="dot">1</span>
-                                    </li>
-                                    <li class="pager">
-                                        <span class="dot">2</span>
-                                    </li>
-                                    <li class="pager">
-                                    <span class="dot">3</span>
-                                    </li>
-                                    <li class="pager">
-                                        <span class="dot">4</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="xm-controls xm-controls-block-small xm-carousel-controls">
-                                <a href="javascript:;" class="es-icon es-icon-chevronleft control control-prev"></a>
-                                <a href="javascript:;" class="es-icon es-icon-chevronright control control-next"></a>
-                            </div>
-                        </li>
-                        <li class="group-item item-second">
-                            <h4 class="title">心理小组</h4>
-                            <div class="xm-carousel-wrapper">
-                                <ul class="item-list clearfix">
-                                    <li>
-                                        <p>1.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img2.jpg" class="thumb">
-                                    </li>
-                                    <li>
-                                        <p>2.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img2.jpg" class="thumb">
-                                    </li>
-                                    <li>
-                                        <p>3.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img2.jpg" class="thumb">
-                                    </li>
-                                    <li>
-                                        <p>4.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img2.jpg" class="thumb">
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="xm-pagers-wrapper">
-                                <ul class="xm-pagers">
-                                    <li class="pager pager-active">
-                                        <span class="dot">1</span>
-                                    </li>
-                                    <li class="pager">
-                                        <span class="dot">2</span>
-                                    </li>
-                                    <li class="pager">
-                                        <span class="dot">3</span>
-                                    </li>
-                                    <li class="pager">
-                                        <span class="dot">4</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="xm-controls xm-controls-block-small xm-carousel-controls">
-                                <a href="javascript:;" class="es-icon es-icon-chevronleft control control-prev"></a>
-                                <a href="javascript:;" class="es-icon es-icon-chevronright control control-next"></a>
-                            </div>
-                        </li>
-                        <li class="group-item item-third">
-                            <h4 class="title">人力小组</h4>
-                            <div class="xm-carousel-wrapper">
-                                <ul class="item-list clearfix">
-                                    <li>
-                                        <p>1.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img3.jpg" class="thumb">
-                                    </li>
-                                    <li>
-                                        <p>2.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img3.jpg" class="thumb">
-                                    </li>
-                                    <li>
-                                        <p>3.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img3.jpg" class="thumb">
-                                    </li>
-                                    <li>
-                                        <p>4.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img3.jpg" class="thumb">
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="xm-pagers-wrapper">
-                                <ul class="xm-pagers">
-                                    <li class="pager pager-active">
-                                        <span class="dot">1</span>
-                                    </li>
-                                    <li class="pager">
-                                        <span class="dot">2</span>
-                                    </li>
-                                    <li class="pager">
-                                        <span class="dot">3</span>
-                                    </li>
-                                    <li class="pager">
-                                        <span class="dot">4</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="xm-controls xm-controls-block-small xm-carousel-controls">
-                                <a href="javascript:;" class="es-icon es-icon-chevronleft control control-prev"></a>
-                                <a href="javascript:;" class="es-icon es-icon-chevronright control control-next"></a>
-                            </div>
-                        </li>
-                        <li class="group-item item-fourth">
-                            <h4 class="title">会计小组</h4>
-                            <div class="xm-carousel-wrapper">
-                                <ul class="item-list clearfix">
-                                    <li>
-                                        <p>1.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img4.jpg" class="thumb">
-                                    </li>
-                                    <li>
-                                        <p>2.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img4.jpg" class="thumb">
-                                    </li>
-                                    <li>
-                                        <p>3.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img4.jpg" class="thumb">
-                                    </li>
-                                    <li>
-                                        <p>4.营养小组秉承：营养理念始于心，合理膳食践于行；互帮互助，共同成长。</p>
-                                        <a href="#" class="enter">点击进入</a>
-                                        <img src="images/group-img4.jpg" class="thumb">
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="xm-pagers-wrapper">
-                                <ul class="xm-pagers">
-                                    <li class="pager pager-active">
-                                        <span class="dot">1</span>
-                                    </li>
-                                    <li class="pager">
-                                        <span class="dot">2</span>
-                                    </li>
-                                    <li class="pager">
-                                        <span class="dot">3</span>
-                                    </li>
-                                    <li class="pager">
-                                        <span class="dot">4</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="xm-controls xm-controls-block-small xm-carousel-controls">
-                                <a href="javascript:;" class="es-icon es-icon-chevronleft control control-prev"></a>
-                                <a href="javascript:;" class="es-icon es-icon-chevronright control control-next"></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="home-brick-box xh-plain-box clearfix">
-                <div class="box-hd">
-                    <h2 class="title">学员评价</h2>
-                </div>
-                <div class="evaluate-list">
-                    <ul class="clearfix">
-                        <li class="evaluate-item item-first">
-                            <div class="head">
-                                <a href="#" class="user-img">
-                                    <img src="images/xs1.jpg">
-                                </a>
-                                <div class="user-info">
-                                    <a href="#" class="user-name">张长松</a>
-                                    <p>发布于<span class="date">2天前</span></p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                 <span class="score">
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star"></i>
-                                 </span>
-                                <a href="#" class="title">企业人力资源管理师</a>
-                                <p class="over-ellipsis">发展心理学第一节课为什么没有声音呀</p>
-                            </div>
-                        </li>
-                        <li class="evaluate-item">
-                            <div class="head">
-                                <a href="#" class="user-img">
-                                    <img src="images/xs2.jpg">
-                                </a>
-                                <div class="user-info">
-                                    <a href="#" class="user-name">张长松</a>
-                                    <p>发布于<span class="date">2天前</span></p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                 <span class="score">
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star"></i>
-                                 </span>
-                                <a href="#" class="title">企业人力资源管理师</a>
-                                <p class="over-ellipsis">发展心理学第一节课为什么没有声音呀</p>
-                            </div>
-                        </li>
-                        <li class="evaluate-item">
-                            <div class="head">
-                                <img src="images/xs3.jpg" class="user-img">
-                                <div class="user-info">
-                                    <a href="#" class="user-name">张长松</a>
-                                    <p>发布于<span class="date">2天前</span></p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                 <span class="score">
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star"></i>
-                                 </span>
-                                <a href="#" class="title">企业人力资源管理师</a>
-                                <p class="over-ellipsis">发展心理学第一节课为什么没有声音呀</p>
-                            </div>
-                        </li>
-                        <li class="evaluate-item">
-                            <div class="head">
-                                <a href="#" class="user-img">
-                                    <img src="images/xs4.jpg">
-                                </a>
-                                <div class="user-info">
-                                    <a href="#" class="user-name">张长松</a>
-                                    <p>发布于<span class="date">2天前</span></p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                 <span class="score">
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star"></i>
-                                 </span>
-                                <a href="#" class="title">企业人力资源管理师</a>
-                                <p class="over-ellipsis">发展心理学第一节课为什么没有声音呀</p>
-                            </div>
-                        </li>
-                        <li class="evaluate-item item-first">
-                            <div class="head">
-                                <a href="#" class="user-img">
-                                    <img src="images/xs5.jpg">
-                                </a>
-                                <div class="user-info">
-                                    <a href="#" class="user-name">张长松</a>
-                                    <p>发布于<span class="date">2天前</span></p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                 <span class="score">
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star"></i>
-                                 </span>
-                                <a href="#" class="title">企业人力资源管理师</a>
-                                <p class="over-ellipsis">发展心理学第一节课为什么没有声音呀</p>
-                            </div>
-                        </li>
-                        <li class="evaluate-item">
-                            <div class="head">
-                                <a href="#" class="user-img">
-                                    <img src="images/xs6.jpg">
-                                </a>
-                                <div class="user-info">
-                                    <a href="#" class="user-name">张长松</a>
-                                    <p>发布于<span class="date">2天前</span></p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                 <span class="score">
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star"></i>
-                                 </span>
-                                <a href="#" class="title">企业人力资源管理师</a>
-                                <p class="over-ellipsis">发展心理学第一节课为什么没有声音呀</p>
-                            </div>
-                        </li>
-                        <li class="evaluate-item">
-                            <div class="head">
-                                <a href="#" class="user-img">
-                                    <img src="images/xs7.jpg">
-                                </a>
-                                <div class="user-info">
-                                    <a href="#" class="user-name">张长松</a>
-                                    <p>发布于<span class="date">2天前</span></p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                 <span class="score">
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star"></i>
-                                 </span>
-                                <a href="#" class="title">企业人力资源管理师</a>
-                                <p class="over-ellipsis">发展心理学第一节课为什么没有声音呀</p>
-                            </div>
-                        </li>
-                        <li class="evaluate-item">
-                            <div class="head">
-                                <a href="#" class="user-img">
-                                    <img src="images/xs8.jpg">
-                                </a>
-                                <div class="user-info">
-                                    <a href="#" class="user-name">张长松</a>
-                                    <p>发布于<span class="date">2天前</span></p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                 <span class="score">
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star color-warning"></i>
-                                        <i class="es-icon es-icon-star"></i>
-                                 </span>
-                                <a href="#" class="title">企业人力资源管理师</a>
-                                <p class="over-ellipsis">发展心理学第一节课为什么没有声音呀</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-    </div>
-    <div class="site-family">
-        <div class="container">
-            <ul class="clearfix">
-                <li class="js-family-item family-item family-teacher l">
-                    <a href="#" class="family-avator">
-                        <div class="family-mask"></div>
-                        <img src="bighome/b1.jpg" width="200" height="200">
-                    </a>
-                    <div class="js-family-info family-info family-info-t">
-                        <h3 class="family-teacher-nick">Rango</h3>
-                        <p class="family-info-job">PHP开发工程师</p>
-                        <p class="family-info-desc">多玩技术部基础平台组技术经理，PHP官方PECL开发组成员，Swoole开源项目创始人，前腾讯朋友网、易迅网、淘宝网搜索的后台团队核心技术骨干。</p>
-                    </div>
-                </li>
-                <li class="family-item family-student l">
-                    <ul class="clearfix">
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s1.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s">
-                                <h3 class="family-student-nick">leejersey</h3>
-                                <p class="family-info-job">Web前端工程师</p>
-                                <div class="family-info-foot">
-                                    <span>学习<em>1882小时 5分</em></span><span>报名<em>235门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s2.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s">
-                                <h3 class="family-student-nick">学习人生</h3>
-                                <p class="family-info-job">Web前端工程师</p>
-                                <div class="family-info-foot">
-                                    <span>学习<em>1601小时42分</em></span><span>报名<em>155门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s3.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s ">
-                                <h3 class="family-student-nick">Raymond小文</h3>
-                                <p class="family-info-job">Web前端工程师</p>
-                                <div class="family-info-foot">
-                                    <span>学习<em>1333小时39分</em></span><span>报名<em>108门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s4.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s ">
-                                <h3 class="family-student-nick">名小鹅</h3>
-                                <p class="family-info-job">Web前端工程师</p>
-                                <div class="family-info-foot">
-                                    <span>学习<em>1077小时21分</em></span><span>报名<em>122门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="js-family-item family-item family-teacher l">
-                    <a href="#" class="family-avator">
-                        <div class="family-mask"></div>
-                        <img src="bighome/b4.jpg" width="200" height="200">
-                    </a>
-                    <div class="js-family-info family-info family-info-t">
-                        <h3 class="family-teacher-nick">Pangee</h3>
-                        <p class="family-info-job">学生</p>
-                        <p class="family-info-desc">高级研发工程师，就职于全球颇有影响力的搜索引擎公司，曾供职于新浪。负责移动客户端相关的服务端研发工作，对大流量业务、高并发业务有较多的经验与解决方案。技术极客，喜欢一切新特奇技术，希望把技术做到极致。...</p>
-                    </div>
-                </li>
-
-                <li class="family-item family-student l">
-                    <ul class="clearfix">
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s5.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s">
-                                <h3 class="family-student-nick">RainbowPeter</h3>
-                                <p class="family-info-job">JAVA开发工程师</p>
-                                <div class="family-info-foot">
-                                    <span>学习<em>1071小时52分</em></span><span>报名<em>295门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s6.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s ">
-                                <h3 class="family-student-nick">吕氏总裁</h3>
-                                <p class="family-info-job">学生</p>
-                                <div class="family-info-foot">
-                                    <span>学习<em>815小时 1分</em></span><span>报名<em>141门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s7.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s">
-                                <h3 class="family-student-nick">加加摩尔</h3>
-                                <p class="family-info-job">PHP开发工程师</p>
-                                <div class="family-info-foot">
-                                    <span>学习<em>812小时47分</em></span><span>报名<em>126门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s8.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s ">
-                                <h3 class="family-student-nick">w7851435</h3>
-                                <p class="family-info-job">PHP开发工程师</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>731小时45分</em></span><span>报名<em>138门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="js-family-item family-item family-teacher l">
-                    <a href="#" class="family-avator">
-                        <div class="family-mask"></div>
-                        <img src="bighome/b2.jpg" width="200" height="200">
-                    </a>
-                    <div class="js-family-info family-info family-info-t family-info-right">
-                        <h3 class="family-teacher-nick">liuyubobobo</h3>
-                        <p class="family-info-job">其它</p>
-                        <p class="family-info-desc">创业者，全栈工程师，持续学习者。对技术开发，产品设计、前后端，ios，html5，智能算法等领域均有接触；拥有多款独立App作品；对一切可编程的东西有浓厚兴趣，对游戏编程格外感兴趣。相信编程改变一切。</p>
-                    </div>
-                </li>
-
-                <li class="family-item family-student l">
-                    <ul class="clearfix">
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s9.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s family-info-right">
-                                <h3 class="family-student-nick">smile_again</h3>
-                                <p class="family-info-job">Web前端工程师</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>693小时49分</em></span><span>报名<em>119门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s10.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s family-info-right">
-                                <h3 class="family-student-nick">Linda_liu</h3>
-                                <p class="family-info-job">Web前端工程师</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>618小时 7分</em></span><span>报名<em>108门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s11.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s family-info-right">
-                                <h3 class="family-student-nick">酸奶沙冰</h3>
-                                <p class="family-info-job">交互设计师</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>612小时34分</em></span><span>报名<em>197门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s12.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s family-info-right">
-                                <h3 class="family-student-nick">K_Biao</h3>
-                                <p class="family-info-job">学生</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>582小时52分</em></span><span>报名<em>177门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="family-item family-student l">
-                    <ul class="clearfix">
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s13.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s">
-                                <h3 class="family-student-nick">O_Duok</h3>
-                                <p class="family-info-job">Web前端工程师</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>568小时41分</em></span><span>报名<em>25门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s14.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s">
-                                <h3 class="family-student-nick">化龙贝</h3>
-                                <p class="family-info-job">学生</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>527小时16分</em></span><span>报名<em>278门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s15.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s">
-                                <h3 class="family-student-nick">Jaywin丶</h3>
-                                <p class="family-info-job">Web前端工程师</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>487小时38分</em></span><span>报名<em>161门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s16.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s ">
-                                <h3 class="family-student-nick">MistyMoon</h3>
-                                <p class="family-info-job">其它</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>443小时44分</em></span><span>报名<em>153门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="js-family-item family-item family-teacher l">
-                    <a href="#" class="family-avator">
-                        <div class="family-mask"></div>
-                        <img src="bighome/b3.jpg" width="200" height="200">
-                    </a>
-                    <div class="js-family-info family-info family-info-t">
-                        <h3 class="family-teacher-nick">远人</h3>
-                        <p class="family-info-job">其它</p>
-                        <p class="family-info-desc">资深前端攻城师，先后就职于腾讯、人人网，具有丰富的海量服务前端开发经验。也曾担任多个创业团队技术顾问。现就职于某知名互联网公司，是最资深的云前端工程师，首席前端架构师，实践经验丰富。</p>
-                    </div>
-                </li>
-                <li class="family-item family-student l">
-                    <ul class="clearfix">
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s17.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s ">
-                                <h3 class="family-student-nick">Cynthia</h3>
-                                <p class="family-info-job">UI设计师</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>421小时55分</em></span><span>报名<em>67门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s18.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s">
-                                <h3 class="family-student-nick">沧海一声笑_0001</h3>
-                                <p class="family-info-job"></p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>417小时 2分</em></span><span>报名<em>39门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s19.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s ">
-                                <h3 class="family-student-nick">JoeMartini</h3>
-                                <p class="family-info-job">产品经理</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>397小时 2分</em></span><span>报名<em>16门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s20.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s ">
-                                <h3 class="family-student-nick">李晓健</h3>
-                                <p class="family-info-job">Web前端工程师</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>372小时14分</em></span><span>报名<em>177门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="js-family-item family-item family-teacher l">
-                    <a href="#" class="family-avator">
-                        <div class="family-mask"></div>
-                        <img src="bighome/b6.jpg" width="200" height="200">
-                    </a>
-                    <div class="js-family-info family-info family-info-t">
-                        <h3 class="family-teacher-nick">张鑫旭</h3>
-                        <p class="family-info-job">页面重构设计</p>
-                        <p class="family-info-desc">web前端，就职于腾讯ISUX上海设计中心，喜欢卖萌打杂，同事都叫我张老师，(*^__^*) 嘻嘻……
-                        </p>
-                    </div>
-                </li>
-
-                <li class="family-item family-student l">
-                    <ul class="clearfix">
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s21.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s ">
-                                <h3 class="family-student-nick">伪文艺文委</h3>
-                                <p class="family-info-job">PHP开发工程师</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>347小时35分</em></span><span>报名<em>133门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s22.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s ">
-                                <h3 class="family-student-nick">luona</h3>
-                                <p class="family-info-job">学生</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>343小时52分</em></span><span>报名<em>40门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s23.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s ">
-                                <h3 class="family-student-nick">宝贝我一直在</h3>
-                                <p class="family-info-job">Linux系统工程师</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>322小时 3分</em></span><span>报名<em>65门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="js-family-item family-sub-item">
-                            <a href="#" class="family-avator">
-                                <div class="family-mask"></div>
-                                <img src="bighome/s24.jpg" width="100" height="100">
-                            </a>
-                            <div class="js-family-info family-info family-info-s ">
-                                <h3 class="family-student-nick">路飞弟弟</h3>
-                                <p class="family-info-job">Web前端工程师</p>
-                                <div class="family-info-foot">
-                                      <span>学习<em>248小时54分</em></span><span>报名<em>96门课程</em></span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="js-family-item family-item family-teacher l">
-                    <a href="#" class="family-avator">
-                        <div class="family-mask"></div>
-                        <img src="bighome/b5.jpg" width="200" height="200">
-                    </a>
-                    <div class="js-family-info family-info family-info-t family-info-right">
-                        <h3 class="family-teacher-nick">林永坚Jake</h3>
-                        <p class="family-info-job">其它</p>
-                        <p class="family-info-desc">全栈工程师，独立开发者，咨询公司高级顾问。所开发的iOS APP多次登上苹果App Store分类榜榜首。做为一个持续学习者，不间断地折腾各种新技术和方法，并乐于推广，让大家一起感受技术的力量！</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div id="js-family-mask" class="family-big-mask"></div>
-        <div id="js-family-text" class="family-text hide-text">学 慧 大 家 庭</div>
-    </div>
-    <footer class="es-footer">
-        <div class="footer-link">
-            <div class="footer-main clearfix">
-                <div class="link-item">
-                    <img src="images/road.png" alt="新生上路">
-                    <h3>新生上路</h3>
-                    <ul>
-                        <li>
-                            <a href="#" target="_blank">如何注册</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">如何购课</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">如何赠送</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">学习课程</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="link-item">
-                    <img src="images/help.png" alt="帮助中心">
-                    <h3>帮助中心</h3>
-                    <ul>
-                        <li>
-                            <a href="#" target="_blank">账户问题</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">直播须知</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">支付方式</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">常见问题</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">视频观看问题</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="link-item">
-                    <img src="images/about.png" alt="关于我们">
-                    <h3>关于我们</h3>
-                    <ul>
-                        <li>
-                            <a href="#" target="_blank">了解学慧网</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">联系我们</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_self">加入学慧网</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">关注我们</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="contact-item">
-                    <p class="phone">400-680-7650</p>
-                    <p class="time">周一至周五 9:00-19:00</p>
-                    <a href="#" class="iphone-btn">
-                        <i class="phone-ico"></i>
-                        学慧网官方在线客服
-                    </a>
-                </div>
+                <a href="#" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-power-off"></i> 退出</a>
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="welcomePage.html" frameborder="0" data-id="welcomePage.html" seamless></iframe>
+            </div>
+            <div class="footer">
+                <p>课程内容版权均归： <a href="/">北京学慧网络教育科技有限公司</a>所有 <a class="mlm" href="http://www.miibeian.gov.cn/" target="_blank">
+                    京ICP备15007758号-1    京ICP证150990号
+                </a></p>
             </div>
         </div>
-        <div class="copyright">
-            <div class="container">
-                <div class="mts">
-                    课程内容版权均归
-                    <a href="/">
-                        北京学慧网络教育科技有限公司
-                    </a>
-                    所有
-                    <a class="mlm" href="http://www.miibeian.gov.cn/" target="_blank">
-                        京ICP备15007758号-1    京ICP证150990号
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div id="J_GotoTop" class="elevator">
-        <a href="feedback.html" class="elevator-msg" title="意见反馈"><i class="feedback"></i></a>
-        <a href="javascript:" class="elevator-app" title="app下载">
-            <i class="app-down"></i>
-            <div class="elevator-app-box"></div>
-        </a>
-        <a href="javascript:" class="elevator-weixin" id="js-elevator-weixin" title="官方微信">
-            <i class="weixin"></i>
-            <div class="elevator-weixin-box"></div>
-        </a>
-        <a href="javascript:void(0)" class="elevator-top" style="" title="返回顶部" id="backTop">
-            <i class="gotop"></i>
-        </a>
+        <!--右侧部分结束-->
     </div>
-    <!--登录之后显示-->
-    <div class="pop_login">
-        <div class="login-content">
-            <div class="login-view" style="display:block" id="welcome">
-                <a href="javascript:void(0);" class="poplogin_close"><i class="es-icon es-icon-close01"></i></a>
-                <div class="login-head">
-                    <h3>欢迎登录学慧网</h3>
-                </div>
-                <div class="login-body">
-                    <div class="xh-input input-username">
-                        <input type="text" class="username" name="username" autocomplete="off" autocapitalize="off" autocorrect="off" data-enable-clean="true" data-rule-required="true" placeholder="手机号/用户名/邮箱" data-hp-widgets="1">
-                        <i class="es-icon es-icon-person"></i>
-                        <span class="xh-err-tips">该用户未注册</span>
-                        <span class="xh-icon xh-flag"></span>
-                    </div>
-                    <div class="xh-input input-password">
-                        <input type="password" class="password" name="password" data-rule-required="true" maxlength="20" placeholder="密码" data-hp-widgets="2">
-                        <i class="es-icon es-icon-lock1"></i>
-                    </div>
-                    <div class="for-rem">
-                        <a class="xh-input forget-password" href="forgot-password.html">忘记密码？</a>
-                        <label class="rememberme"><input type="hidden"  value="0"><label>
-                            <input type="checkbox" id="loginform-rememberme"> 下次自动登录</label>
-                        </label>
-                    </div>
-                    <div class="submit">
-                        <button class="btn" type="submit" id="btn">登&nbsp;&nbsp;录</button>
-                        <p>
-                            还没有账号？
-                            <a href="register.html" class="register-now">马上注册</a>
-                        </p>
-                    </div>
-                    <div class="social">
-                        <span>社交账号登录：</span>
-                        <a href="#" class="es-icon es-icon-qq"></a>
-                        <a href="#" class="es-icon es-icon-weixin"></a>
-                        <a href="#" class="es-icon es-icon-weibo"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<script src="js/register.js"></script>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="js/metisMenu/jquery.metisMenu.js"></script>
+   <script type="text/javascript" src="js/slimscroll/jquery.slimscroll.min.js"></script>
+   <script type="text/javascript" src="js/layer/layer.min.js"></script>
+   <script type="text/javascript" src="js/hplus.min.js"></script>
+   <script type="text/javascript" src="js/contabs.min.js"></script>
+   <script type="text/javascript" src="js/pace/pace.min.js"></script>
 </body>
 </html>

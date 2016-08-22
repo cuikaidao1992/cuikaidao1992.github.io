@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="row wrapper wrapper-content animated fadeInRight">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="form-horizontal">
+            <div class="ibox-title">
+                <h5>学习记录</h5>
+            </div>
+            <div class="ibox-content">
+                <form method="post" id="searchForm">
+                    <select><option>全部课时</option><option>单个课时</option></select>
+                    <input type="text" id="email" name="identityId" placeholder="请输入课时名">
+                    <span><a href="javascript:;" class="btn btn-primary searchContents">搜索</a></span>
+                </form>
+                <div class="user-list" style="margin-top: 20px;">
+                    <table class="table footTabel ">
+                        <thead>
+                        <tr>
+                            <th class="text-left">课程名称<span class="fa indicator fa-unsorted"></span></th>
+                            <th>课时名称<span class="fa indicator fa-unsorted"></span></th>
+                            <th>授课形式<span class="fa indicator fa-unsorted"></span></th>
+                            <th>完成情况<span class="fa indicator fa-unsorted"></span></th>
+                            <th>最长上课时间<span class="fa indicator fa-unsorted"></span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="text-left">公共营养师二级</td>
+                            <td>营养学基础1</td>
+                            <td>直播</td>
+                            <td>60%</td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">公共营养师二级</td>
+                            <td>营养学基础2</td>
+                            <td>直播</td>
+                            <td>60%</td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">公共营养师二级</td>
+                            <td>营养学基础3</td>
+                            <td>直播</td>
+                            <td>60%</td>
+                            <td>120</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <button class="btn btn-white col-sm-2 fr" onclick="window.history.back(-1)">返&nbsp;&nbsp;&nbsp;&nbsp;回</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
+<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+</body>
+</html>

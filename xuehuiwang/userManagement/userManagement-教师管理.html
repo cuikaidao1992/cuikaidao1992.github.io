@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-系统管理-用户管理</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>教师管理</h5>
+                    <p class="line-people fl">(教师人数<span>120</span>)</p>
+                    <div class="ibox-tools">
+                        <a href="userManagementAdd-教师管理.html" class="collapse-link" data-toggle="tooltip" title="" data-original-title="添加">
+                            <i class="fa fa-plus"></i>
+                        </a>
+                        <a href="userManagement-批量导入.html" class="collapse-link" data-toggle="tooltip" title="" data-original-title="导入">
+                            <i class="fa fa-sign-in"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form method="post" id="searchForm">
+                        <input type="text" id="stuName" name="name" placeholder="姓名">
+                        <span><a href="javascript:;" class="btn btn-primary searchContents">搜索</a></span>
+                    </form>
+                    <div class="user-list" style="margin-top: 20px;">
+                        <table class="table footTabel">
+                            <thead>
+                            <tr>
+                                <th>选项</th>
+                                <th>教师姓名<span class="fa indicator fa-unsorted"></span></th>
+                                <th>头衔<span class="fa indicator fa-unsorted"></span></th>
+                                <th>介绍<span class="fa indicator fa-unsorted"></span></th>
+                                <th>所授课程<span class="fa indicator fa-unsorted"></span></th>
+                                <th>操作<span class="fa indicator fa-unsorted"></span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="check-box"><input type="checkbox" class="check-btn"></span></td>
+                                <td>马玲</td>
+                                <td>人力资源讲师</td>
+                                <td>国家二级营养师</td>
+                                <td>人力资源管理师二级</td>
+                                <td class="slink">
+                                    <a href="userManagementEdit-教师管理.html">修改</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="check-box"><input type="checkbox" class="check-btn"></span></td>
+                                <td>马玲</td>
+                                <td>人力资源讲师</td>
+                                <td>国家二级营养师</td>
+                                <td>人力资源管理师二级</td>
+                                <td class="slink">
+                                    <a href="userManagementEdit-教师管理.html">修改</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="check-box"><input type="checkbox" class="check-btn"></span></td>
+                                <td>马玲</td>
+                                <td>人力资源讲师</td>
+                                <td>国家二级营养师</td>
+                                <td>人力资源管理师二级</td>
+                                <td class="slink">
+                                    <a href="userManagementEdit-教师管理.html">修改</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="8">
+                                        <ul class="pagination pull-right"><li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li><li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li><li class="footable-page active"><a data-page="0" href="#">1</a></li><li class="footable-page"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li></ul>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script>
+    $(".user-list").on("mouseenter.link", ".slink .more", function () {
+        $(this).nextAll("ul").show();
+    })
+    .on("mouseleave.link", ".slink", function () {
+        $(this).find("ul").hide();
+    });
+</script>
+</body>
+</html>

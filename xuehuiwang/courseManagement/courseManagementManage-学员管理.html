@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/kc.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/repository.css" rel="stylesheet">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/style.min.css" rel="stylesheet">
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/laydate.js"></script>
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="u-wrap company">
+                <div class="block clear">
+                    <div class="labels classStatus">
+                        <div id="statusText">售卖中</div>
+                        <div class="sanjiao"></div>
+                    </div>
+                    <div class="class-title">课程名称 ： 33</div>
+                    <div class="sum">
+                        <span>授课类型：直播</span>
+                    </div>
+                    <div class="price">
+                        价格：33.0元
+                    </div>
+                    <button class="public_course">下架</button>
+                </div>
+            </div>
+            <div class="u-wrap company clearfix">
+                <div class="left-side">
+                    <div class="left-sides-title courseCancle">
+                        <em>返回</em>
+                    </div>
+                    <ul class="menuList_choose">
+                        <li class="subentry"><em>基本信息</em></li>
+                        <li class="subentry"><em>排课表</em></li>
+                        <li class="subentry"><em>课程详情</em></li>
+                        <li class="subentry active"><em>学员管理</em></li>
+                        <li class="subentry"><em>课程资料</em></li>
+                        <li class="subentry"><em>直播上课统计</em></li>
+                    </ul>
+                </div>
+                <input type="hidden" id="courseUseMethod" value="simple">
+                <div class="right-side">
+                    <div class="mainbackground nopadding">
+                        <div class="heading clear">
+                            <h2 class="h5" style="float:left;">学员列表</h2>
+                            <div class="btn-list" style="float: right">
+                                <span><a href="#addStudent" data-toggle="modal" class="btn btn-primary addStudent">添加学员</a></span>
+                                <span><a href="#addImport" data-toggle="modal" class="btn btn-primary importexcle">导入学员</a></span>
+                                <span><a href="javascript:;" class="btn btn-primary exportexcle">导出学员</a></span>
+                                <span><a href="javascript:;" class="btn btn-primary exportStudyPercent">导出学习进度</a></span>
+                            </div>
+                            <span class="line"></span>
+                        </div>
+                        <form method="post" id="searchForm">
+                                <input type="text" id="stuMobile" name="mobile" placeholder="手机号">
+                                <input type="text" id="stuusername" name="username" placeholder="用户名">
+                                <input type="text" id="stuName" name="name" placeholder="姓名">
+                                <span>创建时间</span>
+                                <span>
+                                    <input type="text" name="startTime" style="width: 80px;" class="date-picker from" onclick="laydate({elem: '#date-picker1'});" id="date-picker1"><em>到</em>
+                                    <input type="text" style="width: 80px;" name="endTime" class="date-picker to" id="date-picker2" onclick="laydate({elem: '#date-picker2'});">
+                                </span>
+                                <span><a href="javascript:;" class="btn btn-primary searchContents">搜索</a></span>
+                        </form>
+                        <div class="user-list" style="margin-top: 20px;">
+                            <table class="table table-center" id="tableList">
+                                <tbody>
+                                    <tr>
+                                        <th width="10%">姓名</th>
+                                        <th width="10%">手机号</th>
+                                        <th width="10%">用户名</th>
+                                        <th width="10%">邮箱</th>
+                                        <th width="10%">报名时间</th>
+                                        <th width="10%">最后登录时间</th>
+                                        <th width="10%">账号状态</th>
+                                        <th width="15%" style="text-align: center">操作</th>
+                                    </tr>
+                                    <tr data-buy="true">
+                                        <td>张三</td>
+                                        <td>15101599560</td>
+                                        <td>D.C.base</td>
+                                        <td>976703628@qq.com</td>
+                                        <td>2016-08-16 15:46:30</td>
+                                        <td>2016-08-16 15:46:30</td>
+                                        <td class="ustatus">启用</td>
+                                        <td class="slink" style="text-align: center">
+                                            <a href="#">查看资料</a>|<a href="#">学习记录</a>|<a href="#">发私信</a>|<a class="more" href="javascript:void(0);">更多</a>
+                                            <ul class="none subBtn">
+                                                <li>
+                                                    <a class="toTransaction" href="javascript:void(0);">备注</a>
+                                                </li>
+                                                <li>
+                                                    <a class="toTransaction" href="javascript:void(0);">移除</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr style="display: none">
+                                        <td colspan="8">没有查找到数据</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pages pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="addStudent" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">添加学员</h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"><em class="must">＊</em>用户名</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="" class="form-control" required="" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"><em class="must">＊</em>手机号/邮箱</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="" class="form-control" required="" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"><em class="must">＊</em>性别</label>
+                        <div class="col-sm-8">
+                            <input type="radio" class="sex" name="sex" value="MALE" checked="checked"> 男
+                            <input type="radio" class="sex" name="sex" value="FEMALE"> 女
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"><em class="must">＊</em>购买价格</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="" class="form-control" required="" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-3">
+                            <button class="btn btn-primary col-sm-2 btn-submit col-sm-offset-1" type="submit">提交</button>
+                            <button class="btn btn-white col-sm-2 col-sm-offset-1" data-dismiss="modal" aria-hidden="true">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="addImport" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">导入学员</h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <form action="">
+                    <div class="top-content">
+                        <span class="c-title">规则说明：</span><br>
+			          	<p class="c-content">
+					      1、导入的文件是excel文件。<br>
+					      2、请下载示例模板，按照示例模板中的格式准备数据。<br>
+					      3、只能导入用户的基本信息，并生成用户前台登录账号，不能批量报名课程。<br>
+					      4、模板文件中的密码列，如果填写的话按照模板中填写的密码生成账号，如果不填写则为手机号后六位。<br>
+					      5、当手机号为空时，密码默认为6个1。
+			          	</p>
+                    </div>
+                    <div class="center-content">
+                        <span>请选择要导入的文件</span>
+                        <a class="file-btn btn-primary" href="javascript:;">
+                            <span>选择本地文件</span>
+                            <input type="file" name="uploadFile" class="pi-file" accept="" title="选择本地文件">
+                        </a>
+                        <input id="fileNames" type="text">
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-3">
+                            <button class="btn btn-primary col-sm-2 btn-submit col-sm-offset-1" type="submit">提交</button>
+                            <button class="btn btn-white col-sm-2 col-sm-offset-1" data-dismiss="modal" aria-hidden="true">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="addExported" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">导出学员</h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"><em class="must">＊</em>用户名</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="" class="form-control" required="" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"><em class="must">＊</em>手机号/邮箱</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="" class="form-control" required="" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"><em class="must">＊</em>性别</label>
+                        <div class="col-sm-8">
+                            <input type="radio" class="sex" name="sex" value="MALE" checked="checked"> 男
+                            <input type="radio" class="sex" name="sex" value="FEMALE"> 女
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"><em class="must">＊</em>购买价格</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="" class="form-control" required="" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-3">
+                            <button class="btn btn-primary col-sm-2 btn-submit col-sm-offset-1" type="submit">提交</button>
+                            <button class="btn btn-white col-sm-2 col-sm-offset-1" data-dismiss="modal" aria-hidden="true">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script>
+    var timer=null;
+    $(".more").hover(function(){
+        $(this).next().show();
+    },function(){
+        timer=setTimeout(function(){
+             $(this).next().hide();
+        },200)
+    })
+    $(".subBtn").hover(function(){
+        clearTimeout(timer)
+    },function(){
+         $(".subBtn").hide();
+    })
+</script>
+</body>
+</html>

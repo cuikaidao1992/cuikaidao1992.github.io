@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>健身房-帐号系统-角色管理</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>角色管理</h5>
+                        <div class="ibox-tools">
+                            <a href="roleManagementAdd-角色管理.html" class="collapse-link" data-toggle="tooltip" title="添加">
+                                <i class="glyphicon glyphicon-plus"></i>
+                                
+                            </a>
+                            <a href="setPermission-角色管理-设置权限.html" class="collapse-link" data-toggle="tooltip" title="授予">
+                                <i class="fa fa-user"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="glyphicon glyphicon-remove"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="table-responsive">
+                            <table class="table table-striped footTabel">
+                                <thead>
+                                    <tr>
+                                        <th>选择</th>
+                                        <th>编号<span class="fa indicator fa-unsorted"></span></th>
+                                        <th>角色名称<span class="fa indicator fa-unsorted"></span></th>
+                                        <th>角色描述<span class="fa indicator fa-unsorted"></span></th>
+                                        <th>创建时间<span class="fa indicator fa-unsorted"></span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label class="inline"><input type="checkbox" class="checkbox ace"  name="input[]"><span class="lbl"></span></label>
+                                        </td>
+                                        <td>1</td>
+                                        <td><span class="pie">管理员</span>
+                                        </td>
+                                        <td>全部权限</td>
+                                        <td>2014.11.11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="inline"><input type="checkbox" class="checkbox ace" name="input[]"><span class="lbl"></span></label>
+                                        </td>
+                                        <td>2</td>
+                                        <td><span class="pie">教师</span>
+                                        </td>
+                                        <td>部分权限</td>
+                                        <td>2014.11.11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="inline"><input type="checkbox" class="checkbox ace" name="input[]"><span class="lbl"></span></label>
+                                        </td>
+                                        <td>2</td>
+                                        <td><span class="pie">客服</span>
+                                        </td>
+                                        <td>部分权限</td>
+                                        <td>2014.11.11</td>
+                                    </tr>
+                                    
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="7">
+                                        <ul class="pagination pull-right"><li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li><li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li><li class="footable-page active"><a data-page="0" href="#">1</a></li><li class="footable-page"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li></ul>
+                                    </td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        
+                        <!--s: 分页-->
+                        <!--e: 分页-->
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+       </div>
+
+    
+    
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+    
+    <script type="text/javascript">
+    
+	   $(function(){
+		   
+		     $(".footTabel th").bind('click',function(){
+				    
+					if($(this).find("span").is(".fa-unsorted")){
+						
+						 $(this).find("span").removeClass("fa-unsorted").addClass("fa-sort-down");
+						
+					}else if($(this).find("span").is(".fa-sort-down")){
+						
+						 $(this).find("span").removeClass("fa-sort-down").addClass("fa-sort-up");
+						 
+						}else if($(this).find("span").is(".fa-sort-up")){
+						
+						 $(this).find("span").removeClass("fa-sort-up").addClass("fa-sort-down");
+						 
+						}
+					
+
+				    
+				  
+				 })
+				 
+		   })
+      
+    </script>
+ 
+    
+    
+</body>
+
+</html>

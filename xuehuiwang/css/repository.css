@@ -1,0 +1,299 @@
+.pl{
+    padding-left: 10px;
+}
+.re-main-body1{
+    position: relative;
+}
+.health-test, .health-abnormal, .health-mes{
+    position: relative;
+    height:100%;
+}
+.slideout-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    width: 256px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: none;
+}
+
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+}
+
+.slideout-open, .slideout-open body, .slideout-open .slideout-panel {
+    overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+    display: block;
+}
+.menu-bar{
+    width: 40px;
+    line-height: 40px;
+    background: #292d38;
+    color: #fff;
+    font-size: 20px;
+    float: left;
+    text-align: center;
+    cursor:pointer;
+    margin-top: 1px;
+}
+.box-content{
+    float: left;
+    width: 100%;
+}
+.ht-nav-list, .hm-nav-list{
+    position: absolute;
+    left:2px;
+    top: 1px;
+    z-index: 9;
+    width: 150px;
+    height:100%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: #404654;
+    padding: 0 15px;
+}
+.ht-nav-list li{
+    line-height: 30px;
+    text-align: center;
+    color: #404654;
+    margin-top:14px;
+    background: #7c808c;
+    cursor: pointer;
+}
+.ht-nav-list li:hover{
+    background: #fff;
+}
+.ht-nav-list li.active{
+    background: #fff;
+    color: #404654;
+}
+.nav-title{
+    width: 100%;
+    line-height: 30px;
+    padding-top: 4px;
+    background: #404654;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.nav-title  i{
+    font-size: 18px;
+    color: #fff;
+    margin-left: 10px;
+    position: relative;
+    top:2px;
+
+}
+.re-content{
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+    position: absolute;
+    width:100%;
+    height:100%;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+}
+
+.searchForm{
+    float: right;
+    margin-top: 10px;
+}
+.searchForm .search-box{
+    float: left;
+    width: 200px;
+    height: 35px;
+    border: 1px solid #d6d7dc;
+    margin: 10px 0;
+}
+.searchForm .search-box input{
+    border: none;
+    background: none;
+    width: 200px;
+    padding: 0 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+.searchForm .btn{
+    width:70px;
+    color: #fff;
+    border: none;
+    padding: 0;
+    line-height: 35px;
+    font-size: 14px;
+    text-indent:23px;
+
+}
+.searchForm .search-btn{
+    float: left;
+    position: relative;
+    margin: 10px 15px 10px 0;
+}
+.searchForm .search-btn .btn{
+    background: #ff5500;
+}
+.searchForm .refresh-btn{
+    float: left;
+    position: relative;
+    width: 150px;
+    margin: 10px 30px 10px 0;
+    border-radius: 5px;
+}
+.searchForm .refresh-btn .btn{
+    background: #404654;
+}
+.searchForm i {
+    font-size: 18px;
+    position: absolute;
+    left:12px;
+    top: 10px;
+    color: #fff;
+
+}
+
+.top-menu ul li{
+    float: left;
+    font-size: 14px;
+    padding-left: 25px;
+}
+.top-menu ul li a{
+    color: #979899;
+    line-height: 46px;
+}
+.top-menu ul li.active a{
+    color:#ff5500
+}
+
+.table-test tbody tr:hover{
+    background: #d6d7dc;
+}
+.table-test tbody tr:hover .table-edit-btn{
+    display: block;
+}
+.check-box{
+    width: 75px;
+    padding-left:15px!important;
+}
+.table-edit{
+    width:200px;
+    text-align:right!important;
+}
+.table-edit-btn{
+    display: none;
+}
+.table-edit span{
+    margin: 0 12px;
+    color: #fff;
+    font-size: 16px;
+}
+.table-edit span:hover{
+    color: #ff5500;
+}
+
+.re-bottom-nav{
+    width: 100%;
+    text-align: center;
+}
+.re-pagination{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -105px;
+}
+.re-pagination li{
+    float: left;
+    padding: 0 7px;
+}
+.re-pagination li a{
+    font-size: 14px;
+    line-height: 52px;
+}
+.re-pagination em{
+    padding: 0 3px;
+}
+.re-pagination .cur{
+    color: #ff5500;
+}
+
+
+/*异常库*/
+.ha-box{
+    left: 0;
+}
+.ab-name{
+    width: 120px!important;
+}
+/*短信库*/
+.health-mes{
+    left:0;
+}
+.hm-nav-list .title{
+    width: 100%;
+    line-height: 30px;
+    padding-top: 4px;
+    background: #404654;
+    color: #fff;
+    text-align: center;
+}
+
+.sideMenu > li{
+    display: inline-block;
+    width: 100%;
+    line-height: 30px;
+    color: #404654;
+    margin-top:14px;
+    cursor: pointer;
+    text-align: left;
+}
+.sideMenu > li:hover>a{
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.sideMenu > li a{
+    padding-left: 10px;
+    color: #666c7c;
+}
+.sideMenu > li a i{
+    margin-right: 10px;
+}
+.sideMenu > li.active > a{
+    color: #fff;
+}
+.sideMenu .subNav li{
+    line-height: 30px;
+    text-align: center;
+    color: #404654;
+    margin-top:14px;
+    background: #7c808c;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.sideMenu .subNav li a{
+    color:#404654
+}
+.sideMenu .subNav li:hover{
+    background: #fff;
+}
+.sideMenu .subNav li.active{
+    background: #fff;
+}
