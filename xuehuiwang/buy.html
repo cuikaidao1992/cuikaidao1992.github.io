@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购买</title>
+    <link rel="stylesheet" href="css/es-icon.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/buy.css">
+    <link rel="stylesheet" href="css/kc.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/template.js"></script>
+</head>
+<body>
+<div class="site-topbar">
+    <div class="container">
+        <div class="topbar-nav">
+            <a rel="nofollow" href="index.html" >学慧网</a>
+            <span class="sep">|</span>
+            <a rel="nofollow" href="" target="_blank">学慧网移动版</a>
+            <span class="sep">|</span>
+            <a rel="nofollow" href="feedback.html" target="_blank" >问题反馈</a>
+        </div>
+        <div class="topbar-study">
+            <a href="lesson.html">学习中心</a>
+        </div>
+        <div class="topbar-order">
+            <a rel="nofollow" class="link link-order" href="account2.html" target="_blank" >我的订单</a>
+        </div>
+        <div class="message">
+            <a href="notices.html">
+                <span class="msg_icon">3</span>
+                <i class="es-icon es-icon-notificationson"></i>
+            </a>
+        </div>
+        <div class="topbar-cart" style="display: none">
+            <a rel="nofollow" class="cart-mini" href="">我收藏的课程</a>
+            <div class="cart-menu">
+                <div class="loading">
+                    <div class="loader">收藏中还没有课程，赶紧选课吧！</div>
+                </div>
+            </div>
+        </div>
+        <div class="topbar-info" style="display:none">
+            <a class="login" href="javascript:;">登录</a>
+            <span class="sep">|</span>
+            <a class="reginster" href="javascript:;">注册</a>
+        </div>
+        <div class="topbar-info" id="J_userInfo">
+                <span class="user">
+                    <a href="#" class="user-name" target="_blank"><span class="name">D.C.base</span>
+                        <i class="es-icon es-icon-keyboardarrowdown"></i>
+                    </a>
+                    <ul class="user-menu" style="display: none;">
+                        <li>
+                            <a href="set.html" target="_blank">个人设置</a>
+                        </li>
+                        <li>
+                            <a href="account.html" target="_blank">账户中心</a>
+                        </li>
+                        <li>
+                            <a href="collect.html" target="_blank">我的收藏</a>
+                        </li>
+                        <li>
+                            <a href="#">退出登录</a>
+                        </li>
+                    </ul>
+                </span>
+            <span class="sep">|</span>
+        </div>
+    </div>
+</div>
+<div class="site-header">
+    <div class="container clearfix">
+        <div class="header-logo">
+            <a class="logo" href="index.html" title="学慧网">学慧网</a>
+        </div>
+        <div class="flash-img">
+            <img src="images/picture.gif">
+        </div>
+        <div class="header-nav" id="header-nav">
+            <ul class="nav-list-top clearfix" id="nav-list">
+                <li class="nav-item">
+                    <a class="link" href="index.html"><span class="text">首页</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item course-select">
+                    <a class="link" href="courses.html"><span class="text">选课</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="tiku-index.html"><span class="text">题库</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="zixun.html"><span class="text">资讯</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="javascript:;"><span class="text">小组</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="active.html"><span class="text">活动</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="service.html"><span class="text">服务</span><span class="arrow"></span></a>
+                </li>
+                <li id="nav_line"></li>
+            </ul>
+        </div>
+        <div class="header-search">
+            <form class="search-form clearfix" action="" method="get">
+                <input class="search-text" type="search" id="search" name="keyword">
+                <button class="search-btn es-icon es-icon-search"></button>
+                <div class="search-hot-words">
+                    <a href="#">采购师</a>
+                    <a href="#">人力资源管理师</a>
+                </div>
+                <div class="keyword-list hide">
+                    <ul class="result-list">
+                        <li data-key="人力资源管理师">
+                            <a href="#">人力资源管理师</a>
+                        </li>
+                        <li data-key="公共营养师">
+                            <a href="#">公共营养师</a>
+                        </li>
+                        <li data-key="行政管理">
+                            <a href="#">行政管理</a>
+                        </li>
+                        <li data-key="心理咨询师">
+                            <a href="#">心理咨询师</a>
+                        </li>
+                        <li data-key="人力资源管理师">
+                            <a href="#">人力资源管理师</a>
+                        </li>
+                        <li data-key="公共营养师">
+                            <a href="#">公共营养师</a>
+                        </li>
+                        <li data-key="行政管理">
+                            <a href="#">行政管理</a>
+                        </li>
+                        <li data-key="心理咨询师">
+                            <a href="#">心理咨询师</a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="header-nav-menu" style="height: 0px;">
+        <div class="container">
+            <ul class="children-list clearfix">
+                <li class="first">
+                    <div class="figure figure-thumb">
+                        <a href="courses2.html" target="_blank">
+                            <img src="images/nav1.jpg" >
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="courses2.html" target="_blank">人力资源管理师</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="courses2.html" target="_blank">
+                            <img src="images/nav2.jpg" >
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="courses2.html" target="_blank">公共营养师</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="courses2.html" target="_blank">
+                            <img src="images/nav3.jpg" >
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="courses2.html" target="_blank">会计从业资格证</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="courses2.html" target="_blank">
+                            <img src="images/nav4.jpg" >
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="courses2.html" target="_blank">远程网络教育</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="courses2.html" target="_blank">
+                            <img src="images/nav5.jpg" >
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="courses2.html" target="_blank">幼儿教师资格证</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="courses2.html" target="_blank">
+                            <img src="images/nav6.jpg" >
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="courses.html" target="_blank">更多课程</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="breadcrumb">
+    <div class="container">
+        <div class="subNav-left">
+            <a href="index.html" target="_blank">首页</a>
+            <span class="sep">&gt;</span>
+            <a href="courses.html" target="_blank">全部课程</a>
+            <span class="sep">&gt;</span>
+            <a href="courses2.html" target="_blank">职业资格</a>
+            <span class="sep">&gt;</span>
+            <a href="courses2.html" target="_blank">人力资源管理师</a>
+        </div>
+        <ul class="live-notice">
+            <li>
+                <p>课时1 <a href="#" class="title" target="_blank"> 侯捷谈C++学习：技能、思维、... </a> 2016年3月16日 20：00直播</p>
+            </li>
+            <li>
+                <p>课时2 <a href="#" class="title" target="_blank"> 侯捷谈C++学习：技能、思维、... </a> 2016年3月16日 20：00直播</p>
+            </li>
+            <li>
+                <p>课时3 <a href="#" class="title" target="_blank"> 侯捷谈C++学习：技能、思维、... </a> 2016年3月16日 20：00直播</p>
+            </li>
+            <li>
+                <p>课时4 <a href="#" class="title" target="_blank"> 侯捷谈C++学习：技能、思维、... </a> 2016年3月16日 20：00直播</p>
+            </li>
+            <li>
+                <p>课时5 <a href="#" class="title" target="_blank"> 侯捷谈C++学习：技能、思维、... </a> 2016年3月16日 20：00直播</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="intro-header" id="intro-header">
+    <div class="intro-info container clearfix">
+        <div class="intro-info-con clearfix">
+            <div class="intro-info-l">
+                <a href="javascript:;" class="intro-cover" >
+                    <img src="images/buy-course.jpg" width="100%">
+                    <span class="favorite-span"><span class="favorite-num">1265</span>人感兴趣</span>
+                </a>
+                <div class="support-device">
+                    <div class="fl">
+                        移动客户端下载 : &nbsp;&nbsp;<span class="support-device-con">iPhone<span class="split">/</span>安卓</span>
+                    </div>
+                    <div class="btnOther">
+                        <a href="javascript:;" class="btn_favorite htevent"><i class="es-icon es-icon-favoriteoutline"></i>收藏</a>
+                        <span class="split">/</span>
+                        <a href="javascript:;" class="btn_order" data-htevent="526"><i class="es-icon es-icon-share"></i>分享</a>
+                        <div class="dropdown-menu es-share">
+                            <a href="javascript:;" class="js-social-share share-weixin" title="分享到微信"><i class="es-icon es-icon-weixin"></i></a>
+                            <a href="javascript:;" class="js-social-share share-weibo" title="分享到新浪微博" ><i class="es-icon es-icon-weibo"></i></a>
+                            <a href="javascript:;" class="js-social-share share-qq" title="分享到QQ好友"><i class="es-icon es-icon-qq"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-info-r">
+                <div class="intro-info-box clearfix">
+                    <h2 class="intro-title">
+                        人力资源管理师
+                        <span class="es-qrcode top">
+                            <i class="es-icon es-icon-qrcode"></i>
+                            <span class="qrcode-popover">
+                                <img src="images/kcm.png" alt="">
+                                <span class="sweep">扫二维码继续学习</span>
+                            </span>
+                        </span>
+                    </h2>
+                    <p class="intro-desc">HR2 人力资源规划-3 · 企业人力资源管理师二级技能-精讲</p>
+                    <div class="intro-info-t">
+                        <p>
+                            <span class="class-price-unit">￥</span><span class="class-price">7900</span>
+                            <del>￥12000</del>
+                            <!--促销活动简短说明-->
+                        </p>
+                        <!--促销活动补充说明-->
+                        <div class="coupon-box">
+                            <span class="coupon-title">优惠活动</span>
+                            <div class="coupon-con">
+                                <i class="es-icon es-icon-keyboardarrowdown down"></i>
+                                <ul class="coupon-list">
+                                    <li><i class="icon-coupon">折</i><a href="#" target="_blank" class="salename">开学季，限时6.4折!&gt;</a><span class="split">/</span> <span class="endDate-box">6月30日13:00 结束</span></li>
+                                    <li class="coupon-item-hui"><i class="icon-coupon">赠</i>【网校赠书】人力资源管理师课堂练习</li>
+                                </ul>
+                                <span class="total-num">共2项</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <dl id="panel_class_feature" class="class-info-dl feature-info-dl">
+                            <dd id="container_class_feature" class="container_class_feature">
+                                <div class="inner clearfix">
+                                    <span class="feture-item" data-summary="学习规划一目了然，学习、练习、测试高度结合、完整的教学过程带来更好的学习效果！"><i class="feature-icon system"></i>系统化学习</span>
+                                    <span class="feture-item" data-summary="24小时内专业答疑，解决您所有的学习问题。"><i class="feature-icon everytime"></i>24H内答疑</span>
+                                    <span class="feture-item" data-summary="提供独家学习资料或内部讲义下载，辅助课程学习，达成最终学习目标！"><i class="feature-icon imaterial"></i>资料下载</span>
+                                    <span class="feture-item" data-summary="考前名师在线互动答疑，帮你少走弯路，高效备考！"><i class="feature-icon qa"></i>考前答疑</span>
+                                    <span class="feture-item" data-summary="全程电话、QQ或其它方式了解学员情况，督促学习进度。"><i class="feature-icon comeup"></i>全程督导</span>
+                                    <span class="feture-item not-item" data-summary="全程电话、QQ或其它方式了解学员情况，督促学习进度。"><i class="feature-icon comeup"></i>全程督导</span>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="class-info-dl time-info-dl">
+                            <!-- <dt>课程评价</dt> -->
+                            <dd>
+                                <p class="evaluate">
+                                    <img src="images/xing.jpg" class="start">
+                                    <img src="images/xing.jpg" class="start">
+                                    <img src="images/xing.jpg" class="start">
+                                    <a href="#">(30个评价)</a>
+                                </p>
+                                <p class="number">
+                                    <img src="images/icon1.jpg">
+                                    <span>304在学</span>
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="btns-box">
+                    <a href="pay.html" class="btnBuy2 htevent" target="_blank">立即购买</a>
+                    <a href="javascript:;" class=" btnConsult htevent" target="_blank">课程咨询</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content-container">
+    <div class="course-detail container clearfix">
+        <div class="course-detail-main">
+            <div class="intro-nav-main">
+                <div class="intro-nav-con">
+                    <div class="fr nav-price-box">
+                        <span class="class-price-unit">￥</span>
+                        <span class="class-price">7900</span>
+                        <a href="pay.html" class="btnBuy htevent">立即报名</a>
+                    </div>
+                    <div class="nav-list clearfix">
+                        <a href="javascript:;" class="cur htevent">课程详情</a>
+                        <a href="javascript:;" data-panel="consult" class="htevent">课程大纲</a>
+                        <a href="javascript:;" data-panel="consult" class="htevent">课程评价</a>
+                        <a href="javascript:;" data-panel="consult" class="htevent">资料区</a>
+                        <a href="javascript:;" data-panel="consult" class="htevent">问答</a>
+                    </div>
+                </div>
+            </div>
+            <section class="es-section">
+                <div class="course-detail-content" style="display: block">
+                    <div class="es-piece">
+                        <div class="piece-body p-lg clearfix">
+                            <div class="course-info"><img src="images/pro5.jpg" alt="" ></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="course-detail-content">
+                    <div class="es-piece">
+                        <ul class="piece-body">
+                            <li class="treeview">
+                                <header class="chapter" >
+                                    <i class="es-icon es-icon-toc"></i>
+                                    <span class="title">第 1 部分 ： 1611-01</span>
+                                </header>
+                                <ul class="period-list treeview-menu" id="course-item-list">
+                                    <li class="period lesson-item lesson-item-42802" data-id="42802" data-num="2">
+                                        <a href="play.html" data-toggle="modal" data-url="/course/12456/lessons/preview?lessonId=42802" title="HR1第1章人力资源规划1">
+                                            <i class="es-icon es-icon-undone"></i>
+                                            <span class="title">课时1：HR1第1章人力资源规划1</span>
+                                            <i class="es-icon es-icon-filedownload mls" title="资料"></i>
+                                            <span class="course-type free">免费试听</span>
+                                        </a>
+                                    </li>
+                                    <li class="period lesson-item lesson-item-42802" data-id="42802" data-num="2">
+                                        <a href="#" data-toggle="modal" data-url="/course/12456/lessons/preview?lessonId=42802" title="HR1第1章人力资源规划1">
+                                            <i class="es-icon es-icon-undone"></i>
+                                            <span class="title">课时2：HR1第1章人力资源规划2</span>
+                                            <i class="es-icon es-icon-filedownload mls" title="资料"></i>
+                                        <span class="course-type">
+                                            <i class="es-icon es-icon-videocam" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                            <small class="type">回放</small>
+                                        </span>
+                                        </a>
+                                    </li>
+                                    <li class="period lesson-item lesson-item-42802" data-id="42802" data-num="2">
+                                        <a href="#" data-toggle="modal" data-url="/course/12456/lessons/preview?lessonId=42802" title="HR1第1章人力资源规划1">
+                                            <i class="es-icon es-icon-undone"></i>
+                                            <span class="title">课时3：HR1第1章人力资源规划3</span>
+                                            <i class="es-icon es-icon-filedownload mls" title="资料"></i>
+                                        <span class="course-type">
+                                            <i class="es-icon es-icon-videocam" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                            <small class="type">回放</small>
+                                        </span>
+                                        </a>
+                                    </li>
+                                    <li class="period lesson-item lesson-item-42802" data-id="42802" data-num="2">
+                                        <a href="#" data-toggle="modal" data-url="/course/12456/lessons/preview?lessonId=42802" title="HR1第1章人力资源规划1">
+                                            <i class="es-icon es-icon-undone"></i>
+                                            <span class="title">课时4：HR1第1章人力资源规划4</span>
+                                            <i class="es-icon es-icon-filedownload mls" title="资料"></i>
+                                        <span class="course-type">
+                                            <i class="es-icon es-icon-videocam" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                            <small class="type">回放</small>
+                                        </span>
+                                        </a>
+                                    </li>
+                                    <li class="period lesson-item lesson-item-42802" data-id="42802" data-num="2">
+                                        <a href="#" data-toggle="modal" data-url="/course/12456/lessons/preview?lessonId=42802" title="HR1第1章人力资源规划1">
+                                            <i class="es-icon es-icon-undone"></i>
+                                            <span class="title">课时5：HR1第1章人力资源规划5</span>
+                                            <i class="es-icon es-icon-filedownload mls" title="资料"></i>
+                                        <span class="course-type">
+                                            <i class="es-icon es-icon-videocam" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                            <small class="type">回放</small>
+                                        </span>
+                                        </a>
+                                    </li>
+                                    <li class="period lesson-item lesson-item-42802" data-id="42802" data-num="2">
+                                        <a href="#" data-toggle="modal" data-url="/course/12456/lessons/preview?lessonId=42802" title="HR1第1章人力资源规划1">
+                                            <i class="es-icon es-icon-undone"></i>
+                                            <span class="title">课时6：HR1第1章人力资源规划6</span>
+                                            <i class="es-icon es-icon-filedownload mls" title="资料"></i>
+                                        <span class="course-type">
+                                            <i class="es-icon es-icon-videocam" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                            <small class="type">直播结束</small>
+                                        </span>
+                                        </a>
+                                    </li>
+                                    <li class="period lesson-item lesson-item-42802" data-id="42802" data-num="2">
+                                        <a href="#" data-toggle="modal" data-url="/course/12456/lessons/preview?lessonId=42802" title="HR1第1章人力资源规划1">
+                                            <i class="es-icon es-icon-undone"></i>
+                                            <span class="title">课时7：HR1第1章人力资源规划7</span>
+                                            <i class="es-icon es-icon-filedownload mls" title="资料"></i>
+                                        <span class="course-type">
+                                            <i class="es-icon es-icon-videocam" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                            <small class="type">直播结束</small>
+                                        </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="treeview">
+                                <header class="chapter" >
+                                    <i class="es-icon es-icon-toc"></i>
+                                    <span class="title">第 2 部分 ： 1611-02</span>
+                                </header>
+                                <ul class="period-list treeview-menu">
+                                    <li class="period lesson-item lesson-item-42802" data-id="42802" data-num="2">
+                                        <a href="#" data-toggle="modal" data-url="/course/12456/lessons/preview?lessonId=42802" title="HR1第1章人力资源规划1">
+                                            <i class="es-icon es-icon-undone"></i>
+                                            <span class="title">课时1：HR1第1章人力资源规划1</span>
+                                            <i class="es-icon es-icon-filedownload mls" title="资料"></i>
+                                        <span class="course-type">
+                                            <i class="es-icon es-icon-videocam" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                            <small class="type">07月12日 19：10</small>
+                                        </span>
+                                        </a>
+                                    </li>
+                                    <li class="period lesson-item lesson-item-42802" data-id="42802" data-num="2">
+                                        <a href="#" data-toggle="modal" data-url="/course/12456/lessons/preview?lessonId=42802" title="HR1第1章人力资源规划1">
+                                            <i class="es-icon es-icon-undone"></i>
+                                            <span class="title">课时2：HR1第1章人力资源规划2</span>
+                                            <i class="es-icon es-icon-filedownload mls" title="资料"></i>
+                                        <span class="course-type">
+                                            <i class="es-icon es-icon-videocam" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                            <small class="type">07月12日 19：10</small>
+                                        </span>
+                                        </a>
+                                    </li>
+                                    <li class="period lesson-item lesson-item-42802" data-id="42802" data-num="2">
+                                        <a href="#" data-toggle="modal" data-url="/course/12456/lessons/preview?lessonId=42802" title="HR1第1章人力资源规划1">
+                                            <i class="es-icon es-icon-undone"></i>
+                                            <span class="title">课时3：HR1第1章人力资源规划3</span>
+                                            <i class="es-icon es-icon-filedownload mls" title="资料"></i>
+                                        <span class="course-type">
+                                            <i class="es-icon es-icon-videocam" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                            <small class="type">07月12日 19：10</small>
+                                        </span>
+                                        </a>
+                                    </li>
+                                    <li class="period lesson-item lesson-item-42802" data-id="42802" data-num="2">
+                                        <a href="#" data-toggle="modal" data-url="/course/12456/lessons/preview?lessonId=42802" title="HR1第1章人力资源规划1">
+                                            <i class="es-icon es-icon-undone"></i>
+                                            <span class="title">课时4：HR1第1章人力资源规划4</span>
+                                            <i class="es-icon es-icon-filedownload mls" title="资料"></i>
+                                        <span class="course-type">
+                                            <i class="es-icon es-icon-videocam" data-toggle="tooltip" data-placement="top" title="" data-original-title="直播课程"></i>
+                                            <small class="type">07月12日 19：10</small>
+                                        </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-detail-content">
+                    <div class="clearfix" style="display: none" id="revaluation">
+                        <button class="btn btn-primary btn-sm pull-right js-show-review-form">重新评价</button>
+                    </div>
+                    <form id="review-form" method="post" action="" novalidate="novalidate" data-widget-cid="widget-2">
+                        <div class="form-group controls">
+                            请打分：
+                            <span data-rating="0" data-img-path="" class="rating-btn" id="rating-btn">
+                                <img src="images/star-off.png" alt="1" title="很差">&nbsp;
+                                <img src="images/star-off.png" alt="2" title="较差">&nbsp;
+                                <img src="images/star-off.png" alt="3" title="还行">&nbsp;
+                                <img src="images/star-off.png" alt="4" title="推荐">&nbsp;
+                                <img src="images/star-off.png" alt="5" title="力荐">
+                                <input type="hidden" name="score">
+                            </span>
+                            <input type="hidden" name="rating" value="0" data-widget-cid="widget-3" data-explain="">
+                            <div class="help-block" style="display:none;"></div>
+                        </div>
+                        <div class="form-group controls">
+                            <textarea class="form-control" rows="8" data-display="评价详细内容" name="content" data-widget-cid="widget-4" data-explain=""></textarea>
+                            <div class="help-block"><span class="text-danger">请输入评价详细内容</span></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <span class="text-success pull-left" style="display: none;">评价已保存！</span>
+                            <button type="submit" class="btn btn-primary pull-right" data-loading-text="正在保存..." autocomplete="off" id="save">保存</button>
+                            <button class="btn btn-link pull-right js-hide-review-form" type="button">取消</button>
+                        </div>
+                    </form>
+                    <div class="js-reviews">
+                        <div class="media media-evaluate">
+                            <div class="media-left">
+                                <a class=" js-user-card" href="#" data-card-url="/user/54666/card/show" data-user-id="54666">
+                                    <img class="avatar-sm" src="images/user-img.jpg">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <div class="title">
+                                    <a class="link-dark " href="#">程英2257</a>2016-04-19
+                                </div>
+                                <div class="score">
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="short-content">看不见啊？谁能告诉我下吗？天天都好卡放不出来啊？求帮助</div>
+                                    <div class="full-content" style="display:none;">看不见啊？谁能告诉我下吗？天天都好卡放不出来啊？求帮助</div>
+                                </div>
+                                <div class="actions">
+                                    <a href="javascript:;" class="show-full-btn">[展开全文]</a>
+                                    <a href="javascript:;" class="show-short-btn" style="display:none;">[收起全文]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="js-reviews">
+                        <div class="media media-evaluate">
+                            <div class="media-left">
+                                <a class=" js-user-card" href="#" data-card-url="/user/52867/card/show" data-user-id="52867">
+                                    <img class="avatar-sm" src="images/user-img.jpg">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <div class="title">
+                                    <a class="link-dark " href="#">邵爽9196</a>2016-04-14
+                                </div>
+                                <div class="score">
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star"></i>
+                                    <i class="es-icon es-icon-star"></i>
+                                    <i class="es-icon es-icon-star"></i>
+                                    <i class="es-icon es-icon-star"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="short-content">帮帮忙，哪里能下载课程资料</div>
+                                    <div class="full-content" style="display:none;">帮帮忙，哪里能下载课程资料</div>
+                                </div>
+                                <div class="actions">
+                                    <a href="javascript:;" class="show-full-btn">[展开全文]</a>
+                                    <a href="javascript:;" class="show-short-btn" style="display:none;">[收起全文]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="js-reviews">
+                        <div class="media media-evaluate">
+                            <div class="media-left">
+                                <a class=" js-user-card" href="#" data-card-url="/user/52286/card/show" data-user-id="52286">
+                                    <img class="avatar-sm" src="images/user-img.jpg">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <div class="title">
+                                    <a class="link-dark " href="#">郑岩岩2919</a>2016-04-02
+                                </div>
+                                <div class="score">
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star"></i>
+                                    <i class="es-icon es-icon-star"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="short-content">为什么回放总是看不了，刚开始报名就说马上好，可是刚看了一节回放就又不好用了，我问收钱的人也不回微信，都找不到人，我就想问问，回放还能不能好了</div>
+                                    <div class="full-content" style="display:none;">为什么回放总是看不了，刚开始报名就说马上好，可是刚看了一节回放就又不好用了，我问收钱的人也不回微信，都找不到人，我就想问问，回放还能不能好了</div>
+                                </div>
+                                <div class="actions">
+                                    <a href="javascript:;" class="show-full-btn">[展开全文]</a>
+                                    <a href="javascript:;" class="show-short-btn" style="display:none;">[收起全文]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="js-reviews">
+                        <div class="media media-evaluate">
+                            <div class="media-left">
+                                <a class=" js-user-card" href="#" data-card-url="/user/49322/card/show" data-user-id="49322">
+                                    <img class="avatar-sm" src="images/user-img.jpg">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <div class="title">
+                                    <a class="link-dark " href="#">苗婷婷1826</a>2016-03-20
+                                </div>
+                                <div class="score">
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star"></i>
+                                    <i class="es-icon es-icon-star"></i>
+                                    <i class="es-icon es-icon-star"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="short-content">典型案例分析，清晰的授课思维，喜欢开课前的试题测试，更牢固更准确的记忆知识点，零基础也很好理解，给个赞。。。</div>
+                                    <div class="full-content" style="display:none;">典型案例分析，清晰的授课思维，喜欢开课前的试题测试，更牢固更准确的记忆知识点，零基础也很好理解，给个赞。。。</div>
+                                </div>
+                                <div class="actions">
+                                    <a href="javascript:;" class="show-full-btn">[展开全文]</a>
+                                    <a href="javascript:;" class="show-short-btn" style="display:none;">[收起全文]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="js-reviews">
+                        <div class="media media-evaluate">
+                            <div class="media-left">
+                                <a class=" js-user-card" href="#" data-card-url="/user/46372/card/show" data-user-id="46372">
+                                    <img class="avatar-sm" src="images/user-img.jpg">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <div class="title">
+                                    <a class="link-dark " href="">栗芳菲0327</a>2016-03-19
+                                </div>
+                                <div class="score">
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star color-warning"></i>
+                                    <i class="es-icon es-icon-star"></i>
+                                    <i class="es-icon es-icon-star"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="short-content">教学方式新颖，教学气氛活跃，老师认真负责。</div>
+                                    <div class="full-content" style="display:none;">教学方式新颖，教学气氛活跃，老师认真负责。</div>
+                                </div>
+                                <div class="actions">
+                                    <a href="javascript:;" class="show-full-btn">[展开全文]</a>
+                                    <a href="javascript:;" class="show-short-btn" style="display:none;">[收起全文]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="text-center">
+                        <ul class="pagination">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#"><i class="es-icon es-icon-chevronright"></i></a></li>
+                            <li><a href="#">尾页</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="course-detail-content">
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="media-content">
+                                <div class="mbs">
+                                    <a href="#" target="_blank">转化器以及浏览器.zip</a>
+                                </div>
+                                <div class="text-sm">
+                                    <span class="text-muted">77.9MB</span>
+                                    <span class="bullet">&bull;</span>
+                                    <a class="link-muted" href="#" title="英语（二）（第一讲）">课时1</a>
+                                    <span class="bullet">&bull;</span>
+                                    <span class="text-muted">上传于20小时前</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-content">
+                                <div class="mbs">
+                                    <a href="#" target="_blank">英语二 第二讲 unit1.pdf</a>
+                                </div>
+                                <div class="text-sm">
+                                    <span class="text-muted">305.8KB</span>
+                                    <span class="bullet">&bull;</span>
+                                    <a class="link-muted" href="#" title="英语（二）（第二讲）">课时2</a>
+                                    <span class="bullet">&bull;</span>
+                                    <span class="text-muted">上传于2天前</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-content">
+                                <div class="mbs">
+                                    <a href="#" target="_blank">英语二 第一讲 重点知识补充.pdf</a>
+                                </div>
+                                <div class="text-sm">
+                                    <span class="text-muted">247.1KB</span>
+                                    <span class="bullet">&bull;</span>
+                                    <a class="link-muted" href="#" title="英语（二）（第一讲）">课时1</a>
+                                    <span class="bullet">&bull;</span>
+                                    <span class="text-muted">上传于3天前</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="course-detail-content">
+                    <div class="nav-filter clearfix">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default" id="ask">提问题</button>
+                        </div>
+                        <form id="question-form" method="post" action="" novalidate="novalidate" data-widget-cid="widget-2" style="display: none">
+                            <div class="question-title">
+                                <input type="type" id="title" class="form-control" placeholder="标题，用一句话说清你的问题" data-display="标题" data-widget-cid="widget-4">
+                            </div>
+                            <div class="form-group controls">
+                                <textarea class="form-control" rows="8" data-display="评价详细内容" name="content" data-widget-cid="widget-4" data-explain=""></textarea>
+                                <div class="help-block"><span class="text-danger">请输入要提问的内容</span></div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <button type="submit" class="btn btn-primary pull-right" data-loading-text="正在保存..." autocomplete="off">发表</button>
+                                <button class="btn btn-link pull-right js-hide-review-form save" type="button">取消</button>
+                            </div>
+                        </form>
+                        <ul class="nav nav-pills nav-pills-sm">
+                            <li class="active"><a data-target="#thread-pane" href="#">全部</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+                                    <span>排序：</span>
+                                    最后回复
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="active"><a href="#">最后回复</a></li>
+                                    <li class=""><a href="#">最新发帖</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="topic-list">
+                        <div class="media topic-item">
+                            <div class="media-left media-middle">
+                                <a class="pull-left js-user-card" href="#">
+                                    <img class="avatar-sm" src="images/ht.jpg">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <div class="title">
+                                    <i class="es-icon es-icon-help color-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="问答"></i>
+                                    <a href="#">我是新学员</a>
+                                </div>
+                                <div class="metas">
+                                    <a href="#">余琴3820</a>
+                                    <span>发起了问答</span>
+                                    • <span>6天前</span>
+                                </div>
+                            </div>
+                            <div class="media-data">
+                                <span>0<br>回复</span>
+                                <span>3<br>浏览</span>
+                            </div>
+
+                        </div>
+                        <nav class="text-center">
+                            <ul class="pagination"></ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <div class="emptyBox">
+                <div id="course-liveinfo" class="card">
+                    <div class="title">直播须知</div>
+                    <ul>
+                        <li>1、请事先熟悉跟谁学直播课<a class="download" href="http://www.genshuixue.com/guide/student_layout?a=student&amp;op=prepare" target="_blank">听课流程</a>，注意开课时间，建议直播前半小时进入课堂，等待课程直播</li>
+                        <li>2、建议首选联通、电信4M以上独享网络，上课时建议用网线非WIFI连接，避免直播卡顿，无法进入直播等情况</li>
+                        <li>3、使用电脑观看直播效果最为流畅，强烈推荐使用跟谁学直播助手</li>
+                        <li>4、跟谁学支持手机观看直播，手机操作系统为android-4.0以上，ios-6.0以上</li>
+                        <li>5、报班学员请严格遵守课堂秩序，保证老师正常直播授课，如对直播课造成影响，跟谁学有权禁止发言或取消听课资格不予退费</li>
+                        <li>6、跟谁学直播课程视频仅供注册学员学习使用，未经跟谁学许可以拷贝、录屏、反向工程、技术下载等手段获取直播课程视频的行为构成侵权，跟谁学立即封号处理，并保留追究注册学员法律责任</li>
+                        <li>7、如有问题可通过电话4000-910-910（服务时间9：00-23：00），邮件service@genshuixue.com与跟谁学客服及时取得联系</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="course-sidebar">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">公告</h3>
+                </div>
+                <div class="panel-body notice">
+                    <div class="media media-default clearfix">
+                        <p>【学慧网】：亲爱的同学们，学慧网服务器将进行升级改造，回放将逐步更新！</p>
+                        <div class="date">
+                            <span>3月14日</span>
+                            <a href="#" class="detail">详细></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body notice">
+                    <div class="media media-default clearfix">
+                        <p>【学慧网】：亲爱的同学们，学慧网服务器将进行升级改造，回放将逐步更新！</p>
+                        <div class="date">
+                            <span>3月14日</span>
+                            <a href="#" class="detail">详细></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h3 class="panel-title teacer-title">授课教师</h3>
+                </div>
+                <div class="teacer-module">
+                    <ul class="panel-body teacher-list clearfix">
+                        <li class="media media-default">
+                            <div class="media-head clearfix">
+                                <a class="teacher-head" href="#">
+                                    <img class="avatar-md" src="images/txa.png">
+                                </a>
+                                <div class="title">
+                                    <a class="teacer" href="#">马玲老师</a>
+                                    <span class="jobTitle">还没有头衔</span>
+                                </div>
+                            </div>
+                            <div class="media-content">
+                                <p class="teacher-info">食品与营养硕士、国家二级营养师 ，7年大学从教中，主要从事公共营养师职业培训、点菜师、配餐与设计等相关课程的讲授，授课风格亲切自然，把握重点，深入浅出，用贴近生活的实例完美阐述理论，使学员在轻松的氛围中收获快乐，体验健康生活。</p>
+                            </div>
+                        </li>
+                        <li class="media media-default">
+                            <div class="media-head clearfix">
+                                <a class="teacher-head" href="#">
+                                    <img class="avatar-md" src="images/txa.png">
+                                </a>
+                                <div class="title">
+                                    <a class="teacer" href="#">高峰老师</a>
+                                    <span class="jobTitle">还没有头衔</span>
+                                </div>
+                            </div>
+                            <div class="media-content">
+                                <p class="teacher-info">食品与营养硕士、国家二级营养师 ，7年大学从教中，主要从事公共营养师职业培训、点菜师、配餐与设计等相关课程的讲授，授课风格亲切自然，把握重点，深入浅出，用贴近生活的实例完美阐述理论，使学员在轻松的氛围中收获快乐，体验健康生活。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="teacer-btn">
+                    <span class="es-icon es-icon-chevronleft teacher-left"></span>
+                    <span class="es-icon es-icon-chevronright teacher-right"></span>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i class="es-icon es-icon-personadd"></i>
+                        最新学员
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="user-avatar-list clearfix">
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/171/card/show" data-user-id="171">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/45100/card/show" data-user-id="45100">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/250/card/show" data-user-id="250">
+                                <img class="avatar-sm" src="images/xy_img.gif">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/45282/card/show" data-user-id="45282">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/45281/card/show" data-user-id="45281">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/44997/card/show" data-user-id="44997">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/44996/card/show" data-user-id="44996">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/44995/card/show" data-user-id="44995">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/44994/card/show" data-user-id="44994">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/44992/card/show" data-user-id="44992">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/44993/card/show" data-user-id="44993">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/44991/card/show" data-user-id="44991">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/44990/card/show" data-user-id="44990">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/44989/card/show" data-user-id="44989">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" js-user-card" href="#" data-card-url="/user/44988/card/show" data-user-id="44988">
+                                <img class="avatar-sm" src="images/xhw.jpg">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-default student-dynamic">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="es-icon es-icon-recentactors"></i>学员动态</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="media media-number-o color-gray text-overflow">
+                        <a class="link-dark " href="#">岳岳老师</a>
+                        开始学习课时 <a class="link-dark" href="#" title="来自《企业人力资源管理师三级技能-精讲》">HR3 薪酬管理-2</a>
+                    </div>
+                    <div class="media media-number-o color-gray text-overflow">
+                        <a class="link-dark " href="#">岳岳老师</a>
+                        开始学习课时 <a class="link-dark" href="#" title="来自《企业人力资源管理师三级技能-精讲》">HR3 劳动关系-2</a>
+                    </div>
+                    <div class="media media-number-o color-gray text-overflow">
+                        <a class="link-dark " href="#">岳岳老师</a>
+                        开始学习课时 <a class="link-dark" href="#" title="来自《企业人力资源管理师三级技能-精讲》">HR3 薪酬管理-1</a>
+                    </div>
+                    <div class="media media-number-o color-gray text-overflow">
+                        <a class="link-dark " href="#">user3w43rd</a>
+                        开始学习课时 <a class="link-dark" href="#" title="来自《企业人力资源管理师三级技能-精讲》">HR3 招聘与配置-1</a>
+                    </div>
+                    <div class="media media-number-o color-gray text-overflow">
+                        <a class="link-dark " href="#">心理班主任</a>
+                        开始学习课时 <a class="link-dark" href="#" title="来自《企业人力资源管理师三级技能-精讲》">HR3 招聘与配置-2</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="es-footer">
+    <div class="footer-link">
+        <div class="footer-main clearfix">
+            <div class="link-item">
+                <img src="images/road.png" alt="新生上路">
+                <h3>新生上路</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">如何注册</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">如何购课</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">如何赠送</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">学习课程</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="link-item">
+                <img src="images/help.png" alt="帮助中心">
+                <h3>帮助中心</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">账户问题</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">直播须知</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">支付方式</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">常见问题</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">视频观看问题</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link-item">
+                <img src="images/about.png" alt="关于我们">
+                <h3>关于我们</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">了解学慧网</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">联系我们</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self">加入学慧网</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">关注我们</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-item">
+                <p class="phone">400-680-7650</p>
+                <p class="time">周一至周五 9:00-19:00</p>
+                <a href="#" class="iphone-btn">
+                    <i class="phone-ico"></i>
+                    学慧网官方在线客服
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="mts">
+                课程内容版权均归
+                <a href="/">
+                    北京学慧网络教育科技有限公司
+                </a>
+                所有
+                <a class="mlm" href="http://www.miibeian.gov.cn/" target="_blank">
+                    京ICP备15007758号-1    京ICP证150990号
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="modalMore" class="modal" aria-hidden="false">
+    <div class="modal-dialog notice-more">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">这是公告详情</h4>
+            </div>
+            <div class="modal-body">
+                <p>网易教育讯 在线教育的火热浪潮到今年热度依旧，在众多拼杀的机构中，有一家极为低调机构：学慧网。网络上关于它的新闻似乎不多，记者查询了解到，学慧网是资深培训企业----中和教育集团旗下品牌、目前独立运营的新型在线教育机构。直播加录播，是学慧网的必杀技。据了解，学慧网在成立之初，选择最优秀的老师进行课程...</p>
+                <p>高效学习不简单，长时间保持更难，怎么办？人生在世无非四件事：读书、见人、行路、历事。这四件事都能让我们学习知识，让我们变成更好的自己。我个人总结，长时间的高效学习，首先是态度、其次是思维逻辑。 态度在态度上，《女神进化论》粉丝鳗鱼分享：学习思维和自学方法很重要，造成迷茫，收获不佳的三种情况，接触不久...</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="Popup" type="text/html">
+    <div class="popover fade">
+        <div class="arrow"></div>
+        <div class="popover-content">{{content}}</div>
+    </div>
+</script>
+<script src="js/buy.js"></script>
+<div class="modal-backdrop"></div>
+</body>
+</html>

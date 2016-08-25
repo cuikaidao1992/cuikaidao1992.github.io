@@ -1,0 +1,241 @@
+.service-index{
+    background: #f5f5f5;
+    padding-bottom: 100px;
+}
+.service-index .service-index-header {
+    height: 250px;
+    line-height: 250px;
+    background: url("../images/service.jpg") 50% 0 no-repeat;
+    text-align: center;
+}
+.service-index h3 {
+    color: #fff;
+    font-size: 0;
+}
+
+.xh-service-box h2 {
+    display: block;
+    font-size: 24px;
+    margin-top: 20px;
+    color: #666;
+    font-weight: normal;
+    line-height: 80px;
+}
+.xh-service-box .content {
+    background: #fff;
+}
+/*自助服务*/
+.service-self-help .self-help li {
+    height: 160px;
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid #f5f5f5;
+    width: 299px;
+    border-right: 1px solid #f5f5f5;
+    float: left;
+}
+.service-self-help .self-help li a{
+    display: block;
+    height: 100%;
+    -webkit-transition: 0.3s, color 0.5s;
+    -moz-transition: 0.3s, color 0.5s;
+    transition: 0.3s, color 0.5s;
+}
+.service-self-help .self-help li i{
+    font-size: 38px;
+    margin-top: 44px;
+    width: 62px;
+    height: 39px;
+    display: inline-block
+}
+
+.service-self-help .self-help li:nth-child(1) i{
+    color: #4598f4;
+}
+.service-self-help .self-help li:nth-child(2) i{
+    color: #01bfa5;
+}
+.service-self-help .self-help li:nth-child(3) i{
+    color: #ee7719;
+}
+.service-self-help .self-help li:nth-child(4) i{
+    color: #ec3e79;
+}
+.service-self-help .self-help li:nth-child(5) i{
+    color: #1f8cf5;
+}
+.service-self-help .self-help li:nth-child(6) i{
+    color: #fc4e4f;
+}
+.service-self-help .self-help li:nth-child(7) i{
+    color: #80b740;
+}
+.service-self-help .self-help li:nth-child(8) i{
+    color: #ffab00;
+}
+.service-self-help .self-help li a span{
+    display: block;
+    color: #757575;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 10px 0;
+    -webkit-transition: 0.3s, color 0.5s;
+    -moz-transition: 0.3s, color 0.5s;
+    transition: 0.3s, color 0.5s;
+}
+.service-self-help .self-help li a:hover span{
+    color: #36d38c;
+}
+
+/*产品支持*/
+.service-goods ul li {
+    text-align: center;
+    list-style: none;
+    height: 287px;
+    float: left;
+    width: 299px;
+    border-right: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+}
+.service-goods ul li a {
+    display: inline-block;
+    color: #424242;
+    width: 100%;
+    height: 180px;
+}
+.service-goods ul li div {
+    line-height: 165px;
+    margin: 45px auto 13px;
+}
+.service-goods a span {
+    display: block;
+    color: #757575;
+    font-size: 14px;
+    line-height: 28px;
+}
+.service-goods ul li a:hover span {
+    color: #36d38c;
+}
+/*常见问题*/
+
+.service-help .helplist {
+    margin-right: -1px;
+    margin-top: 1px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.service-help .helplist dl {
+    margin: 0;
+    width: 159px;
+    float: left;
+    border-right: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 30px 70px;
+    height: 300px \9;
+}
+.service-help .helplist dl dt {
+    font-size: 18px;
+    line-height: 36px;
+    color: #333;
+    padding-bottom: 5px;
+}
+.service-help .helplist dl dd {
+    font-size: 14px;
+    line-height: 28px;
+    margin-left: 0;
+}
+.service-help .helplist dl dd a{
+    -webkit-transition: 0.3s, color 0.5s;
+    -moz-transition: 0.3s, color 0.5s;
+    transition: 0.3s, color 0.5s;
+}
+.service-help .helplist dl dd a:hover{
+    color: #36d38c;
+}
+
+
+
+
+
+
+
+
+
+
+
+.contact .bd {
+    padding: 35px 0;
+}
+.contact .bd i{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: url("../images/contact.png") no-repeat;
+    position: absolute;
+    left: 137px;
+    margin-top: -3px;
+}
+.contact .bd .line-ico{
+    background-position: -9px -6px;
+}
+.contact .bd .phone-ico{
+    background-position: -9px -126px;
+}
+.contact dl {
+    float: left;
+    width: 49%;
+    text-align: left;
+    position: relative;
+}
+.contact .on-line {
+    border-right: 1px solid #e0e0e0;
+
+}
+.contact dl dt {
+    font-size: 18px;
+    padding: 0;
+    margin-bottom: 7px;
+    margin-top: 8px;
+    color: #333;
+}
+.contact dl dd{
+    color: #757575;
+}
+
+.contact dl dt, .contact dl dd {
+    margin-left: 270px;
+}
+
+.btn {
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #b0b0b0;
+    font-size: 14px;
+    line-height: 38px;
+    text-align: center;
+    color: #b0b0b0;
+    cursor: pointer;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+.btn-primary {
+    background: #36d38c;
+    border-color: #36d38c;
+    color: #fff;
+}
+.contact input {
+    margin: 10px 0 0 270px;
+}
+.btn-primary:hover {
+    background-color: #46c37b;
+    border-color: #46c37b;
+    color: #fff;
+}

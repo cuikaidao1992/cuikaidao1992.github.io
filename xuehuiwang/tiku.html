@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学慧网</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/es-icon.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div class="site-topbar">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">学慧网</a>
+        </div>
+        <ul class="nav-item">
+            <li><a href="index.html" target="_self">首页</a></li>
+            <li><a href="courses.html" target="_self">选课</a></li>
+            <li><a href="tiku-index.html" target="_self">题库</a></li>
+            <li><a href="zixun.html" target="_self">资讯</a></li>
+            <li><a href="#" target="_self">小组</a></li>
+            <li><a href="active.html" target="_self">活动</a></li>
+            <li><a href="service.html" target="_self">服务</a></li>
+        </ul>
+        <div class="navbar-user">
+            <form class="navbar-form navbar-right" action="" method="get">
+                <div class="form-group">
+                    <input class="form-control js-search" name="q" placeholder="搜索">
+                    <button class="button es-icon es-icon-search"></button>
+                </div>
+            </form>
+            <ul class="user-nav clearfix">
+                <li class="topbar-info" id="J_userInfo">
+                    <span class="user">
+                        <a href="#" class="user-name" target="_blank"><span class="name">D.C.base</span>
+                            <i class="es-icon es-icon-keyboardarrowdown"></i>
+                        </a>
+                        <ul class="user-menu" style="display: none;">
+                            <li>
+                                <a href="set.html" target="_blank">个人设置</a>
+                            </li>
+                            <li>
+                                <a href="account.html" target="_blank">账户中心</a>
+                            </li>
+                            <li>
+                                <a href="collect.html" target="_blank">我的收藏</a>
+                            </li>
+                            <li>
+                                <a href="#">退出登录</a>
+                            </li>
+                        </ul>
+                    </span>
+                    <span class="sep">|</span>
+                </li>
+                <li class="message">
+                    <a href="notices.html">
+                        <span class="msg_icon">3</span>
+                        <i class="es-icon es-icon-notificationson"></i>
+                    </a>
+                </li>
+                <li class="letter">
+                    <a href="messages.html">
+                        <i class="es-icon es-icon-mail"></i>
+                    </a>
+                </li>
+                <li class="topbar-oder">
+                    <a href="account2.html">我的订单</a>
+                </li>
+                <li class="topbar-study">
+                    <a href="lesson.html">学习中心</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="main">
+    <div class="bg-other user-head-info">
+        <div class="user-info">
+            <h3 class="user-name clearfix">
+                <span>D.C.base</span>
+            </h3>
+            <p class="about-info">
+                <span class="gender " title="男"></span>
+                <span class="u-info-credit">
+                    <a href="#"><span>2016-06-29</span>&nbsp;加入学慧网</a>
+                </span>
+                <!--<span class="u-info-title">
+                    <a href="#">人力资源管理二级</a>
+                </span>
+                <span class="u-info-subtitle">
+                    <a href="#">基础取证班</a>
+                </span>-->
+            </p>
+            <p class="user-desc">
+                <span class="u-info-learn">学习时长 <em>13小时 0分</em></span>
+            </p>
+            <div class="study-info clearfix">
+                <div class="item follows">
+                    <a href="serve.html"><em>1</em></a>
+                    <span>请假</span>
+                </div>
+                <div class="item followers">
+                    <a href="serve2.html"><em>18</em></a>
+                    <span>旷课</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="slider">
+            <div class="user-pic" data-is-fans="" data-is-follows="">
+                <div class="user-pic-bg"></div>
+                <img class="img" src="images/user_img.png" alt="">
+                <div class="set-btn">
+                    <a href="set.html">
+                        <div class="mask"></div>
+                        <span class="set-ico"></span>
+                        <p>账户管理</p>
+                        <div class="login-type">
+                            <span class="qq"></span>
+                            <span class="weixin" style="display: none"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <ul class="menu-list">
+                <li>
+                    <a href="lesson.html">
+                        <i class="kc-io"></i><span>课程</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="tiku.html" class="active">
+                        <i class="tk-io"></i><span>题库</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="details.html">
+                        <i class="zl-io"></i><span>资料</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="questions.html">
+                        <i class="wd-io"></i><span>问答</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="notebooks.html">
+                        <i class="bj-io"></i><span>笔记</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="serve.html">
+                        <i class="fw-io"></i><span>服务</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="account.html">
+                        <i class="zh-io"></i><span>账户</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="collect.html">
+                        <i class="sc-io"></i><span>收藏</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="software.html">
+                        <i class="rj-io"></i><span>软件</span><b class="es-icon es-icon-arrowdropleft"></b>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="u-container">
+            <div class="class-tab class-main">
+                <div class="pi-tab">
+                    <a href="#" class="pi-tab-cur nobg">我的题库</a>
+                </div>
+                <div class="question-bank">
+                    <div class="head">
+                        <a href="#" class="title">人力资源管理师</a>
+                        <span>(共1896道题，50套试卷)</span>
+                        <a href="javascript:;" class="exam-set btn btn-primary">考试设置</a>
+                    </div>
+                    <div class="menu">
+                        <ul class="nav-list clearfix">
+                            <li>
+                                <a href="#">
+                                    <em>0</em>
+                                    题
+                                    <p class="title">我的收藏</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>0</em>
+                                    题
+                                    <p class="title">做题记录</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>0</em>
+                                    题
+                                    <p class="title">我的笔记</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>0</em>
+                                    题
+                                    <p class="title">我的错题</p>
+                                </a>
+                            </li>
+                            <li class="last">
+                                <a href="#">
+                                    <i class="evaluate es-icon es-icon-description"></i>
+                                    <p class="title">我的收藏</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="subject">
+                        <p>选择科目</p>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="question-bank last">
+                    <div class="head">
+                        <a href="#" class="title">人力资源管理师</a>
+                        <span>(共1896道题，50套试卷)</span>
+                        <a href="javascript:;" class="exam-set btn btn-primary">考试设置</a>
+                    </div>
+                    <div class="menu">
+                        <ul class="nav-list clearfix">
+                            <li>
+                                <a href="#">
+                                    <em>0</em>
+                                    题
+                                    <p class="title">我的收藏</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>0</em>
+                                    题
+                                    <p class="title">做题记录</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>0</em>
+                                    题
+                                    <p class="title">我的笔记</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>0</em>
+                                    题
+                                    <p class="title">我的错题</p>
+                                </a>
+                            </li>
+                            <li class="last">
+                                <a href="#">
+                                    <i class="evaluate es-icon es-icon-description"></i>
+                                    <p class="title">我的收藏</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="subject">
+                        <p>选择科目</p>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                            <li>
+                                <a href="#">二级建造师</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal" aria-hidden="false" id="modal-set-exam">
+                    <div class="modal-dialog notice-more">
+                        <div class="modal-content setExam">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title">考试设置</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="examInfo z-on">
+                                    <em></em>
+                                    <h3 class="title">
+                                        <a href="#">人力资源管理师二级</a>
+                                    </h3>
+                                    <p class="area" style="padding: 12px 0;">
+                                        <a href="javascript:void(0)" class="setExamBtn">未设置考试地区</a>
+                                    </p>
+                                    <div class="examInfo_btn">
+                                        <a class="editExamBtn" id="edit" href="javascript:void(0)">编辑</a>
+                                        <a class="delExamBtn" id="del" href="javascript:void(0)">删除</a>
+                                    </div>
+                                </div>
+                                <div class="examInfo ">
+                                    <h3 class="title">
+                                        <a href="#">人力资源管理师二级</a>
+                                    </h3>
+                                    <p class="area" style="padding: 12px 0;">
+                                        <a href="javascript:void(0)" class="setExamBtn">未设置考试地区</a>
+                                    </p>
+                                    <div class="examInfo_btn">
+                                        <a class="editExamBtn" id="edit1" href="javascript:void(0)">编辑</a>
+                                        <a class="delExamBtn" id="del1" href="javascript:void(0)">删除</a>
+                                    </div>
+                                </div>
+                                <div class="examInfo ">
+                                    <h3 class="title">
+                                        <a href="#">人力资源管理师二级</a>
+                                    </h3>
+                                    <p class="area" style="padding: 12px 0;">
+                                        <a href="javascript:void(0)" id="noEdit_175" class="setExamBtn">未设置考试地区</a>
+                                    </p>
+                                    <div class="examInfo_btn">
+                                        <a class="editExamBtn" id="edit2" href="javascript:void(0)">编辑</a>
+                                        <a class="delExamBtn" id="del2" href="javascript:void(0)">删除</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="editExamView" class="examInfo_arter" style="top: 211.5px;">
+                                <div class="clearfix f-mb10">
+                                    <p>当前考试：<strong>
+                                        银行从业
+                                    </strong>
+                                    </p>
+                                </div>
+                                <div class="clearfix f-mb10">
+                                    <p>地区：</p>
+                                    <div class="choice">
+                                        <a href="javascript:void(0)" id="provinceId" class="choice_set">请选择</a>
+                                        <div class="examDate" style="display: none;">
+                                            <ul id="provinceListId" class="select-year">
+                                                <li>全国</li>
+                                                <li>北京</li>
+                                                <li>天津</li>
+                                                <li>河北</li>
+                                                <li>山西</li>
+                                                <li>内蒙古</li>
+                                                <li>辽宁</li>
+                                                <li>吉林</li>
+                                                <li>黑龙江</li>
+                                                <li>山东</li>
+                                                <li>江苏</li>
+                                                <li>浙江</li>
+                                                <li>上海</li>
+                                                <li>安徽</li>
+                                                <li>福建</li>
+                                                <li>江西</li>
+                                                <li>河南</li>
+                                                <li>湖北</li>
+                                                <li>湖南</li>
+                                                <li>广东</li>
+                                                <li>广西</li>
+                                                <li>海南</li>
+                                                <li>重庆</li>
+                                                <li>四川</li>
+                                                <li>贵州</li>
+                                                <li>云南</li>
+                                                <li>西藏</li>
+                                                <li>陕西</li>
+                                                <li>甘肃</li>
+                                                <li>青海</li>
+                                                <li>宁夏</li>
+                                                <li>新疆</li>
+                                                <li>台湾</li>
+                                                <li>香港</li>
+                                                <li>澳门</li>
+                                                <li>海外</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix f-mb10">
+                                    <p>时间：</p>
+                                    <div class="choice">
+                                        <a href="javascript:void(0)" id="ExamAddTimeId" class="choice_set">请选择</a>
+                                    </div>
+                                </div>
+                                <div class="opration clearfix">
+                                    <a href="javascript:void(0)" id="cancelEditBtn" class="cancel">取消</a>
+                                    <a id="saveEditBtn" href="javascript:void(0)" class="submit">保存</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="es-footer">
+    <div class="footer-link">
+        <div class="footer-main clearfix">
+            <div class="link-item">
+                <img src="images/road.png" alt="新生上路">
+                <h3>新生上路</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">如何注册</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">如何购课</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">如何赠送</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">学习课程</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="link-item">
+                <img src="images/help.png" alt="帮助中心">
+                <h3>帮助中心</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">账户问题</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">直播须知</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">支付方式</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">常见问题</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">视频观看问题</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link-item">
+                <img src="images/about.png" alt="关于我们">
+                <h3>关于我们</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">了解学慧网</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">联系我们</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self">加入学慧网</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">关注我们</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-item">
+                <p class="phone">400-680-7650</p>
+                <p class="time">周一至周五 9:00-19:00</p>
+                <a href="#" class="iphone-btn">
+                    <i class="phone-ico"></i>
+                    学慧网官方在线客服
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="mts">
+                课程内容版权均归
+                <a href="/">
+                    北京学慧网络教育科技有限公司
+                </a>
+                所有
+                <a class="mlm" href="http://www.miibeian.gov.cn/" target="_blank">
+                    京ICP备15007758号-1    京ICP证150990号
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    document.getElementById('ExamAddTimeId').onclick = function(){
+        laydate({
+            elem: '#ExamAddTimeId'
+        });
+    }
+</script>
+<script src="js/person.js"></script>
+<script src="js/laydate.js"></script>
+<div class="modal-backdrop"></div>
+</body>
+</html>

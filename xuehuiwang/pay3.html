@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/es-icon.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/pay.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div class="site-topbar">
+    <div class="container">
+        <div class="topbar-nav">
+            <a rel="nofollow" href="index.html" >学慧网</a>
+            <span class="sep">|</span>
+            <a rel="nofollow" href="" target="_blank">学慧网移动版</a>
+            <span class="sep">|</span>
+            <a rel="nofollow" href="feedback.html" target="_blank" >问题反馈</a>
+        </div>
+        <div class="topbar-study">
+            <a href="lesson.html">学习中心</a>
+        </div>
+        <div class="topbar-order">
+            <a rel="nofollow" class="link link-order" href="account2.html" target="_blank" >我的订单</a>
+        </div>
+        <div class="message">
+            <a href="notices.html">
+                <span class="msg_icon">3</span>
+                <i class="es-icon es-icon-notificationson"></i>
+            </a>
+        </div>
+        <div class="topbar-info" style="display:none">
+            <a class="login" href="javascript:;">登录</a>
+            <span class="sep">|</span>
+            <a class="reginster" href="javascript:;">注册</a>
+        </div>
+        <div class="topbar-info" id="J_userInfo">
+                <span class="user">
+                    <a href="#" class="user-name" target="_blank"><span class="name">D.C.base</span>
+                        <i class="es-icon es-icon-keyboardarrowdown"></i>
+                    </a>
+                    <ul class="user-menu" style="display: none;">
+                        <li>
+                            <a href="set.html" target="_blank">个人设置</a>
+                        </li>
+                        <li>
+                            <a href="account.html" target="_blank">账户中心</a>
+                        </li>
+                        <li>
+                            <a href="collect.html" target="_blank">我的收藏</a>
+                        </li>
+                        <li>
+                            <a href="#">退出登录</a>
+                        </li>
+                    </ul>
+                </span>
+            <span class="sep">|</span>
+        </div>
+    </div>
+</div>
+<div id="content-container" class="container">
+    <div class="order-pay">
+        <div class="es-section">
+            <ul class="es-step es-step-3 clearfix">
+                <li class="doing"><span class="es-icon es-icon-done"></span>订单确认</li>
+                <li class="doing"><span class="es-icon es-icon-done"></span>订单支付</li>
+                <li class="doing"><span class="number">3</span>订单完成</li>
+            </ul>
+            <div class="order-detail clearfix">
+                <div class="order-pay-body finish-pay">
+                    <div class="finish-top clearfix">
+                        <img src="images/complete.jpg" class="left-finish-img">
+                        <h3>订单支付成功！</h3>
+                    </div>
+                    <div class="finish-bottom">
+                        <p>
+                            您现在可以去：
+                            <a href="#">我的学习中心</a>
+                        </p>
+                    </div>
+                    <div class="return">
+                        <span class="return-time">3</span>秒返回学慧网首页
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var n=3;
+    var timer=null;
+    timer=setInterval(function(){
+        n--;
+        if(n<=0){
+            clearInterval(timer);
+            window.location = "index2.html";
+        }
+        $(".return-time").text(n);
+    },1000);
+</script>
+<script src="js/pay.js"></script>
+</body>
+</html>

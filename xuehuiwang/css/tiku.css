@@ -1,0 +1,382 @@
+body{
+    background: #f5f5f5;
+}
+.site-banner .banner-box{
+    height: 500px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+.site-banner .banner-box .left-pic {
+    float: left;
+    width: 880px;
+    overflow: hidden;
+}
+.site-banner .banner-box .right-pic {
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+.site-banner .banner-box .left-pic .bottom{
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+.site-banner .banner-box .bottom:before, .site-banner .banner-box .right-pic a:before {
+    content: "";
+    position: absolute;
+    overflow: hidden;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-transform: skewX(-25deg);
+    -moz-transform: skewX(-25deg);
+}
+
+.site-banner .banner-box .left-pic .bottom:before {
+    width: 80px;
+    height: 350px;
+    top: -100px;
+    left: -150px;
+}
+.site-banner .banner-box .left-pic .bottom:hover::before {
+     -webkit-transition: left .8s;
+     -moz-transition: left .8s;
+     transition: left .8s;
+     left: 480px;
+ }
+.site-banner .banner-box .right-pic a:before {
+    width: 80px;
+    height: 550px;
+    top: -40px;
+    left: -180px;
+}
+.site-banner .banner-box .right-pic a:hover::before {
+    -webkit-transition: left .8s;
+    -moz-transition: left .8s;
+    transition: left .8s;
+    left: 480px;
+}
+/*全部题库*/
+.index-main {
+    width: auto;
+    max-width: 1200px;
+    margin: 60px auto 0;
+    position: relative;
+}
+.index-list-wrap h2 {
+    font-size: 36px;
+    color: #4d555d;
+    text-align: center;
+    margin-bottom: 48px;
+    font-weight: bold;
+    line-height: 36px;
+}
+.index-list li {
+    float: left;
+    position: relative;
+    width: 360px;
+    height: 250px;
+    margin: 0 60px 60px 0;
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.index-list li:hover {
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.index-list li:nth-child(3n + 3) {
+    margin-right: 0;
+}
+
+.index-list .top {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.index-list .top img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.index-list .top em {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/tk-btns.png);
+    color: #fff;
+    width: 84px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    text-indent: 10px;
+}
+
+.index-list .top em.a2 {
+    background-position: 0 -37px;
+}
+.index-list .top em.a1 {
+    top: 35px;
+}
+.index-list .bottom {
+    height: 18px;
+    background: url("../images/trans_bg.png") no-repeat top center;
+    position: absolute;
+    bottom: 50px;
+    width: 296px;
+    padding: 20px 32px;
+    overflow: hidden;
+}
+
+.index-list li:hover .bottom {
+    height: 200px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.index-list .bottom h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #07111b;
+    text-align: left;
+}
+
+.index-list .bottom .desc {
+    margin-top: 12px;
+    line-height: 24px;
+    color: #93999f;
+    font-size: 12px;
+    display: none;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.index-list .bottom .desc p{
+    display: block;
+    font-size: 14px;
+    color: #999;
+    line-height: 25px;
+    margin-bottom: 5px;
+}
+.index-list .bottom .desc a{
+    display: inline-block;
+    width: 145px;
+    line-height: 25px;
+    color: #999;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.index-list .bottom .desc a:hover{
+    color: #36d38c;
+}
+.index-list li:hover .bottom .desc {
+    display: block;
+}
+
+.index-list .bottom-data {
+    position: absolute;
+    bottom:0;
+    width: 296px;
+    padding: 15px 32px;
+    z-index: 100;
+}
+
+.index-list .bottom-data span{
+    font-size: 14px;
+    color: #999;
+}
+
+.index-list .bottom-data .vip{
+    float: left;
+}
+.index-list .bottom-data .amount{
+    float: right;
+}
+/*题库内容*/
+.home-slideshow {
+    height: 560px;
+    background: url("../images/cover.jpg") no-repeat center 0;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+    box-sizing: content-box;
+    position: relative;
+}
+.index-main {
+    width: auto;
+    max-width: 1200px;
+    position: relative;
+}
+.index-content .index-content-title {
+    height: 210px;
+    overflow: hidden;
+}
+.index-content .index-content-title h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.index-content .index-content-title p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 20px;
+}
+.index-content .star-item li {
+    position: relative;
+    float: left;
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: All 0.4s ease-in-out;
+    -webkit-transition: All 0.4s ease-in-out;
+    -moz-transition: All 0.4s ease-in-out;
+    -o-transition: All 0.4s ease-in-out;
+}
+
+.index-content  .star-item li:hover {
+    transform: translate(0, -96px);
+    -webkit-transform: translate(0, -96px);
+    -moz-transform: translate(0, -96px);
+    -o-transform: translate(0, -96px);
+    -ms-transform: translate(0, -96px);
+}
+
+.index-content .star-item li .star-info {
+    text-align: center;
+}
+
+.index-content .star-item li .star-info h3 {
+    font-size: 24px;
+    line-height: 36px;
+    color: white;
+    margin-top: 16px;
+    font-weight: normal;
+}
+
+.index-content .star-item li .star-info span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 24px;
+    text-align: left;
+    margin-top: 24px;
+    padding: 0 20px;
+    display: none;
+}
+
+.index-content  .star-item li:hover span {
+    display: block;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+/*感言*/
+.site-testimonials {
+    background: #f3f5f7;
+    height: 560px;
+    overflow: hidden;
+}
+.site-testimonials h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #07111b;
+    line-height: 36px;
+    margin-top: 80px;
+}
+.site-testimonials p {
+    text-align: center;
+    font-size: 14px;
+    color: #4d555d;
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+.poster-main {
+    width: 100%;
+    text-align: center;
+    margin: 80px auto 0;
+    position:relative;
+    height:240px;
+}
+
+.poster-main .poster-list {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.poster-main .poster-list li {
+    width: 800px;
+    height: 210px;
+    border-radius: 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+.poster-main .poster-list li img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 32px 24px 0 32px;
+    float: left;
+}
+.poster-main .poster-list li .user-content {
+    padding: 22px 32px 32px 116px;
+}
+.poster-main .poster-list li .user-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #07111b;
+    text-align: left;
+}
+
+.poster-main .poster-list li .user-content .student-tag{
+    margin-top: 12px;
+    text-align: left;
+    font-size: 12px;
+    color: #93999f;
+}
+.poster-main .poster-list li .user-content .student-tag a {
+    color: #008cc8;
+}
+
+.poster-main .poster-list li .user-content p {
+    font-size: 14px;
+    line-height: 28px;
+    color: #4d555d;
+    text-align: left;
+    margin-top: 16px;
+}
+.poster-main .poster-btn{ position:absolute;top:0;width:100px;height:240px; z-index:10; cursor:pointer;  opacity:0.8}
+.poster-main .poster-prev-btn{left:-120px; background: url("../images/arrow_l.png") no-repeat center center;}
+.poster-main .poster-next-btn{right:-120px; background: url("../images/arrow_r.png") no-repeat center center;}

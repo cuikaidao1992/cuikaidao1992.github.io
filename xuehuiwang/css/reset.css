@@ -6,6 +6,7 @@ th, td {
     margin: 0;
     padding: 0;
 }
+body{overflow: hidden;}
 button, input, select, textarea {
     font: 12px/1 microsoft yahei,Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 }
@@ -35,7 +36,7 @@ input:focus, select:focus, textarea:focus{
     outline: none;
 }
 
-textarea{resize:none}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -50,6 +51,19 @@ html { overflow-y: scroll; }
 
 img{vertical-align: middle}
 
+pre{
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    line-height: 28px;
+}
+pre{
+    display: block;
+    font-family: monospace;
+    margin: 1em 0;
+}
 .fl{float: left}
 .fr{float: right}
 body {font: 12px "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;}
@@ -59,8 +73,4 @@ body {font: 12px "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sa
     margin: 0 .25em;
     font-family: sans-serif;
 }
-em {
-    font-style: normal;
-}
-
 

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/es-icon.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<header id="header" class="login-title">
+    <div class="container">
+        <h1 class="top-logo">
+            <a href="#" title="学慧网">学慧网</a>
+        </h1>
+        <ul class="nav-item">
+            <li><a href="index.html" target="_self">首页</a></li>
+            <li><a href="courses.html" target="_self">选课</a></li>
+            <li><a href="tiku-index.html" target="_self">题库</a></li>
+            <li><a href="zixun.html" target="_self">资讯</a></li>
+            <li><a href="#" target="_self">小组</a></li>
+            <li><a href="active.html" target="_self">活动</a></li>
+            <li><a href="service.html" target="_self">服务</a></li>
+        </ul>
+        <div class="top-login">
+            <a href="register.html">注册</a><a class="btn-login" href="login.html">登录</a>
+        </div>
+    </div>
+</header>
+<div class="main-register">
+    <div class="container">
+        <div class="main-register-content">
+            <div class="register-view xh-tab">
+                <div class="head">
+                    <ul class="tab-hd">
+                        <li class="tab-btn active">
+                            <a href="javascript:;">手机注册</a>
+                        </li>
+                        <li class="tab-btn">
+                            <a href="javascript:;">邮箱注册</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="register-content">
+                    <form id="xh_mobile_register" class="xh-member-form tab-bd" action="" method="post">
+                        <div class="form-group field-registerform-mobile required has-error">
+                            <label class="es-icon es-icon-phone1"></label>
+                            <input type="text" id="registerform-mobile" class="form-control" name="RegisterForm[mobile]" placeholder="手机号">
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="es-icon es-icon-person"></label>
+                            <input type="text" class="form-control" name="RegisterForm[username]" placeholder="用户名">
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="es-icon es-icon-lock1"></label>
+                            <input type="password" class="form-control" name="RegisterForm[password]" placeholder="密码">
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="es-icon es-icon-drafts"></label>
+                            <input type="text" id="registerform-sms_code" class="input-code" name="RegisterForm[sms_code]" placeholder="短信验证码">
+                            <a class="btn btn-sms get-verCode" id="getCode" href="javascript:;">获取验证码</a>
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="es-icon es-icon-assignment"></label>
+                            <input type="text" name="invite_code" class="invitecode input-code" placeholder="邀请码" data-widget-cid="widget-6" data-explain="">
+                            <a class="btn btn-sms" href="javascript:;">选填</a>
+                            <div class="help-block"></div>
+                        </div>
+
+                       <!-- <div class="form-group">
+                            <label class="iconfont login-icon" for=""></label>
+                            <input class="message-text input-code" type="text" placeholder="短信验证码">
+                            <a class="btn btn-sms" href="javascript:;">获取验证码</a>
+                            <div class="help-block"></div>
+                        </div> -->
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary xh-register-btn" name="mobileSubmit" id="mobileSubmitButton">注册并开始学习</button>
+                        </div>
+                    </form>
+                    <form id="xh_email_register" class="xh-member-form tab-bd xh-hide" action="" method="post">
+                        <div class="form-group field-registerform-email required">
+                            <label class="es-icon es-icon-mail"></label>
+                            <input type="text" id="registerform-email" class="form-control" name="RegisterForm[email]" placeholder="邮箱">
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="es-icon es-icon-person"></label>
+                            <input type="text" id="registerform-username" class="form-control" name="RegisterForm[username]" placeholder="用户名">
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="es-icon es-icon-lock1"></label>
+                            <input type="password" id="registerform-password" class="form-control" name="RegisterForm[password]" placeholder="密码">
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="es-icon es-icon-phone1"></label>
+                            <img id="registerform-captcha-image" class="verify-code-img fr" src="images/captcha.png" alt="">
+                            <input type="text" id="registerform-captcha" class="input-code" name="RegisterForm[captcha]" placeholder="验证码">
+                            <div class="help-block"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="es-icon es-icon-assignment"></label>
+                            <input type="text" name="invite_code" class="invitecode input-code" placeholder="邀请码" data-widget-cid="widget-6" data-explain="">
+                            <a class="btn btn-sms" href="javascript:;">选填</a>
+                            <div class="help-block"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary xh-register-btn" name="emailSubmit" id="emailSubmitButton">注册并开始学习</button>
+                        </div>
+                    </form>
+                    <p class="to-login">已经有账号？ <a href="login.html">马上登录</a></p>
+                    <div class="social">
+                        <span>社交账号登录：</span>
+                        <a href="#" class="es-icon es-icon-qq"></a>
+                        <a href="#" class="es-icon es-icon-weixin"></a>
+                        <a href="#" class="es-icon es-icon-weibo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="es-footer">
+    <div class="footer-link">
+        <div class="footer-main clearfix">
+            <div class="link-item">
+                <img src="images/road.png" alt="新生上路">
+                <h3>新生上路</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">如何注册</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">如何购课</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">如何赠送</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">学习课程</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="link-item">
+                <img src="images/help.png" alt="帮助中心">
+                <h3>帮助中心</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">账户问题</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">直播须知</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">支付方式</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">常见问题</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">视频观看问题</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link-item">
+                <img src="images/about.png" alt="关于我们">
+                <h3>关于我们</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">了解学慧网</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">联系我们</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self">加入学慧网</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">关注我们</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-item">
+                <p class="phone">400-680-7650</p>
+                <p class="time">周一至周五 9:00-19:00</p>
+                <a href="#" class="iphone-btn">
+                    <i class="phone-ico"></i>
+                    学慧网官方在线客服
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="mts">
+                课程内容版权均归
+                <a href="/">
+                    北京学慧网络教育科技有限公司
+                </a>
+                所有
+                <a class="mlm" href="http://www.miibeian.gov.cn/" target="_blank">
+                    京ICP备15007758号-1    京ICP证150990号
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/register.js"></script>
+<script>
+    var wait = 60;
+    function getTime(btn){
+        console.log(1)
+        if (wait===0) {
+            btn.removeAttribute("disabled");
+            btn.innerHTML = "获取验证码";
+            wait = 60;
+            if($(btn).hasClass("verCode-time")){
+                $(btn).removeClass("verCode-time").addClass("get-verCode");
+            }
+        }else{
+            btn.setAttribute("disabled",true);
+            btn.innerHTML = wait + "秒后重新获取";
+            wait--;
+            setTimeout(function(){
+                getTime(btn);
+            },1000);
+        }
+    }
+
+    $("#getCode").click(function(){
+        $(this).removeClass("get-verCode").addClass("verCode-time");
+        getTime(this);
+    });
+</script>
+</body>
+</html>

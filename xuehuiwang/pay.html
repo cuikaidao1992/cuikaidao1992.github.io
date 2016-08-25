@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/es-icon.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/pay.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div class="site-topbar">
+    <div class="container">
+        <div class="topbar-nav">
+            <a rel="nofollow" href="index.html" >学慧网</a>
+            <span class="sep">|</span>
+            <a rel="nofollow" href="" target="_blank">学慧网移动版</a>
+            <span class="sep">|</span>
+            <a rel="nofollow" href="feedback.html" target="_blank" >问题反馈</a>
+        </div>
+        <div class="topbar-study">
+            <a href="#">学习中心</a>
+        </div>
+        <div class="topbar-order">
+            <a rel="nofollow" class="link link-order" href="account2.html" target="_blank" >我的订单</a>
+        </div>
+        <div class="message">
+            <a href="#">
+                <span class="msg_icon">3</span>
+                <i class="es-icon es-icon-notificationson"></i>
+            </a>
+        </div>
+        <div class="topbar-info" style="display:none">
+            <a class="login" href="javascript:;">登录</a>
+            <span class="sep">|</span>
+            <a class="reginster" href="javascript:;">注册</a>
+        </div>
+        <div class="topbar-info" id="J_userInfo">
+                <span class="user">
+                    <a href="#" class="user-name" target="_blank"><span class="name">D.C.base</span>
+                        <i class="es-icon es-icon-keyboardarrowdown"></i>
+                    </a>
+                    <ul class="user-menu" style="display: none;">
+                        <li>
+                            <a href="set.html" target="_blank">个人设置</a>
+                        </li>
+                        <li>
+                            <a href="account.html" target="_blank">账户中心</a>
+                        </li>
+                        <li>
+                            <a href="collect.html" target="_blank">我的收藏</a>
+                        </li>
+                        <li>
+                            <a href="#">退出登录</a>
+                        </li>
+                    </ul>
+                </span>
+            <span class="sep">|</span>
+        </div>
+    </div>
+</div>
+<div id="content-container" class="container">
+    <div class="order-pay">
+        <div class="es-section">
+            <ul class="es-step es-step-3 clearfix">
+                <li class="doing"><span class="number">1</span>订单确认</li>
+                <li><span class="number">2</span>订单支付</li>
+                <li><span class="number">3</span>订单完成</li>
+            </ul>
+            <div class="order-detail clearfix">
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    订单已提交，请在４８小时内完成支付！逾期订单将被取消。
+                </div>
+                <div class="clearfix">
+                    <div class="order-img">
+                        <a href="#">
+                            <img class="img-responsive" src="images/pay-img.jpg" alt="企业人力资源管理师二级技能-精讲">
+                        </a>
+                    </div>
+                    <div class="order-info">
+                        <p>订单名称：<a href="#">购买班级《人力资源管理师三级经典取证班》</a></p>
+                        <p>订单号： <a href="#">CR2016062515224588756</a></p>
+                    </div>
+                    <div class="order-price">
+                        <p class="original-price">订单原价：<span>￥</span><span>900.00</span></p>
+                        <p class="price">订单价格：<span>￥</span><span>700.00</span></p>
+                    </div>
+                </div>
+                <div class="buyed">
+                    <h3>您已购买过：</h3>
+                    <div class="buyed-info clearfix">
+                        <a href="#" class="buyed-img">
+                            <img src="images/pay-img2.jpg">
+                        </a>
+                        <p class="buyed-title">企业人力资源管理师三级技能-精讲</p>
+                        <div class="discount">
+                            折扣:
+                            <span>580.00</span>
+                            元
+                        </div>
+                    </div>
+                </div>
+                <div class="userinfo">
+                    <h3>联系信息<span class="prompt">温情提示：如果您的资料有变更，请在此修改，以便更好的为您服务！</span></h3>
+                    <div>
+                        <div class="personal-info clearfix">
+                            <h4 class="user-name">姓名</h4>
+                            <input type="text" class="name">
+                            <p class="phone">
+                                手机号码
+                                <span>13140118338<i>(已绑定)</i></span>
+                            </p>
+                            <h4>姓别</h4>
+                            <label class="sex">
+                                <input type="radio" id="male" checked="checked" name="sport">
+                                男
+                            </label>
+                            <label class="sex">
+                                <input type="radio" id="female" checked="" name="sport">
+                                女
+                            </label>
+                        </div>
+                        <div class="address clearfix">
+                            <h4>收货地址：</h4>
+                            <input type="text">
+                        </div>
+                        <button type="button" class="btn">保存</button>
+                    </div>
+                </div>
+                <div class="order-item clearfix">
+                    <div class="order-item-title">
+                        <i class="privilege"></i>
+                        <span class="title">优惠码</span>
+                        <span>（没有使用优惠码）</span>
+                    </div>
+                    <div class="order-item-detail  coupon-detail">
+                        <div class="code-btn">
+                            <a id="coupon-code-btn" class="btn btn-primary" href="javascript:;">输入优惠码</a>
+                        </div>
+                        <div class="input-group" style="display: none">
+                            <input type="text" class="couponCode" placeholder="请输入优惠码" data-target-type="course" data-target-id="45" data-amount=" 780.00">
+                            <button class="btn" type="button">使用</button>
+                            <a href="javascript:;" class="btn-link">取消</a>
+                        </div>
+                    </div>
+                    <div class="order-item-price">
+                        <span class="mrs">抵扣</span>
+                        <span>￥</span>
+                        <span class="price">0.00</span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="order-item clearfix invite">
+                    <div class="order-item-title">
+                        <span class="invite-title">邀请码</span>
+                        <span>是否有邀请码？</span>
+                    </div>
+                    <div class="order-item-detail  coupon-detail">
+                        <div class="code-btn">
+                            <a id="invite-code-btn" class="btn btn-primary" href="javascript:;">输入邀请码</a>
+                        </div>
+                        <div class="input-group invite-code" style="display: none">
+                            <input type="text" class="couponCode" placeholder="请输入优惠码" data-target-type="course" data-target-id="45" data-amount=" 780.00">
+                            <button class="btn" type="button">使用</button>
+                            <a href="javascript:;" class="btn-link">取消</a>
+                        </div>
+                    </div>
+                    <div class="order-item-price">
+                        <span class="mrs">抵扣</span>
+                        <span>￥</span>
+                        <span class="price">0.00</span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="price-detail clearfix">
+                    <div class="price-info">
+                        <div class="activity">
+                            活动优惠：
+                            <span><i>-0</i>元</span>
+                        </div>
+                        <div class="offset">
+                            优惠券抵扣：
+                            <span><i>-0</i>元</span>
+                        </div>
+                        <div class="total-price">
+                            应付金额：
+                            <span class="pay-rmb"><i>780.00</i>元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group text-right">
+                    <a href="#" class="btn-link cancel" style="">取消</a>
+                    <button type="submit" class="submit affirm-btn">提交订单</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/pay.js"></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学慧网</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/es-icon.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="css/mes.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div class="site-topbar">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">学慧网</a>
+        </div>
+        <ul class="nav-item">
+            <li><a href="index.html" target="_self">首页</a></li>
+            <li><a href="courses.html" target="_self">选课</a></li>
+            <li><a href="tiku-index.html" target="_self">题库</a></li>
+            <li><a href="zixun.html" target="_self">资讯</a></li>
+            <li><a href="#" target="_self">小组</a></li>
+            <li><a href="active.html" target="_self">活动</a></li>
+            <li><a href="service.html" target="_self">服务</a></li>
+        </ul>
+        <div class="navbar-user">
+            <form class="navbar-form navbar-right" action="" method="get">
+                <div class="form-group">
+                    <input class="form-control js-search" name="q" placeholder="搜索">
+                    <button class="button es-icon es-icon-search"></button>
+                </div>
+            </form>
+            <ul class="user-nav clearfix">
+                <li class="topbar-info" id="J_userInfo">
+                    <span class="user">
+                        <a href="#" class="user-name" target="_blank"><span class="name">D.C.base</span>
+                            <i class="es-icon es-icon-keyboardarrowdown"></i>
+                        </a>
+                        <ul class="user-menu" style="display: none;">
+                            <li>
+                                <a href="set.html" target="_blank">个人设置</a>
+                            </li>
+                            <li>
+                                <a href="account.html" target="_blank">账户中心</a>
+                            </li>
+                            <li>
+                                <a href="collect.html" target="_blank">我的收藏</a>
+                            </li>
+                            <li>
+                                <a href="#">退出登录</a>
+                            </li>
+                        </ul>
+                    </span>
+                    <span class="sep">|</span>
+                </li>
+                <li class="message">
+                    <a href="notices.html">
+                        <span class="msg_icon">3</span>
+                        <i class="es-icon es-icon-notificationson"></i>
+                    </a>
+                </li>
+                <li class="letter">
+                    <a href="messages.html">
+                        <i class="es-icon es-icon-mail"></i>
+                    </a>
+                </li>
+                <li class="topbar-oder">
+                    <a href="account2.html">我的订单</a>
+                </li>
+                <li class="topbar-study">
+                    <a href="lesson.html">学习中心</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="main">
+    <div id="notices" class="noticesPage">
+        <div class="tz-head-nav clearfix">
+            <ul class="n-tab clearfix">
+                <li class="active">
+                    <a href="notices.html">通知</a>
+                    <i>1</i>
+                </li>
+                <li>
+                    <a href="messages.html" class="">消息</a>
+
+                </li>
+                <li>
+                    <a href='reply.html' class='' >回复</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="title-bar alert-warning">
+                <a class="tag-read-btn" href="#">全部标记为已读</a>
+                <p class="tip-test">系统自动清理三个月前的已读通知</p>
+            </div>
+            <div id="Prompt-layer" class="Prompt-layer">
+                <div class="clearfix Prompt-succ-layer Prompt-error-layer">
+                    <i class="Prompt-layer-icon succicon"></i>
+                    <span class="Prompt-layer-text"></span>
+                </div>
+            </div>
+            <div class="notice-list">
+                <ul class="no_ul">
+                    <li class="clearfix">
+                        <div class="no_li_tit">
+                            <a href="#" title="关于他方冒用尚德机构名义出售考题的声明">
+                                关于他方冒用学慧网名义出售考题的声明刚开始报名就说马上好，可是刚看了一节回放就又不好用了，我问收钱的人也不回微信，都找不到人，我就想问问，回放还能不能好了
+                            </a>
+                        </div>
+                        <div class="no_li_time">发布时间：2016-03-18</div>
+                        <a href="javascript:;" class="look-all">查看全部</a>
+                        <span class="looked">已读</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="no_li_tit">
+                            <a href="#" title="关于他方冒用尚德机构名义出售考题的声明">
+                                关于他方冒用学慧网名义出售考题的声明
+                            </a>
+                            <img src="images/annex.jpg" class="no_annex_bg">
+                            <a href="#" class="attachment" title="点击下载">附件</a>
+                            <img src="images/new.jpg" class="no_annex_bg">
+                        </div>
+                        <div class="no_li_time">发布时间：2016-03-18</div>
+                        <a href="javascript:;" class="look-all">查看全部</a>
+                        <span class="nolooked">未读</span>
+                    </li>
+                </ul>
+                <!--<div class="no-notice">暂无任何通知</div>-->
+                <!-- 分页 -->
+                <div class="page_sel" id="c_page"></div>
+                <script type="text/javascript">
+                    var Page={
+                        pageIndex:1,
+                        pageCount:1,
+                        toPage:function (pageIdx){
+                            if(pageIdx<0){
+                                pageIdx=0;
+                            }
+                            if(pageIdx>this.pageCount){
+                                pageIdx=this.pageCount;
+                            }
+                            document.getElementById("pageIndex").value=pageIdx;
+                            document.getElementById("listForm").submit();
+                        },
+                        nextPage:function (){
+                            this.pageIndex=this.pageIndex+1;
+                            this.toPage(this.pageIndex);
+                        },
+                        prePage:function (){
+                            this.pageIndex=this.pageIndex-1;
+                            this.toPage(this.pageIndex);
+                        } ,
+                        go:function(){
+                            var topage=$("#toPage").val();
+                            if(topage && $.isNumeric(topage)){
+                                if(topage>this.pageCount || topage<1){
+                                    alert('请输入有效的页数');
+                                    return;
+                                }
+                                this.toPage(topage);
+                            }else{
+                                alert('请输入有效的页数');
+                                return;
+                            }
+                        },
+                        showPage:function(config){
+                            this.pageIndex=config.pageIndex;
+                            this.pageCount=config.pageCount;
+                            if(this.pageCount<1){
+                                return;
+                            }
+                            var ulEle=$("#c_page");
+                            if(this.pageIndex>1){
+                                $(ulEle).append('<a href="javascript:Page.toPage(1);" class="page_change_02">首页</a>');
+                                $(ulEle).append('<a href="javascript:Page.prePage();" class="page_change_02">上一页</a>');
+                            }else{
+                                $(ulEle).append('<a href="javascript:;" class="page_change_01">首页</a>');
+                                $(ulEle).append('<a href="javascript:;" class="page_change_01">上一页</a>');
+                            }
+                            var firstIndex=this.pageIndex-(this.pageCount-1);
+                            var setp2=this.pageCount-this.pageIndex; //后余
+                            if(firstIndex<=0){
+                                firstIndex=1;
+                            }
+                            if(this.pageCount>5&&this.pageIndex>2){
+                                $(ulEle).append('...');
+                            }
+                            for(var i=0;i<this.pageCount;i++){
+                                var n=i+firstIndex;
+                                if(n<=this.pageCount){
+                                    if(n==this.pageIndex){
+                                        $(ulEle).append('<a href="javascript:Page.toPage('+n+');" class="page_this">'+n+'</a>');
+                                    }else {
+                                        if((setp2<4&&setp2+(this.pageIndex-i)<=5)||(this.pageIndex-2==i)){
+                                            $(ulEle).append('<a href="javascript:Page.toPage('+n+');" class="page_num">'+n+'</a>');
+                                        }else if((i>=this.pageIndex&&i<=this.pageIndex+2)||(1==this.pageIndex&&i<=this.pageIndex+3)){
+                                            $(ulEle).append('<a href="javascript:Page.toPage('+n+');" class="page_num">'+n+'</a>');
+                                        }
+
+                                    }
+                                }
+                            }
+                            if(this.pageCount>5&&setp2>=4){
+                                $(ulEle).append('...');
+                            }
+                            if(this.pageIndex<this.pageCount){
+                                $(ulEle).append('<a href="javascript:Page.nextPage();" class="page_change_02">下一页</a>');
+                                $(ulEle).append('<a href="javascript:Page.toPage('+this.pageCount+');"  class="page_change_02">末 页</a>');
+                            }else{
+                                $(ulEle).append('<a href="javascript:;" class="page_change_01">下一页</a>');
+                                $(ulEle).append('<a href="javascript:;"  class="page_change_01">末 页</a>');
+                            }
+                        }
+                    }
+
+                    $(".look-all").data("onOff",true).click(function(){
+                        if($(this).data("onOff")){
+                            $(this).prev().prev().css("height","auto");
+                            $(this).prev().prev().css("white-space","normal");
+                            $(this).data("onOff",false)
+                        }else {
+                            $(this).prev().prev().css("height",25);
+                            $(this).prev().prev().css("white-space"," nowrap");
+                            $(this).data("onOff",true)
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="es-footer">
+    <div class="footer-link">
+        <div class="footer-main clearfix">
+            <div class="link-item">
+                <img src="images/road.png" alt="新生上路">
+                <h3>新生上路</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">如何注册</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">如何购课</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">如何赠送</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">学习课程</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="link-item">
+                <img src="images/help.png" alt="帮助中心">
+                <h3>帮助中心</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">账户问题</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">直播须知</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">支付方式</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">常见问题</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">视频观看问题</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link-item">
+                <img src="images/about.png" alt="关于我们">
+                <h3>关于我们</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">了解学慧网</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">联系我们</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self">加入学慧网</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">关注我们</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-item">
+                <p class="phone">400-680-7650</p>
+                <p class="time">周一至周五 9:00-19:00</p>
+                <a href="#" class="iphone-btn">
+                    <i class="phone-ico"></i>
+                    学慧网官方在线客服
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="mts">
+                课程内容版权均归
+                <a href="/">
+                    北京学慧网络教育科技有限公司
+                </a>
+                所有
+                <a class="mlm" href="http://www.miibeian.gov.cn/" target="_blank">
+                    京ICP备15007758号-1    京ICP证150990号
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal-backdrop"></div>
+<script src="js/pay.js"></script>
+</body>
+</html>

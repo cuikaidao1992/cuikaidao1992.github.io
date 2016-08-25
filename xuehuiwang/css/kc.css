@@ -1,6 +1,7 @@
 /*推荐课程*/
 .c_contmain{
-    width:1200px;
+    width: 714px;
+    height:315px;
     margin: 0 auto;
     position: relative;
 }
@@ -168,7 +169,15 @@
     transition: border-color .5s;
     cursor: pointer
 }
-
+.mainbox {
+    width: 400%;
+    margin-bottom: 15px;
+    position: absolute;
+    left: -714px;
+}
+#mainbox{
+    width:2415px;
+}
 .c_contmain ul li {
     float: left;
     width: 228px;
@@ -309,8 +318,7 @@
     opacity: 0;
     filter: alpha(opacity=0) \9;
     -webkit-transition: all .2s linear;
-    transition: all .2s linear;
-    box-sizing:content-box!important;
+    transition: all .2s linear
 }
 
 .brick-item-m .review-wrapper {
@@ -483,6 +491,7 @@
 }
 .brick-item-m .people{
     padding: 0 10px;
+    width: 208px;
     line-height: 30px;
     color: #fff;
     position: absolute;
