@@ -12,8 +12,7 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
     <link href="../css/style.min.css" rel="stylesheet" type="text/css">
-    <script src="../js/jquery-2.1.4.min.js"></script>
-    <script src="../js/laydate.js"></script>
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
 </head>
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -24,36 +23,34 @@
                     <h5>用户管理</h5>
                     <p class="line-people fl">(用户人数<span>5600</span>)</p>
                     <div class="ibox-tools">
-                        <a href="userManagementAdd-用户管理.html" class="collapse-link" data-toggle="tooltip" title="" data-original-title="添加">
+                        <a href="userManagementAdd-用户管理.html" class="collapse-link" data-toggle="tooltip" title="" data-original-title="添加用户">
                             <i class="fa fa-plus"></i>
                         </a>
-                        <a href="userManagement-批量导入.html" class="collapse-link" data-toggle="tooltip" title="" data-original-title="导入">
+                        <a href="userManagement-批量导入.html" class="collapse-link" data-toggle="tooltip" title="" data-original-title="批量导入">
                             <i class="fa fa-sign-in"></i>
                         </a>
-                        <a href="javascript:;" class="collapse-link" data-toggle="tooltip" title="" data-original-title="报名">
+                        <a href="userManagement-批量报名.html" class="collapse-link" data-toggle="tooltip" title="" data-original-title="批量报名">
                             <i class="fa fa-reply-all"></i>
-                        </a>
-                        <a class="close-link">
-                            <i class="fa fa-close"></i>
                         </a>
                     </div>
                 </div>
                 <div class="ibox-content">
                     <form method="post" id="searchForm">
-                        <select><option value="">--时间类型--</option><option value="longinDate">登录时间</option><option value="registerDate">注册时间</option></select>
-                         <span>
-                             <input type="text" name="startTime" style="width: 100px;" class="date-picker from" onclick="laydate({elem: '#date-picker1'});" id="date-picker1"><em>到</em>
-                            <input type="text" style="width: 100px;" name="endTime" class="date-picker to" id="date-picker2" onclick="laydate({elem: '#date-picker2'});">
-                        </span>
-                        <select>
-                            <option value="">--注册来源--</option><option value="default">网站注册</option><option value="weibo">微博登录</option><option value="web_email">网站邮箱注册</option><option value="web_mobile">网站手机注册</option><option value="import">手动导入</option><option value="renren">人人连接</option><option value="qq">QQ登录</option><option value="weixin">微信登录</option>
-                        </select>
-                        <select>
-                            <option value="">--关键词类型--</option><option value="nickname">用户名</option><option value="verifiedMobile">手机号</option><option value="email">邮件地址</option><option value="loginIp">登录IP</option>
-                        </select>
-                        <input type="text" id="email" name="identityId" placeholder="关键词">
-                        <span><a href="javascript:;" class="btn btn-primary searchContents">搜索</a></span>
-                        <span><a href="userManagement-勾选导出.html" class="btn btn-primary searchContents">导出搜索</a></span>
+                        <span class="registerDate">注册时间</span>
+                        <div class="form-group">
+                            <input type="text" value="2016-1-1" name="startTime" style="width: 120px;" class="date-picker from"><em class="time-link">到</em>
+                            <input type="text" value="2016-1-1" style="width: 120px;" name="endTime" class="date-picker to">
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="">--关键词类型--</option><option value="nickname">用户名</option><option>姓名</option><option value="verifiedMobile">手机号</option><option>身份证号</option><option value="email">邮件地址</option><option value="loginIp">登录IP</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="email" name="identityId" placeholder="关键词">
+                        </div>
+                        <button class="btn btn-primary searchContents">搜索</button>
+                        <span class="btn btn-primary searchContents" onclick="location.href='userManagement-勾选导出.html'">导出搜索</span>
                     </form>
                     <div class="user-list" style="margin-top: 20px;">
                         <table class="table footTabel  table-center">
@@ -62,6 +59,7 @@
                                     <th>选择</th>
                                     <th>用户名<span class="fa indicator fa-unsorted"></span></th>
                                     <th>姓名<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>性别<span class="fa indicator fa-unsorted"></span></th>
                                     <th>手机号<span class="fa indicator fa-unsorted"></span></th>
                                     <th>身份证号<span class="fa indicator fa-unsorted"></span></th>
                                     <th>邮箱<span class="fa indicator fa-unsorted"></span></th>
@@ -75,6 +73,7 @@
                                     <td><span class="check-box"><input type="checkbox" class="check-btn"></span></td>
                                     <td>D.C.base</td>
                                     <td>张三</td>
+                                    <td>男</td>
                                     <td>1510159560</td>
                                     <td>41248623558798695</td>
                                     <td>976703628@qq.com</td>
@@ -113,6 +112,7 @@
                                     <td><span class="check-box"><input type="checkbox" class="check-btn"></span></td>
                                     <td>D.C.base</td>
                                     <td>张三</td>
+                                    <td>男</td>
                                     <td>1510159560</td>
                                     <td>41248623558798695</td>
                                     <td>976703628@qq.com</td>
@@ -151,6 +151,7 @@
                                     <td><span class="check-box"><input type="checkbox" class="check-btn"></span></td>
                                     <td>D.C.base</td>
                                     <td>张三</td>
+                                    <td>男</td>
                                     <td>1510159560</td>
                                     <td>41248623558798695</td>
                                     <td>976703628@qq.com</td>
@@ -188,7 +189,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td colspan="8">
+                                    <td colspan="10">
                                         <ul class="pagination pull-right"><li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li><li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li><li class="footable-page active"><a data-page="0" href="#">1</a></li><li class="footable-page"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li></ul>
                                     </td>
                                 </tr>
@@ -224,12 +225,24 @@
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script>
-    $(".user-list").on("mouseenter.link", ".slink .more", function () {
-        $(this).nextAll("ul").show();
-    })
-    .on("mouseleave.link", ".slink", function () {
-        $(this).find("ul").hide();
+    $(function () {
+        $(".user-list").on("mouseenter.link", ".slink .more", function () {
+             $(this).nextAll("ul").show();
+        })
+        .on("mouseleave.link", ".slink", function () {
+            $(this).find("ul").hide();
+        });
+        $("body").on("focus.page",".date-picker",function(){
+            $(this).datetimepicker({
+                format: "yyyy-mm-dd",
+                minView:2,
+                autoclose: true,
+                language: "zh-CN"
+            })
+        });
     });
 </script>
 </body>

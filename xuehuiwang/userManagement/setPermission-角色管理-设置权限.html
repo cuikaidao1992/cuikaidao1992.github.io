@@ -14,165 +14,337 @@
 
 <body class="gray-bg">
     <div class="row wrapper wrapper-content animated fadeInRight">
-      <div class="col-sm-4">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                    <h5>操作</h5>
-                </div>
-                <div class="ibox-content">
-                     <div class="fixed-side">
-                        <div class="hr-line-dashed"></div>
-                        <div class="file-manager">
-                            <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">保存内容</button>
-                            <button class="btn btn-white col-sm-5 col-sm-offset-2" onclick="window.history.back(-1)">返&nbsp;&nbsp;&nbsp;&nbsp;回</button>
+        <div class="col-sm-4">
+            <div class="setModal">
+              <div class="ibox float-e-margins">
+                  <div class="ibox-title">
+                      <h5>操作</h5>
+                  </div>
+                  <div class="ibox-content">
+                      <div class="fixed-side">
+                          <div class="hr-line-dashed"></div>
+                          <div class="file-manager">
+                              <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">保存内容</button>
+                              <button class="btn btn-white col-sm-5 col-sm-offset-2" onclick="window.history.back(-1)">返&nbsp;&nbsp;&nbsp;&nbsp;回</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="setModal">
+               <div class="ibox float-e-margins">
+                   <div class="ibox-title clearfix">
+                       <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
+                       <h5>学员</h5>
+                   </div>
+                   <div class="ibox-content">
+                       <div class="fixed-side">
+                           <ul class="todo-list m-t small-list">
+                               <li>
+                                   <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                   <span class="m-l-xs">分期缴费</span>
+                               </li>
+                               <li>
+                                   <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                   <span class="m-l-xs">催缴</span>
+                               </li>
+                               <li>
+                                   <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                   <span class="m-l-xs">代报考</span>
+                               </li>
+                               <li>
+                                   <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                   <span class="m-l-xs">学员通知</span>
+                               </li>
+                               <li>
+                                   <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                   <span class="m-l-xs">学员</span>
+                               </li>
+                               <li>
+                                   <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                   <span class="m-l-xs">学员管理</span>
+                               </li>
+                               <li>
+                                   <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                   <span class="m-l-xs">会员管理</span>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+            </div>
+            <div class="setModal">
+              <div class="ibox float-e-margins">
+                  <div class="ibox-title clearfix">
+                      <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
+                      <h5>消息中心</h5>
+                  </div>
+                  <div class="ibox-content">
+                      <div class="fixed-side">
+                          <ul class="todo-list m-t small-list">
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">消息中心</span>
+                              </li>
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">消息中心二级</span>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="setModal">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title clearfix">
+                        <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
+                        <h5 class="m-l-xs">课程</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="fixed-side">
+                            <ul class="todo-list m-t small-list">
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">课程</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">课程导航</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">课程资料</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">公开课</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">课程</span>
+                                </li>
+                            </ul>
                         </div>
-                  </div>  
+                    </div>
                 </div>
             </div>
-        </div>
-      <div class="col-sm-4">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title clearfix">
-                    <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
-                    <h5>账号系统</h5>
-                </div>
-                <div class="ibox-content">
-                   <div class="fixed-side">
-                    <ul class="todo-list m-t small-list">
-                            <li>
-                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                                <span class="m-l-xs">编辑资料</span>
-                            </li>
-                            <li>
-                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                                <span class="m-l-xs">修改密码</span>
-                            </li>
-                            <li>
-                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                                <span class="m-l-xs">账户管理</span>
-                            </li>
-                            <li>
-                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                                <span class="m-l-xs">角色管理</span>
-                            </li>
-                            <li>
-                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                                <span class="m-l-xs">权限管理</span>
-                            </li>
-                        </ul>
-                     </div>   
-                </div>
+            <div class="setModal">
+              <div class="ibox float-e-margins">
+                  <div class="ibox-title clearfix">
+                      <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
+                      <h5>资源</h5>
+                  </div>
+                  <div class="ibox-content">
+                      <div class="fixed-side">
+                          <ul class="todo-list m-t small-list">
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">学科</span>
+                              </li>
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">老师</span>
+                              </li>
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">教务</span>
+                              </li>
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">校区</span>
+                              </li>
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">教室</span>
+                              </li>
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">视频库</span>
+                              </li>
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">资源</span>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="setModal">
+              <div class="ibox float-e-margins">
+                  <div class="ibox-title clearfix">
+                      <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
+                      <h5>系统</h5>
+                  </div>
+                  <div class="ibox-content">
+                      <div class="fixed-side">
+                          <ul class="todo-list m-t small-list">
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">用户权限</span>
+                              </li>
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">账户信息</span>
+                              </li>
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">认证信息</span>
+                              </li>
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">开通服务</span>
+                              </li>
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">机构订单</span>
+                              </li>
+                              <li>
+                                  <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                  <span class="m-l-xs">系统菜单</span>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title clearfix">
-                    <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
-                    <h5 class="m-l-xs">趋势概况</h5>
-                </div>
-                <div class="ibox-content">
-                   <div class="fixed-side">
-                    <ul class="todo-list m-t small-list">
-                        <li>
-                            <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                            <span class="m-l-xs">实时数据</span>
-                        </li>
-                        <li>
-                            <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                            <span class="m-l-xs">今日统计</span>
-                        </li>
-                        <li>
-                            <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                            <span class="m-l-xs">昨日统计</span>
-                        </li>
-                        </ul>
-                     </div>   
+            <div class="setModal">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title clearfix">
+                        <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
+                        <h5>教学</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="fixed-side">
+                            <ul class="todo-list m-t small-list">
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">上直播</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">教学导航</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title clearfix">
-                    <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
-                    <h5>设备管理</h5>
-                </div>
-                <div class="ibox-content">
-                   <div class="fixed-side">
-                    <ul class="todo-list m-t small-list">
-                            <li>
-                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                                <span class="m-l-xs">设备概况</span>
-                            </li>
-                        </ul>
-                     </div>   
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title clearfix">
-                    <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
-                    <h5>客人管理</h5>
-                </div>
-                <div class="ibox-content">
-                   <div class="fixed-side">
-                    <ul class="todo-list m-t small-list">
-                            <li>
-                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                                <span class="m-l-xs">客人概况</span>
-                            </li>
-                            <li>
-                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                                <span class="m-l-xs">客人管理</span>
-                            </li>
-                        </ul>
-                     </div>   
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-sm-4">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title clearfix">
-                    <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
-                    <h5>课程管理</h5>
-                </div>
-                <div class="ibox-content">
-                   <div class="fixed-side">
-                    <ul class="todo-list m-t small-list">
-                            <li>
-                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                                <span class="m-l-xs">课程概况</span>
-                            </li>
-                        </ul>
-                     </div>   
+            <div class="setModal">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title clearfix">
+                        <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
+                        <h5>题库</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="fixed-side">
+                            <ul class="todo-list m-t small-list">
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">题库</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">题库首页</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">试题</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">试卷</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">章节考点</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">设置</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">题库</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="col-sm-4">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title clearfix">
-                    <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
-                    <h5>优化建议</h5>
-                </div>
-                <div class="ibox-content">
-                   <div class="fixed-side">
-                    <ul class="todo-list m-t small-list">
-                            <li>
-                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                                <span class="m-l-xs">设备</span>
-                            </li>
-                            <li>
-                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                                <span class="m-l-xs">客人</span>
-                            </li>
-                            <li>
-                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
-                                <span class="m-l-xs">课程</span>
-                            </li>
-                        </ul>
-                     </div>   
+            <div class="setModal">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title clearfix">
+                        <span class="check-box"><input type="checkbox" class="check-btn checkAll"></span>
+                        <h5>运营</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="fixed-side">
+                            <ul class="todo-list m-t small-list">
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">新闻公告</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">老师动态</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">课程评论</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">运营</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">财务</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">课程问答</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">社区问答</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">查询统计</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">积分</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">会员</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">会员课程</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">APP</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">促销</span>
+                                </li>
+                                <li>
+                                    <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                    <span class="m-l-xs">邀请码</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

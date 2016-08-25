@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-课程管理</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title clearfix">
+                    <h5>课程管理</h5>
+                    <p class="line-people fl">(用户人数<span>5600</span>)</p>
+                    <div class="ibox-tools">
+                        <a class="btn btn-primary btn-sm" href="createVideoAdd1-创建视频.html">创建视频</a>
+                        <a class="btn btn-primary btn-sm" href="createLiveAdd1-创建直播.html">创建直播</a>
+                        <a class="btn btn-primary btn-sm" href="javascript:;">创建混合</a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form method="post" id="searchForm">
+                        <div class="form-group">
+                            <select>
+                                <option value="">课程分类</option><option value="14">职业资格</option><option value="15">　人力资源管理师</option><option value="16">　　基础知识</option><option value="74">　　一级</option><option value="17">　　二级</option><option value="18">　　三级</option><option value="19">　　实操课</option><option value="25">　公共营养师</option><option value="26">　　基础知识</option><option value="27">　　二级技能</option><option value="28">　　三级技能</option><option value="29">　　实操课</option><option value="20">　心理咨询师</option><option value="21">　　基础知识</option><option value="22">　　二级技能</option><option value="23">　　三级技能</option><option value="24">　　实操课</option><option value="59">　理财规划师</option><option value="116">　　实操课</option><option value="72">　　二级</option><option value="73">　　三级</option><option value="60">　物流管理师</option><option value="68">　　一级</option><option value="69">　　二级</option><option value="70">　　三级</option><option value="61">　采购师</option><option value="64">　　一级</option><option value="65">　　二级</option><option value="66">　　三级</option><option value="30">学历教育</option><option value="31">　自考</option><option value="32">　　北京</option><option value="33">　　上海</option><option value="57">　　天津</option><option value="56">　　陕西</option><option value="35">　　江苏</option><option value="44">　　辽宁</option><option value="36">　　黑龙江</option><option value="45">　　浙江</option><option value="46">　　湖北</option><option value="47">　　安徽</option><option value="48">　　湖南</option><option value="49">　　广东</option><option value="50">　　河北</option><option value="52">　　福建</option><option value="53">　　河南</option><option value="58">　　吉林</option><option value="34">　　山东</option><option value="54">　　四川</option><option value="55">　　江西</option><option value="117">　　山西</option><option value="118">　　重庆</option><option value="82">　成考</option><option value="85">　　成考（高起专文科）</option><option value="86">　　成考（高起专理科）</option><option value="87">　　成考（高起本文科）</option><option value="88">　　成考（高起本理科）</option><option value="89">　　成考（专升本）</option><option value="78">　远程网络教育</option><option value="83">　自考本科公共课</option><option value="84">　公共英语三级</option><option value="5">财会培训</option><option value="6">　会计从业资格证</option><option value="10">　会计职称</option><option value="11">　　会计初级职称</option><option value="12">　　会计中级职称</option><option value="13">　注册会计师</option><option value="1">教师资格证</option><option value="2">　幼儿教师资格证</option><option value="3">　小学教师资格证</option><option value="4">　中学教师资格证</option><option value="91">通关题库</option><option value="92">　人力资源管理师</option><option value="93">　　模拟考场</option><option value="94">　　章节练习</option><option value="95">　　历年真题</option><option value="113">　　教材教辅</option><option value="97">　公共营养师</option><option value="98">　　模拟考场</option><option value="99">　　章节练习</option><option value="100">　　历年真题</option><option value="114">　　教材教辅</option><option value="101">　心理咨询师</option><option value="102">　　模拟考场</option><option value="103">　　章节练习</option><option value="104">　　历年真题</option><option value="115">　　教材教辅</option><option value="105">　建造师</option><option value="106">　　模拟考场</option><option value="107">　　章节练习</option><option value="108">　　历年真题</option><option value="109">　自考</option><option value="110">　　模拟考场</option><option value="111">　　章节练习</option><option value="112">　　历年真题</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                           <select>
+                               <option value="">课程状态</option><option value="draft">未发布</option><option value="published">已发布</option><option value="closed">已关闭</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="">授课类型</option><option value="draft">直播</option><option value="published">点播</option><option value="closed">混合</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="">收费状态</option><option value="draft">收费</option><option value="published">免费</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="email" name="identityId" placeholder="课程名">
+                        </div>
+                        <button class="btn btn-primary searchContents">搜索</button>
+                    </form>
+                    <div class="user-list" style="margin-top: 20px;">
+                        <table class="table footTabel  table-center">
+                            <thead>
+                            <tr>
+                                <th>选择</th>
+                                <th>编号<span class="fa indicator fa-unsorted"></span></th>
+                                <th>名称<span class="fa indicator fa-unsorted"></span></th>
+                                <th>授课方式<span class="fa indicator fa-unsorted"></span></th>
+                                <th>学员数<span class="fa indicator fa-unsorted"></span></th>
+                                <th>收入<span class="fa indicator fa-unsorted"></span></th>
+                                <th>状态<span class="fa indicator fa-unsorted"></span></th>
+                                <th>创建者<span class="fa indicator fa-unsorted"></span></th>
+                                <th width="10%">操作<span class="fa indicator fa-unsorted"></span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="check-box"><input type="checkbox" class="check-btn"></span></td>
+                                    <td>22584</td>
+                                    <td>
+                                        <span>人力资源管理师</span>
+                                        <br>
+                                        <span class="text-muted text-sm">分类：实操课</span>
+                                    </td>
+                                    <td>直播</td>
+                                    <td>3600</td>
+                                    <td>1200.00</td>
+                                    <td>
+                                        <label>
+                                            <input name="switch-field-2" disabled="disabled" class="ace ace-switch ace-switch-2" checked="checked" type="checkbox">
+                                            <span class="lbl"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;">学慧网老师</a>
+                                        <br>
+                                        <span class="text-muted text-sm">2016-8-16 17:25</span>
+                                    </td>
+                                    <td class="slink">
+                                        <a href="#">管理</a>|<a class="more" href="javascript:void(0);">更多</a>
+                                        <ul class="none">
+                                            <li>
+                                                <a class="toTransaction" href="#">推荐课程</a>
+                                            </li>
+                                            <li>
+                                                <a class="toTransaction" href="#">关闭课程</a>
+                                            </li>
+                                            <li>
+                                                <a class="toTransaction" href="#">发布课程</a>
+                                            </li>
+                                            <li>
+                                                <a class="toTransaction" href="#">预览</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="check-box"><input type="checkbox" class="check-btn"></span></td>
+                                    <td>22584</td>
+                                    <td>
+                                        <span>人力资源管理师</span>
+                                        <br>
+                                        <span class="text-muted text-sm">分类：实操课</span>
+                                    </td>
+                                    <td>直播</td>
+                                    <td>3600</td>
+                                    <td>1200.00</td>
+                                    <td>
+                                        <label>
+                                            <input name="switch-field-2" disabled="disabled" class="ace ace-switch ace-switch-2" checked="checked" type="checkbox">
+                                            <span class="lbl"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;">学慧网老师</a>
+                                        <br>
+                                        <span class="text-muted text-sm">2016-8-16 17:25</span>
+                                    </td>
+                                    <td class="slink">
+                                        <a href="#">管理</a>|<a class="more" href="javascript:void(0);">更多</a>
+                                        <ul class="none">
+                                            <li>
+                                                <a class="toTransaction" href="#">推荐课程</a>
+                                            </li>
+                                            <li>
+                                                <a class="toTransaction" href="#">关闭课程</a>
+                                            </li>
+                                            <li>
+                                                <a class="toTransaction" href="#">发布课程</a>
+                                            </li>
+                                            <li>
+                                                <a class="toTransaction" href="#">预览</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="check-box"><input type="checkbox" class="check-btn"></span></td>
+                                    <td>22584</td>
+                                    <td>
+                                        <span>人力资源管理师</span>
+                                        <br>
+                                        <span class="text-muted text-sm">分类：实操课</span>
+                                    </td>
+                                    <td>直播</td>
+                                    <td>3600</td>
+                                    <td>1200.00</td>
+                                    <td>
+                                        <label>
+                                            <input name="switch-field-2" disabled="disabled" class="ace ace-switch ace-switch-2" checked="checked" type="checkbox">
+                                            <span class="lbl"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:;">学慧网老师</a>
+                                        <br>
+                                        <span class="text-muted text-sm">2016-8-16 17:25</span>
+                                    </td>
+                                    <td class="slink">
+                                        <a href="#">管理</a>|<a class="more" href="javascript:void(0);">更多</a>
+                                        <ul class="none">
+                                            <li>
+                                                <a class="toTransaction" href="#">推荐课程</a>
+                                            </li>
+                                            <li>
+                                                <a class="toTransaction" href="#">关闭课程</a>
+                                            </li>
+                                            <li>
+                                                <a class="toTransaction" href="#">发布课程</a>
+                                            </li>
+                                            <li>
+                                                <a class="toTransaction" href="#">预览</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <ul class="pagination pull-right"><li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li><li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li><li class="footable-page active"><a data-page="0" href="#">1</a></li><li class="footable-page"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li></ul>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="bereave" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">封禁用户</h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <form action="">
+                    <p>您确定要禁止<span>张三</span>登录使用吗</p>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">确定</button>
+                            <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $(function () {
+        $(".user-list").on("mouseenter.link", ".slink .more", function () {
+                    $(this).nextAll("ul").show();
+                })
+                .on("mouseleave.link", ".slink", function () {
+                    $(this).find("ul").hide();
+                });
+        $("body").on("focus.page",".date-picker",function(){
+            $(this).datetimepicker({
+                format: "yyyy-mm-dd",
+                minView:2,
+                autoclose: true,
+                language: "zh-CN"
+            })
+        });
+    });
+</script>
+</body>
+</html>

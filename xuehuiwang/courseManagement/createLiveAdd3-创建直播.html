@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-课程管理-创建课程</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/create.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="row wrapper wrapper-content animated fadeInRight">
+    <div class="col-lg-10 col-sm-offset-1">
+        <div class="form-horizontal">
+            <div class="ibox-title">
+                <h5>添加课程</h5>
+            </div>
+            <div class="ibox-content ibox-padding">
+                <div id="fuelux-wizard" class="row-fluid" data-target="#step-container">
+                    <ul class="wizard-steps">
+                        <li data-target="#step1" class="active">
+                            <span class="step">1</span> <span class="title">基本信息</span>
+                        </li>
+                        <li data-target="#step2" class="active"><span class="step">2</span>
+                            <span class="title">课程详情</span>
+                        </li>
+                        <li data-target="#step3" class="active"><span class="step">3</span>
+                            <span class="title">选择课程单元</span>
+                        </li>
+                        <li data-target="#step3"><span class="step">4</span>
+                            <span class="title">开始招生</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="u-wrap classes">
+                    <div class="mainbackground nopadding" style="background: #f6f6f6">
+                        <div class="heading">
+                            <span class="h5">企业管理</span>
+                            <span class="float-right">
+                                 <span>未上架</span>
+                                <span>人力资源管理-人力1</span>
+                                <span>定价:11.0</span>
+                            </span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="c-main c-max">
+                            <div class="box-config">
+                                <div class="tabs">
+                                    <select id="itemSecsList">
+                                        <option value="" selected="selected">人力资源规划1</option>
+                                        <option value="">人力资源规划2</option>
+                                    </select>
+                                </div>
+                                <div class="box-select">
+                                    <span class="curr">
+                                        <i onclick="moveRight()" class="fa fa-angle-double-right"></i>
+                                        <i onclick="moveLeft()" class="fa fa-angle-double-left"></i>
+                                    </span>
+                                    <div class="firstLi marks" style="width: 43%;" title="增加直播课程单元" onclick="location.href='createLiveAdd-新增直播单元.html'">
+                                        <span class="btns">
+                                            <i class="fa fa-plus"></i>
+                                        </span>
+                                    </div>
+                                    <div class="left">
+                                        <ul id="ulOne">
+                                            <li id="li118454" ids="118454" title="现代企业管理">
+                                                <span class="p1">现代企业管理</span>
+                                                <span class="p2">直播</span>
+                                                <span class="p3">10课时</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="right">
+                                        <ul id="ulTwo" class="ulTwo">
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <button class="btn btn-primary col-sm-3">保存并退出</button>
+                                    <button class="btn btn-primary col-sm-offset-1 col-sm-3 btn-submit" id="submit" type="submit" onclick="location.href='createLiveAdd3-创建视频.html'">保存并继续</button>
+                                    <button class="btn btn-white col-sm-3 col-sm-offset-1" onclick="window.history.back(-1)">返回</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
+<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script>
+    $("ul").on('click','li',function(){
+        var status=$(this).hasClass('active');
+        if(!status){
+            $(this).addClass('active');
+        }else{
+            $(this).removeClass('active');
+        }
+    });
+
+    $("ul").on('dblclick','li',function(){
+        var status=$(this).hasClass('active');
+        if(!status){
+            $(this).addClass('active');
+        }else{
+            $(this).removeClass('active');
+        }
+    });
+     function moveRight(){
+         var b=true;
+         $("#ulOne").find("li").each(function(i){
+             if($(this).hasClass('active')){
+                 var cid=$(this).attr("ids");
+                 var newModule=$("#li"+cid);
+                 var b=$("#type2").attr("value");
+                 if(b=="update"){
+                     $("#ulTwo").find("li").each(function(i){
+                         var a=$(this).attr("ids");
+                         if(cid==a){
+                            b=false;
+                         }
+                     });
+                     if(b){
+                         $("#ulTwo").append(newModule);
+                     }else{
+                         $.alert("课程单元已存在");
+                         return;
+                     }
+                 }else{
+                     $("#ulTwo").append(newModule);
+                 }
+             }
+         });
+    }
+    function moveLeft(){
+        $("#ulTwo").find("li").each(function(i){
+            if($(this).hasClass('active')){
+                var cid=$(this).attr("ids");
+                var newModule1=$("#li"+cid);
+                $("#ulOne").append(newModule1);
+            }
+        });
+    }
+    //双击向右
+    $("#ulOne").on('dblclick','li',function(){
+        var b=true;
+        var cid=$(this).attr("ids");
+        var newModule=$("#li"+cid);
+        var b=$("#type2").attr("value");
+        if(b=="update"){
+            $("#ulTwo").find("li").each(function(i){
+                var a=$(this).attr("ids");
+                if(cid==a){
+                    b=false;
+                }
+            });
+            if(b){
+                $("#ulTwo").append(newModule);
+            }else{
+                $.alert("课程单元已存在");
+                return;
+            }
+        }else{
+            $("#ulTwo").append(newModule);
+        }
+    });
+    //双击向左
+    $("#ulTwo").on('dblclick','li',function(){
+        var b=true;
+        var cid=$(this).attr("ids");
+        var newModule=$("#li"+cid);
+        var b=$("#type2").attr("value");
+        if(b=="update"){
+            $("#ulOne").find("li").each(function(i){
+                var a=$(this).attr("ids");
+                if(cid==a){
+                    b=false;
+                }
+            });
+            if(b){
+                $("#ulOne").append(newModule);
+            }else{
+                $(this).remove();
+                return;
+            }
+        }else{
+            $("#ulOne").append(newModule);
+        }
+    });
+</script>
+</body>
+</html>

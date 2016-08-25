@@ -11,46 +11,51 @@
 </head>
 <body class="gray-bg">
 <div class="row wrapper wrapper-content animated fadeInRight">
-    <div class="col-lg-8 col-lg-offset-2">
+    <div class="col-lg-6 col-lg-offset-3">
         <div class="form-horizontal">
             <div class="ibox-title">
-                <h5>添加新用户</h5>
+                <h5>新增直播课程单元</h5>
             </div>
             <div class="ibox-content ibox-padding">
                 <form action="" id="commentForm">
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">邮箱/手机</label>
+                        <label class="col-sm-2 control-label">学科分类</label>
                         <div class="col-sm-6 group-print">
-                            <input type="text" name="user" class="form-control" placeholder="请输入手机邮箱" required="ture">
+                            <input type="text" name="user" class="form-control" value="人力资源管理" disabled="disabled"/>
+                           <!-- <p>人力资源管理</p>-->
                         </div>
-                        <div class="help-block">手机邮箱二选一</div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">姓名</label>
+                        <label class="col-sm-2 control-label">级别</label>
                         <div class="col-sm-6 group-print">
-                            <input type="text" name="user" class="form-control" placeholder="请输入姓名" required="ture">
+                            <input type="text" name="user" class="form-control" value="二级" disabled="disabled"/>
+                            <!--<p>二级</p>-->
                         </div>
-                        <div class="help-block">不填将自动生成</div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">密码</label>
+                        <label class="col-sm-2 control-label">授课方式</label>
                         <div class="col-sm-6 group-print">
-                            <input type="text" name="user" class="form-control" placeholder="请输入密码" required="ture">
+                            <input type="text" name="user" class="form-control" value="直播" disabled="disabled"/>
+                            <!--<p>直播</p>-->
                         </div>
-                        <div class="help-block">5-20位英文、数字、符号，区分大小写</div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">确认密码</label>
+                        <label class="col-sm-2 control-label">课程单元名称</label>
                         <div class="col-sm-6 group-print">
-                            <input type="text" name="user" class="form-control" placeholder="请输入确认密码" required="ture">
+                            <input type="text" name="user" class="form-control"/>
                         </div>
-                        <div class="help-block">再输入一次密码</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">总课时</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="user" class="form-control"/>
+                        </div>
                     </div>
                     <div class="hr-line-dashed"></div>
                     <div class="form-group">
                         <div class="col-sm-10 col-sm-offset-1">
                             <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">提交</button>
-                            <button class="btn btn-white col-sm-5 col-sm-offset-2" onclick="window.history.back(-1)">返&nbsp;&nbsp;&nbsp;&nbsp;回</button>
+                            <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true" onclick="window.history.back(-1)">返回</button>
                         </div>
                     </div>
                 </form>

@@ -12,8 +12,7 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
     <link href="../css/style.min.css" rel="stylesheet" type="text/css">
-    <script src="../js/jquery-2.1.4.min.js"></script>
-    <script src="../js/laydate.js"></script>
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
 </head>
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -22,24 +21,23 @@
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <h5>日志管理</h5>
-                    <div class="ibox-tools">
-                        <a class="close-link">
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </a>
-                    </div>
                 </div>
                 <div class="ibox-content">
                     <form method="post" id="searchForm">
-                        <input type="text" id="stuMobile" name="mobile" placeholder="手机号">
-                        <input type="text" id="stuusername" name="username" placeholder="用户名">
-                        <input type="text" id="stuName" name="name" placeholder="姓名">
-                        <input type="text" id="email" name="identityId" placeholder="邮箱">
-                        <span>创建时间</span>
-                            <span>
-                                <input type="text" name="startTime" style="width: 100px;" class="date-picker from" onclick="laydate({elem: '#date-picker1'});" id="date-picker1"><em>到</em>
-                                <input type="text" style="width: 100px;" name="endTime" class="date-picker to" id="date-picker2" onclick="laydate({elem: '#date-picker2'});">
-                            </span>
-                        <span><a href="javascript:;" class="btn btn-primary searchContents">搜索</a></span>
+                        <span class="registerDate">登录时间</span>
+                        <div class="form-group">
+                             <input type="text" value="2016-1-1" name="startTime" style="width: 120px;" class="date-picker from"><em class="time-link">到</em>
+                             <input type="text" value="2016-1-1" style="width: 120px;" name="endTime" class="date-picker to">
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="">--关键词类型--</option><option value="nickname">用户名</option><option value="verifiedMobile">手机号</option><option value="email">邮件地址</option><option value="loginIp">姓名</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="email" name="identityId" placeholder="关键词">
+                        </div>
+                        <button class="btn btn-primary searchContents">搜索</button>
                     </form>
                     <div class="user-list" style="margin-top: 20px;">
                         <table class="table footTabel  table-center">
@@ -125,12 +123,22 @@
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script>
     $(".user-list").on("mouseenter.link", ".slink .more", function () {
          $(this).nextAll("ul").show();
     })
     .on("mouseleave.link", ".slink", function () {
          $(this).find("ul").hide();
+    });
+    $("body").on("focus.page",".date-picker",function(){
+        $(this).datetimepicker({
+            format: "yyyy-mm-dd",
+            minView:2,
+            autoclose: true,
+            language: "zh-CN"
+        })
     });
 </script>
 </body>

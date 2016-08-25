@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>健身房-帐号系统-权限管理-授予角色</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body class="gray-bg">
+    <div class="row wrapper wrapper-content animated fadeInRight">
+       <div class="col-lg-8 col-lg-offset-2">
+         <div class="form-horizontal">
+            <div class="ibox-title">
+                <h5>授予角色</h5>
+            </div>
+         <div class="ibox-content ibox-padding">
+           <form action="" id="commentForm">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">用户姓名</label>
+                <div class="col-sm-6 group-print">
+                    <input type="text" name="user" disabled="disabled" class="form-control" value="张三"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">用户手机</label>
+                <div class="col-sm-6">
+                    <input type="text" name="passwored" disabled="disabled" class="form-control" value="15101596530">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">用户角色</label>
+                <div class="col-sm-6">
+                    <select class="form-control" name="account">
+                        <option>系统管理员</option>
+                        <option>管理员</option>
+                        <option>教师</option>
+                        <option>学员</option>
+                    </select>
+                </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">保存内容</button>
+                    <button class="btn btn-white col-sm-5 col-sm-offset-2" onclick="window.history.back(-1)">返&nbsp;&nbsp;&nbsp;&nbsp;回</button>
+                </div>
+            </div>
+            </form>
+           </div>
+         </div>
+       </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
+    <script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+</body>
+</html>
