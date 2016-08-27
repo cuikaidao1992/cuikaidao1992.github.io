@@ -1882,10 +1882,6 @@ pre code {
     width: 83.33333333%
 }
 
-.col-2-btn {
-    margin: 10px 0 0 0px
-}
-
 .col-xs-9 {
     width: 75%
 }
@@ -2081,10 +2077,6 @@ pre code {
 @media (min-width: 768px) {
     .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
         float: left
-    }
-
-    .col-2-btn {
-        margin: 0
     }
 
     .col-sm-12 {
@@ -2979,7 +2971,7 @@ output {
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     background-color: #fff;
     opacity: 1;
-    border: none;
+    border:none;
 }
 
 .form-control[disabled], fieldset[disabled] .form-control {
@@ -6283,10 +6275,10 @@ button.close {
 }
 
 .modal.in .modal-dialog {
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0,-50%);
-    -o-transform: translate(0, -50%);
-    transform: translate(0, -50%)
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0)
 }
 
 .modal-open .modal {
@@ -6294,13 +6286,10 @@ button.close {
     overflow-y: auto
 }
 
-.modal-dialog{
-    position:absolute;
-    width:auto;
-    margin:10px auto;
-    left:0;
-    right:0;
-    top:50%
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px
 }
 
 .modal-content {
@@ -6386,6 +6375,7 @@ button.close {
 @media (min-width: 768px) {
     .modal-dialog {
         width: 600px;
+        margin: 30px auto
     }
 
     .modal-content {

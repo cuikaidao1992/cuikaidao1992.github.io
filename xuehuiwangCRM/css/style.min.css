@@ -3521,6 +3521,7 @@ nav.page-tabs .page-tabs-content {
     padding: 8px;
     vertical-align: middle;
     text-align: center;
+    font-size: 14px;
 }
 
 .panel.blank-panel {
@@ -8403,11 +8404,7 @@ input[type=checkbox].ace.ace-switch.ace-switch-2 + .lbl::before {
 .u-wrap .mainbackground.nopadding {
     padding:5px 25px;
 }
-.heading {
-    position: relative;
-    margin: 15px 0;
-    padding: 3px 8px;
-}
+
 .heading .h5{
     font-size: 16px;
     font-size: 1.6rem;
@@ -8698,6 +8695,10 @@ li.subentry {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
+    margin: 0;
+}
+#searchForm{
+    margin-bottom: 10px;
 }
 #searchForm input {
     width:150px;
@@ -8711,6 +8712,7 @@ li.subentry {
     color: #333;
     outline: none;
     cursor: pointer;
+    margin-top: 0;
 }
 #searchForm select{
     border: 1px solid #d6d7dc;
@@ -8753,7 +8755,8 @@ li.subentry {
     right: 15px;
     z-index: 9;
 }
-.slink ul li {
+.slink ul li a{
+    display:block;
     margin: 0 10px;
     height: 30px;
     line-height: 30px;
@@ -9125,6 +9128,202 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     border-radius: 3px;
     vertical-align: middle;
 }
-.classes .mainbackground .teacher-content .t-c .t-c-l ul li a{
+.mainbackground .teacher-content .t-c .t-c-l ul li a{
     color: #333;
+}
+.box-select .right{
+    padding-top: 50px!important;
+}
+.s-list{
+    padding-top: 10px;
+}
+.s-list a {
+    margin-right: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.s-list a.active {
+    color: #fff;
+    background: #1ebb90;
+    border-color: #1ebb90;
+}
+.weekDiv label{
+    margin-right: 10px;
+    font-weight: normal;
+}
+.weekDiv label input{
+    margin-right: 3px;
+}
+.c-content{
+    line-height: 24px;
+}
+.add-classesNum{
+    display: inline-block;
+    margin-top: 10px;
+}
+.add-classesNum i{
+    font-size: 20px;
+}
+.add-classesNum:hover i{
+    color: #46d37c;
+    cursor: pointer;
+}
+.areaList li{
+    float: left;
+    margin-right: 10px;
+    width: 70px;
+}
+.areaList li .m-l-xs{
+    position: relative;
+    top:-3px;
+}
+.arrange{
+    position: relative;
+    top:12px
+}
+.input_width_40{width:60%}
+.input_width_60{width:85%}
+.input_width_15{width:30%}
+.table label{
+    position: relative;
+    left: -20px;
+    top:8px;
+}
+.heading {
+    position: relative;
+    margin: 10px 0;
+    padding: 3px 8px;
+    margin-bottom: 20px;
+}
+
+.heading .line {
+    border-bottom: 2px solid #ddd;
+    bottom: -10px;
+    height: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+table button[disabled], table input[disabled]{
+    background: #fff;
+    border: none;
+    text-align: center;
+}
+.c-fa {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin-left: -75px;
+    padding: 20px 40px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #323232;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    z-index: 1012
+}
+.ibox-head{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fff;
+    border-color: #e7eaec;
+    -webkit-border-image: none;
+    -o-border-image: none;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 14px 15px 7px;
+    min-height: 48px;
+}
+.ibox-head div{
+    font-size: 16px;
+    color: #333;
+    margin-right: 40px;
+}
+.set-nav-head {
+    margin: 0 10px;
+    border-bottom: 1px solid #dddddd;
+    height: 52px;
+    line-height: 56px;
+    font-size: 16px;
+}
+.set-nav-head li {
+    float: left;
+    width: 16%;
+}
+.set-nav-head li a {
+    display: block;
+    width:100%;
+    height: 52px;
+    font-size: 16px;
+    color: #808080;
+    text-align: center;
+    background: url(../images/subtab_bg.png) no-repeat right;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+.set-nav-head .tab-cur a {
+    color: #36d38c;
+    border-bottom: 3px solid #36d38c;
+}
+.dataName{
+    width: 80%;
+    text-align: center;
+}
+.mt{
+    margin-top: 7px!important;
+}
+
+.study-info .ibox-content{
+    border: none;
+    display: none;
+}
+.study-info .ibox-title{
+    padding-right: 15px;
+}
+.tab-box {
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 2px solid #ddd;
+}
+.tab-box .tab-name {
+    float: left;
+    width: 82px;
+    line-height: 30px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+}
+.tab-box .tab-name.active {
+    border-bottom: 2px solid #0af;
+    color: #0af;
+}
+.close-btn{
+    position: absolute;
+    right:10px;
+    top:15px;
+}
+.help-block{
+    line-height: 40px;
+}
+.radios .check-box{
+    margin-right: 20px;
+}
+.radios .check-btn{
+    width: 16px;
+    height: 16px;
+}
+.ui-sortable input{
+    text-align: center;
+}
+.bg-white{
+    background: #fff!important;
+    cursor: pointer;
 }
