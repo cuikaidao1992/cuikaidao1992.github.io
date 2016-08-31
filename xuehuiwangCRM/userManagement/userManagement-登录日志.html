@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-系统管理-站内信管理</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>日志管理</h5>
+                </div>
+                <div class="ibox-content">
+                    <form method="post" id="searchForm">
+                        <span class="registerDate">登录时间</span>
+                        <div class="form-group">
+                             <input type="text" value="2016-1-1" name="startTime" style="width: 120px;" class="date-picker from"><em class="time-link">到</em>
+                             <input type="text" value="2016-1-1" style="width: 120px;" name="endTime" class="date-picker to">
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="">--关键词类型--</option><option value="nickname">用户名</option><option value="verifiedMobile">手机号</option><option value="email">邮件地址</option><option value="loginIp">姓名</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="email" name="identityId" placeholder="关键词">
+                        </div>
+                        <button class="btn btn-primary searchContents">搜索</button>
+                    </form>
+                    <div class="user-list" style="margin-top: 20px;">
+                        <table class="table footTabel  table-center">
+                            <thead>
+                            <tr>
+                                <th style="width: 10%">用户名<span class="fa indicator fa-unsorted"></span></th>
+                                <th style="width: 10%">姓名<span class="fa indicator fa-unsorted"></span></th>
+                                <th style="width: 15%">手机号<span class="fa indicator fa-unsorted"></span></th>
+                                <th style="width: 20%">邮箱<span class="fa indicator fa-unsorted"></span></th>
+                                <th style="width: 20%">登录时间<span class="fa indicator fa-unsorted"></span></th>
+                                <th style="width: 10%">登陆地点<span class="fa indicator fa-unsorted"></span></th>
+                                <th style="width: 10%">操作<span class="fa indicator fa-unsorted"></span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>D.C.base</td>
+                                <td>李四</td>
+                                <td>15101595620</td>
+                                <td>xuehuiwang@163.com</td>
+                                <td>2016-08-16 15:46:30</td>
+                                <td>北京</td>
+                                <td class="slink">
+                                    <a href="userManagement-登录日志查看.html">查看</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>D.C.base</td>
+                                <td>李四</td>
+                                <td>15101595620</td>
+                                <td>xuehuiwang@163.com</td>
+                                <td>2016-08-16 15:46:30</td>
+                                <td>北京</td>
+                                <td class="slink">
+                                    <a href="userManagement-登录日志查看.html">查看</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>D.C.base</td>
+                                <td>李四</td>
+                                <td>15101595620</td>
+                                <td>xuehuiwang@163.com</td>
+                                <td>2016-08-16 15:46:30</td>
+                                <td>北京</td>
+                                <td class="slink">
+                                    <a href="userManagement-登录日志查看.html">查看</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="8">
+                                    <ul class="pagination pull-right">
+                                        <li class="footable-page-arrow disabled">
+                                            <a data-page="first" href="#first">«</a>
+                                        </li>
+                                        <li class="footable-page-arrow disabled">
+                                            <a data-page="prev" href="#prev">‹</a>
+                                        </li>
+                                        <li class="footable-page active">
+                                            <a data-page="0" href="#">1</a>
+                                        </li>
+                                        <li class="footable-page">
+                                            <a data-page="1" href="#">2</a>
+                                        </li>
+                                        <li class="footable-page-arrow">
+                                            <a data-page="next" href="#next">›</a>
+                                        </li>
+                                        <li class="footable-page-arrow">
+                                            <a data-page="last" href="#last">»</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $(".user-list").on("mouseenter.link", ".slink .more", function () {
+         $(this).nextAll("ul").show();
+    })
+    .on("mouseleave.link", ".slink", function () {
+         $(this).find("ul").hide();
+    });
+    $("body").on("focus.page",".date-picker",function(){
+        $(this).datetimepicker({
+            format: "yyyy-mm-dd",
+            minView:2,
+            autoclose: true,
+            language: "zh-CN"
+        })
+    });
+</script>
+</body>
+</html>

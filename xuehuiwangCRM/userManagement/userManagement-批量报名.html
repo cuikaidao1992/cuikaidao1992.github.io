@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-用户管理-批量报名</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="row wrapper wrapper-content animated fadeInRight">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="form-horizontal">
+            <div class="ibox-content">
+                <form action="" id="commentForm">
+                    <fieldset>
+                        <legend>批量报名</legend>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">课程分类</label>
+                            <div class="col-sm-6 group-print">
+                                <select class="form-control" name="categoryId">
+                                    <optgroup label="职业资格">
+                                        <option>人力资源管理师</option>
+                                        <option>公共营养师</option>
+                                        <option>心理咨询师</option>
+                                        <option>理财规划师</option>
+                                        <option>物流管理师</option>
+                                        <option>采购师</option>
+                                    </optgroup>
+                                    <optgroup label="学历教育">
+                                        <option>自考</option>
+                                        <option>成考</option>
+                                        <option>自考本科公共课</option>
+                                        <option>公共英语三级</option>
+                                    </optgroup>
+                                    <optgroup label="财会培训">
+                                        <option>会计从业资格证</option>
+                                        <option>会计职称</option>
+                                        <option>注册会计证</option>
+                                        <option>公共英语三级</option>
+                                    </optgroup>
+                                    <optgroup label="教师资格证">
+                                        <option>幼儿教师资格证</option>
+                                        <option>小学教师资格证</option>
+                                        <option>中学教师资格证</option>
+                                    </optgroup>
+                                    <optgroup label="通关题库">
+                                        <option>人力资源管理师</option>
+                                        <option>公共营养师</option>
+                                        <option>心理咨询师</option>
+                                        <option>建造师</option>
+                                        <option>自考</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">级别</label>
+                            <div class="col-sm-6 group-print">
+                                <select class="form-control">
+                                    <option>级别</option><option>基础知识</option><option>一级</option><option>二级</option><option>三级</option><option>实操课</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">学习课程</label>
+                            <div class="col-sm-6 group-print">
+                                <input type="text" name="user" class="form-control" placeholder="" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">总课时</label>
+                            <div class="col-sm-6 group-print">
+                                <input type="text" name="user" class="form-control" placeholder="" value="30" disabled="disabled">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">授课类型</label>
+                            <div class="col-sm-6 group-print">
+                                <input type="text" name="user" class="form-control" placeholder="" value="直播" disabled="disabled">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset data-type="weixin">
+                        <legend>选课</legend>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">选择单元</label>
+                            <div class="col-sm-6 group-print">
+                                <input type="text" name="user" class="form-control" placeholder="" value="人力资源管理二级" disabled="disabled">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">选择班号</label>
+                            <div class="col-sm-6 group-print">
+                                <div class="radios">
+                                    <label class="col-sm-6"><input type="radio" name="message-set" value="" checked="checked">10/10 <a href="javascript:;">人力资源管理1601</a></label>
+                                    <label class="col-sm-6"><input type="radio" name="message-set" value="">10/10 <a href="javascript:;">人力资源管理1602</a></label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset data-type="weixin">
+                        <legend>缴费</legend>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">应缴金额</label>
+                            <div class="col-sm-6 group-print">
+                                <input type="text" name="user" class="form-control" placeholder="" value="1560.00" disabled="disabled">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">填写缴费金额</label>
+                            <div class="col-sm-6 group-print">
+                                <input type="text" name="user" class="form-control" placeholder="" value="0.00">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">提交</button>
+                            <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true" onclick="window.history.back(-1)">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/previewImage/previewImage.js"></script>
+<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
+<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+</body>
+</html>
