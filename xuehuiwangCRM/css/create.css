@@ -455,10 +455,6 @@
 	vertical-align: top
 }
 
-.classes .mainbackground .c-main p.c span.c-content {
-	width: 400px
-}
-
 .classes .mainbackground .c-main p.c span.c-content.block {
 	width: 100%;
 	min-height: 500px;
@@ -572,8 +568,9 @@
 	float: left;
 	width: 48%;
 	height: 300px;
-	background-color: #eee;
-	overflow-y: auto
+	border:1px solid #d6d3d3;
+	overflow-y: auto;
+	position: relative;
 }
 
 .classes .mainbackground .teacher-content .t-c .t-c-l ul {
@@ -596,10 +593,10 @@
 	padding-bottom: 0
 }
 
-.classes .mainbackground .teacher-content .t-c .t-c-l ul li.dis .father
-	{
+.classes .mainbackground .teacher-content .t-c .t-c-l ul li.dis .father {
 	padding: 5px;
-	border: solid 1px #999
+	border: solid 1px #999;
+	cursor: pointer;
 }
 
 .classes .mainbackground .teacher-content .t-c .t-c-l ul li.dis .father:hover
@@ -657,7 +654,7 @@
 	float: right;
 	width: 48%;
 	height: 300px;
-	background-color: #eee;
+	border:1px solid #d6d3d3;
 	overflow-y: auto
 }
 
@@ -681,7 +678,7 @@
 
 .classes .mainbackground .teacher-content .t-c .t-c-r .t-c-r-t .c span.c-title
 	{
-	width: 80px;
+	width: 100px;
 	padding-right: 10px;
 	text-align: right;
 	color: #999
@@ -1190,10 +1187,6 @@
 	vertical-align: top
 }
 
-.classes .mainbackground .c-main p.c span.c-content {
-	width: 400px
-}
-
 .classes .mainbackground .c-main p.c span.c-content.block {
 	width: 100%;
 	min-height: 500px;
@@ -1631,11 +1624,16 @@ background:rgba(255,255,255,0.8);box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);positi
     color: #222222;
    /* position: relative;
     top: -2px;*/
-        position: relative;
+    position: relative;
     top: 10px;
     left: 12px;
 }
 .recruit{
 	position: absolute;
 	top:15px
+}
+.classes .mainbackground .teacher-content .t-c .t-c-r .check-btn{
+	position: relative;
+	top:3px;
+	margin-right: 5px;
 }

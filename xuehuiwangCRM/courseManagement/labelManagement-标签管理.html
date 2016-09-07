@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-直播管理</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title clearfix">
+                    <h5>标签管理</h5>
+                    <div class="ibox-tools">
+                        <a href="#addlabel" data-toggle="modal" class="collapse-link" data-original-title="添加用户">
+                            <i class="fa fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="user-list">
+                        <table class="table footTabel  table-center">
+                            <thead>
+                            <tr>
+                                <th>ID<span class="fa indicator fa-unsorted"></span></th>
+                                <th>名称<span class="fa indicator fa-unsorted"></span></th>
+                                <th>添加时间<span class="fa indicator fa-unsorted"></span></th>
+                                <th width="10%">操作<span class="fa indicator fa-unsorted"></span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>132</td>
+                                <td>会计考试</td>
+                                <td>2016-01-26 16:39</td>
+                                <td class="slink">
+                                    <a href="#editlabel" data-toggle="modal">编辑</a>|<a href="javascript:void(0);" class="removeLabel">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>131</td>
+                                <td>会计从业资格考试</td>
+                                <td>2016-01-26 16:40</td>
+                                <td class="slink">
+                                    <a href="#editlabel" data-toggle="modal">编辑</a>|<a href="javascript:void(0);" class="removeLabel">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>130</td>
+                                <td>会计考试</td>
+                                <td>2016-01-26 16:341</td>
+                                <td class="slink">
+                                    <a href="#editlabel" data-toggle="modal">编辑</a>|<a href="javascript:void(0);" class="removeLabel">删除</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="10">
+                                    <ul class="pagination pull-right">
+                                        <li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li>
+                                        <li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li>
+                                        <li class="footable-page active"><a data-page="0" href="#">1</a></li>
+                                        <li class="footable-page"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade top in" id="addlabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">添加标签</h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">标签名称</label>
+                        <div class="col-sm-8 group-print">
+                            <input type="text" class="form-control" placeholder="" required="ture">
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button type = "button" class="btn btn-primary col-sm-5 btn-submit">确定</button>
+                            <button type = "button" class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade top in" id="editlabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">添加标签</h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">标签名称</label>
+                        <div class="col-sm-8 group-print">
+                            <input type="text" class="form-control" placeholder="" required="ture">
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button class="btn btn-primary col-sm-5 btn-submit" type="submit">确定</button>
+                            <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script>
+    $(".removeLabel").click(function(){
+        $(this).parent().parent().remove();
+    })
+</script>
+</body>
+</html>

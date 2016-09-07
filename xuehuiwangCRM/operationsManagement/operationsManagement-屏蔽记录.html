@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-运营管理-屏蔽记录</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12 ">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title clearfix">
+                    <h5>问答管理</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="ibox-tools operateList">
+                        <a class="btn btn-white btn-sm" href="operationsManagement-敏感词管理.html">敏感词列表</a>
+                        <a class="btn btn-primary btn-sm" href="operationsManagement-屏蔽记录.html">屏蔽记录</a>
+                    </div>
+                    <form method="post" id="searchForm">
+                        <div class="form-group">
+                            <select name="state">
+                                <option value="">所有类型</option><option value="banned">禁用</option><option value="replaced">屏蔽</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="name">敏感词</option><option value="id">编号</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="keyword" name="keyword" class="form-control" value="" placeholder="搜索关键字">
+                        </div>
+                        <button class="btn btn-primary searchContents">搜索</button>
+                    </form>
+                    <div class="user-list note-list" style="margin-top: 20px;">
+                        <table class="table footTabel  table-center">
+                            <thead>
+                                <tr>
+                                    <th>编号<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>命中敏感词<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>类型<span class="fa indicator fa-unsorted"></span></th>
+                                    <th width="30%">屏蔽文本<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>用户<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>屏蔽时间<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>IP地址<span class="fa indicator fa-unsorted"></span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>25</td>
+                                    <td>被骗	</td>
+                                    <td>禁用</td>
+                                    <td style="word-wrap: break-word;word-break:break-all; text-align: left">这段时间学习有些疲惫也有些惶恐初次接触心理学考试我所在的城市也很少这样的学习平台身边也很少人真正地在系统地学习心理学对于所有的考试程序都不清楚晚上接到培训中心的电话说暂时不能报考瞬间感觉<span style="color:#FF0000">被骗</span>了谁能告诉我到底要怎样才能报考这个培训机构还可信吗主要是为了更好地交流心理学更准确地说是为了消除距离带来的影响特发此话题</td>
+                                    <td>刘君5202</td>
+                                    <td>2016-4-22 21:27:51</td>
+                                    <td>223.152.210.114</td>
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <td>垃圾	</td>
+                                    <td>禁用</td>
+                                    <td style="word-wrap: break-word;word-break:break-all;text-align:left">实在是太<span style="color:#FF0000">垃圾</span>了就算不能上课起码也要通知下啊什么情况啊这算是周末大家都很忙的好吧好不容易抽出时间来上课就这个样子</td>
+                                    <td>毛雯婷8838</td>
+                                    <td>2016-4-22 21:27:51</td>
+                                    <td>223.152.210.114</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script>
+    $(function () {
+        $("#SelectAll").click(function(){
+            if(this.checked){
+                $(".table :checkbox").prop("checked", true);
+            }else{
+                $(".table :checkbox").prop("checked", false);
+            }
+        });
+
+        $(".remove-qa").click(function(){
+            $(this).parent().parent().remove();
+        });
+
+        $(".user-list").on('click', '.short-text', function() {
+            var $short = $(this);
+            $short.slideUp('fast').parents('.short-long-text').find('.long-text').slideDown('fast');
+        });
+
+        $(".user-list").on('click', '.long-text', function() {
+            var $long = $(this);
+            $long.slideUp('fast').parents('.short-long-text').find('.short-text').slideDown('fast');
+        });
+    });
+
+</script>
+</body>
+</html>

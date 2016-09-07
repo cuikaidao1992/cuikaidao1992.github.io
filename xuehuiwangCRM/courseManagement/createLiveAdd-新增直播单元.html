@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="row wrapper wrapper-content animated fadeInRight">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="form-horizontal">
+            <div class="ibox-title">
+                <h5>新增直播课程单元</h5>
+            </div>
+            <div class="ibox-content ibox-padding">
+                <form action="" id="commentForm">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">学科分类</label>
+                        <div class="col-sm-6 group-print">
+                            <input type="text" name="" class="form-control" value="人力资源管理" disabled="disabled"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">级别</label>
+                        <div class="col-sm-6 group-print">
+                            <input type="text" name="" class="form-control" value="二级" disabled="disabled"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">授课方式</label>
+                        <div class="col-sm-6 group-print">
+                            <input type="text" name="" class="form-control" value="直播" disabled="disabled"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">课程单元名称</label>
+                        <div class="col-sm-6 group-print">
+                            <input type="text" name="" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">总课时</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">学习地域</label>
+                        <div class="col-sm-6">
+                            <p style="padding-top: 7px">
+                                <a href="#selectArea" data-toggle="modal" class="btn btn-primary">选择学习地域</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button class="btn btn-primary col-sm-5 btn-submit" type="button" onclick="$('#ulOne').show();location.href='createLiveAdd4-创建直播.html'">提交</button>
+                            <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true" onclick="window.history.back(-1)">返回</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade top" aria-hidden="true" id="selectArea">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">选择学习地域</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" method="post">
+                    <div class="form-group">
+                        <ul class="areaList" id="list">
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">北京</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">天津</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">河北</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">山西</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">内蒙古</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">辽宁</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">吉林</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">黑龙江</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">上海</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">江苏</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">浙江</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">安徽</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">福建</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">江西</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">山东</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">河南</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">湖北</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">湖南</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">广东</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">广西</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">海南</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">重庆</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">四川</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">贵州</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">云南</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">西藏</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">陕西</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">甘肃</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">青海</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">宁夏</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">新疆</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">台湾</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">香港</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                                <span class="m-l-xs">澳门</span>
+                            </li>
+                            <li>
+                                <span class="check-box"><input type="checkbox" class="check-btn" id="selectAll"></span>
+                                <span class="m-l-xs">全国</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="submit-btn col-lg-8 col-lg-offset-2">
+                        <button class="btn btn-primary col-sm-5 btn-submit" type="submit">保存内容</button>
+                        <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true" onclick="window.history.back(-1)">返&nbsp;&nbsp;&nbsp;&nbsp;回</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
+<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script>
+    $("#selectAll").click(function () {
+        if(this.checked){
+            $("#list :checkbox").prop("checked", true);
+        }else{
+            $("#list :checkbox").prop("checked", false);
+        }
+    });
+</script>
+</body>
+</html>

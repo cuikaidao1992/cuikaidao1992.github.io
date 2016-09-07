@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-课程管理-分类管理</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title clearfix">
+                    <h5>分类管理</h5>
+                    <div class="ibox-tools">
+                        <a class="btn btn-primary btn-sm addClass " href="#modalAdd" data-toggle="modal">添加分类</a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="user-list class-list" style="margin-top: 20px;">
+                        <table class="table footTabel  table-center" >
+                            <thead>
+                            <tr>
+                                <th width="65%">名称<span class="fa indicator fa-unsorted"></span></th>
+                                <th width="15%">序号<span class="fa indicator fa-unsorted"></span></th>
+                                <th width="20%">操作<span class="fa indicator fa-unsorted"></span></th>
+                            </tr>
+                            </thead>
+                            <tbody class="son sortable ui-sortable" id="bodyHtml">
+                            <tr>
+                                <td width="65%">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;└─ 职业资格
+                                </td>
+                                <td width="15%">1</td>
+                                <td width="20%">
+                                    <a href="javascript:;" class="btn btn-white btn-sm " data-toggle="modal" data-target="#modalEdit"><i class="glyphicon glyphicon-edit"></i> 编辑</a>
+                                    <a href="javascript:;" class="btn btn-white btn-sm" data-toggle="modal" data-target="#modalAdd"><i class="glyphicon glyphicon-plus"></i> 添加子分类</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="65%">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ 人力资源管理师
+                                </td>
+                                <td width="15%">0</td>
+                                <td width="20%">
+                                    <a href="javascript:;" class="btn btn-white btn-sm " data-toggle="modal" data-target="#modalEdit"><i class="glyphicon glyphicon-edit"></i> 编辑</a>
+                                    <a href="javascript:;" class="btn btn-white btn-sm" data-toggle="modal" data-target="#modalAdd"><i class="glyphicon glyphicon-plus"></i> 添加子分类</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="65%">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ 基础知识
+                                </td>
+                                <td width="15%">0</td>
+                                <td width="20%">
+                                    <a href="javascript:;" class="btn btn-white btn-sm " data-toggle="modal" data-target="#modalEdit"><i class="glyphicon glyphicon-edit"></i> 编辑</a>
+                                    <a href="javascript:;" class="btn btn-white btn-sm" data-toggle="modal" data-target="#modalAdd"><i class="glyphicon glyphicon-plus"></i> 添加子分类</a>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="65%">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ 一级
+                                </td>
+                                <td width="15%">0</td>
+                                <td width="20%">
+                                    <a href="javascript:;" class="btn btn-white btn-sm "data-toggle="modal" data-target="#modalEdit"><i class="glyphicon glyphicon-edit"></i> 编辑</a>
+                                    <a href="javascript:;" class="btn btn-white btn-sm" data-toggle="modal" data-target="#modalAdd"><i class="glyphicon glyphicon-plus"></i> 添加子分类</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="65%">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ 二级
+                                </td>
+                                <td width="15%">1</td>
+                                <td width="20%">
+                                    <a href="javascript:;" class="btn btn-white btn-sm " data-toggle="modal" data-target="#modalEdit"><i class="glyphicon glyphicon-edit"></i> 编辑</a>
+                                    <a href="javascript:;" class="btn btn-white btn-sm" data-toggle="modal" data-target="#modalAdd"><i class="glyphicon glyphicon-plus"></i> 添加子分类</a>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="65%">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ 三级
+                                </td>
+                                <td width="15%">2</td>
+                                <td width="20%">
+                                    <a href="javascript:;" class="btn btn-white btn-sm " data-toggle="modal" data-target="#modalEdit"><i class="glyphicon glyphicon-edit"></i> 编辑</a>
+                                    <a href="javascript:;" class="btn btn-white btn-sm" data-toggle="modal" data-target="#modalAdd"><i class="glyphicon glyphicon-plus"></i> 添加子分类</a>
+                                </td>
+                            </tr>
+                            <tfoot>
+                            <tr>
+                                <td colspan="10">
+                                    <ul class="pagination pull-right"><li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li><li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li><li class="footable-page active"><a data-page="0" href="#">1</a></li><li class="footable-page"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li></ul>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modalEdit" class="modal fade in" aria-hidden="false">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑分类</h4>
+            </div>
+            <div class="modal-body">
+                <div id="category-creater-widget">
+                    <form class="form-horizontal category-form" action="" method="post">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="category-name-field">名称</label>
+                            <div class="col-md-8 controls">
+                                <input class="form-control" id="category-name-field" type="text" name="name" value="" tabindex="1" data-widget-cid="widget-9" data-explain="">
+                                <div class="help-block" style="display:none;"></div></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="category-weight-field">显示序号</label>
+                            <div class="col-md-8 controls">
+                                <input class="form-control" id="category-weight-field" type="text" name="weight" value="" data-explain="显示序号需为整数，分类按序号的顺序从小到大排序。">
+                                <div class="help-block">显示序号需为整数，分类按序号的顺序从小到大排序。</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="category-code-field">编码</label>
+                            <div class="col-md-8 controls">
+                                <input class="form-control" id="category-code-field" type="text" name="code" value="" tabindex="3" data-explain="必填，建议使用分类名称的英文单词或缩写作为编码。">
+                                <div class="help-block">必填，建议使用分类名称的英文单词或缩写作为编码。</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="category-description-field">分类描述</label>
+                            <div class="col-md-8 controls">
+                                <textarea class="form-control" id="category-description-field" style="height:100px;" name="description"></textarea>
+                                <div class="help-block">非必填</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-primary" data-toggle="form-submit">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modalAdd" class="modal fade in" aria-hidden="false">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">添加分类</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal category-form" action="" method="post">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="category-name-field">名称</label>
+                        <div class="col-md-8 controls">
+                            <input class="form-control"type="text" name="name" value="" tabindex="1" data-widget-cid="widget-9" data-explain="">
+                            <div class="help-block" style="display:none;"></div></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="category-weight-field">显示序号</label>
+                        <div class="col-md-8 controls">
+                            <input class="form-control" type="text" name="weight" value="0" tabindex="2" data-widget-cid="widget-11" data-explain="显示序号需为整数，分类按序号的顺序从小到大排序。">
+                            <div class="help-block">显示序号需为整数，分类按序号的顺序从小到大排序。</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="category-code-field">编码</label>
+                        <div class="col-md-8 controls">
+                            <input class="form-control" type="text" name="code" value="" data-url="/admin/category/checkcode?exclude=" tabindex="3" data-widget-cid="widget-10" data-explain="必填，建议使用分类名称的英文单词或缩写作为编码。">
+                            <div class="help-block">必填，建议使用分类名称的英文单词或缩写作为编码。</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="category-description-field">分类描述</label>
+                        <div class="col-md-8 controls">
+                            <textarea class="form-control" style="height:100px;" name="description"></textarea>
+                            <div class="help-block">非必填</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-primary" data-toggle="form-submit">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
+<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script>
+$("#bodyHtml").sortable({axis:"y"})
+</script>
+</body>
+</html>

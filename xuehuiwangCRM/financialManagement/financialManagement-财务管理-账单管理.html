@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-财务管理-账单管理</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title clearfix">
+                    <h5>账单管理</h5>
+                    <p class="line-people fl">总收入：100万</p>
+                </div>
+                <div class="ibox-content">
+                    <form method="post" id="searchForm">
+                        <span class="registerDate">到账时间</span>
+                        <div class="form-group">
+                            <input type="text" value="2016-1-1" name="startTime" style="width: 120px;" class="date-picker from"><em class="time-link">到</em>
+                            <input type="text" value="2016-1-1" style="width: 120px;" name="endTime" class="date-picker to">
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="">--关键词--</option>
+                                <option value="nickname">用户名</option>
+                                <option>姓名</option>
+                                <option value="loginIp">到账流水号</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="email" name="identityId" placeholder="关键词">
+                        </div>
+                        <button class="btn btn-primary searchContents" onClick="">导出搜索</button>
+                    </form>
+                    <div class="user-list" style="margin-top: 20px;">
+                        <table class="table footTabel  table-center">
+                            <thead>
+                                <tr>
+                                    
+                                    <th>流水号<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>名称<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>购买者<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>成交时间<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>入账金额<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>支付方式<span class="fa indicator fa-unsorted"></span></th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    
+                                    <td>201609050949371000</td>
+                                    <td>
+                                        <span>购买课程《经典取证班》</span> <br>
+                                        <span class="text-muted text-sm">人力资源管理师二级</span><br>
+                                        <span class="text-muted text-sm">订单号：CR2016090509484024144</span>
+                                    </td>
+                                    <td>赵祥鹏6573</td>
+                                    <td>2016/9/5  10:53:41</td>
+                                    <td>2000</td>
+                                    <td>支付宝</td>
+                                  
+                                </tr>
+                                <tr>
+                                    
+                                    <td>201609050949371000</td>
+                                    <td>
+                                        <span>购买课程《经典取证班》</span> <br>
+                                        <span class="text-muted text-sm">人力资源管理师二级</span><br>
+                                        <span class="text-muted text-sm">订单号：CR2016090509484024144</span>
+                                    </td>
+                                    <td>赵祥鹏6573</td>
+                                    <td>2016/9/5  10:53:41</td>
+                                    <td>2000</td>
+                                    <td>网银支付</td>
+                                  
+                                </tr>
+                                <tr>
+                                    
+                                    <td>201609050949371000</td>
+                                    <td>
+                                        <span>购买课程《经典取证班》</span> <br>
+                                        <span class="text-muted text-sm">人力资源管理师二级</span><br>
+                                        <span class="text-muted text-sm">订单号：CR2016090509484024144</span>
+                                    </td>
+                                    <td>赵祥鹏6573</td>
+                                    <td>2016/9/5  10:53:41</td>
+                                    <td>2000</td>
+                                    <td>微信支付</td>
+                                  
+                                </tr>
+                                <tr>
+                                    
+                                    <td>201609050949371000</td>
+                                    <td>
+                                        <span>购买课程《经典取证班》</span> <br>
+                                        <span class="text-muted text-sm">人力资源管理师二级</span><br>
+                                        <span class="text-muted text-sm">订单号：CR2016090509484024144</span>
+                                    </td>
+                                    <td>赵祥鹏6573</td>
+                                    <td>2016/9/5  10:53:41</td>
+                                    <td>2000</td>
+                                    <td>支付宝</td>
+                                  
+                                </tr>
+                                <tr>
+                                    
+                                    <td>201609050949371000</td>
+                                    <td>
+                                        <span>购买课程《经典取证班》</span> <br>
+                                        <span class="text-muted text-sm">人力资源管理师二级</span><br>
+                                        <span class="text-muted text-sm">订单号：CR2016090509484024144</span>
+                                    </td>
+                                    <td>赵祥鹏6573</td>
+                                    <td>2016/9/5  10:53:41</td>
+                                    <td>2000</td>
+                                    <td>支付宝</td>
+                                  
+                                </tr>
+                               
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <ul class="pagination pull-right"><li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li><li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li><li class="footable-page active"><a data-page="0" href="#">1</a></li><li class="footable-page"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li></ul>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $(function () {
+        $(".user-list").on("mouseenter.link", ".slink .more", function () {
+             $(this).nextAll("ul").show();
+        })
+        .on("mouseleave.link", ".slink", function () {
+            $(this).find("ul").hide();
+        });
+        $("body").on("focus.page",".date-picker",function(){
+            $(this).datetimepicker({
+                format: "yyyy-mm-dd",
+                minView:2,
+                autoclose: true,
+                language: "zh-CN"
+            })
+        });
+        
+        $(".lock-user").click(function(){
+            var userName=$(this).attr("title");
+            lockUser(userName)
+        })
+    });
+</script>
+</body>
+</html>

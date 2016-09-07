@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-课程管理-创建课程</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/create.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="row wrapper wrapper-content animated fadeInRight">
+    <div class="col-lg-10 col-sm-offset-1">
+        <div class="form-horizontal">
+            <div class="ibox-title">
+                <h5>添加课程</h5>
+            </div>
+            <div class="ibox-content ibox-padding">
+                <div id="fuelux-wizard" class="row-fluid" data-target="#step-container">
+                    <ul class="wizard-steps">
+                        <li data-target="#step1" class="active">
+                            <span class="step">1</span> <span class="title">基本信息</span>
+                        </li>
+                        <li data-target="#step2" class="active"><span class="step">2</span>
+                            <span class="title">课程详情</span>
+                        </li>
+                        <li data-target="#step3" class="active"><span class="step">3</span>
+                            <span class="title">服务设置</span>
+                        </li>
+                        <li data-target="#step3"><span class="step">4</span>
+                            <span class="title">选择课程单元</span>
+                        </li>
+                        <li data-target="#step3"><span class="step">5</span>
+                            <span class="title">开始招生</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="u-wrap classes">
+                    <div class="mainbackground nopadding">
+                        <div class="heading">
+                            <span class="h5">企业管理</span>
+                            <span class="float-right">
+                                 <span>未上架</span>
+                                <span>人力资源管理-人力1</span>
+                                <span>定价:11.0</span>
+                            </span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="c-main c-max">
+                            <form id="services-form" class="form-horizontal" method="post">
+                                <div class="form-group" id="commentForm">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">提供的服务</label>
+                                        <div class="col-sm-8" style="margin-top: 15px">
+                                            <label><input type="checkbox" name="service[]" value="homeworkReview" class="service"> 24小时作业批改</label>
+                                            <p class="help-block">24小时内完成作业批改，即时反馈并巩固您的学习效果。</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="col-sm-2 control-label"></label>
+                                       <div class="col-sm-8">
+                                           <label><input type="checkbox" name="service[]" value="testpaperReview" class="service"> 24小时阅卷点评</label>
+                                           <p class="help-block">24小时内批阅您提交的试卷，给予有针对性的点评。</p>
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label"></label>
+                                        <div class="col-sm-8">
+                                            <label><input type="checkbox" name="service[]" value="teacherAnswer" class="service"> 提问必答</label>
+                                            <p class="help-block">对于提问做到有问必答，帮您扫清学习过程中的种种障碍。</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label"></label>
+                                        <div class="col-sm-8">
+                                            <label><input type="checkbox" name="service[]" value="liveAnswer" class="service"> 一对一在线答疑</label>
+                                            <p class="help-block">提供专属的一对一在线答疑，快速答疑解惑。</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label"></label>
+                                        <div class="col-sm-8">
+                                            <label><input type="checkbox" name="service[]" value="event" class="service"> 班级活动</label>
+                                            <p class="help-block">不定期组织各种线上或线下的班级活动，让学习更加生动有趣，同学关系更为紧密。</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label"></label>
+                                        <div class="col-sm-8">
+                                            <label><input type="checkbox" name="service[]" value="workAdvise" class="service"> 就业指导</label>
+                                            <p class="help-block">完成全部学习后，老师对您的学习成果和能力水平给出评估，并提供专业化的就业指导。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button class="btn btn-primary col-sm-3">保存并退出</button>
+                            <button class="btn btn-primary col-sm-offset-1 col-sm-3 btn-submit" id="submit" type="submit" onclick="location.href='createLiveAdd4-创建直播.html'">保存并继续</button>
+                            <button class="btn btn-white col-sm-3 col-sm-offset-1" onclick="window.history.back(-1)">返回</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
+<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-课程管理-直播课程</title>
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/create.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="row wrapper wrapper-content animated fadeInRight">
+    <div class="col-lg-10 col-sm-offset-1">
+        <div class="form-horizontal">
+            <div class="ibox-title">
+                <h5>预排课</h5>
+            </div>
+            <div class="ibox-content ibox-padding">
+                <div id="fuelux-wizard" class="row-fluid" data-target="#step-container">
+                    <ul class="wizard-steps">
+                        <li data-target="#step1" class="active">
+                            <span class="step">1</span><span class="title">班号</span>
+                        </li>
+                        <li data-target="#step2" class="active"><span class="step">2</span>
+                            <span class="title">课时</span>
+                        </li>
+                        <li data-target="#step3" class="active"><span class="step">3</span>
+                            <span class="title">预排课</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="u-wrap classes" style="margin-top: 40px;">
+                    <div class="heading clearfix">
+                        <h2 class="h5 pull-left">排课</h2>
+                        <span class="search pull-right">现代企业管理-直播-20160827</span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="pull-right">
+                        <a class="btn btn-sm btn-primary addClass" href="javascript:;">新增课</a>
+                    </div>
+                    <div class="clearfix"></div>
+                     <div class="user-list" style="margin-top: 10px">
+                         <table class="table footTabel table-center" id="bodyHtml">
+                            <thead>
+                                <tr>
+                                    <th width="10%">日期<span class="fa indicator fa-unsorted"></span></th>
+                                    <th width="10%">星期<span class="fa indicator fa-unsorted"></span></th>
+                                    <th width="10%">时段<span class="fa indicator fa-unsorted"></span></th>
+                                    <th width="15%">时间<span class="fa indicator fa-unsorted"></span></th>
+                                    <th width="15%">课程名称<span class="fa indicator fa-unsorted"></span></th>
+                                    <th width="10%">课时时长<span class="fa indicator fa-unsorted"></span></th>
+                                    <th width="10%">教师<span class="fa indicator fa-unsorted"></span></th>
+                                    <th width="10%">免费试听<span class="fa indicator fa-unsorted"></span></th>
+                                    <th width="10%">操作<span class="fa indicator fa-unsorted"></span></th>
+                                </tr>
+                            </thead>
+                            <tbody class="son sortable ui-sortable">
+                                <tr class="class-son ui-sortable-handle bg-white" draggable="true">
+                                    <td width="10%"><input type="text" value="2016-08-27" class="date-picker input_width_60" disabled="disabled"></td>
+                                    <td width="10%"><input type="text" value="周六" class="input_width_40" name="" disabled="disabled"></td>
+                                    <td width="10%">
+                                        <input type="text" value="上午" class="time-input input_width_40" disabled="disabled">
+                                        <select class="time-select" style="display: none"><option value="上午">上午</option><option value="下午">下午</option><option value="全天">全天</option><option value="晚上">晚上</option></select>
+                                    </td>
+                                    <td width="15%"><input type="text" value="04:30" class="date-picker-time input_width_15" name="" disabled="disabled">-<input type="text" value="15:00" class="date-picker-time input_width_15" name="" disabled="disabled"></td>
+                                    <td width="15%"><input type="text" value="现代企业管理-1" disabled="disabled"></td>
+                                    <td width="10%"><input type="text" value="1" class="input_width_40" maxlength="3" disabled="disabled"></td>
+                                    <td width="10%"><input type="text" value="未安排" class="input_width_40" maxlength="3" disabled="disabled"></td>
+                                    <td width="10%">
+                                        <label>
+                                            <input name="switch-field-2" class="ace ace-switch ace-switch-2" checked="checked" type="checkbox">
+                                            <span class="lbl"></span>
+                                        </label>
+                                    </td>
+                                    <td class="slink" width="10%">
+                                        <a href="createLiveAdd-预排课-安排教师.html">安排教师</a>|<a class="more" href="javascript:void(0);">更多</a>
+                                        <ul class="none">
+                                            <li>
+                                                <a class="toTransaction editClass" href="javascript:;">编辑</a>
+                                            </li>
+                                            <li>
+                                                <a class="toTransaction removeClass" href="javascript:;">删除</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="class-son ui-sortable-handle bg-white" draggable="true">
+                                    <td width="10%"><input type="text" value="2016-08-27" class="date-picker input_width_60" disabled="disabled"></td>
+                                    <td width="10%"><input type="text" value="周六" class="input_width_40" name="" disabled="disabled"></td>
+                                    <td width="10%">
+                                        <input type="text" value="上午" class="time-input input_width_40" disabled="disabled">
+                                        <select class="time-select" style="display: none"><option value="上午">上午</option><option value="下午">下午</option><option value="全天">全天</option><option value="晚上">晚上</option></select>
+                                    </td>
+                                    <td width="15%"><input type="text" value="04:30" class="date-picker-time input_width_15" name="" disabled="disabled">-<input type="text" value="15:00" class="date-picker-time input_width_15" name="" disabled="disabled"></td>
+                                    <td width="15%"><input type="text" value="现代企业管理-1" disabled="disabled"></td>
+                                    <td width="10%"><input type="text" value="1" class="input_width_40" maxlength="3" disabled="disabled"></td>
+                                    <td width="10%"><input type="text" value="未安排" class="input_width_40" maxlength="3" disabled="disabled"></td>
+                                    <td width="10%">
+                                        <label>
+                                            <input name="switch-field-2" class="ace ace-switch ace-switch-2" checked="checked" type="checkbox">
+                                            <span class="lbl"></span>
+                                        </label>
+                                    </td>
+                                    <td class="slink" width="10%">
+                                        <a href="createLiveAdd-预排课-安排教师.html">安排教师</a>|<a class="more" href="javascript:void(0);">更多</a>
+                                        <ul class="none">
+                                            <li>
+                                                <a class="toTransaction editClass" href="javascript:;">编辑</a>
+                                            </li>
+                                            <li>
+                                                <a class="toTransaction removeClass" href="javascript:;">删除</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                         </table>
+                         <div class="hr-line-dashed"></div>
+                         <div class="form-group">
+                             <div class="col-sm-10 col-sm-offset-1">
+                                 <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">保存</button>
+                                 <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true" onclick="window.history.back(-1)">返回</button>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
+<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $(function () {
+        //编辑
+        function editClass(_this){
+            if($(_this).html() == "编辑"){
+                $(_this).parent().parent().parent().parent().find(".time-input").hide();
+                $(_this).parent().parent().parent().parent().find(".time-select").show();
+                $(_this).html("完成");
+                $(_this).parent().parent().parent().parent().find("input").removeAttr("disabled");
+            }else {
+                $(_this).parent().parent().parent().parent().find(".time-input").show();
+                $(_this).parent().parent().parent().parent().find(".time-select").hide();
+                $(_this).html("编辑");
+                $(_this).parent().parent().parent().parent().find("input").attr("disabled",true);
+            }
+        }
+        // 删除
+        function removeClass(_this){
+            $(_this).parent().parent().parent().parent().remove();
+        }
+
+        $(".editClass").on('click',function(){
+            editClass(this)
+        });
+
+        $(".removeClass").on('click',function(){
+            removeClass(this)
+        });
+
+        var date1 = new Date();
+        date1 = date1.getFullYear() +"-"+(date1.getMonth() +1) + "-" + date1.getDate();
+        $(".user-list").on("mouseenter.link", ".slink .more", function () {
+            $(this).nextAll("ul").show();
+        })
+        .on("mouseleave.link", ".slink", function () {
+            $(this).find("ul").hide();
+        });
+
+        $("body").on("focus.page",".date-picker",function(){
+            $(this).datetimepicker({
+                format: "yyyy-mm-dd",
+                minView:2,
+                autoclose: true,
+                language: "zh-CN"
+            })
+        }).on("focus.page",".date-picker-time",function(){
+            $(this).datetimepicker({
+                format:"HH:mm",
+                language:  'zh-CN',
+                autoclose: 1,
+                startDate: date1,
+                todayHighlight: 1,
+                startView: 1,
+                minView: 0,
+                maxView: 1,
+                forceParse: 0
+            })
+        });
+        //课次新增课
+        $(".addClass").click(function(){
+            //判断当前页面是否还有未保存的课次，如果有则提示不让继续添加
+            var flag = false;
+            $(".date-picker").each(function(){
+                if(!$(this).attr("disabled")){
+                    flag = true;
+                }
+            });
+            if(flag){
+                $('<div class="c-fa">您还有未保存的课次，不能继续添加！</div>').appendTo('body').fadeIn(100).delay(1000).fadeOut(200,function(){
+                    $(this).remove();
+                });
+                return false;
+            }
+            var addLesson = '<tr class="bg-white">'+
+                    '<td width="10%"><input type="text" value="" class="input_width_60 date-picker"/></td>'+
+                    '<td width="10%"><input type="text" value="" class="input_width_40 "/></td>'+
+                    '<td width="10%">' +
+                    '<input type="text" value="上午" class="time-input input_width_40" disabled="disabled" style="display: none">'+
+                    '<select class="time-select"><option value="上午">上午</option><option value="下午">下午</option><option value="全天">全天</option><option value="晚上">晚上</option></select></td>'+
+                    '<td width="15%"><input type="text" value="" class="input_width_15 date-picker-time"/>-'+
+                    '<input type="text" value="" class="input_width_15 date-picker-time"/></td>'+
+                    '<td width="15%"><input type="text" value=""/></td>'+
+                    '<td width="10%"><input type="text" value="" class="input_width_60" maxlength="3" /></td>'+
+                    '<td width="10%"><input type="text" value="" class="input_width_40" maxlength="3"/></td>'+
+                    '<td width="10%"><label><input name="switch-field-2" class="ace ace-switch ace-switch-2" checked="checked" type="checkbox">'+
+                    '<span class="lbl"></span></label></td>'+
+                    '<td class="slink" width="10%"><a href="createLiveAdd-预排课-安排教师.html">安排教师</a>|<a class="more" href="javascript:void(0);">更多</a>'+
+                        '<ul class="none">'+
+                            '<li><a class="toTransaction editClass" href="javascript:;">完成</a></li>'+
+                            '<li><a class="toTransaction removeClass" href="javascript:;">删除</a></li>'+
+                        '</ul></td>'+
+                    '</tr>';
+            $("#bodyHtml").children().last().append(addLesson);
+            $(".editClass").on('click',function(){
+                editClass(this)
+            });
+
+            $(".removeClass").on('click',function(){
+                removeClass(this)
+            });
+
+        });
+        $('.son').sortable({axis:"y"});
+    });
+</script>
+</body>
+</html>
+

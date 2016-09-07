@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-课程管理-问答管理</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12 ">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title clearfix">
+                    <h5>问答管理</h5>  
+                    <div class="ibox-tools">
+                        <a class="btn btn-primary btn-sm " href="QandAmanagement问答管理-未回复.html">未回复</a>
+                        <a class="btn btn-white  btn-sm " href="QandAmanagement问答管理-全部.html">全部</a>
+                    </div> 
+                </div>
+                <div class="ibox-content">
+                      <form method="post" id="searchForm">
+                       <div class="form-group">
+                           <select>
+                              <option>标题</option>
+                              <option>内容</option>
+                              <option>课程编号</option>
+                              <option>课程名</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="identityId" placeholder="">
+                        </div>
+                         <div class="form-group">
+                            <input type="text" name="identityId" placeholder="用户名&姓名">
+                        </div>
+                        <button class="btn btn-primary searchContents">搜索</button>
+                    </form>
+                    <div class="user-list note-list" style="margin-top: 20px;">
+                        <table class="table footTabel  table-center">
+                            <thead>
+                                <tr>
+                                    <th width="36%" >问答<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>课程名称<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>作者<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>查看<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>创建时间<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>操作<span class="fa indicator fa-unsorted"></span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="36%" class="text-left">
+                                        <a href="javascript:;" target="_blank"><strong>为什么没有回放呢</strong></a>
+                                        <div class="short-long-text">
+                                            <div class="short-text text-sm text-muted">我看到这节课已经直播结束了，是不是第二轮所有的课都只能通过直播来学习呢？... <span class="trigger">(展开)</span></div>
+                                            <div class="long-text">我看到这节课已经直播结束了，是不是第二轮所有的课都只能通过直播来学习呢？<span class="trigger">(收起)</span></div>
+                                        </div>
+                                        <div class="text-sm mts">
+                                            <a class="text-success" href="javascript:;" target="_blank">课时9：NUT基础第一周1加课</a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span>心理咨询师基础知识-精讲1611</span>
+                                        <br>
+                                        <span class="text-muted text-sm">基础课程</span>
+                                    </td>
+                                    <td>
+                                        <span>陈佼0402 </span>
+                                    </td>
+                                    <td>20</td>
+                                    <td>2016-09-01 19:00</td>
+                                    <td class="slink">
+                                        <a class="toTransaction" href="userManagement-站内信管理回复.html">回复</a> | <a class="toTransaction remove-qa">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="36%" class="text-left">
+                                        <a href="javascript:;" target="_blank"><strong>为什么没有回放呢</strong></a>
+                                        <div class="short-long-text">
+                                            <div class="short-text text-sm text-muted">我看到这节课已经直播结束了，是不是第二轮所有的课都只能通过直播来学习呢？... <span class="trigger">(展开)</span></div>
+                                            <div class="long-text">我看到这节课已经直播结束了，是不是第二轮所有的课都只能通过直播来学习呢？<span class="trigger">(收起)</span></div>
+                                        </div>
+                                        <div class="text-sm mts">
+                                            <a class="text-success" href="javascript:;" target="_blank">课时9：NUT基础第一周1加课</a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span>心理咨询师基础知识-精讲1612</span>
+                                        <br>
+                                        <span class="text-muted text-sm">一级</span>
+                                    </td>
+                                    <td>
+                                        <span>陈佼0402 </span>
+                                    </td>
+                                    <td>20</td>
+                                    <td>2016-09-01 19:00</td>
+                                    <td class="slink">
+                                        <a class="toTransaction" href="userManagement-站内信管理回复.html">回复</a> | <a class="toTransaction" id="qandea-dlec">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="36%" class="text-left">
+                                        <a href="javascript:;" target="_blank"><strong>为什么没有回放呢</strong></a>
+                                        <div class="short-long-text">
+                                            <div class="short-text text-sm text-muted">我看到这节课已经直播结束了，是不是第二轮所有的课都只能通过直播来学习呢？... <span class="trigger">(展开)</span></div>
+                                            <div class="long-text">我看到这节课已经直播结束了，是不是第二轮所有的课都只能通过直播来学习呢？<span class="trigger">(收起)</span></div>
+                                        </div>
+                                        <div class="text-sm mts">
+                                            <a class="text-success" href="javascript:;" target="_blank">课时9：NUT基础第一周1加课</a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span>心理咨询师基础知识-精讲1613</span>
+                                        <br>
+                                        <span class="text-muted text-sm">二级</span>
+                                    </td>
+                                    <td>
+                                        <span>陈佼0402 </span>
+                                    </td>
+                                    <td>20</td>
+                                    <td>2016-09-01 19:00</td>
+                                    <td class="slink">
+                                        <a class="toTransaction" href="userManagement-站内信管理回复.html">回复</a> | <a class="toTransaction remove-qa">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="36%" class="text-left">
+                                        <a href="javascript:;" target="_blank"><strong>为什么没有回放呢</strong></a>
+                                        <div class="short-long-text">
+                                            <div class="short-text text-sm text-muted">我看到这节课已经直播结束了，是不是第二轮所有的课都只能通过直播来学习呢？... <span class="trigger">(展开)</span></div>
+                                            <div class="long-text">我看到这节课已经直播结束了，是不是第二轮所有的课都只能通过直播来学习呢？<span class="trigger">(收起)</span></div>
+                                        </div>
+                                        <div class="text-sm mts">
+                                            <a class="text-success" href="javascript:;" target="_blank">课时9：NUT基础第一周1加课</a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span>心理咨询师基础知识-精讲1614</span>
+                                        <br>
+                                        <span class="text-muted text-sm">三级</span>
+                                    </td>
+                                    <td>
+                                        <span>陈佼0402 </span>
+                                    </td>
+                                    <td>20</td>
+                                    <td>2016-09-01 19:00</td>
+                                    <td class="slink">
+                                        <a class="toTransaction" href="userManagement-站内信管理回复.html">回复</a> | <a class="toTransaction remove-qa">删除</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="12">
+                                        <ul class="pagination pull-right"><li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li><li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li><li class="footable-page active"><a data-page="0" href="#">1</a></li><li class="footable-page"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li></ul>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script>
+    $(function () {
+        $("#SelectAll").click(function(){
+            if(this.checked){
+                $(".table :checkbox").prop("checked", true);
+            }else{
+                $(".table :checkbox").prop("checked", false);
+            }
+        });
+
+        $(".remove-qa").click(function(){
+            $(this).parent().parent().remove();
+         });
+
+         $(".user-list").on('click', '.short-text', function() {
+            var $short = $(this);
+            $short.slideUp('fast').parents('.short-long-text').find('.long-text').slideDown('fast');
+        });
+
+        $(".user-list").on('click', '.long-text', function() {
+            var $long = $(this);
+            $long.slideUp('fast').parents('.short-long-text').find('.short-text').slideDown('fast');
+        });
+    });
+	 
+</script>
+</body>
+</html>

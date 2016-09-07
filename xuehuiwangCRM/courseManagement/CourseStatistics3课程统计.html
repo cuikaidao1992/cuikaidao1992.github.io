@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-课程管理-课程统计-学习记录</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title clearfix">
+                    <h5>学习记录</h5>
+                    <div class="ibox-tools">
+                        <a class="close-link" onclick="window.history.back(-1)">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                      <form method="post" id="searchForm">
+                       <div class="form-group">
+                           <select>
+                              <option>用户名</option><option>姓名</option><option>手机号</option>
+                           </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="name" name="identityId" placeholder="">
+                        </div>
+                        <button class="btn btn-primary searchContents">搜索</button>
+                    </form>
+                    <div class="user-list" style="margin-top: 20px;">
+                        <table class="table footTabel  table-center">
+                            <thead>
+                                <tr>
+                                    
+                                    <th >用户名<span class="fa indicator fa-unsorted"></span></th>
+                                    <th >姓名<span class="fa indicator fa-unsorted"></span></th>
+                                    <th >上课时间<span class="fa indicator fa-unsorted"></span></th>
+                                    <th >学习时长<span class="fa indicator fa-unsorted"></span></th>
+                                 
+                                  
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td >江陵仙</td>
+                                    <td >李林</td>
+                                    <td >10000</td>
+                                    <td >120分钟</td>
+                                </tr>
+                                 <tr>
+                                    <td >江陵仙</td>
+                                    <td >李林</td>
+                                    <td >10000</td>
+                                    <td >120分钟</td>
+                                </tr>
+                                 <tr>
+                                    <td >江陵仙</td>
+                                    <td >李林</td>
+                                    <td >10000</td>
+                                    <td >120分钟</td>
+                                </tr>
+                                 <tr>
+                                    <td >江陵仙</td>
+                                    <td >李林</td>
+                                    <td >10000</td>
+                                    <td >120分钟</td>
+                                </tr>
+                                 <tr>
+                                    <td >江陵仙</td>
+                                    <td >李林</td>
+                                    <td >10000</td>
+                                    <td >120分钟</td>
+                                </tr>
+                               
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="11">
+                                        <ul class="pagination pull-right"><li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li><li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li><li class="footable-page active"><a data-page="0" href="#">1</a></li><li class="footable-page"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li></ul>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $(function () {
+        $(".user-list").on("mouseenter.link", ".slink .more", function () {
+             $(this).nextAll("ul").show();
+        })
+        .on("mouseleave.link", ".slink", function () {
+            $(this).find("ul").hide();
+        });
+        $("body").on("focus.page",".date-picker",function(){
+            $(this).datetimepicker({
+                format: "yyyy-mm-dd",
+                minView:2,
+                autoclose: true,
+                language: "zh-CN"
+            })
+        });
+    });
+</script>
+</body>
+</html>

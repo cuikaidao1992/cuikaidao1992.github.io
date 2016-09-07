@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-创建通知-课程通知</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+ 
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+       <div class="col-sm-8 col-lg-offset-2">
+            <div class="ibox form-horizontal">
+                <div class="ibox-title clearfix">
+                    <h5>短信通知（班号通知）</h5>
+                </div>
+                <div class="ibox-content ibox-padding">
+                    <form action="" id="commentForm" >
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">课程分类</label>
+                            <div class="col-sm-8 group-print">
+                                <select>
+                                    <option value="">课程分类</option><option value="14">职业资格</option><option value="15">　人力资源管理师</option><option value="16">　　基础知识</option><option value="74">　　一级</option><option value="17">　　二级</option><option value="18">　　三级</option><option value="19">　　实操课</option><option value="25">　公共营养师</option><option value="26">　　基础知识</option><option value="27">　　二级技能</option><option value="28">　　三级技能</option><option value="29">　　实操课</option><option value="20">　心理咨询师</option><option value="21">　　基础知识</option><option value="22">　　二级技能</option><option value="23">　　三级技能</option><option value="24">　　实操课</option><option value="59">　理财规划师</option><option value="116">　　实操课</option><option value="72">　　二级</option><option value="73">　　三级</option><option value="60">　物流管理师</option><option value="68">　　一级</option><option value="69">　　二级</option><option value="70">　　三级</option><option value="61">　采购师</option><option value="64">　　一级</option><option value="65">　　二级</option><option value="66">　　三级</option><option value="30">学历教育</option><option value="31">　自考</option><option value="32">　　北京</option><option value="33">　　上海</option><option value="57">　　天津</option><option value="56">　　陕西</option><option value="35">　　江苏</option><option value="44">　　辽宁</option><option value="36">　　黑龙江</option><option value="45">　　浙江</option><option value="46">　　湖北</option><option value="47">　　安徽</option><option value="48">　　湖南</option><option value="49">　　广东</option><option value="50">　　河北</option><option value="52">　　福建</option><option value="53">　　河南</option><option value="58">　　吉林</option><option value="34">　　山东</option><option value="54">　　四川</option><option value="55">　　江西</option><option value="117">　　山西</option><option value="118">　　重庆</option><option value="82">　成考</option><option value="85">　　成考（高起专文科）</option><option value="86">　　成考（高起专理科）</option><option value="87">　　成考（高起本文科）</option><option value="88">　　成考（高起本理科）</option><option value="89">　　成考（专升本）</option><option value="78">　远程网络教育</option><option value="83">　自考本科公共课</option><option value="84">　公共英语三级</option><option value="5">财会培训</option><option value="6">　会计从业资格证</option><option value="10">　会计职称</option><option value="11">　　会计初级职称</option><option value="12">　　会计中级职称</option><option value="13">　注册会计师</option><option value="1">教师资格证</option><option value="2">　幼儿教师资格证</option><option value="3">　小学教师资格证</option><option value="4">　中学教师资格证</option><option value="91">通关题库</option><option value="92">　人力资源管理师</option><option value="93">　　模拟考场</option><option value="94">　　章节练习</option><option value="95">　　历年真题</option><option value="113">　　教材教辅</option><option value="97">　公共营养师</option><option value="98">　　模拟考场</option><option value="99">　　章节练习</option><option value="100">　　历年真题</option><option value="114">　　教材教辅</option><option value="101">　心理咨询师</option><option value="102">　　模拟考场</option><option value="103">　　章节练习</option><option value="104">　　历年真题</option><option value="115">　　教材教辅</option><option value="105">　建造师</option><option value="106">　　模拟考场</option><option value="107">　　章节练习</option><option value="108">　　历年真题</option><option value="109">　自考</option><option value="110">　　模拟考场</option><option value="111">　　章节练习</option><option value="112">　　历年真题</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">选择班号</label>
+                            <div class="col-sm-6">
+                                <div class="input-box clearfix">
+                                    <input type="text" class="teacher-input over-ellipsis">
+                                    <span class="btn btn-default btn-sm add-teacher">选择班号</span>
+                                </div>
+                                <ul class="teacher-list">
+                                    <li class=""><span class="check-box"><input type="checkbox" class="check-btn">现代企业管理-直播-20160817</span></li>
+                                    <li class=""><span class="check-box"><input type="checkbox" class="check-btn">现代企业管理-直播-20160818</span></li>
+                                    <li class=""><span class="check-box"><input type="checkbox" class="check-btn">现代企业管理-直播-20160819</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">通知数量</label>
+                            <div class="col-sm-8 group-print">
+                                <input type="text" name="user" class="form-control" value="10" disabled="disabled">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">发送数量</label>
+                            <div class="col-sm-6 group-print">
+                                <input type="text" name="user" class="form-control" value="200" disabled="disabled">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">选择模板</label>
+                            <div class="col-sm-8 group-print">
+                                <select class="mesType">
+                                    <option value="0">--短信类型--</option>
+                                    <option value="1">用户注册</option>
+                                    <option value="2">注册成功</option>
+                                    <option value="3">手机绑定</option>
+                                    <option value="4">修改手机号</option>
+                                    <option value="5">登录密码重置/忘记密码</option>
+                                    <option value="6">支付密码重置</option>
+                                    <option value="7">课程购买/班级购买</option>
+                                    <option value="8">账号开通通知</option>
+                                    <option value="9">开通通知</option>
+                                    <option value="10">直播开播前通知</option>
+                                    <option value="11">公开课发布通知</option>
+                                    <option value="12">微信公众号</option>
+                                    <option value="13">报考提醒</option>
+                                    <option value="14">准考证提醒</option>
+                                    <option value="15">考试提醒</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">发送内容</label>
+                            <div class="col-sm-6">
+                                <textarea name="comment" class="form-control tem-content" disabled="disabled" style="min-height: 80px"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">提交</button>
+                                <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true" onclick="window.history.back(-1)">返回</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script>
+    $(".add-teacher").click(function(){
+        $(".teacher-list").slideToggle()
+    });
+    var arr=[];
+    $(".check-btn").click(function(){
+        if(this.checked){
+            arr.push($(this).parent().text());
+        }else {
+            arr.splice(-1,1);
+        }
+        var str=arr.join(";");
+        $(".teacher-input").val(str);
+    });
+    var SMSData=[{
+        template:"验证码******（30分钟内有效），请尽快完成验证！"
+    },{
+        template:"欢迎加入学慧网，和志同道合的同学，一起畅快学习！"
+    },{
+        template:"验证码******，请您尽快完成绑定！"
+    },{
+        template:"验证码******，您正在修改学慧网账户的验证手机，请勿泄露！"
+    },{
+        template:"验证码******，您在学慧网官网申请了找回密码服务，请勿泄露！"
+    },{
+        template:"验证码******，您在学慧网官网申请了支付密码重置服务，请勿泄露！"
+    },{
+        template:"您已成功购买课程《营养学堂》，支付120元，马上开始学习之旅！"
+    },{
+        template:"您已成功报名【营养学堂】课程，网校账户已经开通，账户名称是报名时所使用的手机号，初始密码是手机号后六位，请及时登录网校查看。"
+    },{
+        template:"同学您好！{2016年11月}考期首次开课时间{8月11日19:30分}，请您安排好时间准时参加学习，如有疑问请在平台中联系客服或班主任。"
+    },{
+        template:"课程《营养学堂》第3课时XXXXXXXXX,将于1小时后开始直播,请您记得准时参加学习，勿缺课!"
+    },{
+        template:"课程《营养学堂》第3课时XXXXXXXXX,将于明天19:30分开始直播,请您记得准时参加学习，勿缺课!"
+    },{
+        template:"同学您好！为了感谢您对学慧网长期以来的支持，学慧网免费为您奉上大型公开课【营养之道谁与争锋】，开播时间{8月11日19:30分}，热诚希望您参加。"
+    },{
+        template:'同学您好！请您及时添加学慧网微信公众号“学慧网”(登陆微课堂和查询课表)和“学慧网学员之家”（知识点推送和练习题）,添加时需备注好“姓名+项目级别”。“学慧网学员之家”中点击查看历史消息即可做题，您直接把答案按照以下格式发送到微信对话框即可，回复"日期+学科+答案"即可，连续四周答对题，即可获赠习题册'
+    },{
+        template:"同学您好！{2016年11月}考期{自考}报考已开始，请登陆学慧网了解详细报考信息，并在规定时间内完成报考，勿影响考试。如有疑问请联系客服或班主任。"
+    },{
+        template:"同学您好!{2016年11月}考期将至{8月11日}准考证已经开始打印或领取，请登陆报考系统抓紧时间打印或去指定地点领取，勿影响考试，如有疑问请联系客服或班主任。"
+    },{
+        template:"温馨提示：{2016年11月}考期考试将于{11月12日}开考，请参加考试的同学，提前准备好身份证、准考证和考试用具，熟悉考点路线，按时应考。如有疑问请联系客服或班主任。"
+    }];
+    $(".mesType").change(function(){
+        if($(".mesType option:selected").val()==0){
+            $(".tem-content").val("")
+        }else {
+            var str=SMSData[$(".mesType option:selected").val()-1].template;
+            $(".tem-content").val(str)
+        }
+    });
+</script>
+</body>
+</html>

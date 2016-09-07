@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-直播管理</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title clearfix">
+                    <h5>直播管理</h5>
+                    <div class="ibox-tools">
+                        <a class="btn btn-white btn-sm" href="liveManagemnt-直播管理-未开始.html">未开始</a>
+                        <a class="btn btn-primary btn-sm" href="liveManagement-直播管理-进行中.html">进行中</a>
+                        <a class="btn btn-white btn-sm" href="liveManagement-直播管理-已结束.html">已结束</a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form method="post" id="searchForm">
+                        <div class="form-group">
+                            <select>
+                                <option value="courseTitle">课程名</option><option value="lessonTitle">课时名</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="email" name="identityId" placeholder="关键词">
+                        </div>
+                        <div class="form-group">
+                            直播开始时间
+                            <input type="text" value="2016-1-1" name="startTime" style="width: 120px;" class="date-picker from"><em class="time-link">到</em>
+                            <input type="text" value="2016-1-1" style="width: 120px;" name="endTime" class="date-picker to">
+                        </div>
+                        <button class="btn btn-primary searchContents">搜索</button>
+                    </form>
+                    <div class="user-list" style="margin-top: 20px;">
+                        <table class="table footTabel  table-center">
+                            <thead>
+                                <tr>
+                                    <th>直播时间<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>班号名称<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>课时名称<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>学员数量<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>时长<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>授课教师<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>当前最大参与人数<span class="fa indicator fa-unsorted"></span></th>
+                                    <th width="10%">操作<span class="fa indicator fa-unsorted"></span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2016-09-01 19:00</td>
+                                <td>现代企业管理-直播-20160817</td>
+                                <td>
+                                    <span>PSY第1章基础心理学第二轮</span>
+                                    <br>
+                                    <span class="text-muted text-sm">现代企业管理第一讲</span>
+                                </td>
+                                <td>300</td>
+                                <td>180</td>
+                                <td>学慧网老师</td>
+                                <td>500</td>
+                                <td class="slink">
+                                    <a href="liveManagement-直播管理-直播端.html">直播端</a>|<a class="more" href="#liveID" data-toggle="modal">直播端ID</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2016-09-01 19:00</td>
+                                <td>现代企业管理-直播-20160817</td>
+                                <td>
+                                    <span>PSY第1章基础心理学第二轮</span>
+                                    <br>
+                                    <span class="text-muted text-sm">现代企业管理第一讲</span>
+                                </td>
+                                <td>300</td>
+                                <td>180</td>
+                                <td>学慧网老师</td>
+                                <td>500</td>
+                                <td class="slink">
+                                    <a href="liveManagement-直播管理-直播端.html">直播端</a>|<a class="more" href="#liveID" data-toggle="modal">直播端ID</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2016-09-01 19:00</td>
+                                <td>现代企业管理-直播-20160817</td>
+                                <td>
+                                    <span>PSY第1章基础心理学第二轮</span>
+                                    <br>
+                                    <span class="text-muted text-sm">现代企业管理第一讲</span>
+                                </td>
+                                <td>300</td>
+                                <td>180</td>
+                                <td>学慧网老师</td>
+                                <td>500</td>
+                                <td class="slink">
+                                    <a href="liveManagement-直播管理-直播端.html">直播端</a>|<a class="more" href="#liveID" data-toggle="modal">直播端ID</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="10">
+                                    <ul class="pagination pull-right">
+                                        <li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li>
+                                        <li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li>
+                                        <li class="footable-page active"><a data-page="0" href="#">1</a></li>
+                                        <li class="footable-page"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="liveID" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3>直播间ID</h3>
+            </div>
+            <div class="modal-body form-horizontal">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label"></label>
+                        <div class="col-sm-6 group-print">
+                            <p class="idNum">5646123132164964361</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="publish" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">发布课程</h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <form action="">
+                    <p class="text-warning">您确定要发布此课程吗？</p>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button class="btn btn-primary col-sm-5 btn-submit" type="submit">确定</button>
+                            <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="closeCourse" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">发布课程</h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <form action="">
+                    <p class="text-warning">您确定要关闭此课程吗？课程关闭后，仍然还在有效期内的学员，将可以继续学习。</p>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button class="btn btn-primary col-sm-5 btn-submit" type="submit">确定</button>
+                            <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $(function () {
+        $(".user-list").on("mouseenter.link", ".slink .more", function () {
+                    $(this).nextAll("ul").show();
+                })
+                .on("mouseleave.link", ".slink", function () {
+                    $(this).find("ul").hide();
+                });
+        $("body").on("focus.page",".date-picker",function(){
+            $(this).datetimepicker({
+                format: "yyyy-mm-dd",
+                minView:2,
+                autoclose: true,
+                language: "zh-CN"
+            })
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-课程管理-笔记管理</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title clearfix">
+                    <h5>笔记管理</h5>
+                </div>
+                <div class="ibox-content">
+                    <form method="post" id="searchForm">
+                        <div class="form-group">
+                            <select>
+                                <option value="">课程分类</option><option value="14">职业资格</option><option value="15">　人力资源管理师</option><option value="16">　　基础知识</option><option value="74">　　一级</option><option value="17">　　二级</option><option value="18">　　三级</option><option value="19">　　实操课</option><option value="25">　公共营养师</option><option value="26">　　基础知识</option><option value="27">　　二级技能</option><option value="28">　　三级技能</option><option value="29">　　实操课</option><option value="20">　心理咨询师</option><option value="21">　　基础知识</option><option value="22">　　二级技能</option><option value="23">　　三级技能</option><option value="24">　　实操课</option><option value="59">　理财规划师</option><option value="116">　　实操课</option><option value="72">　　二级</option><option value="73">　　三级</option><option value="60">　物流管理师</option><option value="68">　　一级</option><option value="69">　　二级</option><option value="70">　　三级</option><option value="61">　采购师</option><option value="64">　　一级</option><option value="65">　　二级</option><option value="66">　　三级</option><option value="30">学历教育</option><option value="31">　自考</option><option value="32">　　北京</option><option value="33">　　上海</option><option value="57">　　天津</option><option value="56">　　陕西</option><option value="35">　　江苏</option><option value="44">　　辽宁</option><option value="36">　　黑龙江</option><option value="45">　　浙江</option><option value="46">　　湖北</option><option value="47">　　安徽</option><option value="48">　　湖南</option><option value="49">　　广东</option><option value="50">　　河北</option><option value="52">　　福建</option><option value="53">　　河南</option><option value="58">　　吉林</option><option value="34">　　山东</option><option value="54">　　四川</option><option value="55">　　江西</option><option value="117">　　山西</option><option value="118">　　重庆</option><option value="82">　成考</option><option value="85">　　成考（高起专文科）</option><option value="86">　　成考（高起专理科）</option><option value="87">　　成考（高起本文科）</option><option value="88">　　成考（高起本理科）</option><option value="89">　　成考（专升本）</option><option value="78">　远程网络教育</option><option value="83">　自考本科公共课</option><option value="84">　公共英语三级</option><option value="5">财会培训</option><option value="6">　会计从业资格证</option><option value="10">　会计职称</option><option value="11">　　会计初级职称</option><option value="12">　　会计中级职称</option><option value="13">　注册会计师</option><option value="1">教师资格证</option><option value="2">　幼儿教师资格证</option><option value="3">　小学教师资格证</option><option value="4">　中学教师资格证</option><option value="91">通关题库</option><option value="92">　人力资源管理师</option><option value="93">　　模拟考场</option><option value="94">　　章节练习</option><option value="95">　　历年真题</option><option value="113">　　教材教辅</option><option value="97">　公共营养师</option><option value="98">　　模拟考场</option><option value="99">　　章节练习</option><option value="100">　　历年真题</option><option value="114">　　教材教辅</option><option value="101">　心理咨询师</option><option value="102">　　模拟考场</option><option value="103">　　章节练习</option><option value="104">　　历年真题</option><option value="115">　　教材教辅</option><option value="105">　建造师</option><option value="106">　　模拟考场</option><option value="107">　　章节练习</option><option value="108">　　历年真题</option><option value="109">　自考</option><option value="110">　　模拟考场</option><option value="111">　　章节练习</option><option value="112">　　历年真题</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option>内容</option><option>课程编号</option><option>课程名</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="email" name="identityId" placeholder="关键词">
+                        </div>
+                        <span class="divider"></span>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="author" value="" placeholder="用户名 / 姓名">
+                        </div>
+                        <button class="btn btn-primary searchContents">搜索</button>
+                    </form>
+                    <div class="user-list note-list" style="margin-top: 20px;">
+                        <table class="table footTabel  table-center">
+                            <thead>
+                            <tr>
+                                <th width="40%">内容<span class="fa indicator fa-unsorted"></span></th>
+                                <th>课程名称<span class="fa indicator fa-unsorted"></span></th>
+                                <th>作者<span class="fa indicator fa-unsorted"></span></th>
+                                <th>创建时间<span class="fa indicator fa-unsorted"></span></th>
+                                <th>操作<span class="fa indicator fa-unsorted"></span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-left">
+                                    <div class="short-long-text">
+                                        <div class="short-text" style="display: block;">第一节 &nbsp;马克思主义中国化及其发展&nbsp;&nbsp; 一、马克思主义中国化的提出1、马克思主义中国化的过程（1）1935年遵义会议确立了毛泽东在党得的实际领导地位（2)1938年，毛泽东在党的六届六中全会上作的题为... <span class="trigger">(展开)</span></div>
+                                        <div class="long-text" style="display: none;"><p>第一节 &nbsp;马克思主义中国化及其发展&nbsp;</p>
+
+                                            <p>&nbsp; 一、马克思主义中国化的提出</p>
+
+                                            <p>1、马克思主义中国化的过程</p>
+
+                                            <p>（1）1935年遵义会议确立了毛泽东在党得的实际领导地位</p>
+
+                                            <p>（2)1938年，毛泽东在党的六届六中全会上作的题为《论新阶段》的政治报中最先提出了</p>
+
+                                            <p>“马克思主义中国化”这个命题</p>
+
+                                            <p>（3）就全党来讲，则是在延安整风以后。刘少奇在党阐述了马克思主义中国的思想。党的七大党章指出，毛泽东东思想是马克思主义中国化的第一个重大理论成果是“中国化的马克思主义”。</p>
+
+                                            <p>为什么要实现马克思主义中国化？</p>
+
+                                            <p>答：第一，实现马克思主义中国化，是解决中国问题的需要</p>
+
+                                            <p>第二，马克思主义中国化是马克思主义理论的内在要求</p>
+
+                                            <p>马克思主义中国化的科学内涵是什么？</p>
+
+                                            <p>运用马克思主义基本原理，解决中国的实际问题。</p>
+
+                                            <p>把中国的经验提升为中国话的马克思理论成果。</p>
+
+                                            <p>把马克思主义用中国民族形式表达出来。</p>
+
+                                            <p>三、马克思主义中国化两大理论成果 毛泽东思想和中国特社会主义理论体系</p>
+
+                                            <p>毛泽东思想活的灵魂：实事求是（精髓）、群众（路线基本和基本方法）、独立自主(根本立足点）</p>
+
+                                            <p>毛泽东思想的科学含义：</p>
+
+                                            <p>马克思主义在中国的运用和发展</p>
+
+                                            <p>被实践证明了的关于中国革命和建设正确理论原则经验总结</p>
+
+                                            <p>中国共产党集体智慧的结晶</p> <span class="trigger">(收起)</span></div>
+                                    </div>
+                                    <div class="text-sm mts">
+                                        <a class="text-success" href="JavaScript:;" target="_blank">课时1：毛泽东思想和中国特色社会主义理论体系概论（第一讲）</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span>PSY第1章基础心理学第二轮</span>
+                                    <br>
+                                    <span class="text-muted text-sm">心理咨询师基础知识-精讲1611</span>
+                                </td>
+                                <td>
+                                    <span>陈佼0402 </span>
+                                    <br>
+                                    <span class="text-muted text-sm">2016-8-29 20:09</span>
+                                </td>
+                                <td>2016-09-01 19:00</td>
+                                <td class="slink">
+                                    <a href="JavaScript:;" class="remove-notes">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <div class="short-long-text">
+                                        <div class="short-text" style="display: block;">第一节 &nbsp;马克思主义中国化及其发展&nbsp;&nbsp; 一、马克思主义中国化的提出1、马克思主义中国化的过程（1）1935年遵义会议确立了毛泽东在党得的实际领导地位（2)1938年，毛泽东在党的六届六中全会上作的题为... <span class="trigger">(展开)</span></div>
+                                        <div class="long-text" style="display: none;"><p>第一节 &nbsp;马克思主义中国化及其发展&nbsp;</p>
+
+                                            <p>&nbsp; 一、马克思主义中国化的提出</p>
+
+                                            <p>1、马克思主义中国化的过程</p>
+
+                                            <p>（1）1935年遵义会议确立了毛泽东在党得的实际领导地位</p>
+
+                                            <p>（2)1938年，毛泽东在党的六届六中全会上作的题为《论新阶段》的政治报中最先提出了</p>
+
+                                            <p>“马克思主义中国化”这个命题</p>
+
+                                            <p>（3）就全党来讲，则是在延安整风以后。刘少奇在党阐述了马克思主义中国的思想。党的七大党章指出，毛泽东东思想是马克思主义中国化的第一个重大理论成果是“中国化的马克思主义”。</p>
+
+                                            <p>为什么要实现马克思主义中国化？</p>
+
+                                            <p>答：第一，实现马克思主义中国化，是解决中国问题的需要</p>
+
+                                            <p>第二，马克思主义中国化是马克思主义理论的内在要求</p>
+
+                                            <p>马克思主义中国化的科学内涵是什么？</p>
+
+                                            <p>运用马克思主义基本原理，解决中国的实际问题。</p>
+
+                                            <p>把中国的经验提升为中国话的马克思理论成果。</p>
+
+                                            <p>把马克思主义用中国民族形式表达出来。</p>
+
+                                            <p>三、马克思主义中国化两大理论成果 毛泽东思想和中国特社会主义理论体系</p>
+
+                                            <p>毛泽东思想活的灵魂：实事求是（精髓）、群众（路线基本和基本方法）、独立自主(根本立足点）</p>
+
+                                            <p>毛泽东思想的科学含义：</p>
+
+                                            <p>马克思主义在中国的运用和发展</p>
+
+                                            <p>被实践证明了的关于中国革命和建设正确理论原则经验总结</p>
+
+                                            <p>中国共产党集体智慧的结晶</p> <span class="trigger">(收起)</span></div>
+                                    </div>
+                                    <div class="text-sm mts">
+                                        <a class="text-success" href="JavaScript:;" target="_blank">课时1：毛泽东思想和中国特色社会主义理论体系概论（第一讲）</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span>PSY第1章基础心理学第二轮</span>
+                                    <br>
+                                    <span class="text-muted text-sm">心理咨询师基础知识-精讲1611</span>
+                                </td>
+                                <td>
+                                    <span>陈佼0402 </span>
+                                    <br>
+                                    <span class="text-muted text-sm">2016-8-29 20:09</span>
+                                </td>
+                                <td>2016-09-01 19:00</td>
+                                <td class="slink">
+                                    <a href="JavaScript:;" class="remove-notes">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <div class="short-long-text">
+                                        <div class="short-text" style="display: block;">第一节 &nbsp;马克思主义中国化及其发展&nbsp;&nbsp; 一、马克思主义中国化的提出1、马克思主义中国化的过程（1）1935年遵义会议确立了毛泽东在党得的实际领导地位（2)1938年，毛泽东在党的六届六中全会上作的题为... <span class="trigger">(展开)</span></div>
+                                        <div class="long-text" style="display: none;"><p>第一节 &nbsp;马克思主义中国化及其发展&nbsp;</p>
+
+                                            <p>&nbsp; 一、马克思主义中国化的提出</p>
+
+                                            <p>1、马克思主义中国化的过程</p>
+
+                                            <p>（1）1935年遵义会议确立了毛泽东在党得的实际领导地位</p>
+
+                                            <p>（2)1938年，毛泽东在党的六届六中全会上作的题为《论新阶段》的政治报中最先提出了</p>
+
+                                            <p>“马克思主义中国化”这个命题</p>
+
+                                            <p>（3）就全党来讲，则是在延安整风以后。刘少奇在党阐述了马克思主义中国的思想。党的七大党章指出，毛泽东东思想是马克思主义中国化的第一个重大理论成果是“中国化的马克思主义”。</p>
+
+                                            <p>为什么要实现马克思主义中国化？</p>
+
+                                            <p>答：第一，实现马克思主义中国化，是解决中国问题的需要</p>
+
+                                            <p>第二，马克思主义中国化是马克思主义理论的内在要求</p>
+
+                                            <p>马克思主义中国化的科学内涵是什么？</p>
+
+                                            <p>运用马克思主义基本原理，解决中国的实际问题。</p>
+
+                                            <p>把中国的经验提升为中国话的马克思理论成果。</p>
+
+                                            <p>把马克思主义用中国民族形式表达出来。</p>
+
+                                            <p>三、马克思主义中国化两大理论成果 毛泽东思想和中国特社会主义理论体系</p>
+
+                                            <p>毛泽东思想活的灵魂：实事求是（精髓）、群众（路线基本和基本方法）、独立自主(根本立足点）</p>
+
+                                            <p>毛泽东思想的科学含义：</p>
+
+                                            <p>马克思主义在中国的运用和发展</p>
+
+                                            <p>被实践证明了的关于中国革命和建设正确理论原则经验总结</p>
+
+                                            <p>中国共产党集体智慧的结晶</p> <span class="trigger">(收起)</span></div>
+                                    </div>
+                                    <div class="text-sm mts">
+                                        <a class="text-success" href="JavaScript:;" target="_blank">课时1：毛泽东思想和中国特色社会主义理论体系概论（第一讲）</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span>PSY第1章基础心理学第二轮</span>
+                                    <br>
+                                    <span class="text-muted text-sm">心理咨询师基础知识-精讲1611</span>
+                                </td>
+                                <td>
+                                    <span>陈佼0402 </span>
+                                    <br>
+                                    <span class="text-muted text-sm">2016-8-29 20:09</span>
+                                </td>
+                                <td>2016-09-01 19:00</td>
+                                <td class="slink">
+                                    <a href="JavaScript:;" class="remove-notes">删除</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="10">
+                                    <ul class="pagination pull-right"><li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li><li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li><li class="footable-page active"><a data-page="0" href="#">1</a></li><li class="footable-page"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li></ul>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $("#SelectAll").click(function(){
+        if(this.checked){
+            $(".table :checkbox").prop("checked", true);
+        }else{
+            $(".table :checkbox").prop("checked", false);
+        }
+    });
+    $(".user-list").on('click', '.short-text', function() {
+        var $short = $(this);
+        $short.slideUp('fast').parents('.short-long-text').find('.long-text').slideDown('fast');
+    });
+
+    $(".user-list").on('click', '.long-text', function() {
+        var $long = $(this);
+        $long.slideUp('fast').parents('.short-long-text').find('.short-text').slideDown('fast');
+    });
+    $(".remove-notes").click(function(){
+        $(this).parent().parent().remove()
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-课程管理-创建直播</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="ibox">
+                <div class="ibox-head clearfix">
+                    <div class="pull-left">课程名称 ： 人力资源管理</div>
+                    <div class="sum pull-left"><span>授课类型：直播</span></div>
+                    <div class="price pull-left">价格：0.0元</div>
+                    <button class="btn btn-primary public_course pull-right" style="padding: 4px 12px;margin-right: 15px">发布</button>
+                </div>
+                <div class="ibox-content ibox-padding">
+                    <ul class="set-nav-head">
+                        <li>
+                            <a href="createLiveAdd-课程管理-基本信息.html">基本信息</a>
+                        </li>
+                        <li>
+                            <a href="createLiveAdd-课程管理-课程详情.html">课程详情</a>
+                        </li>
+                        <li>
+                            <a href="createLiveAdd-课程管理-课程内容.html">课程内容</a>
+                        </li>
+                        <li>
+                            <a href="createLiveAdd-课程管理-排课表.html">排课表</a>
+                        </li>
+                        <li>
+                            <a href="createLiveAdd-课程管理-学员管理.html">学员管理</a>
+                        </li>
+                        <li class="tab-cur">
+                            <a href="createLiveAdd-课程管理-课程资料.html">课程资料</a>
+                        </li>
+                        <li class="last">
+                            <a href="createLiveAdd-课程管理-课程资料.html">预览</a>
+                        </li>
+                    </ul>
+                    <div class="u-wrap classes">
+                        <div class="mainbackground nopadding">
+                            <div class="heading clearfix">
+                                <div class="btn-list pull-right">
+                                    <span><a href="#upload" data-toggle="modal" class="btn btn-primary btn-sm addStudent">上传资料</a></span>
+                                </div>
+                            </div>
+                            <div class="user-list">
+                                <table class="table" id="tableList">
+                                    <thead>
+                                        <tr>
+                                            <th>课程管理<span class="fa indicator fa-unsorted"></span></th>
+                                            <th>资料名称<span class="fa indicator fa-unsorted"></span></th>
+                                            <th>资料类型<span class="fa indicator fa-unsorted"></span></th>
+                                            <th>资料大小<span class="fa indicator fa-unsorted"></span></th>
+                                            <th>上传人<span class="fa indicator fa-unsorted"></span></th>
+                                            <th>上传时间<span class="fa indicator fa-unsorted"></span></th>
+                                            <th>操作<span class="fa indicator fa-unsorted"></span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span>企业人力资源管理师三级</span>
+                                                <br>
+                                                <span class="text-muted text-sm">三级</span>
+                                            </td>
+                                            <td><input type="text" value="绩效管理二级（学员）.pdf" class="dataName" disabled="disabled"></td>
+                                            <td>教材</td>
+                                            <td>697.10KB</td>
+                                            <td>管理员1</td>
+                                            <td>2016-08-27 09:32:09</td>
+                                            <td class="slink">
+                                                <a href="javascript:;">更新</a>|<a class="more" href="javascript:void(0);">更多</a>
+                                                <ul class="none">
+                                                    <li>
+                                                        <a class="toTransaction edit-btn" href="#">编辑</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="toTransaction remove-item" href="#">删除</a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="pages pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <button class="btn btn-primary col-sm-offset-1 col-sm-3 btn-submit" id="submit" type="submit">保存</button>
+                            <button class="btn btn-white col-sm-3 col-sm-offset-1" onclick="window.history.back(-1)">返回</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade top in" aria-hidden="false" id="upload">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">资料上传</h4>
+            </div>
+            <div class="modal-body">
+                <form id="settings-password-form" class="form-horizontal" method="post" novalidate="novalidate" data-widget-cid="widget-1">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">课程名称</label>
+                        <div class="col-sm-6 group-print">
+                            <input type="text" name="user" class="form-control" placeholder="人力资源管理" required="ture" disabled="disabled">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">资料类型</label>
+                        <div class="col-sm-6 group-print">
+                            <select style="width: 100%">
+                                <option value="COURSE_RESOURCE_TEACHING">教材</option>
+                                <option value="COURSE_RESOURCE_SUPPLY">教辅</option>
+                                <option value="COURSE_RESOURCE_SUPPLY">课件</option>
+                                <option value="COURSE_RESOURCE_OTHER">其他</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">课程资料</label>
+                        <div class="col-sm-6 group-print">
+                            <span class="btn btn-white mt">上传课程资料</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p style="padding-left:25px">
+                            <span style="color:red">支持上传类型:doc,pdf,xls,ppt,docx,pptx,xlsx,zip,rar</span><br>
+                            <span style="color:red">* 上传资料大小限制100M内</span>
+                        </p>
+                    </div>
+                    <div class="submit-btn">
+                        <button type="submit" class="btn btn-primary">提交</button>
+                        <a class="btn btn-link back"  data-dismiss="modal" aria-hidden="true" href="javascript:;">返回</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $(function () {
+        $(".user-list").on("mouseenter.link", ".slink .more", function () {
+            $(this).nextAll("ul").show();
+        })
+        .on("mouseleave.link", ".slink", function () {
+            $(this).find("ul").hide();
+        });
+        $(".edit-btn").click(function(){
+            if($(this).html()=="编辑"){
+                $(this).html("完成");
+                $(this).parent().parent().parent().parent().find("input").removeAttr("disabled")
+            }else {
+                $(this).html("编辑");
+                $(this).parent().parent().parent().parent().find("input").attr("disabled",true)
+            }
+        });
+        $(".remove-item").click(function(){
+            $(this).parent().parent().parent().parent().remove()
+        })
+    });
+</script>
+</body>
+</html>

@@ -11,80 +11,550 @@
     <link href="css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
     <link href="css/animate.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.min.css" rel="stylesheet" type="text/css">
-    <link href="css/welcome.css" rel="stylesheet" type="text/css">
+    <link href="js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
 </head>
-
 <body class="gray-bg">
-    <div class="wrapper wrapper-content animated fadeInRight">
-        <div class="social grid">
-            <div class="grid-info">
-                <div class="col-md-3 top-comment-grid">
-                    <div class="comments likes">
-                        <div class="comments-icon">
-                            <i class="fa fa-facebook"></i>
-                        </div>
-                        <div class="comments-info likes-info">
-                            <h3>95</h3>
-                            <a href="#">新增学员</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="setModal cl-backg" >
+                <div class="ibox-title">
+                    <h5>当前在线</h5>
                 </div>
-                <div class="col-md-3 top-comment-grid">
-                    <div class="comments">
-                        <div class="comments-icon">
-                            <i class="fa fa-comments"></i>
-                        </div>
-                        <div class="comments-info">
-                            <h3>12</h3>
-                            <a href="#">新增订单</a>
-                        </div>
-                        <div class="clearfix"> </div>
+                <div class="ibox-content">
+                    <div id="analysis-chart-line" class="pic-sty"></div>
+                    <div class="toji">
+                        <i class="cl-org" style="margin-left:40px"></i><span class="tj-text">当前在线人数</span>
+                        <i class="cl-pink"></i><span class="tj-text">登陆人数</span>
+                        <i class="cl-blue2"></i><span class="tj-text">付费人数</span>
                     </div>
-                </div>
-                <div class="col-md-3 top-comment-grid">
-                    <div class="comments tweets">
-                        <div class="comments-icon">
-                            <i class="fa fa-twitter"></i>
-                        </div>
-                        <div class="comments-info tweets-info">
-                            <h3>27</h3>
-                            <a href="#">新增活动</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                <div class="col-md-3 top-comment-grid">
-                    <div class="comments views">
-                        <div class="comments-icon">
-                            <i class="fa fa-eye"></i>
-                        </div>
-                        <div class="comments-info views-info">
-                            <h3>55</h3>
-                            <a href="#">新增课程</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
-        <div ui-view="" class="ng-scope">
-            <div style=" margin:20px;" class="ng-scope">
-                <div class="header clearfix">
-                <div class="label label-primary line-title" style="font-size:18px; background:none; color:#222222;">图表预览</div>
-                <div class="subtitle">
-                    <span ng-click="teamInfo={}">近10日登录日志统计图表</span>
                 </div>
             </div>
-            <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto;  border: 1px solid #ccc" data-highcharts-chart="1"><div class="highcharts-container" id="highcharts-4" style="position: relative; overflow: hidden; width: 1661px; height: 398px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="1661" height="398"><desc>Created with Highcharts 4.1.9</desc><defs><clipPath id="highcharts-5"><rect x="0" y="0" width="1583" height="263"></rect></clipPath></defs><rect x="0" y="0" width="1661" height="398" strokeWidth="0" fill="#FFFFFF" class=" highcharts-background"></rect><g class="highcharts-grid" zIndex="1"></g><g class="highcharts-grid" zIndex="1"><path fill="none" d="M 68 316.5 L 1651 316.5" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 68 272.5 L 1651 272.5" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 68 228.5 L 1651 228.5" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 68 185.5 L 1651 185.5" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 68 141.5 L 1651 141.5" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 68 97.5 L 1651 97.5" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 68 52.5 L 1651 52.5" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path></g><g class="highcharts-axis" zIndex="2"><path fill="none" d="M 83.5 316 L 83.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 169.5 316 L 169.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 255.5 316 L 255.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 341.5 316 L 341.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 427.5 316 L 427.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 514.5 316 L 514.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 600.5 316 L 600.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 686.5 316 L 686.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 772.5 316 L 772.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 859.5 316 L 859.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 945.5 316 L 945.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 1031.5 316 L 1031.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 1117.5 316 L 1117.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 1203.5 316 L 1203.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 1290.5 316 L 1290.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 1376.5 316 L 1376.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 1462.5 316 L 1462.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 1548.5 316 L 1548.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 1634.5 316 L 1634.5 326" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 68 316.5 L 1651 316.5" stroke="#C0D0E0" stroke-width="1" zIndex="7" visibility="visible"></path></g><g class="highcharts-axis" zIndex="2"><text x="27.828125" zIndex="7" text-anchor="middle" transform="translate(0,0) rotate(270 27.828125 184.5)" class=" highcharts-yaxis-title" style="color:#707070;fill:#707070;" visibility="visible" y="184.5"><tspan>Units</tspan></text></g><g class="highcharts-series-group" zIndex="3"><path fill="rgba(124,181,236,0.25)" d="M 0 0"></path><g class="highcharts-series highcharts-series-0" visibility="visible" zIndex="0.1" transform="translate(68,53) scale(1 1)" clip-path="url(#highcharts-5)"><path fill="rgba(124,181,236,0.75)" d="M 15.519607843137255 184.1 L 187.95969498910677 227.93333333333334 L 360.39978213507624 214.78333333333333 L 532.8398692810457 127.11666666666665 L 705.2799564270152 78.89999999999998 L 877.7200435729848 166.56666666666666 L 1050.1601307189542 170.95 L 1222.6002178649237 48.21666666666664 L 1395.0403050108932 249.85 L 1567.4803921568628 236.7 L 1567.4803921568628 263 L 15.519607843137255 263" zIndex="0"></path><path fill="none" d="M 15.519607843137255 184.1 L 187.95969498910677 227.93333333333334 L 360.39978213507624 214.78333333333333 L 532.8398692810457 127.11666666666665 L 705.2799564270152 78.89999999999998 L 877.7200435729848 166.56666666666666 L 1050.1601307189542 170.95 L 1222.6002178649237 48.21666666666664 L 1395.0403050108932 249.85 L 1567.4803921568628 236.7" stroke="#7cb5ec" stroke-width="2" zIndex="1" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M 5.519607843137255 184.1 L 15.519607843137255 184.1 L 187.95969498910677 227.93333333333334 L 360.39978213507624 214.78333333333333 L 532.8398692810457 127.11666666666665 L 705.2799564270152 78.89999999999998 L 877.7200435729848 166.56666666666666 L 1050.1601307189542 170.95 L 1222.6002178649237 48.21666666666664 L 1395.0403050108932 249.85 L 1567.4803921568628 236.7 L 1577.4803921568628 236.7" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22" zIndex="2" class=" highcharts-tracker" style=""></path></g><g class="highcharts-markers highcharts-series-0 highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(68,53) scale(1 1)" clip-path="url(#highcharts-6)" style=""><path fill="#7cb5ec" d="M 532 123.11666666666665 C 537.328 123.11666666666665 537.328 131.11666666666665 532 131.11666666666665 C 526.672 131.11666666666665 526.672 123.11666666666665 532 123.11666666666665 Z" stroke="#FFFFFF" stroke-width="1" visibility="hidden"></path></g></g><text x="831" text-anchor="middle" class="highcharts-title" zIndex="4" style="color:#333333;font-size:18px;fill:#333333;width:1597px;" y="24">近十日登录日志统计图</text><g class="highcharts-legend" zIndex="7" transform="translate(788,354)"><g zIndex="1"><g><g class="highcharts-legend-item" zIndex="1" transform="translate(8,3)"><text x="21" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" zIndex="2" y="15">登录日志</text><rect x="0" y="4" width="16" height="12" zIndex="3" fill="#7cb5ec"></rect></g></g></g></g><g class="highcharts-axis-labels highcharts-xaxis-labels" zIndex="7"><text x="83.51960784313725" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:81px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="335" opacity="1">2016-08-08</text><text x="255.95969498910677" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:81px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="335" opacity="1">2016-08-07</text><text x="428.39978213507624" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:81px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="335" opacity="1">2016-08-06</text><text x="600.8398692810457" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:81px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="335" opacity="1">2016-08-05</text><text x="773.2799564270152" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:81px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="335" opacity="1">2016-08-04</text><text x="945.7200435729848" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:81px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="335" opacity="1">2016-08-03</text><text x="1118.1601307189542" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:81px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="335" opacity="1">2016-08-02</text><text x="1290.6002178649237" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:81px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="335" opacity="1">2016-08-01</text><text x="1463.0403050108932" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:81px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="335" opacity="1">2016-07-31</text><text x="1620.4485294117646" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:61.10294117647057;text-overflow:ellipsis;" text-anchor="middle" transform="translate(0,0)" y="335" opacity="1"><tspan>2016-0…</tspan><title>2016-07-30</title></text></g><g class="highcharts-axis-labels highcharts-yaxis-labels" zIndex="7"><text x="53" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:538px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="318" opacity="1">0</text><text x="53" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:538px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="274" opacity="1">10</text><text x="53" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:538px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="230" opacity="1">20</text><text x="53" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:538px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="187" opacity="1">30</text><text x="53" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:538px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="143" opacity="1">40</text><text x="53" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:538px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="99" opacity="1">50</text><text x="53" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:538px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="55" opacity="1">60</text></g><g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;pointer-events:none;white-space:nowrap;" transform="translate(547,-9999)" opacity="0" visibility="visible"><path fill="none" d="M 3.5 0.5 L 105.5 0.5 C 108.5 0.5 108.5 0.5 108.5 3.5 L 108.5 34.5 C 108.5 37.5 108.5 37.5 105.5 37.5 L 59.5 37.5 53.5 43.5 47.5 37.5 3.5 37.5 C 0.5 37.5 0.5 37.5 0.5 34.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)" width="108" height="37"></path><path fill="none" d="M 3.5 0.5 L 105.5 0.5 C 108.5 0.5 108.5 0.5 108.5 3.5 L 108.5 34.5 C 108.5 37.5 108.5 37.5 105.5 37.5 L 59.5 37.5 53.5 43.5 47.5 37.5 3.5 37.5 C 0.5 37.5 0.5 37.5 0.5 34.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)" width="108" height="37"></path><path fill="none" d="M 3.5 0.5 L 105.5 0.5 C 108.5 0.5 108.5 0.5 108.5 3.5 L 108.5 34.5 C 108.5 37.5 108.5 37.5 105.5 37.5 L 59.5 37.5 53.5 43.5 47.5 37.5 3.5 37.5 C 0.5 37.5 0.5 37.5 0.5 34.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)" width="108" height="37"></path><path fill="rgba(249, 249, 249, .85)" d="M 3.5 0.5 L 105.5 0.5 C 108.5 0.5 108.5 0.5 108.5 3.5 L 108.5 34.5 C 108.5 37.5 108.5 37.5 105.5 37.5 L 59.5 37.5 53.5 43.5 47.5 37.5 3.5 37.5 C 0.5 37.5 0.5 37.5 0.5 34.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#7cb5ec" stroke-width="1"></path><text x="8" zIndex="1" style="font-size:12px;color:#333333;fill:#333333;" y="20"><tspan style="fill:#337ab7; font-size:14px;">登录日志： 31</tspan></text></g><text x="1651" text-anchor="end" zIndex="8" style="cursor:pointer;color:#909090;font-size:9px;fill:#909090;" y="393"></text></svg></div></div>
+            <div class="setModal cl-backg">
+                <div class="ibox-title">
+                    <h5>数据统计</h5>
+                </div>
+                <div class="ibox-content">
+                    <table class="table table-center">
+                        <thead>
+                        <tr>
+                            <th> </th>
+                            <th>今日<span class="fa indicator fa-unsorted"></span></th>
+                            <th>昨日<span class="fa indicator fa-unsorted"></span></th>
+                            <th>本月<span class="fa indicator fa-unsorted"></span></th>
+                            <th>历史<span class="fa indicator fa-unsorted"></span></th>
 
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>用户总数</td>
+                            <td>200</td>
+                            <td>260</td>
+                            <td>6260</td>
+                            <td><a href="#">趋势</a></td>
+                        </tr>
+                        <tr>
+                            <td>课程总数</td>
+                            <td>200</td>
+                            <td>260</td>
+                            <td>6260</td>
+                            <td><a href="#">趋势</a></td>
+                        </tr>
+                        <tr>
+                            <td>新注册用户数</td>
+                            <td>200</td>
+                            <td>260</td>
+                            <td>6260</td>
+                            <td><a href="#">趋势</a></td>
+                        </tr>
+                        <tr>
+                            <td>用户登录数</td>
+                            <td>200</td>
+                            <td>260</td>
+                            <td>6260</td>
+                            <td><a href="#">趋势</a></td>
+                        </tr>
+                        <tr>
+                            <td>付款成功人数</td>
+                            <td>200</td>
+                            <td>260</td>
+                            <td>6260</td>
+                            <td><a href="#">趋势</a></td>
+                        </tr>
+                        <tr>
+                            <td>加入学习数</td>
+                            <td>200</td>
+                            <td>260</td>
+                            <td>6260</td>
+                            <td><a href="#">趋势</a></td>
+                        </tr>
+                        <tr>
+                            <td>新增课程数</td>
+                            <td>200</td>
+                            <td>260</td>
+                            <td>6260</td>
+                            <td><a href="#">趋势</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="setModal cl-backg">
+                <div class="ibox-title">
+                    <h5>最受欢迎课程</h5>
+                    <div class="ibox-tools">
+                        <select class="cl-top">
+                            <option>今日</option>
+                            <option>昨日</option>
+                            <option>本周</option>
+                            <option>上周</option>
+                            <option>本月</option>
+                            <option>上月</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <table class="table  table-center">
+                        <thead>
+                        <tr>
+                            <th width="30%">课程名称<span class="fa indicator fa-unsorted"></span> </th>
+                            <th>新增学生人数<span class="fa indicator fa-unsorted"></span></th>
+                            <th>总学生人数<span class="fa indicator fa-unsorted"></span></th>
+                            <th>新增收入<span class="fa indicator fa-unsorted"></span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <a href="#" target="_blank"><strong>企业人力资源管理师三级</strong></a>
+                                <br>
+                                <span class="text-muted text-sm">分类：三级</span>
+                            </td>
+                            <td>8 人</td>
+                            <td>265 人</td>
+                            <td class="money-text">1000元</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#" target="_blank"><strong>企业人力资源管理师三级</strong></a>
+                                <br>
+                                <span class="text-muted text-sm">分类：三级</span>
+                            </td>
+                            <td>8 人</td>
+                            <td>265 人</td>
+                            <td class="money-text">1000元</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#" target="_blank"><strong>企业人力资源管理师三级</strong></a>
+                                <br>
+                                <span class="text-muted text-sm">分类：三级</span>
+                            </td>
+                            <td>8 人</td>
+                            <td>265 人</td>
+                            <td class="money-text">1000元</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#" target="_blank"><strong>企业人力资源管理师三级</strong></a>
+                                <br>
+                                <span class="text-muted text-sm">分类：三级</span>
+                            </td>
+                            <td>8 人</td>
+                            <td>265 人</td>
+                            <td class="money-text">1000元</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#" target="_blank"><strong>企业人力资源管理师三级</strong></a>
+                                <br>
+                                <span class="text-muted text-sm">分类：三级</span>
+                            </td>
+                            <td>8 人</td>
+                            <td>265 人</td>
+                            <td class="money-text">1000元</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
+        <div class="col-lg-8">
+            <div class="setModal">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>趋势图</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <form class="well well-sm form-inline" action="" method="get" id="searchForm">
+                            <div class="form-group">
+                                <select>
+                                    <option value="">--选择数据类型--</option>
+                                    <option value="">用户总数</option>
+                                    <option value="">课程总数</option>
+                                    <option value="">新注册用户数</option>
+                                    <option value="">用户登录数</option>
+                                    <option value="">付款成功人数</option>
+                                    <option value="">加入学习人数</option>
+                                    <option value="">新增课程数</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <a type="button" class="btn btn-white active" id="btn-month">本月</a>
+                            </div>
+                            <div class="form-group">
+                                <a type="button" class="btn btn-white" id="btn-lastMonth">上月</a>
+                            </div>
+                            <div class="form-group">
+                                <a type="button" class="btn btn-white" id="btn-lastThreeMonths">近三月</a>
+                            </div>
+                            <div class="form-group">
+                                <label class="ptm">起始日期</label>
+                                <input type="text" class="date-picker from" name="startTime" value="2016-09-01">
+                            </div>
+                            <div class="form-group">
+                                <label class="ptm">截止日期</label>
+                                <input type="text" class="date-picker to" name="endTime" value="2016-09-06">
+                            </div>
+                            <button class="btn btn-primary searchContents">查询</button>
+                        </form>
+                        <div id="chartcenter"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="setModal">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>最新未回复问题</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="table-responsive">
+                            <table class="table footTabel">
+                                <thead>
+                                <tr>
+                                    <th width="30%">问答标题<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>所属课程<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>提问人<span class="fa indicator fa-unsorted"></span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="#">课程不能看</a>
+                                        <br>
+                                        <span class="text-muted text-sm">1次查看</span>
+                                        <span class="text-muted text-sm">•</span>
+                                        <span class="text-muted text-sm">发表于2016-9-06 12:17</span>
+                                    </td>
+                                    <td>
+                                        <a href="#">中国现当代作家作品专题研究</a>
+                                        <br>
+                                        <span class="text-muted text-sm">老师：
+                                             <a class="text-muted text-sm" href="javascript:;">admin</a>
+                                        </span>
+                                    </td>
+                                    <td><a href="#modal" data-toggle="modal">王赵霞7049</a></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">请问ppt去哪下载呢？</a>
+                                        <br>
+                                        <span class="text-muted text-sm">0次查看</span>
+                                        <span class="text-muted text-sm">•</span>
+                                        <span class="text-muted text-sm">发表于2016-9-05 20:58</span>
+                                    </td>
+                                    <td>
+                                        <a href="#">企业人力资源管理师三级技能-精讲1611</a>
+                                        <br>
+                                        <span class="text-muted text-sm">老师：
+                                             <a class="text-muted text-sm" href="javascript:;">学慧网管理员02</a>
+                                             <a class="text-muted text-sm" href="javascript:;">笑笑老师</a>
+                                             <a class="text-muted text-sm" href="javascript:;">华仔</a>
+                                        </span>
+                                    </td>
+                                    <td><a href="#modal" data-toggle="modal">宋佳惠4577</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="setModal">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>最新购买记录</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="table-responsive">
+                            <table class="table footTabel">
+                                <thead>
+                                <tr>
+                                    <th width="40%">订单名称<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>金额<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>购买人<span class="fa indicator fa-unsorted"></span></th>
+                                    <th>支付方式<span class="fa indicator fa-unsorted"></span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><a href="#">购买课程《会计证【3科精讲班】》</a></td>
+                                    <td class="money-text">0.00 元</td>
+                                    <td><a href="#modal" data-toggle="modal">王赵霞7049</a></td>
+                                    <td><span class="text-sm">支付宝  / 2016-9-06 14:10</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">购买课程《学慧网试听课程》</a></td>
+                                    <td class="money-text">0.00 元</td>
+                                    <td><a href="#modal" data-toggle="modal">微微一笑</a></td>
+                                    <td><span class="text-sm">微信  / 2016-9-06 13:57</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script> 
-    <script type="text/javascript" src="js/highcharts/highcharts.js"></script> 
+</div>
+<div id="modal" class="modal fade in"aria-hidden="false">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">个人详细信息</h4>
+        </div>
+        <div class="modal-body person-detail">
+            <table class="table table-striped table-bordered">
+                <tbody>
+                <tr>
+                    <th width="25%">用户名</th>
+                    <td width="75%">史艳娜1988</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>暂无</td>
+                </tr>
+                <tr>
+                    <th>用户组</th>
+                    <td>学员</td>
+                </tr>
+                <tr>
+                    <th>注册时间/IP</th>
+                    <td>
+                        2016-9-03 18:55:40
+                        /
+                        218.249.44.98 北京
+                    </td>
+                </tr>
 
+                <tr>
+                    <th>最近登录时间/IP</th>
+                    <td>
+                        2016-9-06 08:35:22
+                        / 124.77.87.201 上海杨浦区
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>姓名</th>
+                    <td>史艳娜</td>
+                </tr>
+
+                <tr>
+                    <th>性别</th>
+                    <td>女性</td>
+                </tr>
+
+
+                <tr>
+                    <th>身份证号</th>
+                    <td>暂无</td>
+                </tr>
+
+                <tr>
+                    <th>手机号码</th>
+                    <td>15893281988<span class="text-success">(已绑定)</span></td>
+                </tr>
+
+
+                <tr>
+                    <th>公司</th>
+                    <td>暂无</td>
+                </tr>
+
+                <tr>
+                    <th>职业</th>
+                    <td>暂无</td>
+                </tr>
+
+
+                <tr>
+                    <th>头衔</th>
+                    <td>暂无</td>
+                </tr>
+
+                <tr>
+                    <th>个人签名</th>
+                    <td>暂无</td>
+                </tr>
+
+                <tr>
+                    <th>自我介绍</th>
+                    <td>暂无</td>
+                </tr>
+
+                <tr>
+                    <th>个人网站</th>
+                    <td>暂无</td>
+                </tr>
+
+                <tr>
+                    <th>微博</th>
+                    <td>暂无</td>
+                </tr>
+
+                <tr>
+                    <th>微信</th>
+                    <td>暂无</td>
+                </tr>
+
+                <tr>
+                    <th>QQ</th>
+                    <td>暂无</td>
+                </tr>
+
+                </tbody></table>
+            <hr>
+            <table class="table table-striped table-condenseda table-bordered">
+                <tbody><tr>
+                    <th width="25%">地域（省市）</th>
+                    <td>暂无</td>
+                </tr>
+                <tr>
+                    <th width="25%">身份证</th>
+                    <td>410526197907100560</td>
+                </tr>
+                <tr>
+                    <th width="25%">邮寄地址</th>
+                    <td>暂无</td>
+                </tr>
+                <tr>
+                    <th width="25%">途径</th>
+                    <td>暂无</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+        </div>
+    </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $("body").on("focus.page",".date-picker",function(){
+        $(this).datetimepicker({
+            format: "yyyy-mm-dd",
+            minView:2,
+            autoclose: true,
+            language: "zh-CN"
+        })
+    });
+    /* 柱状图*/
+    $('#analysis-chart-line').highcharts({
+        chart: {
+            type: 'column'
+        },
+        credits: {
+            text: '',
+            href: 'javascript:void(0)',
+            position: {
+                align: 'right',
+                x: -10,
+                y: -240,
+                verticalAlign: 'bottom'
+            },
+            style: {
+                color: '#ccc'
+
+            }
+        },
+        title: {
+            text: ''
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: ["当前在线人数", "登录人数", "付费人数"]
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            min: 0
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            enabled: true,
+            formatter: function () {
+                return this.x + '分区间：' + this.y + '人';
+            }
+        },
+        plotOptions: {
+            column: {
+                pointWidth:40,
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        series: [
+            {
+                name: '分值分布(2016年09月)',
+                data: [{ "y": 558, "color": "#F58E5D" }, { "y":  630, "color": "#A9D5FF" }, { "y":300, "color": "#7cb5ec" }]
+            }
+        ]
+    });
+    /*折线图*/
+    $('#chartcenter').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: ''
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['2016-09-01', '2016-09-02', '2016-09-03', '2016-09-04', '2016-09-05', '2016-09-06','2016-09-07', '2016-09-08', '2016-09-09', '2016-09-10', '2016-09-11', '2016-09-12']
+        },
+        yAxis: {
+            title: {
+                text: 'people'
+            }
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+
+        series: [{
+            name: '用户总数',
+            data: [61880, 61884, 61957, 62072, 62172, 62192, 62201, 62211, 62233, 62235, 62240]
+        }]
+    });
+</script>
 </body>
 </html>

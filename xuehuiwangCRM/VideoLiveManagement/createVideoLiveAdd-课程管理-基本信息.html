@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-课程管理-创建混合</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="ibox form-horizontal">
+                <div class="ibox-head clearfix">
+                    <div class="pull-left">课程名称 ： 人力资源管理</div>
+                    <div class="sum pull-left"><span>授课类型：混合</span></div>
+                    <div class="price pull-left">价格：0.0元</div>
+                    <button class="btn btn-primary public_course pull-right" style="padding: 4px 12px;margin-right: 15px">发布</button>
+                </div>
+                <div class="ibox-content ibox-padding">
+                    <ul class="set-nav-head videoLiveList">
+                        <li class="tab-cur">
+                            <a href="createVideoLiveAdd-课程管理-基本信息.html">基本信息</a>
+                        </li>
+                        <li>
+                            <a href="createVideoLiveAdd-课程管理-课程详情.html">课程详情</a>
+                        </li>
+                        <li>
+                            <a href="createVideoLiveAdd-课程管理-增加视频.html">创建录播视频</a>
+                        </li>
+                        <li>
+                            <a href="createVideoLiveAdd-课程管理-课程内容.html">创建直播课程</a>
+                        </li>
+                        <li>
+                            <a href="createVideoLiveAdd-课程管理-排课表.html">创建直播排课表</a>
+                        </li>
+                        <li>
+                            <a href="createVideoLiveAdd-课程管理-学员管理.html">学员管理</a>
+                        </li>
+                        <li>
+                            <a href="createVideoLiveAdd-课程管理-课程资料.html">课程资料</a>
+                        </li>
+                        <li class="last">
+                            <a href="createVideoLiveAdd-课程管理-课程资料.html">预览</a>
+                        </li>
+                    </ul>
+                    <form action="" id="commentForm" class="clearfix" style="padding-top: 20px">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">课程分类</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" name="categoryId">
+                                    <option value="">课程分类</option><option value="14">职业资格</option><option value="15">　人力资源管理师</option><option value="16">　　基础知识</option><option value="74">　　一级</option><option value="17">　　二级</option><option value="18">　　三级</option><option value="19">　　实操课</option><option value="25">　公共营养师</option><option value="26">　　基础知识</option><option value="27">　　二级技能</option><option value="28">　　三级技能</option><option value="29">　　实操课</option><option value="20">　心理咨询师</option><option value="21">　　基础知识</option><option value="22">　　二级技能</option><option value="23">　　三级技能</option><option value="24">　　实操课</option><option value="59">　理财规划师</option><option value="116">　　实操课</option><option value="72">　　二级</option><option value="73">　　三级</option><option value="60">　物流管理师</option><option value="68">　　一级</option><option value="69">　　二级</option><option value="70">　　三级</option><option value="61">　采购师</option><option value="64">　　一级</option><option value="65">　　二级</option><option value="66">　　三级</option><option value="30">学历教育</option><option value="31">　自考</option><option value="32">　　北京</option><option value="33">　　上海</option><option value="57">　　天津</option><option value="56">　　陕西</option><option value="35">　　江苏</option><option value="44">　　辽宁</option><option value="36">　　黑龙江</option><option value="45">　　浙江</option><option value="46">　　湖北</option><option value="47">　　安徽</option><option value="48">　　湖南</option><option value="49">　　广东</option><option value="50">　　河北</option><option value="52">　　福建</option><option value="53">　　河南</option><option value="58">　　吉林</option><option value="34">　　山东</option><option value="54">　　四川</option><option value="55">　　江西</option><option value="117">　　山西</option><option value="118">　　重庆</option><option value="82">　成考</option><option value="85">　　成考（高起专文科）</option><option value="86">　　成考（高起专理科）</option><option value="87">　　成考（高起本文科）</option><option value="88">　　成考（高起本理科）</option><option value="89">　　成考（专升本）</option><option value="78">　远程网络教育</option><option value="83">　自考本科公共课</option><option value="84">　公共英语三级</option><option value="5">财会培训</option><option value="6">　会计从业资格证</option><option value="10">　会计职称</option><option value="11">　　会计初级职称</option><option value="12">　　会计中级职称</option><option value="13">　注册会计师</option><option value="1">教师资格证</option><option value="2">　幼儿教师资格证</option><option value="3">　小学教师资格证</option><option value="4">　中学教师资格证</option><option value="91">通关题库</option><option value="92">　人力资源管理师</option><option value="93">　　模拟考场</option><option value="94">　　章节练习</option><option value="95">　　历年真题</option><option value="113">　　教材教辅</option><option value="97">　公共营养师</option><option value="98">　　模拟考场</option><option value="99">　　章节练习</option><option value="100">　　历年真题</option><option value="114">　　教材教辅</option><option value="101">　心理咨询师</option><option value="102">　　模拟考场</option><option value="103">　　章节练习</option><option value="104">　　历年真题</option><option value="115">　　教材教辅</option><option value="105">　建造师</option><option value="106">　　模拟考场</option><option value="107">　　章节练习</option><option value="108">　　历年真题</option><option value="109">　自考</option><option value="110">　　模拟考场</option><option value="111">　　章节练习</option><option value="112">　　历年真题</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">课程名称</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">描述</label>
+                            <div class="col-sm-6">
+                                <textarea name="comment" class="form-control" required aria-required="true" style="min-height: 100px"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">标签</label>
+                            <div class="col-sm-6">
+                                <input type="password" name="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">购买课程</label>
+                            <div class="col-sm-6 radios">
+                                <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
+                                <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">定价</label>
+                            <div class="col-sm-6">
+                                <input type="password" name="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">优惠价</label>
+                            <div class="col-sm-6">
+                                <input type="password" name="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">购买基数</label>
+                            <div class="col-sm-6">
+                                <input type="password" name="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">课程有效天</label>
+                            <div class="col-sm-6">
+                                <input type="password" name="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">授课方式</label>
+                            <div class="col-sm-6">
+                                <span class="btn btn-success">直播</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">课程二维码</label>
+                            <div class="col-sm-6">
+                                <a href="javascript:;" class="es-qrcode open">
+                                    <i class="fa fa-qrcode lesson-code-btn"></i>
+                                <span class="qrcode-popover">
+                                    <img src="../images/qrcode.png" alt="">
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <button class="btn btn-primary col-sm-offset-1 col-sm-3 btn-submit" id="submit" type="submit">保存</button>
+                                <button class="btn btn-white col-sm-3 col-sm-offset-1" onclick="window.history.back(-1)">返回</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+</body>
+</html>

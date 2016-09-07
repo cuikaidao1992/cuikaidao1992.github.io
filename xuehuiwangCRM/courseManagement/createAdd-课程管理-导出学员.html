@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>健身房-帐号系统-账户管理-添加</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="row wrapper wrapper-content animated fadeInRight">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="form-horizontal">
+            <div class="ibox-title">
+                <h5>导出学员</h5>
+            </div>
+            <div class="ibox-content">
+                <form id="user-export-form" class="form-horizontal" method="post" action="">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">默认导出项:</label>
+                        <div class="col-sm-9">
+                            <div class="row col-margin-bottom">
+                                <div class="col-md-3">
+                                    <input class="pull-left" name="choices[]" type="checkbox" value="" checked="checked">
+                                    <span class="pull-left">用户名</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <input class="pull-left" name="choices[]" type="checkbox" value="" checked="checked">
+                                    <span class="pull-left">姓名</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <input class="pull-left" name="choices[]" type="checkbox" value="" checked="checked">
+                                    <span class="pull-left">手机号</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <input class="pull-left" name="choices[]" type="checkbox" value="" checked="checked">
+                                    <span class="pull-left">邮箱</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <input class="pull-left" name="choices[]" type="checkbox" value="" checked="checked">
+                                    <span class="pull-left">加入学习时间</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <input class="pull-left" name="choices[]" type="checkbox" value="" checked="checked">
+                                    <span class="pull-left">学习进度</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <input class="pull-left" name="choices[]" type="checkbox" value="" checked="checked">
+                                    <span class="pull-left">性别</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <input class="pull-left" name="choices[]" type="checkbox" value="" checked="checked">
+                                    <span class="pull-left">QQ号</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <input class="pull-left" name="choices[]" type="checkbox" value="" checked="checked">
+                                    <span class="pull-left">微信号</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <span class="text-warning pull-left">您导出的用户数超过20000，不支持导出，请筛选用户数据后再导出</span>
+                    <button id="user-export-btn" type="button" class="btn btn-primary pull-right">导出学员</button>
+                    <a type="button" class="btn btn-link pull-right" onclick="window.history.back(-1)">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
+<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+</body>
+</html>

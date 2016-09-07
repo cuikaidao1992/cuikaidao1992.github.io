@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-敏感词管理</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title clearfix">
+                    <h5>敏感词管理</h5>
+                    <div class="ibox-tools">
+                        <a href="operationsManagement-添加敏感词.html" class="collapse-link" data-toggle="tooltip" title="" data-original-title="添加">
+                            <i class="fa fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="ibox-tools operateList">
+                        <a class="btn btn-primary btn-sm" href="operationsManagement-敏感词管理.html">敏感词列表</a>
+                        <a class="btn btn-white btn-sm" href="operationsManagement-屏蔽记录.html">屏蔽记录</a>
+                    </div>
+                    <form method="post" id="searchForm">
+                        <div class="form-group">
+                            <select name="state">
+                                <option value="">所有类型</option><option value="banned">禁用</option><option value="replaced">屏蔽</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="name">敏感词</option><option value="id">编号</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="keyword" name="keyword" class="form-control" value="" placeholder="搜索关键字">
+                        </div>
+                        <button class="btn btn-primary searchContents">搜索</button>
+                    </form>
+                    <div class="user-list" style="margin-top: 20px;">
+                        <table class="table footTabel  table-center">
+                            <thead>
+                            <tr>
+                                <th>编号<span class="fa indicator fa-unsorted"></span></th>
+                                <th>敏感词<span class="fa indicator fa-unsorted"></span></th>
+                                <th>类型<span class="fa indicator fa-unsorted"></span></th>
+                                <th>屏蔽次数<span class="fa indicator fa-unsorted"></span></th>
+                                <th>添加时间<span class="fa indicator fa-unsorted"></span></th>
+                                <th>操作<span class="fa indicator fa-unsorted"></span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>受骗</td>
+                                    <td>禁用</td>
+                                    <td>0</td>
+                                    <td>2016-2-23 17:57:48</td>
+                                    <td class="slink">
+                                        <a href="#remove" data-toggle="modal">删除</a>|<a href="javascript:void(0);">更改为屏蔽</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>坑爹</td>
+                                    <td>禁用</td>
+                                    <td>0</td>
+                                    <td>2016-2-23 17:57:48</td>
+                                    <td class="slink">
+                                        <a href="#remove" data-toggle="modal">删除</a>|<a href="javascript:void(0);">更改为屏蔽</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="remove" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">删除</h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <form action="">
+                    <p class="text-warning">确定删除此关键字吗？</p>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button class="btn btn-primary col-sm-5 btn-submit" type="submit">确定</button>
+                            <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script>
+    $(function () {
+        $(".user-list").on("mouseenter.link", ".slink .more", function () {
+            $(this).nextAll("ul").show();
+        })
+        .on("mouseleave.link", ".slink", function () {
+            $(this).find("ul").hide();
+        });
+    });
+</script>
+</body>
+</html>

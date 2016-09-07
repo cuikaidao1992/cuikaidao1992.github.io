@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-课程管理-创建直播</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="ibox form-horizontal">
+                <div class="ibox-head clearfix">
+                    <div class="pull-left">课程名称 ： 人力资源管理</div>
+                    <div class="sum pull-left"><span>授课类型：直播</span></div>
+                    <div class="price pull-left">价格：0.0元</div>
+                    <button class="btn btn-primary public_course pull-right" style="padding: 4px 12px;margin-right: 15px">发布</button>
+                </div>
+                <div class="ibox-content ibox-padding">
+                    <ul class="set-nav-head">
+                        <li>
+                            <a href="createLiveAdd-课程管理-基本信息.html">基本信息</a>
+                        </li>
+                        <li class="tab-cur">
+                            <a href="createLiveAdd-课程管理-课程详情.html">课程详情</a>
+                        </li>
+                        <li>
+                            <a href="createLiveAdd-课程管理-课程内容.html">课程内容</a>
+                        </li>
+                        <li>
+                            <a href="createLiveAdd-课程管理-排课表.html">排课表</a>
+                        </li>
+                        <li>
+                            <a href="createLiveAdd-课程管理-学员管理.html">学员管理</a>
+                        </li>
+                        <li>
+                            <a href="createLiveAdd-课程管理-课程资料.html">课程资料</a>
+                        </li>
+                        <li class="last">
+                            <a href="createLiveAdd-课程管理-课程资料.html">预览</a>
+                        </li>
+                    </ul>
+                    <form action="" id="commentForm" class="clearfix" style="padding-top: 20px">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">课程封面</label>
+                            <div class="col-sm-6 text-center">
+                            <span class="view">
+                                <img src="../images/cx2.jpg" alt="课程图片">
+                            </span>
+                                <label class="btn btn-primary btn-upload">
+                                    <input type="file" onchange="previewImage(this)" class="hide">选择文件
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">教师</label>
+                            <div class="col-sm-6">
+                                <ul class="teacher-list-group sortable-list" id="teacher-list-group" data-role="list" style="">
+                                    <li class="list-group-item clearfix teacher-box" data-role="item">
+                                        <span class="glyphicon glyphicon-resize-vertical sort-handle"></span>
+                                        <img src="../images/a4.jpg" class="avatar-small">
+                                        <span class="nickname">学慧网007</span>
+                                        <span class="check-box"><input type="checkbox" class="check-btn">显示</span>
+                                        <button class="close delete-btn" data-role="item-delete" type="button" title="删除">× </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"></label>
+                            <div class="col-sm-6">
+                                <div class="input-box clearfix">
+                                    <input type="text" class="teacher-input">
+                                    <span class="btn btn-default btn-sm add-teacher">添加</span>
+                                </div>
+                                <ul class="teacher-list">
+                                    <li class="">笑笑老师</li>
+                                    <li class="">丁源老师</li>
+                                    <li class="">马玲老师</li>
+                                </ul>
+                                <div class="help-block">只能添加教师管理内已注册的教师</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">课程详情</label>
+                            <div class="col-sm-6">
+                                <textarea name="comment" class="form-control" required="" aria-required="true" style="min-height: 100px"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><em class="must">＊</em>服务设置</label>
+                            <div class="col-sm-6 services-list">
+                                <span class="check-box"><input type="checkbox" class="check-btn">系统化学习</span>
+                                <span class="check-box"><input type="checkbox" class="check-btn">24H答疑</span>
+                                <span class="check-box"><input type="checkbox" class="check-btn">作业批改</span>
+                                <span class="check-box"><input type="checkbox" class="check-btn">互动直播</span>
+                                <span class="check-box"><input type="checkbox" class="check-btn">vip班</span>
+                                <span class="check-box"><input type="checkbox" class="check-btn">签约班</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <button class="btn btn-primary col-sm-offset-1 col-sm-3 btn-submit" id="submit" type="submit">保存</button>
+                                <button class="btn btn-white col-sm-3 col-sm-offset-1" onclick="window.history.back(-1)">返回</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $(".add-teacher").click(function(){
+        $(".teacher-list").slideToggle()
+    });
+    $(".teacher-list li").click(function(){
+        $(".teacher-input").val($(this).text());
+        $(".teacher-list").hide();
+    })
+</script>
+</body>
+</html>

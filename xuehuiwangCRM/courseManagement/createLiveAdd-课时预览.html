@@ -1,0 +1,115 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="row wrapper wrapper-content animated fadeInRight">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="form-horizontal">
+            <div class="ibox-title">
+                <h5>添加教师</h5>
+            </div>
+            <div class="ibox-content ibox-padding">
+                <form action="" id="commentForm">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">教师名称</label>
+                        <div class="col-sm-9 group-print">
+                            <input type="text" name="user" class="form-control" required="ture" aria-required="true" aria-describedby="cemail-error">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">头衔</label>
+                        <div class="col-sm-9 group-print">
+                            <input type="text" name="user" class="form-control" required="ture" aria-required="true" aria-describedby="cemail-error">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">头像上传</label>
+                        <div class="col-sm-9 group-print">
+                            <label class="btn btn-primary mt">
+                                <input type="file" onchange="previewImage(this)" class="hide"> 上传新图片
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">所授课程</label>
+                        <div class="col-sm-9 group-print">
+                            <select class="form-control" name="categoryId">
+                                <optgroup label="职业资格">
+                                    <option>人力资源管理师</option>
+                                    <option>公共营养师</option>
+                                    <option>心理咨询师</option>
+                                    <option>理财规划师</option>
+                                    <option>物流管理师</option>
+                                    <option>采购师</option>
+                                </optgroup>
+                                <optgroup label="学历教育">
+                                    <option>自考</option>
+                                    <option>成考</option>
+                                    <option>自考本科公共课</option>
+                                    <option>公共英语三级</option>
+                                </optgroup>
+                                <optgroup label="财会培训">
+                                    <option>会计从业资格证</option>
+                                    <option>会计职称</option>
+                                    <option>注册会计证</option>
+                                    <option>公共英语三级</option>
+                                </optgroup>
+                                <optgroup label="教师资格证">
+                                    <option>幼儿教师资格证</option>
+                                    <option>小学教师资格证</option>
+                                    <option>中学教师资格证</option>
+                                </optgroup>
+                                <optgroup label="通关题库">
+                                    <option>人力资源管理师</option>
+                                    <option>公共营养师</option>
+                                    <option>心理咨询师</option>
+                                    <option>建造师</option>
+                                    <option>自考</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">级别</label>
+                        <div class="col-sm-9">
+                            <select class="form-control">
+                                <option>基础知识</option>
+                                <option>一级</option>
+                                <option>二级</option>
+                                <option>三级</option>
+                                <option>实操课</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">介绍</label>
+                        <div class="col-sm-9">
+                            <textarea name="comment" class="form-control" required="" aria-required="true" style="min-height: 120px"></textarea>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">提交</button>
+                            <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true" onclick="window.history.back(-1)">返回</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
+<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+</body>
+</html>

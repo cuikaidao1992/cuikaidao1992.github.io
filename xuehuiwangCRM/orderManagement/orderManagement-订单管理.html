@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>学慧网-订单管理</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title clearfix">
+                    <h5>课程订单</h5>
+                </div>
+                <div class="ibox-content">
+                    <form method="post" id="searchForm">
+                        <span class="registerDate">创建时间</span>
+                        <div class="form-group">
+                            <input type="text" value="2016-1-1" name="startTime" style="width: 120px;" class="date-picker from"><em class="time-link">到</em>
+                            <input type="text" value="2016-1-1" style="width: 120px;" name="endTime" class="date-picker to">
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="">--订单状态--</option><option>已付款</option><option>未付款</option><option>已关闭</option><option>已退款</option><option value="email">退款中</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="">--支付方式--</option><option>网银</option><option>微信</option><option>支付宝</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="">--关键词--</option><option>订单号</option><option>购买者用户名</option><option>课程编号</option><option>课程号</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="identityId" placeholder="关键词">
+                        </div>
+                        <button class="btn btn-primary searchContents">搜索</button>
+                    </form>
+                    <div class="user-list" style="margin-top: 20px;">
+                        <table class="table footTabel  table-center">
+                            <thead>
+                            <tr>
+                                <th>名称<span class="fa indicator fa-unsorted"></span></th>
+                                <th>订单号<span class="fa indicator fa-unsorted"></span></th>
+                                <th>创建时间<span class="fa indicator fa-unsorted"></span></th>
+                                <th>状态<span class="fa indicator fa-unsorted"></span></th>
+                                <th>实付<span class="fa indicator fa-unsorted"></span></th>
+                                <th>购买者<span class="fa indicator fa-unsorted"></span></th>
+                                <th>支付方式<span class="fa indicator fa-unsorted"></span></th>
+                                <th>操作<span class="fa indicator fa-unsorted"></span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <span>购买课程《经典取证班》</span>
+                                    <br>
+                                    <span class="text-muted text-sm">人力资源管理师二级</span>
+                                </td>
+                                <td>C2016090510534138958</td>
+                                <td>2016-08-16 15:46:30</td>
+                                <td>已付款</td>
+                                <td>1999.00</td>
+                                <td>赵祥鹏6573</td>
+                                <td>
+                                    <span>支付宝</span>
+                                    <br>
+                                    <span class="text-muted text-sm">2016/9/5  10:53:41</span>
+                                </td>
+                                <td class="slink">
+                                    <a href="orderManagement-订单详情.html">详情</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $(".user-list").on("mouseenter.link", ".slink .more", function () {
+         $(this).nextAll("ul").show();
+    })
+    .on("mouseleave.link", ".slink", function () {
+        $(this).find("ul").hide();
+    });
+    $("body").on("focus.page",".date-picker",function(){
+        $(this).datetimepicker({
+            format: "yyyy-mm-dd",
+            minView:2,
+            autoclose: true,
+            language: "zh-CN"
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学慧网-运营管理-明细</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="row wrapper wrapper-content animated fadeInRight">
+    <div class="col-lg-12">
+        <div class="form-horizontal">
+            <div class="ibox-title">
+                <h5>数据统计</h5>
+            </div>
+            <div class="ibox-content ibox-padding">
+                <div class="ibox-tools operateList">
+                    <a class="btn btn-white btn-sm" href="operationmanagement-数据统计-趋势图.html">趋势图</a>
+                    <a class="btn btn-primary btn-sm" href="operationmanagement-数据统计-明细.html">明细</a>
+                </div>
+                <form class="well well-sm form-inline" action="" method="get" id="searchForm">
+                    <div class="form-group">
+                        <select>
+                            <option value="">--选择数据类型--</option>
+                            <option value="">用户总数</option>
+                            <option value="">课程总数</option>
+                            <option value="">新注册用户数</option>
+                            <option value="">用户登录数</option>
+                            <option value="">付款成功人数</option>
+                            <option value="">加入学习人数</option>
+                            <option value="">视频观看数</option>
+                            <option value="">营收额</option>
+                            <option value="">新增课程数</option>
+                            <option value="">新增班号数</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <a type="button" class="btn btn-white active" id="btn-month">本月</a>
+                    </div>
+                    <div class="form-group">
+                        <a type="button" class="btn btn-white" id="btn-lastMonth">上月</a>
+                    </div>
+                    <div class="form-group">
+                        <a type="button" class="btn btn-white" id="btn-lastThreeMonths">近三月</a>
+                    </div>
+                    <div class="form-group">
+                        <label class="ptm">起始日期</label>
+                        <input type="text" class="date-picker from" name="startTime" value="2016-09-01">
+                    </div>
+                    <div class="form-group">
+                        <label class="ptm">截止日期</label>
+                        <input type="text" class="date-picker to" name="endTime" value="2016-09-06">
+                    </div>
+                    <button class="btn btn-primary searchContents">查询</button>
+                </form>
+                <div class="user-list" style="margin-top: 20px;">
+                    <table id="user-table" class="table footTabel table-center">
+                        <thead>
+                        <tr>
+                            <th>用户名<span class="fa indicator fa-unsorted"></span></th>
+                            <th>手机号<span class="fa indicator fa-unsorted"></span></th>
+                            <th>注册邮箱<span class="fa indicator fa-unsorted"></span></th>
+                            <th>注册来源<span class="fa indicator fa-unsorted"></span></th>
+                            <th>IP地址<span class="fa indicator fa-unsorted"></span></th>
+                            <th>注册时间<span class="fa indicator fa-unsorted"></span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>刘志娇6656</td>
+                            <td>
+                                13520256656<span class="text-success">(已绑定)</span>
+                            </td>
+                            <td>暂无</td>
+                            <td>手动导入</td>
+                            <td>218.249.44.98</td>
+                            <td>2016-09-07 10:29:52</td>
+                        </tr>
+                        <tr>
+                            <td>任雨停0914</td>
+                            <td>13260250914<span class="text-success">(已绑定)</span></td>
+                            <td>暂无</td>
+                            <td>手动导入</td>
+                            <td>218.249.44.98</td>
+                            <td>2016-09-07 09:51:55</td>
+                        </tr>
+                        <tr>
+                            <td>刘希7941</td>
+                            <td>18229757941<span class="text-success">(已绑定)</span></td>
+                            <td>暂无</td>
+                            <td>手动导入</td>
+                            <td>218.249.44.98</td>
+                            <td>2016-09-07 09:50:37</td>
+                        </tr>
+                        <tr>
+                            <td>付海蓉7266</td>
+                            <td>18691867266<span class="text-success">(已绑定)</span></td>
+                            <td>暂无</td>
+                            <td>手动导入</td>
+                            <td>218.249.44.98</td>
+                            <td>2016-09-07 09:08:03</td>
+                        </tr>
+                        <tr>
+                            <td>高蕤欣1217</td>
+                            <td>17746511217<span class="text-success">(已绑定)</span></td>
+                            <td>暂无</td>
+                            <td>手动导入</td>
+                            <td>218.249.44.98</td>
+                            <td>2016-09-07 09:08:02</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="10">
+                                <ul class="pagination pull-right"><li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li><li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li><li class="footable-page active"><a data-page="0" href="#">1</a></li><li class="footable-page"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li></ul>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+</body>
+</html>

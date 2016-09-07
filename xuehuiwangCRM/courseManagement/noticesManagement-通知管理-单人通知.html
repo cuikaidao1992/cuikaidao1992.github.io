@@ -1,0 +1,108 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>学慧网-通知管理-短信通知</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-10 col-lg-offset-1">
+            <div class="ibox float-e-margins study-info">
+                <div class="ibox-title clearfix">
+                    <div class="tab-box">
+                        <div class="tab-name active">发送记录</div>
+                    </div>
+                    <div class="ibox-tools close-btn">
+                        <a class="close-link" onclick="window.history.back('-1')">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content" style="display: block">
+                    <div class="user-list table-responsive">
+                        <table class="table footTabel">
+                            <thead>
+                            <tr>
+                                <th>通知类型名称<span class="fa indicator fa-unsorted"></span></th>
+                                <th>通知标题<span class="fa indicator fa-unsorted"></span></th>
+                                <th>短信类型<span class="fa indicator fa-unsorted"></span></th>
+                                <th width="25%">通知内容<span class="fa indicator fa-unsorted"></span></th>
+                                <th>发送时间<span class="fa indicator fa-unsorted"></span></th>
+                                <th>状态<span class="fa indicator fa-unsorted"></span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>课程通知</td>
+                                <td>服务器升级</td>
+                                <td>模板</td>
+                                <td class="text-left">
+                                    <div class="short-long-text">
+                                        <div class="short-text" style="display: block;">
+                                            <p>同学您好！{2016年11月}考期首次开课时间</p>
+                                            <span class="trigger">(展开)</span>
+                                        </div>
+                                        <div class="long-text" style="display: none;">
+                                            <p>同学您好！{2016年11月}考期首次开课时间{8月11日19:30分}，请您安排好时间准时参加学习，如有疑问请在平台中联系客服或班主任。</p>
+                                            <span class="trigger">(收起)</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2016-08-16 15:46:30</td>
+                                <td>发送成功</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $("body").on("focus.page",".date-picker",function(){
+        $(this).datetimepicker({
+            format: "yyyy-mm-dd",
+            minView:2,
+            autoclose: true,
+            language: "zh-CN"
+        })
+    });
+    $(".user-list").on("mouseenter.link", ".slink .more", function () {
+        $(this).nextAll("ul").show();
+    })
+    .on("mouseleave.link", ".slink", function () {
+        $(this).find("ul").hide();
+    });
+
+    $(".tab-box").find(".tab-name").click(function(){
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+        $(".ibox-content").hide().eq($(this).index()).show()
+    })
+    $(".user-list").on('click', '.short-text', function() {
+        var $short = $(this);
+        $short.slideUp('fast').parents('.short-long-text').find('.long-text').slideDown('fast');
+    });
+
+    $(".user-list").on('click', '.long-text', function() {
+        var $long = $(this);
+        $long.slideUp('fast').parents('.short-long-text').find('.short-text').slideDown('fast');
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/cropper.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/sitelogo.css" rel="stylesheet" type="text/css">
+</head>
+<body class="gray-bg">
+<div class="row wrapper wrapper-content animated fadeInRight">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="form-horizontal">
+            <div class="ibox-title">
+                <h5>修改图像</h5>
+            </div>
+            <div class="ibox-content ibox-padding">
+                <form id="settings-avatar-form" class="form-horizontal" method="post">
+                    <div class="form-group">
+                        <div class="control-label col-sm-2"><b>当前头像</b></div>
+                        <div class="controls set-user-img col-sm-6">
+                            <img src="../images/user_img.jpg">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="control-label col-sm-2"></div>
+                        <div class="controls col-sm-8">
+                            <p class="help-block">你可以上传JPG、GIF或PNG格式的文件，文件大小不能超过<strong>2M</strong>。</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="control-label col-sm-2"></div>
+                        <div class="controls col-sm-6">
+                            <a class="file-btn btn-primary" id="setHead" href="#avatar-modal" data-toggle="modal">上传新头像</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="avatar-modal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form class="avatar-form" action="" method="post">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">×</button>
+                    <h4 class="modal-title" id="avatar-modal-label">上传图片</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="avatar-body">
+                        <div class="avatar-upload">
+                            <a class="file-btn btn-primary" href="javascript:;">
+                                <span>上传新头像</span>
+                                <input type="file" name="avatar_file" id="avatarInput" class="pi-file avatar-input" accept=".jpg,.jpeg,.gif,.png" title="请选择要修改的头像">
+                            </a>
+                            <div class="row clearfix">
+                                <div class="col-md-9">
+                                    <div class="avatar-wrapper"></div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="avatar-preview preview-lg" style="width: 184px; height: 184px;"><img src="../images/user_img.jpg" style="display: block; width: 404.444px; min-width: 0px !important; min-height: 0px !important; max-width: none !important; max-height: none !important; height: 227.5px; margin-left: -111.222px; margin-top: -22.75px; transform: none;"></div>
+                                    <div class="avatar-preview preview-md" style="width: 100px; height: 100px;"><img src="../images/user_img.jpg" style="display: block; width: 217.778px; min-width: 0px !important; min-height: 0px !important; max-width: none !important; max-height: none !important; height: 122.5px; margin-left: -59.8889px; margin-top: -12.25px; transform: none;"></div>
+                                    <div class="avatar-preview preview-sm" style="width: 50px; height: 50px;"><img src="../images/user_img.jpg" style="display: block; width: 106.667px; min-width: 0px !important; min-height: 0px !important; max-width: none !important; max-height: none !important; height: 60px; margin-left: -29.3333px; margin-top: -6px; transform: none;"></div>
+                                </div>
+                            </div>
+                            <div class="row avatar-btns">
+                                <div class="col-md-9">
+                                    <div class="btn-group">
+                                        <button class="btn" data-method="rotate" data-option="-90" type="button" title="Rotate -90 degrees"><i class="fa fa-undo"></i> 向左旋转</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees"><i class="fa fa-repeat"></i> 向右旋转</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-success btn-block avatar-save" type="submit" data-dismiss="modal"><i class="fa fa-save"></i> 保存修改</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/cropper.min.js"></script>
+<script type="text/javascript" src="../js/sitelogo.js"></script>
+
+</body>
+</html>
