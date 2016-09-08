@@ -12,7 +12,6 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
     <link href="../css/style.min.css" rel="stylesheet" type="text/css">
-    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
 </head>
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -99,7 +98,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label">课程详情</label>
                             <div class="col-sm-6">
-                                <textarea name="comment" class="form-control" required aria-required="true" style="min-height: 100px"></textarea>
+                                <textarea id="editor" placeholder="这里输入内容" autofocus rows="5"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -129,8 +128,9 @@
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
-<script type="text/javascript" src="../js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-<script type="text/javascript" src="../js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript" src="../js/simditor/module.js"></script>
+<script type="text/javascript" src="../js/simditor/hotkeys.js"></script>
+<script type="text/javascript" src="../js/simditor/simditor.js"></script>
 <script>
     $(".add-teacher").click(function(){
         $(".teacher-list").slideToggle()
@@ -138,7 +138,8 @@
     $(".teacher-list li").click(function(){
         $(".teacher-input").val($(this).text());
         $(".teacher-list").hide();
-    })
+    });
+    $(document).ready(function(){var editor=new Simditor({textarea:$("#editor"),defaultImage:"images/a9.jpg"})});
 </script>
 </body>
 </html>

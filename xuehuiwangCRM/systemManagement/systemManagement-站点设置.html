@@ -186,7 +186,7 @@
                                     <label for="article_share_content">资讯分享内容</label>
                                 </div>
                                 <div class="controls col-sm-6">
-                                    <textarea id="courseShareContent" name="articleShareContent" class="form-control" rows="5"></textarea>
+                                    <textarea id="editor1" placeholder="这里输入内容" autofocus rows="5"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -194,7 +194,7 @@
                                     <label for="course_share_content">课程分享内容</label>
                                 </div>
                                 <div class="controls col-sm-6">
-                                    <textarea  name="courseShareContent" class="form-control" rows="5"></textarea>
+                                    <textarea id="editor2" placeholder="这里输入内容" autofocus rows="5"></textarea>
                                     <div class="help-block"></div>
                                 </div>
                             </div>
@@ -203,7 +203,7 @@
                                     <label for="group_share_content">小组分享内容</label>
                                 </div>
                                 <div class="controls col-sm-6">
-                                    <textarea id="groupShareContent" name="groupShareContent" class="form-control" rows="5"></textarea>
+                                    <textarea id="editor3" placeholder="这里输入内容" autofocus rows="5"></textarea>
                                     <div class="help-block"></div>
                                 </div>
                             </div>
@@ -226,9 +226,15 @@
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/previewImage/previewImage.js"></script>
-<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
-<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/simditor/module.js"></script>
+<script type="text/javascript" src="../js/simditor/hotkeys.js"></script>
+<script type="text/javascript" src="../js/simditor/simditor.js"></script>
+
+<script>
+    $(document).ready(function(){var editor=new Simditor({textarea:$("#editor1"),defaultImage:"images/a9.jpg"})});
+    $(document).ready(function(){var editor=new Simditor({textarea:$("#editor2"),defaultImage:"images/a9.jpg"})});
+    $(document).ready(function(){var editor=new Simditor({textarea:$("#editor3"),defaultImage:"images/a9.jpg"})});
+</script>
 </body>
 </html>

@@ -11,7 +11,7 @@
 </head>
 <body class="gray-bg">
 <div class="row wrapper wrapper-content animated fadeInRight">
-    <div class="col-lg-6 col-lg-offset-3">
+    <div class="col-lg-8 col-lg-offset-2">
         <div class="form-horizontal">
             <div class="ibox-title">
                 <h5>修改教师信息</h5>
@@ -43,7 +43,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">介绍</label>
                         <div class="col-sm-8 group-print">
-                            <textarea name="comment" class="form-control" required="" aria-required="true" style="min-height: 100px"></textarea>
+                            <textarea id="editor" placeholder="这里输入内容" autofocus></textarea>
                         </div>
                     </div>
                     <div class="hr-line-dashed"></div>
@@ -60,9 +60,13 @@
 </div>
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
-<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
-<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/previewImage/previewImage.js"></script>
+<script type="text/javascript" src="../js/simditor/module.js"></script>
+<script type="text/javascript" src="../js/simditor/hotkeys.js"></script>
+<script type="text/javascript" src="../js/simditor/simditor.js"></script>
+
+<script>
+	$(document).ready(function(){var editor=new Simditor({textarea:$("#editor"),defaultImage:"images/a9.jpg"})});
+</script>
 </body>
 </html>

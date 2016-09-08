@@ -4,7 +4,9 @@ body {
     line-height: 1.42857143;
     color: #616161;
 }
-
+.top_nav{
+    background:url(../images/nav_list.png) no-repeat
+}
 textarea {
     resize: none
 }
@@ -514,10 +516,16 @@ body.body-small .navbar-top-links li:last-child {
     padding-left: 30px;
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
+    display: block;
+    height: 100%;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #333;
 }
 
 .nav.navbar-top-links a:hover {
     color: #36d38c;
+    background-color: #f2f2f2;
 }
 
 .navbar-form-custom .form-control {
@@ -9415,6 +9423,7 @@ table button[disabled], table input[disabled] {
     background: #fff;
     border: none;
     text-align: center;
+    font-size: 12px;
 }
 
 .c-fa {
@@ -10068,19 +10077,22 @@ table button[disabled], table input[disabled] {
 }
 
 .nav-left {
-    width: 535px;
+    width:707px;
     height: auto;
     overflow: hidden;
 }
 
 .nav-left > li {
     float: left;
+    margin: 0 10px;
 }
 
 .nav-left > li > ul > li {
-    height: 30px;
-    line-height: 30px;
-    font-size: 16px;
+    font-size: 14px;
+    min-width: 120px;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 2px;
 }
 
 .nav-left > li > ul > li > a {
@@ -10088,38 +10100,10 @@ table button[disabled], table input[disabled] {
 }
 
 .nav-left > li > ul > li.nav-title {
-    color: #C30;
-    font-weight: bold;
-    line-height: 40px;
-    padding-left: 30px;
-}
-
-.nav-left > li > ul > li.nav-titleb {
-    color: #036;
-    font-weight: bold;
-    line-height: 40px;
-    padding-left: 30px;
-}
-
-.nav-left > li > ul > li.nav-titlec {
-    color: #936;
-    font-weight: bold;
-    line-height: 40px;
-    padding-left: 30px;
-}
-
-.nav-left > li > ul > li.nav-titled {
-    color: #060;
-    font-weight: bold;
-    line-height: 40px;
-    padding-left: 30px;
-}
-
-.nav-left > li > ul > li.nav-titlee {
-    color: #F90;
-    font-weight: bold;
-    line-height: 40px;
-    padding-left: 30px;
+    margin: 3px 0px;
+    color: #999;
+    font-weight: 600;
+    padding-left: 12px;
 }
 
 .nav-left > li.last-border {
@@ -10152,7 +10136,7 @@ table button[disabled], table input[disabled] {
 }
 
 .cl-top {
-    width: 60px;
+    width: 65px;
     margin-top: -4px;
     padding: 2px 0;
 }
@@ -10253,7 +10237,7 @@ table button[disabled], table input[disabled] {
 
 .simditor .simditor-body {
     padding: 22px 15px 40px;
-    min-height: 300px;
+    min-height: 220px;
     outline: none;
     cursor: text;
     position: relative;
@@ -10296,11 +10280,11 @@ table button[disabled], table input[disabled] {
 .simditor .simditor-toolbar > ul > li > .toolbar-item {
     display: block;
     float: left;
-    width: 50px;
+    width: 40px;
     height: 40px;
     outline: none;
     color: #333333;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 40px;
     text-align: center;
     text-decoration: none;
@@ -10499,4 +10483,161 @@ table button[disabled], table input[disabled] {
 }
 .welcome.table thead tr{
     background: none;
+}
+/*导航*/
+.wizard, .tabcontrol {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+.wizard > .steps {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.wizard ul, .tabcontrol ul {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+}
+.wizard ul > li, .tabcontrol ul > li {
+    display: block;
+    padding: 0;
+}
+
+.wizard > .steps > ul > li, .wizard > .actions > ul > li {
+    float: left;
+}
+
+.wizard > .steps a, .wizard > .steps a:hover, .wizard > .steps a:active {
+    display: block;
+    width: auto;
+    margin: 0 0.5em 0.5em;
+    padding: 8px;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
+    background: #1AB394;
+    color: #fff;
+    cursor: default;
+}
+.wizard > .steps .current-info, .tabcontrol > .steps .current-info {
+    position: absolute;
+    left: -999em;
+}
+.wizard > .steps .disabled a, .wizard > .steps .disabled a:hover, .wizard > .steps .disabled a:active {
+    background: #eee;
+    color: #aaa;
+    cursor: default;
+}
+.wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active {
+    background: #6fd1bd;
+    color: #fff;
+}
+.btn-list .btn{
+    padding: 4px 12px;
+}
+/*顶部图标*/
+.top_nav{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+.zdSet{
+    background-position: 0 0;
+}
+.yhSet{
+    background-position: 0 -20px;
+}
+.kcSet{
+    background-position: 0 -40px;
+}
+.zwSet{
+    background-position: 0 -60px;
+}
+.dxSet{
+    background-position: 0 -80px;
+}
+.ipSet{
+    background-position: 0 -100px;
+}
+.xzSet{
+    background-position: 0 -120px;
+}
+.zd-mg{
+    background-position: -20px 0;
+}
+.kc-tk{
+    background-position: -20px -20px;
+}
+.gg-gl{
+    background-position: -20px -40px;
+}
+.sj-tj{
+    background-position: -20px -60px;
+}
+.mgc-gl{
+    background-position: -20px -80px;
+}
+.kc-gl{
+    background-position: -40px 0;
+}
+.zb-gl{
+    background-position: -40px -20px;
+}
+.kc-tj{
+    background-position: -40px -40px;
+}
+.wd-gl{
+    background-position: -40px -60px;
+}
+.bj-gl{
+    background-position: -40px -80px;
+}
+.pj-gl{
+    background-position: -40px -100px;
+}
+.fl-gl{
+    background-position: -40px -120px;
+}
+.fw-gl{
+    background-position: -40px -140px;
+}
+.bq-gl{
+    background-position: -40px -160px;
+}
+.tz-gl{
+    background-position: -40px -180px;
+}
+.yh-gl{
+    background-position: -60px 0;
+}
+.js-gl{
+    background-position: -60px -20px;
+}
+.js-gl{
+    background-position: -60px -40px;
+}
+.qx-gl{
+    background-position: -60px -60px;
+}
+.rz-gl{
+    background-position: -60px -80px;
+}
+.znx-gl{
+    background-position: -60px -100px;
+}
+#commentForm .address{
+    border-radius: 3px 0 0 3px;
+}
+#commentForm .password{
+    border-radius:0 3px 3px 0
 }

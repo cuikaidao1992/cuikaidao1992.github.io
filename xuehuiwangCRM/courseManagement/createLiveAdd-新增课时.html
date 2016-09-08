@@ -22,92 +22,94 @@
                 <h5>新增课时</h5>
             </div>
             <div class="ibox-content ibox-padding">
-                <div id="fuelux-wizard" class="row-fluid" data-target="#step-container">
-                    <ul class="wizard-steps">
-                        <li data-target="#step1" class="active">
-                            <span class="step">1</span><span class="title">班号</span>
-                        </li>
-                        <li data-target="#step2" class="active"><span class="step">2</span>
-                            <span class="title">课时</span>
-                        </li>
-                        <li data-target="#step3"><span class="step">3</span>
-                            <span class="title">预排课</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="u-wrap classes">
-                    <div class="mainbackground nopadding">
-                        <div class="user-list" style="margin-top: 20px;">
-                            <form action="" id="commentForm">
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">班号</label>
-                                    <div class="col-sm-6 group-print">
-                                        <p class="s-list class-name">
-                                            <a class="btn btn-sm btn-white active" href="javascript:;" lessiontype="LESSON_OFF_JOB">脱产班</a>
-                                            <a class="btn btn-sm btn-white" href="javascript:;" lessiontype="LESSON_WEEKEND">周末班</a>
-                                            <a class="btn btn-sm btn-white" href="javascript:;" lessiontype="LESSON_NIGHT">晚班</a>
-                                            <a class="btn btn-sm btn-white" href="javascript:;" lessiontype="LESSON_SATURDAY">周六班</a>
-                                            <a class="btn btn-sm btn-white" href="javascript:;" lessiontype="LESSON_SUNDAY">周日班</a>
-                                        </p>
+                <div id="wizard" role="application" class="wizard clearfix">
+                    <div class="steps clearfix">
+                        <ul role="tablist">
+                            <li role="tab" class="first done col-sm-3">
+                                <a href="#"><span class="number">1.</span>新增班号</a>
+                            </li>
+                            <li role="tab" class="current col-sm-3">
+                                <a href="#"><span class="number">2.</span>添加课时</a>
+                            </li>
+                            <li role="tab" class="disabled last col-sm-3">
+                                <a href="#"><span class="number">3.</span>预排课</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="u-wrap classes">
+                        <div class="mainbackground nopadding">
+                            <div class="user-list" style="margin-top: 20px;">
+                                <form action="" id="commentForm">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">班号</label>
+                                        <div class="col-sm-6 group-print">
+                                            <p class="s-list class-name">
+                                                <a class="btn btn-sm btn-white active" href="javascript:;" lessiontype="LESSON_OFF_JOB">脱产班</a>
+                                                <a class="btn btn-sm btn-white" href="javascript:;" lessiontype="LESSON_WEEKEND">周末班</a>
+                                                <a class="btn btn-sm btn-white" href="javascript:;" lessiontype="LESSON_NIGHT">晚班</a>
+                                                <a class="btn btn-sm btn-white" href="javascript:;" lessiontype="LESSON_SATURDAY">周六班</a>
+                                                <a class="btn btn-sm btn-white" href="javascript:;" lessiontype="LESSON_SUNDAY">周日班</a>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">排课天</label>
-                                    <div class="col-sm-6 group-print">
-                                       <p class="s-list weekDiv">
-                                           <label><input type="checkbox" name="moduleNo.lessonDay" value="1">周一</label>
-                                           <label><input type="checkbox" name="moduleNo.lessonDay" value="2">周二</label>
-                                           <label><input type="checkbox" name="moduleNo.lessonDay" value="3">周三</label>
-                                           <label><input type="checkbox" name="moduleNo.lessonDay" value="4">周四</label>
-                                           <label><input type="checkbox" name="moduleNo.lessonDay" value="5">周五</label>
-                                           <label><input type="checkbox" name="moduleNo.lessonDay" value="6">周六</label>
-                                           <label><input type="checkbox" name="moduleNo.lessonDay" value="0">周日</label>
-			                            </p>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">排课天</label>
+                                        <div class="col-sm-6 group-print">
+                                           <p class="s-list weekDiv">
+                                               <label><input type="checkbox" name="moduleNo.lessonDay" value="1">周一</label>
+                                               <label><input type="checkbox" name="moduleNo.lessonDay" value="2">周二</label>
+                                               <label><input type="checkbox" name="moduleNo.lessonDay" value="3">周三</label>
+                                               <label><input type="checkbox" name="moduleNo.lessonDay" value="4">周四</label>
+                                               <label><input type="checkbox" name="moduleNo.lessonDay" value="5">周五</label>
+                                               <label><input type="checkbox" name="moduleNo.lessonDay" value="6">周六</label>
+                                               <label><input type="checkbox" name="moduleNo.lessonDay" value="0">周日</label>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">上课时段</label>
-                                    <div class="col-sm-6 group-print">
-                                       <p class="s-list lesson-time">
-                                            <a class="btn btn-sm btn-white active" href="javascript:;" lessonscope="LESSON_TIME_MORNING">上午</a>
-                                            <a class="btn btn-sm btn-white" href="javascript:;" lessonscope="LESSON_TIME_AFTERNOON">下午</a>
-                                            <a class="btn btn-sm btn-white" href="javascript:;" lessonscope="LESSON_TIME_WHOLE_DAY">全天</a>
-                                            <a class="btn btn-sm btn-white" href="javascript:;" lessonscope="LESSON_TIME_NIGHT">晚上</a>
-			                            </p>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">上课时段</label>
+                                        <div class="col-sm-6 group-print">
+                                           <p class="s-list lesson-time">
+                                                <a class="btn btn-sm btn-white active" href="javascript:;" lessonscope="LESSON_TIME_MORNING">上午</a>
+                                                <a class="btn btn-sm btn-white" href="javascript:;" lessonscope="LESSON_TIME_AFTERNOON">下午</a>
+                                                <a class="btn btn-sm btn-white" href="javascript:;" lessonscope="LESSON_TIME_WHOLE_DAY">全天</a>
+                                                <a class="btn btn-sm btn-white" href="javascript:;" lessonscope="LESSON_TIME_NIGHT">晚上</a>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">课次开始时间</label>
-                                    <div class="col-sm-6 group-print">
-                                        <input type="text" value="09:00" class="form-control date-picker" datatype="startTime" id="startTime">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">课次开始时间</label>
+                                        <div class="col-sm-6 group-print">
+                                            <input type="text" value="09:00" class="form-control date-picker" datatype="startTime" id="startTime">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">课次结束时间</label>
-                                    <div class="col-sm-6">
-                                        <input type="text" value="15:00" class="form-control date-picker" id="endTime">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">课次结束时间</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" value="15:00" class="form-control date-picker" id="endTime">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">总课时</label>
-                                    <div class="col-sm-6 group-print">
-                                        <input type="text" value="10" disabled="disabled" class="form-control">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">总课时</label>
+                                        <div class="col-sm-6 group-print">
+                                            <input type="text" value="10" disabled="disabled" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">每课次课时</label>
-                                    <div class="col-sm-6 group-print">
-                                        <input type="text" class="classNum-name form-control" value="1.5"/>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">每课次课时</label>
+                                        <div class="col-sm-6 group-print">
+                                            <input type="text" class="classNum-name form-control" value="1.5"/>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="hr-line-dashed"></div>
-                                <div class="form-group">
-                                    <div class="col-sm-10 col-sm-offset-1">
-                                        <button class="btn btn-primary col-sm-5 btn-submit" type="button" onclick="location.href='createLiveAdd-预排课.html'">保存并继续</button>
-                                        <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true" onclick="window.history.back(-1)">返回</button>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <button class="btn btn-primary col-sm-5 btn-submit" type="button" onclick="location.href='createLiveAdd-预排课.html'">保存并继续</button>
+                                            <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true" onclick="window.history.back(-1)">返回</button>
+                                        </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -21,142 +21,144 @@
                 <h5>增加视频</h5>
             </div>
             <div class="ibox-content ibox-padding">
-                <div id="fuelux-wizard" class="row-fluid" data-target="#step-container">
-                    <ul class="wizard-steps">
-                        <li data-target="#step1" class="active">
-                            <span class="step">1</span> <span class="title">基本信息</span>
-                        </li>
-                        <li data-target="#step2" class="active"><span class="step">2</span>
-                            <span class="title">课程详情</span>
-                        </li>
-                        <li data-target="#step3" class="active"><span class="step">3</span>
-                            <span class="title">服务设置</span>
-                        </li>
-                        <li data-target="#step4" class="active"><span class="step">4</span>
-                            <span class="title">增加视频</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="u-wrap classes">
-                    <div class="mainbackground nopadding" style="background:#fff;">
-                        <div class="heading">
-                            <span class="h5">人力1</span>
-                            <span class="float-right">
-                                <span>未上架</span>
-                                <span>默认学科-默认学科小类</span>
-                                <span>定价:150.0</span>
-                            </span>
-                            <span class="line"></span>
-                        </div>
-                        <div class="c-main teacher-content">
-                            <div class="teacher-btns" id="chapter-btn">
-                                <a href="javascript:;" class="btn btn-primary  "><i class="glyphicon glyphicon-plus"></i>新增章节</a>
-                            </div>
-                            <div class="t-c clear">
-                                <div class="t-c-l" style="height:600px;">
-                                    <ul class="sortable base-sort ui-sortable">
-                                        <li class="dis ui-sortable-handle">
-                                            <div class="father clearfix">
-                                                <div class="pull-left">
-                                                    <i class="glyphicon glyphicon-triangle-bottom open"></i>
-                                                    <a href="javascript:;">第&nbsp;1&nbsp;章<b></b></a>
-                                                </div>
-                                                <div class="pull-right">
-                                                    <i class="fa fa-plus add-btns" title="添加节"></i>
-                                                    <i class="fa fa-trash"></i>
-                                                    <i class="fa fa-navicon"></i>
-                                                </div>
-                                            </div>
-                                            <ul class="son sortable ui-sortable" style="display: block;">
-                                                <li class="class-son ui-sortable-handle" draggable="true">
-                                                    <a href="javascript:;">第&nbsp;1&nbsp;节<b></b></a>
-                                                    <div class="pull-right">
-                                                        <i class="fa fa-trash"></i>
-                                                        <i class="fa fa-navicon"></i>
-                                                    </div>
-                                                </li>
-                                                <li class="class-son ui-sortable-handle" draggable="true">
-                                                    <a href="javascript:;">第&nbsp;2&nbsp;节<b></b></a>
-                                                    <div class="pull-right">
-                                                        <i class="fa fa-trash"></i>
-                                                        <i class="fa fa-navicon"></i>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="t-c-r" style="height:600px;display: none">
-                                    <div class="t-c-r-t chapter" value="">
-                                        <p class="c">
-                                            <span class="c-title">章的名称</span>
-                                            <span class="c-content">
-                                                <input class="chapterName" type="text" maxlength="20" value="" placeholder="章的名称">
-                                            </span>
-                                            <span class="check-box"><input type="checkbox" class="check-btn">不显示</span>
-                                        </p>
-                                        <p class="c">
-                                            <span class="c-title"></span>
-                                            <span class="c-content">
-                                                <a href="javascript:;" class="btn btn-mini btn-primary save">保存</a>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="t-c-r" style="height:600px;">
-                                    <div class="t-c-r-t lecture">
-                                        <p class="c">
-                                            <span class="c-title">课时名称</span>
-                                            <span class="c-content">
-                                                <input class="lectureName" maxlength="20" type="text" placeholder="输入名称">
-                                            </span>
-                                        </p>
-                                        <p class="c">
-                                            <span class="c-title">公开视频</span>
-                                            <span class="c-content radios">
-                                                <span class="check-box"><input type="checkbox" class="check-btn">免费视频</span>
-                                                <span class="check-box"><input type="checkbox" class="check-btn">试听</span>
-                                            </span>
-                                        </p>
-                                        <p class="c">
-                                            <span class="c-title">视频地址</span>
-                                            <div class="input-group c-content">
-                                                <input class="form-control" style="margin-top: 0" type="text" placeholder="支持优酷、土豆、腾讯、网易公开课的视频页面地址导入" data-role="import-url">
-                                                <span class="input-group-btn">
-                                                  <button type="button" class="btn btn-default" data-role="import" data-url="/course/22624/manage/media/import" data-loading-text="正在导入，请稍等">导入</button>
-                                                </span>
-                                            </div>
-                                        </p>
-                                        <p class="c">
-                                            <span class="c-title">视频时长</span>
-                                            <span class="c-content radios">
-                                                <input type="text" class="video_time">
-                                            </span>
-                                            <span>时长必须为整数</span>
-                                        </p>
-                                        <p class="c">
-                                            <span class="c-title">建议学习时长</span>
-                                            <span class="c-content">
-                                               <input type="text" class="ad_video_time">
-                                            </span>
-                                            <span>如未设置，则默认学习时长为视频时长2倍取整</span>
-                                        </p>
-                                        <p class="c">
-                                            <span class="c-title"></span>
-                                            <span class="c-content">
-                                                <a href="javascript:;" class="btn btn-mini btn-primary save">保存</a>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
+                <div id="wizard" role="application" class="wizard clearfix">
+                    <div class="steps clearfix">
+                        <ul role="tablist">
+                            <li role="tab" class="first done col-sm-2">
+                                <a href="#"><span class="number">1.</span>基本信息</a>
+                            </li>
+                            <li role="tab" class="done col-sm-2">
+                                <a href="#"><span class="number">2.</span>课程详情</a>
+                            </li>
+                            <li role="tab" class="done col-sm-2">
+                                <a href="#"><span class="number">3.</span>服务设置</a>
+                            </li>
+                            <li role="tab" class="current col-sm-2">
+                                <a href="#"><span class="number">4.</span>增加视频</a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <div class="col-sm-10 col-sm-offset-1">
-                    <button class="btn btn-white col-sm-3" onclick="window.history.back(-1)">返回</button>
-                    <button class="btn btn-primary col-sm-3 col-sm-offset-1 btn-submit" id="submit" type="submit">开始招生</button>
-                    <button class="btn btn-white col-sm-3 col-sm-offset-1">取消</button>
+                    <div class="u-wrap classes">
+                        <div class="mainbackground nopadding" style="background:#fff;">
+                            <div class="heading">
+                                <span class="h5">人力1</span>
+                                <span class="float-right">
+                                    <span>未上架</span>
+                                    <span>默认学科-默认学科小类</span>
+                                    <span>定价:150.0</span>
+                                </span>
+                                <span class="line"></span>
+                            </div>
+                            <div class="c-main teacher-content">
+                                <div class="teacher-btns" id="chapter-btn">
+                                    <a href="javascript:;" class="btn btn-primary  "><i class="glyphicon glyphicon-plus"></i>新增章节</a>
+                                </div>
+                                <div class="t-c clear">
+                                    <div class="t-c-l" style="height:600px;">
+                                        <ul class="sortable base-sort ui-sortable">
+                                            <li class="dis ui-sortable-handle">
+                                                <div class="father clearfix">
+                                                    <div class="pull-left">
+                                                        <i class="glyphicon glyphicon-triangle-bottom open"></i>
+                                                        <a href="javascript:;">第&nbsp;1&nbsp;章<b></b></a>
+                                                    </div>
+                                                    <div class="pull-right">
+                                                        <i class="fa fa-plus add-btns" title="添加节"></i>
+                                                        <i class="fa fa-trash"></i>
+                                                        <i class="fa fa-navicon"></i>
+                                                    </div>
+                                                </div>
+                                                <ul class="son sortable ui-sortable" style="display: block;">
+                                                    <li class="class-son ui-sortable-handle" draggable="true">
+                                                        <a href="javascript:;">第&nbsp;1&nbsp;节<b></b></a>
+                                                        <div class="pull-right">
+                                                            <i class="fa fa-trash"></i>
+                                                            <i class="fa fa-navicon"></i>
+                                                        </div>
+                                                    </li>
+                                                    <li class="class-son ui-sortable-handle" draggable="true">
+                                                        <a href="javascript:;">第&nbsp;2&nbsp;节<b></b></a>
+                                                        <div class="pull-right">
+                                                            <i class="fa fa-trash"></i>
+                                                            <i class="fa fa-navicon"></i>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="t-c-r" style="height:600px;display: none">
+                                        <div class="t-c-r-t chapter" value="">
+                                            <p class="c">
+                                                <span class="c-title">章的名称</span>
+                                                <span class="c-content">
+                                                    <input class="chapterName" type="text" maxlength="20" value="" placeholder="章的名称">
+                                                </span>
+                                                <span class="check-box"><input type="checkbox" class="check-btn">不显示</span>
+                                            </p>
+                                            <p class="c">
+                                                <span class="c-title"></span>
+                                                <span class="c-content">
+                                                    <a href="javascript:;" class="btn btn-mini btn-primary save">保存</a>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="t-c-r" style="height:600px;">
+                                        <div class="t-c-r-t lecture">
+                                            <p class="c">
+                                                <span class="c-title">课时名称</span>
+                                                <span class="c-content">
+                                                    <input class="lectureName" maxlength="20" type="text" placeholder="输入名称">
+                                                </span>
+                                            </p>
+                                            <p class="c">
+                                                <span class="c-title">公开视频</span>
+                                                <span class="c-content radios">
+                                                    <span class="check-box"><input type="checkbox" class="check-btn">免费视频</span>
+                                                    <span class="check-box"><input type="checkbox" class="check-btn">试听</span>
+                                                </span>
+                                            </p>
+                                            <p class="c">
+                                                <span class="c-title">视频地址</span>
+                                                <div class="input-group c-content">
+                                                    <input class="form-control" style="margin-top: 0" type="text" placeholder="支持优酷、土豆、腾讯、网易公开课的视频页面地址导入" data-role="import-url">
+                                                    <span class="input-group-btn">
+                                                      <button type="button" class="btn btn-default" data-role="import" data-url="/course/22624/manage/media/import" data-loading-text="正在导入，请稍等">导入</button>
+                                                    </span>
+                                                </div>
+                                            </p>
+                                            <p class="c">
+                                                <span class="c-title">视频时长</span>
+                                                <span class="c-content radios">
+                                                    <input type="text" class="video_time">
+                                                </span>
+                                                <span>时长必须为整数</span>
+                                            </p>
+                                            <p class="c">
+                                                <span class="c-title">建议学习时长</span>
+                                                <span class="c-content">
+                                                   <input type="text" class="ad_video_time">
+                                                </span>
+                                                <span>如未设置，则默认学习时长为视频时长2倍取整</span>
+                                            </p>
+                                            <p class="c">
+                                                <span class="c-title"></span>
+                                                <span class="c-content">
+                                                    <a href="javascript:;" class="btn btn-mini btn-primary save">保存</a>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <button class="btn btn-white col-sm-3" onclick="window.history.back(-1)">返回</button>
+                        <button class="btn btn-primary col-sm-3 col-sm-offset-1 btn-submit" id="submit" type="submit">开始招生</button>
+                        <button class="btn btn-white col-sm-3 col-sm-offset-1">取消</button>
+                    </div>
                 </div>
             </div>
         </div>

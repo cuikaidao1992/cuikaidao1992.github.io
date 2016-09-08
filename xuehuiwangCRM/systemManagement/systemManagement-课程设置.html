@@ -28,8 +28,8 @@
                          <form action="" id="commentForm">
                              <div class="form-group">
                                  <label class="col-sm-3 control-label">欢迎私信内容</label>
-                                 <div class="col-sm-6 group-print">
-                                     <textarea name="welcome_message_body" class="form-control" rows="5"></textarea>
+                                 <div class="col-sm-7 group-print">
+                                     <textarea id="editor" placeholder="这里输入内容" autofocus rows="5"></textarea>
                                  </div>
                              </div>
                          </form>
@@ -148,10 +148,12 @@
 </div>
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/previewImage/previewImage.js"></script>
-<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
-<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/simditor/module.js"></script>
+<script type="text/javascript" src="../js/simditor/hotkeys.js"></script>
+<script type="text/javascript" src="../js/simditor/simditor.js"></script>
+<script>
+    $(document).ready(function(){var editor=new Simditor({textarea:$("#editor"),defaultImage:"images/a9.jpg"})});
+</script>
 </body>
 </html>

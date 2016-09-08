@@ -30,19 +30,17 @@
                          <div class="col-sm-2 group-print patop">
                            <a class="btn btn-primary" href="#closeCourse" data-toggle="modal">新增类别</a>
                          </div>
-                       
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">短信类型</label>
-                        <div class="col-sm-6 group-print">
+                        <div class="col-sm-7 group-print">
                             <input type="text" name="user" class="form-control" placeholder="请输入短信类型" required>
                         </div>
-                       
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">模板内容</label>
-                        <div class="col-sm-6 group-print">
-                            <textarea name="comment" class="form-control" required aria-required="true" style="min-height: 100px"></textarea>
+                        <div class="col-sm-7 group-print">
+                            <textarea id="editor" placeholder="这里输入内容" autofocus rows="5"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -54,7 +52,6 @@
                              <option>手动群发</option>
                            </select>
                         </div>
-                        
                     </div>
                      <div class="form-group">
                         <label class="col-sm-2 control-label">启动状态</label>
@@ -105,9 +102,12 @@
 </div>
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
-<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/simditor/module.js"></script>
+<script type="text/javascript" src="../js/simditor/hotkeys.js"></script>
+<script type="text/javascript" src="../js/simditor/simditor.js"></script>
+<script>
+    $(document).ready(function(){var editor=new Simditor({textarea:$("#editor"),defaultImage:"images/a9.jpg"})});
+</script>
 </body>
 </html>

@@ -26,7 +26,7 @@
                     <fieldset>
                         <div class="form-group">
                             <div class="col-sm-10 col-sm-offset-1">
-                                <textarea id="ips" name="ips" rows="18" class="form-control"></textarea>
+                                <textarea id="ips" name="ips" placeholder="这里输入内容" rows="10" class="form-control"></textarea>
                                 <div class="help-block">一行一个IP，被加入黑名单的IP将被禁止访问！暂不支持网段的封锁!</div>
                             </div>
                         </div>
@@ -45,9 +45,12 @@
 </div>
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
-<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/simditor/module.js"></script>
+<script type="text/javascript" src="../js/simditor/hotkeys.js"></script>
+<script type="text/javascript" src="../js/simditor/simditor.js"></script>
+<script>
+    $(document).ready(function(){var editor=new Simditor({textarea:$("#ips"),defaultImage:"images/a9.jpg"})});
+</script>
 </body>
 </html>

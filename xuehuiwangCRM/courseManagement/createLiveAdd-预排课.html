@@ -22,113 +22,115 @@
                 <h5>预排课</h5>
             </div>
             <div class="ibox-content ibox-padding">
-                <div id="fuelux-wizard" class="row-fluid" data-target="#step-container">
-                    <ul class="wizard-steps">
-                        <li data-target="#step1" class="active">
-                            <span class="step">1</span><span class="title">班号</span>
-                        </li>
-                        <li data-target="#step2" class="active"><span class="step">2</span>
-                            <span class="title">课时</span>
-                        </li>
-                        <li data-target="#step3" class="active"><span class="step">3</span>
-                            <span class="title">预排课</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="u-wrap classes" style="margin-top: 40px;">
-                    <div class="heading clearfix">
-                        <h2 class="h5 pull-left">排课</h2>
-                        <span class="search pull-right">现代企业管理-直播-20160827</span>
-                        <span class="line"></span>
+                <div id="wizard" role="application" class="wizard clearfix">
+                    <div class="steps clearfix">
+                        <ul role="tablist">
+                            <li role="tab" class="first done col-sm-3">
+                                <a href="#"><span class="number">1.</span>新增班号</a>
+                            </li>
+                            <li role="tab" class="done col-sm-3">
+                                <a href="#"><span class="number">2.</span>添加课时</a>
+                            </li>
+                            <li role="tab" class="current col-sm-3">
+                                <a href="#"><span class="number">3.</span>预排课</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="pull-right">
-                        <a class="btn btn-sm btn-primary addClass" href="javascript:;">新增课</a>
-                    </div>
-                    <div class="clearfix"></div>
-                     <div class="user-list" style="margin-top: 10px">
-                         <table class="table footTabel table-center" id="bodyHtml">
-                            <thead>
-                                <tr>
-                                    <th width="10%">日期<span class="fa indicator fa-unsorted"></span></th>
-                                    <th width="10%">星期<span class="fa indicator fa-unsorted"></span></th>
-                                    <th width="10%">时段<span class="fa indicator fa-unsorted"></span></th>
-                                    <th width="15%">时间<span class="fa indicator fa-unsorted"></span></th>
-                                    <th width="15%">课程名称<span class="fa indicator fa-unsorted"></span></th>
-                                    <th width="10%">课时时长<span class="fa indicator fa-unsorted"></span></th>
-                                    <th width="10%">教师<span class="fa indicator fa-unsorted"></span></th>
-                                    <th width="10%">免费试听<span class="fa indicator fa-unsorted"></span></th>
-                                    <th width="10%">操作<span class="fa indicator fa-unsorted"></span></th>
-                                </tr>
-                            </thead>
-                            <tbody class="son sortable ui-sortable">
-                                <tr class="class-son ui-sortable-handle bg-white" draggable="true">
-                                    <td width="10%"><input type="text" value="2016-08-27" class="date-picker input_width_60" disabled="disabled"></td>
-                                    <td width="10%"><input type="text" value="周六" class="input_width_40" name="" disabled="disabled"></td>
-                                    <td width="10%">
-                                        <input type="text" value="上午" class="time-input input_width_40" disabled="disabled">
-                                        <select class="time-select" style="display: none"><option value="上午">上午</option><option value="下午">下午</option><option value="全天">全天</option><option value="晚上">晚上</option></select>
-                                    </td>
-                                    <td width="15%"><input type="text" value="04:30" class="date-picker-time input_width_15" name="" disabled="disabled">-<input type="text" value="15:00" class="date-picker-time input_width_15" name="" disabled="disabled"></td>
-                                    <td width="15%"><input type="text" value="现代企业管理-1" disabled="disabled"></td>
-                                    <td width="10%"><input type="text" value="1" class="input_width_40" maxlength="3" disabled="disabled"></td>
-                                    <td width="10%"><input type="text" value="未安排" class="input_width_40" maxlength="3" disabled="disabled"></td>
-                                    <td width="10%">
-                                        <label>
-                                            <input name="switch-field-2" class="ace ace-switch ace-switch-2" checked="checked" type="checkbox">
-                                            <span class="lbl"></span>
-                                        </label>
-                                    </td>
-                                    <td class="slink" width="10%">
-                                        <a href="createLiveAdd-预排课-安排教师.html">安排教师</a>|<a class="more" href="javascript:void(0);">更多</a>
-                                        <ul class="none">
-                                            <li>
-                                                <a class="toTransaction editClass" href="javascript:;">编辑</a>
-                                            </li>
-                                            <li>
-                                                <a class="toTransaction removeClass" href="javascript:;">删除</a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr class="class-son ui-sortable-handle bg-white" draggable="true">
-                                    <td width="10%"><input type="text" value="2016-08-27" class="date-picker input_width_60" disabled="disabled"></td>
-                                    <td width="10%"><input type="text" value="周六" class="input_width_40" name="" disabled="disabled"></td>
-                                    <td width="10%">
-                                        <input type="text" value="上午" class="time-input input_width_40" disabled="disabled">
-                                        <select class="time-select" style="display: none"><option value="上午">上午</option><option value="下午">下午</option><option value="全天">全天</option><option value="晚上">晚上</option></select>
-                                    </td>
-                                    <td width="15%"><input type="text" value="04:30" class="date-picker-time input_width_15" name="" disabled="disabled">-<input type="text" value="15:00" class="date-picker-time input_width_15" name="" disabled="disabled"></td>
-                                    <td width="15%"><input type="text" value="现代企业管理-1" disabled="disabled"></td>
-                                    <td width="10%"><input type="text" value="1" class="input_width_40" maxlength="3" disabled="disabled"></td>
-                                    <td width="10%"><input type="text" value="未安排" class="input_width_40" maxlength="3" disabled="disabled"></td>
-                                    <td width="10%">
-                                        <label>
-                                            <input name="switch-field-2" class="ace ace-switch ace-switch-2" checked="checked" type="checkbox">
-                                            <span class="lbl"></span>
-                                        </label>
-                                    </td>
-                                    <td class="slink" width="10%">
-                                        <a href="createLiveAdd-预排课-安排教师.html">安排教师</a>|<a class="more" href="javascript:void(0);">更多</a>
-                                        <ul class="none">
-                                            <li>
-                                                <a class="toTransaction editClass" href="javascript:;">编辑</a>
-                                            </li>
-                                            <li>
-                                                <a class="toTransaction removeClass" href="javascript:;">删除</a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                         </table>
-                         <div class="hr-line-dashed"></div>
-                         <div class="form-group">
-                             <div class="col-sm-10 col-sm-offset-1">
-                                 <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">保存</button>
-                                 <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true" onclick="window.history.back(-1)">返回</button>
+                    <div class="u-wrap classes" style="margin-top: 40px;">
+                        <div class="heading clearfix">
+                            <h2 class="h5 pull-left">排课</h2>
+                            <span class="search pull-right">现代企业管理-直播-20160827</span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="pull-right">
+                            <a class="btn btn-sm btn-primary addClass" href="javascript:;">新增课</a>
+                        </div>
+                        <div class="clearfix"></div>
+                         <div class="user-list" style="margin-top: 10px">
+                             <table class="table footTabel table-center" id="bodyHtml">
+                                <thead>
+                                    <tr>
+                                        <th width="10%">日期<span class="fa indicator fa-unsorted"></span></th>
+                                        <th width="10%">星期<span class="fa indicator fa-unsorted"></span></th>
+                                        <th width="10%">时段<span class="fa indicator fa-unsorted"></span></th>
+                                        <th width="15%">时间<span class="fa indicator fa-unsorted"></span></th>
+                                        <th width="15%">课程名称<span class="fa indicator fa-unsorted"></span></th>
+                                        <th width="10%">课时时长<span class="fa indicator fa-unsorted"></span></th>
+                                        <th width="10%">教师<span class="fa indicator fa-unsorted"></span></th>
+                                        <th width="10%">免费试听<span class="fa indicator fa-unsorted"></span></th>
+                                        <th width="10%">操作<span class="fa indicator fa-unsorted"></span></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="son sortable ui-sortable">
+                                    <tr class="class-son ui-sortable-handle bg-white" draggable="true">
+                                        <td width="10%"><input type="text" value="2016-08-27" class="date-picker input_width_60" disabled="disabled"></td>
+                                        <td width="10%"><input type="text" value="周六" class="input_width_40" name="" disabled="disabled"></td>
+                                        <td width="10%">
+                                            <input type="text" value="上午" class="time-input input_width_40" disabled="disabled">
+                                            <select class="time-select" style="display: none"><option value="上午">上午</option><option value="下午">下午</option><option value="全天">全天</option><option value="晚上">晚上</option></select>
+                                        </td>
+                                        <td width="15%"><input type="text" value="04:30" class="date-picker-time input_width_15" name="" disabled="disabled">-<input type="text" value="15:00" class="date-picker-time input_width_15" name="" disabled="disabled"></td>
+                                        <td width="15%"><input type="text" value="现代企业管理-1" disabled="disabled"></td>
+                                        <td width="10%"><input type="text" value="1" class="input_width_40" maxlength="3" disabled="disabled"></td>
+                                        <td width="10%"><input type="text" value="未安排" class="input_width_40" maxlength="3" disabled="disabled"></td>
+                                        <td width="10%">
+                                            <label>
+                                                <input name="switch-field-2" class="ace ace-switch ace-switch-2" checked="checked" type="checkbox">
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="slink" width="10%">
+                                            <a href="createLiveAdd-预排课-安排教师.html">安排教师</a>|<a class="more" href="javascript:void(0);">更多</a>
+                                            <ul class="none">
+                                                <li>
+                                                    <a class="toTransaction editClass" href="javascript:;">编辑</a>
+                                                </li>
+                                                <li>
+                                                    <a class="toTransaction removeClass" href="javascript:;">删除</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="class-son ui-sortable-handle bg-white" draggable="true">
+                                        <td width="10%"><input type="text" value="2016-08-27" class="date-picker input_width_60" disabled="disabled"></td>
+                                        <td width="10%"><input type="text" value="周六" class="input_width_40" name="" disabled="disabled"></td>
+                                        <td width="10%">
+                                            <input type="text" value="上午" class="time-input input_width_40" disabled="disabled">
+                                            <select class="time-select" style="display: none"><option value="上午">上午</option><option value="下午">下午</option><option value="全天">全天</option><option value="晚上">晚上</option></select>
+                                        </td>
+                                        <td width="15%"><input type="text" value="04:30" class="date-picker-time input_width_15" name="" disabled="disabled">-<input type="text" value="15:00" class="date-picker-time input_width_15" name="" disabled="disabled"></td>
+                                        <td width="15%"><input type="text" value="现代企业管理-1" disabled="disabled"></td>
+                                        <td width="10%"><input type="text" value="1" class="input_width_40" maxlength="3" disabled="disabled"></td>
+                                        <td width="10%"><input type="text" value="未安排" class="input_width_40" maxlength="3" disabled="disabled"></td>
+                                        <td width="10%">
+                                            <label>
+                                                <input name="switch-field-2" class="ace ace-switch ace-switch-2" checked="checked" type="checkbox">
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="slink" width="10%">
+                                            <a href="createLiveAdd-预排课-安排教师.html">安排教师</a>|<a class="more" href="javascript:void(0);">更多</a>
+                                            <ul class="none">
+                                                <li>
+                                                    <a class="toTransaction editClass" href="javascript:;">编辑</a>
+                                                </li>
+                                                <li>
+                                                    <a class="toTransaction removeClass" href="javascript:;">删除</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                             </table>
+                             <div class="hr-line-dashed"></div>
+                             <div class="form-group">
+                                 <div class="col-sm-10 col-sm-offset-1">
+                                     <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">保存</button>
+                                     <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true" onclick="window.history.back(-1)">返回</button>
+                                 </div>
                              </div>
                          </div>
-                     </div>
+                    </div>
                 </div>
             </div>
         </div>
