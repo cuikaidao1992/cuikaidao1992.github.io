@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
@@ -14,93 +15,226 @@
     <link href="js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
 </head>
 <body class="gray-bg">
-<div class="wrapper wrapper-content animated fadeInRight">
+<div class="wrapper wrapper-content">
     <div class="row">
-        <div class="col-lg-4">
-            <div class="setModal cl-backg" >
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>当前在线</h5>
+                    <span class="label label-primary pull-right">今天</span>
+                    <h5>在线数</h5>
+                </div>
+                <div class="ibox-content-sa">
+                    <h1 class="no-margins">16,120</h1>
+                    <div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i></div>
+                    <small>在线人数</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-info pull-right">今天</span>
+                    <h5>登录数</h5>
+                </div>
+                <div class="ibox-content-sa">
+                    <h1 class="no-margins">25,800</h1>
+                    <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i></div>
+                    <small>登录人数</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-danger pull-right">今天</span>
+                    <h5>报名数</h5>
+                </div>
+                <div class="ibox-content-sa">
+                    <h1 class="no-margins">600</h1>
+                    <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i></div>
+                    <small>新报名人数</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-success pull-right">今天</span>
+                    <h5>新注册数</h5>
+                </div>
+                <div class="ibox-content-sa">
+                    <h1 class="no-margins">6,200</h1>
+                    <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div>
+                    <small>新注册人数</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>趋势图</h5>
                 </div>
                 <div class="ibox-content">
-                    <div id="analysis-chart-line" class="pic-sty"></div>
-                    <div class="toji">
-                        <i class="cl-org" style="margin-left:40px"></i><span class="tj-text">当前在线人数</span>
-                        <i class="cl-pink"></i><span class="tj-text">登陆人数</span>
-                        <i class="cl-blue2"></i><span class="tj-text">付费人数</span>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <form class="form-inline" action="" method="get" id="searchForm">
+                                <div class="form-group">
+                                    <select>
+                                        <option value="">--选择数据类型--</option>
+                                        <option value="">用户总数</option>
+                                        <option value="">课程总数</option>
+                                        <option value="">新注册用户数</option>
+                                        <option value="">用户登录数</option>
+                                        <option value="">付款成功人数</option>
+                                        <option value="">加入学习人数</option>
+                                        <option value="">新增课程数</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <a type="button" class="btn btn-white active" id="btn-month">本月</a>
+                                </div>
+                                <div class="form-group">
+                                    <a type="button" class="btn btn-white" id="btn-lastMonth">上月</a>
+                                </div>
+                                <div class="form-group">
+                                    <a type="button" class="btn btn-white" id="btn-lastThreeMonths">近三月</a>
+                                </div>
+                            </form>
+                            <div id="chartcenter" style="height: 300px;margin-top: 20px"></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <!--<div id="container" ></div>-->
+                            <ul class="stat-list">
+                                <li>
+                                    <h2 class="no-margins">2,346</h2>
+                                    <small>今日</small>
+                                    <div class="stat-percent">48% <i class="fa fa-level-up text-navy"></i>
+                                    </div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 48%;" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h2 class="no-margins ">4,422</h2>
+                                    <small>昨日</small>
+                                    <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i>
+                                    </div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 60%;" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h2 class="no-margins ">9,180</h2>
+                                    <small>本月</small>
+                                    <div class="stat-percent">22% <i class="fa fa-bolt text-navy"></i>
+                                    </div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 22%;" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="setModal cl-backg">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>数据统计</h5>
+                    <h5>最新未回复问题</h5>
+                </div>
+                <div class="ibox-content-sc ibox-heading">
+                    <h3>
+                        <i class="fa fa-envelope-o"></i>
+                        未回复
+                    </h3>
+                    <small><i class="fa fa-tim"></i> 您有22条未读消息</small>
                 </div>
                 <div class="ibox-content">
-                    <table class="table table-center">
-                        <thead>
-                        <tr>
-                            <th> </th>
-                            <th>今日<span class="fa indicator fa-unsorted"></span></th>
-                            <th>昨日<span class="fa indicator fa-unsorted"></span></th>
-                            <th>本月<span class="fa indicator fa-unsorted"></span></th>
-                            <th>历史<span class="fa indicator fa-unsorted"></span></th>
+                    <div class="feed-activity-list">
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right text-navy">1次查看</small>
+                                <strong>张娇007</strong>
+                                <div>
+                                    扫描学慧网二维码即可登录学慧网官方网站。学慧网-学习像呼吸一样自然,考试,教育,培训,在线模拟考试,人力资源管理师,公共营养师,心理咨
+                                    询师,会计从业资格证,教师资格证,自学,二级建造师
+                                </div>
+                                <small class="text-muted"> 老师：笑笑老师</small>
+                                <small class="text-muted pull-right">发表于2016-9-06 12:17</small>
+                            </div>
+                        </div>
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right text-navy">1次查看</small>
+                                <strong>张娇007</strong>
+                                <div>
+                                    扫描学慧网二维码即可登录学慧网官方网站。学慧网-学习像呼吸一样自然,考试,教育,培训,在线模拟考试,人力资源管理师,公共营养师,心理咨
+                                    询师,会计从业资格证,教师资格证,自学,二级建造师
+                                </div>
+                                <small class="text-muted"> 老师：笑笑老师</small>
+                                <small class="text-muted pull-right">发表于2016-9-06 12:17</small>
+                            </div>
+                        </div>
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right text-navy">1次查看</small>
+                                <strong>张娇007</strong>
+                                <div>
+                                    扫描学慧网二维码即可登录学慧网官方网站。学慧网-学习像呼吸一样自然,考试,教育,培训,在线模拟考试,人力资源管理师,公共营养师,心理咨
+                                    询师,会计从业资格证,教师资格证,自学,二级建造师
+                                </div>
+                                <small class="text-muted"> 老师：笑笑老师</small>
+                                <small class="text-muted pull-right">发表于2016-9-06 12:17</small>
+                            </div>
+                        </div>
 
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>用户总数</td>
-                            <td>200</td>
-                            <td>260</td>
-                            <td>6260</td>
-                            <td><a href="#">趋势</a></td>
-                        </tr>
-                        <tr>
-                            <td>课程总数</td>
-                            <td>200</td>
-                            <td>260</td>
-                            <td>6260</td>
-                            <td><a href="#">趋势</a></td>
-                        </tr>
-                        <tr>
-                            <td>新注册用户数</td>
-                            <td>200</td>
-                            <td>260</td>
-                            <td>6260</td>
-                            <td><a href="#">趋势</a></td>
-                        </tr>
-                        <tr>
-                            <td>用户登录数</td>
-                            <td>200</td>
-                            <td>260</td>
-                            <td>6260</td>
-                            <td><a href="#">趋势</a></td>
-                        </tr>
-                        <tr>
-                            <td>付款成功人数</td>
-                            <td>200</td>
-                            <td>260</td>
-                            <td>6260</td>
-                            <td><a href="#">趋势</a></td>
-                        </tr>
-                        <tr>
-                            <td>加入学习数</td>
-                            <td>200</td>
-                            <td>260</td>
-                            <td>6260</td>
-                            <td><a href="#">趋势</a></td>
-                        </tr>
-                        <tr>
-                            <td>新增课程数</td>
-                            <td>200</td>
-                            <td>260</td>
-                            <td>6260</td>
-                            <td><a href="#">趋势</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right text-navy">1次查看</small>
+                                <strong>张娇007</strong>
+                                <div>
+                                    扫描学慧网二维码即可登录学慧网官方网站。学慧网-学习像呼吸一样自然,考试,教育,培训,在线模拟考试,人力资源管理师,公共营养师,心理咨
+                                    询师,会计从业资格证,教师资格证,自学,二级建造师
+                                </div>
+                                <small class="text-muted"> 老师：笑笑老师</small>
+                                <small class="text-muted pull-right">发表于2016-9-06 12:17</small>
+                            </div>
+                        </div>
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right text-navy">1次查看</small>
+                                <strong>张娇007</strong>
+                                <div>
+                                    扫描学慧网二维码即可登录学慧网官方网站。学慧网-学习像呼吸一样自然,考试,教育,培训,在线模拟考试,人力资源管理师,公共营养师,心理咨
+                                    询师,会计从业资格证,教师资格证,自学,二级建造师
+                                </div>
+                                <small class="text-muted"> 老师： 学慧网管理员02 笑笑老师 华仔</small>
+                                <small class="text-muted pull-right">发表于2016-9-06 12:17</small>
+                            </div>
+                        </div>
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right text-navy">1次查看</small>
+                                <strong>张娇007</strong>
+                                <div>
+                                    扫描学慧网二维码即可登录学慧网官方网站。学慧网-学习像呼吸一样自然,考试,教育,培训,在线模拟考试,人力资源管理师,公共营养师,心理咨
+                                    询师.
+                                </div>
+                                <small class="text-muted"> 老师： 笑笑老师</small>
+                                <small class="text-muted pull-right">发表于2016-9-06 12:17</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="setModal cl-backg">
+        </div>
+        <div class="col-sm-8">
+            <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <h5>最受欢迎课程</h5>
                     <div class="ibox-tools">
@@ -113,9 +247,10 @@
                             <option>上月</option>
                         </select>
                     </div>
+
                 </div>
                 <div class="ibox-content">
-                    <table class="table  table-center">
+                    <table class="table table-center welcome">
                         <thead>
                         <tr>
                             <th width="30%">课程名称<span class="fa indicator fa-unsorted"></span> </th>
@@ -175,283 +310,97 @@
                             <td>265 人</td>
                             <td class="money-text">1000元</td>
                         </tr>
+
                         </tbody>
                     </table>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-8">
-            <div class="setModal">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>趋势图</h5>
-                    </div>
-                    <div class="ibox-content">
-                        <form class="well well-sm form-inline" action="" method="get" id="searchForm">
-                            <div class="form-group">
-                                <select>
-                                    <option value="">--选择数据类型--</option>
-                                    <option value="">用户总数</option>
-                                    <option value="">课程总数</option>
-                                    <option value="">新注册用户数</option>
-                                    <option value="">用户登录数</option>
-                                    <option value="">付款成功人数</option>
-                                    <option value="">加入学习人数</option>
-                                    <option value="">新增课程数</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <a type="button" class="btn btn-white active" id="btn-month">本月</a>
-                            </div>
-                            <div class="form-group">
-                                <a type="button" class="btn btn-white" id="btn-lastMonth">上月</a>
-                            </div>
-                            <div class="form-group">
-                                <a type="button" class="btn btn-white" id="btn-lastThreeMonths">近三月</a>
-                            </div>
-                            <div class="form-group">
-                                <label class="ptm">起始日期</label>
-                                <input type="text" class="date-picker from" name="startTime" value="2016-09-01">
-                            </div>
-                            <div class="form-group">
-                                <label class="ptm">截止日期</label>
-                                <input type="text" class="date-picker to" name="endTime" value="2016-09-06">
-                            </div>
-                            <button class="btn btn-primary searchContents">查询</button>
-                        </form>
-                        <div id="chartcenter"></div>
-                    </div>
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>最新购买记录</h5>
                 </div>
-            </div>
-            <div class="setModal">
-                <div class="ibox">
-                    <div class="ibox-title">
-                        <h5>最新未回复问题</h5>
-                    </div>
-                    <div class="ibox-content">
-                        <div class="table-responsive">
-                            <table class="table footTabel">
-                                <thead>
-                                <tr>
-                                    <th width="30%">问答标题<span class="fa indicator fa-unsorted"></span></th>
-                                    <th>所属课程<span class="fa indicator fa-unsorted"></span></th>
-                                    <th>提问人<span class="fa indicator fa-unsorted"></span></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <a href="#">课程不能看</a>
-                                        <br>
-                                        <span class="text-muted text-sm">1次查看</span>
-                                        <span class="text-muted text-sm">•</span>
-                                        <span class="text-muted text-sm">发表于2016-9-06 12:17</span>
-                                    </td>
-                                    <td>
-                                        <a href="#">中国现当代作家作品专题研究</a>
-                                        <br>
-                                        <span class="text-muted text-sm">老师：
-                                             <a class="text-muted text-sm" href="javascript:;">admin</a>
-                                        </span>
-                                    </td>
-                                    <td><a href="#modal" data-toggle="modal">王赵霞7049</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="#">请问ppt去哪下载呢？</a>
-                                        <br>
-                                        <span class="text-muted text-sm">0次查看</span>
-                                        <span class="text-muted text-sm">•</span>
-                                        <span class="text-muted text-sm">发表于2016-9-05 20:58</span>
-                                    </td>
-                                    <td>
-                                        <a href="#">企业人力资源管理师三级技能-精讲1611</a>
-                                        <br>
-                                        <span class="text-muted text-sm">老师：
-                                             <a class="text-muted text-sm" href="javascript:;">学慧网管理员02</a>
-                                             <a class="text-muted text-sm" href="javascript:;">笑笑老师</a>
-                                             <a class="text-muted text-sm" href="javascript:;">华仔</a>
-                                        </span>
-                                    </td>
-                                    <td><a href="#modal" data-toggle="modal">宋佳惠4577</a></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="setModal">
-                <div class="ibox">
-                    <div class="ibox-title">
-                        <h5>最新购买记录</h5>
-                    </div>
-                    <div class="ibox-content">
-                        <div class="table-responsive">
-                            <table class="table footTabel">
-                                <thead>
-                                <tr>
-                                    <th width="40%">订单名称<span class="fa indicator fa-unsorted"></span></th>
-                                    <th>金额<span class="fa indicator fa-unsorted"></span></th>
-                                    <th>购买人<span class="fa indicator fa-unsorted"></span></th>
-                                    <th>支付方式<span class="fa indicator fa-unsorted"></span></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td><a href="#">购买课程《会计证【3科精讲班】》</a></td>
-                                    <td class="money-text">0.00 元</td>
-                                    <td><a href="#modal" data-toggle="modal">王赵霞7049</a></td>
-                                    <td><span class="text-sm">支付宝  / 2016-9-06 14:10</span></td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#">购买课程《学慧网试听课程》</a></td>
-                                    <td class="money-text">0.00 元</td>
-                                    <td><a href="#modal" data-toggle="modal">微微一笑</a></td>
-                                    <td><span class="text-sm">微信  / 2016-9-06 13:57</span></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                <div class="ibox-content">
+                    <div class="table-responsive">
+                        <table class="table footTabel welcome">
+                            <thead>
+                            <tr>
+                                <th width="40%">订单名称<span class="fa indicator fa-unsorted"></span></th>
+                                <th>金额<span class="fa indicator fa-unsorted"></span></th>
+                                <th>购买人<span class="fa indicator fa-unsorted"></span></th>
+                                <th>支付方式<span class="fa indicator fa-unsorted"></span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><a href="#">购买课程《会计证【精讲班】》</a></td>
+                                <td class="money-text">0.00 元</td>
+                                <td><a href="#modal" data-toggle="modal">王赵霞7049</a></td>
+                                <td><span class="text-sm">支付宝  / 2016-9-06 14:10</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">购买课程《学慧网试听课程》</a></td>
+                                <td class="money-text">0.00 元</td>
+                                <td><a href="#modal" data-toggle="modal">微微一笑</a></td>
+                                <td><span class="text-sm">微信  / 2016-9-06 13:57</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">购买课程《会计证【精讲班】》</a></td>
+                                <td class="money-text">0.00 元</td>
+                                <td><a href="#modal" data-toggle="modal">王赵霞7049</a></td>
+                                <td><span class="text-sm">支付宝  / 2016-9-06 14:10</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">购买课程《学慧网试听课程》</a></td>
+                                <td class="money-text">0.00 元</td>
+                                <td><a href="#modal" data-toggle="modal">微微一笑</a></td>
+                                <td><span class="text-sm">微信  / 2016-9-06 13:57</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">购买课程《会计证【精讲班】》</a></td>
+                                <td class="money-text">0.00 元</td>
+                                <td><a href="#modal" data-toggle="modal">王赵霞7049</a></td>
+                                <td><span class="text-sm">支付宝  / 2016-9-06 14:10</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">购买课程《学慧网试听课程》</a></td>
+                                <td class="money-text">0.00 元</td>
+                                <td><a href="#modal" data-toggle="modal">微微一笑</a></td>
+                                <td><span class="text-sm">微信  / 2016-9-06 13:57</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">购买课程《会计证【精讲班】》</a></td>
+                                <td class="money-text">0.00 元</td>
+                                <td><a href="#modal" data-toggle="modal">王赵霞7049</a></td>
+                                <td><span class="text-sm">支付宝  / 2016-9-06 14:10</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">购买课程《会计证【精讲班】》</a></td>
+                                <td class="money-text">0.00 元</td>
+                                <td><a href="#modal" data-toggle="modal">王赵霞7049</a></td>
+                                <td><span class="text-sm">支付宝  / 2016-9-06 14:10</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">购买课程《学慧网试听课程》</a></td>
+                                <td class="money-text">0.00 元</td>
+                                <td><a href="#modal" data-toggle="modal">微微一笑</a></td>
+                                <td><span class="text-sm">微信  / 2016-9-06 13:57</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div id="modal" class="modal fade in"aria-hidden="false">
-    <div class="modal-dialog ">
-        <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title">个人详细信息</h4>
+        <div class="col-sm-12">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5>学员分布</h5>
+                </div>
+                <div class="ibox-content">
+                    <div style="height: 500px" id="echarts-map-chart"></div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body person-detail">
-            <table class="table table-striped table-bordered">
-                <tbody>
-                <tr>
-                    <th width="25%">用户名</th>
-                    <td width="75%">史艳娜1988</td>
-                </tr>
-                <tr>
-                    <th>Email</th>
-                    <td>暂无</td>
-                </tr>
-                <tr>
-                    <th>用户组</th>
-                    <td>学员</td>
-                </tr>
-                <tr>
-                    <th>注册时间/IP</th>
-                    <td>
-                        2016-9-03 18:55:40
-                        /
-                        218.249.44.98 北京
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>最近登录时间/IP</th>
-                    <td>
-                        2016-9-06 08:35:22
-                        / 124.77.87.201 上海杨浦区
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>姓名</th>
-                    <td>史艳娜</td>
-                </tr>
-
-                <tr>
-                    <th>性别</th>
-                    <td>女性</td>
-                </tr>
-
-
-                <tr>
-                    <th>身份证号</th>
-                    <td>暂无</td>
-                </tr>
-
-                <tr>
-                    <th>手机号码</th>
-                    <td>15893281988<span class="text-success">(已绑定)</span></td>
-                </tr>
-
-
-                <tr>
-                    <th>公司</th>
-                    <td>暂无</td>
-                </tr>
-
-                <tr>
-                    <th>职业</th>
-                    <td>暂无</td>
-                </tr>
-
-
-                <tr>
-                    <th>头衔</th>
-                    <td>暂无</td>
-                </tr>
-
-                <tr>
-                    <th>个人签名</th>
-                    <td>暂无</td>
-                </tr>
-
-                <tr>
-                    <th>自我介绍</th>
-                    <td>暂无</td>
-                </tr>
-
-                <tr>
-                    <th>个人网站</th>
-                    <td>暂无</td>
-                </tr>
-
-                <tr>
-                    <th>微博</th>
-                    <td>暂无</td>
-                </tr>
-
-                <tr>
-                    <th>微信</th>
-                    <td>暂无</td>
-                </tr>
-
-                <tr>
-                    <th>QQ</th>
-                    <td>暂无</td>
-                </tr>
-
-                </tbody></table>
-            <hr>
-            <table class="table table-striped table-condenseda table-bordered">
-                <tbody><tr>
-                    <th width="25%">地域（省市）</th>
-                    <td>暂无</td>
-                </tr>
-                <tr>
-                    <th width="25%">身份证</th>
-                    <td>410526197907100560</td>
-                </tr>
-                <tr>
-                    <th width="25%">邮寄地址</th>
-                    <td>暂无</td>
-                </tr>
-                <tr>
-                    <th width="25%">途径</th>
-                    <td>暂无</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
-        </div>
-    </div>
     </div>
 </div>
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
@@ -459,102 +408,135 @@
 <script type="text/javascript" src="js/highcharts/highcharts.js"></script>
 <script type="text/javascript" src="js/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="js/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript"  src="js/echarts-all.js"></script>
 <script>
-    $("body").on("focus.page",".date-picker",function(){
-        $(this).datetimepicker({
-            format: "yyyy-mm-dd",
-            minView:2,
-            autoclose: true,
-            language: "zh-CN"
-        })
-    });
-    /* 柱状图*/
-    $('#analysis-chart-line').highcharts({
-        chart: {
-            type: 'column'
-        },
-        credits: {
-            text: '',
-            href: 'javascript:void(0)',
-            position: {
-                align: 'right',
-                x: -10,
-                y: -240,
-                verticalAlign: 'bottom'
+    $(function () {
+        /*折线图*/
+        $('#chartcenter').highcharts({
+            chart: {
+                type: 'spline'
             },
-            style: {
-                color: '#ccc'
-
-            }
-        },
-        title: {
-            text: ''
-        },
-        subtitle: {
-            text: ''
-        },
-        xAxis: {
-            categories: ["当前在线人数", "登录人数", "付费人数"]
-        },
-        yAxis: {
             title: {
                 text: ''
             },
-            min: 0
-        },
-        legend: {
-            enabled: false
-        },
-        tooltip: {
-            enabled: true,
-            formatter: function () {
-                return this.x + '分区间：' + this.y + '人';
-            }
-        },
-        plotOptions: {
-            column: {
-                pointWidth:40,
-                dataLabels: {
-                    enabled: true
-                }
-            }
-        },
-        series: [
-            {
-                name: '分值分布(2016年09月)',
-                data: [{ "y": 558, "color": "#F58E5D" }, { "y":  630, "color": "#A9D5FF" }, { "y":300, "color": "#7cb5ec" }]
-            }
-        ]
-    });
-    /*折线图*/
-    $('#chartcenter').highcharts({
-        chart: {
-            type: 'spline'
-        },
-        title: {
-            text: ''
-        },
-        subtitle: {
-            text: ''
-        },
-        xAxis: {
-            categories: ['2016-09-01', '2016-09-02', '2016-09-03', '2016-09-04', '2016-09-05', '2016-09-06','2016-09-07', '2016-09-08', '2016-09-09', '2016-09-10', '2016-09-11', '2016-09-12']
-        },
-        yAxis: {
-            title: {
-                text: 'people'
-            }
-        },
-        tooltip: {
-            crosshairs: true,
-            shared: true
-        },
+            subtitle: {
+                text: ''
+            },
+            colors: ["#46c37b"],
 
-        series: [{
-            name: '用户总数',
-            data: [61880, 61884, 61957, 62072, 62172, 62192, 62201, 62211, 62233, 62235, 62240]
-        }]
+            xAxis: {
+                categories: ['09-01', '09-02', '09-03', '09-04', '09-05', '09-06','09-07', '09-08', '09-09', '09-10', '09-11', '09-12']
+            },
+            yAxis: {
+                title: {
+                    text: 'people'
+                }
+            },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+
+            series: [{
+                name: '用户总数',
+                data: [61880, 61884, 61957, 62072, 62172, 62192, 62201, 62211, 62233, 62235, 62240]
+            }]
+        })
+        /*地图*/
+        var mapChart = echarts.init(document.getElementById("echarts-map-chart"));
+        var mapoption = {
+            title : {
+                text: '学员分布图',
+                x:'center'
+            },
+            tooltip : {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'vertical',
+                x:'left',
+                data:['学员']
+            },
+            dataRange: {
+                min: 0,
+                max: 2500,
+                x: 'left',
+                y: 'bottom',
+                text:['高','低'],           // 文本，默认为数值文本
+                calculable : true
+            },
+            toolbox: {
+                show: true,
+                orient : 'vertical',
+                x: 'right',
+                y: 'center',
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            roamController: {
+                show: true,
+                x: 'right',
+                mapTypeControl: {
+                    'china': true
+                }
+            },
+            series : [
+                {
+                    name: '学员',
+                    type: 'map',
+                    mapType: 'china',
+                    roam: false,
+                    itemStyle:{
+                        normal:{label:{show:true}},
+                        emphasis:{label:{show:true}}
+                    },
+                    data:[
+                        {name: '北京',value: Math.round(Math.random()*1000)},
+                        {name: '天津',value: Math.round(Math.random()*1000)},
+                        {name: '上海',value: Math.round(Math.random()*1000)},
+                        {name: '重庆',value: Math.round(Math.random()*1000)},
+                        {name: '河北',value: Math.round(Math.random()*1000)},
+                        {name: '河南',value: Math.round(Math.random()*1000)},
+                        {name: '云南',value: Math.round(Math.random()*1000)},
+                        {name: '辽宁',value: Math.round(Math.random()*1000)},
+                        {name: '黑龙江',value: Math.round(Math.random()*1000)},
+                        {name: '湖南',value: Math.round(Math.random()*1000)},
+                        {name: '安徽',value: Math.round(Math.random()*1000)},
+                        {name: '山东',value: Math.round(Math.random()*1000)},
+                        {name: '新疆',value: Math.round(Math.random()*1000)},
+                        {name: '江苏',value: Math.round(Math.random()*1000)},
+                        {name: '浙江',value: Math.round(Math.random()*1000)},
+                        {name: '江西',value: Math.round(Math.random()*1000)},
+                        {name: '湖北',value: Math.round(Math.random()*1000)},
+                        {name: '广西',value: Math.round(Math.random()*1000)},
+                        {name: '甘肃',value: Math.round(Math.random()*1000)},
+                        {name: '山西',value: Math.round(Math.random()*1000)},
+                        {name: '内蒙古',value: Math.round(Math.random()*1000)},
+                        {name: '陕西',value: Math.round(Math.random()*1000)},
+                        {name: '吉林',value: Math.round(Math.random()*1000)},
+                        {name: '福建',value: Math.round(Math.random()*1000)},
+                        {name: '贵州',value: Math.round(Math.random()*1000)},
+                        {name: '广东',value: Math.round(Math.random()*1000)},
+                        {name: '青海',value: Math.round(Math.random()*1000)},
+                        {name: '西藏',value: Math.round(Math.random()*1000)},
+                        {name: '四川',value: Math.round(Math.random()*1000)},
+                        {name: '宁夏',value: Math.round(Math.random()*1000)},
+                        {name: '海南',value: Math.round(Math.random()*1000)},
+                        {name: '台湾',value: Math.round(Math.random()*1000)},
+                        {name: '香港',value: Math.round(Math.random()*1000)},
+                        {name: '澳门',value: Math.round(Math.random()*1000)}
+                    ]
+                },
+            ]
+        };
+        mapChart.setOption(mapoption);
+        $(window).resize(mapChart.resize);
     });
 </script>
 </body>
+
 </html>

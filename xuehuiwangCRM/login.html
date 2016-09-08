@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>健身馆 - 登录</title>
+    <title>学慧网 - 登录</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
@@ -12,60 +12,55 @@
     <script>
         if(window.top!==window.self){window.top.location=window.location};
     </script>
-
 </head>
-
-<body class="signin">
-  
-   <img src="images/login-bg.jpg" class="sign-img">
-  
-  <div class="sign-bg">
-
-    <div class="signinpanel">
-        <div class="row">
-            <div class="col-sm-7">
-                <div class="signin-info">
-                    <div class="logopanel m-b">
-                        <h1>[ <strong>学慧网管理平台</strong> ]</h1>
-                    </div>
-                    <div class="m-b"></div>
-                    <h4>欢迎使用 <strong>学慧网管理平台</strong></h4>
-                    <ul class="m-b">
-
-                    <strong>还没有账号？ <a href="#">立即注册&raquo;</a></strong>
+<body  class="sm-img">
+    <div class="login-box">
+    <a href="http://www.xuehuiwang.com/">
+        <div class="guanwang-logo mt-40"></div>
+    </a>
+    <form action="" class="login-form" method="post" id="vform">
+        <ul class="clearfix login-form-content login-form-user mt-40">
+            <li class="login-input">
+                <input type="text" autocomplete="off" placeholder="用户名" id="username" name="username">
+                <div id="emailTips" class="password-tips hide tips_z">
+                    <i class="sanjiao-icon"></i>
+                    <h5 id="emailTipsMsg" class="import-error">不能为空</h5>
                 </div>
-            </div>
-            <div class="col-sm-5">
-                <form class="login_form" id="loginForm">
-                    <h4 class="no-margins">登录：</h4>
-                    <p class="m-t-md">登录到学慧网管理平台</p>
-                    <input type="text" class="form-control uname" placeholder="用户名" />
-                    <input type="password" class="form-control pword m-b" placeholder="密码" />
-                    <a href="">忘记密码了？</a>
-                    <button class="btn btn-success btn-block" id="loginButton">登录</button>
-                </form>
-            </div>
+            </li>
+            <li class="login-input password-input">
+                <input class="pwd-focus" autocomplete="off" type="password" placeholder="密码" id="password" name="password" >
+                <i class="eye-icon"></i>
+                <!--/*密码提示 隐藏用hide*/-->
+                <div id="passTips" class="password-tips hide tips_z">
+                    <i class="sanjiao-icon"></i>
+                    <h5 id="passTipsMsg" class="import-error">不能为空</h5>
+                </div>
+            </li>
+            <li class="clearfix register-agreement">
+                <div class="pull-left  login-btn-text ml-50">
+                    <a href="#">忘记密码</a>
+                </div>
+            </li>
+        </ul>
+        <input type="submit" value="登 录" class="login-new-btn mt-35" id="loginSubmit">
+        <div class="clearfix login-btn-text mt-10">
+            <a href="javascript:void(0);" id="letvLogin" class="pull-left">第三方登录</a>
+            <a href="#" class="pull-right">快速注册</a>
         </div>
-        <div class="signup-footer">
-            <div class="pull-left">
-                <p>课程内容版权均归： <a href="/">北京学慧网络教育科技有限公司</a>所有 <a class="mlm" href="http://www.miibeian.gov.cn/" target="_blank">
-                    京ICP备15007758号-1    京ICP证150990号
-                </a></p>
+    </form>
+</div>
+    <div class="login-foot clearfix color-white">
+        <div class="login-foot-section">
+            <div class="login-foot-left-con text-center">
+                <p> 京ICP备15007758号-1    京ICP证150990号</p>
             </div>
         </div>
     </div>
-    
-    </div>
-    
     <script type="text/javascript" src="js/tips/jquery.tips.js"></script>
     <script type="text/javascript">
-    
        $(function(){
 		   $("#loginForm").tipsy()
-		   })
-    
+       })
     </script>
-    
 </body>
-
 </html>

@@ -409,7 +409,7 @@ a:focus {
     position: relative
 }
 
-.navbar-top-links>li {
+.navbar-top-links > li {
     display: inline-block
 }
 
@@ -420,6 +420,7 @@ a:focus {
 body.body-small .navbar-top-links li:last-child {
     margin-right: 10px
 }
+
 .navbar-top-links .dropdown-alerts, .navbar-top-links .dropdown-messages, .navbar-top-links .dropdown-tasks {
     width: 310px;
     min-width: 0
@@ -514,7 +515,8 @@ body.body-small .navbar-top-links li:last-child {
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
 }
-.nav.navbar-top-links a:hover{
+
+.nav.navbar-top-links a:hover {
     color: #36d38c;
 }
 
@@ -3827,7 +3829,7 @@ table.table-mail tr td {
 
 .ibox-title h5 {
     float: left;
-    font-size: 16px;
+    font-size: 14px;
     margin: 3px 0 7px;
     padding: 0;
     text-overflow: ellipsis;
@@ -3974,7 +3976,7 @@ table.table-mail tr td {
 }
 
 .progress-bar {
-    background-color: #1ab394
+    background-color: #46c37b;
 }
 
 .progress-small, .progress-small .progress-bar {
@@ -7583,10 +7585,20 @@ input[type=checkbox].ace.ace-switch.ace-switch-2 + .lbl::before {
     color: #337ab7;
     font-size: 16px;
     padding-right: 0;
+    background-color: rgb(255, 255, 255);
+    -webkit-border-image: none;
+    color: inherit;
+    margin-bottom: 0px;
+    min-height: 48px;
+    border-color: rgb(231, 234, 236);
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 4px 0px 0px;
+    padding: 14px 15px 7px;
 }
 
 .ibox-title span {
-    font-size: 14px;
+    font-size: 12px;
     margin-left: 5px
 }
 
@@ -8653,13 +8665,6 @@ ul.item-panel .item .content .info {
     font-size: 14px;
 }
 
-.wrapper-content i {
-    display: inline-block;
-    font-size: 14px;
-    margin-right: 5px;
-    color: #999;
-}
-
 /*管理*/
 .company {
     margin-top: 15px;
@@ -9685,14 +9690,6 @@ table button[disabled], table input[disabled] {
     color: #36d38c;
 }
 
-.divider {
-    width: 1px;
-    height: 30px;
-    margin: 10px 9px;
-    border-right: 1px solid #ccc;
-    border-bottom: 0;
-}
-
 /*展开*/
 .short-long-text .short-text {
     cursor: pointer;
@@ -10180,23 +10177,326 @@ table button[disabled], table input[disabled] {
     color: #616161;
 }
 
-.table strong,.table a {
+.table strong, .table a {
     text-align: left !important;
     color: #616161;
     font-weight: normal;
 }
-.table a:hover{
+
+.table a:hover {
     color: #36d38c;
 }
-.font-cent{ height:100px; line-height:100px; font-size:18px; text-align:center;}
-.wrapper-content .fa-envelope{
+
+.font-cent {
+    height: 100px;
+    line-height: 100px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.wrapper-content .fa-envelope {
     color: #fff;
 }
-.operateList{
+
+.operateList {
     float: none;
     margin-bottom: 15px;
 }
+
 .modal-body.person-detail {
     max-height: 435px;
     overflow: auto;
+}
+
+/*欢迎页*/
+
+.simditor {
+    position: relative;
+    border: 1px solid #c9d8db;
+}
+
+.simditor .simditor-wrapper {
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.simditor .simditor-wrapper .simditor-placeholder {
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    padding: 22px 15px;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    line-height: 1.5;
+    color: #999999;
+    background: transparent;
+}
+
+.simditor .simditor-wrapper.toolbar-floating .simditor-toolbar {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.simditor .simditor-wrapper .simditor-image-loading {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.simditor .simditor-body {
+    padding: 22px 15px 40px;
+    min-height: 300px;
+    outline: none;
+    cursor: text;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.simditor .simditor-toolbar {
+    border-bottom: 1px solid #eeeeee;
+    background: #ffffff;
+    width: 100%;
+}
+
+.simditor .simditor-toolbar > ul {
+    margin: 0;
+    padding: 0 0 0 6px;
+    list-style: none;
+}
+
+.simditor .simditor-toolbar > ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.simditor .simditor-toolbar > ul > li {
+    position: relative;
+    float: left;
+}
+
+.simditor .simditor-toolbar > ul > li > span.separator {
+    display: block;
+    float: left;
+    background: #cfcfcf;
+    width: 1px;
+    height: 18px;
+    margin: 11px 15px;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 40px;
+    outline: none;
+    color: #333333;
+    font-size: 15px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item span {
+    opacity: 0.6;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item span.fa {
+    display: inline;
+    line-height: normal;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item:hover span {
+    opacity: 1;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.active {
+    background: #eeeeee;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.active span {
+    opacity: 1;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.disabled {
+    cursor: default;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.disabled span {
+    opacity: 0.3;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.toolbar-item-title span:before {
+    content: "T";
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.toolbar-item-title.active-h1 span:before {
+    content: 'H1';
+    font-size: 18px;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.toolbar-item-title.active-h2 span:before {
+    content: 'H2';
+    font-size: 18px;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.toolbar-item-title.active-h3 span:before {
+    content: 'H3';
+    font-size: 18px;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.toolbar-item-color {
+    font-size: 14px;
+    position: relative;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.toolbar-item-color span:before {
+    position: relative;
+    top: -2px;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.toolbar-item-color:after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 4px;
+    background: #cccccc;
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    margin: 0 0 0 -7px;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.toolbar-item-color:hover:after {
+    background: #999999;
+}
+
+.simditor .simditor-toolbar > ul > li > .toolbar-item.toolbar-item-color.disabled:after {
+    background: #dfdfdf;
+}
+
+.simditor .simditor-toolbar > ul > li.menu-on .toolbar-item {
+    position: relative;
+    z-index: 21;
+    background: #ffffff;
+    box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.simditor .simditor-toolbar .toolbar-menu.toolbar-menu-color {
+    width: 96px;
+}
+
+.simditor .simditor-toolbar .toolbar-menu.toolbar-menu-color .color-list {
+    height: 40px;
+    margin: 10px 6px 6px 10px;
+    padding: 0;
+    min-width: 0;
+}
+
+.simditor .simditor-toolbar .toolbar-menu.toolbar-menu-color .color-list li {
+    float: left;
+    margin: 0 4px 4px 0;
+}
+
+.simditor .simditor-toolbar .toolbar-menu.toolbar-menu-color .color-list li .font-color {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: #dfdfdf;
+    border-radius: 2px;
+}
+
+.simditor .simditor-toolbar .toolbar-menu.toolbar-menu-image .menu-item-upload-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.simditor .simditor-toolbar .toolbar-menu.toolbar-menu-image .menu-item-upload-image input[type=file] {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    opacity: 0;
+    font-size: 100px;
+    cursor: pointer;
+}
+
+.simditor .simditor-popover {
+    display: none;
+    padding: 5px 8px 0;
+    background: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 2;
+}
+
+.simditor .simditor-popover .settings-field {
+    margin: 0 0 5px 0;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.ibox-content-sa {
+    background-color: #fff;
+    color: inherit;
+    padding: 15px 20px 20px;
+    border-color: #e7eaec;
+    -webkit-border-image: none;
+    -o-border-image: none;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+    min-height: 85px;
+}
+
+.ibox-content-sc {
+    color: inherit;
+    padding: 15px 20px 20px;
+    border-color: #e7eaec;
+    -webkit-border-image: none;
+    -o-border-image: none;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+    height: auto;
+}
+
+.stat-percent {
+    height: 30px !important;
+}
+
+.stat-list {
+    padding-top: 60px;
+}
+
+.text-success {
+    color: #1c84c6;
+}
+
+.text-info {
+    color: #23c6c8;
+}
+
+.text-navy {
+    color: #46d37c;
+}
+
+.text-danger {
+    color: #ed5565;
+}
+.welcome.table thead tr{
+    background: none;
 }
