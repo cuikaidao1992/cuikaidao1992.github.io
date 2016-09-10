@@ -11,305 +11,673 @@
     <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
     <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
     <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/chosen/chosen.css" rel="stylesheet" type="text/css">
 </head>
 <body class="gray-bg">
 <div class="row wrapper wrapper-content animated fadeInRight">
     <div class="col-sm-10 col-sm-offset-1">
-         <div class="ibox">
-             <div class="ibox-title clearfix">
-                 <h5>用户设置</h5>
-             </div>
-             <div class="ibox-content ibox-padding">
-                 <div class="form-horizontal">
-                     <div class="ibox-title">
-                         <h6>登录设置</h6>
-                     </div>
-                     <div class="ibox-content" style="min-height: 235px">
-                         <form action="" id="commentForm">
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">用户登录限制</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">第三方登录</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">用户登录保护</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
-                                 </div>
-                             </div>
-                         </form>
-                     </div>
-                 </div>
-                 <div class="form-horizontal">
-                     <div class="ibox-title">
-                         <h6>注册设置</h6>
-                     </div>
-                     <div class="ibox-content">
-                         <form action="">
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">发送欢迎信息</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">欢迎信息发送方</label>
-                                 <div class="col-sm-6 group-print">
-                                     <input type="text" name="user" class="form-control" placeholder="学慧网">
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">欢迎信息标题</label>
-                                 <div class="col-sm-6 group-print">
-                                     <input type="text" name="user" class="form-control" placeholder="学慧网">
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">欢迎信息内容</label>
-                                 <div class="col-sm-6 group-print">
-                                     <input type="text" name="user" class="form-control" placeholder="学慧网">
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">支持变量</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
-                                 </div>
-                             </div>
-                         </form>
-                     </div>
-                 </div>
-                 <div class="form-horizontal">
-                     <div class="ibox-title">
-                         <h6>用户信息设置</h6>
-                     </div>
-                     <div class="ibox-content">
-                         <form action="">
-                             <div class="form-group" id="avatar-class">
-                                 <label class="col-sm-3 control-label">自定义默认头像</label>
-                                 <div class="col-sm-6 col-sm-offset-1">
-                                     <form id="avatar-form" method="post">
-                                         <div class="controls col-md-8 controls">
-                                             <img src="../images/user_img.jpg">
-                                         </div>
-                                         <div class="form-group">
-                                             <div class="col-md-2 control-label"></div>
-                                             <div class="controls col-md-8 controls">
-                                                 <p class="help-block">你可以上传JPG、GIF或PNG格式的文件。</p>
-                                             </div>
-                                         </div>
-                                         <label class="btn btn-primary col-sm-offset-2">
-                                             <input type="file" onchange="previewImage(this)" class="hide"> 上传新图片
-                                         </label>
-                                     </form>
-                                 </div>
-                             </div>
-                         </form>
-                     </div>
-                 </div>
-                 <div class="form-horizontal">
-                     <div class="ibox-title">
-                         <h6>微信页面登录接口</h6>
-                     </div>
-                     <div class="ibox-content">
-                         <form action="" id="">
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">微信页面登录接口</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="" value="">开启</label>
-                                     <label><input type="radio" name="" value="">关闭</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="col-sm-3 control-label">
-                                     <label for="weibo_key">App Key</label>
-                                 </div>
-                                 <div class="controls col-sm-6">
-                                     <input type="text" name="weibo_key" class="form-control" value="">
-                                     <div class="help-block" style="display:none;"></div>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="col-sm-3 control-label">
-                                     <label for="weibo_secret">App Secret</label>
-                                 </div>
-                                 <div class="controls col-sm-6">
-                                     <input type="text" name="weibo_secret" class="form-control" value="">
-                                     <div class="help-block" style="display:none;"></div>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="col-sm-3 control-label">
-                                     <label for="">登录时必须设置邮箱</label>
-                                 </div>
-                                 <div class="controls col-sm-6 radios">
-                                     <label><input type="radio" name="" value="1"> 开启</label>
-                                     <label><input type="radio" name="" value="0"> 关闭</label>
-                                 </div>
-                             </div>
-                         </form>
-                     </div>
-                 </div>
-                 <div class="form-horizontal">
-                     <div class="ibox-title">
-                         <h6>QQ登录接口</h6>
-                     </div>
-                     <div class="ibox-content">
-                         <form action="">
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">QQ登录接口</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="col-sm-3 control-label">
-                                     <label for="weibo_key">App Key</label>
-                                 </div>
-                                 <div class="controls col-sm-6">
-                                     <input type="text" name="weibo_key" class="form-control" value="">
-                                     <div class="help-block" style="display:none;"></div>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="col-sm-3 control-label">
-                                     <label for="weibo_secret">App Secret</label>
-                                 </div>
-                                 <div class="controls col-sm-6">
-                                     <input type="text" name="weibo_secret" class="form-control" value="">
-                                     <div class="help-block" style="display:none;"></div>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="col-sm-3 control-label">
-                                     <label for="">登录时必须设置邮箱</label>
-                                 </div>
-                                 <div class="controls col-sm-6 radios">
-                                     <label><input type="radio" name="" value="1"> 开启</label>
-                                     <label><input type="radio" name="" value="0"> 关闭</label>
-                                 </div>
-                             </div>
-                         </form>
-                     </div>
-                 </div>
-                 <div class="form-horizontal">
-                     <div class="ibox-title">
-                         <h6>微博登录接口</h6>
-                     </div>
-                     <div class="ibox-content">
-                         <form action="">
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">微博登录接口</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="col-sm-3 control-label">
-                                     <label for="weibo_key">App Key</label>
-                                 </div>
-                                 <div class="controls col-sm-6">
-                                     <input type="text" name="weibo_key" class="form-control" value="">
-                                     <div class="help-block" style="display:none;"></div>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="col-sm-3 control-label">
-                                     <label for="weibo_secret">App Secret</label>
-                                 </div>
-                                 <div class="controls col-sm-6">
-                                     <input type="text" name="weibo_secret" class="form-control" value="">
-                                     <div class="help-block" style="display:none;"></div>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="col-sm-3 control-label">
-                                     <label for="">登录时必须设置邮箱</label>
-                                 </div>
-                                 <div class="controls col-sm-6 radios">
-                                     <label><input type="radio" name="" value="1"> 开启</label>
-                                     <label><input type="radio" name="" value="0"> 关闭</label>
-                                 </div>
-                             </div>
-                         </form>
-                     </div>
-                 </div>
-                 <div class="form-horizontal">
-                     <div class="ibox-title">
-                         <h6>微信内分享登录接口</h6>
-                     </div>
-                     <div class="ibox-content">
-                         <form action="">
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">微信内分享登录接口</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="" value="">开启</label>
-                                     <label><input type="radio" name="" value="">关闭</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="col-sm-3 control-label">
-                                     <label for="weibo_key">App Key</label>
-                                 </div>
-                                 <div class="controls col-sm-6">
-                                     <input type="text" id="weibo_key" name="weibo_key" class="form-control" value="">
-                                     <div class="help-block" style="display:none;"></div>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="col-sm-3 control-label">
-                                     <label for="weibo_secret">App Secret</label>
-                                 </div>
-                                 <div class="controls col-sm-6">
-                                     <input type="text" id="weibo_secret" name="weibo_secret" class="form-control" value="">
-                                     <div class="help-block" style="display:none;"></div>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <div class="col-sm-3 control-label">
-                                     <label for="">登录时必须设置邮箱</label>
-                                 </div>
-                                 <div class="controls col-sm-6 radios">
-                                     <label><input type="radio" name="" value="1"> 开启</label>
-                                     <label><input type="radio" name="" value="0"> 关闭</label>
-                                 </div>
-                             </div>
-                         </form>
-                     </div>
-                 </div>
-                 <div class="form-horizontal">
-                     <div class="hr-line-dashed"></div>
-                     <div class="form-group">
-                         <div class="col-sm-10 col-sm-offset-1">
-                             <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">提交</button>
-                             <button class="btn btn-white col-sm-5 col-sm-offset-2" onclick="window.history.back(-1)">返&nbsp;&nbsp;&nbsp;&nbsp;回</button>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>注册设置</h6>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-group">
+                        <div class="col-md-3 control-label">
+                            <label>用户注册模式</label>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default model btn-primary" data-modle="email">邮箱注册</button>
+                                <button type="button" class="btn btn-default model" data-modle="mobile">手机注册</button>
+                                <button type="button" class="btn btn-default model" data-modle="email_or_mobile">邮箱或手机注册</button>
+                                <button type="button" class="btn btn-default model" data-modle="closed">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="email-content">
+                        <div class="form-group">
+                            <div class="col-md-3 control-label">
+                                <label>邮箱验证登录</label>
+                            </div>
+                            <div class="col-sm-5 radios">
+                                <label><input type="radio" name="email_enabled" value="opened"> 开启</label><label><input type="radio" name="email_enabled" value="closed" checked="checked"> 关闭</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-3 control-label">
+                                <label for="email_activation_title">新用户激活邮件标题</label>
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="text" id="email_activation_title" name="email_activation_title" class="form-control" value="请激活您的{{学慧网}}账号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3 control-label">
+                                <label for="email_activation_body">新用户激活邮件内容</label>
+                            </div>
+                            <div class="col-sm-5">
+                                  <textarea id="email_activation_body" name="email_activation_body" class="form-control" rows="6" style="text-align: left">
+
+                                  </textarea>
+                                <div class="help-block">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3 control-label">
+                            <label>注册防护机制</label>
+                        </div>
+                        <div class="col-sm-5 radios">
+                            <label>
+                                <input type="radio" name="register_protective" id="none" value="none"> 无
+                            </label>
+                            <label>
+                                <input type="radio" name="register_protective" id="low" value="low" checked="checked"> 低
+                            </label>
+                            <label>
+                                <input type="radio" name="register_protective" id="middle" value="middle"> 中
+                            </label>
+                            <label>
+                                <input type="radio" name="register_protective" id="high" value="high"> 高
+                            </label>
+                        </div>
+
+                        <div class="col-sm-5 mtl low register-help">
+                            <div class="well">
+                                方案说明：
+                                <p class="mll mtm">1：注册时需填写验证码。</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5 mtl middle register-help  col-md-offset-3" style="display:none;">
+                            <div class="well">
+                                方案说明：
+                                <p class="mll mtm">1：注册时需填写验证码。</p>
+                                <p class="mll mtm">2：同一IP24小时內只能注册30次。</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5 mtl high register-help  col-md-offset-3" style="display:none;">
+                            <div class="well">
+                                方案说明：
+                                <p class="mll mtm">1：注册时需填写验证码。</p>
+                                <p class="mll mtm">2：同一IP24小时內只能注册10次。</p>
+                                <p class="mll mtm">3：同一IP1小时內只能注册1个账号。</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>登录设置</h6>
+            </div>
+            <div class="ibox-content" style="min-height: 235px">
+                <form action="" id="commentForm">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">用户登录限制</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
+                            <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">第三方登录</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
+                            <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">用户登录保护</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
+                            <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>欢迎信息设置</h6>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">发送欢迎信息</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
+                            <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">欢迎信息发送方</label>
+                        <div class="col-sm-5 group-print">
+                            <input type="text" name="user" class="form-control" placeholder="学慧网">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">欢迎信息标题</label>
+                        <div class="col-sm-5 group-print">
+                            <input type="text" name="user" class="form-control" placeholder="学慧网">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">欢迎信息内容</label>
+                        <div class="col-sm-5 group-print">
+                            <input type="text" name="user" class="form-control" placeholder="学慧网">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">支持变量</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
+                            <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>用户信息设置</h6>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">用户名设置</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="username" checked="checked">从不</label>
+                            <label><input type="radio" name="username"> 首次登录强制要求</label>
+                            <label><input type="radio" name="username"> 进入"学习中心"时</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">头像设置提醒</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="avatar_alert" value="none"> 从不</label>
+                            <label><input type="radio" name="avatar_alert" value="in_user_center" checked="checked"> 每次进入"我的课程"时</label>
+                            <label><input type="radio" name="avatar_alert" value="when_join_course"> 加入免费课程时强制要求</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">用户修改用户名</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="nickname_enabled" value="1" checked="checked"> 开启</label>
+                            <label><input type="radio" name="nickname_enabled" value="0"> 关闭</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">购买课程或班级时填写个人资料</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="buy_fill_userinfo" value="1" checked="checked"> 开启</label>
+                            <label><input type="radio" name="buy_fill_userinfo" value="0"> 关闭</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"></label>
+                        <div class="col-sm-5">
+                            <div class="input-group mt">
+                                <select data-placeholder="请选择字段" class="chosen-select" multiple tabindex="4">
+                                    <option value="110000" hassubinfo="true">邮件地址</option>
+                                    <option value="120000" hassubinfo="true">姓名</option>
+                                    <option value="130000" hassubinfo="true">手机号码</option>
+                                    <option value="140000" hassubinfo="true">QQ</option>
+                                    <option value="150000" hassubinfo="true">公司</option>
+                                    <option value="210000" hassubinfo="true">身份号码</option>
+                                    <option value="220000" hassubinfo="true">性别</option>
+                                    <option value="230000" hassubinfo="true">职业</option>
+                                    <option value="310000" hassubinfo="true">微博</option>
+                                    <option value="320000" hassubinfo="true">微信</option>
+                                    <option value="330000" hassubinfo="true">地域（省市）</option>
+                                    <option value="340000" hassubinfo="true">身份证</option>
+                                    <option value="340000" hassubinfo="true">途径</option>
+                                    <option value="340000" hassubinfo="true">邮寄地址</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">登录后填写个人资料</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="fill_userinfo_after_login" value="1"> 开启</label>
+                            <label><input type="radio" name="fill_userinfo_after_login" value="0" checked="checked"> 关闭</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"></label>
+                        <div class="col-sm-5">
+                            <div class="input-group mt">
+                                <select data-placeholder="请选择字段" class="chosen-select" multiple tabindex="4">
+                                    <option value="110000" hassubinfo="true">邮件地址</option>
+                                    <option value="120000" hassubinfo="true">姓名</option>
+                                    <option value="130000" hassubinfo="true">手机号码</option>
+                                    <option value="140000" hassubinfo="true">QQ</option>
+                                    <option value="150000" hassubinfo="true">公司</option>
+                                    <option value="210000" hassubinfo="true">身份号码</option>
+                                    <option value="220000" hassubinfo="true">性别</option>
+                                    <option value="230000" hassubinfo="true">职业</option>
+                                    <option value="310000" hassubinfo="true">微博</option>
+                                    <option value="320000" hassubinfo="true">微信</option>
+                                    <option value="330000" hassubinfo="true">地域（省市）</option>
+                                    <option value="340000" hassubinfo="true">身份证</option>
+                                    <option value="340000" hassubinfo="true">途径</option>
+                                    <option value="340000" hassubinfo="true">邮寄地址</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>自定义字段设置</h6>
+            </div>
+            <div class="ibox-content">
+                <div class="user-list" style="margin-top: 20px;">
+                    <table class="table footTabel  table-center">
+                        <thead>
+                        <tr>
+                            <th>字段名称<span class="fa indicator fa-unsorted"></span></th>
+                            <th>类型<span class="fa indicator fa-unsorted"></span></th>
+                            <th>是否显示<span class="fa indicator fa-unsorted"></span></th>
+                            <th>显示序号<span class="fa indicator fa-unsorted"></span></th>
+                            <th>操作<span class="fa indicator fa-unsorted"></span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>地域（省市）</td>
+                            <td>文本</td>
+                            <td>是</td>
+                            <td>1</td>
+                            <td class="slink">
+                                <a href="#modal-edit" data-toggle="modal">编辑</a>|<a href="#modal-remove" data-toggle="modal">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>身份证</td>
+                            <td>文本</td>
+                            <td>是</td>
+                            <td>1</td>
+                            <td class="slink">
+                                <a href="#modal-edit" data-toggle="modal">编辑</a>|<a href="#modal-remove" data-toggle="modal">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>邮寄地址</td>
+                            <td>文本</td>
+                            <td>是</td>
+                            <td>1</td>
+                            <td class="slink">
+                                <a href="#modal-edit" data-toggle="modal">编辑</a>|<a href="#modal-remove" data-toggle="modal">删除</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>头像设置</h6>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">默认头像</label>
+                        <div class="col-sm-5 radios col-sm-offset-1" id="default-avatar">
+                            <label><input type="radio" name="avatar" value="1" checked="checked"> 自定义默认头像</label>
+                            <label><input type="radio" name="avatar" value="0"> 系统默认头像</label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="avatar-class">
+                        <label class="col-sm-3 control-label">自定义默认头像</label>
+                        <div class="col-sm-6 col-sm-offset-1">
+                            <form method="post">
+                                <div class="col-sm-5 controls">
+                                    <img src="../images/user_img.jpg">
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12 controls">
+                                        <p class="help-block">你可以上传JPG、GIF或PNG格式的文件。</p>
+                                    </div>
+                                </div>
+                                <label class="btn btn-primary col-sm-offset-1">
+                                    <input type="file" onchange="previewImage(this)" class="hide"> 上传新图片
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="form-group" style="display: none" id="system-tar-class">
+                        <label class="col-sm-3 control-label">系统默认头像</label>
+                        <div class="col-sm-5 col-sm-offset-1">
+                            <form method="post">
+                                <div class="col-sm-5 controls">
+                                    <img src="../images/avatar.png">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>微信页面登录接口</h6>
+            </div>
+            <div class="ibox-content">
+                <form action="" id="">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">微信页面登录接口</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="" value="">开启</label>
+                            <label><input type="radio" name="" value="">关闭</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            <label for="weibo_key">App Key</label>
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" name="weibo_key" class="form-control" value="">
+                            <div class="help-block" style="display:none;"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            <label for="weibo_secret">App Secret</label>
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" name="weibo_secret" class="form-control" value="">
+                            <div class="help-block" style="display:none;"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            <label for="">登录时必须设置邮箱</label>
+                        </div>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="" value="1"> 开启</label>
+                            <label><input type="radio" name="" value="0"> 关闭</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>QQ登录接口</h6>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">QQ登录接口</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
+                            <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            <label for="weibo_key">App Key</label>
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" name="weibo_key" class="form-control" value="">
+                            <div class="help-block" style="display:none;"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            <label for="weibo_secret">App Secret</label>
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" name="weibo_secret" class="form-control" value="">
+                            <div class="help-block" style="display:none;"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            <label for="">登录时必须设置邮箱</label>
+                        </div>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="" value="1"> 开启</label>
+                            <label><input type="radio" name="" value="0"> 关闭</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>微博登录接口</h6>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">微博登录接口</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
+                            <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            <label for="weibo_key">App Key</label>
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" name="weibo_key" class="form-control" value="">
+                            <div class="help-block" style="display:none;"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            <label for="weibo_secret">App Secret</label>
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" name="weibo_secret" class="form-control" value="">
+                            <div class="help-block" style="display:none;"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            <label for="">登录时必须设置邮箱</label>
+                        </div>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="" value="1"> 开启</label>
+                            <label><input type="radio" name="" value="0"> 关闭</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>微信内分享登录接口</h6>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">微信内分享登录接口</label>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="" value="">开启</label>
+                            <label><input type="radio" name="" value="">关闭</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            <label for="weibo_key">App Key</label>
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" id="weibo_key" name="weibo_key" class="form-control" value="">
+                            <div class="help-block" style="display:none;"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            <label for="weibo_secret">App Secret</label>
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" id="weibo_secret" name="weibo_secret" class="form-control" value="">
+                            <div class="help-block" style="display:none;"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            <label for="">登录时必须设置邮箱</label>
+                        </div>
+                        <div class="col-sm-5 radios">
+                            <label><input type="radio" name="" value="1"> 开启</label>
+                            <label><input type="radio" name="" value="0"> 关闭</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-content" style="padding-top: 100px">
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">提交</button>
+                        <button class="btn btn-white col-sm-5 col-sm-offset-2" onclick="window.history.back(-1)">返&nbsp;&nbsp;&nbsp;&nbsp;回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-edit" class="modal fade in" aria-hidden="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">编辑字段</h4>
+            </div>
+            <div class="modal-body">
+                <form method="post" class="form-horizontal" id="field-save-form" action="">
+                    <div class="form-group ">
+                        <label class="col-md-4 control-label" for="title">字段名称</label>
+                        <div class="col-md-6">
+                            <input type="text" name="title" id="title" value="地域（省市）" class="form-control">
+                            <div class="help-block" style="display:none;"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <label class="col-md-4 control-label" for="seq">字段类型</label>
+                        <div class="col-md-6" style="margin-top: 10px">文本</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="seq">显示序号</label>
+                        <div class="col-md-6">
+                            <input type="text" name="seq" id="seq" value="" class="form-control">
+                            <div class="help-block" style="display:none;"> </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <label class="col-md-4 control-label">是否启用、显示</label>
+                        <div class="col-md-2" style="margin-top: 10px">
+                            <span class="check-box"><input type="checkbox" class="check-btn"></span>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group" style="margin-bottom: 0">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button class="btn btn-primary col-sm-5 btn-submit" type="submit">确定</button>
+                            <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="modal-remove" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">删除</h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <form action="">
+                    <p>您确定要删除此字段？</p>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <button class="btn btn-primary col-sm-5 btn-submit" type="submit">确定</button>
+                            <button class="btn btn-white col-sm-5 col-sm-offset-2" data-dismiss="modal" aria-hidden="true">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/previewImage/previewImage.js"></script>
-<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
-<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/chosen/chosen.jquery.js"></script>
+<script>
+    $('.model').on('click',function(){
+        $('.model').removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        var modle = $(this).data('modle');
+        if (modle == 'email' || modle == 'email_or_mobile') {
+            $('.email-content').removeClass('hidden');
+        } else {
+            $('.email-content').addClass('hidden');
+        }
+
+    });
+
+    $("[name=avatar]").on("click",function(){
+        if($("[name=avatar]:checked").val()==0){
+            $('#system-tar-class').show();
+            $('#avatar-class').hide();
+        }
+        if($("[name=avatar]:checked").val()==1){
+            $('#system-tar-class').hide();
+            $('#avatar-class').show();
+        }
+    });
+    $('.chosen-select').chosen();
+    $(".chosen-container").css({
+        width: $(".chosen-select").parent().width()
+    });
+    $(window).resize(function(){
+        $(".chosen-container").css({
+            width: $(".chosen-select").parent().width()
+        });
+    })
+</script>
 </body>
 </html>

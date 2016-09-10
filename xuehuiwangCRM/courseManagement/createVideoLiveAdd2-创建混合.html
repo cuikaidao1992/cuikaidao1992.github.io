@@ -11,6 +11,7 @@
     <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
     <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
     <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/chosen/chosen.css" rel="stylesheet" type="text/css">
 </head>
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -68,40 +69,30 @@
                                         <button class="close delete-btn" data-role="item-delete" type="button" title="删除">× </button>
                                     </li>
                                 </ul>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label"></label>
-                            <div class="col-sm-6">
-                                <div class="input-box clearfix">
-                                    <input type="text" class="teacher-input">
-                                    <span class="btn btn-default btn-sm add-teacher">添加</span>
+                                <div class="input-group">
+                                    <select data-placeholder="选择教师..." class="chosen-select">
+                                        <option value="">请选择教师</option>
+                                        <option value="1" hassubinfo="true">丁源老师</option>
+                                        <option value="2" hassubinfo="true">笑笑老师</option>
+                                        <option value="3" hassubinfo="true">学慧网_小花老师	</option>
+                                        <option value="4" hassubinfo="true">李恕萱</option>
+                                    </select>
                                 </div>
-                                <ul class="teacher-list">
-                                    <li class="">笑笑老师</li>
-                                    <li class="">丁源老师</li>
-                                    <li class="">马玲老师</li>
-                                </ul>
                                 <div class="help-block">只能添加教师管理内已注册的教师</div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">描述</label>
-                            <div class="col-sm-6">
-                                <textarea name="comment" class="form-control" required aria-required="true" style="min-height: 100px"></textarea>
-                            </div>
-                        </div>
+
                         <div class="form-group">
                             <label class="col-sm-2 control-label">课程详情</label>
                             <div class="col-sm-6">
-                                <textarea name="comment" class="form-control" required aria-required="true" style="min-height: 100px"></textarea>
+                                <textarea id="editor" placeholder="这里输入内容" autofocus rows="5"></textarea>
                             </div>
                         </div>
                         <div class="hr-line-dashed"></div>
                         <div class="form-group">
                             <div class="col-sm-10 col-sm-offset-1">
                                 <button class="btn btn-primary col-sm-3">保存并退出</button>
-                                <button class="btn btn-primary col-sm-offset-1 col-sm-3 btn-submit" id="submit" type="submit" onclick="location.href='createVideoLiveAdd3-创建混合.html'">保存并继续</button>
+                                <button class="btn btn-primary col-sm-offset-1 col-sm-3 btn-submit" type="button" onclick="location.href='createVideoLiveAdd3-创建混合.html'">保存并继续</button>
                                 <button class="btn btn-white col-sm-3 col-sm-offset-1" onclick="window.history.back(-1)">返回</button>
                             </div>
                         </div>
@@ -113,17 +104,23 @@
 </div>
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
-<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/chosen/chosen.jquery.js"></script>
+<script type="text/javascript" src="../js/simditor/module.js"></script>
+<script type="text/javascript" src="../js/simditor/hotkeys.js"></script>
+<script type="text/javascript" src="../js/simditor/simditor.js"></script>
 <script>
-    $(".add-teacher").click(function(){
-        $(".teacher-list").slideToggle()
+    $(document).ready(function(){
+        var editor=new Simditor({textarea:$("#editor")})
     });
-    $(".teacher-list li").click(function(){
-        $(".teacher-input").val($(this).text());
-        $(".teacher-list").hide();
+    $('.chosen-select').chosen();
+    $(".chosen-container").css({
+        width: $(".chosen-select").parent().width()
+    });
+    $(window).resize(function(){
+        $(".chosen-container").css({
+            width: $(".chosen-select").parent().width()
+        });
     })
 </script>
 </body>

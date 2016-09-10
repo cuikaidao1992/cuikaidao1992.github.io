@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学慧网 - 登录</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/login.min.css" rel="stylesheet">
+    <script>
+        if(window.top!==window.self){window.top.location=window.location};
+    </script>
+</head>
+<body  class="bg-img">
+<div class="login-box">
+    <a href="http://www.xuehuiwang.com/">
+        <div class="guanwang-logo mt-40"></div>
+    </a>
+    <form action="" class="login-form" method="post" id="vform">
+        <ul class="clearfix login-form-content login-form-user mt-40">
+            <li class="login-input">
+                <input type="text" autocomplete="off" placeholder="用户名" id="username" name="username">
+                <div id="emailTips" class="password-tips hide tips_z">
+                    <i class="sanjiao-icon"></i>
+                    <h5 id="emailTipsMsg" class="import-error">不能为空</h5>
+                </div>
+            </li>
+            <li class="login-input password-input">
+                <input class="pwd-focus" autocomplete="off" type="password" placeholder="密码" id="password" name="password" >
+                <i class="eye-icon"></i>
+                <!--/*密码提示 隐藏用hide*/-->
+                <div id="passTips" class="password-tips hide tips_z">
+                    <i class="sanjiao-icon"></i>
+                    <h5 id="passTipsMsg" class="import-error">不能为空</h5>
+                </div>
+            </li>
+            <li class="clearfix register-agreement">
+                <div class="pull-left  login-btn-text ml-50">
+                    <a href="#">忘记密码</a>
+                </div>
+            </li>
+        </ul>
+        <input type="submit" value="登 录" class="login-new-btn mt-35 ttBtn" id="loginSubmit">
+    </form>
+</div>
+</body>
+</html>

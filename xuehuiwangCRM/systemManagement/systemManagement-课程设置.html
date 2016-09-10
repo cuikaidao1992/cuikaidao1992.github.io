@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <title>帐号系统-编辑资料</title>
+    <title>系统管理-课程设置</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
@@ -14,136 +14,131 @@
 </head>
 <body class="gray-bg">
 <div class="row wrapper wrapper-content animated fadeInRight">
-     <div class="col-sm-8 col-sm-offset-2">
-         <div class="ibox">
-             <div class="ibox-title clearfix">
-                 <h5>用户设置</h5>
-             </div>
-             <div class="ibox-content ibox-padding">
-                 <div class="form-horizontal">
-                     <div class="ibox-title">
-                         <h6>欢迎私信内容</h6>
-                     </div>
-                     <div class="ibox-content">
-                         <form action="" id="commentForm">
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">欢迎私信内容</label>
-                                 <div class="col-sm-7 group-print">
-                                     <textarea id="editor" placeholder="这里输入内容" autofocus rows="5"></textarea>
-                                 </div>
-                             </div>
-                         </form>
-                     </div>
-                 </div>
-                 <div class="form-horizontal">
-                     <div class="ibox-title">
-                         <h6>课程观看设置</h6>
-                     </div>
-                     <div class="ibox-content">
-                         <form action="">
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">课程列表页默认排序</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="latest"> 最新</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="studentNum"> 最热</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="recommendedSeq" checked="checked"> 推荐</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">课表查看权限</label>
-                                 <div class="col-sm-6 radios">
-                                     <label class="col-sm-6 mb"><input type="radio" name="explore_default_orderBy" value="latest">购买本课程用户</label>
-                                     <label class="col-sm-6 mb"><input type="radio" name="explore_default_orderBy" value="studentNum">所有付费用户</label>
-                                     <label class="col-sm-6 mb"><input type="radio" name="explore_default_orderBy" value="recommendedSeq" checked="checked"> 所有登陆用户</label>
-                                     <label class="col-sm-6 mb"><input type="radio" name="explore_default_orderBy" value="recommendedSeq"> 所有用户</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">试听视频设置</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">所有用户</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">注册用户</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">免费视频设置</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">所用用户</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">注册用户</label>
-                                 </div>
-                             </div>
-                         </form>
-                     </div>
-                 </div>
-                 <div class="form-horizontal">
-                     <div class="ibox-title">
-                         <h6>名称设置</h6>
-                     </div>
-                     <div class="ibox-content" style="height: 286px">
-                         <form action="">
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">设置章节名称</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">课程章节设置</label>
-                                 <div class="col-sm-6 group-print">
-                                     <input type="text" name="user" class="form-control" placeholder="课程章名称">
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">课程章节设置</label>
-                                 <div class="col-sm-6 group-print">
-                                     <input type="text" name="user" class="form-control" placeholder="课程节名称">
-                                 </div>
-                             </div>
-                         </form>
-                     </div>
-                 </div>
-                 <div class="form-horizontal">
-                     <div class="ibox-title">
-                         <h6>其他设置</h6>
-                     </div>
-                     <div class="ibox-content">
-                         <form action="" id="">
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">图文、文档课时防复制</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">课程中允许显示学员人数</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
-                                 </div>
-                             </div>
-                             <div class="form-group">
-                                 <label class="col-sm-3 control-label">课程重合时折价购买</label>
-                                 <div class="col-sm-6 radios">
-                                     <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
-                                     <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
-                                 </div>
-                             </div>
-                         </form>
-                     </div>
-                 </div>
-                 <div class="form-horizontal">
-                     <div class="hr-line-dashed"></div>
-                     <div class="form-group">
-                         <div class="col-sm-10 col-sm-offset-1">
-                             <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">提交</button>
-                             <button class="btn btn-white col-sm-5 col-sm-offset-2" onclick="window.history.back(-1)">返&nbsp;&nbsp;&nbsp;&nbsp;回</button>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>欢迎私信内容</h6>
+            </div>
+            <div class="ibox-content">
+                <form action="" id="commentForm">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">给新学员发送欢迎私信</label>
+                        <div class="col-sm-6 radios" id="default-avatar">
+                            <label><input type="radio" name="welcome_message_enabled" value="1" checked="checked"> 开启</label>
+                            <label><input type="radio" name="welcome_message_enabled" value="0"> 关闭</label>
+                            <p class="help-block">开启后，新学员加入课程后，会收到教师的欢迎私信</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">欢迎私信内容</label>
+                        <div class="col-sm-7 group-print">
+                            <textarea id="editor" placeholder="这里输入内容" autofocus rows="5"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>课程设置</h6>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">课程列表页默认排序</label>
+                        <div class="col-sm-6 radios">
+                            <label><input type="radio" name="explore_default_orderBy" value="latest"> 最新</label>
+                            <label><input type="radio" name="explore_default_orderBy" value="studentNum"> 最热</label>
+                            <label><input type="radio" name="explore_default_orderBy" value="recommendedSeq" checked="checked"> 推荐</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">课表查看权限</label>
+                        <div class="col-sm-6 radios">
+                            <label><input type="radio" name="allowAnonymousPreview" value="1"> 未注册</label>
+                            <label><input type="radio" name="allowAnonymousPreview" value="0" checked="checked"> 登录用户</label>
+                            <div class="help-block">如果允许此项设置,未登录用户（游客）可观看免费课时</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">免费/试听课程观看权限设置</label>
+                        <div class="col-sm-6 radios">
+                            <label><input type="radio" name="allowAnonymous" value="1"> 未注册</label>
+                            <label><input type="radio" name="allowAnonymous" value="0" checked="checked"> 登录用户</label>
+                            <div class="help-block">如果允许此项设置,未登录用户（游客）可免费/试听课程观</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3 control-label">
+                            <label>图文、文档课时防复制</label>
+                        </div>
+                        <div class="col-md-8 radios">
+                            <label><input type="radio" name="copy_enabled" value="1" checked="checked"> 开启</label>
+                            <label><input type="radio" name="copy_enabled" value="0"> 关闭</label>
+                            <div class="help-block"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">课程中允许显示学员人数</label>
+                        <div class="col-md-8 radios">
+                            <label><input type="radio" name="show_student_num_enabled" value="1" checked="checked"> 开启</label>
+                            <label><input type="radio" name="show_student_num_enabled" value="0"> 关闭</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">课程重合时折价购买</label>
+                        <div class="col-md-8 radios">
+                            <label><input type="radio" name="convert" value="1" checked="checked"> 开启</label>
+                            <label><input type="radio" name="convert" value="0"> 关闭</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-title">
+                <h6>名称设置</h6>
+            </div>
+            <div class="ibox-content" style="height: 286px">
+                <form action="">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">设置章节名称</label>
+                        <div class="col-sm-6 radios">
+                            <label><input type="radio" name="explore_default_orderBy" value="">开启</label>
+                            <label><input type="radio" name="explore_default_orderBy" value="">关闭</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">课程章节设置</label>
+                        <div class="col-sm-6 group-print">
+                            <input type="text" name="user" class="form-control" placeholder="课程章名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">课程章节设置</label>
+                        <div class="col-sm-6 group-print">
+                            <input type="text" name="user" class="form-control" placeholder="课程节名称">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="ibox form-horizontal">
+            <div class="ibox-content" style="padding-top: 100px">
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <button class="btn btn-primary col-sm-5 btn-submit" id="submit" type="submit">提交</button>
+                        <button class="btn btn-white col-sm-5 col-sm-offset-2" onclick="window.history.back(-1)">返&nbsp;&nbsp;&nbsp;&nbsp;回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>

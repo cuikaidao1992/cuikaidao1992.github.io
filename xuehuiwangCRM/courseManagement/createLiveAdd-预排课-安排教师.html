@@ -8,6 +8,7 @@
     <link href="../css/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
     <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
     <link href="../css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/chosen/chosen.css" rel="stylesheet" type="text/css">
 </head>
 <body class="gray-bg">
 <div class="row wrapper wrapper-content animated fadeInRight">
@@ -18,23 +19,26 @@
             </div>
             <div class="ibox-content ibox-padding">
                 <form id="teachers-form" class="form-horizontal" method="post">
-                    <div class="form-group" id="teachers-form-group" data-widget-cid="widget-1">
-                        <div class="col-md-2 control-label"><label>已添加教师</label></div>
-                        <div class="col-md-8 controls">
-                            <ul class="list-group teacher-list-group sortable-list" id="teacher-list-group" data-role="list" style="">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">教师</label>
+                        <div class="col-sm-6">
+                            <ul class="teacher-list-group sortable-list" id="teacher-list-group" data-role="list" style="">
                                 <li class="list-group-item clearfix teacher-box" data-role="item">
                                     <span class="glyphicon glyphicon-resize-vertical sort-handle"></span>
                                     <img src="../images/a4.jpg" class="avatar-small">
                                     <span class="nickname">学慧网007</span>
-                                    <span class="check-box"><input type="checkbox" class="check-btn">本单元全部授课</span>
+                                    <span class="check-box"><input type="checkbox" class="check-btn">显示</span>
                                     <button class="close delete-btn" data-role="item-delete" type="button" title="删除">× </button>
                                 </li>
                             </ul>
                             <div class="input-group">
-                                <input class="form-control" id="teacher-input" type="text" autocomplete="off">
-                                <span class="input-group-btn">
-                                  <button class="btn btn-default" type="button" data-role="item-add" id="teacher-add">添加</button>
-                                </span>
+                                <select data-placeholder="选择教师..." class="chosen-select">
+                                    <option value="">请选择教师</option>
+                                    <option value="1" hassubinfo="true">丁源老师</option>
+                                    <option value="2" hassubinfo="true">笑笑老师</option>
+                                    <option value="3" hassubinfo="true">学慧网_小花老师	</option>
+                                    <option value="4" hassubinfo="true">李恕萱</option>
+                                </select>
                             </div>
                             <div class="help-block">只能添加教师管理内已注册的教师</div>
                         </div>
@@ -53,9 +57,18 @@
 </div>
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
-<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../js/chosen/chosen.jquery.js"></script>
+<script>
+    $('.chosen-select').chosen();
+    $(".chosen-container").css({
+        width: $(".chosen-select").parent().width()
+    });
+    $(window).resize(function(){
+        $(".chosen-container").css({
+            width: $(".chosen-select").parent().width()
+        });
+    })
+</script>
 </body>
 </html>

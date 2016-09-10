@@ -57,7 +57,7 @@
                         </div>
                         <div class="c-main teacher-content">
                             <div class="teacher-btns" id="chapter-btn">
-                                <a href="javascript:;" class="btn btn-primary  "><i class="glyphicon glyphicon-plus"></i>新增章节</a>
+                                <a href="javascript:;" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>新增章节</a>
                             </div>
                             <div class="t-c clear">
                                 <div class="t-c-l" style="height:600px;">
@@ -65,41 +65,36 @@
                                         <li class="dis ui-sortable-handle">
                                             <div class="father clearfix">
                                                 <div class="pull-left">
-                                                    <i class="glyphicon glyphicon-triangle-bottom open"></i>
+                                                    <span class="label label-info"><i class="fa fa-bookmark"></i></span>
                                                     <a href="javascript:;">第&nbsp;1&nbsp;章<b></b></a>
                                                 </div>
                                                 <div class="pull-right">
-                                                    <i class="fa fa-plus add-btns" title="添加节"></i>
-                                                    <i class="fa fa-trash"></i>
-                                                    <i class="fa fa-navicon"></i>
+                                                    <i class="fa fa-plus add-btns" title="添加节">&nbsp;</i>
+                                                    <i class="fa fa-trash">&nbsp;</i>
                                                 </div>
                                             </div>
                                             <ul class="son sortable ui-sortable" style="display: block;">
-                                                <li class="class-son ui-sortable-handle" draggable="true">
+                                                <li class="class-son" draggable="true">
+                                                    <span class="label label-warning"><i class="fa fa-book"></i></span>
                                                     <a href="javascript:;">第&nbsp;1&nbsp;节<b></b></a>
-                                                    <div class="pull-right">
-                                                        <i class="fa fa-trash"></i>
-                                                        <i class="fa fa-navicon"></i>
-                                                    </div>
+                                                    <div class="pull-right">&nbsp;&nbsp;<i class="fa fa-trash">&nbsp;&nbsp;</i></div>
                                                 </li>
-                                                <li class="class-son ui-sortable-handle" draggable="true">
+                                                <li class="class-son" draggable="true">
+                                                    <span class="label label-warning"><i class="fa fa-book"></i></span>
                                                     <a href="javascript:;">第&nbsp;2&nbsp;节<b></b></a>
-                                                    <div class="pull-right">
-                                                        <i class="fa fa-trash"></i>
-                                                        <i class="fa fa-navicon"></i>
-                                                    </div>
+                                                    <div class="pull-right">&nbsp;&nbsp;<i class="fa fa-trash">&nbsp;&nbsp;</i></div>
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="t-c-r" style="height:600px;display: none">
+                                <div class="t-c-r" style="height:600px;display: block">
                                     <div class="t-c-r-t chapter" value="">
                                         <p class="c">
                                             <span class="c-title">章的名称</span>
-                                            <span class="c-content">
-                                                <input class="chapterName" type="text" maxlength="20" value="" placeholder="章的名称">
-                                            </span>
+                                                <span class="c-content">
+                                                    <input class="chapterName" type="text" maxlength="20" value="" placeholder="章的名称">
+                                                </span>
                                             <span class="check-box"><input type="checkbox" class="check-btn">不显示</span>
                                         </p>
                                         <p class="c">
@@ -110,43 +105,43 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="t-c-r" style="height:600px;">
+                                <div class="t-c-r" style="height:600px; display: none">
                                     <div class="t-c-r-t lecture">
                                         <p class="c">
                                             <span class="c-title">课时名称</span>
                                             <span class="c-content">
                                                 <input class="lectureName" maxlength="20" type="text" placeholder="输入名称">
                                             </span>
-                                            <span class="check-box"><input type="checkbox" class="check-btn">不显示</span>
                                         </p>
                                         <p class="c">
                                             <span class="c-title">公开视频</span>
                                             <span class="c-content radios">
                                                 <span class="check-box"><input type="checkbox" class="check-btn">免费视频</span>
-                                                <span class="check-box"><input type="checkbox" class="check-btn">试听</span>
+                                                <span class="check-box" style="margin-right: 0"><input type="checkbox" class="check-btn">试听</span>
+                                                <span class="check-box"><input type="text" class="input-box">分</span>
                                             </span>
                                         </p>
                                         <p class="c">
                                             <span class="c-title">视频地址</span>
-                                        <div class="input-group c-content">
-                                            <input class="form-control" style="margin-top: 0" type="text" placeholder="支持优酷、土豆、腾讯、网易公开课的视频页面地址导入" data-role="import-url">
+                                            <div class="input-group c-content">
+                                                <input class="form-control" style="margin-top: 0" type="text" placeholder="支持优酷、土豆、腾讯、网易公开课的视频页面地址导入" data-role="import-url">
                                                 <span class="input-group-btn">
                                                   <button type="button" class="btn btn-default" data-role="import" data-url="/course/22624/manage/media/import" data-loading-text="正在导入，请稍等">导入</button>
                                                 </span>
-                                        </div>
+                                            </div>
                                         </p>
                                         <p class="c">
                                             <span class="c-title">视频时长</span>
-                                            <span class="c-content radios">
-                                                <input type="text" class="video_time">
-                                            </span>
+                                                <span class="c-content radios">
+                                                    <input type="text" class="video_time">
+                                                </span>
                                             <span>时长必须为整数</span>
                                         </p>
                                         <p class="c">
                                             <span class="c-title">建议学习时长</span>
-                                            <span class="c-content">
-                                               <input type="text" class="ad_video_time">
-                                            </span>
+                                                <span class="c-content">
+                                                   <input type="text" class="ad_video_time">
+                                                </span>
                                             <span>如未设置，则默认学习时长为视频时长2倍取整</span>
                                         </p>
                                         <p class="c">
@@ -174,10 +169,6 @@
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>>
-<script type="text/javascript" src="../js/validate/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../js/validate/messages_zh.min.js"></script>
-<script type="text/javascript" src="../js/sweetalert/sweetalert.min.js"></script>
-<script type="text/javascript" src="../js/iCheck/icheck.min.js"></script>
 <script type="text/javascript" src="../js/jquery-ui.js"></script>
 <script type="text/javascript" src="../js/utils.js"></script>
 <script>
@@ -198,12 +189,12 @@
         $("body").on("click.btn.page","#chapter-btn",function(){
             var h=$(".father").length;
             var chapter='<li class="dis ui-sortable-handle"><div class="father clearfix">'+
-                    '<div class="pull-left"><i class="glyphicon glyphicon-triangle-bottom open"></i>'+
+                    '<div class="pull-left">' +
+                    '<span class="label label-info"><i class="fa fa-bookmark"></i></span>'+
                     '<a href="javascript:;">第 &nbsp;'+(h+1)+'&nbsp; 章<b></b></a></div>'+
                     '<div class="pull-right">'+
-                    '<i class="fa fa-plus add-btns" title="添加节"></i>'+
-                    '<i class="fa fa-trash"></i>'+
-                    '<i class="fa fa-navicon"></i>'+
+                    '<i class="fa fa-plus add-btns" title="添加节"></i>&nbsp;&nbsp;'+
+                    '<i class="fa fa-trash"></i>&nbsp;&nbsp;'+
                     '</div></div><ul class="son sortable ui-sortable"></ul></li>';
             $(".t-c-l").find(".base-sort").append(chapter);
             var chapter=$(".t-c-l").find(".sortable").find(".dis:last");
@@ -218,10 +209,10 @@
         $(this).parent().parent().next().show();
         var h=$(this).parent().parent().next().find(".class-son").length;
         var lecture='<li class="class-son" draggable="true">'
+                +' <span class="label label-warning"><i class="fa fa-book"></i></span>'
                 +'<a href="javascript:;">第&nbsp;'+(h+1)+'&nbsp;节<b></b></a>'
-                +'<div class="pull-right">'
-                +'<i class="fa fa-trash"></i>'
-                +'<i class="fa fa-navicon"></i></div>';
+                +'<div class="pull-right">&nbsp;&nbsp;'
+                +'<i class="fa fa-trash">&nbsp;&nbsp;</i></div>';
         chapter=$(this).parent().parent().next().append(lecture);
         var lecture=$(this).parent().parent().next().find(".class-son:last");
         lecture.fadeIn(300);
@@ -246,6 +237,5 @@
     });
 
 </script>
-
 </body>
 </html>

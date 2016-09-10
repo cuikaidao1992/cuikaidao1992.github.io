@@ -44,7 +44,9 @@ h3, h4, h5 {
     margin-top: 5px;
     font-weight: 600
 }
-
+strong{
+    font-weight: normal;
+}
 /*顶部导航*/
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
 dl, dt, dd, ul, ol, li,
@@ -952,27 +954,6 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
     color: #fff
 }
 
-.btn-primary {
-    background-color: #36d38c;
-    border-color: #36d38c;
-    color: #FFF
-}
-
-.btn-primary.active, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open .dropdown-toggle.btn-primary {
-    background-color: #46c37b;
-    border-color: #46c37b;
-    color: #FFF
-}
-
-.btn-primary.active, .btn-primary:active, .open .dropdown-toggle.btn-primary {
-    background-image: none
-}
-
-.btn-primary.active[disabled], .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
-    background-color: #1dc5a3;
-    border-color: #1dc5a3
-}
-
 .btn-success {
     color: #fff;
     background-color: #1ebb90;
@@ -1036,6 +1017,27 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
 .btn-default.active[disabled], .btn-default.disabled, .btn-default.disabled.active, .btn-default.disabled:active, .btn-default.disabled:focus, .btn-default.disabled:hover, .btn-default[disabled], .btn-default[disabled]:active, .btn-default[disabled]:focus, .btn-default[disabled]:hover, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default.active, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover {
     background-color: #ccc;
     border-color: #ccc
+}
+
+.btn-primary {
+    background-color: #36d38c;
+    border-color: #36d38c;
+    color: #FFF
+}
+
+.btn-primary.active, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open .dropdown-toggle.btn-primary {
+    background-color: #46c37b;
+    border-color: #46c37b;
+    color: #FFF
+}
+
+.btn-primary.active, .btn-primary:active, .open .dropdown-toggle.btn-primary {
+    background-image: none
+}
+
+.btn-primary.active[disabled], .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
+    background-color: #1dc5a3;
+    border-color: #1dc5a3
 }
 
 .btn-warning {
@@ -3788,7 +3790,7 @@ code {
     border-image: none;
     border-style: solid solid none;
     border-width: 1px 0;
-    min-height: 230px;
+    min-height: 200px;
 }
 
 table.table-mail tr td {
@@ -4862,7 +4864,10 @@ a.compose-mail {
 .feed-activity-list .feed-element {
     border-bottom: 1px solid #e7eaec
 }
-
+.feed-activity-list .feed-element .feed-content a{
+    color: #777;
+    font-weight: normal;
+}
 .feed-element:first-child {
     margin-top: 0
 }
@@ -9303,7 +9308,7 @@ em.time-link {
 
 .sortable i {
     color: #333;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .teacher-btns i {
@@ -10077,7 +10082,7 @@ table button[disabled], table input[disabled] {
 }
 
 .nav-left {
-    width:707px;
+    width:710px;
     height: auto;
     overflow: hidden;
 }
@@ -10136,9 +10141,9 @@ table button[disabled], table input[disabled] {
 }
 
 .cl-top {
-    width: 65px;
+    width: 60px;
     margin-top: -4px;
-    padding: 2px 0;
+    padding: 0;
 }
 
 .pic-sty {
@@ -10497,19 +10502,20 @@ table button[disabled], table input[disabled] {
     margin-bottom: 20px;
 }
 
-.wizard ul, .tabcontrol ul {
-    list-style: none !important;
-    padding: 0;
-    margin: 0;
-}
-.wizard ul > li, .tabcontrol ul > li {
+.wizard ul.tablist > li {
     display: block;
     padding: 0;
 }
 
 .wizard > .steps > ul > li, .wizard > .actions > ul > li {
     float: left;
+    padding: 0;
 }
+
+.wizard > .live-steps > ul > li, .wizard > .actions > ul > li{
+    width: 20%;
+}
+
 
 .wizard > .steps a, .wizard > .steps a:hover, .wizard > .steps a:active {
     display: block;
@@ -10640,4 +10646,77 @@ table button[disabled], table input[disabled] {
 }
 #commentForm .password{
     border-radius:0 3px 3px 0
+}
+.form-group .input-group{
+    width: 100%;
+}
+.nav.nav-pills > li.active{
+    border-left: none;
+    background:none;
+
+}
+.nav.nav-pills > li.active a{
+    color: #fff;
+}
+.nav.nav-pills > li > a{
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 4px;
+    overflow: hidden;
+    color: #666;
+}
+
+.teacher-list-group .input-group-btn{
+    top:0;
+}
+
+.btn-group .model{
+    border: 1px solid #fff;;
+}
+
+.chosen-container-single .chosen-single {
+    background: #ffffff;
+    box-shadow: none;
+    -moz-box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5DD;
+    border-radius: 2px;
+    cursor: text;
+    height: auto !important;
+    margin: 0;
+    min-height: 30px;
+    overflow: hidden;
+    padding: 4px 12px;
+    position: relative;
+    width: 100%;
+}
+.input-append .input-group-btn{
+    top:4px
+}
+.test_box {
+    width: 400px;
+    min-height: 28px;
+    line-height: 24px;
+    max-height: 300px;
+    _height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
+    outline: 0;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-user-modify: read-write-plaintext-only;
+}
+.bn{
+    border-top: none!important;
+}
+.tem-content{
+    border: 1px solid #ddd!important;
+}
+.informSet{
+    display: none;
 }

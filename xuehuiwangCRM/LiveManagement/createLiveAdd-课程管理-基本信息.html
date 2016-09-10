@@ -12,7 +12,7 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
     <link href="../css/style.min.css" rel="stylesheet" type="text/css">
-    <link href="../js/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+    <link href="../css/chosen/chosen.css" rel="stylesheet" type="text/css">
 </head>
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -73,7 +73,23 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label">标签</label>
                             <div class="col-sm-6">
-                                <input type="password" name="password" class="form-control">
+                                <div class="input-group mt">
+                                    <select data-placeholder="请选择标签" class="chosen-select" multiple tabindex="4">
+                                        <option value="">请选择标签</option>
+                                        <option value="110000" hassubinfo="true">免费课程</option>
+                                        <option value="120000" hassubinfo="true">心理实训</option>
+                                        <option value="130000" hassubinfo="true">心理实操</option>
+                                        <option value="140000" hassubinfo="true">营养实训</option>
+                                        <option value="150000" hassubinfo="true">营养实操</option>
+                                        <option value="210000" hassubinfo="true">人力实训人力实操</option>
+                                        <option value="220000" hassubinfo="true">人力实训</option>
+                                        <option value="230000" hassubinfo="true">人力技能</option>
+                                        <option value="310000" hassubinfo="true">人力基础知识</option>
+                                        <option value="320000" hassubinfo="true">人力三级</option>
+                                        <option value="330000" hassubinfo="true">人力二级</option>
+                                        <option value="340000" hassubinfo="true">人力一级</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -143,9 +159,23 @@
 <script type="text/javascript" src="../js/simditor/module.js"></script>
 <script type="text/javascript" src="../js/simditor/hotkeys.js"></script>
 <script type="text/javascript" src="../js/simditor/simditor.js"></script>
-
+<script type="text/javascript" src="../js/chosen/chosen.jquery.js"></script>
 <script>
-    $(document).ready(function(){var editor=new Simditor({textarea:$("#editor"),defaultImage:"images/a9.jpg"})});
+    $(document).ready(function(){
+        var editor=new Simditor({textarea:$("#editor")})
+    });
+    $(".es-qrcode").click(function(){
+        $(this).toggleClass("open")
+    });
+    $('.chosen-select').chosen();
+    $(".chosen-container").css({
+        width: $(".chosen-select").parent().width()
+    });
+    $(window).resize(function(){
+        $(".chosen-container").css({
+            width: $(".chosen-select").parent().width()
+        });
+    })
 </script>
 </body>
 </html>
