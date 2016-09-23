@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<title>新增会员</title>
+ 		<!--Basic Styles-->
+		<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
+
+		<!--Beyond styles-->
+		<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+		<link id="beyond-link" href="../../dep/moban/css/beyond.min.css" rel="stylesheet" type="text/css" />
+		<link href="../../dep/css/cropper.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../dep/datetimepicker/css/bootstrap-datetimepicker.css" />
+		
+		<!--
+        	作者：821516815@qq.com
+        	时间：2016-09-21
+        	描述：通用
+        -->
+		<link rel="stylesheet" href="../../home/common/css.css">
+		<link rel="stylesheet" type="text/css" href="../../home/member/zj_style.css"/>
+		
+
+
+	</head>
+
+	<body>
+
+		<div class="page-content">
+			<!-- 面包屑导航 -->
+			<div class="page-breadcrumbs">
+				<ul class="breadcrumb">
+					<li>
+						<i class="fa fa-home"></i>
+						<a href="index.html">首页</a>
+					</li>
+					<li class="active">
+						<a href="###">会员信息管理</a>
+					</li>
+					<li class="active">
+						会员信息服务
+					</li>
+				</ul>
+			</div>
+			<!-- /面包屑导航-->
+			<!--头部按钮-->
+			<div class="page-header position-relative">
+				<div class="header-title">
+					<h1>
+                                                     会员信息服务
+                        </h1>
+				</div>
+				<!--Header Buttons-->
+				<div class="header-buttons">
+					<a class="sidebar-toggler" href="#">
+						<i class="fa fa-arrows-h"></i>
+					</a>
+					<a class="refresh" id="refresh-toggler" href="">
+						<i class="glyphicon glyphicon-refresh"></i>
+					</a>
+					<a class="fullscreen" id="fullscreen-toggler" href="#">
+						<i class="glyphicon glyphicon-fullscreen"></i>
+					</a>
+				</div>
+				<!--头部按钮end-->
+		</div>
+
+			<div class="page-body">
+				<div class="row">
+					<div class="col-xs-12 col-md-12">
+						<div class="widget">
+							<div class="widget-header ">
+								<span class="widget-caption">新增会员信表单</span>
+								<div class="widget-buttons">
+									<a href="#" data-toggle="maximize">
+										<i class="fa fa-expand"></i>
+									</a>
+									<a href="#" data-toggle="collapse">
+										<i class="fa fa-minus"></i>
+									</a>
+									<a href="#" data-toggle="dispose">
+										<i class="fa fa-times"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="widget-body" style="overflow:hidden">
+
+								<div class="col-lg-12 col-sm-12 col-xs-12">
+
+									<div class="widget">
+
+										<div class="bancgud">
+
+											<div class="formfont">基础信息</div>
+
+											<form class="form-horizontal form-bordered" method="post"  id="registrationForm">
+												<div class="row">
+													<div class="col-lg-8 col-sm-8 col-xs-8">
+
+														<div class="widget">
+                                                             <!--row-->
+															<div class="row">
+															
+																<div class="col-lg-6 col-sm-6 col-xs-6 ">
+																	<div class="form-group hypading">
+																		<label for="inputPassword3" class="col-sm-3 control-label no-padding-right">会员姓名<span class="help-inline"><font color="red">*</font> </span></label>
+																		<div class="col-sm-9">
+																			<input type="text" class="form-control" id="inputEmail3" name="name" placeholder="张娇" disabled="disabled">
+																		</div>
+																	</div>
+																</div>
+																<div class="col-lg-6 col-sm-6 col-xs-6 ">
+																	<div class="form-group hypading">
+																		<label for="inputPassword3" class="col-sm-3 control-label no-padding-right">性<span class="fro-padd">别</span><span class="help-inline"><font color="red">*</font> </span></label>
+																		<label class="col-sm-3 labletab "  >
+				                                                         	<input type="radio" name="b"  disabled="disabled" checked> 
+				                                                            <span class="text" > 男</span>
+						                                                   </label>
+																		   <label class="col-sm-3 labletab">
+							                                                        <input type="radio" name="b"  disabled="disabled" >
+							                                                        <span class="text"> 女</span>
+							                                               </label>
+																		   <label class="col-sm-3 labletab">
+							                                                        <input type="radio" name="b" disabled="disabled">
+							                                                        <span class="text">其他</span>
+							                                               </label>
+
+																	</div>
+																</div>
+															</div>
+                                                           
+															<div class="row">
+																<div class="col-lg-6 col-sm-6 col-xs-6">
+																	<div class="form-group hypading">
+																		<label for="inputPassword3" class="col-sm-3 control-label no-padding-right">出生日期</label>
+																		<div class="col-sm-9">
+																			<input type="text" class="date-picker form-control from fl" value="1969-05-10" disabled="disabled">
+																			<i class="fa fa-calendar fl" style="margin-left:-26px ;color:#999; margin-top:10px;"></i>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-lg-6 col-sm-6 col-xs-6 ">
+																	<div class="form-group hypading">
+																		<label for="inputEmail3" class="col-sm-3 control-label no-padding-right" >手机号<span class="help-inline"><font color="red">*</font> </span></label>
+																		<div class="col-sm-9">
+																			<input type="text" class="form-control" id="inputEmail3" placeholder="15348697354" disabled="disabled">
+																		</div>
+																	</div>
+																</div>
+															</div>
+                                                             
+															<div class="row">
+																<div class="col-lg-6 col-sm-6 col-xs-6">
+																	<div class="form-group hypading">
+																		<label for="inputPassword3" class="col-sm-3 control-label no-padding-right">籍<span class="fro-padd">贯</span></label>
+																		<div class="col-sm-9">
+																		  <input type="text" class="form-control" id="inputEmail3" placeholder="河北" disabled="disabled">
+																		</div>
+																	</div>
+																</div>
+																<div class="col-lg-6 col-sm-6 col-xs-6">
+																	<div class="form-group hypading">
+																		<label for="inputPassword3" class="col-sm-3 control-label no-padding-right">文化程度<span class="help-inline"><font color="red">*</font> </span></label>
+																		<div class="col-sm-9">
+                                                                            <input type="text" class="form-control" id="inputEmail3" placeholder="研究生以上" disabled="disabled">
+																		</div>
+																	</div>
+																</div>
+															</div>
+														    <!--row-->
+														</div>
+													</div>
+
+													<div class="col-lg-2 col-sm-4 col-xs-2 col-lg-offset-1 col-xs-offset-1 col-sm-offset-1">
+														<div class="widget">
+															<img src="../../home/common/img/avatars/Stephanie-Walter.jpg" alt="" class="col-sm-12">
+                                                        </div>
+													</div>
+
+												</div>
+												<!--row over-->
+												<div class="widget">
+													<!--证件类型-->
+													<div class="row">
+														<div class="col-lg-4 col-sm-4 col-xs-4  ">
+															<div class="form-group">
+																<label class="col-sm-3 control-label no-padding-right">证件类型<span class="help-inline"><font color="red">*</font> </span></label>
+																<div class="col-sm-9">
+																<input type="text" class="form-control" id="inputEmail3" placeholder="身份证" disabled="disabled">
+																</div>
+															</div>
+														</div>
+
+														<div class="col-lg-4 col-sm-4 col-xs-4">
+															<div class="form-group">
+																<label class="col-sm-3 control-label no-padding-right">证件号码<span class="help-inline"><font color="red">*</font> </span></label>
+																<div class="col-sm-9">
+																	<input type="text" class="form-control" id="inputEmail3" placeholder="130485249813051145" disabled="disabled">
+																</div>
+															</div>
+														</div>
+
+														<div class="col-lg-4 col-sm-4 col-xs-4">
+															<div class="form-group">
+																<label class="col-sm-3 control-label no-padding-right">婚姻状况<span class="help-inline"><font color="red">*</font> </span></label>
+																<div class="col-sm-9">
+																  <input type="text" class="form-control" id="inputEmail3" placeholder="已婚" disabled="disabled">
+																</div>
+															</div>
+														</div>
+													</div>
+													<!--证件类型婚姻状况over-->
+
+													<div class="row">
+
+														<div class="col-lg-4 col-sm-4 col-xs-4  ">
+															<div class="form-group hypading">
+																<label class="col-sm-3 control-label no-padding-right">发证机关</label>
+																<div class="col-sm-9">
+																	<input type="text" class="form-control" id="inputEmail3" placeholder="北京市公安局朝阳分局" disabled="disabled">
+																</div>
+															</div>
+														</div>
+
+														<div class="col-lg-4 col-sm-4 col-xs-4">
+															<div class="form-group hypading">
+																<label class="col-sm-3 control-label no-padding-right">IC卡号</label>
+																<div class="col-sm-9">
+																	<input type="text" class="form-control" id="inputEmail3" placeholder="888888888888" disabled="disabled">
+																</div>
+															</div>
+														</div>
+
+														<div class="col-lg-4 col-sm-4 col-xs-4  ">
+															<div class="form-group hypading">
+																<label class="col-sm-3 control-label no-padding-right">IC卡标识符</label>
+																<div class="col-sm-9">
+																	<input type="text" class="form-control" id="inputEmail3" placeholder="" disabled="disabled">
+																</div>
+															</div>
+														</div>
+													</div>
+													<!--发证机关ic卡号over-->
+
+													<div class="row">
+														<div class="col-xs-12 col-marginl">
+															<div class="form-group hypading" style="margin-left: 0;">
+																	<label class="col-sm-1 no-padding-right adrsslabel">地<span class="fro-padd">址</span></label>
+																	<div class="col-sm-2">
+																		<input class="form-control"placeholder="河北省"  style="width: 180px;	"  disabled="disabled"/>
+																		
+																	</div>
+																	<div class="col-sm-2">
+																		<input class="form-control"placeholder="邯郸市"  style="width: 180px;	"  disabled="disabled"/>
+																	</div>
+																	<div class="col-sm-2">
+																		<input class="form-control"placeholder="丛台区"  style="width: 180px;	"  disabled="disabled"/>
+																	</div>
+																	 <div class="col-xs-4">
+																		<input type="text" class="formstyle form-control " id="inputEmail3" placeholder="新苑小区二区六号楼二单元"  disabled="disabled" />
+																	</div>
+															</div>
+														</div>
+														
+													</div>
+                                                     <!--城市地址-->
+													<div class="row">
+														<div class="col-lg-4 col-sm-4 col-xs-4  ">
+															<div class="form-group hypading">
+																<label class="col-sm-3 control-label no-padding-right">来源渠道</label>
+																<div class="col-sm-9 collabe">
+																    <label class="labletab ">
+				                                                         	<input type="radio" name="d" checked  disabled="disabled">
+				                                                            <span class="text" > 线下录入</span>
+						                                                  </label>
+																		<label class="labletab">
+							                                                        <input type="radio" name="d"   disabled="disabled">
+							                                                        <span class="text">APP</span>
+							                                               </label>
+																		<label class="labletab">
+							                                                        <input type="radio" name="d"   disabled="disabled">
+							                                                        <span class="text">网站</span>
+							                                               </label>
+                                                                  </div>
+															</div>
+														</div>
+
+														<div class="col-lg-4 col-sm-4 col-xs-4">
+															<div class="form-group">
+
+															</div>
+														</div>
+
+														<div class="col-lg-4 col-sm-4 col-xs-4">
+															<div class="form-group">
+
+															</div>
+														</div>
+													</div>
+													<!--地址over-->
+										
+											
+												<div class="formfont hypading">附加信息</div>
+												   <div class="row">
+
+														<div class="col-lg-4 col-sm-4 col-xs-4  ">
+															<div class="form-group hypading">
+																<label class="col-sm-3 control-label no-padding-right">会员卡号</label>
+																<div class="col-sm-9">
+																	<input type="email" class="form-control" id="inputEmail3" placeholder="1583648445582"  disabled="disabled">
+																</div>
+															</div>
+														</div>
+	
+														<div class="col-lg-4 col-sm-4 col-xs-4">
+															<div class="form-group hypading">
+																<label class="col-sm-4 control-label no-padding-right">社保编号</label>
+																<div class="col-sm-8">
+																	<input type="email" class="form-control" id="inputEmail3" placeholder="135864879916463325"  disabled="disabled">
+																</div>
+															</div>
+														</div>
+
+													<div class="col-lg-4 col-sm-4 col-xs-4  ">
+														<div class="form-group hypading">
+
+														</div>
+													</div>
+												</div>
+
+												<!--各种编号-->
+												<div class="row">
+
+														<div class="col-lg-4 col-sm-4 col-xs-4  ">
+															<div class="form-group hypading">
+																<label class="col-sm-3 control-label no-padding-right">紧急联系人</label>
+																<div class="col-sm-9">
+																	<input type="text" class="form-control" id="inputEmail3" placeholder="张娇"  disabled="disabled">
+																</div>
+															</div>
+														</div>
+	
+														<div class="col-lg-4 col-sm-4 col-xs-4">
+															<div class="form-group hypading">
+																<label class="col-sm-4 control-label no-padding-right">紧急联系人电话</label>
+																<div class="col-sm-8">
+																	<input type="text" class="form-control" id="inputEmail3" placeholder="15135482265"  disabled="disabled">
+																</div>
+															</div>
+														</div>
+	
+														<div class="col-lg-4 col-sm-4 col-xs-4  ">
+															<div class="form-group hypading">
+	
+															</div>
+														</div>
+												</div>
+												<!--紧急联系人over-->
+												<div class="row">
+
+													<div class="col-lg-4 col-sm-4 col-xs-4  ">
+														<div class="form-group hypading">
+															<label class="col-sm-3 control-label no-padding-right">补充地址</label>
+															<div class="col-sm-9">
+																<input type="text" class="form-control" id="inputEmail3" placeholder="北京市十里河"  disabled="disabled">
+															</div>
+														</div>
+													</div>
+
+													<div class="col-lg-4 col-sm-4 col-xs-4">
+
+													</div>
+
+													<div class="col-lg-4 col-sm-4 col-xs-4  ">
+
+													</div>
+												</div>
+												<!--补充地址over-->
+												<div class="row">
+													<div class="col-lg-4 col-sm-4 col-md-4">
+														<div class="form-group hypading">
+															<label class="col-sm-3 control-label no-padding-right">血<span class="fro-padd"></span>型</label>
+															<div class="col-sm-9">
+																 	<input type="text" class="form-control" id="inputEmail3" placeholder="A型"  disabled="disabled">
+															</div>
+
+														</div>
+													</div>
+
+													<div class="col-lg-4 col-sm-4 col-xs-4  ">
+														<div class="form-group hypading">
+
+														</div>
+													</div>
+
+													<div class="col-lg-4 col-sm-4 col-xs-4  ">
+														<div class="form-group hypading">
+
+														</div>
+													</div>
+
+												</div>
+												<!--血型over-->
+												<div class="row">
+													<div class="col-lg-4 col-sm-4 col-xs-4  ">
+														<div class="form-group hypading">
+															<label class="col-sm-3 control-label no-padding-right">村委会名称</label>
+															<div class="col-sm-9">
+																<input type="text" class="form-control" id="inputEmail3" placeholder="北京市开阳桥居委会"  disabled="disabled">
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-4 col-sm-4 col-xs-4">
+														<div class="form-group hypading">
+															<label class="col-sm-3 control-label no-padding-right">村委会地址</label>
+															<div class="col-sm-9">
+																<input type="text" class="form-control" id="inputEmail3" placeholder="北京市西城区开阳桥"  disabled="disabled">
+															</div>
+														</div>
+													</div>
+
+													<div class="col-lg-4 col-sm-4 col-xs-4  ">
+														<div class="form-group hypading">
+															<label class="col-sm-3 control-label no-padding-right">村委会电话</label>
+															<div class="col-sm-9">
+																<input type="text" class="form-control" id="inputEmail3" placeholder="0105624823"  disabled="disabled">
+															</div>
+														</div>
+													</div>
+												</div>
+                                          <!--村委会over-->
+										</div>
+									</div>
+									<!--widget-->
+										
+                                       <div class="col-sm-8  col-xs-offset-3  btn-bottmb ">
+					                    
+					                     <button class=" btn btn-active col-sm-2 col-xs-offset-3 btn-bottm" type="button"   onClick="window.open('information_common.html')">返回</button>
+						              </div>
+									</div>
+									
+									</form>
+									
+								</div>
+							</div>
+						   </div>
+					   </div>
+				    </div>
+			    </div>
+		    </div>
+        </div>
+ <!--<div class="modal fade in" id="closeCourse" aria-hidden="true">
+    <div class="modal-dialog" >
+        <div class="modal-content"  style="border-radius:50px!important" >
+            
+            <div class="modal-body form-horizontal" >
+              <p class="text-warning">您的会员信息已提交成功</p>
+            </div>
+        </div>
+    </div>
+</div>-->
+        
+
+   
+
+	</body>
+
+</html>

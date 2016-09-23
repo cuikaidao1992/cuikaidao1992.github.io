@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>新增用药记录服务</title>
+
+   
+    <link rel="shortcut icon" href="../../dep/moban/img/favicon.png" type="image/x-icon">
+
+    <!--Basic Styles-->
+    <link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+    <link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../dep/moban/css/weather-icons.min.css" rel="stylesheet" />
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="../../dep/moban/css/beyond.min.css" rel="stylesheet" />
+    <link href="../../dep/moban/css/demo.min.css" rel="stylesheet" />
+    <link href="../../dep/moban/css/typicons.min.css" rel="stylesheet" />
+    <link href="../../dep/moban/css/animate.min.css" rel="stylesheet" />
+    <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+
+    <!---->
+
+    <link rel="stylesheet" type="text/css" href="../../dep/datetimepicker/css/bootstrap-datetimepicker.css"/>
+    <link rel="stylesheet" href="../../home/card/card.css">
+    <link rel="stylesheet" href="../../home/common/css.css">
+
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="../../dep/moban/js/skins.min.js"></script>
+
+</head>
+<body>
+
+    <!-- 导航 -->
+
+    <!-- /Navbar -->
+    <!-- Main Container -->
+    <div class="main-container container-fluid">
+        <!-- Page Container -->
+        <div class="page-container">
+
+            <!-- /右侧内容 -->
+
+            <div class="page-content">
+                <!-- 面包屑导航 -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="index.html">首页</a>
+                        </li>
+                        <li class="active">
+                          <a href="###">健康档案管理</a>
+                      </li>
+                      <li class="active">
+                        用药记录服务 
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /面包屑导航-->
+            <!--头部按钮-->
+            <div class="page-header position-relative">
+                <div class="header-title">
+                    <h1>
+                        用药记录服务
+                    </h1>
+
+                </div>
+                <!--Header Buttons-->
+                <div class="header-buttons">
+                    <a class="sidebar-toggler" href="#">
+                        <i class="fa fa-arrows-h"></i>
+                    </a>
+                    <a class="refresh" id="refresh-toggler" href="">
+                        <i class="glyphicon glyphicon-refresh"></i>
+                    </a>
+                    <a class="fullscreen" id="fullscreen-toggler" href="#">
+                        <i class="glyphicon glyphicon-fullscreen"></i>
+                    </a>
+                </div>
+                <!--头部按钮end-->
+            </div>
+            <div class="page-body">
+              <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <div class="widget">
+                        <div class="widget-header ">
+                            <span class="widget-caption">新增用药记录列表</span>
+                            <div class="widget-buttons">
+                                <a href="#" data-toggle="maximize">
+                                    <i class="fa fa-expand"></i>
+                                </a>
+                                <a href="#" data-toggle="collapse">
+                                    <i class="fa fa-minus"></i>
+                                </a>
+                                <a href="#" data-toggle="dispose">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="widget-body" style="overflow:hidden">
+                         <div class="col-lg-12 col-sm-12 col-xs-12">
+                            <div class="widget">
+                                <div class=" bancgud" >
+
+                                  <div class="formfont">基础信息</div>
+                                  <form class="form-horizontal" role="form">
+                                    <div class="content">
+                                    <i class="fa fa-minus-circle cunt minus" id=""></i>
+                                    
+                                    <div class="form-group"> 
+                                        <label  class="col-md-1 col-sm-1 control-label label_pd">会员名称</label> 
+                                        <div class="col-md-3"> 
+                                            <input class="form-control" type="text"  placeholder="请输入会员名称">
+                                        </div> 
+                                        
+                                   </div>
+
+                                    <div class="form-group"> 
+                                        <label  class="col-md-1 col-sm-1 control-label label_pd">药&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;品</label> 
+                                        <div class="col-md-3"> 
+                                            <input class="form-control" type="text"  placeholder="请输入药品名称">
+                                        </div> 
+                                        <label class="col-md-2 control-label label_pd">用药时间</label> 
+                                        <div class="col-lg-5 col-md-5"> 
+                                           <input type="text" class="form-control date-picker col-sm-4" id="inputEmail3" value="2016-09-15">
+                                       </div> 
+                                   </div>
+
+                                   <div class="form-group"> 
+                                    <label class="col-lg-1 col-md-1 control-label label_pd">用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;法</label> 
+                                    <div class="col-md-3 col-sm-12 col-xs-12"> 
+                                     <select class="col-md-5 col-xs-5">
+                                        <option>口服</option>
+                                        <option>外用</option>
+                                        <option>吸入</option>
+                                        <option>肌肉注射</option>
+                                        <option>静脉点滴</option>
+
+                                    </select>
+                                    <select class="col-md-5 col-xs-5" style="float:right">
+                                        <option>饭前</option>
+                                        <option>饭后</option>
+                                        <option>饭时</option>
+                                        <option>晨起</option>
+                                        <option>睡前</option>
+                                    </select>
+                                  </div> 
+
+                                <div class='clearfix'>
+                                    <label for="endtime" class="col-md-2 control-label label_pd">用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</label> 
+                                    <div class="col-md-6 select_special"> 
+                                        <select >
+                                            <option>每日</option>
+                                            <option>每2小时</option>
+                                            <option>每4小时</option>
+                                            <option>每晨</option>
+                                            <option>每晚</option>
+                                        </select>
+                                        <select>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </select>
+                                        <span  style="width:5%;display:inline-block"><label>次</label></span>
+                                        <span  style="display:inline-block;text-align:right"><label>每次</label></span>
+
+                                        <label class="label_input"><input type="text" class="form-control col-md-2"></label>
+                                        <select > 
+                                            <option>毫克</option>
+                                            <option>毫升</option>
+                                            <option>克</option>
+                                        </select>
+
+                                    </div> 
+                                </div>
+
+                            </div>
+                            <div class="form-title"></div>
+                            </div>
+                            <i class="fa fa-plus-circle cunt adds " id=""></i>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-lg-offset-3 col-xs-offset-1 col-md-offset-2 btn-bottm ">
+                      <button id="tagIdSubmitAddVip_btn" type="button" class=" btn btn-darkorange  col-sm-2 col-xs-offset-3" href="#closeCourse" data-toggle="modal">保存</button>
+                      <button class=" btn btn-active col-sm-2 col-xs-offset-3" type="button" onClick="window.open('mar_card.html')">取消</button>
+                  </div>
+              </div> 
+          </form>
+      </div>
+  </div>
+</div> 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>    
+
+<!-- /右侧内容 -->
+</div>
+<!--'<div class="modal fade in" id="closeCourse" aria-hidden="true">
+    <div class="modal-dialog" >
+        <div class="modal-content"  style="border-radius:50px!important" >
+
+            <div class="modal-body form-horizontal" >
+              <p class="text-warning">您的用药记录已提交成功</p>
+          </div>
+      </div>
+  </div>
+</div>-->
+'
+
+
+<!--Basic Scripts-->
+<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
+<script src="../../dep/moban/js/bootstrap.min.js"></script>
+
+<!--Beyond Scripts-->
+<script src="../../dep/moban/js/beyond.min.js"></script>
+
+<!---->
+
+<script src="../../dep/jquery.selectlist.js"></script>
+<script src="../../dep/jquery.bigautocomplete.js"></script>
+<script type="text/javascript" src="../../dep/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../../dep/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+<script>
+$(function(){
+    $('.abcselect').selectlist({
+     zIndex: 1000,
+     width: 190,
+     height: 34
+
+ });		
+})
+$(function(){
+
+   $(".zj-dd").bigAutocomplete({
+    width:500,
+    data:[{title:"张三",result:{ff:"qq"}},
+    {title:"李四"},
+    {title:"赵武"},
+    {title:"王六"},
+    {title:"中国好声音第三期"},
+    {title:"中国好声音 第一期"},
+    {title:"中国电信网上营业厅"},
+    {title:"中国工商银行"},
+    {title:"中国好声音第二期"},
+    {title:"中国地图"}],
+
+});
+
+})
+$(function () {
+
+    $("body").on("focus.page",".date-picker",function(){
+        $(this).datetimepicker({
+            format: "yyyy-mm-dd",
+            minView:2,
+            autoclose: true,
+            language: "zh-CN"
+        })
+    });
+
+
+    /* 新增 */
+    $('#tagIdSubmitAddVip_btn').on('click',function(){
+        setTimeout(function(){
+            $('#closeCourse').click();
+        },1000);
+    });
+    $("#city").click(function (e) {
+      SelCity(this,e);
+  });
+});
+</script>
+
+
+<script type="text/javascript" src="../../dep/Calendar.js"></script>
+<script type="text/javascript">
+$(".adds").click(function(){
+    var add_content=' <i class="fa fa-minus-circle cunt minus " id=""></i>'+
+    '<div class="form-group"> '+
+        '<label  class="col-md-1 col-sm-1 control-label label_pd">会员名称</label> '+
+        '<div class="col-md-3"> '+
+            '<input class="form-control" type="text"  placeholder="请输入会员名称">'+
+        '</div>'+ 
+    '</div>'+
+    '<div class="form-group"> '+
+
+    '<label for="starttime" class="col-md-1 col-sm-1 control-label label_pd">药&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;品</label> '+
+    '<div class="col-md-3">'+ 
+    '<input class="form-control" type="text" id="starttime" placeholder="请输入药品名称">'+
+    '</div> '+
+    '<label for="endtime" class="col-md-2 control-label label_pd">用药时间</label> '+
+    '<div class="col-md-5"> '+
+    ' <input type="text" class="form-control date-picker col-sm-4" id="inputEmail3" value="2016-09-15">'+
+    ' </div> '+
+    ' </div>'+
+    '<div class="form-group"> '+
+    '<label for="starttime" class="col-lg-1 col-md-1 control-label label_pd">用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;法</label> '+
+    '<div class="col-md-3 col-sm-12 col-xs-12"> '+
+    '<select class="col-md-5 col-xs-5">'+
+    '<option>口服</option>'+
+    '<option>外用</option>'+
+    '<option>吸入</option>'+
+    '<option>肌肉注射</option>'+
+    '<option>静脉点滴</option>'+
+
+    '</select>'+
+    '<select class="col-md-5 col-xs-5" style="float:right">'+
+    '<option>饭前</option>'+
+    '<option>饭后</option>'+
+    '<option>饭时</option>'+
+    '<option>晨起</option>'+
+    '<option>睡前</option>'+
+    '</select>'+
+    ' </div> '+
+    '<div class="clearfix">'+
+    '<label for="endtime" class="col-md-2 control-label label_pd">用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</label> '+
+    '<div class="col-md-6 select_special"> '+
+    ' <select >'+
+    ' <option>每日</option>'+
+    ' <option>每2小时</option>'+
+    ' <option>每4小时</option>'+
+    ' <option>每晨</option>'+
+    ' <option>每晚</option>'+
+    '</select>'+
+    ' <select>'+
+    ' <option>1</option>'+
+    ' <option>2</option>'+
+    ' <option>3</option>'+
+    ' <option>4</option>'+
+    ' <option>5</option>'+
+    ' <option>6</option>'+
+    ' <option>7</option>'+
+    ' <option>8</option>'+
+    ' <option>9</option>'+
+    ' <option>10</option>'+
+    ' </select>'+
+    ' <span  style="width:5%;display:inline-block"><label>次</label></span>'+
+    '<span  style="display:inline-block;text-align:right"><label>每次</label></span>'+
+
+    ' <label class="label_input"><input type="text" class="form-control col-md-2"></label>'+
+    ' <select >'+ 
+    ' <option>毫克</option>'+
+    '<option>毫升</option>'+
+    '<option>克</option>'+
+     '</select>'+
+
+    '</div> '+
+    '</div>'+
+    ' </div>'+
+    ' <div class="form-title"></div>';
+    $(this).parents().find(".content").append(add_content)
+    $(".minus").click(function(){
+
+        $(this).next().remove().end().next().remove().end().next().remove().end().next().remove();
+        $(this).remove();
+    })
+})
+</script>
+
+</body>
+
+</html>

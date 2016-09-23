@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+		<title>体检报告服务</title>
+
+		<link rel="shortcut icon" href="../../dep/moban/img/favicon.png" type="image/x-icon">
+
+		<!--Basic Styles-->
+		<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
+		<link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+		<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="../../dep/moban/css/weather-icons.min.css" rel="stylesheet" />
+
+		<!--Beyond styles-->
+		<link id="beyond-link" href="../../dep/moban/css/beyond.min.css" rel="stylesheet" />
+		<link href="../../dep/moban/css/demo.min.css" rel="stylesheet" />
+		<link href="../../dep/moban/css/typicons.min.css" rel="stylesheet" />
+		<link href="../../dep/moban/css/animate.min.css" rel="stylesheet" />
+		<link id="skin-link" href="" rel="stylesheet" type="text/css" />
+
+		<!---->
+		<link href="../../dep/moban/css/dataTables.bootstrap.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../home/common/css.css">
+		<link rel="stylesheet" href="../../dep/zTree/css/zTreeStyle/zTreeStyle.css" />
+		<link rel="stylesheet" href="../../home/service/service.css" />
+
+		<!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+		<script src="../../dep/moban/js/skins.min.js"></script>
+		<style>
+			#registrationForm .input-box{
+				float: left;
+				margin-right: 15px;
+			}
+			#registrationForm .file {
+				width: 85px;
+				height: 80px;
+				position: relative;
+				display: inline-block;
+				background-image:url(../../dep/img/upload.png);
+				overflow: hidden;
+				text-decoration: none;
+				text-indent: 0;
+				line-height: 20px;
+				cursor: pointer;
+				-webkit-box-shadow: 1px 0 4px 1px rgba(0, 0, 0, .3);
+				-moz-box-shadow: 1px 0 4px 1px rgba(0, 0, 0, .3);
+				box-shadow: 1px 0 4px 1px rgba(0, 0, 0, .3);
+			}
+			#registrationForm  .upload-img{
+				background-image:url(../../dep/img/upload-img.png);
+			}
+			#registrationForm .file input {
+				width: 85px;
+				height: 80px;
+				position: absolute;
+				font-size: 100px;
+				right: 0;
+				top: 0;
+				opacity: 0;
+				cursor: pointer;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!-- Main Container -->
+		<div class="main-container container-fluid">
+			<!-- Page Container -->
+			<div class="page-container page-content">
+				<!-- Page Sidebar -->
+				<!-- 面包屑导航 -->
+				<div class="page-breadcrumbs">
+					<ul class="breadcrumb">
+						<li>
+							<i class="fa fa-home"></i>
+							<a href="index.html">健康档案管理</a>
+						</li>
+						<li class="active">
+							<a href="###">体检报告服务</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /面包屑导航-->
+				<!--头部按钮-->
+				<div class="page-header position-relative">
+					<div class="header-title">
+						<h1>
+                            	体检报告服务
+                        	</h1>
+					</div>
+					<!--Header Buttons-->
+					<div class="header-buttons">
+						<a class="sidebar-toggler" href="#">
+							<i class="fa fa-arrows-h"></i>
+						</a>
+						<a class="refresh" id="refresh-toggler" href="">
+							<i class="glyphicon glyphicon-refresh"></i>
+						</a>
+						<a class="fullscreen" id="fullscreen-toggler" href="#">
+							<i class="glyphicon glyphicon-fullscreen"></i>
+						</a>
+					</div>
+					<!--头部按钮end-->
+				</div>
+				<div class="page-body">
+					<div class="row">
+
+						<div class="col-xs-12 col-md-12">
+
+							<div class="widget">
+								<div class="widget-header bordered-bottom bordered-lightgray">
+									<span class="widget-caption">体检报告上传</span>
+								</div>
+								<div class="widget-body">
+									<div id="horizontal-form">
+										<form class="form-horizontal" role="form" id="registrationForm">
+											<div class="form-group">
+												<label class="col-sm-2 control-label">会员名称<span class="help-inline"><font color="red">*</font> </span></label>
+												<div class="col-lg-8">
+													<input type="text" class="form-control search-box" placeholder="会员名称"  name="name" data-bv-notempty="true" data-bv-notempty-message="病例名称不能为空">
+													<div class="name-options" id="SearcherList" style="display: none;">
+														<ul>
+															<li><span>张三</span></li>
+															<li><span>张三</span></li>
+															<li><span>张三</span></li>
+															<li><span>张三</span></li>
+															<li><span>张三</span></li>
+															<li><span>张三</span></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="col-sm-2 control-label">体检报告上传</label>
+												<div class="col-lg-8 upload-file">
+													<div class="input-box">
+														<a href="javascript:;" class="file">
+															<input type="file" name="">
+														</a>
+													</div>
+													<div class="input-box">
+														<a href="javascript:;" class="file">
+															<input type="file" name="">
+														</a>
+													</div>
+													<div class="input-box">
+														<a href="javascript:;" class="file">
+															<input type="file" name="">
+														</a>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="col-sm-2 control-label">体检报告名称<span class="help-inline"><font color="red">*</font> </span></label>
+												<div class="col-lg-8">
+													<input type="text" class="form-control" name="reportName" data-bv-notempty="true" data-bv-notempty-message="体检报告名称不能为空" />
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="col-sm-2 control-label">体检报告描述</label>
+												<div class="col-lg-8">
+													<textarea class="form-control" name="reportDesc"></textarea>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<div class="col-sm-2 col-sm-offset-2 ">
+													<input class="btn btn-info btn-lg" type="submit" value="提交" />
+												</div>
+											</div>
+
+										</form>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<P class="bottomfont">© 2016 Angel Health Management Ltd. : 天使健康管理有限公司</P>
+
+		<!-- /右侧内容 -->
+		</div>
+
+		</div>
+
+		<!--Basic Scripts-->
+		<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
+		<script src="../../dep/moban/js/bootstrap.min.js"></script>
+
+		<!--Beyond Scripts-->
+		<script src="../../dep/moban/js/beyond.min.js"></script>
+
+		<!---->
+		<script src="../../dep/moban/js/validation/bootstrapValidator.js"></script>
+
+		<script>
+			$(function() {
+				$('.search-box').bind('input propertychange', function() {
+					if($(this).val()!=""){
+						$("#SearcherList").show().css({
+							width:$(this).width()+26
+						});
+
+					}
+				});
+				$("#SearcherList li").click(function(){
+					$(".search-box").val($(this).find("span").text());
+					$("#SearcherList").hide();
+				});
+
+				$("#registrationForm").bootstrapValidator();
+				var str='<div class="input-box">'+
+						'<a href="javascript:;" class="file">'+
+						'<input type="file" name="">'+
+						'</a> </div>';
+				$(".upload-file").on("change","input[type='file']",function(){
+					$(this).parent().addClass("upload-img");
+					if($(".upload-file .upload-img").length>=3){
+						$(".upload-file").append(str);
+					}
+				})
+			});
+
+		</script>
+
+	</body>
+
+</html>

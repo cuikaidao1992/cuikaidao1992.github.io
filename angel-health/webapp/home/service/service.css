@@ -1,0 +1,29 @@
+
+#registrationForm input {
+	width: 80%;
+}
+
+#registrationForm select,
+textarea {
+	width: 80%;
+}
+#registrationForm textarea{
+	width: 80%;
+}
+
+#editDepart input {
+	width: 80%;
+}
+
+#editDepart select,
+textarea {
+	width: 80%;
+}
+
+#editDepart textarea{
+	width: 80%;
+}
+
+#editPro input{
+	width: 80%;
+}

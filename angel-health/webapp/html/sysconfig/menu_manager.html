@@ -1,0 +1,877 @@
+﻿﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<title>菜单管理</title>
+		<link rel="shortcut icon" href="../../dep/moban/img/favicon.png" type="image/x-icon">
+		<!--Basic Styles-->
+		<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
+		<link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+		<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="../../dep/moban/css/weather-icons.min.css" rel="stylesheet" />
+
+		<!--Beyond styles-->
+		<link href="../../dep/moban/css/demo.min.css" rel="stylesheet" />
+		<link href="../../dep/moban/css/typicons.min.css" rel="stylesheet" />
+		<link href="../../dep/moban/css/animate.min.css" rel="stylesheet" />
+
+		<!---->
+		<link href="../../dep/moban/css/dataTables.bootstrap.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../home/common/css.css">
+		<link rel="stylesheet" href="../../dep/zTree/css/zTreeStyle/zTreeStyle.css" />
+		<link rel="stylesheet" href="../../home/sysconfig/sysconfig.css" />
+		<link rel="stylesheet" href="../../dep/treeTable/css/jquery.treetable.css" />
+		<link rel="stylesheet" href="../../dep/treeTable/css/jquery.treetable.theme.default.css" />
+
+		<link id="beyond-link" href="../../dep/moban/css/beyond.min.css" rel="stylesheet" />
+
+		<!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+		<script src="../../dep/moban/js/skins.min.js"></script>
+	<style>
+		#registrationForm input {
+			width: 80%;
+		}
+
+		#registrationForm select,
+		textarea {
+			width: 80%;
+		}
+
+		#editMenu input {
+			width: 80%;
+		}
+
+		#editMenu select,
+		textarea {
+			width: 80%;
+		}
+	</style>
+	</head>
+	<body>
+		<!-- Main Container -->
+		<div class="main-container container-fluid">
+			<!-- Page Container -->
+			<div class="page-container page-content">
+					<!-- 面包屑导航 -->
+					<div class="page-breadcrumbs">
+						<ul class="breadcrumb">
+							<li>
+								<i class="fa fa-home"></i>
+								<a href="index.html">系统配置管理</a>
+							</li>
+							<li class="active">
+								<a href="###">用户管理</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /面包屑导航-->
+					<!--头部按钮-->
+					<div class="page-header position-relative">
+						<div class="header-title">
+							<h1>
+                            	用户管理
+                        	</h1>
+						</div>
+						<!--Header Buttons-->
+						<div class="header-buttons">
+							<a class="sidebar-toggler" href="#">
+								<i class="fa fa-arrows-h"></i>
+							</a>
+							<a class="refresh" id="refresh-toggler" href="">
+								<i class="glyphicon glyphicon-refresh"></i>
+							</a>
+							<a class="fullscreen" id="fullscreen-toggler" href="#">
+								<i class="glyphicon glyphicon-fullscreen"></i>
+							</a>
+						</div>
+						<!--头部按钮end-->
+					</div>
+					<div class="page-body">
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<div class="tabbable">
+									<ul class="nav nav-tabs" id="myTab">
+										<li class="active">
+											<a id="tab-list" data-toggle="tab" href="#home">
+                                                   	 菜单列表
+                                                </a>
+										</li>
+
+										<li class="tab-red">
+											<a id="tab-add" data-toggle="tab" href="#profile">
+                                                  	 菜单添加
+                                                </a>
+										</li>
+										<li class="tab-blue">
+											<a id="tab-edit" data-toggle="tab" href="#editMenu" style="display: none;">
+												菜单编辑
+											</a>
+										</li>
+									</ul>
+									<div class="tab-content">
+										<div id="home" class="tab-pane in active">
+											<table class="table table-striped table-hover table-bordered" id="bodyHtml">
+												<thead>
+													<tr role="row">
+														<th>
+															名称 <span class="fa indicator fa-unsorted"></span>
+														</th>
+														<th>
+															链接<span class="fa indicator fa-unsorted"></span>
+														</th>
+														<th width="8%">
+															排序<span class="fa indicator fa-unsorted"></span>
+														</th>
+														<th width="8%">
+															可见 <span class="fa indicator fa-unsorted"></span>
+														</th>
+														<th>
+															权限标识 <span class="fa indicator fa-unsorted"></span>
+														</th>
+														<th>
+															操作<span class="fa indicator fa-unsorted"></span>
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr data-tt-id="1">
+														<td>系统配置管理</td>
+														<td></td>
+														<td>100</td>
+														<td>可见</td>
+														<td></td>
+														<td>
+															<a href="#" class="btn btn-info btn-xs editClass"></i> 修改</a>
+															<a href="#" class="btn btn-danger btn-xs removeClass"><i class="fa fa-trash-o"></i> 删除</a>
+															<a href="#" class="btn btn-default btn-xs addClass"><i class="fa fa-child"></i> 添加下级菜单</a>
+														</td>
+													</tr>
+													<tr data-tt-id="2" data-tt-parent-id="1">
+														<td>用户管理</td>
+														<td>/sys-config/user_manager.html</td>
+														<td>10</td>
+														<td>可见</td>
+														<td></td>
+														<td>
+															<a href="#" class="btn btn-info btn-xs editClass"></i> 修改</a>
+															<a href="#" class="btn btn-danger btn-xs removeClass"><i class="fa fa-trash-o"></i> 删除</a>
+															<a href="#" class="btn btn-default btn-xs addClass"><i class="fa fa-child"></i> 添加下级菜单</a>
+														</td>
+													</tr>
+													<tr data-tt-id="3" data-tt-parent-id="1">
+														<td>机构管理</td>
+														<td>/sys-config/depart_manager.html</td>
+														<td>20</td>
+														<td>可见</td>
+														<td></td>
+														<td>
+															<a href="#" class="btn btn-info btn-xs editClass"></i> 修改</a>
+															<a href="#" class="btn btn-danger btn-xs removeClass"><i class="fa fa-trash-o"></i> 删除</a>
+															<a href="#" class="btn btn-default btn-xs addClass"><i class="fa fa-child"></i> 添加下级菜单</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- 新增用户 form -->
+										<div id="profile" class="tab-pane">
+											<form id="registrationForm" method="post" class="form-horizontal" data-bv-message="数据无效" data-bv-feedbackicons-valid="glyphicon glyphicon-ok" data-bv-feedbackicons-invalid="glyphicon glyphicon-remove" data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+												<div class="form-group">
+													<label class="col-lg-4 control-label">上级菜单</label>
+													<div class="col-lg-8">
+														<select name="company" class="form-control">
+													      <option value="0" selected="selected">请选择</option>
+													      <option value="1">系统配置管理</option>
+													      <option value="2">业务配置管理</option>
+													    </select>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">名称<span class="help-inline"><font color="red">*</font> </span></label>
+													<div class="col-lg-8">
+														<input type="text" class="form-control" name="menuName" data-bv-notempty="true" data-bv-notempty-message="工号不能为空" />
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">链接</label>
+													<div class="col-lg-8">
+														<input type="text" class="form-control" name="address" data-bv-notempty="true" data-bv-notempty-message="姓名不能为空" />
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">图标</label>
+													<div class="col-lg-8">
+														<div class="controls">
+															<i id="iconIcon" class="fa fa-user"></i>&nbsp;<label id="iconIconLabel">user</label>&nbsp;
+															<input id="icon" name="icon" type="hidden" value="user"><a id="iconButton" href="#chose-head" data-toggle="modal" class="btn btn-sm">选择</a>&nbsp;&nbsp;
+															<!--<script type="text/javascript">
+																$("#iconButton").click(function(){
+																	top.$.jBox.open("iframe:/jeesite/a/tag/iconselect?value="+$("#icon").val(), "选择图标", 700, $(top.document).height()-180, {
+																		buttons:{"确定":"ok", "清除":"clear", "关闭":true}, submit:function(v, h, f){
+																			if (v=="ok"){
+																				var icon = h.find("iframe")[0].contentWindow.$("#icon").val();
+																				icon = $.trim(icon).substr(5);
+																				$("#iconIcon").attr("class", "icon-"+icon);
+																				$("#iconIconLabel").text(icon);
+																				$("#icon").val(icon);
+																			}else if (v=="clear"){
+																				$("#iconIcon").attr("class", "icon- hide");
+																				$("#iconIconLabel").text("无");
+																				$("#icon").val("");
+																			}
+																		}, loaded:function(h){
+																			$(".jbox-content", top.document).css("overflow-y","hidden");
+																		}
+																	});
+																});
+															</script>-->
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">排序</label>
+													<div class="col-lg-8">
+														<input class="form-control" name="sort" type="text" />
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">是否可见</label>
+													<div class="col-lg-8">
+														<input class="checkbox-slider" type="checkbox" checked="checked">
+														<span class="text"></span>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">权限标识</label>
+													<div class="col-lg-8">
+														<input class="form-control" name="permission" type="text" />
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">备注</label>
+													<div class="col-lg-8">
+														<textarea rows="3" name="note"></textarea>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<div class="col-lg-offset-4 col-lg-8">
+														<input class="btn btn-palegreen" type="submit" value="提交" />
+													</div>
+												</div>
+
+											</form>
+										</div>
+
+										<div id="editMenu" class="tab-pane">
+
+											<form id="editForm" method="post" class="form-horizontal" data-bv-message="数据无效" data-bv-feedbackicons-valid="glyphicon glyphicon-ok" data-bv-feedbackicons-invalid="glyphicon glyphicon-remove" data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">上级菜单</label>
+													<div class="col-lg-8">
+														<select name="company" class="form-control">
+													      <option value="0" >请选择</option>
+													      <option value="1" selected="selected">系统配置管理</option>
+													      <option value="2" >业务配置管理</option>
+													    </select>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">名称<span class="help-inline"><font color="red">*</font> </span></label>
+													<div class="col-lg-8">
+														<input vaule="系统配置管理" type="text" class="form-control" name="menuName" data-bv-notempty="true" data-bv-notempty-message="工号不能为空" />
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">链接</label>
+													<div class="col-lg-8">
+														<input type="text" class="form-control" name="address" data-bv-notempty="true" data-bv-notempty-message="姓名不能为空" />
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">图标</label>
+													<div class="col-lg-8">
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">排序</label>
+													<div class="col-lg-8">
+														<input value="100" class="form-control" name="sort" type="text" />
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">是否可见</label>
+													<div class="col-lg-8">
+														<input class="checkbox-slider" type="checkbox" checked="checked">
+														<span class="text"></span>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">权限标识</label>
+													<div class="col-lg-8">
+														<input class="form-control" name="permission" type="text" />
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-lg-4 control-label">备注</label>
+													<div class="col-lg-8">
+														<textarea rows="3" name="note">顶级菜单</textarea>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<div class="col-lg-offset-4 col-lg-8">
+														<input class="btn btn-palegreen" type="submit" value="修改" />
+													</div>
+												</div>
+
+											</form>
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+					<P class="bottomfont">© 2016 Angel Health Management Ltd. : 天使健康管理有限公司</P>
+
+				</div>
+				<!-- /右侧内容 -->
+			</div>
+
+		</div>
+		<div class="modal fade in" id="chose-head" aria-hidden="true" style="overflow-x: hidden">
+			<div class="modal-dialog">
+				<div class="modal-content" style="max-height: 400px;overflow: auto">
+					<div class="modal-header">
+						<h4 class="modal-title">选择图标</h4>
+					</div>
+					<div class="modal-body form-horizontal">
+						<form action="">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<section id="file-type" class="mainParts">
+										<h2 class="page-header">文件类型</h2>
+										<div class="row fontawesome-icon-list">
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file" aria-hidden="true"></i> <span class="sr-only">Example of </span>file</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-archive-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-archive-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-audio-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-audio-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-code-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-code-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-excel-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-image-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-image-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-movie-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-movie-o <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-pdf-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-photo-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-photo-o <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-picture-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-picture-o <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-powerpoint-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-sound-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-sound-o <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-text" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-text</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-text-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-text-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-video-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-video-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-word-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-word-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-zip-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-zip-o <span class="text-muted">(别名)</span></a></div>
+										</div>
+									</section>
+									<section id="spinner" class="mainParts">
+										<h2 class="page-header">可旋转</h2>
+										<div class="row fontawesome-icon-list">
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-circle-o-notch" aria-hidden="true"></i> <span class="sr-only">Example of </span>circle-o-notch</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-cog" aria-hidden="true"></i> <span class="sr-only">Example of </span>cog</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-gear" aria-hidden="true"></i> <span class="sr-only">Example of </span>gear <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-refresh" aria-hidden="true"></i> <span class="sr-only">Example of </span>refresh</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-spinner" aria-hidden="true"></i> <span class="sr-only">Example of </span>spinner</a></div>
+										</div>
+									</section>
+									<section id="form-control" class="mainParts">
+										<h2 class="page-header">表单</h2>
+
+										<div class="row fontawesome-icon-list">
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-check-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>check-square</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-check-square-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>check-square-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-circle" aria-hidden="true"></i> <span class="sr-only">Example of </span>circle</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-circle-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>circle-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>dot-circle-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-minus-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>minus-square</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-minus-square-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>minus-square-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-plus-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>plus-square</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-plus-square-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>plus-square-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>square</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-square-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>square-o</a></div>
+
+										</div>
+									</section>
+									<section id="currency" class="mainParts">
+										<h2 class="page-header">货币</h2>
+
+										<div class="row fontawesome-icon-list">
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-bitcoin" aria-hidden="true"></i> <span class="sr-only">Example of </span>bitcoin <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-btc" aria-hidden="true"></i> <span class="sr-only">Example of </span>btc</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-cny" aria-hidden="true"></i> <span class="sr-only">Example of </span>cny <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-dollar" aria-hidden="true"></i> <span class="sr-only">Example of </span>dollar <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-eur" aria-hidden="true"></i> <span class="sr-only">Example of </span>eur</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-euro" aria-hidden="true"></i> <span class="sr-only">Example of </span>euro <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-gbp" aria-hidden="true"></i> <span class="sr-only">Example of </span>gbp</a></div>
+
+
+
+
+
+
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-inr" aria-hidden="true"></i> <span class="sr-only">Example of </span>inr</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-jpy" aria-hidden="true"></i> <span class="sr-only">Example of </span>jpy</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-krw" aria-hidden="true"></i> <span class="sr-only">Example of </span>krw</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-money" aria-hidden="true"></i> <span class="sr-only">Example of </span>money</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-rmb" aria-hidden="true"></i> <span class="sr-only">Example of </span>rmb <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-rouble" aria-hidden="true"></i> <span class="sr-only">Example of </span>rouble <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-rub" aria-hidden="true"></i> <span class="sr-only">Example of </span>rub</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-ruble" aria-hidden="true"></i> <span class="sr-only">Example of </span>ruble <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-rupee" aria-hidden="true"></i> <span class="sr-only">Example of </span>rupee <span class="text-muted">(别名)</span></a></div>
+
+
+
+
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-try" aria-hidden="true"></i> <span class="sr-only">Example of </span>try</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-turkish-lira" aria-hidden="true"></i> <span class="sr-only">Example of </span>turkish-lira <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-usd" aria-hidden="true"></i> <span class="sr-only">Example of </span>usd</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-won" aria-hidden="true"></i> <span class="sr-only">Example of </span>won <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-yen" aria-hidden="true"></i> <span class="sr-only">Example of </span>yen <span class="text-muted">(别名)</span></a></div>
+
+										</div>
+
+									</section>
+									<section id="text-editor" class="mainParts">
+										<h2 class="page-header">文本编辑</h2>
+
+										<div class="row fontawesome-icon-list">
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-align-center" aria-hidden="true"></i> <span class="sr-only">Example of </span>align-center</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-align-justify" aria-hidden="true"></i> <span class="sr-only">Example of </span>align-justify</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-align-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>align-left</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-align-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>align-right</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-bold" aria-hidden="true"></i> <span class="sr-only">Example of </span>bold</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-chain" aria-hidden="true"></i> <span class="sr-only">Example of </span>chain <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-chain-broken" aria-hidden="true"></i> <span class="sr-only">Example of </span>chain-broken</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-clipboard" aria-hidden="true"></i> <span class="sr-only">Example of </span>clipboard</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-columns" aria-hidden="true"></i> <span class="sr-only">Example of </span>columns</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-copy" aria-hidden="true"></i> <span class="sr-only">Example of </span>copy <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-cut" aria-hidden="true"></i> <span class="sr-only">Example of </span>cut <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-dedent" aria-hidden="true"></i> <span class="sr-only">Example of </span>dedent <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-eraser" aria-hidden="true"></i> <span class="sr-only">Example of </span>eraser</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file" aria-hidden="true"></i> <span class="sr-only">Example of </span>file</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-text" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-text</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-file-text-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>file-text-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-files-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>files-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-floppy-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>floppy-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-font" aria-hidden="true"></i> <span class="sr-only">Example of </span>font</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-header" aria-hidden="true"></i> <span class="sr-only">Example of </span>header</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-indent" aria-hidden="true"></i> <span class="sr-only">Example of </span>indent</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-italic" aria-hidden="true"></i> <span class="sr-only">Example of </span>italic</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-link" aria-hidden="true"></i> <span class="sr-only">Example of </span>link</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-list" aria-hidden="true"></i> <span class="sr-only">Example of </span>list</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-list-alt" aria-hidden="true"></i> <span class="sr-only">Example of </span>list-alt</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-list-ol" aria-hidden="true"></i> <span class="sr-only">Example of </span>list-ol</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-list-ul" aria-hidden="true"></i> <span class="sr-only">Example of </span>list-ul</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-outdent" aria-hidden="true"></i> <span class="sr-only">Example of </span>outdent</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-paperclip" aria-hidden="true"></i> <span class="sr-only">Example of </span>paperclip</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-paragraph" aria-hidden="true"></i> <span class="sr-only">Example of </span>paragraph</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-paste" aria-hidden="true"></i> <span class="sr-only">Example of </span>paste <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-repeat" aria-hidden="true"></i> <span class="sr-only">Example of </span>repeat</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-rotate-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>rotate-left <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-rotate-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>rotate-right <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-save" aria-hidden="true"></i> <span class="sr-only">Example of </span>save <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-scissors" aria-hidden="true"></i> <span class="sr-only">Example of </span>scissors</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-strikethrough" aria-hidden="true"></i> <span class="sr-only">Example of </span>strikethrough</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-subscript" aria-hidden="true"></i> <span class="sr-only">Example of </span>subscript</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-superscript" aria-hidden="true"></i> <span class="sr-only">Example of </span>superscript</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-table" aria-hidden="true"></i> <span class="sr-only">Example of </span>table</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-text-height" aria-hidden="true"></i> <span class="sr-only">Example of </span>text-height</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-text-width" aria-hidden="true"></i> <span class="sr-only">Example of </span>text-width</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-th" aria-hidden="true"></i> <span class="sr-only">Example of </span>th</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-th-large" aria-hidden="true"></i> <span class="sr-only">Example of </span>th-large</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-th-list" aria-hidden="true"></i> <span class="sr-only">Example of </span>th-list</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-underline" aria-hidden="true"></i> <span class="sr-only">Example of </span>underline</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-undo" aria-hidden="true"></i> <span class="sr-only">Example of </span>undo</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-unlink" aria-hidden="true"></i> <span class="sr-only">Example of </span>unlink <span class="text-muted">(别名)</span></a></div>
+
+										</div>
+
+									</section>
+									<section id="directional" class="mainParts">
+										<h2 class="page-header">指示方向</h2>
+
+										<div class="row fontawesome-icon-list">
+
+
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-angle-double-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>angle-double-down</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-angle-double-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>angle-double-left</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>angle-double-right</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-angle-double-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>angle-double-up</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-angle-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>angle-down</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-angle-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>angle-left</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-angle-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>angle-right</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-angle-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>angle-up</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrow-circle-down</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrow-circle-left</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrow-circle-o-down</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrow-circle-o-left</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrow-circle-o-right</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrow-circle-o-up</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrow-circle-right</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrow-circle-up</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrow-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrow-down</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrow-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrow-left</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrow-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrow-right</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrow-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrow-up</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrows" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrows</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrows-alt" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrows-alt</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrows-h" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrows-h</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrows-v" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrows-v</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-caret-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>caret-down</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-caret-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>caret-left</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-caret-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>caret-right</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-caret-square-o-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>caret-square-o-down</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-caret-square-o-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>caret-square-o-left</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>caret-square-o-right</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>caret-square-o-up</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-caret-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>caret-up</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>chevron-circle-down</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>chevron-circle-left</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>chevron-circle-right</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>chevron-circle-up</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-chevron-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>chevron-down</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-chevron-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>chevron-left</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-chevron-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>chevron-right</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-chevron-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>chevron-up</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-exchange" aria-hidden="true"></i> <span class="sr-only">Example of </span>exchange</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-hand-o-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-o-down</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-hand-o-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-o-left</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-o-right</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-hand-o-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>hand-o-up</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-long-arrow-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>long-arrow-down</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>long-arrow-left</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>long-arrow-right</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>long-arrow-up</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-toggle-down" aria-hidden="true"></i> <span class="sr-only">Example of </span>toggle-down <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-toggle-left" aria-hidden="true"></i> <span class="sr-only">Example of </span>toggle-left <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-toggle-right" aria-hidden="true"></i> <span class="sr-only">Example of </span>toggle-right <span class="text-muted">(别名)</span></a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-toggle-up" aria-hidden="true"></i> <span class="sr-only">Example of </span>toggle-up <span class="text-muted">(别名)</span></a></div>
+
+										</div>
+
+									</section>
+									<section id="video-player" class="mainParts">
+										<h2 class="page-header">视频播放</h2>
+										<div class="row fontawesome-icon-list">
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-arrows-alt" aria-hidden="true"></i> <span class="sr-only">Example of </span>arrows-alt</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-backward" aria-hidden="true"></i> <span class="sr-only">Example of </span>backward</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-compress" aria-hidden="true"></i> <span class="sr-only">Example of </span>compress</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-eject" aria-hidden="true"></i> <span class="sr-only">Example of </span>eject</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-expand" aria-hidden="true"></i> <span class="sr-only">Example of </span>expand</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-fast-backward" aria-hidden="true"></i> <span class="sr-only">Example of </span>fast-backward</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-fast-forward" aria-hidden="true"></i> <span class="sr-only">Example of </span>fast-forward</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-forward" aria-hidden="true"></i> <span class="sr-only">Example of </span>forward</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-pause" aria-hidden="true"></i> <span class="sr-only">Example of </span>pause</a></div>
+
+
+
+
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-play" aria-hidden="true"></i> <span class="sr-only">Example of </span>play</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-play-circle" aria-hidden="true"></i> <span class="sr-only">Example of </span>play-circle</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-play-circle-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>play-circle-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-random" aria-hidden="true"></i> <span class="sr-only">Example of </span>random</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-step-backward" aria-hidden="true"></i> <span class="sr-only">Example of </span>step-backward</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-step-forward" aria-hidden="true"></i> <span class="sr-only">Example of </span>step-forward</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-stop" aria-hidden="true"></i> <span class="sr-only">Example of </span>stop</a></div>
+
+
+
+
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-youtube-play" aria-hidden="true"></i> <span class="sr-only">Example of </span>youtube-play</a></div>
+
+										</div>
+
+									</section>
+									<section id="medical" class="mainParts">
+										<h2 class="page-header">医疗</h2>
+										<div class="row fontawesome-icon-list">
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-ambulance" aria-hidden="true"></i> <span class="sr-only">Example of </span>ambulance</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-h-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>h-square</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-heart" aria-hidden="true"></i> <span class="sr-only">Example of </span>heart</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-heart-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>heart-o</a></div>
+
+
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-hospital-o" aria-hidden="true"></i> <span class="sr-only">Example of </span>hospital-o</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-medkit" aria-hidden="true"></i> <span class="sr-only">Example of </span>medkit</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-plus-square" aria-hidden="true"></i> <span class="sr-only">Example of </span>plus-square</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-stethoscope" aria-hidden="true"></i> <span class="sr-only">Example of </span>stethoscope</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-user-md" aria-hidden="true"></i> <span class="sr-only">Example of </span>user-md</a></div>
+
+											<div class="fa-hover col-sm-4"><a href="javascript:;"><i class="fa fa-wheelchair" aria-hidden="true"></i> <span class="sr-only">Example of </span>wheelchair</a></div>
+
+
+
+										</div>
+
+									</section>
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-2">
+									<button class="btn btn-primary col-sm-3 btn-submit col-sm-offset-1" type="button">确定</button>
+									<button class="btn btn-primary col-sm-3 btn-submit col-sm-offset-1" type="button">清除</button>
+									<button class="btn btn-white col-sm-3 col-sm-offset-1" data-dismiss="modal" aria-hidden="true">取消</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Basic Scripts-->
+		<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
+		<script src="../../dep/moban/js/bootstrap.min.js"></script>
+		<script src="../../dep/treeTable/jquery.treetable.js"></script>
+		<script src="../../dep/validation/bootstrapValidator.js"></script>
+
+		<script>
+		
+			$("#bodyHtml").treetable({ expandable: true });
+		
+		$(function() {
+				//$("#bodyHtml").treetable({expandable: true});
+				$("#registrationForm").bootstrapValidator();
+				$("#editForm").bootstrapValidator();
+				$(".editClass").on('click', function() {
+					editClass(this)
+				});
+				//编辑
+				function editClass(_this) {
+					$('#tab-edit').show();
+					$('#tab-edit').click();
+				}
+				$(".removeClass").on('click', function() {
+					removeClass(this)
+				});
+				// 删除
+				function removeClass(_this) {
+					$(_this).parent().parent().remove();
+				}
+				$('.addClass').on('click', function() {
+					addClass(this);
+				})
+
+				function addClass(_this) {
+					$('#tab-add').click();
+				}
+				$('#tab-add,#tab-list').click(function() {
+					$('#tab-edit').hide();
+				})
+			});
+		</script>
+
+	</body>
+
+</html>

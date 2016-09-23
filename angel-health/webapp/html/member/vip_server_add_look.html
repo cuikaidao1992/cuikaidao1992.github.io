@@ -1,0 +1,1262 @@
+	<!DOCTYPE html>
+	<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<title>新增会员预约服务-查看</title>
+
+		<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
+		<link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+		<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+
+		<link id="beyond-link" href="../../dep/moban/css/beyond.min.css" rel="stylesheet" type="text/css" />
+
+		<link rel="stylesheet" type="text/css" href="../../dep/datetimepicker/css/bootstrap-datetimepicker.css" />
+		<link rel="stylesheet" type="text/css" href="../../dep/css/jquery.bigautocomplete.css" />
+		<link rel="stylesheet" href="../../home/common/css.css">
+
+			<!--[if IE]>
+			<script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
+			<![endif]-->
+
+		</head>
+
+		<body>
+
+			<!-- 导航 -->
+
+			<div class="page-content">
+				<!-- 面包屑导航 -->
+				<div class="page-breadcrumbs">
+					<ul class="breadcrumb">
+						<li>
+							<i class="fa fa-home"></i>
+							<a href="index.html">首页</a>
+						</li>
+						<li class="active">
+							<a href="###">会员信息挂你</a>
+						</li>
+						<li class="active">
+							会员预约服务
+						</li>
+
+					</ul>
+				</div>
+				<!-- /面包屑导航-->
+				<!--头部按钮-->
+				<div class="page-header position-relative">
+					<div class="header-title">
+						<h1>
+							会员预约服务
+						</h1>
+
+					</div>
+					<!--Header Buttons-->
+					<div class="header-buttons">
+						<a class="sidebar-toggler" href="#">
+							<i class="fa fa-arrows-h"></i>
+						</a>
+						<a class="refresh" id="refresh-toggler" href="">
+							<i class="glyphicon glyphicon-refresh"></i>
+						</a>
+						<a class="fullscreen" id="fullscreen-toggler" href="#">
+							<i class="glyphicon glyphicon-fullscreen"></i>
+						</a>
+					</div>
+					<!--头部按钮end-->
+				</div>
+				<div class="page-body">
+					<div class="row">
+						<div class="col-xs-12 col-md-12">
+							<div class="widget">
+								<div class="widget-header ">
+									<span class="widget-caption">会员预约服务列表</span>
+									<div class="widget-buttons">
+										<a href="#" data-toggle="maximize">
+											<i class="fa fa-expand"></i>
+										</a>
+										<a href="#" data-toggle="collapse">
+											<i class="fa fa-minus"></i>
+										</a>
+										<a href="#" data-toggle="dispose">
+											<i class="fa fa-times"></i>
+										</a>
+									</div>
+								</div>
+
+								<div class="widget-body" style="overflow:hidden">
+									<div class="col-lg-12 col-sm-12 col-xs-12 ">
+										<div class="widget">
+											<div class=" bancgud">
+
+												<div class="formfont">基础信息</div>
+												<form class="form-horizontal form-bordered " role="form" id="memberForm">
+													<div class="form-group ">
+														<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">会员名称<span class="help-inline"><font color="red">*</font> </span></label>
+														<div class="col-sm-8">
+															<input type="text" class="form-control fl " placeholder="会员名称" disabled="disabled" value="李四">
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">手&nbsp;&nbsp;机&nbsp;&nbsp;号<span class="help-inline"><font color="red">*</font> </span></label>
+														<div class="col-sm-8">
+															<input type="text" class="form-control fl " placeholder="请输入手机号" name="phone" value="1851407568" disabled="disabled">
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="inputEmail3" class="col-sm-2 control-label no-padding-right">预约医师<span class="help-inline"><font color="red">*</font> </span></label>
+														<div class="col-sm-8">
+															<input type="email" class="form-control" id="inputEmail3" placeholder="请输入医师姓名" value="aaaa" disabled="disabled">
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="inputEmail3" class="col-sm-2 control-label no-padding-right">预约时间</label>
+														<label class="col-sm-4">
+															<input type="email" class="form-control date-picker col-sm-4" id="inputEmail3" value="2016-09-15" disabled="disabled">
+														</label>
+														<label class="input-group col-sm-3 col-xs-offset-1">
+															<input class="form-control" id="timepicker1" type="text" disabled="disabled" value="4:00下午">
+															<span class="input-group-addon">
+																<i class="fa fa-clock-o"></i>
+															</span>
+														</label>
+
+													</div>
+													<div class="form-group radioyes">
+														<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">预约体检套餐</label>
+
+														<div class="radio">
+															<label class="labletab">
+																<input name="form-field-radio2" type="radio" checked class="radio_1"  disabled="disabled">
+																<span class="text">服务套餐</span>
+															</label>
+
+															<label class="col-md-offset-1 labletab">
+																<input name="form-field-radio2" type="radio" class="radio_2"  disabled="disabled">
+																<span class="text">体检套餐</span>
+															</label>
+														</div>
+													</div>
+
+													<div class=" radioa">
+														<div class=" col-sm-8 formleftb yesradio yesradionoa server server_1" style="display:block;">
+															<table class="table table-striped table-hover table-bordered" id="bodyHtml" valign="middle">
+																<thead>
+																	<tr role="row">
+																		<th width="5%">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" checked >
+																				<span class="text"></span>
+																			</label>
+																		</th>
+																		<th width="10%">
+																			代码名称 <span class="fa indicator fa-unsorted"></span>
+																		</th>
+																		<th width="200px">
+																			套餐名称 <span class="fa indicator fa-unsorted"></span>
+																		</th>
+																		<th width="10%">
+																			套餐价格 <span class="fa indicator fa-unsorted"></span>
+																		</th>
+																		<th width="15%" colspan="2">
+																			服务内容 <span class="fa indicator fa-unsorted"></span>
+																		</th>
+
+																		<th width="40%" colspan="2">
+																			体检项目 <span class="fa indicator fa-unsorted"></span>
+																		</th>
+																	</tr>
+																</thead>
+
+																<tbody>
+
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle" checked diabled="disabled">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+																		<td width="10%" valign="middle">1000</td>
+																		<td width="15%" colspan="2" style="padding:0!important" valign="middle">
+																			<table class="table table-striped table-hover ">
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康体检</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">心里咨询</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康档案</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+																		<td width="10%" valign="middle">1000</td>
+																		<td width="15%" colspan="2" style="padding:0!important" valign="middle">
+																			<table class="table table-striped table-hover ">
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康体检</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">心里咨询</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康档案</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+																		<td width="10%" valign="middle">1000</td>
+																		<td width="15%" colspan="2" style="padding:0!important" valign="middle">
+																			<table class="table table-striped table-hover ">
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康体检</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">心里咨询</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康档案</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+																		<td width="10%" valign="middle">1000</td>
+																		<td width="15%" colspan="2" style="padding:0!important" valign="middle">
+																			<table class="table table-striped table-hover ">
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康体检</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">心里咨询</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康档案</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+																		<td width="10%" valign="middle">1000</td>
+																		<td width="15%" colspan="2" style="padding:0!important" valign="middle">
+																			<table class="table table-striped table-hover ">
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康体检</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">心里咨询</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康档案</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+																		<td width="10%" valign="middle">1000</td>
+																		<td width="15%" colspan="2" style="padding:0!important" valign="middle">
+																			<table class="table table-striped table-hover ">
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康体检</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">心里咨询</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康档案</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle"checked>
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+																		<td width="10%" valign="middle">1000</td>
+																		<td width="15%" colspan="2" style="padding:0!important" valign="middle">
+																			<table class="table table-striped table-hover ">
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康体检</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">心里咨询</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康档案</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+																		<td width="10%" valign="middle">1000</td>
+																		<td width="15%" colspan="2" style="padding:0!important" valign="middle">
+																			<table class="table table-striped table-hover ">
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康体检</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">心里咨询</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康档案</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+																		<td width="10%" valign="middle">1000</td>
+																		<td width="15%" colspan="2" style="padding:0!important" valign="middle">
+																			<table class="table table-striped table-hover ">
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康体检</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">心里咨询</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康档案</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+																		<td width="10%" valign="middle">1000</td>
+																		<td width="15%" colspan="2" style="padding:0!important" valign="middle">
+																			<table class="table table-striped table-hover ">
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康体检</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">心里咨询</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康档案</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+																		<td width="10%" valign="middle">1000</td>
+																		<td width="15%" colspan="2" style="padding:0!important" valign="middle">
+																			<table class="table table-striped table-hover ">
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康体检</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">心里咨询</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">健康档案</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">单项功能报告</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+
+																	</tr>
+
+																</tbody>
+															</table>
+															<div class="btn-font">
+																<div class="zjtm">
+																	显示1到10共7个条目
+																</div>
+																<div class="zjrightb">
+																	<ul class="pagination pull-right">
+																		<li class="footable-page-arrow disabled">
+																			<a data-page="first" href="#first">«</a>
+																		</li>
+																		<li class="footable-page-arrow disabled">
+																			<a data-page="prev" href="#prev">上一页</a>
+																		</li>
+																		<li class="footable-page active">
+																			<a data-page="0" href="#">1</a>
+																		</li>
+																		<li class="footable-page">
+																			<a data-page="1" href="#">2</a>
+																		</li>
+																		<li class="footable-page-arrow">
+																			<a data-page="next" href="#next">下一页</a>
+																		</li>
+																		<li class="footable-page-arrow">
+																			<a data-page="last" href="#last">»</a>
+																		</li>
+																	</ul>
+																</div>
+
+															</div>
+															
+														</div>
+														<div class="col-sm-8  formleftb yesradio nihigth project  server_1">
+															<table class="table table-striped table-hover table-bordered" id="bodyHtml" valign="middle">
+																<i style="float:right; padding-bottom:10px;cursor:pointer" class="close_project fa fa-times-circle"></i>
+																<thead>
+																	<tr role="row">
+																		<th width="5%">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk">
+																				<span class="text"></span>
+																			</label>
+																		</th>
+																		<th width="10%">
+																			代码名称 <span class="fa indicator fa-unsorted"></span>
+																		</th>
+																		<th width="200px">
+																			套餐名称 <span class="fa indicator fa-unsorted"></span>
+																		</th>
+																		<th width="40%" colspan="2">
+																			体检项目 <span class="fa indicator fa-unsorted"></span>
+																		</th>
+																	</tr>
+																</thead>
+
+																<tbody>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="5%" valign="middle">
+																			<label>
+																				<input type="checkbox" name="myHoverTreechk" height="100%" valign="middle">
+																				<span class="text"></span>
+																			</label>
+																		</td>
+																		<td width="10%" valign="middle">0125842642</td>
+																		<td width="15%" height="100%" valign="middle">心血管疾病筛查</td>
+
+																		<td width="40%" colspan="2" style="padding:0!important;important" valign="middle">
+																			<table class="table table-striped table-hover  ">
+																				<tr>
+																					<td><span class="coltd">一般项目（身高、体重、血压、呼吸、脉搏）+问卷量表</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">常规外科检查</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">血常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd">尿常规</span></td>
+																				</tr>
+																				<tr>
+																					<td><span class="coltd"> 生化指标（肝功能、肾功能、血糖、血脂、尿酸）</span></td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															<div class="btn-font">
+																<div class="zjtm">
+																	显示1到10共7个条目
+																</div>
+																<div class="zjrightb">
+																	<ul class="pagination pull-right">
+																		<li class="footable-page-arrow disabled">
+																			<a data-page="first" href="#first">«</a>
+																		</li>
+																		<li class="footable-page-arrow disabled">
+																			<a data-page="prev" href="#prev">上一页</a>
+																		</li>
+																		<li class="footable-page active">
+																			<a data-page="0" href="#">1</a>
+																		</li>
+																		<li class="footable-page">
+																			<a data-page="1" href="#">2</a>
+																		</li>
+																		<li class="footable-page-arrow">
+																			<a data-page="next" href="#next">下一页</a>
+																		</li>
+																		<li class="footable-page-arrow">
+																			<a data-page="last" href="#last">»</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+															<i style="float:right; padding-bottom:10px;cursor:pointer" class="close_project fa fa-times-circle"></i>
+														</div>
+													</div>
+
+													<div class="form-group ">
+														<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">支付方式</label>
+
+														<div class="radio">
+															<label>
+																<input name="form-field-radio1" type="radio" checked="checked" disabled="disabled">
+																<span class="text" checked>已支付 </span>
+															</label>
+
+															<label>
+																<input name="form-field-radio1" type="radio" class=""  disabled="disabled">
+																<span class="text">未支付</span>
+															</label>
+														</div>
+													</div>
+													<div class="form-group pad-butom">
+														<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">支付渠道</label>
+
+														<div class="radio">
+															<label>
+																<input name="form-field-radio" type="radio" checked="checked" disabled="disabled">
+																<span class="text">线下录入</span>
+															</label>
+
+															<label>
+																<input name="form-field-radio" type="radio" class=""  disabled="disabled">
+																<span class="text">APP</span>
+															</label>
+															<label>
+																<input name="form-field-radio" type="radio" class=""  disabled="disabled" >
+																<span class="text">网站</span>
+															</label>
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+											<div class="col-sm-10  col-xs-offset-4 btn-bottm">
+												<button id="tagIdSubmitAddVip_btn" type="submit" class=" btn btn-darkorange  col-sm-2 col-xs-offset-3" href="#closeCourse" data-toggle="modal" onClick="window.open('vip_server.html')">返回</button>
+
+											</div>
+										</form>
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	</div>
+
+	<!-- /右侧内容 -->
+	</div>
+			<!--  <div class="modal fade in" id="closeCourse" aria-hidden="true">
+	    <div class="modal-dialog" >
+	        <div class="modal-content"  style="border-radius:50px!important" >
+	            
+	            <div class="modal-body form-horizontal" >
+	              <p class="text-warning">您的会员信息已提交成功</p>
+	            </div>
+	        </div>
+	    </div>
+	    
+	</div>
+	-->
+	<!--Basic Scripts-->
+	<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
+
+	<script>
+	$(function() {
+		$("#city").click(function(e) {
+			SelCity(this, e);
+		});
+
+	});
+
+
+	</script>
+	 <script>
+        var $radio_btn_1=$(".radioyes .radio .labletab .radio_1");
+        var $radio_btn_2=$(".radioyes .radio .labletab .radio_2");
+        $radio_btn_1.click(function(){
+          $(".server_2").hide();
+          $(".server_1").toggle();
+        })
+        $radio_btn_2.click(function(){
+          $(".server_1").hide();
+           $(".server_2").toggle();
+        })
+    $("input[type='checkbox']").attr({"disabled":'disabled'});
+
+      </script>
+
+	</body>
+
+	</html>

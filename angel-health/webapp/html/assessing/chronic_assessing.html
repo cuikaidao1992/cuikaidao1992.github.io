@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+		<title>慢病评估</title>
+
+		<link rel="shortcut icon" href="../../dep/moban/img/favicon.png" type="image/x-icon">
+
+		<!--Basic Styles-->
+		<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
+		<link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+		<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="../../dep/moban/css/weather-icons.min.css" rel="stylesheet" />
+
+		<!--Beyond styles-->
+		<link id="beyond-link" href="../../dep/moban/css/beyond.min.css" rel="stylesheet" />
+		<link href="../../dep/moban/css/demo.min.css" rel="stylesheet" />
+		<link href="../../dep/moban/css/typicons.min.css" rel="stylesheet" />
+		<link href="../../dep/moban/css/animate.min.css" rel="stylesheet" />
+		<link id="skin-link" href="" rel="stylesheet" type="text/css" />
+
+		<!---->
+		<link href="../../dep/moban/css/dataTables.bootstrap.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../home/common/css.css">
+		<link rel="stylesheet" href="../../dep/zTree/css/zTreeStyle/zTreeStyle.css" />
+
+		<!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+		<script src="../../dep/moban/js/skins.min.js"></script>
+
+	</head>
+
+	<body>
+		<!-- Main Container -->
+		<div class="main-container container-fluid">
+			<!-- Page Container -->
+			<div class="page-container page-content">
+				<!-- Page Sidebar -->
+				<!-- 面包屑导航 -->
+				<div class="page-breadcrumbs">
+					<ul class="breadcrumb">
+						<li>
+							<i class="fa fa-home"></i>
+							<a href="index.html">健康评估管理</a>
+						</li>
+						<li class="active">
+							<a href="###">慢病评估</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /面包屑导航-->
+				<!--头部按钮-->
+				<div class="page-header position-relative">
+					<div class="header-title">
+						<h1>
+                            	慢病评估
+                        	</h1>
+					</div>
+					<!--Header Buttons-->
+					<div class="header-buttons">
+						<a class="sidebar-toggler" href="#">
+							<i class="fa fa-arrows-h"></i>
+						</a>
+						<a class="refresh" id="refresh-toggler" href="">
+							<i class="glyphicon glyphicon-refresh"></i>
+						</a>
+						<a class="fullscreen" id="fullscreen-toggler" href="#">
+							<i class="glyphicon glyphicon-fullscreen"></i>
+						</a>
+					</div>
+					<!--头部按钮end-->
+				</div>
+				<div class="page-body">
+					<div class="row">
+
+						<div class="col-xs-12 col-md-12">
+
+							<div class="widget">
+								<div class="widget-header">
+									<span class="widget-caption">慢病评估列表</span>
+									<div class="widget-buttons">
+										<a href="#" data-toggle="maximize">
+											<i class="fa fa-expand"></i>
+										</a>
+										<a href="#" data-toggle="collapse">
+											<i class="fa fa-minus"></i>
+										</a>
+										<a href="#" data-toggle="dispose">
+											<i class="fa fa-times"></i>
+										</a>
+									</div>
+									<!--Widget Buttons-->
+								</div>
+								<!--Widget Header-->
+								<div class="widget-body">
+
+									<div id="home" class="tab-pane in active">
+										<div class="table-toolbar">
+
+											<a href="javascript:deleteBatch()" class="btn btn-darkorange col-padd">
+												<i class="fa fa-minus"></i>批量删除
+											</a>
+
+										</div>
+										<table class="table table-striped table-hover table-bordered" id="bodyHtml">
+											<thead>
+												<tr role="row">
+													<th width="5%">
+														<label>
+                                                        <input type="checkbox"  id="hvtck">
+                                                        <span class="text" id="dohovertree"></span>
+                                                        
+                                                    </label>
+													</th>
+													<th>
+														慢病评估编号 <span class="fa indicator fa-unsorted"></span>
+													</th>
+													<th>
+														慢病评估名称 <span class="fa indicator fa-unsorted"></span>
+													</th>
+													<th>
+														会员名称 <span class="fa indicator fa-unsorted"></span>
+													</th>
+													<th>
+														慢病评估描述 <span class="fa indicator fa-unsorted"></span>
+													</th>
+													<th>
+														评估时间 <span class="fa indicator fa-unsorted"></span>
+													</th>
+													<th width="20%">
+														<span class="fa indicator fa-unsorted"></span>
+													</th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>
+														<label>
+                                                       		<input type="checkbox" name="myHoverTreechk">
+                                                        	<span class="text"></span>
+                                                    	</label>
+													</td>
+													<td><input type="text" class="six" value="111111" disabled="disabled"></td>
+													<td><input type="text" class="six" value="我的慢病评估报告" disabled="disabled"></td>
+													<td>
+														<input type="text" value="小明" class="six" disabled="disabled">
+													</td>
+													<td>
+														<input type="text" value="评估结果不错" class="six" disabled="disabled">
+													</td>
+													<td><input type="text" class="six" value="2016-12-26 06:20:50" disabled="disabled"></td>
+													<td>
+														<a href="#" class="btn btn-ck btn-xs edit"><i class="fa fa-folder-open-o"></i> 查看</a>
+														<a href="#" class="btn btn-danger btn-xs removeClass"><i class="fa fa-trash-o"></i> 删除</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<label>
+                                                       		<input type="checkbox" name="myHoverTreechk">
+                                                        	<span class="text"></span>
+                                                    	</label>
+													</td>
+													<td><input type="text" class="six" value="111111" disabled="disabled"></td>
+													<td><input type="text" class="six" value="我的慢病评估报告" disabled="disabled"></td>
+													<td>
+														<input type="text" value="小明" class="six" disabled="disabled">
+													</td>
+													<td>
+														<input type="text" value="评估结果不错" class="six" disabled="disabled">
+													</td>
+													<td><input type="text" class="six" value="2016-12-26 06:20:50" disabled="disabled"></td>
+													<td>
+														<a href="#" class="btn btn-ck btn-xs edit"><i class="fa fa-folder-open-o"></i> 查看</a>
+														<a href="#" class="btn btn-danger btn-xs removeClass"><i class="fa fa-trash-o"></i> 删除</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<label>
+                                                       		<input type="checkbox" name="myHoverTreechk">
+                                                        	<span class="text"></span>
+                                                    	</label>
+													</td>
+													<td><input type="text" class="six" value="111111" disabled="disabled"></td>
+													<td><input type="text" class="six" value="我的慢病评估报告" disabled="disabled"></td>
+													<td>
+														<input type="text" value="小明" class="six" disabled="disabled">
+													</td>
+													<td>
+														<input type="text" value="评估结果不错" class="six" disabled="disabled">
+													</td>
+													<td><input type="text" class="six" value="2016-12-26 06:20:50" disabled="disabled"></td>
+													<td>
+														<a href="#" class="btn btn-ck btn-xs edit"><i class="fa fa-folder-open-o"></i> 查看</a>
+														<a href="#" class="btn btn-danger btn-xs removeClass"><i class="fa fa-trash-o"></i> 删除</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="btn-font">
+											<div class="zjtm">
+												显示1到7共7个条目
+											</div>
+											<div class="zjrightb">
+												<ul class="pagination pull-right">
+													<li class="footable-page-arrow disabled">
+														<a data-page="first" href="#first">«</a>
+													</li>
+													<li class="footable-page-arrow disabled">
+														<a data-page="prev" href="#prev">上一页</a>
+													</li>
+													<li class="footable-page active">
+														<a data-page="0" href="#">1</a>
+													</li>
+													<li class="footable-page">
+														<a data-page="1" href="#">2</a>
+													</li>
+													<li class="footable-page-arrow">
+														<a data-page="next" href="#next">下一页</a>
+													</li>
+													<li class="footable-page-arrow">
+														<a data-page="last" href="#last">»</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<!--Widget Body-->
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<P class="bottomfont">© 2016 Angel Health Management Ltd. : 天使健康管理有限公司</P>
+
+		<!-- /右侧内容 -->
+		</div>
+
+		</div>
+
+		<!--Basic Scripts-->
+		<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
+		<script src="../../dep/moban/js/bootstrap.min.js"></script>
+
+		<!--Beyond Scripts-->
+		<script src="../../dep/moban/js/beyond.min.js"></script>
+
+		<!---->
+		<script src="../../dep/moban/js/validation/bootstrapValidator.js"></script>
+
+		<script>
+			$(function() {
+				
+				$(".removeClass").on('click', function() {
+					removeClass(this)
+				});
+				
+				// 删除
+				function removeClass(_this) {
+					$(_this).parent().parent().remove();
+				}
+			});
+			
+			window.onload = function() {
+				var checkboxs = document.getElementsByName("myHove" + "rTreechk");
+				var hvtck = document.getElementById("hvtck");
+				cklen = checkboxs.length;
+				hvtck.onclick = function() {
+					if(this.checked == true) {
+						for(var i = 0; i < cklen; i++) {
+							checkboxs[i].checked = true;
+						}
+						document.getElementById("dohovert" + "ree").innerHTML = ""
+					} else {
+						for(var i = 0; i < cklen; i++) {
+							checkboxs[i].checked = false;
+						}
+						document.getElementById("dohovertree").innerHTML = ""
+					}
+				}
+			}
+
+			function deleteBatch() {
+				$('input[name="myHoverTreechk"]').each(function() {
+					if($(this).is(':checked'))
+						$(this).parent().parent().parent().remove();
+				})
+			}
+			
+		</script>
+
+	</body>
+
+</html>

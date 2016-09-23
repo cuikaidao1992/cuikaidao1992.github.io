@@ -1,0 +1,29 @@
+.btn-bottmb{ margin-top: 20px;margin-bottom: 20px;}
+.btn-bottmb > button{ margin-right: 20px;}
+.h_textarea{ padding: 20px; min-height: 200px;}
+.cour-mart{ margin-top: 20px; cursor: pointer;}
+.c-addrss{text-align: left;margin-left: 0; background: #f9f9f9; padding-bottom: 20px;margin-top: 20px;}
+.d-address{margin-left: 15px;padding-top: 7px;}
+
+.adress{width: 30px; height: 30px; background: #bcbcbc;border-radius: 3px;
+transition:width 1s, height 1s;
+-moz-transition:width 1s, height 1s, -moz-transform 1s; 
+-webkit-transition:width 1s, height 1s, -webkit-transform 1s; 
+-o-transition:width 1s, height 1s, -o-transform 1s;
+cursor: pointer; 
+}
+.addss{width: 30px; height: 30px; background: #bcbcbc;
+ margin-top: 20px; border-radius: 3px;
+ transition:width 1s, height 1s;
+-moz-transition:width 1s, height 1s, -moz-transform 1s; 
+-webkit-transition:width 1s, height 1s, -webkit-transform 1s; 
+-o-transition:width 1s, height 1s, -o-transform 1s;
+cursor: pointer; }
+.adress:hover , .addss:hover{
+
+ transform:rotate(180deg);
+-moz-transform:rotate(180deg); 
+-webkit-transform:rotate(180deg); 
+-o-transform:rotate(180deg);
+}
+
