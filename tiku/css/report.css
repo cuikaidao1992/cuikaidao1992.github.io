@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+/*清除浮动*/
+
+.xxm-border:after, .appraisal-report .user:after, .appraisal-report .user-info dl:after, .appraisal-report .navBox:after, .report-info-hd:after, .report-info-bd:after, .ranking-hd:after, .appraisal-report .navBox dt:after, .appraisal-report .navBox dd:after{ display:block;visibility:hidden;clear:both;height:0;content:'.';}
+
+.appraisal-report{width:1010px;  position:relative;}
+.appraisal-report .xxm-border{background-color:#FFF;}
+.appraisal-report .user{ width:100%;}
+.appraisal-report .user-poople{ float:left; border-right:#ececec solid 1px; padding-right:20px; width:530px; position:relative; padding-bottom:25px}
+.appraisal-report .user img{ width:85px; height:85px; position:absolute; left:20px; top:20px}
+.appraisal-report .user-info{ margin-left:48px;}
+.appraisal-report .user-info dl{ width:350px; padding-top:20px}
+.appraisal-report .user-info dt{ width:100%; position:relative; height:25px}
+.appraisal-report .user-info .dt-lf{ float:left;color:#6e6e6e;font-size: 12px;color: #333}
+.appraisal-report .user-info .dt-rt{ float:right;color:#6e6e6e;}
+.appraisal-report .user-info dd{ width:100%; float:left; background-color:#e9e9e9}
+.appraisal-report .user-info dd em{ display:block; height:6px; line-height:6px; font-size:0}
+.appraisal-report .user-info dd .orange{background-color:#ffa569}
+.appraisal-report .user-info dd .green{background-color:#9bd492}
+.appraisal-report .user-propose{ width:350px; float:left; padding:32px 0px 0px 50px; line-height:30px; font-size:14px}
+.appraisal-report .user-propose .orgTxt{ color:#f06000; font-weight:bold; padding:0 5px; font-size:16px}
+
+.report-info-hd{ width:100%;padding: 20px 0}
+.report-info-hd .info-blk{ width:252px; float:left; border-right:#f2f2f2 solid 1px; position:relative; height:90px;padding: 10px 0}
+.report-info-hd .info-blk-ico{ width:45px; height:42px; float:right; margin-right:20px; background-image:url(images/report.png); background-repeat:no-repeat; margin-bottom:20px}
+.report-info-hd .info-blk .ico1{ background-position:0 -67px}
+.report-info-hd .info-blk .ico2{ background-position:-45px -67px}
+.report-info-hd .info-blk .ico3{ background-position:-90px -67px}
+.report-info-hd .info-blk-hd{ width:100%;text-align: center}
+.report-info-hd .info-blk-hd span{font-size:16px; line-height:50px;}
+.report-info-hd .info-blk-cet{ width:100%; text-align:center; line-height:50px;font-size:16px}
+.report-info-hd .info-blk-cet .orgTxt{ font-size:40px;}
+.report-info-hd .info-blk.last{ width:250px; border-right:none; cursor:pointer}
+
+.report-info-bd{ width:100%; border-top:#f2f2f2 solid 1px}
+.report-info-bd .curve{ width:716px; float:left; padding:0 15px 15px; border-right:#f2f2f2 solid 1px; margin-right:-1px; position:relative}
+.report-info-bd .curve-hd span{font-size:16px; line-height:65px}
+
+.ranking-hd{ width:100%; border-top:#FFF solid 1px; background-color:#fcfcfc;border-bottom:#e7e7e7 solid 1px; height:50px}
+.ranking-hd li{ width:160px; border-left:#e8e8e8 solid 1px;  margin:-2px 0 -1px -1px; position:relative; line-height:51px; float:left; text-align:center; font-size:16px; border:#e7e7e7 solid 1px; cursor:pointer}
+.ranking-hd .ui-check{ border-top:#fd653c solid 2px; border-bottom-color:#FFF; position:relative; background-color:#FFF}
+.ranking-bd{ padding:30px}
+.ranking-bd table{ border:0; border-collapse:collapse; width:100%; text-align:center}
+.ranking-bd td{ border-bottom:#f6f6f6 solid 1px; padding:15px 5px}
+.ranking-bd th{ background-color:#f3f3f3; font-size:15px;padding:10px 5px; line-height:30px; color:#333; border-bottom:#e7e7e7 solid 1px; cursor:pointer}
+.ranking-bd th:hover{ background-color:#f8f8f8}
+.ranking-bd th span{ position:relative;}
+.ranking-bd th span em{ display:block; width:8px; height:10px; background:url(images/report.png) -133px 0; position:absolute; right:-15px; top:5px; display:none}
+.ranking-bd .ui-check span{ color:#f06000}
+.ranking-bd .ui-check em{ display:block}
+.ranking-bd .user-img{ padding-left:30px}
+.ranking-bd .user-img img{  width:35px; height:35px; float:left;-moz-border-radius: 40px;  -webkit-border-radius: 40px;  border-radius:40px;}
+.ranking-bd .user-img span{width:100px;overflow:hidden; white-space:nowrap;text-overflow:ellipsis; display:block;line-height:35px; float:left; padding-left:10px; text-align:left}
+.ranking-bd .user-img a{ color:#349209;}
+.ranking-bd .biaoti td{ background-color:#f8f8f8; text-align:left; padding:10px 10px; color:#666}
+.ranking-bd .number{ font-size:16px;  color:#f06000}
+.ranking-bd .number span{ display:block; width:29px; height:31px; line-height:25px; margin:0 auto}
+.ranking-bd .number span.bg{background:url(images/report.png) -70px 0; color:#FFF; }
+.ranking-bd .w1{ width:60px}
+.ranking-bd .w2{ width:180px;white-space:nowrap}
+
+
+
+.ani_dot { font-family: simsun;}
+:root .ani_dot {display: inline-block;width: 1.5em;vertical-align: bottom;overflow: hidden;}
+@-webkit-keyframes dot {0% { width: 0; margin-right: 1.5em; }33% { width: .5em; margin-right: 1em; }66% { width: 1em; margin-right: .5em; }100% { width: 1.5em; margin-right: 0;}}
+.ani_dot {-webkit-animation: dot 3s infinite step-start;}
+@keyframes dot {0% { width: 0; margin-right: 1.5em; }33% { width: .5em; margin-right: 1em; }66% { width: 1em; margin-right: .5em; }100% { width: 1.5em; margin-right: 0;}}
+.ani_dot {animation: dot 3s infinite step-start;}

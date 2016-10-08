@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学慧网</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/es-icon.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="css/global.css" rel="stylesheet" />
+    <link href="css/report.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/comment.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div class="site-topbar">
+    <div class="container">
+        <div class="topbar-nav">
+            <a rel="nofollow" href="#" >学慧网</a>
+            <span class="sep">|</span>
+            <a rel="nofollow" href="" target="_blank">学慧网移动版</a>
+            <span class="sep">|</span>
+            <a rel="nofollow" href="#" target="_blank" >问题反馈</a>
+        </div>
+        <div class="topbar-cart">
+            <a rel="nofollow" class="cart-mini" href="#">我收藏的课程</a>
+            <div class="cart-menu">
+                <div class="loading">
+                    <div class="loader">收藏中还没有课程，赶紧选课吧！</div>
+                </div>
+            </div>
+        </div>
+        <div class="topbar-info">
+            <a class="login" href="javascript:;">登录</a>
+            <span class="sep">|</span>
+            <a class="reginster" href="#">注册</a>
+        </div>
+    </div>
+</div>
+<div class="site-header">
+    <div class="container clearfix">
+        <div class="header-logo">
+            <a class="logo" href="#" title="学慧网">D.C.base</a>
+        </div>
+        <div class="flash-img">
+            <img src="images/picture.gif">
+        </div>
+        <div class="header-nav" id="header-nav">
+            <ul class="nav-list-top clearfix" id="nav-list">
+                <li class="nav-item">
+                    <a class="link" href="index.html"><span class="text">首页</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item course-select">
+                    <a class="link" href="#"><span class="text">选课</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item cur">
+                    <a class="link" href="#"><span class="text">题库</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="#"><span class="text">资讯</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="javascript:;"><span class="text">小组</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="#"><span class="text">活动</span><span class="arrow"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="link" href="#"><span class="text">服务</span><span class="arrow"></span></a>
+                </li>
+                <li id="nav_line"></li>
+            </ul>
+        </div>
+        <div class="header-search">
+            <form class="search-form clearfix" action="" method="get">
+                <input class="search-text" type="search" id="search" name="keyword">
+                <button class="search-btn es-icon es-icon-search"></button>
+                <div class="search-hot-words">
+                    <a  href="#">采购师</a>
+                    <a  href="#">人力资源管理师</a>
+                </div>
+                <div class="keyword-list hide">
+                    <ul class="result-list">
+                        <li data-key="人力资源管理师">
+                            <a href="#">人力资源管理师</a>
+                        </li>
+                        <li data-key="公共营养师">
+                            <a href="#">公共营养师</a>
+                        </li>
+                        <li data-key="行政管理">
+                            <a href="#">行政管理</a>
+                        </li>
+                        <li data-key="心理咨询师">
+                            <a href="#">心理咨询师</a>
+                        </li>
+                        <li data-key="人力资源管理师">
+                            <a href="#">人力资源管理师</a>
+                        </li>
+                        <li data-key="公共营养师">
+                            <a href="#">公共营养师</a>
+                        </li>
+                        <li data-key="行政管理">
+                            <a href="#">行政管理</a>
+                        </li>
+                        <li data-key="心理咨询师">
+                            <a href="#">心理咨询师</a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="header-nav-menu">
+        <div class="container">
+            <ul class="children-list clearfix">
+                <li class="first">
+                    <div class="figure figure-thumb">
+                        <a href="#" target="_blank">
+                            <img src="images/nav1.jpg" >
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#" target="_blank">人力资源管理师</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="#" target="_blank">
+                            <img src="images/nav2.jpg" >
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#" target="_blank">公共营养师</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="#" target="_blank">
+                            <img src="images/nav3.jpg" >
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#" target="_blank">会计从业资格证</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="#" target="_blank">
+                            <img src="images/nav4.jpg" >
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#" target="_blank">远程网络教育</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="#" target="_blank">
+                            <img src="images/nav5.jpg" >
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#" target="_blank">幼儿教师资格证</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure figure-thumb">
+                        <a href="#" target="_blank">
+                            <img src="images/nav6.jpg" >
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#" target="_blank">更多课程</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="container clearfix">
+        <div class="slider">
+            <div class="tk-menu-title active">
+                <a href="index.html">
+                    <div class="tk-title-content">
+                        <h2>一级技能精讲</h2>
+                        <a href="javascript:void(0)" class="a-change">[切换科目]</a>
+                    </div>
+                </a>
+            </div>
+            <ul class="tk-menu-list">
+                <li class="mn-io">
+                    <a href="exam.html">
+                        <i></i>
+                        <span>模拟考场</span>
+                    </a>
+                </li>
+                <li class="zj-io">
+                    <a href="chapter.html">
+                        <i></i>
+                        <span>章节练习</span>
+                    </a>
+                </li>
+                <li class="ln-io">
+                    <a href="hsk.html">
+                        <i></i>
+                        <span>历年真题</span>
+                    </a>
+                </li>
+                <li class="yc-io">
+                    <a href="fallible.html">
+                        <i></i>
+                        <span>易错题</span>
+                    </a>
+                </li>
+                <li class="mr-io">
+                    <a href="daily.html">
+                        <i></i>
+                        <span>每日一练</span>
+                    </a>
+                </li>
+                <li class="sp-io">
+                    <a href="video.html">
+                        <i></i>
+                        <span>视频题</span>
+                    </a>
+                </li>
+                <li class="nl-io active">
+                    <a href="report.html">
+                        <i></i>
+                        <span>能力评估</span>
+                    </a>
+                </li>
+                <li class="lx-io">
+                    <a href="practice.html">
+                        <i></i>
+                        <span>我的练习</span>
+                    </a>
+                </li>
+                <li class="ct-io">
+                    <a href="error.html">
+                        <i></i>
+                        <span>错题重做</span>
+                    </a>
+                </li>
+                <li class="bj-io">
+                    <a href="notes.html">
+                        <i></i>
+                        <span>我的笔记</span>
+                    </a>
+                </li>
+                <li class="sc-io">
+                    <a href="favorites.html">
+                        <i></i>
+                        <span>我的收藏</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tk-content">
+            <div class="appraisal-report">
+                <div class="appraisal-blk xxm-border">
+                    <div class="user">
+                        <div class="user-poople">
+                            <div class="user-info">
+                                <dl>
+                                    <dt><span class="dt-lf">您入住学慧网</span>  <span class="dt-rt">472天</span></dt>
+                                    <dd><em style="width:100%" class="orange"></em></dd>
+                                </dl>
+                                <dl>
+                                    <dt><span class="dt-lf">《毛泽东思想和中国特色社会主义理论体系概论（行政专）》练习时间</span>  <span class="dt-rt">19.8小时</span></dt>
+                                    <dd><em style="width:150px" class="green"></em></dd>
+                                </dl>
+                            </div>
+                            <div class="user-ico"></div>
+                        </div>
+                        <div class="user-propose">
+                            <p>平均每天：<span class="orgTxt">2.5</span>分钟</p>
+                            <p>您目前的正确率<span class="orgTxt">偏低</span>，需加长学习时间哦！ </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="appraisal-blk xxm-border f-mt20">
+                    <div class="report-info-hd report-info-bd">
+                        <div class="info-blk">
+                            <div class="info-blk-cet">
+                                <span class="orgTxt">8</span>题
+                            </div>
+                            <div class="info-blk-hd">
+                                <span>练习</span>
+                            </div>
+                        </div>
+                        <div class="info-blk">
+                            <div class="info-blk-cet">
+                                <span class="orgTxt">1</span>次
+                            </div>
+                            <div class="info-blk-hd">
+                                <span>模考</span>
+                            </div>
+                        </div>
+                        <div class="info-blk">
+                            <div class="info-blk-cet">
+                                <span class="orgTxt">13</span>%
+                            </div>
+                            <div class="info-blk-hd">
+                                <span>正确率</span>
+                            </div>
+                        </div>
+                        <div class="info-blk last">
+                            <div class="info-blk-cet">
+                                <span class="orgTxt">2</span>分
+                            </div>
+                            <div class="info-blk-hd">
+                                <span>预测得分</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report-info-bd">
+                        <div class="curve" style="width: 95%; border-right:none;">
+                            <div class="curve-hd"><span>最近20次考试得分曲线图</span></div>
+                            <p id="graph" data-highcharts-chart="0"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer class="es-footer">
+    <div class="footer-link">
+        <div class="footer-main clearfix">
+            <div class="link-item">
+                <img src="images/road.png" alt="新生上路">
+                <h3>新生上路</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">如何注册</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">如何购课</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">如何赠送</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">学习课程</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="link-item">
+                <img src="images/help.png" alt="帮助中心">
+                <h3>帮助中心</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">账户问题</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">直播须知</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">支付方式</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">常见问题</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">视频观看问题</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link-item">
+                <img src="images/about.png" alt="关于我们">
+                <h3>关于我们</h3>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">了解学慧网</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">联系我们</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self">加入学慧网</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">关注我们</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-item">
+                <p class="phone">400-680-7650</p>
+                <p class="time">周一至周五 9:00-19:00</p>
+                <a href="#" class="iphone-btn">
+                    <i class="phone-ico"></i>
+                    学慧网官方在线客服
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="mts">
+                课程内容版权均归
+                <a href="/">
+                    北京学慧网络教育科技有限公司
+                </a>
+                所有
+                <a class="mlm" href="http://www.miibeian.gov.cn/" target="_blank">
+                    京ICP备15007758号-1    京ICP证150990号
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="J_GotoTop" class="elevator">
+    <a href="feedback.html" class="elevator-msg" title="意见反馈"><i class="feedback"></i></a>
+    <a href="javascript:" class="elevator-app" title="app下载">
+        <i class="app-down"></i>
+        <div class="elevator-app-box"></div>
+    </a>
+    <a href="javascript:" class="elevator-weixin" id="js-elevator-weixin" title="官方微信">
+        <i class="weixin"></i>
+        <div class="elevator-weixin-box"></div>
+    </a>
+    <a href="javascript:void(0)" class="elevator-top" style="" title="返回顶部" id="backTop">
+        <i class="gotop"></i>
+    </a>
+</div>
+<!--登录之后显示-->
+<div class="pop_login">
+    <div class="login-content">
+        <div class="login-view" style="display:block" id="welcome">
+            <a href="javascript:void(0);" class="poplogin_close"><i class="es-icon es-icon-close01"></i></a>
+            <div class="login-head">
+                <h3>欢迎登录学慧网</h3>
+            </div>
+            <div class="login-body">
+                <div class="xh-input input-username">
+                    <input type="text" class="username" name="username" autocomplete="off" autocapitalize="off" autocorrect="off" data-enable-clean="true" data-rule-required="true" placeholder="手机号/用户名/邮箱" data-hp-widgets="1">
+                    <i class="es-icon es-icon-person"></i>
+                    <span class="xh-err-tips">该用户未注册</span>
+                    <span class="xh-icon xh-flag"></span>
+                </div>
+                <div class="xh-input input-password">
+                    <input type="password" class="password" name="password" data-rule-required="true" maxlength="20" placeholder="密码" data-hp-widgets="2">
+                    <i class="es-icon es-icon-lock1"></i>
+                </div>
+                <div class="for-rem">
+                    <a class="xh-input forget-password" href="forgot-password.html">忘记密码？</a>
+                    <label class="rememberme"><input type="hidden"  value="0"><label>
+                        <input type="checkbox" id="loginform-rememberme"> 下次自动登录</label>
+                    </label>
+                </div>
+                <div class="submit">
+                    <button class="btn" type="submit" id="btn">登&nbsp;&nbsp;录</button>
+                    <p>
+                        还没有账号？
+                        <a href="register.html" class="register-now">马上注册</a>
+                    </p>
+                </div>
+                <div class="social">
+                    <span>社交账号登录：</span>
+                    <a href="#" class="es-icon es-icon-qq"></a>
+                    <a href="#" class="es-icon es-icon-weixin"></a>
+                    <a href="#" class="es-icon es-icon-weibo"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#nav-div li").eq(3).addClass("on");//头部样式
+        $(".js-report").addClass("ui-check");
+
+        //
+        $('#elevator').click(function () {
+            $('body,html').animate({ scrollTop: 0 });
+        });
+        //END
+        var userExamTopAvg = 0;
+        var userTopJson = [{"name":"2015-05-30 14:20:00","y":0},{"name":"2015-09-07 11:34:00","y":0},{"name":"2015-09-07 11:35:00","y":0},{"name":"2015-09-07 14:07:00","y":0},{"name":"2015-09-08 9:35:00","y":0},{"name":"2015-09-08 9:59:00","y":0},{"name":"2015-10-14 16:32:00","y":6},{"name":"2015-10-14 16:49:00","y":7},{"name":"2015-10-14 16:13:00","y":9},{"name":"2015-10-14 16:22:00","y":0}];
+        var childClassName = '公文写作与处理';
+        var historyListCount = 10;
+        var classId = 4;
+        $(".navBox a[data-id="+classId+"]").addClass("ui-check");
+        var reportnew = {
+            classId: classId,
+            userTopJson: userTopJson,
+            userExamTopAvg: 2.2,
+
+            childClassName: childClassName,
+            historyListCount: historyListCount,
+            getGraph: function () {
+                var topjson = reportnew.userTopJson;
+                if (topjson.length>0) {
+                    var seriesData = reportnew.userExamTopAvg == 0 ? [
+                        {
+                            name: "您在" + reportnew.childClassName + "下",
+                            y: 0,
+                            x: 0,
+                            marker: {
+                                enabled: false,
+                                states:
+                                {
+                                    hover:
+                                    {
+                                        enabled: false
+                                    }
+                                }
+                            }
+                        }
+                    ] :
+                            [
+                                {
+                                    name: "您在" + reportnew.childClassName + "下",
+                                    y: reportnew.userExamTopAvg,
+                                    x: 0,
+                                    marker: {
+                                        enabled: false,
+                                        states: {
+                                            hover: {
+                                                enabled: false
+                                            }
+                                        }
+                                    }
+                                }, {
+                                name: "您在" + reportnew.childClassName + "下",
+                                y: reportnew.userExamTopAvg,
+                                x: reportnew.historyListCount - 1,
+                                marker: {
+                                    enabled: false,
+                                    states: {
+                                        hover:
+                                        {
+                                            enabled: false
+                                        }
+                                    }
+                                }
+                            }
+                            ];
+                    $('#graph').highcharts({
+                        chart: {
+                            type: 'spline'
+                        },
+                        credits: {
+                            enabled: false // 禁用版权信息
+                        },
+                        title: {
+                            text: '',
+                            x: -20 //center
+                        },
+                        subtitle: {
+                            text: '',
+                            x: -20
+                        },
+                        xAxis: {
+                            allowDecimals: false,
+                            lineWidth: 0,
+                            tickWidth: 0,
+                            labels: { enabled: true }
+
+                        },
+                        legend: {
+
+                        },
+                        yAxis: {
+                            title: {
+                                text: ''
+                            },
+                            min: 0,
+                            plotLines: [
+                                {
+                                    value: 0,
+                                    width: 1,
+                                    color: '#808080'
+                                }
+                            ]
+                        },
+                        tooltip: {
+                            valueSuffix: ''
+                        },
+                        series: [
+                            {
+                                name: '该次得分',
+                                data: topjson,
+                                color: '#f06000'
+
+                            }, {
+                                name: "平均成绩",
+                                data: seriesData,
+                                color: '#7cb5ec'
+                            }
+                        ]
+                    });
+
+                } else {
+                    $("#graph").html('<img src="/content/tiku/images/pic8.png" />');
+                }
+
+            }
+        };
+
+        function event() {
+            $("body")
+                    .on('click', '.navBox a', function () {
+                        layer.load('正在统计数据...', 0);
+                    });
+
+        }
+
+        reportnew.getGraph();
+
+        event();
+
+    });
+</script>
+<script type="text/javascript" src="js/highcharts.js"></script>
+<script src="js/register.js"></script>
+<script src="js/courses.js"></script>
+<div class="modal-backdrop"></div>
+</body>
+</html>
