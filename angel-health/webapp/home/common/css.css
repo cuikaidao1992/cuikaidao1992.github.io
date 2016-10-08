@@ -90,7 +90,7 @@ table input[type="text"][disabled] {
 
 /**按钮**/
 .bdashed{ width:100%; height:30px; border-bottom:1px dashed #ffece3; }
-.btn-bottm{ margin-bottom:40px;}
+.btn-bottm{ margin-bottom:20px;}
 .btn-bottm button{ margin-left:100px;}
 
 /***附加信息**/
@@ -234,7 +234,7 @@ input.min_ipt{width:80px}
 }
 
 /*******/
-#content-main {
+/* #content-main {
     height: calc(100% - 140px);
     overflow: hidden
 }
@@ -242,7 +242,9 @@ input.min_ipt{width:80px}
 .fixed-nav #content-main {
     height: calc(100% - 80px);
     overflow: hidden
-}
+} */
+
+
 @media (max-width: 768px) {
     body.fixed-sidebar .navbar-static-side {
         display: none
@@ -324,3 +326,9 @@ textarea.dc_text{width:100%}
 .mr{
     margin-right: 15px!important;
 }
+
+/*问卷调查*/
+.wjdc_top{background:#dedede;border:none;}
+.wjdc_top img{height:30px;margin-top:-6px;margin-left:-29px}
+.wjdc_top .No{margin-left:-80px;color:#fff;font-size:20px;font-family:Arial}
+.wjdc_top .inform{margin-left:60px;color:#737373;}

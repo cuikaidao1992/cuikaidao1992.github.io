@@ -249,8 +249,8 @@
 .verCode{
     float: left;
     width: 123px;
-    height: 42px;
-    line-height: 42px;
+    height: 40px;
+    line-height: 40px;
     color: #fff;
     text-align: center;
     font-size: 14px;
@@ -297,7 +297,7 @@
 /*账号验证*/
 .verCode img{
     width:125px ;
-    height:40px
+    height:44px
 }
 /*重置成功*/
 .success-info{

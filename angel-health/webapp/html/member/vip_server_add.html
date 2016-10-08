@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +8,15 @@
 		<title>新增会员预约服务</title>
 		<!--Basic Styles-->
 		<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
-		<link id="bootstrap-rtl-link" href="" rel="stylesheet" />
 		<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
 		<!--Beyond styles-->
-		<link id="beyond-link" href="../../dep/moban/css/beyond.min.css" rel="stylesheet" type="text/css" />
-
+		<link href="../../dep/moban/css/beyond.min.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" type="text/css" href="../../dep/datetimepicker/css/bootstrap-datetimepicker.css" />
 		<link rel="stylesheet" type="text/css" href="../../dep/css/jquery.bigautocomplete.css" />
 		<link rel="stylesheet" href="../../home/common/css.css">
-
-		<!--[if IE]>
-		<script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
-	<![endif]-->
-
 	</head>
-
 	<body>
-
-		<!-- 导航 -->
-
-		<div class="page-content">
-			<!-- 面包屑导航 -->
+		<div class="wrapper">
 			<div class="page-breadcrumbs">
 				<ul class="breadcrumb">
 					<li>
@@ -45,8 +32,6 @@
 
 				</ul>
 			</div>
-			<!-- /面包屑导航-->
-			<!--头部按钮-->
 			<div class="page-header position-relative">
 				<div class="header-title">
 					<h1>
@@ -93,36 +78,57 @@
 										<div class=" bancgud">
 
 											<div class="formfont">基础信息</div>
-											<form class="form-horizontal form-bordered " role="form" id="memberForm">
-												<div class="form-group ">
-													<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">会员名称<span class="help-inline"><font color="red">*</font> </span></label>
-													<div class="col-sm-8">
-														<select id="e1" style="width:100%; border-radius:3px!important; padding:0px;" class="form-control">
-															<option value="-1">请选择会员名称</option>
-															<option>张三</option>
-															<option>李四</option>
-															<option>王五</option>
-															<option>赵六</option>
-														</select>
+											<form class="form-horizontal form-bordered " role="form" id="memberForm" autocomplete="off">
+												<div class="form-group">
+													<label class="col-sm-2 control-label no-padding-right">会员名称<span class="help-inline"><font color="red">*</font> </span></label>
+													<div class="col-lg-8">
+														<input type="text" class="form-control search-box" placeholder="会员名称" name="vip_name" data-bv-notempty="true" data-bv-notempty-message="会员名称不能为空">
+														<div class="name-options" id="SearcherList" style="display: none;">
+															<ul>
+																<li><span>张三</span></li>
+																<li><span>张三</span></li>
+																<li><span>张三</span></li>
+																<li><span>张三</span></li>
+																<li><span>张三</span></li>
+																<li><span>张三</span></li>
+															</ul>
+														</div>
 													</div>
 												</div>
 												<div class="form-group">
-													<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">手&nbsp;&nbsp;机&nbsp;&nbsp;号<span class="help-inline"><font color="red">*</font> </span></label>
+													<label  class="col-sm-2 control-label no-padding-right">手&nbsp;&nbsp;机&nbsp;&nbsp;号<span class="help-inline"><font color="red">*</font> </span></label>
 													<div class="col-sm-8">
 														<input type="text" class="form-control fl " placeholder="请输入手机号" name="phone" data-bv-notempty="true" data-bv-notempty-message="手机号为必填项，不能为空">
 													</div>
 												</div>
 												<div class="form-group">
-													<label for="inputEmail3" class="col-sm-2 control-label no-padding-right">预约医师<span class="help-inline"><font color="red">*</font> </span></label>
-													<div class="col-sm-8">
-														<input type="text" class="form-control" id="inputEmail3" placeholder="请输入医师姓名" name="doctor" data-bv-notempty="true" data-bv-notempty-message="预约医师为必填项，不能为空">
+													<label class="col-sm-2 control-label no-padding-right">预约医师<span class="help-inline"><font color="red">*</font> </span></label>
+													<div class="col-lg-8">
+														<input type="text" class="form-control search-box1" placeholder="预约医师" name="dc_name" data-bv-notempty="true" data-bv-notempty-message="预约医师不能为空">
+														<div class="name-options" id="SearcherList1" style="display: none;">
+															<ul>
+																<li><span>张三</span></li>
+																<li><span>张三</span></li>
+																<li><span>张三</span></li>
+																<li><span>张三</span></li>
+																<li><span>张三</span></li>
+																<li><span>张三</span></li>
+															</ul>
+														</div>
 													</div>
 												</div>
 												<div class="form-group">
-													<label for="inputEmail3" class="col-sm-2 control-label no-padding-right">预约时间</label>
+													<label class="col-sm-2 control-label no-padding-right">预约时间</label>
 													<label class="col-sm-4">
-                                                            <input type="text" class="form-control date-picker col-sm-4" id="inputEmail3" value="2016-09-15">
-                                                        </label>
+														<div>
+															<div class="input-group">
+																<input class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="yyyy-mm-dd" value="2016-5-30">
+																<span class="input-group-addon">
+														        	<i class="fa fa-calendar"></i>
+														        </span>
+															</div>
+														</div>
+                                                    </label>
 													<label class="input-group col-sm-3 col-xs-offset-1">
                                                         <input class="form-control" id="timepicker1" type="text">
                                                          <span class="input-group-addon">
@@ -133,11 +139,10 @@
 												</div>
 
 												<div class="form-group radioyes">
-													<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">预约体检套餐</label>
-
+													<label class="col-sm-2 control-label no-padding-right">预约体检套餐</label>
 													<div class="radio">
 														<label class="labletab" style="padding-top:0px">
-                                                        <input name="form-field-radio2" type="radio" class="radio_1"onClick="">
+                                                        <input name="form-field-radio2" type="radio" class="radio_1" onClick="">
                                                         <span class="text" checked>服务套餐</span>
                                                     </label>
 
@@ -151,7 +156,7 @@
 												<div class=" radioa">
 													<div class=" col-sm-8 formleftb yesradio yesradionoa server server_1">
 														<table class="table table-striped table-hover table-bordered" id="bodyHtml" valign="middle">
-															<i style="float:right; padding-bottom:10px;cursor:pointer" class="close_server fa fa-times-circle"></i>
+															<i style="float:right; padding-bottom:10px;cursor:pointer;font-size:18px" class="close_server fa fa-times-circle" title="关闭"></i>
 															<thead>
 																<tr role="row">
 																	<th width="5%">
@@ -777,7 +782,7 @@
 													</div>
 													<div class="col-sm-8  formleftb yesradio nihigth project  server_2">
 														<table class="table table-striped table-hover table-bordered" id="bodyHtml" valign="middle">
-															<i style="float:right; padding-bottom:10px;cursor:pointer" class="close_project fa fa-times-circle"></i>
+															<i style="float:right; padding-bottom:10px;cursor:pointer;font-size:18px" class="close_project fa fa-times-circle" title="关闭"></i>
 															<thead>
 																<tr role="row">
 																	<th width="5%">
@@ -1163,7 +1168,7 @@
 												</div>
 
 												<div class="form-group">
-													<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">支付方式</label>
+													<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">支付状态</label>
 
 													<div class="radio">
 														<label>
@@ -1182,27 +1187,35 @@
 
 													<div class="radio">
 														<label>
-                                                        <input name="form-field-radio" type="radio" checked="checked">
-                                                        <span class="text">线下录入</span>
-                                                    </label>
+                                                        	<input name="form-field-radio" type="radio" checked="checked">
+                                                        	<span class="text">pos刷卡</span>
+                                                    	</label>
 
 														<label>
-                                                        <input name="form-field-radio" type="radio" class="">
-                                                        <span class="text">APP</span>
-                                                    </label>
+                                                        	<input name="form-field-radio" type="radio" class="">
+                                                        	<span class="text">现金</span>
+                                                    	</label>
 														<label>
-                                                        <input name="form-field-radio" type="radio" class="">
-                                                        <span class="text">网站</span>
-                                                    </label>
+                                                        	<input name="form-field-radio" type="radio" class="">
+                                                        	<span class="text">协议结算</span>
+                                                    	</label>
+                                                    	<label>
+                                                        	<input name="form-field-radio" type="radio" class="">
+                                                        	<span class="text">挂账</span>
+                                                    	</label>
+                                                    	<label>
+                                                        	<input name="form-field-radio" type="radio" class="">
+                                                        	<span class="text">其他</span>
+                                                    	</label>
 													</div>
 												</div>
 
 										</div>
 
 									</div>
-									<div class="col-sm-8  col-xs-offset-2 btn-bottm">
-										<button id="tagIdSubmitAddVip_btn" type="submit" class=" btn btn-darkorange  col-sm-2 col-xs-offset-3" href="#closeCourse" data-toggle="modal">保存</button>
-										<button class=" btn btn-active col-sm-2 col-xs-offset-3" type="button" onClick="window.open('vip_server.html')">取消</button>
+									<div class="col-sm-8  col-xs-offset-3 btn-bottm">
+										<button id="tagIdSubmitAddVip_btn" type="submit" class=" btn btn-darkorange  col-sm-2 col-xs-offset-3" href="#closeCourse" data-toggle="modal">确认</button>
+										<button class=" btn btn-active col-sm-2 col-xs-offset-3" type="button" onClick="history.go(-1)">取消</button>
 									</div>
 								</div>
 								</form>
@@ -1214,39 +1227,15 @@
 					</div>
 				</div>
 			</div>
-
+			<P class="bottomfont">© 2016 Angel Health Management Ltd. : 天使健康管理有限公司</P>
 		</div>
-
-		</div>
-		</div>
-
-		</div>
-
-		</div>
-
-		<!-- /右侧内容 -->
-		</div>
-		<!--  <div class="modal fade in" id="closeCourse" aria-hidden="true">
-    <div class="modal-dialog" >
-        <div class="modal-content"  style="border-radius:50px!important" >
-            
-            <div class="modal-body form-horizontal" >
-              <p class="text-warning">您的会员信息已提交成功</p>
-            </div>
-        </div>
-    </div>
-    
-</div>
- -->
-
 		<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
 		<script src="../../dep/moban/js/bootstrap.min.js"></script>
 		<script src="../../dep/moban/js/beyond.min.js"></script>
 		<script src="../../dep/moban/js/validation/bootstrapValidator.js"></script>
 		<script src="../../dep/jquery.bigautocomplete.js"></script>
 		<script src="../../dep/moban/js/select2/select2.js"></script>
-		<!--<script type="text/javascript" src="../../dep/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>-->
-		<script type="text/javascript" src="../../dep/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
 		<script src="../../dep/moban/js/datetime/bootstrap-datepicker.js"></script>
 		<script src="../../dep/moban/js/datetime/bootstrap-timepicker.js"></script>
 		<script src="../../dep/jquery.selectlist.js"></script>
@@ -1254,8 +1243,7 @@
 		<script src="../../dep/area.js"></script>
 		<script src="../../dep/fileinput.js" type="text/javascript"></script>
 		<script src="../../dep/fileinput_locale_zh.js" type="text/javascript"></script>
-		<script src="../../dep/moban/js/datetime/moment.js"></script>
-		<script src="../../dep/moban/js/datetime/daterangepicker.js"></script>
+
 		<script>
 			var $radio_btn_1 = $(".radioyes .radio .labletab .radio_1");
 			var $radio_btn_2 = $(".radioyes .radio .labletab .radio_2");
@@ -1267,12 +1255,27 @@
 				$(".server_1").hide();
 				$(".server_2").slideToggle("slow");
 			})
+		$(".close_server").click(function() {
+				$(this).parents().find(".server").hide();
+			})
+			$(".close_project").click(function() {
+				$(this).parents().find(".project").hide();
+			})
 		</script>
 
 		<script>
 			$(function() {
-
 				$("#memberForm").bootstrapValidator();
+				$("body").on("focus.page", ".date-picker", function() {
+					$(this).datetimepicker({
+						format: "yyyy-mm-dd",
+						minView: 2,
+						autoclose: true,
+						language: "zh-CN"
+					})
+				});
+
+        
 				$(".zj-dd").bigAutocomplete({
 					width: 500,
 					data: [{
@@ -1304,27 +1307,13 @@
 
 			})
 			$(function() {
-
-				$("body").on("focus.page", ".date-picker", function() {
-
-					$(this).datetimepicker({
-
-						format: "yyyy-mm-dd ",
-						minView: 2,
-						autoclose: true,
-						language: "zh-CN"
-
-					})
-				});
 				$("#city").click(function(e) {
 					SelCity(this, e);
 				});
-
 			});
-
 			//--Jquery Select2--
-			$("#e1").select2();
-			$("#e2").select2({
+			$(".e1").select2();
+			$(".e2").select2({
 				placeholder: "Select a State",
 				allowClear: true
 			});
@@ -1387,15 +1376,49 @@
 
 			ga('create', 'UA-52103994-1', 'auto');
 			ga('send', 'pageview');
-
-			$(".close_server").click(function() {
-				$(this).parents().find(".server").hide();
-			})
-			$(".close_project").click(function() {
-				$(this).parents().find(".project").hide();
-			})
 		</script>
+		<script>
+			$(function() {
+				$('.search-box').bind('input propertychange', function() {
+					if($(this).val()!=""){
+						$("#SearcherList").show().css({
+							width:$(this).width()+26
+						});
+					}
+				});
+				$("#SearcherList li").click(function(){
+					$(".search-box").val($(this).find("span").text());
+					$("#SearcherList").hide();
+				});
+				
+				$('.search-box1').bind('input propertychange', function() {
+					if($(this).val()!=""){
+						$("#SearcherList1").show().css({
+							width:$(this).width()+26
+						});
+					}
+				});
+				$("#SearcherList1 li").click(function(){
+					$(".search-box1").val($(this).find("span").text());
+					$("#SearcherList1").hide();
+				});
+				
+				
 
+
+				var str='<div class="input-box">'+
+						'<a href="javascript:;" class="file">'+
+						'<input type="file" name="">'+
+						'</a> </div>';
+				$(".upload-file").on("change","input[type='file']",function(){
+					$(this).parent().addClass("upload-img");
+					if($(".upload-file .upload-img").length>=3){
+						$(".upload-file").append(str);
+					}
+				})
+			});
+
+		</script>
 	</body>
 
 </html>

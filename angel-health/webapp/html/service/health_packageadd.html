@@ -1,0 +1,263 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<title>体检套餐</title>
+	<link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+	<!--Basic Styles-->
+	<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/weather-icons.min.css" />
+	<!--Beyond styles-->
+	<link href="../../dep/moban/css/beyond.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/demo.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/typicons.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/animate.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../../home/common/css.css">
+	<link rel="stylesheet" href="../../dep/datetimepicker/css/bootstrap-datetimepicker.min.css" />
+	<link rel="stylesheet" href="../../dep/zTreeStyle/zTreeStyle.min.css" />
+	<link rel="stylesheet" href="../../home/service/service.css" />
+	<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
+	<script src="../../dep/moban/js/skins.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="page-breadcrumbs">
+			<ul class="breadcrumb">
+				<li>
+					<i class="fa fa-home"></i>
+					<a href="index.html">业务配置管理</a>
+				</li>
+				<li class="">
+					<a href="#">套餐模板配置</a>
+				</li>
+				<li class="active">
+					<a href="#">体检套餐</a>
+				</li>
+			</ul>
+		</div>
+		<div class="page-header position-relative">
+			<div class="header-title">
+				<h1>
+					体检套餐
+				</h1>
+			</div>
+			<!--Header Buttons-->
+			<div class="header-buttons">
+				<a class="sidebar-toggler" href="#">
+					<i class="fa fa-arrows-h"></i>
+				</a>
+				<a class="refresh" id="refresh-toggler" href="">
+					<i class="glyphicon glyphicon-refresh"></i>
+				</a>
+				<a class="fullscreen" id="fullscreen-toggler" href="#">
+					<i class="glyphicon glyphicon-fullscreen"></i>
+				</a>
+			</div>
+			<!--头部按钮end-->
+		</div>
+		<div class="page-body">
+			<div class="row">
+
+				<div class="col-xs-12 col-md-12">
+					<div class="widget">
+						<div class="widget-header ">
+							<span class="widget-caption">体检套餐列表</span>
+							<div class="widget-buttons">
+								<a href="#" data-toggle="maximize">
+									<i class="fa fa-expand"></i>
+								</a>
+								<a href="#" data-toggle="collapse">
+									<i class="fa fa-minus"></i>
+								</a>
+								<a href="#" data-toggle="dispose">
+									<i class="fa fa-times"></i>
+								</a>
+							</div>
+						</div>
+						<div class="widget-body">
+							<div id="profile" class="tab-pane">
+								<form id="registrationForm" method="post" class="form-horizontal clearfix">
+									<div class="bancgud">
+										<div class="form-group">
+											<label class="col-lg-4 control-label">体检套餐名称<span class="help-inline"><font color="red">*</font></span></label>
+											<div class="col-lg-8">
+												<input type="text" name="packageName" class="form-control" data-bv-notempty="true" data-bv-notempty-message="套餐名称不能为空" />
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label class="col-lg-4 control-label">体检套餐内容</label>
+											<div class=" col-lg-8">
+												<ul id="treeDemo" style="height: 300px;width:80%;border: 1px dashed #d5d5d5;" class="ztree"></ul>
+											</div>
+
+										</div>
+
+										<div class="form-group">
+											<label class="col-lg-4 control-label">体检套餐价格<span class="help-inline"><font color="red">*</font></span></label>
+											<div class="col-lg-8">
+												<input type="text" name="money" class="form-control" data-bv-notempty="true" data-bv-notempty-message="套餐名称不能为空" />
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label class="col-lg-4 control-label">体检套餐描述</label>
+											<div class="col-lg-8">
+												<textarea class="form-control" name="msgContent" rows="3"></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-8  col-xs-offset-4 btn-bottm" style="padding-top: 25px">
+										<button id="" type="submit" class=" btn btn-darkorange  col-sm-2 " data-toggle="closeCourse">确认</button>
+										<button class=" btn btn-active col-sm-2 col-xs-offset-2" type="button" onclick="window.open('information_common.html.html')">取消</button>
+									</div>
+
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<script src="../../dep/moban/js/bootstrap.min.js"></script>
+	<script src="../../dep/moban/js/validation/bootstrapValidator.js"></script>
+	<script src="../../dep/datetime/bootstrap-datepicker.js"></script>
+	<script src="../../dep/datetime/bootstrap-timepicker.js"></script>
+	<script src="../../dep/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../../dep/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+	<script src="../../dep/moban/js/fuelux/treeview/tree-custom.min.js"></script>
+	<script src="../../home/sysconfig/treeview-init.js"></script>
+
+	<script src="../../dep/treeTable/jquery.treetable.js"></script>
+
+	<script src="../../dep/zTreeStyle/jquery.ztree.all.min.js"></script>
+	<script>
+
+window.onload=function()
+	{
+	  var checkboxs=document.getElementsByName("myHove"+"rTreechk");
+	  var hvtck=document.getElementById("hvtck");
+	  cklen=checkboxs.length;
+	  hvtck.onclick=function()
+	  {
+		if(this.checked==true)
+		{
+		  for(var i=0;i<cklen;i++)
+		  {
+			checkboxs[i].checked=true;
+		  }
+		  document.getElementById("dohovert"+"ree").innerHTML=""
+		}
+		else
+		{
+		  for(var i=0;i<cklen;i++)
+		  {
+			checkboxs[i].checked=false;
+		  }
+		  document.getElementById("dohovertree").innerHTML=""
+		}
+	  }
+	}
+var setting = {
+	check: {
+		enable: true
+	},
+	data: {
+		simpleData: {
+			enable: true
+		}
+	}
+};
+
+var zNodes ;
+var code;
+function setCheck() {
+
+	var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			py = $("#py").attr("checked")? "p":"",
+			sy = $("#sy").attr("checked")? "s":"",
+			pn = $("#pn").attr("checked")? "p":"",
+			sn = $("#sn").attr("checked")? "s":"",
+			type = { "Y":py + sy, "N":pn + sn};
+	zTree.setting.check.chkboxType = type;
+	showCode('setting.check.chkboxType = { "Y" : "' + type.Y + '", "N" : "' + type.N + '" };');
+}
+function showCode(str) {
+	if (!code) code = $("#code");
+	code.empty();
+	code.append("<li>"+str+"</li>");
+}
+function fuzhi(data){
+	zNodes=eval("("+data+")");
+	$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+
+	setCheck();
+	$("#py").bind("change", setCheck);
+	$("#sy").bind("change", setCheck);
+	$("#pn").bind("change", setCheck);
+	$("#sn").bind("change", setCheck);
+
+}
+var zNodes =[
+	{id:4, pId:0, name:"河北省"},
+	{id:41, pId:4, name:"石家庄"},
+	{id:42, pId:4, name:"保定"},
+	{id:43, pId:4, name:"邯郸"},
+	{id:44, pId:4, name:"承德"},
+	{id:5, pId:0, name:"广东省"},
+	{id:51, pId:5, name:"广州"}
+];
+
+$(document).ready(function(){
+	$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+	var treeObj = $.fn.zTree.getZTreeObj("tree");
+	treeObj.expandAll(true);
+});
+
+		$(function() {
+			setCheck();
+			$("#py").bind("change", setCheck);
+			$("#sy").bind("change", setCheck);
+			$("#pn").bind("change", setCheck);
+			$("#sn").bind("change", setCheck);
+
+			$("#registrationForm").bootstrapValidator();
+			$("#editForm").bootstrapValidator();
+
+			$(".editClass").on('click', function() {
+				editClass(this)
+			});
+
+			function editClass(_this) {
+				$('#tab-edit').show();
+				$('#tab-edit').click();
+			}
+
+			$(".removeClass").on('click', function() {
+				removeClass(this)
+			});
+			// 删除
+			function removeClass(_this) {
+				$(_this).parent().parent().remove();
+			}
+
+			$('#tab-add,#tab-list').click(function() {
+				$('#tab-edit').hide();
+			})
+
+			$('.col-padd').click(function() {
+				$('#tab-add').click();
+			})
+		});
+	</script>
+
+</body>
+</html>

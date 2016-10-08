@@ -8,16 +8,13 @@
     <title>天使健康</title>
     <link rel="shortcut icon" href="../home/common/img/favicon.png" type="image/x-icon">
 	<!--Basic Styles-->
-    <link href="../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../dep/moban/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../dep/moban/css/font-awesome.min.css" rel="stylesheet"/>
     <!--Beyond styles-->
-
-    <link href="../dep/moban/css/beyond.min.css" rel="stylesheet" />
-    <link href="../dep/moban/css/demo.min.css" rel="stylesheet" />
-    <link href="../dep/moban/css/typicons.min.css" rel="stylesheet" />
-    <link href="../dep/moban/css/animate.min.css" rel="stylesheet" />
-    
-    
+    <link href="../dep/moban/css/beyond.min.css" rel="stylesheet"/>
+    <link href="../dep/moban/css/demo.min.css" rel="stylesheet"/>
+    <link href="../dep/moban/css/typicons.min.css" rel="stylesheet"/>
+    <link href="../dep/moban/css/animate.min.css" rel="stylesheet"/>
 </head>
 <body>
     <!-- 导航 -->
@@ -28,7 +25,7 @@
                 <div class="navbar-header pull-left">
                     <a href="#" class="navbar-brand">
                         <small>
-                            <img src="../dep/img/angel-logo.png"alt="" />
+                            <img src="../dep/img/angel-logo.png" alt="" />
                         </small>
                     </a>
                 </div>
@@ -126,7 +123,7 @@
                                 <!--/提醒-->
                             </li>
                             <li>
-                                <a class="wave in dropdown-toggle" data-toggle="dropdown" title="Help" href="#">
+                                <a class="wave in dropdown-toggle" data-toggle="dropdown" title="站内信" href="#">
                                     <i class="icon fa fa-envelope"></i>
                                     <span class="badge">3</span>
                                 </a>
@@ -283,8 +280,8 @@
                                     </li>
                                    
                                     <li class="edit">
-                                        <a href="" class="pull-left">修改资料</a>
-                                        <a href="#" class="pull-right">个人主页</a>
+                                        <a href="userinfo/personal-information.html" class="pull-left J_menuItem">个人信息</a>
+                                        <a href="userinfo/change-password.html" class="pull-right J_menuItem">修改密码</a>
                                     </li>
                                     <!--颜色-->
                                     <li class="theme-area">
@@ -315,11 +312,13 @@
                             <!-- /Account Area -->
                             
                             <!-- 设置图标 -->
-                        </ul><div class="setting">
+                        </ul>
+                        <div class="setting">
                             <a id="btn-setting" title="Setting" href="#">
                                 <i class="icon glyphicon glyphicon-cog"></i>
                             </a>
-                        </div><div class="setting-container">
+                        </div>
+                        <div class="setting-container">
                             <label>
                                 <input type="checkbox" id="checkbox_fixednavbar">
                                 <span class="text">Fixed Navbar</span>
@@ -389,7 +388,6 @@
                                     <span class="menu-text">会员预约服务</span>
                                 </a>
                             </li>
-                           
                         </ul>
                     </li>
                     
@@ -400,20 +398,19 @@
                             <i class="menu-expand"></i>
                         </a>
                          <ul class="submenu">
-                            
                             <li>
                                 <a class="J_menuItem" href="pomr/medical_record.html">
                                     <span class="" class="">体检报告服务</span>
                                 </a>
                             </li>
                              <li>
-                                <a class="J_menuItem" href="POMR/mar_case.html">
+                                <a class="J_menuItem" href="pomr/mar_case.html">
                                     <span class="">电子病例服务</span>
                                 </a>
                             </li>
 
                             <li>
-                                <a class="J_menuItem" href="POMR/mar_card.html" >
+                                <a class="J_menuItem" href="pomr/mar_card.html" >
                                     <span class="menu-text">用药记录服务</span>
                                 </a>
                             </li>
@@ -503,7 +500,7 @@
                         <ul class="submenu">
                             <li>
                                 <a class="J_menuItem" href="service/health_organization.html">
-                                    <span class="menu-text">体检机构配置</span>
+                                    <span class="menu-text">体检库配置</span>
                                 </a>
                             </li>
 
@@ -565,7 +562,7 @@
                             </li>
                              <li>
                                 <a class="J_menuItem" href="sysconfig/depart_manager.html">
-                                    <span class="menu-text">部门管理</span>
+                                    <span class="menu-text">机构管理</span>
                                 </a>
                             </li>
                             <li>
@@ -600,11 +597,8 @@
                 <!-- /导航菜单 -->
             </div>
                 <!--onload="Javascript:SetWinHeight(this)"-->
-            <div class="row J_mainContent" id="content-main" style="padding:0 15px;">
-               <iframe class="J_iframe" name="iframe0" width="100%" height="100%" onload="this.height=iframe0.document.body.scrollHeight"
-               		 frameborder="0" scrolling="no" src="control.html" frameborder="0" 
-               		data-id="sysconfig/area_manager.html" seamless>
-               </iframe>
+            <div class="row J_mainContent page-content" id="content-main">
+               <iframe class="J_iframe" name="iframe0" width="100%" height="100%" onload="this.height=iframe0.document.body.scrollHeight" frameborder="0" scrolling="no" src="control.html" frameborder="0" data-id="sysconfig/area_manager.html" seamless></iframe>
            </div>
            
         </div>
@@ -614,55 +608,20 @@
     <!--Basic Scripts-->	
 	<script src="../dep/moban/js/jquery-2.0.3.min.js"></script>
 	<script src="../dep/moban/js/bootstrap.min.js"></script>
-	
-
 
 	<!--Beyond Scripts-->
     <script src="../dep/moban/js/skins.min.js"></script>
 	<script src="../dep/moban/js/beyond.min.js"></script>
     <script src="../dep/charts/sparkline/jquery.sparkline.js"></script>
     <script src="../dep/charts/sparkline/sparkline-init.js"></script>
-
     <!--Easy Pie Charts Needed Scripts-->
     <script src="../dep/charts/easypiechart/jquery.easypiechart.js"></script>
     <script src="../dep/charts/easypiechart/easypiechart-init.js"></script>
-
-    <!--Flot Charts Needed Scripts-->
-    <!--<script src="../dep/charts/flot/jquery.flot.js"></script>
-    <script src="../dep/charts/flot/jquery.flot.resize.js"></script>
-    <script src="../dep/charts/flot/jquery.flot.pie.js"></script>
-    <script src="../dep/charts/flot/jquery.flot.tooltip.js"></script>
-    <script src="../dep/charts/flot/jquery.flot.orderBars.js"></script>-->
-    
-    
-   <script type="text/javascript" src="../dep/metisMenu/jquery.metisMenu.js"></script>
-   <script type="text/javascript" src="../dep/slimscroll/jquery.slimscroll.min.js"></script>
-   <script type="text/javascript" src="../dep/layer/layer.min.js"></script>
-   <script type="text/javascript" src="../dep/hplus.min.js"></script>
-   <script type="text/javascript" src="../dep/contabs.min.js"></script>
-	
-  
-    <script>
-
-   
-      /* function SetWinHeight(obj)
-		{
-		var win=obj;
-		console.log(win);
-		if (document.getElementById)
-		{
-		if (win && !window.opera)
-		{
-		if (win.contentDocument && win.contentDocument.body.offsetHeight)
-		win.height = win.contentDocument.body.offsetHeight;
-		else if(win.Document && win.Document.body.scrollHeight)
-		win.height = win.Document.body.scrollHeight;
-		}
-		}
-		} */
-		
-    </script>
-    
+    <script type="text/javascript" src="../dep/metisMenu/jquery.metisMenu.js"></script>
+    <script type="text/javascript" src="../dep/slimscroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../dep/layer/layer.min.js"></script>
+    <script type="text/javascript" src="../dep/hplus.min.js"></script>
+    <script type="text/javascript" src="../dep/contabs.min.js"></script>
 
 </body>
 <!--  /Body -->

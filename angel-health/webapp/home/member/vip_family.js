@@ -1,4 +1,15 @@
 $(function () {
+		
+		$("input[id^=jsonReturn]").each(function(){
+			var json = JSON.parse(this.value);
+			var str = "";
+			for(var i=0;i<json.length;i++){
+				str += json[i].key+":"+json[i].value+";"
+			}
+			str = str.substring(0,str.length-1);
+			this.value=str;
+		});
+	
         //编辑
         function editClass(_this){
             if($(_this).html() == "编辑"){

@@ -1,1 +1,2 @@
 .select_special select,.select_special label.label_input{width:18%;min-width:15%;}
+.add_special,.min_sepcial{width:25px;height:25px;background:#a7a5a5;color:#fff!important;padding:0px;font-size:14px;text-align:center;padding-top:6px;cursor:pointer;border-radius:3px}

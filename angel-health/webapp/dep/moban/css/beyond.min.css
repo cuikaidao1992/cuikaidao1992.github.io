@@ -1,4 +1,22 @@
-﻿@-webkit-keyframes borderPulse {
+﻿textarea{
+    padding: 5px 10px;
+    resize: none;
+}
+.report{
+    width: 1200px;
+    margin: 0 auto;
+}
+.report h2{
+    margin: 0;
+    padding:15px 0;
+    text-align: center;
+    font-size: 26px;
+}
+.report h4{
+    margin: 0;
+    font-size: 14px;
+}
+@-webkit-keyframes borderPulse {
     15% {
         opacity: 1
     }
@@ -3559,7 +3577,7 @@ a:focus, a:active {
     background-color: transparent;
     display: inline-block;
     line-height: 24px;
-    margin: 0 22px 0 12px;
+    margin: 7px 22px 0 12px;
     padding: 0;
     font-size: 13px;
     color: #333;
@@ -11241,7 +11259,7 @@ span.input-icon {
 .input-icon > input.input-sm + [class*="fa-"], .input-icon > input.input-sm + [class*="glyphicon-"] {
     width: 30px;
     font-size: 12px;
-    padding-top: 0;
+    padding-top:2px;
     line-height: 30px
 }
 
@@ -11419,7 +11437,7 @@ span.input-icon {
 }
 
 .input-group-btn > .btn {
-    line-height: 20px;
+    line-height: 18px;
     border-radius: 0 !important
 }
 
@@ -11758,7 +11776,8 @@ input[type=checkbox].checkbox-slider + .text:before {
     font-weight: 300;
     font-size: 10px;
     line-height: 18px;
-    height: 20px;
+    height: 22px;
+    line-height: 22px;
     overflow: hidden;
     border-radius: 50rem;
     border: 1px solid #ccc;
@@ -11766,7 +11785,7 @@ input[type=checkbox].checkbox-slider + .text:before {
     float: left;
     padding: 0;
     width: 56px;
-    text-indent: -21px;
+    text-indent: -26px;
     margin-right: 0;
     -webkit-transition: all .3s ease 0s;
     -moz-transition: all .3s ease 0s;
@@ -11786,8 +11805,8 @@ input[type=checkbox].checkbox-slider + .text:after {
     height: 22px;
     line-height: 20px;
     position: absolute;
-    top: -2px;
-    left: -3px;
+    top:0;
+    left:0;
     padding: 0;
     -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .3);
     -moz-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .3);
@@ -18522,3 +18541,87 @@ table.treetable tbody tr td{
 .name-options li{border-top:#ebeff3 1px solid;cursor:pointer;}
 .name-options li:hover{background-color:#ebeff3;}
 .name-options li.loading:hover,.name-options li.no-content{background-color:inherit;cursor:default;}
+
+.wenjuan-food-cell {
+    border-bottom: #e3e8ee 1px solid;
+    margin: 0px auto;
+    padding: 4px 0px 5px 15px;
+}
+.wenjuan-food-cell {
+    padding-left: 10px!important;
+    padding-top: 10px!important;
+}
+.wenjuan-food-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 30px;
+    display: inline-block;
+    _zoom: 1;
+    vertical-align: middle;
+}
+.wenjuan-food-pic img{
+    width: 50px;
+    height: 50px;
+}
+.wenjuan-food-name {
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+    display: inline-block;
+    _zoom: 1;
+    font-size: 14px;
+    color: #999;
+    line-height: 25px;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 170px;
+}
+.wenjuan-food-name {
+    margin-left: 5px!important;
+}
+.wenjuan-food-name h2 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #404040;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+.wenjuan-food-select {
+    display: inline-block;
+    _zoom: 1;
+    margin-left: 10px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+.d-food-rate-show {
+    border-bottom: #ddd 1px solid;
+    line-height: 36px;
+    font-size: 14px;
+    color: #555;
+    width: 882px;
+}
+.d-food-rate-show em {
+    display: block;
+    font-style: normal;
+    width: 32px;
+    float: left;
+    font-size: 14px;
+    line-height: 18px;
+    border-right: #e6e6e6 1px solid;
+    border-left: #e6e6e6 1px solid;
+    background-color: #00a2ca;
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.wenjuan-food td {
+    padding-right: 5px!important;
+}
+.d-food-day {
+    border-bottom-width: 0px;
+}

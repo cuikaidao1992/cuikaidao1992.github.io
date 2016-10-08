@@ -1,299 +1,297 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="renderer" content="webkit">
-		<meta http-equiv="Cache-Control" content="no-siteapp" />
-		<title>新增电子病例</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<title>新增电子病例</title>
 
-		<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
-		<link id="bootstrap-rtl-link" href="" rel="stylesheet" />
-		<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
-		<link id="beyond-link" href="../../dep/moban/css/beyond.min.css" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="../../dep/datetimepicker/css/bootstrap-datetimepicker.css"/>
-		<link rel="stylesheet" type="text/css" href="../../dep/css/jquery.bigautocomplete.css" />
-		<link href="../../dep/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="../../home/member/zj_style.css" />
-		<link rel="stylesheet" href="../../home/common/css.css">
+	<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/beyond.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="../../dep/datetimepicker/css/bootstrap-datetimepicker.css"/>
+	<link rel="stylesheet" type="text/css" href="../../dep/css/jquery.bigautocomplete.css" />
+	<link href="../../dep/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="../../home/member/zj_style.css" />
+	<link rel="stylesheet" href="../../home/common/css.css">
+	<link rel="stylesheet" href="../../dep/dist/css/dropify.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="page-breadcrumbs">
+			<ul class="breadcrumb">
+				<li>
+					<i class="fa fa-home"></i>
+					<a href="index.html">首页</a>
+				</li>
+				<li class="active">
+					<a href="###">健康档案管理</a>
+				</li>
+				<li class="active">
+					电子病例服务
+				</li>
 
-	</head>
-
-	<body>
-
-		<div class="page-content">
-			<!-- 面包屑导航 -->
-			<div class="page-breadcrumbs">
-				<ul class="breadcrumb">
-					<li>
-						<i class="fa fa-home"></i>
-						<a href="index.html">首页</a>
-					</li>
-					<li class="active">
-						<a href="###">健康档案管理</a>
-					</li>
-					<li class="active">
+			</ul>
+		</div>
+		<div class="page-header position-relative">
+			<div class="header-title">
+				<h1>
 						电子病例服务
-					</li>
+					</h1>
 
-				</ul>
 			</div>
-			<!-- /面包屑导航-->
-			<!--头部按钮-->
-			<div class="page-header position-relative">
-				<div class="header-title">
-					<h1>
-                            电子病例服务
-                        </h1>
-
-				</div>
-				<!--Header Buttons-->
-				<div class="header-buttons">
-					<a class="sidebar-toggler" href="#">
-						<i class="fa fa-arrows-h"></i>
-					</a>
-					<a class="refresh" id="refresh-toggler" href="">
-						<i class="glyphicon glyphicon-refresh"></i>
-					</a>
-					<a class="fullscreen" id="fullscreen-toggler" href="#">
-						<i class="glyphicon glyphicon-fullscreen"></i>
-					</a>
-				</div>
-				<!--头部按钮end-->
+			<!--Header Buttons-->
+			<div class="header-buttons">
+				<a class="sidebar-toggler" href="#">
+					<i class="fa fa-arrows-h"></i>
+				</a>
+				<a class="refresh" id="refresh-toggler" href="">
+					<i class="glyphicon glyphicon-refresh"></i>
+				</a>
+				<a class="fullscreen" id="fullscreen-toggler" href="#">
+					<i class="glyphicon glyphicon-fullscreen"></i>
+				</a>
 			</div>
-			<div class="page-body">
-				<div class="row">
-					<div class="col-xs-12 col-md-12 col-lg-12">
-						<div class="widget">
-							<div class="widget-header ">
-								<span class="widget-caption">新增电子病历记录</span>
-								<div class="widget-buttons">
-									<a href="#" data-toggle="maximize">
-										<i class="fa fa-expand"></i>
-									</a>
-									<a href="#" data-toggle="collapse">
-										<i class="fa fa-minus"></i>
-									</a>
-									<a href="#" data-toggle="dispose">
-										<i class="fa fa-times"></i>
-									</a>
-								</div>
+			<!--头部按钮end-->
+		</div>
+		<div class="page-body">
+			<div class="row">
+				<div class="col-xs-12 col-md-12 col-lg-12">
+					<div class="widget">
+						<div class="widget-header ">
+							<span class="widget-caption">新增电子病历记录</span>
+							<div class="widget-buttons">
+								<a href="#" data-toggle="maximize">
+									<i class="fa fa-expand"></i>
+								</a>
+								<a href="#" data-toggle="collapse">
+									<i class="fa fa-minus"></i>
+								</a>
+								<a href="#" data-toggle="dispose">
+									<i class="fa fa-times"></i>
+								</a>
 							</div>
+						</div>
 
-							<div class="widget-body" style="overflow:hidden">
-								<div class="col-lg-12 col-lg-12 col-xs-12 ">
-								<form class="form-horizontal form-bordered" role="form" id="mar_case" >
-									<div class="widget">
-										<div class="bancgud">
-											<div class="formfont">基础信息</div>
-												<!--
-                                                      form病例名称时间门诊
-                                                      -->
-												<div class="form-group">
-													<label for="inputEmail3" class="col-sm-2 control-label no-padding-right">会员名称<span class="help-inline"><font color="red">*</font> </span></label>
-													<div class="col-sm-9">
-														<input type="text" class="form-control search-box" placeholder="会员名称"  name="name" data-bv-notempty="true" data-bv-notempty-message="病例名称不能为空">
-														<div class="name-options" id="SearcherList" style="display: none;">
-															<ul>
-																<li><span>张三</span></li>
-																<li><span>张三</span></li>
-																<li><span>张三</span></li>
-																<li><span>张三</span></li>
-																<li><span>张三</span></li>
-																<li><span>张三</span></li>
-															</ul>
-														</div>
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="inputEmail3" class="col-sm-2 control-label no-padding-right">病历名称<span class="help-inline"><font color="red">*</font> </span></label>
-													<div class="col-sm-9">
-														<input type="text" class="form-control" id="inputEmail3" placeholder="请输入病例"  name="name" data-bv-notempty="true" data-bv-notempty-message="病例名称不能为空">
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-2 control-label no-padding-right">就诊时间<span class="help-inline"><font color="red">*</font> </span></label>
-													<div class="col-sm-9">
-														<input  class="date-picker form-control from fl" placeholder="请选择就诊时间"  name="time" data-bv-notempty="true" data-bv-notempty-message="就诊时间不能为空"/>
-														<i class="fa fa-calendar" style="position:absolute;right:26px;top:10px"></i>
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="endtime" class="col-sm-2 control-label no-padding-right">门诊/病历号<span class="help-inline"><font color="red">*</font> </span></label>
-													<div class="col-sm-9">
-														<input class="form-control" type="text" id="starttime" placeholder="请输入门诊/病历号"  name="mid" data-bv-notempty="true" data-bv-notempty-message="门诊/病历号不能为空">
-													</div>
-												</div>
-											   <div class="form-group physician">
-													<label for="endtime" class="col-sm-2 control-label no-padding-right">上传图片</label>
-													<div class="col-sm-6">
-		                                                <input id="file-9" type="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="1" >
-		                                           </div>
-												</div>
-												<!--
-                                                      form病例名称时间门诊over
-                                                      -->
-												<!--
-                                             	table切换
-                          -->            <div class="row">
-												<div class="col-lg-10 col-sm-10 col-xs-10 col-lg-offset-1" style="z-index: 1; ">
-													<div class="tabbable">
-														<ul class="nav nav-tabs nav-justified" id="myTab5">
-															<li class="active">
-																<a data-toggle="tab" href="#home5">
-																	现病史
-																</a>
-															</li>
-
-															<li class="tab-blue">
-																<a data-toggle="tab" href="#profile5">
-																	临床表现
-																</a>
-															</li>
-															<li class="tab-blue">
-																<a data-toggle="tab" href="#dropdown5">
-																	辅助检查
-																</a>
-															</li>
-															<li class="tab-blue">
-																<a data-toggle="tab" href="#dropdown4">
-																	特殊检查
-																</a>
-															</li>
-															<li class="tab-blue">
-																<a data-toggle="tab" href="#dropdown3">
-																	诊断
-																</a>
-															</li>
-															<li class="tab-blue">
-																<a data-toggle="tab" href="#dropdown2">
-																	治疗
-																</a>
-															</li>
-															<li class="tab-blue">
-																<a data-toggle="tab" href="#dropdown1">
-																	手术
-																</a>
-															</li>
+						<div class="widget-body" style="overflow:hidden">
+							<div class="col-lg-12 col-lg-12 col-xs-12 ">
+							<form class="form-horizontal form-bordered" role="form" id="mar_case" >
+								<div class="widget">
+									<div class="bancgud">
+										<div class="formfont">基础信息</div>
+											<div class="form-group">
+												<label for="inputEmail3" class="col-sm-2 control-label no-padding-right">会员名称<span class="help-inline"><font color="red">*</font> </span></label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control search-box" placeholder="会员名称" >
+													<div class="name-options" id="SearcherList" style="display: none;">
+														<ul>
+															<li><span>张三</span></li>
+															<li><span>张三</span></li>
+															<li><span>张三</span></li>
+															<li><span>张三</span></li>
+															<li><span>张三</span></li>
+															<li><span>张三</span></li>
 														</ul>
-
-														<div class="tab-content" style="overflow: hidden;">
-															<div id="home5" class="tab-pane in active">
-																<textarea class="col-md-12  h_textarea">请输入病例史描述</textarea>
-															</div>
-
-															<div id="profile5" class="tab-pane">
-																<textarea class="col-md-12 h_textarea">请输入临床表现描述</textarea>
-															</div>
-
-															<div id="dropdown5" class="tab-pane">
-																<textarea class="col-md-12 h_textarea">请输入辅助检查描述</textarea>
-															</div>
-
-															<div id="dropdown4" class="tab-pane">
-																<textarea class="col-md-12 h_textarea">请输入特殊描述</textarea>
-															</div>
-															<div id="dropdown3" class="tab-pane">
-																<textarea class="col-md-12 h_textarea">请输入诊断描述</textarea>
-															</div>
-															<div id="dropdown2" class="tab-pane">
-																<textarea class="col-md-12 h_textarea">请输入治疗描述</textarea>
-															</div>
-															<div id="dropdown1" class="tab-pane">
-																<textarea class="col-md-12 h_textarea">请输入病例史描述</textarea>
-															</div>
-														</div>
 													</div>
 												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputEmail3" class="col-sm-2 control-label no-padding-right">病历名称<span class="help-inline"><font color="red">*</font> </span></label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control" id="inputEmail3" placeholder="请输入病例"  name="name" data-bv-notempty="true" data-bv-notempty-message="病例名称不能为空">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-2 control-label no-padding-right">就诊时间<span class="help-inline"><font color="red">*</font> </span></label>
+												<label class="col-sm-9">
+													<div>
+														<div class="input-group">
+															<input class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="yyyy-mm-dd" value="2016-5-30">
+															<span class="input-group-addon">
+																<i class="fa fa-calendar"></i>
+															</span>
+														</div>
+													</div>
+												</label>
+											</div>
+											<div class="form-group">
+												<label for="endtime" class="col-sm-2 control-label no-padding-right">科&nbsp;&nbsp;&nbsp;室<span class="help-inline"><font color="red">*</font> </span></label>
+												<div class="col-sm-9">
+													<input class="form-control" type="text" id="starttime" placeholder="请输入科室"  name="mid" data-bv-notempty="true" data-bv-notempty-message="科室不能为空">
+												</div>
+											</div>
+										   <div class="form-group physician">
+												<label for="endtime" class="col-sm-2 control-label no-padding-right">上传图片</label>
+												<div class="col-sm-6">
+													<div class="box pull-left mr" >
+														<input type="file" class="dropify" data-default-file="">
+													</div>
+											   </div>
+											</div>
+											<!--
+												  form病例名称时间门诊over
+												  -->
+											<!--
+											table切换
+					  -->
+						<div class="form-group">
+							<div class="col-lg-9 col-sm-9 col-xs-9 col-xs-offset-2">
+								<div class="tabbable">
+									<ul class="nav nav-tabs" id="myTab7">
+										<li class="active">
+											<a data-toggle="tab" href="#home7">
+												现病史
+											</a>
+										</li>
+
+										<li class="tab-red">
+											<a data-toggle="tab" href="#profile1">
+																									 临床表现
+											</a>
+										</li>
+
+										   <li class="tab-red">
+											<a data-toggle="tab" href="#profile2">
+																									辅助检查
+											</a>
+										</li>
+
+										<li class="tab-red">
+											<a data-toggle="tab" href="#profile3">
+																								   特殊检查
+											</a>
+										</li>
+
+										<li class="tab-red">
+											<a data-toggle="tab" href="#profile4">
+																									诊断
+											</a>
+										</li>
+
+										<li class="tab-red">
+											<a data-toggle="tab" href="#profile5">
+																									治疗
+											</a>
+										</li>
+										 <li class="tab-red">
+											<a data-toggle="tab" href="#profile6">
+																									手术
+											</a>
+										</li>
+									</ul>
+									<div class="tab-content" style="overflow: hidden;">
+										<div id="home5" class="tab-pane in active">
+											<textarea class="col-md-12  h_textarea">请输入病例史描述</textarea>
 										</div>
-												<!--
-                                             	table切换
-                                             -->
 
-
-
+										<div id="profile1" class="tab-pane">
+											<textarea class="col-md-12 h_textarea">请输入临床表现描述</textarea>
 										</div>
 
-										<div class="col-lg-8  col-sm-8   col-xm-8 col-xs-offset-5 btn-bottmb">
-											<button type="submit" class=" btn btn-darkorange col-lg-2 col-sm-12 "  onClick="window.open('mar_case_add.html')">保存记录</button>
+										<div id="profile2" class="tab-pane">
+											<textarea class="col-md-12 h_textarea">请输入辅助检查描述</textarea>
 										</div>
 
+										<div id="profile3" class="tab-pane">
+											<textarea class="col-md-12 h_textarea">请输入特殊描述</textarea>
+										</div>
+										<div id="profile4" class="tab-pane">
+											<textarea class="col-md-12 h_textarea">请输入诊断描述</textarea>
+										</div>
+										<div id="profile5" class="tab-pane">
+											<textarea class="col-md-12 h_textarea">请输入治疗描述</textarea>
+										</div>
+										<div id="profile6" class="tab-pane">
+											<textarea class="col-md-12 h_textarea">请输入手术描述</textarea>
+										</div>
 									</div>
-									</form>
 								</div>
 							</div>
+						</div>
+											<!--
+											table切换
+										 -->
+									</div>
+								<div class="col-sm-8 col-lg-offset-3 col-xs-offset-1 col-md-offset-2 btn-bottm" style="padding-top:25px">
+									<button id="tagIdSubmitAddVip_btn" type="submit" class=" btn btn-darkorange  col-sm-2 col-xs-offset-3" href="#closeCourse" data-toggle="modal">确认</button>
+									<button class=" btn btn-active col-sm-2 col-xs-offset-3" type="button" onClick="history.go(-1)">取消</button>
+								</div>
 
+								</div>
+								</form>
+							</div>
 						</div>
 
 					</div>
+
 				</div>
-
-				<!-- /右侧内容 -->
 			</div>
-			<!--<div class="modal fade in" id="closeCourse" aria-hidden="true">
-    <div class="modal-dialog" >
-        <div class="modal-content"  style="border-radius:50px!important" >
-            
-            <div class="modal-body form-horizontal" >
-              <p class="text-warning">您的病历信息已提交成功</p>
-            </div>
-        </div>
-    </div>
-</div>-->
 
-			<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
+			<!-- /右侧内容 -->
+		</div>
+		<P class="bottomfont">© 2016 Angel Health Management Ltd. : 天使健康管理有限公司</P>
+	</div>
+	<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
+	<script src="../../dep/moban/js/bootstrap.min.js"></script>
+	<script src="../../dep/moban/js/beyond.min.js"></script>
+	<script src="../../dep/moban/js/validation/bootstrapValidator.js"></script>
 
-			<script src="../../dep/moban/js/bootstrap.min.js"></script>
-			<script src="../../dep/moban/js/beyond.min.js"></script>
-			<script src="../../dep/moban/js/validation/bootstrapValidator.js"></script>
+	<script src="../../dep/jquery.bigautocomplete.js"></script>
+	<script src="../../dep/fileinput.js" type="text/javascript"></script>
+	<script src="../../dep/fileinput_locale_zh.js" type="text/javascript"></script>
+	<script src="../../dep/dist/js/dropify.js"></script>
+	<script src="../../dep/moban/js/datetime/moment.js"></script>
+	<script src="../../dep/moban/js/datetime/bootstrap-datepicker.js"></script>
+	<script src="../../dep/moban/js/datetime/bootstrap-timepicker.js"></script>
+	<script>
+		$(function() {
+			$('.dropify').dropify({
+				messages: {
+					'default': '点击或拖拽文件到这里',
+					'replace': '点击或拖拽文件到这里来替换文件',
+					'remove':  '移除文件',
+					'error':   '对不起，你上传的文件太大了'
+				}
+			});
 
-			<script src="../../dep/jquery.bigautocomplete.js"></script>
-			<script src="../../dep/fileinput.js" type="text/javascript"></script>
-            <script src="../../dep/fileinput_locale_zh.js" type="text/javascript"></script>
-
-			<script type="text/javascript" src="../../dep/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-			<script type="text/javascript" src="../../dep/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
-
-
-			<script>
-				$(function() {
-					$('.search-box').bind('input propertychange', function() {
-						if($(this).val()!=""){
-							$("#SearcherList").show().css({
-								width:$(this).width()+26
-							});
-
-						}
-					});
-					$("#SearcherList li").click(function(){
-						$(".search-box").val($(this).find("span").text());
-						$("#SearcherList").hide();
-					});
-					$("#mar_case").bootstrapValidator();
-
-					$("body").on("focus.page", ".date-picker", function() {
-						$(this).datetimepicker({
-							format: "yyyy-mm-dd",
-							minView: 2,
-							autoclose: true,
-							language: "zh-CN"
-						})
+			$('.search-box').bind('input propertychange', function() {
+				if($(this).val()!=""){
+					$("#SearcherList").show().css({
+						width:$(this).width()+26
 					});
 
-					/* 新增 */
-					$('#tagIdSubmitAddVip_btn').on('click', function() {
-						setTimeout(function() {
-							$('#closeCourse').click();
-						}, 1000);
-					});
-					
+				}
+			});
+			$("#SearcherList li").click(function(){
+				$(".search-box").val($(this).find("span").text());
+				$("#SearcherList").hide();
+			});
+			$("#mar_case").bootstrapValidator();
 
-				});
-			</script>
 
-		
 
-	</body>
+
+
+			/* 新增 */
+			$('#tagIdSubmitAddVip_btn').on('click', function() {
+				setTimeout(function() {
+					$('#closeCourse').click();
+				}, 1000);
+			});
+
+
+		});
+			//--Bootstrap Date Picker--
+
+	</script>
+	<script>
+	$(function(){
+	  $('.date-picker').datepicker();
+	})
+	</script>
+
+</body>
 
 </html>

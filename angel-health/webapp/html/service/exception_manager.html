@@ -1,632 +1,813 @@
 ﻿<!DOCTYPE html>
 <html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="renderer" content="webkit">
-		<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<title>异常库配置</title>
 
-		<title>异常库配置</title>
-		
-		<link rel="shortcut icon" href="../../dep/moban/img/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../../dep/moban/img/favicon.png" type="image/x-icon">
 
-		<!--Basic Styles-->
-		<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
-		<link id="bootstrap-rtl-link" href="" rel="stylesheet" />
-		<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
-		<link href="../../dep/moban/css/weather-icons.min.css" rel="stylesheet" />
+	<!--Basic Styles-->
+	<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/weather-icons.min.css" rel="stylesheet" />
 
-		<!--Beyond styles-->
-		<link id="beyond-link" href="../../dep/moban/css/beyond.min.css" rel="stylesheet" />
-		<link href="../../dep/moban/css/demo.min.css" rel="stylesheet" />
-		<link href="../../dep/moban/css/typicons.min.css" rel="stylesheet" />
-		<link href="../../dep/moban/css/animate.min.css" rel="stylesheet" />
-		<link id="skin-link" href="" rel="stylesheet" type="text/css" />
+	<!--Beyond styles-->
+	<link href="../../dep/moban/css/beyond.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/demo.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/typicons.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/animate.min.css" rel="stylesheet" />
+	<!---->
+	<link href="../../dep/moban/css/dataTables.bootstrap.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../../home/common/css.css">
+	<link rel="stylesheet" href="../../home/service/service.css" />
 
-		<!---->
-		<link href="../../dep/moban/css/dataTables.bootstrap.css" rel="stylesheet" />
-		<link rel="stylesheet" href="../../home/common/css.css">
-		<link rel="stylesheet" href="../../dep/zTree/css/zTreeStyle/zTreeStyle.css" />
-		<link rel="stylesheet" href="../../home/service/service.css" />
+	<!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+	<script src="../../dep/moban/js/skins.min.js"></script>
 
-		<!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
-		<script src="../../dep/moban/js/skins.min.js"></script>
-		
-	</head>
-
-	<body>
-		<!-- Main Container -->
-		<div class="main-container container-fluid">
-			<!-- Page Container -->
-			<div class="page-container page-content">
-				<!-- Page Sidebar -->
-					<!-- 面包屑导航 -->
-					<div class="page-breadcrumbs">
-						<ul class="breadcrumb">
-							<li>
-								<i class="fa fa-home"></i>
-								<a href="index.html">业务配置管理</a>
-							</li>
-							<li class="active">
-								<a href="###">异常库配置</a>
-							</li>
-						</ul>
-					</div>
-					<!-- /面包屑导航-->
-					<!--头部按钮-->
-					<div class="page-header position-relative">
-						<div class="header-title">
-							<h1>
-                            	异常库配置
-                        	</h1>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="page-breadcrumbs">
+			<ul class="breadcrumb">
+				<li>
+					<i class="fa fa-home"></i>
+					<a href="index.html">业务配置管理</a>
+				</li>
+				<li class="active">
+					<a href="#">异常库配置</a>
+				</li>
+			</ul>
+		</div>
+		<div class="page-header position-relative">
+			<div class="header-title">
+				<h1>异常库配置</h1>
+			</div>
+			<!--Header Buttons-->
+			<div class="header-buttons">
+				<a class="sidebar-toggler" href="#">
+					<i class="fa fa-arrows-h"></i>
+				</a>
+				<a class="refresh" id="refresh-toggler" href="">
+					<i class="glyphicon glyphicon-refresh"></i>
+				</a>
+				<a class="fullscreen" id="fullscreen-toggler" href="#">
+					<i class="glyphicon glyphicon-fullscreen"></i>
+				</a>
+			</div>
+			<!--头部按钮end-->
+		</div>
+		<div class="page-body">
+			<div class="row">
+				<div class="col-xs-12 col-md-12">
+					<div class="widget">
+						<div class="widget-header ">
+							<span class="widget-caption">异常列表</span>
+							<div class="widget-buttons">
+								<a href="#" data-toggle="maximize">
+									<i class="fa fa-expand"></i>
+								</a>
+								<a href="#" data-toggle="collapse">
+									<i class="fa fa-minus"></i>
+								</a>
+								<a href="#" data-toggle="dispose">
+									<i class="fa fa-times"></i>
+								</a>
+							</div>
 						</div>
-						<!--Header Buttons-->
-						<div class="header-buttons">
-							<a class="sidebar-toggler" href="#">
-								<i class="fa fa-arrows-h"></i>
-							</a>
-							<a class="refresh" id="refresh-toggler" href="">
-								<i class="glyphicon glyphicon-refresh"></i>
-							</a>
-							<a class="fullscreen" id="fullscreen-toggler" href="#">
-								<i class="glyphicon glyphicon-fullscreen"></i>
-							</a>
-						</div>
-						<!--头部按钮end-->
-					</div>
-					<div class="page-body">
-						<div class="row">
+						<div class="widget-body">
+							<div class="tab-pane in active">
+								<div class="table-toolbar">
+									<a href="" class="btn btn-darkorange col-padd">
+										<i class="fa fa-minus"></i>批量删除
+									</a>
+									<a class="btn btn-blue col-padd" href="exception_manageradd.html">
+										<i class="fa fa-plus"></i>新增异常库
+									</a>
+									<div class="col-sm-2 col-padd">
+										<span class="input-icon">
+											<input type="text" class="form-control input-sm borderrdu "  placeholder="套餐名称/体检项目" style="border-radius:30px!important;">
+											<i class="glyphicon glyphicon-search blue"></i>
+										</span>
+									</div>
+								</div>
+								<table class="table table-striped table-hover table-bordered" id="bodyHtml">
+									<thead>
+									<tr role="row">
+										<th width="5%">
+											<label>
+												<input type="checkbox"  id="hvtck">
+												<span class="text" id="dohovertree"></span>
 
-							<div class="col-xs-12 col-md-12">
+											</label>
+										</th>
+										<th>
+											异常编号 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th>
+											异常名称 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th>
+											显示类型 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th>
+											重要性 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th>
+											推荐科室 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th>
+											建议时间 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th>
+											推荐项目 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th>
+											所属系统 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th>
+											性别 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th width="20%">
+											操作
+											<span class="fa indicator fa-unsorted"></span>
+										</th>
+									</tr>
+									</thead>
 
-								<div class="tabbable">
-									<ul class="nav nav-tabs" id="myTab">
-										<li class="active">
-											<a id="tab-list" data-toggle="tab" href="#home">
-                                                   	 异常列表
-                                                </a>
-										</li>
+									<tbody>
+									<tr>
+										<td>
+											<label>
+												<input type="checkbox" name="myHoverTreechk">
+												<span class="text"></span>
+											</label>
+										</td>
+										<td><input type="text" class="six" value="111111" disabled="disabled"></td>
+										<td><input type="text" class="six" value="心里异常" disabled="disabled"></td>
+										<td>
+											<input type="text" value="心里疾病" class="six" disabled="disabled">
+										</td>
+										<td><input type="text" class="six" value="重要" disabled="disabled"></td>
+										<td><input type="text" class="six" value="心里科" disabled="disabled"></td>
+										<td><input type="text" class="six" value="" disabled="disabled"></td>
+										<td><input type="text" class="six" value="心里保健" disabled="disabled"></td>
+										<td><input type="text" class="six" value="心血管系统" disabled="disabled"></td>
+										<td><input type="text" class="six" value="不限" disabled="disabled"></td>
+										<td>
+											<a href="#" class="btn btn-info btn-xs editClass"></i> 修改</a>
+											<a href="#" class="btn btn-danger btn-xs removeClass"><i class="fa fa-trash-o"></i> 删除</a>
+										</td>
+									</tr>
 
-										<li class="tab-red">
-											<a id="tab-add" data-toggle="tab" href="#profile">
-                                                  	 异常添加
-                                                </a>
-										</li>
-										<li class="tab-blue">
-											<a id="tab-edit" data-toggle="tab" href="#editDepart" style="display: none;">
-												异常编辑
-											</a>
-										</li>
-									</ul>
-
-									<div class="tab-content">
-										<div id="home" class="tab-pane in active">
-											<div class="table-toolbar">
-
-												<a href="javascript:deleteBatch()" class="btn btn-darkorange col-padd">
-													<i class="fa fa-minus"></i>批量删除
-												</a>
-												<a href="javascript:newDepart()" class="btn btn-blue col-padd">
-													<i class="fa fa-plus"></i>新增异常
-												</a>
-
-											</div>
-											<table class="table table-striped table-hover table-bordered" id="bodyHtml">
-												<thead>
-													<tr role="row">
-														<th width="5%">
-															<label>
-                                                        <input type="checkbox"  id="hvtck">
-                                                        <span class="text" id="dohovertree"></span>
-                                                        
-                                                    </label>
-														</th>
-														<th>
-															异常编号 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th>
-															异常名称 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th>
-															显示类型 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th>
-															重要性 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th>
-															推荐科室 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th>
-															建议时间 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th>
-															推荐项目 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th>
-															所属系统 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th>
-															性别 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th width="20%">
-															<span class="fa indicator fa-unsorted"></span>
-														</th>
-													</tr>
-												</thead>
-
-												<tbody>
-													<tr>
-														<td>
-															<label>
-                                                       			<input type="checkbox" name="myHoverTreechk">
-                                                        		<span class="text"></span>
-                                                    		</label>
-														</td>
-														<td><input type="text" class="six" value="111111" disabled="disabled"></td>
-														<td><input type="text" class="six" value="心里异常" disabled="disabled"></td>
-														<td>
-															<input type="text" value="心里疾病" class="six" disabled="disabled">
-														</td>
-														<td><input type="text" class="six" value="重要" disabled="disabled"></td>
-														<td><input type="text" class="six" value="心里科" disabled="disabled"></td>
-														<td><input type="text" class="six" value="" disabled="disabled"></td>
-														<td><input type="text" class="six" value="心里保健" disabled="disabled"></td>
-														<td><input type="text" class="six" value="心血管系统" disabled="disabled"></td>
-														<td><input type="text" class="six" value="不限" disabled="disabled"></td>
-														<td>
-															<a href="#" class="btn btn-info btn-xs editClass"></i> 修改</a>
-															<a href="#" class="btn btn-danger btn-xs removeClass"><i class="fa fa-trash-o"></i> 删除</a>
-														</td>
-													</tr>
-													
-												</tbody>
-											</table>
-											<div class="btn-font">
-												<div class="zjtm">
-													显示1到7共7个条目
-												</div>
-												<div class="zjrightb">
-													<ul class="pagination pull-right">
-														<li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li>
-														<li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">上一页</a></li>
-														<li class="footable-page active"><a data-page="0" href="#">1</a></li>
-														<li class="footable-page"><a data-page="1" href="#">2</a></li>
-														<li class="footable-page-arrow"><a data-page="next" href="#next">下一页</a></li>
-														<li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<!-- 新增异常 form -->
-										<div id="profile" class="tab-pane">
-
-											<form id="registrationForm" method="post" class="form-horizontal" data-bv-message="数据无效" data-bv-feedbackicons-valid="glyphicon glyphicon-ok" data-bv-feedbackicons-invalid="glyphicon glyphicon-remove" data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">异常名称<span class="help-inline"><font color="red">*</font> </span></label>
-													<div class="col-lg-8">
-														<input type="text" class="form-control" name="eName" data-bv-notempty="true" data-bv-notempty-message="角色名称不能为空" />
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">显示类型</label>
-													<div class="col-lg-8">
-														<select name="showType" class="form-control">
-													      <option value="0" selected="selected">请选择</option>
-													      <option value="1">类型一</option>
-													      <option value="2">类型二</option>
-													      <option value="3">类型三</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">重要性</label>
-													<div class="col-lg-8">
-														<select name="showType" class="form-control">
-													      <option value="0" selected="selected">请选择</option>
-													      <option value="1">重要</option>
-													      <option value="2">不重要</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">推荐科室</label>
-													<div class="col-lg-8">
-														<select name="departType" class="form-control">
-													      <option value="0" selected="selected">请选择</option>
-													      <option value="1">心里科</option>
-													      <option value="2">外科</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">建议时间</label>
-													<div class="col-lg-8">
-														<input class="form-control" name="time" type="text" >
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">推荐项目</label>
-													<div class="col-lg-8">
-														<select name="departType" class="form-control">
-													      <option value="0" selected="selected">请选择</option>
-													      <option value="1">项目一</option>
-													      <option value="2">项目二</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">所属系统</label>
-													<div class="col-lg-8">
-														<select name="departType" class="form-control">
-													      <option value="0" selected="selected">请选择</option>
-													      <option value="1">系统一</option>
-													      <option value="2">系统二</option>
-														</select>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">性别</label>
-													<div class="col-lg-8">
-														<select name="departType" class="form-control">
-													      <option value="0" selected="selected">不限</option>
-													      <option value="1">男</option>
-													      <option value="2">女</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">其他名称</label>
-													<div class="col-lg-8">
-														<textarea rows="3" name="note" placeholder="多个异常名称用，分开"></textarea>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">解释</label>
-													<div class="col-lg-8">
-														<textarea rows="3" name="explain"></textarea>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">原因</label>
-													<div class="col-lg-8">
-														<textarea rows="3" name="reason"></textarea>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">建议</label>
-													<div class="col-lg-8">
-														<textarea rows="3" name="suggestion" ></textarea>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<div class="col-lg-offset-4 col-lg-8">
-														<input class="btn btn-palegreen" type="submit" value="提交" />
-													</div>
-												</div>
-
-											</form>
-										</div>
-
-										<div id="editDepart" class="tab-pane">
-
-											<form id="editForm" method="post" class="form-horizontal" data-bv-message="数据无效" data-bv-feedbackicons-valid="glyphicon glyphicon-ok" data-bv-feedbackicons-invalid="glyphicon glyphicon-remove" data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">异常名称<span class="help-inline"><font color="red">*</font> </span></label>
-													<div class="col-lg-8">
-														<input type="text" class="form-control" name="eName" data-bv-notempty="true" data-bv-notempty-message="角色名称不能为空" />
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">显示类型</label>
-													<div class="col-lg-8">
-														<select name="showType" class="form-control">
-													      <option value="0" selected="selected">请选择</option>
-													      <option value="1">类型一</option>
-													      <option value="2">类型二</option>
-													      <option value="3">类型三</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">重要性</label>
-													<div class="col-lg-8">
-														<select name="showType" class="form-control">
-													      <option value="0" selected="selected">请选择</option>
-													      <option value="1">重要</option>
-													      <option value="2">不重要</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">推荐科室</label>
-													<div class="col-lg-8">
-														<select name="departType" class="form-control">
-													      <option value="0" selected="selected">请选择</option>
-													      <option value="1">心里科</option>
-													      <option value="2">外科</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">建议时间</label>
-													<div class="col-lg-8">
-														<input class="form-control" name="time" type="text" >
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">推荐项目</label>
-													<div class="col-lg-8">
-														<select name="departType" class="form-control">
-													      <option value="0" selected="selected">请选择</option>
-													      <option value="1">项目一</option>
-													      <option value="2">项目二</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">所属系统</label>
-													<div class="col-lg-8">
-														<select name="departType" class="form-control">
-													      <option value="0" selected="selected">请选择</option>
-													      <option value="1">系统一</option>
-													      <option value="2">系统二</option>
-														</select>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">性别</label>
-													<div class="col-lg-8">
-														<select name="departType" class="form-control">
-													      <option value="0" selected="selected">不限</option>
-													      <option value="1">男</option>
-													      <option value="2">女</option>
-														</select>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">其他名称</label>
-													<div class="col-lg-8">
-														<textarea rows="3" name="note" placeholder="多个异常名称用，分开"></textarea>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">解释</label>
-													<div class="col-lg-8">
-														<textarea rows="3" name="explain"></textarea>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">原因</label>
-													<div class="col-lg-8">
-														<textarea rows="3" name="reason"></textarea>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">建议</label>
-													<div class="col-lg-8">
-														<textarea rows="3" name="suggestion" ></textarea>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<div class="col-lg-offset-4 col-lg-8">
-														<input class="btn btn-palegreen" type="submit" value="提交" />
-													</div>
-												</div>
-
-											</form>
-
-										</div>
-
-										<div id="allocateDepart" class="tab-pane">
-											<div class="well bg-palegreen bordered-right bordered-success">
-												<div class="row">
-													<div class="col-xs-4">
-														角色名称：本公司管理员
-													</div>
-													<div class="col-xs-4">
-														归属机构：销售部
-													</div>
-													<div class="col-xs-4">
-														英文名称：js
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-xs-4">
-														角色类型：assignment
-													</div>
-													<div class="col-xs-4">
-														数据范围：所在公司数据
-													</div>
-												</div>
-											</div>
-
-											<div id="home" class="tab-pane in active">
-												<div class="table-toolbar">
-
-													<!--<a href="javascript:allocateRole()" class="btn btn-blue col-padd">
-													<i class="fa fa-bookmark-o"></i>分配角色
-												</a>-->
-
-												</div>
-												<table class="table table-striped table-hover table-bordered" id="bodyHtml">
-													<thead>
-														<tr role="row">
-															<th>
-																归属公司 <span class="fa indicator fa-unsorted"></span>
-															</th>
-															<th>
-																归属部门 <span class="fa indicator fa-unsorted"></span>
-															</th>
-															<th>
-																登录名 <span class="fa indicator fa-unsorted"></span>
-															</th>
-															<th>
-																姓名 <span class="fa indicator fa-unsorted"></span>
-															</th>
-															<th>
-																电话 <span class="fa indicator fa-unsorted"></span>
-															</th>
-															<th>
-																手机 <span class="fa indicator fa-unsorted"></span>
-															</th>
-															<th>
-																<span class="fa indicator fa-unsorted"></span>
-															</th>
-														</tr>
-													</thead>
-
-													<tbody>
-														<tr>
-															<td><input type="text" class="six" value="山东省总公司" disabled="disabled"></td>
-															<td><input type="text" class="six" value="研发部" disabled="disabled"></td>
-															<td><input type="text" value="sd_admin" class="six" disabled="disabled"></td>
-															<td><input type="text" class="six" value="管理员" disabled="disabled"></td>
-															<td><input type="text" class="six" value="2333333" disabled="disabled"></td>
-															<td><input type="text" class="six" value="15888888888" disabled="disabled"></td>
-															<td>
-																<a href="#" class="btn btn-danger btn-xs removeClass"><i class="fa fa-trash-o"></i> 移除</a>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-
-										</div>
-
+									</tbody>
+								</table>
+								<div class="btn-font">
+									<div class="zjtm">
+										显示1到7共7个条目
+									</div>
+									<div class="zjrightb">
+										<ul class="pagination pull-right">
+											<li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li>
+											<li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">上一页</a></li>
+											<li class="footable-page active"><a data-page="0" href="#">1</a></li>
+											<li class="footable-page"><a data-page="1" href="#">2</a></li>
+											<li class="footable-page-arrow"><a data-page="next" href="#next">下一页</a></li>
+											<li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li>
+										</ul>
 									</div>
 								</div>
 							</div>
-
 						</div>
 
 					</div>
+					<!--<div class="tabbable">
+						<ul class="nav nav-tabs" id="myTab">
+							<li class="active">
+								<a id="tab-list" data-toggle="tab" href="#home">异常列表</a>
+							</li>
+							<li class="tab-red">
+								<a id="tab-add" data-toggle="tab" href="#profile">异常添加</a>
+							</li>
+							<li class="tab-blue">
+								<a id="tab-edit" data-toggle="tab" href="#editDepart" style="display: none;">异常编辑</a>
+							</li>
+						</ul>
 
-					<P class="bottomfont">© 2016 Angel Health Management Ltd. : 天使健康管理有限公司</P>
+						<div class="tab-content">
+							<div id="home" class="tab-pane in active">
+								<div class="table-toolbar">
 
-				<!-- /右侧内容 -->
+									<a href="javascript:deleteBatch()" class="btn btn-darkorange col-padd">
+										<i class="fa fa-minus"></i>批量删除
+									</a>
+									<a href="javascript:newDepart()" class="btn btn-blue col-padd">
+										<i class="fa fa-plus"></i>新增异常
+									</a>
+
+								</div>
+								<table class="table table-striped table-hover table-bordered" id="bodyHtml">
+									<thead>
+										<tr role="row">
+											<th width="5%">
+												<label>
+											<input type="checkbox"  id="hvtck">
+											<span class="text" id="dohovertree"></span>
+
+										</label>
+											</th>
+											<th>
+												异常编号 <span class="fa indicator fa-unsorted"></span>
+											</th>
+											<th>
+												异常名称 <span class="fa indicator fa-unsorted"></span>
+											</th>
+											<th>
+												显示类型 <span class="fa indicator fa-unsorted"></span>
+											</th>
+											<th>
+												重要性 <span class="fa indicator fa-unsorted"></span>
+											</th>
+											<th>
+												推荐科室 <span class="fa indicator fa-unsorted"></span>
+											</th>
+											<th>
+												建议时间 <span class="fa indicator fa-unsorted"></span>
+											</th>
+											<th>
+												推荐项目 <span class="fa indicator fa-unsorted"></span>
+											</th>
+											<th>
+												所属系统 <span class="fa indicator fa-unsorted"></span>
+											</th>
+											<th>
+												性别 <span class="fa indicator fa-unsorted"></span>
+											</th>
+											<th width="20%">
+												操作
+												<span class="fa indicator fa-unsorted"></span>
+											</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>
+												<label>
+													<input type="checkbox" name="myHoverTreechk">
+													<span class="text"></span>
+												</label>
+											</td>
+											<td><input type="text" class="six" value="111111" disabled="disabled"></td>
+											<td><input type="text" class="six" value="心里异常" disabled="disabled"></td>
+											<td>
+												<input type="text" value="心里疾病" class="six" disabled="disabled">
+											</td>
+											<td><input type="text" class="six" value="重要" disabled="disabled"></td>
+											<td><input type="text" class="six" value="心里科" disabled="disabled"></td>
+											<td><input type="text" class="six" value="" disabled="disabled"></td>
+											<td><input type="text" class="six" value="心里保健" disabled="disabled"></td>
+											<td><input type="text" class="six" value="心血管系统" disabled="disabled"></td>
+											<td><input type="text" class="six" value="不限" disabled="disabled"></td>
+											<td>
+												<a href="#" class="btn btn-info btn-xs editClass"></i> 修改</a>
+												<a href="#" class="btn btn-danger btn-xs removeClass"><i class="fa fa-trash-o"></i> 删除</a>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+								<div class="btn-font">
+									<div class="zjtm">
+										显示1到7共7个条目
+									</div>
+									<div class="zjrightb">
+										<ul class="pagination pull-right">
+											<li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li>
+											<li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">上一页</a></li>
+											<li class="footable-page active"><a data-page="0" href="#">1</a></li>
+											<li class="footable-page"><a data-page="1" href="#">2</a></li>
+											<li class="footable-page-arrow"><a data-page="next" href="#next">下一页</a></li>
+											<li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							&lt;!&ndash; 新增异常 form &ndash;&gt;
+							<div id="profile" class="tab-pane">
+
+								<form id="registrationForm" method="post" class="form-horizontal" data-bv-message="数据无效" data-bv-feedbackicons-valid="glyphicon glyphicon-ok" data-bv-feedbackicons-invalid="glyphicon glyphicon-remove" data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">异常名称<span class="help-inline"><font color="red">*</font> </span></label>
+										<div class="col-lg-8">
+											<input type="text" class="form-control" name="eName" data-bv-notempty="true" data-bv-notempty-message="角色名称不能为空" />
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">显示类型</label>
+										<div class="col-lg-8">
+											<select name="showType" class="form-control">
+											  <option value="0" selected="selected">请选择</option>
+											  <option value="1">类型一</option>
+											  <option value="2">类型二</option>
+											  <option value="3">类型三</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">重要性</label>
+										<div class="col-lg-8">
+											<select name="showType" class="form-control">
+											  <option value="0" selected="selected">请选择</option>
+											  <option value="1">重要</option>
+											  <option value="2">不重要</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">推荐科室</label>
+										<div class="col-lg-8">
+											<select name="departType" class="form-control">
+											  <option value="0" selected="selected">请选择</option>
+											  <option value="1">心里科</option>
+											  <option value="2">外科</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">建议时间</label>
+										<div class="col-lg-8">
+											<input class="form-control" name="time" type="text" >
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">推荐项目</label>
+										<div class="col-lg-8">
+											<select name="departType" class="form-control">
+											  <option value="0" selected="selected">请选择</option>
+											  <option value="1">项目一</option>
+											  <option value="2">项目二</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">所属系统</label>
+										<div class="col-lg-8">
+											<select name="departType" class="form-control">
+											  <option value="0" selected="selected">请选择</option>
+											  <option value="1">系统一</option>
+											  <option value="2">系统二</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">性别</label>
+										<div class="col-lg-8">
+											<select name="departType" class="form-control">
+											  <option value="0" selected="selected">不限</option>
+											  <option value="1">男</option>
+											  <option value="2">女</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">其他名称</label>
+										<div class="col-lg-8">
+											<textarea rows="3" name="note" placeholder="多个异常名称用，分开"></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">解释</label>
+										<div class="col-lg-8">
+											<textarea rows="3" name="explain"></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">原因</label>
+										<div class="col-lg-8">
+											<textarea rows="3" name="reason"></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">建议</label>
+										<div class="col-lg-8">
+											<textarea rows="3" name="suggestion" ></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<div class="col-lg-offset-4 col-lg-8">
+											<input class="btn btn-palegreen" type="submit" value="提交" />
+										</div>
+									</div>
+
+								</form>
+							</div>
+
+							<div id="editDepart" class="tab-pane">
+
+								<form id="editForm" method="post" class="form-horizontal" data-bv-message="数据无效" data-bv-feedbackicons-valid="glyphicon glyphicon-ok" data-bv-feedbackicons-invalid="glyphicon glyphicon-remove" data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">异常名称<span class="help-inline"><font color="red">*</font> </span></label>
+										<div class="col-lg-8">
+											<input type="text" class="form-control" name="eName" data-bv-notempty="true" data-bv-notempty-message="角色名称不能为空" />
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">显示类型</label>
+										<div class="col-lg-8">
+											<select name="showType" class="form-control">
+											  <option value="0" selected="selected">请选择</option>
+											  <option value="1">类型一</option>
+											  <option value="2">类型二</option>
+											  <option value="3">类型三</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">重要性</label>
+										<div class="col-lg-8">
+											<select name="showType" class="form-control">
+											  <option value="0" selected="selected">请选择</option>
+											  <option value="1">重要</option>
+											  <option value="2">不重要</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">推荐科室</label>
+										<div class="col-lg-8">
+											<select name="departType" class="form-control">
+											  <option value="0" selected="selected">请选择</option>
+											  <option value="1">心里科</option>
+											  <option value="2">外科</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">建议时间</label>
+										<div class="col-lg-8">
+											<input class="form-control" name="time" type="text" >
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">推荐项目</label>
+										<div class="col-lg-8">
+											<select name="departType" class="form-control">
+											  <option value="0" selected="selected">请选择</option>
+											  <option value="1">项目一</option>
+											  <option value="2">项目二</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">所属系统</label>
+										<div class="col-lg-8">
+											<select name="departType" class="form-control">
+											  <option value="0" selected="selected">请选择</option>
+											  <option value="1">系统一</option>
+											  <option value="2">系统二</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">性别</label>
+										<div class="col-lg-8">
+											<select name="departType" class="form-control">
+											  <option value="0" selected="selected">不限</option>
+											  <option value="1">男</option>
+											  <option value="2">女</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">其他名称</label>
+										<div class="col-lg-8">
+											<textarea rows="3" name="note" placeholder="多个异常名称用，分开"></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">解释</label>
+										<div class="col-lg-8">
+											<textarea rows="3" name="explain"></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">原因</label>
+										<div class="col-lg-8">
+											<textarea rows="3" name="reason"></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-4 control-label">建议</label>
+										<div class="col-lg-8">
+											<textarea rows="3" name="suggestion" ></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<div class="col-lg-offset-4 col-lg-8">
+											<input class="btn btn-palegreen" type="submit" value="提交" />
+										</div>
+									</div>
+
+								</form>
+
+
+							<a href="javascript:deleteBatch()"
+								class="btn btn-darkorange col-padd"> <i
+								class="fa fa-minus"></i>批量删除
+							</a> <a href="exception_manager_add.html"
+								class="btn btn-blue col-padd"> <i class="fa fa-plus"></i>新增异常
+							</a>
+
+
+							<div id="allocateDepart" class="tab-pane">
+								<div class="well bg-palegreen bordered-right bordered-success">
+									<div class="row">
+										<div class="col-xs-4">
+											角色名称：本公司管理员
+										</div>
+										<div class="col-xs-4">
+											归属机构：销售部
+										</div>
+										<div class="col-xs-4">
+											英文名称：js
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-4">
+											角色类型：assignment
+										</div>
+										<div class="col-xs-4">
+											数据范围：所在公司数据
+										</div>
+									</div>
+								</div>
+
+								<div id="home" class="tab-pane in active">
+									<div class="table-toolbar">
+
+										&lt;!&ndash;<a href="javascript:allocateRole()" class="btn btn-blue col-padd">
+										<i class="fa fa-bookmark-o"></i>分配角色
+									</a>&ndash;&gt;
+
+									</div>
+									<table class="table table-striped table-hover table-bordered" id="bodyHtml">
+										<thead>
+											<tr role="row">
+												<th>
+													归属公司 <span class="fa indicator fa-unsorted"></span>
+												</th>
+												<th>
+													归属部门 <span class="fa indicator fa-unsorted"></span>
+												</th>
+												<th>
+													登录名 <span class="fa indicator fa-unsorted"></span>
+												</th>
+												<th>
+													姓名 <span class="fa indicator fa-unsorted"></span>
+												</th>
+												<th>
+													电话 <span class="fa indicator fa-unsorted"></span>
+												</th>
+												<th>
+													手机 <span class="fa indicator fa-unsorted"></span>
+												</th>
+												<th>
+													<span class="fa indicator fa-unsorted"></span>
+												</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td><input type="text" class="six" value="山东省总公司" disabled="disabled"></td>
+												<td><input type="text" class="six" value="研发部" disabled="disabled"></td>
+												<td><input type="text" value="sd_admin" class="six" disabled="disabled"></td>
+												<td><input type="text" class="six" value="管理员" disabled="disabled"></td>
+												<td><input type="text" class="six" value="2333333" disabled="disabled"></td>
+												<td><input type="text" class="six" value="15888888888" disabled="disabled"></td>
+												<td>
+													<a href="#" class="btn btn-danger btn-xs removeClass"><i class="fa fa-trash-o"></i> 移除</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+
+						</div>
+						<table class="table table-striped table-hover table-bordered"
+							id="bodyHtml">
+							<thead>
+								<tr role="row">
+									<th width="5%"><label> <input type="checkbox"
+											id="hvtck"> <span class="text" id="dohovertree"></span>
+
+									</label></th>
+									<th>异常编号 <span class="fa indicator fa-unsorted"></span>
+									</th>
+									<th>异常名称 <span class="fa indicator fa-unsorted"></span>
+									</th>
+									<th>显示类型 <span class="fa indicator fa-unsorted"></span>
+									</th>
+									<th>重要性 <span class="fa indicator fa-unsorted"></span>
+									</th>
+									<th>推荐科室 <span class="fa indicator fa-unsorted"></span>
+									</th>
+									<th>建议时间 <span class="fa indicator fa-unsorted"></span>
+									</th>
+									<th>推荐项目 <span class="fa indicator fa-unsorted"></span>
+									</th>
+									<th>所属系统 <span class="fa indicator fa-unsorted"></span>
+									</th>
+									<th>性别 <span class="fa indicator fa-unsorted"></span>
+									</th>
+									<th width="20%"><span class="fa indicator fa-unsorted"></span>
+									</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td><label> <input type="checkbox"
+											name="myHoverTreechk"> <span class="text"></span>
+									</label></td>
+									<td><input type="text" class="six" value="111111"
+										disabled="disabled"></td>
+									<td><input type="text" class="six" value="心里异常"
+										disabled="disabled"></td>
+									<td><input type="text" value="心里疾病" class="six"
+										disabled="disabled"></td>
+									<td><input type="text" class="six" value="重要"
+										disabled="disabled"></td>
+									<td><input type="text" class="six" value="心里科"
+										disabled="disabled"></td>
+									<td><input type="text" class="six" value=""
+										disabled="disabled"></td>
+									<td><input type="text" class="six" value="心里保健"
+										disabled="disabled"></td>
+									<td><input type="text" class="six" value="心血管系统"
+										disabled="disabled"></td>
+									<td><input type="text" class="six" value="不限"
+										disabled="disabled"></td>
+									<td><a href="#" class="btn btn-info btn-xs editClass"></i>
+											修改</a> <a href="#" class="btn btn-danger btn-xs removeClass"><i
+											class="fa fa-trash-o"></i> 删除</a></td>
+								</tr>
+
+							</tbody>
+						</table>
+						<div class="btn-font">
+							<div class="zjtm">显示1到7共7个条目</div>
+							<div class="zjrightb">
+								<ul class="pagination pull-right">
+									<li class="footable-page-arrow disabled"><a
+										data-page="first" href="#first">«</a></li>
+									<li class="footable-page-arrow disabled"><a
+										data-page="prev" href="#prev">上一页</a></li>
+									<li class="footable-page active"><a data-page="0"
+										href="#">1</a></li>
+									<li class="footable-page"><a data-page="1" href="#">2</a></li>
+									<li class="footable-page-arrow"><a data-page="next"
+										href="#next">下一页</a></li>
+									<li class="footable-page-arrow"><a data-page="last"
+										href="#last">»</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>-->
+				</div>
+
+
+				</div>
+				<!--Widget Body-->
 			</div>
+		<P class="bottomfont">© 2016 Angel Health Management Ltd. :天使健康管理有限公司</P>
+	</div>
+<!--Basic Scripts-->
+<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
+<script src="../../dep/moban/js/bootstrap.min.js"></script>
+<!--Beyond Scripts-->
+<script src="../../dep/moban/js/beyond.min.js"></script>
 
-		</div>
-		
-		<!--Basic Scripts-->
-		<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
-		<script src="../../dep/moban/js/bootstrap.min.js"></script>
-
-		<!--Beyond Scripts-->
-		<script src="../../dep/moban/js/beyond.min.js"></script>
-
-		<!---->
-		<script src="../../dep/moban/js/validation/bootstrapValidator.js"></script>
-		
-
-		<script>
-			$(function() {
-				$("#registrationForm").bootstrapValidator();
-				$("#editForm").bootstrapValidator();
-				$(".editClass").on('click', function() {
-					editClass(this)
-				});
-				//编辑
-				function editClass(_this) {
-					$('#tab-edit').show();
-					$('#tab-edit').click();
+<script src="../../dep/moban/js/validation/bootstrapValidator.js"></script>
+<script>
+	$(function() {
+		$("#registrationForm").bootstrapValidator();
+		$("#editForm").bootstrapValidator();
+		$(".editClass").on('click', function() {
+			editClass(this)
+		});
+		//编辑
+		function editClass(_this) {
+			$('#tab-edit').show();
+			$('#tab-edit').click();
+		}
+		$(".removeClass").on('click', function() {
+			removeClass(this)
+		});
+		// 删除
+		function removeClass(_this) {
+			$(_this).parent().parent().remove();
+		}
+		$('#tab-add,#tab-list').click(function() {
+			$('#tab-edit,#tab-allocate').hide();
+		})
+		$('.distributionClass').click(function() {
+			allocateClass(this);
+		})
+		//分配
+		function allocateClass(_this) {
+			$('#tab-allocate').show();
+			$('#tab-allocate').click();
+		}
+	});
+	window.onload = function() {
+		var checkboxs = document.getElementsByName("myHove" + "rTreechk");
+		var hvtck = document.getElementById("hvtck");
+		cklen = checkboxs.length;
+		hvtck.onclick = function() {
+			if (this.checked == true) {
+				for (var i = 0; i < cklen; i++) {
+					checkboxs[i].checked = true;
 				}
-				$(".removeClass").on('click', function() {
-					removeClass(this)
-				});
-				// 删除
-				function removeClass(_this) {
-					$(_this).parent().parent().remove();
+				document.getElementById("dohovert" + "ree").innerHTML = ""
+			} else {
+				for (var i = 0; i < cklen; i++) {
+					checkboxs[i].checked = false;
 				}
-				$('#tab-add,#tab-list').click(function() {
-					$('#tab-edit,#tab-allocate').hide();
-				})
-				$('.distributionClass').click(function() {
-						allocateClass(this);
-					})
-					//分配
-				function allocateClass(_this) {
-					$('#tab-allocate').show();
-					$('#tab-allocate').click();
-				}
-			});
-			window.onload = function() {
-				var checkboxs = document.getElementsByName("myHove" + "rTreechk");
-				var hvtck = document.getElementById("hvtck");
-				cklen = checkboxs.length;
-				hvtck.onclick = function() {
-					if (this.checked == true) {
-						for (var i = 0; i < cklen; i++) {
-							checkboxs[i].checked = true;
-						}
-						document.getElementById("dohovert" + "ree").innerHTML = ""
-					} else {
-						for (var i = 0; i < cklen; i++) {
-							checkboxs[i].checked = false;
-						}
-						document.getElementById("dohovertree").innerHTML = ""
-					}
-				}
+				document.getElementById("dohovertree").innerHTML = ""
 			}
+		}
+	}
 
-			function newDepart() {
-				$('#tab-add').click();
-			}
+	function newDepart() {
+		$('#tab-add').click();
+	}
 
-			function deleteBatch() {
-				$('input[name="myHoverTreechk"]').each(function() {
-					if ($(this).is(':checked'))
-						$(this).parent().parent().parent().remove();
-				})
-			}
-			$('input.checkedAll').change(function() {
+	function deleteBatch() {
+		$('input[name="myHoverTreechk"]').each(function() {
+			if ($(this).is(':checked'))
+				$(this).parent().parent().parent().remove();
+		})
+	}
+	$('input.checkedAll').change(
+			function() {
 				if ($(this).is(':checked')) {
-					$(this).parent('label').parent('.checkbox').siblings('.row').find('input').prop("checked", 'checked');
+					$(this).parent('label').parent('.checkbox').siblings(
+							'.row').find('input')
+							.prop("checked", 'checked');
 				} else {
-					$(this).parent('label').parent('.checkbox').siblings('.row').find('input').prop('checked', '');
+					$(this).parent('label').parent('.checkbox').siblings(
+							'.row').find('input').prop('checked', '');
 				}
 			})
-			$('input.checkedSingle').change(function() {
+	$('input.checkedSingle').change(
+			function() {
 				if ($(this).is(':checked')) {
 					var isAllChecked = 'checked';
-					$(this).closest('.row').find('.checkedSingle').each(function() {
-						if (!$(this).is(':checked'))
-							isAllChecked = '';
-					})
-					$(this).closest('.row').siblings('.checkbox').find('.checkedAll').prop('checked', isAllChecked);
+					$(this).closest('.row').find('.checkedSingle').each(
+							function() {
+								if (!$(this).is(':checked'))
+									isAllChecked = '';
+							})
+					$(this).closest('.row').siblings('.checkbox').find(
+							'.checkedAll').prop('checked', isAllChecked);
 				} else {
-					$(this).closest('.row').siblings('.checkbox').find('.checkedAll').prop('checked', '');
+					$(this).closest('.row').siblings('.checkbox').find(
+							'.checkedAll').prop('checked', '');
 				}
 			})
-		</script>
-
-	</body>
-
+</script>
+</body>
 </html>

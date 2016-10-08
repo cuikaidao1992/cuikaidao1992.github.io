@@ -1,29 +1,15 @@
 .btn-bottmb{ margin-top: 20px;margin-bottom: 20px;}
 .btn-bottmb > button{ margin-right: 20px;}
 .h_textarea{ padding: 20px; min-height: 200px;}
-.cour-mart{ margin-top: 20px; cursor: pointer;}
+.cour-mart{ margin-top: 22px; cursor: pointer;}
 .c-addrss{text-align: left;margin-left: 0; background: #f9f9f9; padding-bottom: 20px;margin-top: 20px;}
 .d-address{margin-left: 15px;padding-top: 7px;}
 
-.adress{width: 30px; height: 30px; background: #bcbcbc;border-radius: 3px;
-transition:width 1s, height 1s;
--moz-transition:width 1s, height 1s, -moz-transform 1s; 
--webkit-transition:width 1s, height 1s, -webkit-transform 1s; 
--o-transition:width 1s, height 1s, -o-transform 1s;
-cursor: pointer; 
-}
-.addss{width: 30px; height: 30px; background: #bcbcbc;
- margin-top: 20px; border-radius: 3px;
- transition:width 1s, height 1s;
--moz-transition:width 1s, height 1s, -moz-transform 1s; 
--webkit-transition:width 1s, height 1s, -webkit-transform 1s; 
--o-transition:width 1s, height 1s, -o-transform 1s;
-cursor: pointer; }
-.adress:hover , .addss:hover{
 
- transform:rotate(180deg);
--moz-transform:rotate(180deg); 
--webkit-transform:rotate(180deg); 
--o-transform:rotate(180deg);
-}
 
+.addfots{ font-size:20px; padding-left:4px; padding-top: 4px;;}
+.addssfont{ padding: 4px 10px 0 10px;}
+
+/*地址补充*/
+.address{width:25px;height:25px;background:#57b5e3;color:#fff;border-radius:3px;text-align:center;padding-top:6px;cursor:pointer}
+.address_min{width:25px;height:25px;background:#aaa;color:#fff;border-radius:3px;text-align:center;padding-top:6px;cursor:pointer;margin-top:6px}

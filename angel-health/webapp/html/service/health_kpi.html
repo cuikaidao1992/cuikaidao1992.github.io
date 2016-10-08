@@ -1,582 +1,254 @@
 <html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="renderer" content="webkit">
-		<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<title>体检库指标项配置</title>
 
-		<title>体检库指标项配置</title>
+	<link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+	<!--Basic Styles-->
+	<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/weather-icons.min.css" />
+	<!--Beyond styles-->
+	<link href="../../dep/css/demo.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/typicons.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/animate.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../../home/common/css.css">
+	<link rel="stylesheet" href="../../dep/datetimepicker/css/bootstrap-datetimepicker.min.css" />
 
-		<link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
-		<!--Basic Styles-->
-		<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
-		<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
-		<link href="../../dep/moban/css/weather-icons.min.css" />
-		<!--Beyond styles-->
-		<link href="../../dep/css/demo.min.css" rel="stylesheet" />
-		<link href="../../dep/moban/css/typicons.min.css" rel="stylesheet" />
-		<link href="../../dep/moban/css/animate.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="../../home/common/css.css">
-		<link rel="stylesheet" href="../../dep/datetimepicker/css/bootstrap-datetimepicker.min.css" />
-		
-		<link rel="stylesheet" href="../../dep/treeTable/css/jquery.treetable.css" />
-		<link rel="stylesheet" href="../../dep/treeTable/css/jquery.treetable.theme.default.css" />
-		
-		<link rel="stylesheet" href="../../home/service/service.css"/>
+	<link rel="stylesheet" href="../../dep/treeTable/css/jquery.treetable.css" />
+	<link rel="stylesheet" href="../../dep/treeTable/css/jquery.treetable.theme.default.css" />
 
-		<link href="../../dep/moban/css/beyond.min.css" rel="stylesheet" />
-	</head>
-
-	<body>
-
-		<!-- /Navbar -->
-		<!-- Main Container -->
-		<div class="main-container container-fluid">
-			<!-- Page Container -->
-			<!-- Page Sidebar -->
-			<!-- /右侧内容 -->
-			<div class="page-content">
-				<div class="page-container">
-					<!-- 面包屑导航 -->
-					<div class="page-breadcrumbs">
-						<ul class="breadcrumb">
-							<li>
-								<i class="fa fa-home"></i>
-								<a href="index.html">业务配置管理</a>
-							</li>
-							<li class="active">
-								<a href="###">体检库指标项配置</a>
-							</li>
-						</ul>
-					</div>
-					<!-- /面包屑导航-->
-					<!--头部按钮-->
-					<div class="page-header position-relative">
-						<div class="header-title">
-							<h1>
-                            	体检库指标项配置
-                        	</h1>
-						</div>
-						<!--Header Buttons-->
-						<div class="header-buttons">
-							<a class="sidebar-toggler" href="#">
-								<i class="fa fa-arrows-h"></i>
-							</a>
-							<a class="refresh" id="refresh-toggler" href="">
-								<i class="glyphicon glyphicon-refresh"></i>
-							</a>
-							<a class="fullscreen" id="fullscreen-toggler" href="#">
-								<i class="glyphicon glyphicon-fullscreen"></i>
-							</a>
-						</div>
-						<!--头部按钮end-->
-					</div>
-					<div class="page-body">
-						<div class="row">
-
-							<div class="col-xs-12 col-md-12">
-
-								<div class="tabbable">
-									<ul class="nav nav-tabs" id="myTab">
-										<li class="active">
-											<a id="tab-list" data-toggle="tab" href="#home">
-												体检项目列表
-											</a>
-										</li>
-
-										<li class="tab-red">
-											<a id="tab-add" data-toggle="tab" href="#profile">
-												体检指标添加
-											</a>
-										</li>
-										<li class="tab-blue">
-											<a id="tab-edit" data-toggle="tab" href="#editDepart" style="display: none;">
-												体检指标编辑
-											</a>
-										</li>
-										<li class="tab-blue">
-											<a id="tab-editPro" data-toggle="tab" href="#editPro" style="display: none;">
-												体检项目编辑
-											</a>
-										</li>
-									</ul>
-
-									<div class="tab-content">
-										<div id="home" class="tab-pane in active">
-											<div class="table-toolbar">
-													<div style="display: inline-block;margin-left: 10px;">
-														<label class="control-label">体检库：</label>
-														<select class="form-control" style="width: 200px;display: inline-block;vertical-align: middle;">
-															<option value="1">长沙市公安局</option>
-															<option value="2">北京市公安局</option>
-														</select>
-													</div>
-													
-													<div style="display: inline-block;margin-left: 10px">
-														<label class="control-label">项目名称：</label>
-														<input class="form-control" type="text" style="width: 200px;display: inline-block;"/>
-													</div>
-													
-													<div style="display: inline-block;margin-left: 10px;">
-														<label class="control-label">适宜性别：</label>
-														<select class="form-control" style="width: 200px;display: inline-block;vertical-align: middle;">
-															<option value="0">不限</option>
-															<option value="1">男</option>
-															<option value="2">女</option>
-														</select>
-													</div>
-													
-													<div style="display: inline-block;margin-left: 10px;">
-														<a class="btn  form-control"><i class="glyphicon glyphicon-search"></i>搜索</a>
-													</div>
-											</div>
-											<table class="table table-striped table-hover table-bordered" id="bodyHtml">
-												<thead>
-													<tr>
-														<th>
-															项目名称 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th>
-															性别 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th>
-															推荐类型 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th>
-															正常参考 <span class="fa indicator fa-unsorted"></span>
-														</th>
-														<th width="20%">
-															<span class="fa indicator fa-unsorted"></span>
-														</th>
-													</tr>
-												</thead>
-
-												<tbody>
-													<tr data-tt-id="1">
-														<td>一般检查</td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td>
-															<a href="#" class="btn btn-info btn-xs editClass1">
-																</i> 修改</a>
-															<a href="#" class="btn btn-danger btn-xs re	moveClass"><i class="fa fa-trash-o"></i> 删除</a>
-														</td>
-													</tr>
-													<tr data-tt-id="2" data-tt-parent-id="1">
-														<td>体重</td>
-														<td>不限</td>
-														<td></td>
-														<td></td>
-														<td>
-															<a href="#" class="btn btn-info btn-xs editClass2">
-																</i> 修改</a>
-															<a href="#" class="btn btn-danger btn-xs re	moveClass"><i class="fa fa-trash-o"></i> 删除</a>
-														</td>
-													</tr>
-													<tr data-tt-id="3" data-tt-parent-id="1">
-														<td>右眼视力</td>
-														<td>不限</td>
-														<td></td>
-														<td></td>
-														<td>
-															<a href="#" class="btn btn-info btn-xs editClass2">
-																</i> 修改</a>
-															<a href="#" class="btn btn-danger btn-xs re	moveClass"><i class="fa fa-trash-o"></i> 删除</a>
-														</td>
-													</tr>
-													<tr data-tt-id="4" >
-														<td>耳鼻喉常规检查</td>
-														<td></td>
-														<td></td>
-														<td></td>
-														<td>
-															<a href="#" class="btn btn-info btn-xs editClass1">
-																</i> 修改</a>
-															<a href="#" class="btn btn-danger btn-xs re	moveClass"><i class="fa fa-trash-o"></i> 删除</a>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-										<!-- 新增体检库指标项 form -->
-										<div id="profile" class="tab-pane">
-
-											<form id="registrationForm" method="post" class="form-horizontal">
-												<div class="form-group">
-													<label class="col-lg-4 control-label">是否新增项目</label>
-													<div>
-														<div class="control-group">
-			                                                <div class="radio" style="display: inline-block;">
-			                                                    <label>
-			                                                        <input name="isNew" value="1" type="radio" >
-			                                                        <span class="text">是</span>
-			                                                    </label>
-			                                                </div>
-			                                                <div class="radio" style="display: inline-block;">
-			                                                    <label>
-			                                                        <input name="isNew" value="0" type="radio" checked="checked">
-			                                                        <span class="text">否</span>
-			                                                    </label>
-			                                                </div>
-			                                            </div>
-													</div>
-												</div>	
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">选择项目</label>
-													<div class="col-lg-8">
-														<select id="proSelect" class="form-control" name="projectName">
-																<option value="0" selected="selected">请选择</option>
-																<option value="1">一般检查</option>
-																<option value="2">耳鼻喉常规</option>
-														</select>
-														<input id="proInput" placeholder="项目名称" style="display: none;" type="text" name="projectName" class="form-control" data-bv-notempty="true" data-bv-notempty-message="项目名称不能为空"/>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">科室名称</label>
-													<div class="col-lg-8">
-														<select class="form-control" name="departName">
-															<option value="0" selected="selected">请选择</option>
-															<option value="1">外科</option>
-															<option value="2">内科</option>
-															<option value="3">妇科</option>
-														</select>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">指标项名称<span class="help-inline"><font color="red">*</font></span></label>
-													<div class="col-lg-8">
-														<input type="text" name="kpiName" class="form-control" data-bv-notempty="true" data-bv-notempty-message="指标项名称不能为空"/>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">适应性别</label>
-													<div class="col-lg-8">
-														<select type="text" class="form-control" name="sex">
-															<option value="0" selected="selected">不限</option>			
-															<option value="1" >男性</option>
-															<option value="2">女性</option>
-														</select>	
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">适宜年龄</label>
-													<div class="col-lg-8">
-														<input type="text" name="lowerAge" class="form-control" placeholder="最小年龄" style="width: 200px;display: inline-block;"/>
-														~
-														<input type="text" name="higherAge" class="form-control" placeholder="最大年龄" style="width: 200px;display: inline-block;"/>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">正常参考</label>
-													<div class="col-lg-8">
-														<input type="text" name="normal" class="form-control"/>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">正常范围</label>
-													<div class="col-lg-8">
-														<input type="text" name="lowerAge" class="form-control" placeholder="最小范围" style="width: 200px;display: inline-block;"/>
-														~
-														<input type="text" name="higherAge" class="form-control" placeholder="最大范围" style="width: 200px;display: inline-block;"/>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">数据单位</label>
-													<div class="col-lg-8">
-														<input type="text" name="unit" class="form-control"/>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">是否重要</label>
-													<div class="col-lg-8">
-														<select type="text" class="form-control" name="important">
-															<option value="1" selected="selected">是</option>
-															<option value="2">不是</option>
-														</select>	
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">是否对比</label>
-													<div class="col-lg-8">
-														<select type="text" class="form-control" name="important">
-															<option value="1" selected="selected">是</option>
-															<option value="2">不是</option>
-														</select>	
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">指标项说明</label>
-													<div class="col-lg-8">
-														<textarea class="form-control" name="msgContent" rows="3"></textarea>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<div class="col-lg-offset-4 col-lg-8">
-														<input class="btn btn-palegreen" type="submit" value="提交" />
-													</div>
-												</div>
-
-											</form>
-										</div>
-
-										<div id="editDepart" class="tab-pane">
-
-											<form id="editForm" method="post" class="form-horizontal">
-												<div class="form-group">
-													<label class="col-lg-4 control-label">是否新增项目</label>
-													<div>
-														<div class="control-group">
-			                                                <div class="radio" style="display: inline-block;">
-			                                                    <label>
-			                                                        <input name="isNew" value="1" type="radio" >
-			                                                        <span class="text">是</span>
-			                                                    </label>
-			                                                </div>
-			                                                <div class="radio" style="display: inline-block;">
-			                                                    <label>
-			                                                        <input name="isNew" value="0" type="radio" checked="checked">
-			                                                        <span class="text">否</span>
-			                                                    </label>
-			                                                </div>
-			                                            </div>
-													</div>
-												</div>	
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">选择项目</label>
-													<div class="col-lg-8">
-														<select id="proSelect" class="form-control" name="projectName">
-																<option value="0" >请选择</option>
-																<option value="1" selected="selected">一般检查</option>
-																<option value="2">耳鼻喉常规</option>
-														</select>
-														<input id="proInput" placeholder="项目名称" style="display: none;" type="text" name="projectName" class="form-control" data-bv-notempty="true" data-bv-notempty-message="项目名称不能为空"/>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">科室名称</label>
-													<div class="col-lg-8">
-														<select class="form-control" name="departName">
-															<option value="0" >请选择</option>
-															<option value="1" selected="selected">外科</option>
-															<option value="2">内科</option>
-															<option value="3">妇科</option>
-														</select>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">指标项名称<span class="help-inline"><font color="red">*</font></span></label>
-													<div class="col-lg-8">
-														<input type="text" value="体重" name="kpiName" class="form-control" data-bv-notempty="true" data-bv-notempty-message="指标项名称不能为空"/>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-lg-4 control-label">适应性别</label>
-													<div class="col-lg-8">
-														<select type="text" class="form-control" name="sex">
-															<option value="0" selected="selected">不限</option>			
-															<option value="1" >男性</option>
-															<option value="2">女性</option>
-														</select>	
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">适宜年龄</label>
-													<div class="col-lg-8">
-														<input type="text" name="lowerAge" class="form-control" placeholder="最小年龄" style="width: 200px;display: inline-block;"/>
-														~
-														<input type="text" name="higherAge" class="form-control" placeholder="最大年龄" style="width: 200px;display: inline-block;"/>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">正常参考</label>
-													<div class="col-lg-8">
-														<input type="text" name="normal" class="form-control"/>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">正常范围</label>
-													<div class="col-lg-8">
-														<input type="text" name="lowerAge" class="form-control" placeholder="最小范围" style="width: 200px;display: inline-block;"/>
-														~
-														<input type="text" name="higherAge" class="form-control" placeholder="最大范围" style="width: 200px;display: inline-block;"/>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">数据单位</label>
-													<div class="col-lg-8">
-														<input value="kg" type="text" name="unit" class="form-control"/>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">是否重要</label>
-													<div class="col-lg-8">
-														<select type="text" class="form-control" name="important">
-															<option value="1" >是</option>
-															<option value="2" selected="selected">不是</option>
-														</select>	
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">是否对比</label>
-													<div class="col-lg-8">
-														<select type="text" class="form-control" name="important">
-															<option value="1" selected="selected">是</option>
-															<option value="2">不是</option>
-														</select>	
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<label class="col-lg-4 control-label">指标项说明</label>
-													<div class="col-lg-8">
-														<textarea class="form-control" name="msgContent" rows="3">一个常规体重检查</textarea>
-													</div>
-												</div>
-												
-												<div class="form-group">
-													<div class="col-lg-offset-4 col-lg-8">
-														<input class="btn btn-palegreen" type="submit" value="提交" />
-													</div>
-												</div>
-											</form>
-
-										</div>
-										
-										<div id="editPro" class="tab-pane">
-											<form id="editForm" method="post" class="form-horizontal">
-												<div class="form-group">
-													<label class="col-lg-4 control-label">项目名称<span class="help-inline"><font color="red">*</font></span></label>
-													<div class="col-lg-8">
-														<input value="一般检查" type="text" name="unit" class="form-control" data-bv-notempty="true" data-bv-notempty-message="指标项名称不能为空"/>
-													</div>
-												</div>
-												<div class="form-group">
-													<div class="col-lg-offset-4 col-lg-8">
-														<input class="btn btn-palegreen" type="submit" value="提交" />
-													</div>
-												</div>
-											</form>
-										</div>	
-
-									</div>
+	<link rel="stylesheet" href="../../home/service/service.css"/>
+	<link href="../../dep/moban/css/beyond.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="wrapper">
+		<div class="page-container">
+			<!-- 面包屑导航 -->
+			<div class="page-breadcrumbs">
+				<ul class="breadcrumb">
+					<li>
+						<i class="fa fa-home"></i>
+						<a href="index.html">业务配置管理</a>
+					</li>
+					<li class="active">
+						<a href="#">体检库指标项配置</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /面包屑导航-->
+			<!--头部按钮-->
+			<div class="page-header position-relative">
+				<div class="header-title">
+					<h1>体检库指标项配置</h1>
+				</div>
+				<!--Header Buttons-->
+				<div class="header-buttons">
+					<a class="sidebar-toggler" href="#">
+						<i class="fa fa-arrows-h"></i>
+					</a>
+					<a class="refresh" id="refresh-toggler" href="">
+						<i class="glyphicon glyphicon-refresh"></i>
+					</a>
+					<a class="fullscreen" id="fullscreen-toggler" href="#">
+						<i class="glyphicon glyphicon-fullscreen"></i>
+					</a>
+				</div>
+				<!--头部按钮end-->
+			</div>
+			<div class="page-body">
+				<div class="row">
+					<div class="col-xs-12 col-md-12">
+						<div class="widget">
+							<div class="widget-header ">
+								<span class="widget-caption">体检库列表</span>
+								<div class="widget-buttons">
+									<a href="#" data-toggle="maximize">
+										<i class="fa fa-expand"></i>
+									</a>
+									<a href="#" data-toggle="collapse">
+										<i class="fa fa-minus"></i>
+									</a>
+									<a href="#" data-toggle="dispose">
+										<i class="fa fa-times"></i>
+									</a>
 								</div>
 							</div>
+							<div class="widget-body">
+								<div class="table-toolbar">
+									<div style="display: inline-block;margin-left: 10px;">
+										<label class="control-label">体检库：</label>
+										<select class="form-control" style="width: 200px;display: inline-block;vertical-align: middle;">
+											<option value="1">长沙市公安局</option>
+											<option value="2">北京市公安局</option>
+										</select>
+									</div>
 
+									<div style="display: inline-block;margin-left: 10px">
+										<label class="control-label">项目名称：</label>
+										<input class="form-control" type="text" style="width: 200px;display: inline-block;"/>
+									</div>
+
+									<div style="display: inline-block;margin-left: 10px;">
+										<label class="control-label">适宜性别：</label>
+										<select class="form-control" style="width: 200px;display: inline-block;vertical-align: middle;">
+											<option value="0">不限</option>
+											<option value="1">男</option>
+											<option value="2">女</option>
+										</select>
+									</div>
+									<div style="display: inline-block;margin-left: 10px;">
+										<a class="btn btn-blue"><i class="glyphicon glyphicon-search"></i>搜索</a>
+									</div>
+									<a href="health_kpiadd.html" class="btn btn-blue">
+										<i class="fa fa-plus"></i>新增体检项
+									</a>
+								</div>
+								<table class="table table-striped table-hover table-bordered" id="bodyHtml">
+									<thead>
+									<tr>
+										<th>
+											项目名称 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th>
+											性别 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th>
+											推荐类型 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th>
+											正常参考 <span class="fa indicator fa-unsorted"></span>
+										</th>
+										<th width="20%">
+
+											操作
+											<span class="fa indicator fa-unsorted"></span>
+
+										</th>
+									</tr>
+									</thead>
+
+									<tbody>
+									<tr data-tt-id="1">
+										<td>一般检查</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>
+											<a href="#" class="btn btn-info btn-xs editClass1"><i class="fa fa-edit"></i> 修改</a>
+											<a href="#" class="btn btn-danger btn-xs re	moveClass"><i class="fa fa-trash-o"></i> 删除</a>
+										</td>
+									</tr>
+									<tr data-tt-id="2" data-tt-parent-id="1">
+										<td>体重</td>
+										<td>不限</td>
+										<td></td>
+										<td></td>
+										<td>
+											<a href="#" class="btn btn-info btn-xs editClass2">
+												<i class="fa fa-edit"></i> 修改</a>
+											<a href="#" class="btn btn-danger btn-xs re	moveClass"><i class="fa fa-trash-o"></i> 删除</a>
+										</td>
+									</tr>
+									<tr data-tt-id="3" data-tt-parent-id="1">
+										<td>右眼视力</td>
+										<td>不限</td>
+										<td></td>
+										<td></td>
+										<td>
+											<a href="#" class="btn btn-info btn-xs editClass2">
+												<i class="fa fa-edit"></i> 修改</a>
+											<a href="#" class="btn btn-danger btn-xs re	moveClass"><i class="fa fa-trash-o"></i> 删除</a>
+										</td>
+									</tr>
+									<tr data-tt-id="4" >
+										<td>耳鼻喉常规检查</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>
+											<a href="#" class="btn btn-info btn-xs editClass1">
+												<i class="fa fa-edit"></i> 修改</a>
+											<a href="#" class="btn btn-danger btn-xs re	moveClass"><i class="fa fa-trash-o"></i> 删除</a>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
-
 					</div>
-
-					<P class="bottomfont">© 2016 Angel Health Management Ltd. : 天使健康管理有限公司</P>
-
 				</div>
-
 			</div>
-			<!-- /右侧内容 -->
-
+			<P class="bottomfont">© 2016 Angel Health Management Ltd. : 天使健康管理有限公司</P>
 		</div>
+	</div>
+	<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
+	<script src="../../dep/moban/js/bootstrap.min.js"></script>
+	<script src="../../dep/moban/js/validation/bootstrapValidator.js"></script>
+	<script src="../../dep/datetime/bootstrap-datepicker.js"></script>
+	<script src="../../dep/datetime/bootstrap-timepicker.js"></script>
+	<script src="../../dep/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../../dep/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../../dep/moban/js/fuelux/treeview/tree-custom.min.js"></script>
+	<script src="../../home/sysconfig/treeview-init.js"></script>
+	<script src="../../dep/treeTable/jquery.treetable.js"></script>
+	<script>
+		$("#bodyHtml").treetable({ expandable: true });
+		$('input[name="isNew"]').change(function(){
+			if($(this).val() == 1){
+				$('#proSelect').hide();
+				$('#proInput').show();
+			}
+			if($(this).val() == 0){
+				$('#proSelect').show();
+				$('#proInput').hide();
+			}
+		})
+		$(function() {
+			$("#registrationForm").bootstrapValidator();
+			$("#editForm").bootstrapValidator();
 
-		<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
-		
-		<script src="../../dep/moban/js/bootstrap.min.js"></script>
-		<script src="../../dep/moban/js/validation/bootstrapValidator.js"></script>
-		
-		<script src="../../dep/datetime/bootstrap-datepicker.js"></script>
-		<script src="../../dep/datetime/bootstrap-timepicker.js"></script>
-		<script src="../../dep/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-		<script src="../../dep/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
-		
-		<script src="../../dep/moban/js/fuelux/treeview/tree-custom.min.js"></script>
-		<script src="../../home/sysconfig/treeview-init.js"></script>
-		
-		<script src="../../dep/treeTable/jquery.treetable.js"></script>
-
-
-		<script>
-			
-			$("#bodyHtml").treetable({ expandable: true });
-			
-			
-			$('input[name="isNew"]').change(function(){
-				
-				if($(this).val() == 1){
-					$('#proSelect').hide();
-					$('#proInput').show();
-				}
-				if($(this).val() == 0){
-					$('#proSelect').show();
-					$('#proInput').hide();
-				}	
-			})
-			
-	
-			$(function() {
-				$("#registrationForm").bootstrapValidator();
-				$("#editForm").bootstrapValidator();
-				
-				$(".editClass1").on('click', function() {
-					editClass1(this)
-				});
-				
-				$(".editClass2").on('click', function() {
-					editClass2(this)
-				});
-				
-				function editClass1(_this) {
-					$('#tab-editPro').show();
-					$('#tab-editPro').click();
-				}
-				
-				//编辑
-				function editClass2(_this) {
-					$('#tab-edit').show();
-					$('#tab-edit').click();
-				}
-				$(".removeClass").on('click', function() {
-					removeClass(this)
-				});
-				// 删除
-				function removeClass(_this) {
-					$(_this).parent().parent().remove();
-				}
-				$('#tab-add,#tab-list').click(function() {
-					$('#tab-edit').hide();
-					$('#tab-editPro').hide();
-				})
+			$(".editClass1").on('click', function() {
+				editClass1(this)
 			});
-			
 
-			function newDepart() {
-				$('#tab-add').click();
+			$(".editClass2").on('click', function() {
+				editClass2(this)
+			});
+
+			function editClass1(_this) {
+				$('#tab-editPro').show();
+				$('#tab-editPro').click();
 			}
 
+			//编辑
+			function editClass2(_this) {
+				$('#tab-edit').show();
+				$('#tab-edit').click();
+			}
+			$(".removeClass").on('click', function() {
+				removeClass(this)
+			});
+			// 删除
+			function removeClass(_this) {
+				$(_this).parent().parent().remove();
+			}
+			$('#tab-add,#tab-list').click(function() {
+				$('#tab-edit').hide();
+				$('#tab-editPro').hide();
+			})
+		});
 
-		</script>
 
-	</body>
+		function newDepart() {
+			$('#tab-add').click();
+		}
 
+	</script>
+
+</body>
 </html>

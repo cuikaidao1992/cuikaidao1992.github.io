@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+/*此处是修改稿库导航栏的代码*/
+.navbar-inverse{
+	background-color: #CCCCCC;
+	font-size: 18px;
+}
+.navbar-collapse{
+	padding: 0px;
+}
+.navbar-inverse .navbar-nav > li > a{
+	color: #000000;
+}
+.dropdown-menu > li > a{
+	font-size: 16px;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+	background-color: #CCCCCC;
+	border-color: #428bca;
+}
+
+/*此处是修改xxxx的代码*/
+th{
+	text-align: center;
+}
+
+td{
+ display: table-cell;
+ height: 100%;
+ vertical-align: middle !important;
+}

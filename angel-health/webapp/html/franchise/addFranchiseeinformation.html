@@ -8,12 +8,11 @@
     <title>新增加盟商</title>
   
     <link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
-    <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
     <link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
 
      <link rel="stylesheet" type="text/css" href="../../dep/css/jquery.selectlist.css">
     <link rel="stylesheet" type="text/css" href="../../dep/datetimepicker/css/bootstrap-datetimepicker.css"/>
-    <link id="beyond-link" href="../../dep/moban/css/beyond.min.css" rel="stylesheet" />
+    <link href="../../dep/moban/css/beyond.min.css" rel="stylesheet" />
     <link href="../../dep/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />	
     <link rel="stylesheet" type="text/css" href="../../home/member/zj_style.css"/>
     <link rel="stylesheet" href="../../home/common/css.css">
@@ -23,510 +22,417 @@
 </head>
 
 <body class="gray-bg">
-      
-   <div class="page-content">
-                <div class="page-breadcrumbs">
-                    <ul class="breadcrumb">
-                        <li>
-                            <i class="fa fa-home"></i>
-                            <a href="index.html">首页</a>
-                        </li>
-                        <li class="active">
-                          <a href="###">加盟商信息管理</a>
-                        </li>
-                        <li class="active">
-                            加盟商信息服务 
-                        </li>
-                         
-                    </ul>
-                </div>
-                <!-- /面包屑导航-->
-                <!--头部按钮-->
-                <div class="page-header position-relative">
-                    <div class="header-title">
-                        <h1>
-                            加盟商信息服务
-                        </h1>
-                       
-                    </div>
-                    <!--Header Buttons-->
-                    <div class="header-buttons">
-                        <a class="sidebar-toggler" href="#">
-                            <i class="fa fa-arrows-h"></i>
-                        </a>
-                        <a class="refresh" id="refresh-toggler" href="">
-                            <i class="glyphicon glyphicon-refresh"></i>
-                        </a>
-                        <a class="fullscreen" id="fullscreen-toggler" href="#">
-                            <i class="glyphicon glyphicon-fullscreen"></i>
-                        </a>
-                    </div>
-                    <!--头部按钮end-->
-                </div>
-                 <div class="page-body">
-                      <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <div class="widget">
-                                <div class="widget-header ">
-                                    <span class="widget-caption">加盟商信息列表</span>
-                                    <div class="widget-buttons">
-                                        <a href="#" data-toggle="maximize">
-                                            <i class="fa fa-expand"></i>
-                                        </a>
-                                        <a href="#" data-toggle="collapse">
-                                            <i class="fa fa-minus"></i>
-                                        </a>
-                                        <a href="#" data-toggle="dispose">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                                <div class="widget-body " style="overflow:hidden">
-                                	
-                                	  <div class="col-lg-12 col-sm-12 col-xs-12">
-                                        <div class="widget">
-                                        <div class="bancgud js">
-                                            	 <div class="formfont">基础信息</div>
-                                            	  <form class="form-horizontal form-bordered" role="form" id="registration">
-                                                    <div class="form-group">
-                                                        <label for="inputEmail3" class="col-sm-2 control-label no-padding-right">加盟商名称<span class="help-inline"><font color="red">*</font> </span></label>
-                                                        <div class="col-sm-9">
-                                                            <input type="text" class="form-control" id="inputEmail3" placeholder="请输入加盟商名称" name="name" data-bv-notempty="true" data-bv-notempty-message="加盟商姓名不能为空">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label  class="col-sm-2 control-label no-padding-right">加盟商联系电话<span class="help-inline"><font color="red">*</font> </span></label>
-                                                        <div class="col-sm-2">
-                                                             <input type="text" class="form-control fl " maxlength="4"  placeholder="" name="TEL" data-bv-notempty="true" data-bv-notempty-message="联系电话不嫩为空">
-                                                        </div>
-                                                         <span class="fl">-</span>
-                                                         <div  class="col-sm-7">
-                                                            <input type="text" class="form-control fl " maxlength="8" placeholder="" name="TELb" >
-                                                        </div>
-                                                    </div>
-                                                   
-                                                    
-                                                    <div class="form-group">
-                                                        <label class="col-sm-2 control-label no-padding-right">加盟商所在区域</label>
-                                                    	 <div  class="col-sm-2">
-				                                             <select id="s_province" class="col-lg-12"  ></select> 
-				                                         </div>
-				                                         <div  class="col-sm-2">
-				                                             <select id="s_city" class="col-lg-12" ></select> 
-				                                         </div> 
-				                                         <div  class="col-sm-2">
-				                                             <select id="s_county" class="col-lg-12"></select>
-				                                             <div id="show"></div>
-				                                         </div>
-				                                          <div  class="col-sm-3">
-				                                              <input type="text" class="form-control fl "  id="city"  placeholder="请输入具体地址"/>
-	                                                     </div>
-                                                    </div>
-                                                    
-                                                     <div class="formfont">附属信息</div>
-                                            	  
-                                                    <div class="form-group">
-                                                        <label for="inputEmail3" class="col-sm-2 control-label no-padding-right">负责人姓名<span class="help-inline"><font color="red">*</font> </span></label>
-                                                        <div class="col-sm-9">
-                                                            <input type="text" class="form-control" id="inputEmail3" placeholder="请输入负责人姓名" name="nameb" data-bv-notempty="true" data-bv-notempty-message="负责人姓名不能为空">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label  class="col-sm-2 control-label no-padding-right">负责人电话<span class="help-inline"><font color="red">*</font> </span></label>
-                                                        <div class="col-sm-9">
-                                                             <input type="text" class="form-control fl " maxlength="11" placeholder="请输入负责人电话" name="TEL3" data-bv-notempty="true" data-bv-notempty-message="负责人电话不能为空">
-                                                        </div>
-                                                        
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label  class="col-sm-2 control-label no-padding-right">法人姓名<span class="help-inline"><font color="red">*</font> </span></label>
-                                                        <div class="col-sm-9">
-                                                             <input type="text" class="form-control fl "  placeholder="请输入法人姓名" name="namec" data-bv-notempty="true" data-bv-notempty-message="法人姓名不能为空">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label  class="col-sm-2 control-label no-padding-right">法人身份证</label>
-                                                        <div class="col-sm-6">
-															<div class="box pull-left mr" >
-																<input type="file" class="dropify" data-default-file="">
+	<div class="wrapper">
+		<div class="page-breadcrumbs">
+			<ul class="breadcrumb">
+				<li>
+					<i class="fa fa-home"></i>
+					<a href="index.html">首页</a>
+				</li>
+				<li class="active">
+					<a href="#">加盟商信息管理</a>
+				</li>
+				<li class="active">
+					加盟商信息服务
+				</li>
+
+			</ul>
+		</div>
+		<div class="page-header position-relative">
+			<div class="header-title">
+				<h1>加盟商信息服务</h1>
+			</div>
+			<!--Header Buttons-->
+			<div class="header-buttons">
+				<a class="sidebar-toggler" href="#">
+					<i class="fa fa-arrows-h"></i>
+				</a>
+				<a class="refresh" id="refresh-toggler" href="">
+					<i class="glyphicon glyphicon-refresh"></i>
+				</a>
+				<a class="fullscreen" id="fullscreen-toggler" href="#">
+					<i class="glyphicon glyphicon-fullscreen"></i>
+				</a>
+			</div>
+			<!--头部按钮end-->
+		</div>
+		<div class="page-body">
+			<div class="row">
+				<div class="col-xs-12 col-md-12">
+					<div class="widget">
+						<div class="widget-header ">
+							<span class="widget-caption">加盟商信息列表</span>
+							<div class="widget-buttons">
+								<a href="#" data-toggle="maximize">
+									<i class="fa fa-expand"></i>
+								</a>
+								<a href="#" data-toggle="collapse">
+									<i class="fa fa-minus"></i>
+								</a>
+								<a href="#" data-toggle="dispose">
+									<i class="fa fa-times"></i>
+								</a>
+							</div>
+						</div>
+
+						<div class="widget-body " style="overflow:hidden">
+							<div class="col-lg-12 col-sm-12 col-xs-12">
+								<div class="widget">
+									<div class="bancgud js">
+										<div class="formfont">基础信息</div>
+										<form class="form-horizontal form-bordered" role="form" id="registration">
+											<div class="form-group">
+												<label for="inputEmail3" class="col-sm-2 control-label no-padding-right">加盟商名称<span class="help-inline"><font color="red">*</font> </span></label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control" id="inputEmail3" placeholder="请输入加盟商名称" name="name" data-bv-notempty="true" data-bv-notempty-message="加盟商姓名不能为空">
+												</div>
+											</div>
+											<div class="form-group">
+												<label  class="col-sm-2 control-label no-padding-right">加盟商联系电话<span class="help-inline"><font color="red">*</font> </span></label>
+												<div class="col-sm-2">
+													<input type="text" class="form-control fl " maxlength="4"  placeholder="" name="TEL" data-bv-notempty="true" data-bv-notempty-message="联系电话不嫩为空">
+												</div>
+												<span class="fl">-</span>
+												<div  class="col-sm-7">
+													<input type="text" class="form-control fl " maxlength="8" placeholder="" name="TELb" >
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-2 control-label no-padding-right">加盟商所在区域</label>
+												<div  class="col-sm-2">
+													<select id="s_province" class="col-lg-12"  ></select> 
+												</div>
+												<div  class="col-sm-2">
+													<select id="s_city" class="col-lg-12" ></select> 
+												</div> 
+												<div  class="col-sm-2">
+													<select id="s_county" class="col-lg-12"></select>
+													<div id="show"></div>
+												</div>
+												<div  class="col-sm-3">
+													<input type="text" class="form-control fl "  id="city"  placeholder="请输入具体地址"/>
+												</div>
+											</div>
+
+											<div class="formfont">附属信息</div>
+
+											<div class="form-group">
+												<label for="inputEmail3" class="col-sm-2 control-label no-padding-right">负责人姓名<span class="help-inline"><font color="red">*</font> </span></label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control" placeholder="请输入负责人姓名" name="nameb" data-bv-notempty="true" data-bv-notempty-message="负责人姓名不能为空">
+												</div>
+											</div>
+											<div class="form-group">
+												<label  class="col-sm-2 control-label no-padding-right">负责人电话<span class="help-inline"><font color="red">*</font> </span></label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control fl " maxlength="11" placeholder="请输入负责人电话" name="TEL3" data-bv-notempty="true" data-bv-notempty-message="负责人电话不能为空">
+												</div>
+
+											</div>
+											<div class="form-group">
+												<label  class="col-sm-2 control-label no-padding-right">法人姓名<span class="help-inline"><font color="red">*</font> </span></label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control fl "  placeholder="请输入法人姓名" name="namec" data-bv-notempty="true" data-bv-notempty-message="法人姓名不能为空">
+												</div>
+											</div>
+											<div class="form-group">
+												<label  class="col-sm-2 control-label no-padding-right">法人身份证</label>
+												<div class="col-sm-9">
+													<div class="box pull-left mr">
+														<input type="file" class="dropify" extra="cardImg" data-default-file="../../dep/img/huixian.jpg">
+													</div>
+													<div class="box pull-left mr">
+														<input type="file" class="dropify" extra="cardImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+													</div>
+													<div class="box pull-left mr">
+														<input type="file" class="dropify" extra="cardImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+													</div>
+													<div class="box pull-left mr">
+														<input type="file" class="dropify" extra="cardImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+													</div>
+													<div class="box pull-left mr">
+														<input type="file" class="dropify" extra="cardImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label  class="col-sm-2 control-label no-padding-right">开&nbsp;&nbsp;户&nbsp;行</label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control fl" placeholder="">
+												</div>
+											</div>
+											<div class="form-group">
+												<label  class="col-sm-2 control-label no-padding-right">开户行账号</label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control fl"  placeholder="">
+												</div>
+											</div>
+											<div class="form-group  radioyes">
+												<label  class="col-sm-2 control-label no-padding-right">是否三证合一</label>
+												<div class="col-sm-10" style="margin-top:3px">
+													<label class="radio_btn">
+														<input class="checkbox-slider" type="checkbox" checked="checked">
+														<span class="text"></span>
+													</label>
+												</div>
+											</div>
+											<div class="form-group radioa ">
+												<div class=" col-sm-9 formleftb yesradio yesradionoa server server_1" style="display: block">
+													<div class="form-group">
+														<label  class="col-sm-2 control-label no-padding-right">上传证书</label>
+														<div class="col-sm-9">
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="certificateImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
 															</div>
 															<div class="box pull-left mr">
-																<input type="file" class="dropify" data-default-file="">
+																<input type="file" class="dropify" extra="certificateImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
 															</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label  class="col-sm-2 control-label no-padding-right">开&nbsp;&nbsp;户&nbsp;行</label>
-                                                        <div class="col-sm-9">
-                                                             <input type="text" class="form-control fl "  placeholder="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label  class="col-sm-2 control-label no-padding-right">开户行账号</label>
-                                                        <div class="col-sm-9">
-                                                             <input type="text" class="form-control fl "  placeholder="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group  radioyes">
-                                                        <label  class="col-sm-2 control-label no-padding-right">是否三证合一</label>
-                                                        <div class="col-sm-10">
-                                                              <label style="z-index:0" class="col-sm-2 labletab ">
-			                                                        <input type="radio" name="b" class="radio_1 ">
-			                                                        <span class="text" style="z-index:0"> 是</span>
-			                                                   </label>
-			                                                   <label  class="col-sm-2 labletab " >
-																	<input type="radio" name="b" style="z-index:1">
-																	<span class="text" style="z-index:0">否</span>
-			                                                   </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group radioa ">
-                                                    	
-                                                         <div class=" col-sm-8 formleftb yesradio yesradionoa server server_1" >
-                                                         	 <div class="form-group">
-		                                                        <i style="float:right; padding:0 16px 16px;cursor:pointer" class="close_project fa cunt fa-times-circle"></i>
-		                                                    </div>
-		                                                     <div class="form-group">
-	                                                         	 <label  class="col-sm-2 control-label no-padding-right">上传证书</label>
-		                                                         <div class="col-sm-7">
-																	 <div class="box pull-left mr" >
-																		 <input type="file" class="dropify" data-default-file="">
-																	 </div>
-																	 <div class="box pull-left mr">
-																		 <input type="file" class="dropify" data-default-file="">
-																	 </div>
-		                                                         </div>
-	                                                         </div>
-                                                         	 <div class="form-group">
-			                                                        <div class="col-sm-3 col-lg-offset-5">
-			                                                            <a class="btn btn-blue close_project" style="padding-bottom:10px;cursor:pointer">关闭</a>
-			                                                        </div>
-			                                                  </div>
-                                                         </div>
-                                                         <div class="col-sm-8   formleftb yesradio nihigth project  server_2">
-                                                           <div class="form-group">
-		                                                        <i style="float:right; padding:0 16px 16px;cursor:pointer" class="close_server fa cunt fa-times-circle"></i>
-		                                                    </div>
-                                                         	<div class="form-group">
-		                                                        <label  class="col-sm-3 control-label no-padding-right">营业执照编码 </label>
-		                                                        <div class="col-sm-7">
-		                                                             <input type="text" class="form-control fl "  placeholder="">
-		                                                        </div>
-		                                                    </div>
-                                                         	 <div class="form-group">
-			                                                        <label  class="col-sm-3 control-label no-padding-right">营业执照图片</label>
-			                                                        <div class="col-sm-7">
-																		<div class="box pull-left mr" >
-																			<input type="file" class="dropify" data-default-file="">
-																		</div>
-																		<div class="box pull-left mr">
-																			<input type="file" class="dropify" data-default-file="">
-																		</div>
-			                                                        </div>
-			                                                  </div>
-			                                                  <div class="form-group">
-		                                                        <label  class="col-sm-3 control-label no-padding-right">税务登记证编号</label>
-		                                                        <div class="col-sm-7">
-		                                                             <input type="text" class="form-control fl "  placeholder="">
-		                                                        </div>
-		                                                    </div>
-                                                         	 <div class="form-group">
-			                                                        <label  class="col-sm-3 control-label no-padding-right">税务登记证书图片</label>
-			                                                        <div class="col-sm-7">
-																		<div class="box pull-left mr" >
-																			<input type="file" class="dropify" data-default-file="">
-																		</div>
-																		<div class="box pull-left mr">
-																			<input type="file" class="dropify" data-default-file="">
-																		</div>
-			                                                        </div>
-			                                                  </div>
-			                                                <div class="form-group">
-		                                                        <label  class="col-sm-3 control-label no-padding-right">组织机构代码证编号</label>
-		                                                        <div class="col-sm-7">
-		                                                             <input type="text" class="form-control fl "  placeholder="">
-		                                                        </div>
-		                                                    </div>
-                                                         	 <div class="form-group">
-			                                                        <label  class="col-sm-3 control-label no-padding-right">组织机构代码证图片</label>
-			                                                        <div class="col-sm-7">
-																		<div class="box pull-left mr" >
-																			<input type="file" class="dropify" data-default-file="">
-																		</div>
-																		<div class="box pull-left mr">
-																			<input type="file" class="dropify" data-default-file="">
-																		</div>
-			                                                        </div>
-			                                                  </div>
-			                                                  <div class="form-group">
-		                                                        <label  class="col-sm-3 control-label no-padding-right">信用代码证编号</label>
-		                                                        <div class="col-sm-7">
-		                                                             <input type="text" class="form-control fl "  placeholder="">
-		                                                        </div>
-		                                                    </div>
-                                                         	 <div class="form-group">
-			                                                        <label  class="col-sm-3 control-label no-padding-right">信用代码证图片</label>
-			                                                        <div class="col-sm-7">
-																		<div class="box pull-left mr" >
-																			<input type="file" class="dropify" data-default-file="">
-																		</div>
-																		<div class="box pull-left mr">
-																			<input type="file" class="dropify" data-default-file="">
-																		</div>
-			                                                        </div>
-			                                                  </div>
-                                                         	 <div class="form-group">
-		                                                        <label  class="col-sm-3 control-label no-padding-right">法人身份证号</label>
-		                                                        <div class="col-sm-7">
-		                                                             <input type="text" class="form-control fl "  placeholder="">
-		                                                        </div>
-		                                                    </div>
-                                                         	 <div class="form-group">
-			                                                        <label  class="col-sm-3 control-label no-padding-right">法人身份证图片</label>
-			                                                        <div class="col-sm-7">
-																		<div class="box pull-left mr" >
-																			<input type="file" class="dropify" data-default-file="">
-																		</div>
-																		<div class="box pull-left mr">
-																			<input type="file" class="dropify" data-default-file="">
-																		</div>
-			                                                        </div>
-			                                                  </div>
-			                                                   <div class="form-group">
-			                                                        <label  class="col-sm-3 control-label no-padding-right">加盟申请书图片</label>
-			                                                        <div class="col-sm-7">
-																		<div class="box pull-left mr" >
-																			<input type="file" class="dropify" data-default-file="">
-																		</div>
-																		<div class="box pull-left mr">
-																			<input type="file" class="dropify" data-default-file="">
-																		</div>
-			                                                        </div>
-			                                                  </div>
-			                                                  <div class="form-group">
-			                                                        <div class="col-sm-3 col-lg-offset-6">
-			                                                            <a class="btn btn-blue close_server" style="padding-bottom:10px;cursor:pointer">关闭</a>
-			                                                        </div>
-			                                                  </div>
-                                                         </div>
-                                                      </div>
-                                                        
-                                                         <div class=" form-group">
-		                                                        <label  class="col-sm-2 control-label no-padding-right">加盟证书</label>
-		                                                        <div class="col-sm-6">
-																	<div class="box pull-left mr" >
-																		<input type="file" class="dropify" data-default-file="">
-																	</div>
-																	<div class="box pull-left mr">
-																		<input type="file" class="dropify" data-default-file="">
-																	</div>
-		                                                        </div>
-			                                             </div>
-			                                           
-                                                    </div>
-                                                      <div class="col-sm-8  col-xs-offset-4 btn-bottmb">
-					                                          <button  type="submit" class=" btn btn-darkorange  col-sm-2 " href="#closeCourse" >确认</button>
-					                                         <button class=" btn btn-active col-sm-2  col-lg-offset-2" type="button" onClick="window.open('Franchiseeinformation.html')">取消</button>
-					                                     </div>
-                                                    
-                                                </form>
-                                            
-                                        </div>
-                                    </div>
-                                   
-                                       
-                                     </div>
-                                    </div> 
-                                </div>
-                               
-                            </div>
-                             
-                        </div>
-                    </div>
-                   
-                 </div>
-               
-            </div>
-            <!-- /右侧内容 -->
-        </div>
-       </div>
- <!--<div class="modal fade in" id="closeCourse" aria-hidden="true">
-    <div class="modal-dialog" >
-        <div class="modal-content"  style="border-radius:50px!important" >
-            
-            <div class="modal-body form-horizontal" >
-              <p class="text-warning">您的会员信息已提交成功</p>
-            </div>
-        </div>
-    </div>
-    
-</div>-->
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="certificateImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="certificateImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="certificateImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-9  formleftb yesradio nihigth project  server_2">
+													<div class="form-group">
+														<label  class="col-sm-2 control-label no-padding-right">营业执照编码 </label>
+														<div class="col-sm-9">
+															<input type="text" class="form-control fl" placeholder="">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 control-label no-padding-right">营业执照图片</label>
+														<div class="col-sm-9">
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="businessImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="businessImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="businessImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="businessImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="businessImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label  class="col-sm-2 control-label no-padding-right">税务登记证编号</label>
+														<div class="col-sm-9">
+															<input type="text" class="form-control fl"  placeholder="">
+														</div>
+													</div>
+													<div class="form-group">
+														<label  class="col-sm-2 control-label no-padding-right">税务登记证书图片</label>
+														<div class="col-sm-9">
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="taxImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="taxImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="taxImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="taxImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="taxImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label  class="col-sm-2 control-label no-padding-right">组织机构代码证编号</label>
+														<div class="col-sm-9">
+															<input type="text" class="form-control fl "  placeholder="">
+														</div>
+													</div>
+													<div class="form-group">
+														<label  class="col-sm-2 control-label no-padding-right">组织机构代码证图片</label>
+														<div class="col-sm-9">
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="organizationImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="organizationImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="organizationImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="organizationImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="organizationImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label  class="col-sm-2 control-label no-padding-right">信用代码证编号</label>
+														<div class="col-sm-9">
+															<input type="text" class="form-control fl "  placeholder="">
+														</div>
+													</div>
+													<div class="form-group">
+														<label  class="col-sm-2 control-label no-padding-right">信用代码证图片</label>
+														<div class="col-sm-9">
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="creditImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="creditImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="creditImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="creditImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="creditImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label  class="col-sm-2 control-label no-padding-right">法人身份证号</label>
+														<div class="col-sm-9">
+															<input type="text" class="form-control fl "  placeholder="">
+														</div>
+													</div>
+													<div class="form-group">
+														<label  class="col-sm-2 control-label no-padding-right">法人身份证图片</label>
+														<div class="col-sm-9">
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="legalImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="legalImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="legalImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="legalImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="legalImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label  class="col-sm-2 control-label no-padding-right">加盟申请书图片</label>
+														<div class="col-sm-9">
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="applyImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="applyImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="applyImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="applyImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+															<div class="box pull-left mr">
+																<input type="file" class="dropify" extra="applyImg" data-default-file="" accept=".gif,.jpg,.jpeg,.png">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="col-sm-9  col-xs-offset-4 btn-bottm" style="padding-top:25px">
+										<button id="tagIdSubmitAddVip_btn" type="submit" class=" btn btn-darkorange  col-sm-2 col-xs-offset-4" href="#closeCourse" data-toggle="modal">保存</button>
+										<button class=" btn btn-active col-sm-2" type="button" onclick="window.open('Franchiseeinformation.html')">取消</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<P class="bottomfont">© 2016 Angel Health Management Ltd. : 天使健康管理有限公司</P>
+	</div>
+	<script src="../../dep/moban/js/bootstrap.min.js"></script>
+	<script class="resources library" src="../../dep/area.js" type="text/javascript"></script>
+	<script type="text/javascript">_init_area();</script>
+	<script src="../../dep/jquery.selectlist.js"></script>
+	<script src="../../dep/moban/js/beyond.min.js"></script>
+	<script src="../../dep/fileinput.js" type="text/javascript"></script>
+	<script src="../../dep/fileinput_locale_zh.js" type="text/javascript"></script>
+	<script src="../../dep/moban/js/validation/bootstrapValidator.js"></script>
+	<script src="../../dep/dist/js/dropify.js"></script>
+	<script type="text/javascript">
+		  $(function(){
+				$(".radio_btn").click(function(){
+					if($(this).find(".checkbox-slider").is(':checked')){
+						$(".server_2").hide();
+						$(".server_1").stop().slideToggle(500);
+					}else {
+						$(".server_1").hide();
+						$(".server_2").stop().slideToggle(500);
+					}
+				});
 
-    <script src="../../dep/moban/js/bootstrap.min.js"></script>
-    <script class="resources library" src="../../dep/area.js" type="text/javascript"></script>
-      <script type="text/javascript">_init_area();</script>
-     <script src="../../dep/jquery.selectlist.js"></script>
-    <script src="../../dep/moban/js/beyond.min.js"></script>
-   <script src="../../dep/fileinput.js" type="text/javascript"></script>
-    <script src="../../dep/fileinput_locale_zh.js" type="text/javascript"></script>
-    <script src="../../dep/moban/js/validation/bootstrapValidator.js"></script>
-    <script src="../../dep/dist/js/dropify.js"></script>
-
-  <script type="text/javascript">
-
-      
-        var $radio_btn_1=$(".radioyes .radio_1");
-        var $radio_btn_2=$(".radioyes .radio_2");
-        $radio_btn_1.click(function(){
-          $(".server_2").hide();
-          $(".server_1").slideToggle(500);
-        })
-        $radio_btn_2.click(function(){
-          $(".server_1").hide();
-           $(".server_2").slideToggle(1000);
-        })
-  
-       $(".close_server").click(function(){
-           $(this).parents().find(".server_2").hide(1000);
-       })
-       $(".close_project").click(function(){
-        $(this).parents().find(".server_1").hide(500);
-       })
-	    
-
-	     $(function(){
-			 $('.dropify').dropify({
-				 messages: {
-					 'default': '点击或拖拽文件到这里',
-					 'replace': '点击或拖拽文件到这里来替换文件',
-					 'remove':  '移除文件',
-					 'error':   '对不起，你上传的文件太大了'
-				 }
-			 });
+			   $('.dropify').dropify({
+				   messages: {
+					   'default': '点击或拖拽文件到这里',
+					   'replace': '点击或拖拽文件到这里来替换文件',
+					   'remove':  '移除文件',
+					   'error':   '对不起，你上传的文件太大了'
+				   }
+			   });
+		  });
+	 </script>
+	<script>
+		$(document).ready(function() {
+			$(document).on('change', 'input.dropify', function() {
+				var inputName = $(this).attr('extra');
+				var str = '<div class="box pull-left mr"> <input type="file" extra="'+inputName+'" class="dropify" data-default-file="" accept=".gif,.jpg,.jpeg,.png"> </div>';
+				var count = 0;
+				$('input.dropify[extra="'+inputName+'"]').each(function(){
+					if($(this).parent('div').hasClass('has-preview')){
+						count++ ;
+					}
+				});
+				if(count>=4){
+					$(this).parent().parent().parent().append(str).bind('click', function() {
+						$('.dropify').dropify({
+							messages: {
+								  'default': '点击或拖拽文件到这里',
+								  'replace': '点击或拖拽文件到这里来替换文件',
+								  'remove':  '移除文件',
+								  'error':   '对不起，你上传的文件太大了'
+							}
+						});
+					});
+					$('.dropify').dropify({
+						messages: {
+							   'default': '点击或拖拽文件到这里',
+							   'replace': '点击或拖拽文件到这里来替换文件',
+							   'remove':  '移除文件',
+							   'error':   '对不起，你上传的文件太大了'
+						}
+					});
+				}
 			});
-	    /* 新增 */
-    
- </script>
- 
- <script>
-	   
-	    $("#file-1").fileinput({
-	        uploadUrl: '#', 
-	        allowedFileExtensions : ['jpg', 'png','gif'],
-	        overwriteInitial: false,
-	        maxFileSize: 100,
-	        maxFilesNum: 10,
-	       
-	        slugCallback: function(filename) {
-	            return filename.replace('(', '_').replace(']', '_');
-	        }
 		});
-	     $("#file-2").fileinput({
-	        uploadUrl: '#', 
-	        allowedFileExtensions : ['jpg', 'png','gif'],
-	        overwriteInitial: false,
-	        maxFileSize: 100,
-	        maxFilesNum: 10,
-	       
-	        slugCallback: function(filename) {
-	            return filename.replace('(', '_').replace(']', '_');
-	        }
-		});
-		 $("#file-3").fileinput({
-	        uploadUrl: '#', 
-	        allowedFileExtensions : ['jpg', 'png','gif'],
-	        overwriteInitial: false,
-	        maxFileSize: 100,
-	        maxFilesNum: 10,
-	       
-	        slugCallback: function(filename) {
-	            return filename.replace('(', '_').replace(']', '_');
-	        }
-		});
-		 $("#file-4").fileinput({
-	        uploadUrl: '#', 
-	        allowedFileExtensions : ['jpg', 'png','gif'],
-	        overwriteInitial: false,
-	        maxFileSize: 100,
-	        maxFilesNum: 10,
-	       
-	        slugCallback: function(filename) {
-	            return filename.replace('(', '_').replace(']', '_');
-	        }
-		});
-		 $("#file-5").fileinput({
-	        uploadUrl: '#', 
-	        allowedFileExtensions : ['jpg', 'png','gif'],
-	        overwriteInitial: false,
-	        maxFileSize: 100,
-	        maxFilesNum: 10,
-	       
-	        slugCallback: function(filename) {
-	            return filename.replace('(', '_').replace(']', '_');
-	        }
-		});
-		 $("#file-6").fileinput({
-	        uploadUrl: '#', 
-	        allowedFileExtensions : ['jpg', 'png','gif'],
-	        overwriteInitial: false,
-	        maxFileSize: 100,
-	        maxFilesNum: 10,
-	       
-	        slugCallback: function(filename) {
-	            return filename.replace('(', '_').replace(']', '_');
-	        }
-		});
-		 $("#file-7").fileinput({
-	        uploadUrl: '#', 
-	        allowedFileExtensions : ['jpg', 'png','gif'],
-	        overwriteInitial: false,
-	        maxFileSize: 100,
-	        maxFilesNum: 10,
-	       
-	        slugCallback: function(filename) {
-	            return filename.replace('(', '_').replace(']', '_');
-	        }
-		});
-		 $("#file-8").fileinput({
-	        uploadUrl: '#', 
-	        allowedFileExtensions : ['jpg', 'png','gif'],
-	        overwriteInitial: false,
-	        maxFileSize: 100,
-	        maxFilesNum: 10,
-	       
-	        slugCallback: function(filename) {
-	            return filename.replace('(', '_').replace(']', '_');
-	        }
-		});
-		
-		 $("#file-9").fileinput({
-	        uploadUrl: '#', 
-	        allowedFileExtensions : ['jpg', 'png','gif'],
-	        overwriteInitial: false,
-	        maxFileSize: 100,
-	        maxFilesNum: 10,
-	       
-	        slugCallback: function(filename) {
-	            return filename.replace('(', '_').replace(']', '_');
-	        }
-		});
-	   
-	  
-	    $(document).ready(function() {
-	        $("#test-upload").fileinput({
-	            'showPreview' : false,
-	            'allowedFileExtensions' : ['jpg', 'png','gif'],
-	            'elErrorContainer': '#errorBlock'
-	        });
-	      
-	    });
-	
-		</script>
-   
-
+	</script>
 </body>
-
 </html>
 
 

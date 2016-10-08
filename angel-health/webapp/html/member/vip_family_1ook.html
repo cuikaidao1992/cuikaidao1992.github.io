@@ -1,288 +1,235 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<title>新增家庭</title>
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="renderer" content="webkit">
-		<meta http-equiv="Cache-Control" content="no-siteapp" />
-		<title>新增家庭</title>
+	<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="../../dep/moban/css/beyond.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="../../dep/datetimepicker/css/bootstrap-datetimepicker.css" />
+	<link rel="stylesheet" type="text/css" href="../../dep/css/jquery.bigautocomplete.css" />
+	<link rel="stylesheet" href="../../home/common/css.css">
+	<link rel="stylesheet" href="../../home/service/family.css">
+</head>
+<body>
+	<div class="page-content">
+		<div class="page-breadcrumbs">
+			<ul class="breadcrumb">
+				<li>
+					<i class="fa fa-home"></i>
+					<a href="index.html">首页</a>
+				</li>
+				<li class="active">
+					<a href="###">会员信息管理</a>
+				</li>
+				<li class="active">
+					会员家庭服务
+				</li>
 
-		<link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
-		<link id="bootstrap-rtl-link" href="" rel="stylesheet" />
-		<link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
-		<link id="beyond-link" href="../../dep/moban/css/beyond.min.css" rel="stylesheet" type="text/css" />
-
-		<link rel="stylesheet" type="text/css" href="../../dep/datetimepicker/css/bootstrap-datetimepicker.css" />
-		<link rel="stylesheet" type="text/css" href="../../dep/css/jquery.bigautocomplete.css" />
-		<link rel="stylesheet" href="../../home/common/css.css">
-
-	</head>
-
-	<body>
-
-		<div class="page-content">
-			<!-- 面包屑导航 -->
-			<div class="page-breadcrumbs">
-				<ul class="breadcrumb">
-					<li>
-						<i class="fa fa-home"></i>
-						<a href="index.html">首页</a>
-					</li>
-					<li class="active">
-						<a href="###">会员信息管理</a>
-					</li>
-					<li class="active">
+			</ul>
+		</div>
+		<div class="page-header position-relative">
+			<div class="header-title">
+				<h1>
 						会员家庭服务
-					</li>
+					</h1>
 
-				</ul>
 			</div>
-			<!-- /面包屑导航-->
-			<!--头部按钮-->
-			<div class="page-header position-relative">
-				<div class="header-title">
-					<h1>
-                            会员家庭服务
-                        </h1>
-
-				</div>
-				<!--Header Buttons-->
-				<div class="header-buttons">
-					<a class="sidebar-toggler" href="#">
-						<i class="fa fa-arrows-h"></i>
-					</a>
-					<a class="refresh" id="refresh-toggler" href="">
-						<i class="glyphicon glyphicon-refresh"></i>
-					</a>
-					<a class="fullscreen" id="fullscreen-toggler" href="#">
-						<i class="glyphicon glyphicon-fullscreen"></i>
-					</a>
-				</div>
-				<!--头部按钮end-->
+			<!--Header Buttons-->
+			<div class="header-buttons">
+				<a class="sidebar-toggler" href="#">
+					<i class="fa fa-arrows-h"></i>
+				</a>
+				<a class="refresh" id="refresh-toggler" href="">
+					<i class="glyphicon glyphicon-refresh"></i>
+				</a>
+				<a class="fullscreen" id="fullscreen-toggler" href="#">
+					<i class="glyphicon glyphicon-fullscreen"></i>
+				</a>
 			</div>
-			<div class="page-body">
-				<div class="row">
-					<div class="col-xs-12 col-md-12">
-						<div class="widget">
-							<div class="widget-header ">
-								<span class="widget-caption">新增家庭内容</span>
-								<div class="widget-buttons">
-									<a href="#" data-toggle="maximize">
-										<i class="fa fa-expand"></i>
-									</a>
-									<a href="#" data-toggle="collapse">
-										<i class="fa fa-minus"></i>
-									</a>
-									<a href="#" data-toggle="dispose">
-										<i class="fa fa-times"></i>
-									</a>
-								</div>
-							</div>
-
-							<div class="widget-body" style="overflow:hidden">
-								<div class="col-lg-12 col-sm-12 col-xs-12 ">
-									<div class="widget">
-										<div class=" bancgud">
-
-											<div class="formfont">基础信息</div>
-											<form class="form-horizontal form-bordered" role="form" id="memberForm">
-												<div class="form-group formbdcenb">
-													<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">家庭名称<span class="help-inline"><font color="red">*</font> </span></label>
-													<div class="col-sm-8">
-														<input type="text" class="form-control fl" disabled="disabled" placeholder="请输入家庭名称" value="中和教育">
-													</div>
-												</div>
-
-												<div class="form-group ">
-													<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">户主名称</label>
-													<div class="col-sm-8">
-														<input type="text" class="form-control fl" disabled="disabled" placeholder="请输入户主名称" value="张三">
-													</div>
-												</div>
-												
-												<div class="form-group formbdcenb">
-													<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">家庭成员</label>
-													<div class="col-sm-8">
-														<input type="text" class="form-control" placeholder="请输入家庭成员" value="李四" disabled="disabled">
-													</div>
-													<div class="clear form-group">
-														<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">祖&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;父</label>
-														<div class="col-sm-7 " style="margin-left:10px">
-															<input type="text" class="form-control fl " value="祖父">
-														</div>
-													</div>
-													
-													<div class="clear form-group">
-														<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">祖&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;母</label>
-														<div class="col-sm-7 " style="margin-left:10px">
-															<input type="text" class="form-control fl " value="张三" disabled="disabled">
-														</div>
-													</div>
-													
-													<div class="clear form-group">
-														<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">父&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;亲</label>
-														<div class="col-sm-7 " style="margin-left:10px">
-															<input type="text" class="form-control fl " value="父亲" disabled="disabled">
-														</div>
-													</div>
-													
-													<div class="clear form-group">
-														<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">儿&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;子</label>
-														<div class="col-sm-7 " style="margin-left:10px">
-															<input type="text" class="form-control fl " value="儿子" disabled="disabled">
-														</div>
-													</div>
-													
-												</div>
-												<div class="form-group">
-													<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">联系电话<span class="help-inline"><font color="red">*</font> </span></label>
-													<div class="col-sm-8">
-														<input type="text" class="form-control fl" disabled="disabled" placeholder="请输入联系电话" value="1851045687">
-
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">家庭描述</label>
-													<div class="col-sm-8">
-														<textarea disabled="disabled" class="dc_text"></textarea>
-													</div>
-												</div>
-
-										</div>
-
-										<div class="col-sm-10  col-xs-offset-4 btn-bottm" style="padding-top:25px">
-											<button id="tagIdSubmitAddVip_btn" type="submit" class=" btn btn-darkorange  col-sm-2 col-xs-offset-3" href="#closeCourse" onClick="window.open('vip_family.html')" data-toggle="modal">返回</button>
-
-										</div>
-									</div>
-
-									</form>
-
-								</div>
-
+			<!--头部按钮end-->
+		</div>
+		<div class="page-body">
+			<div class="row">
+				<div class="col-xs-12 col-md-12">
+					<div class="widget">
+						<div class="widget-header ">
+							<span class="widget-caption">新增家庭内容</span>
+							<div class="widget-buttons">
+								<a href="#" data-toggle="maximize">
+									<i class="fa fa-expand"></i>
+								</a>
+								<a href="#" data-toggle="collapse">
+									<i class="fa fa-minus"></i>
+								</a>
+								<a href="#" data-toggle="dispose">
+									<i class="fa fa-times"></i>
+								</a>
 							</div>
 						</div>
-					</div>
 
+						<div class="widget-body" style="overflow:hidden">
+							<div class="col-lg-12 col-sm-12 col-xs-12 ">
+								<div class="widget">
+									<div class=" bancgud">
+
+										<div class="formfont">基础信息</div>
+										<form class="form-horizontal form-bordered" role="form" id="memberForm">
+											<div class="form-group formbdcenb">
+												<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">家庭名称<span class="help-inline"><font color="red">*</font> </span></label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control fl" disabled="disabled" placeholder="请输入家庭名称" value="中和教育">
+												</div>
+											</div>
+
+											<div class="form-group ">
+												<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">户主名称</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control fl" disabled="disabled" placeholder="请输入户主名称" value="张三">
+												</div>
+											</div>
+
+											<div class="form-group formbdcenb">
+												<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">家庭成员</label>
+												<div class="col-sm-6 add_family">
+													<div class="form-group" style="overflow:hidden;padding-top:0px">
+														<div class="col-sm-3"><input type="text" class="form-control" value="祖父" disabled="disabled"></div>
+														<div class="col-sm-8"><input type="text" class="form-control" value="aaa" disabled="disabled"></div>
+													</div>
+													<div class="form-group" style="overflow:hidden;padding-top:0px" >
+														<div class="col-sm-3"><input type="text" class="form-control" value="祖母" disabled="disabled"></div>
+														<div class="col-sm-8"><input type="text" class="form-control" value="bbb" disabled="disabled"></div>
+													</div>
+
+													</div>
+												</div>
+											<div class="form-group">
+												<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">联系电话<span class="help-inline"><font color="red">*</font> </span></label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control fl" disabled="disabled" placeholder="请输入联系电话" value="1851045687">
+
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="inputPassword3" class="col-sm-2 control-label no-padding-right">家庭描述</label>
+												<div class="col-sm-8">
+													<textarea disabled="disabled" class="dc_text"></textarea>
+												</div>
+											</div>
+											</div>
+
+
+									</div>
+
+									<div class="col-sm-10  col-xs-offset-4 btn-bottm" style="padding-top:25px">
+										<button id="tagIdSubmitAddVip_btn" type="submit" class=" btn btn-darkorange  col-sm-2 col-xs-offset-3" href="#closeCourse" onClick="history.go(-1)" data-toggle="modal">返回</button>
+
+									</div>
+								</div>
+
+								</form>
+
+							</div>
+
+						</div>
+					</div>
 				</div>
 
 			</div>
-		</div>
+		<P class="bottomfont">© 2016 Angel Health Management Ltd. : 天使健康管理有限公司</P>
+	</div>
+	<!--Basic Scripts-->
+	<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
+	<script src="../../dep/moban/js/bootstrap.min.js"></script>
+	<!--Beyond Scripts-->
+	<script src="../../dep/moban/js/beyond.min.js"></script>
+	<script src="../../dep/jquery.bigautocomplete.js"></script>
+	<script src="../../dep/moban/js/select2/select2.js"></script>
+	<script src="../../dep/validation/bootstrapValidator.js"></script>
+	<script type="text/javascript" src="../../dep/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="../../dep/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script type="text/javascript">
+		$(function() {
 
-		</div>
+			$("#memberForm").bootstrapValidator();
 
-		</div>
-		<!-- /右侧内容 -->
-		</div>
-		<!-- <div class="modal fade in" id="closeCourse" aria-hidden="true">
-    <div class="modal-dialog" >
-        <div class="modal-content"  style="border-radius:50px!important" >
-            
-            <div class="modal-body form-horizontal" >
-              <p class="text-warning">您的会员信息已提交成功</p>
-            </div>
-        </div>
-    </div>
-</div>
- -->
-
-		<!--
- 	作者：821516815@qq.com
- 	时间：2016-09-21
- 	描述：通用
-     -->
-		<!--Basic Scripts-->
-		<script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
-		<script src="../../dep/moban/js/bootstrap.min.js"></script>
-
-		<!--Beyond Scripts-->
-		<script src="../../dep/moban/js/beyond.min.js"></script>
-		<script src="../../dep/jquery.bigautocomplete.js"></script>
-		<script src="../../dep/moban/js/select2/select2.js"></script>
-		<script src="../../dep/validation/bootstrapValidator.js"></script>
-		<script type="text/javascript" src="../../dep/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-		<script type="text/javascript" src="../../dep/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
-
-		<script type="text/javascript">
-			$(function() {
-
-				$("#memberForm").bootstrapValidator();
-
-				$("body").on("focus.page", ".date-picker", function() {
-					$(this).datetimepicker({
-						format: "yyyy-mm-dd",
-						minView: 2,
-						autoclose: true,
-						language: "zh-CN"
-					})
-				});
-
-				$('.adds').click(function() {
-
-					var addLesson = '<div class="clear form-group">' +
-						'<label  for="inputPassword3" class="col-sm-2 control-label no-padding-right">祖&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;父</label>' +
-						'<div class="col-sm-7 " style="margin-left:10px">' +
-						'<input type="text" class="form-control fl "  placeholder="请输入姓名" >' +
-						'</div>' +
-						'<i class="fa fa-minus sc" style="width:20px;height:20px;cursor:pointer"></i>' +
-						'</div>' +
-						'<div  class="clear form-group">' +
-						'<label  for="inputPassword3" class="col-sm-2 control-label no-padding-right">祖&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;母</label>' +
-						'<div class="col-sm-7 " style="margin-left:10px">' +
-						'<input type="text" class="form-control fl "  placeholder="请输入姓名" >' +
-						'</div>' +
-						'<i class="fa fa-minus sc" style="width:20px;height:20px;cursor:pointer"></i>' +
-						'</div>' + '<div  class="clear form-group">' +
-						'<label  for="inputPassword3" class="col-sm-2 control-label no-padding-right">父&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;亲</label>' +
-						'<div class="col-sm-7 " style="margin-left:10px">' +
-						'<input type="text" class="form-control fl "  placeholder="请输入姓名" >' +
-						'</div>' +
-						'<i class="fa fa-minus sc" style="width:20px;height:20px;cursor:pointer"></i>' +
-						'</div>' + '<div  class="clear form-group">' +
-						'<label  for="inputPassword3" class="col-sm-2 control-label no-padding-right">母&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;亲</label>' +
-						'<div class="col-sm-7 " style="margin-left:10px">' +
-						'<input type="text" class="form-control fl "  placeholder="请输入姓名" >' +
-						'</div>' +
-						'<i class="fa fa-minus sc" style="width:20px;height:20px;cursor:pointer"></i>' +
-						'</div>' + '<div  class="clear form-group">' +
-						'<label  for="inputPassword3" class="col-sm-2 control-label no-padding-right">儿&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;子</label>' +
-						'<div class="col-sm-7 " style="margin-left:10px">' +
-						'<input type="text" class="form-control fl "  placeholder="请输入姓名" >' +
-						'</div>' +
-						'<i class="fa fa-minus sc" style="width:20px;height:20px;cursor:pointer"></i>' +
-						'</div>' + '<div  class="clear form-group">' +
-						'<label  for="inputPassword3" class="col-sm-2 control-label no-padding-right">女&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;儿</label>' +
-						'<div class="col-sm-7 " style="margin-left:10px">' +
-						'<input type="text" class="form-control fl "  placeholder="请输入姓名" >' +
-						'</div>' +
-						'<i class="fa fa-minus sc" style="width:20px;height:20px;cursor:pointer"></i>' +
-						'</div>';
-
-					$(".formbdcenb").last().append(addLesson).show("slow");
-
-					$(".sc").click(function() {
-
-						$(this).parent().remove();
-
-					})
+			$("body").on("focus.page", ".date-picker", function() {
+				$(this).datetimepicker({
+					format: "yyyy-mm-dd",
+					minView: 2,
+					autoclose: true,
+					language: "zh-CN"
 				})
-
-				$('.adds').click(function() {
-					//('.tabhid').addClass('cur')
-				})
-
-				/* 新增 */
-				$('#tagIdSubmitAddVip_btn').on('click', function() {
-					setTimeout(function() {
-						$('#closeCourse').click();
-					}, 1000);
-				});
-				$("#city").click(function(e) {
-					SelCity(this, e);
-				});
 			});
-		</script>
-	</body>
 
+			$('.adds').click(function() {
+
+				var addLesson = '<div class="clear form-group">' +
+					'<label  for="inputPassword3" class="col-sm-2 control-label no-padding-right">祖&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;父</label>' +
+					'<div class="col-sm-7 " style="margin-left:10px">' +
+					'<input type="text" class="form-control fl "  placeholder="请输入姓名" >' +
+					'</div>' +
+					'<i class="fa fa-minus sc" style="width:20px;height:20px;cursor:pointer"></i>' +
+					'</div>' +
+					'<div  class="clear form-group">' +
+					'<label  for="inputPassword3" class="col-sm-2 control-label no-padding-right">祖&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;母</label>' +
+					'<div class="col-sm-7 " style="margin-left:10px">' +
+					'<input type="text" class="form-control fl "  placeholder="请输入姓名" >' +
+					'</div>' +
+					'<i class="fa fa-minus sc" style="width:20px;height:20px;cursor:pointer"></i>' +
+					'</div>' + '<div  class="clear form-group">' +
+					'<label  for="inputPassword3" class="col-sm-2 control-label no-padding-right">父&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;亲</label>' +
+					'<div class="col-sm-7 " style="margin-left:10px">' +
+					'<input type="text" class="form-control fl "  placeholder="请输入姓名" >' +
+					'</div>' +
+					'<i class="fa fa-minus sc" style="width:20px;height:20px;cursor:pointer"></i>' +
+					'</div>' + '<div  class="clear form-group">' +
+					'<label  for="inputPassword3" class="col-sm-2 control-label no-padding-right">母&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;亲</label>' +
+					'<div class="col-sm-7 " style="margin-left:10px">' +
+					'<input type="text" class="form-control fl "  placeholder="请输入姓名" >' +
+					'</div>' +
+					'<i class="fa fa-minus sc" style="width:20px;height:20px;cursor:pointer"></i>' +
+					'</div>' + '<div  class="clear form-group">' +
+					'<label  for="inputPassword3" class="col-sm-2 control-label no-padding-right">儿&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;子</label>' +
+					'<div class="col-sm-7 " style="margin-left:10px">' +
+					'<input type="text" class="form-control fl "  placeholder="请输入姓名" >' +
+					'</div>' +
+					'<i class="fa fa-minus sc" style="width:20px;height:20px;cursor:pointer"></i>' +
+					'</div>' + '<div  class="clear form-group">' +
+					'<label  for="inputPassword3" class="col-sm-2 control-label no-padding-right">女&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;儿</label>' +
+					'<div class="col-sm-7 " style="margin-left:10px">' +
+					'<input type="text" class="form-control fl "  placeholder="请输入姓名" >' +
+					'</div>' +
+					'<i class="fa fa-minus sc" style="width:20px;height:20px;cursor:pointer"></i>' +
+					'</div>';
+
+				$(".formbdcenb").last().append(addLesson).show("slow");
+
+				$(".sc").click(function() {
+
+					$(this).parent().remove();
+
+				})
+			})
+
+			$('.adds').click(function() {
+				//('.tabhid').addClass('cur')
+			})
+
+			/* 新增 */
+			$('#tagIdSubmitAddVip_btn').on('click', function() {
+				setTimeout(function() {
+					$('#closeCourse').click();
+				}, 1000);
+			});
+			$("#city").click(function(e) {
+				SelCity(this, e);
+			});
+		});
+	</script>
+</body>
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--Basic Styles-->
+    <link href="../../dep/moban/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../dep/moban/css/font-awesome.min.css" rel="stylesheet" />
+    <!--Beyond styles-->
+    <link href="../../dep/moban/css/demo.min.css" rel="stylesheet" />
+    <link href="../../dep/moban/css/typicons.min.css" rel="stylesheet" />
+    <link href="../../dep/moban/css/animate.min.css" rel="stylesheet" />
+    <link href="../../dep/moban/css/beyond.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../dep/zTreeStyle/zTreeStyle.min.css" />
+</head>
+<body>
+    <div class="widget">
+        <div class="layui-layer-content">
+            <form action="">
+                <div id="search" class="form-search">
+                    <label class="control-label col-lg-4">关键词：</label>
+                    <input class="form-control" type="text" style="width: 200px;display: inline-block;">
+                    <div style="display: inline-block;margin-left: 10px;">
+                        <a class="btn btn-primary"><i class="glyphicon glyphicon-search"></i>搜索</a>
+                    </div>
+                </div>
+                <div class="area-select" style="margin-top: 20px">
+                    <ul id="tree" class="ztree col-lg-offset-4"></ul>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--Basic Scripts-->
+    <script src="../../dep/moban/js/jquery-2.0.3.min.js"></script>
+    <script src="../../dep/moban/js/bootstrap.min.js"></script>
+    <script src="../../dep/zTreeStyle/jquery.ztree.all.min.js"></script>
+    <script>
+    var setting = {
+        check: {
+            enable: true
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        }
+    };
+
+    var zNodes ;
+    var code;
+    function setCheck() {
+
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+                py = $("#py").attr("checked")? "p":"",
+                sy = $("#sy").attr("checked")? "s":"",
+                pn = $("#pn").attr("checked")? "p":"",
+                sn = $("#sn").attr("checked")? "s":"",
+                type = { "Y":py + sy, "N":pn + sn};
+        zTree.setting.check.chkboxType = type;
+        showCode('setting.check.chkboxType = { "Y" : "' + type.Y + '", "N" : "' + type.N + '" };');
+    }
+    function showCode(str) {
+        if (!code) code = $("#code");
+        code.empty();
+        code.append("<li>"+str+"</li>");
+    }
+    function fuzhi(data){
+        zNodes=eval("("+data+")");
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+
+        setCheck();
+        $("#py").bind("change", setCheck);
+        $("#sy").bind("change", setCheck);
+        $("#pn").bind("change", setCheck);
+        $("#sn").bind("change", setCheck);
+
+    }
+    var zNodes =[
+        {id:4, pId:0, name:"河北省"},
+        {id:41, pId:4, name:"石家庄"},
+        {id:42, pId:4, name:"保定"},
+        {id:43, pId:4, name:"邯郸"},
+        {id:44, pId:4, name:"承德"},
+        {id:5, pId:0, name:"广东省"},
+        {id:51, pId:5, name:"广州"}
+    ];
+
+    $(document).ready(function(){
+        $.fn.zTree.init($("#tree"), setting, zNodes);
+        var treeObj = $.fn.zTree.getZTreeObj("tree");
+        treeObj.expandAll(true);
+    });
+
+</script>
+</body>
+</html>
