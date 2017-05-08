@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+
+    <link rel="shortcut icon" href="images/favicon_1.ico">
+
+    <title>题库后台管理</title>
+
+    <!-- Base Css Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Icons -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/ionicon/css/ionicons.min.css" rel="stylesheet" />
+    <link href="fonts/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/material-design-iconic-font.min.css" rel="stylesheet">
+
+    <!-- animate css -->
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <!-- Waves-effect -->
+    <link href="css/waves-effect.css" rel="stylesheet">
+
+
+    <!-- Plugins css -->
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/jquery-datatables-editable/datatables.css" />
+    <link href="assets/modal-effect/css/component.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/magnific-popup/magnific-popup.css" />
+    <link href="assets/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+
+    <!--sweet alerts-->
+    <link href="assets/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+    <link href="assets/select2/select2.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom Files -->
+    <link href="css/helper.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/modernizr.min.js"></script>
+</head>
+<body class="fixed-left">
+<!-- Begin page -->
+<div id="wrapper">
+    <!-- Top Bar Start -->
+    <topbar></topbar>
+    <!-- Top Bar End -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <side-menu></side-menu>
+    <!-- Left Sidebar End -->
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="pull-left page-title m-t-15">
+                            <ul class="btn-group">
+                                <li class="btn btn-default col-sm-1"><a href="topicManage.html">题目</a></li>
+                                <li class="btn btn-default col-sm-1 active"><a href="paperManage.html">试卷</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="chapterManage.html">章节考点</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="easyWrong.html">易错题</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="dailyPractice.html">每日一练</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="#">竞技赛场</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="#">挑战难度</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="rankingList.html">排行榜</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="evaluate.html">评估</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="notes.html">笔记</a></li>
+                            </ul>
+                        </div>
+                        <ol class="breadcrumb pull-right">
+                            <li><a href="#">题库管理</a></li>
+                            <li><a href="#">管理</a></li>
+                            <li class="active">试卷</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">试卷管理</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-toolbar">
+                                    <div class="btn-group" style="width:200px">
+                                        <select class="form-control select2">
+                                            <option value="" selected="selected">二级科目</option>
+                                            <option value="基础知识-北京">基础知识-北京</option>
+                                            <option value="专业技能-北京">专业技能-北京</option>
+                                            <option value="基础知识-全国">基础知识-全国</option>
+                                            <option value="专业技能-全国">专业技能-全国</option>
+                                        </select>
+                                    </div>
+                                    <div class="btn-group">
+                                        <select class="form-control">
+                                            <option value="" selected="selected">试卷类型</option>
+                                            <option value="">模拟试卷</option>
+                                            <option value="">真题演练</option>
+                                            <option value="">易错题</option>
+                                            <option value="">每日一练</option>
+                                            <option value="">竞技赛场</option>
+                                            <option value="">万人模拟</option>
+                                            <option value="">挑战难度</option>
+                                        </select>
+                                    </div>
+                                    <div class="btn-group">
+                                        <select class="form-control">
+                                            <option value="" selected="selected">试卷状态</option>
+                                            <option value="1">全部</option>
+                                            <option value="0">编辑中</option>
+                                            <option value="0">未发布</option>
+                                            <option value="0">已发布</option>
+                                        </select>
+                                    </div>
+                                    <div class="btn-group">
+                                        <input autocomplete="off" type="text" value="" class="form-control" id="keyWord" name="identityId" placeholder="关键词">
+                                        <button class="btn btn-success" type="button">搜索</button>
+                                    </div>
+                                    <div class="btn-group pull-right">
+                                        <a href="paperStatistical.html" class="btn btn-success"><span><i class="md md-equalizer"></i></span> 试卷统计</a>
+                                    </div>
+                                    <div class="btn-group pull-right">
+                                        <a href="creat_paper_step1.html" class="btn btn-success"><span><i class="md md-my-library-add"></i></span> 创建试卷</a>
+                                    </div>
+                                </div>
+                                <div class="set-table table">
+                                    <ul class="table-tr clearfix">
+                                        <li class="col-sm-1 table-th">试卷编号</li>
+                                        <li class="col-sm-3 table-th">试卷名称</li>
+                                        <li class="col-sm-1 table-th">类型</li>
+                                        <li class="col-sm-1 table-th">题目统计</li>
+                                        <li class="col-sm-2 table-th">发布者/时间</li>
+                                        <li class="col-sm-1 table-th">状态</li>
+                                        <li class="col-sm-3 table-th actions">操作</li>
+                                    </ul>
+                                    <ul class="sortable table-tb">
+                                        <li class="table-tr">
+                                            <ul class="table-tr clearfix">
+                                                <li class="table-td col-sm-1">1</li>
+                                                <li class="table-td col-sm-3">人力资源管理师</li>
+                                                <li class="table-td col-sm-1">模拟试卷</li>
+                                                <li class="table-td col-sm-1">2题/4.0分</li>
+                                                <li class="table-td col-sm-2 has-layer"><span>admin</span><br>2017-04-12 18:00:00</li>
+                                                <li class="table-td col-sm-1"><span class="label label-success">已发布</span></li>
+                                                <li class="table-td col-sm-3 actions">
+                                                    <a href="topicList.html" class="btn btn-xs btn-default manage"><i class=" fa fa-cog"></i>管理</a>
+                                                    <a href="javascript:void (0);" class="btn btn-xs btn-default publish"><i class="fa fa-send-o"></i>发布</a>
+                                                    <a href="javascript:void (0);" class="btn btn-xs btn-default edit"><i class="fa fa-pencil"></i>编辑</a>
+                                                    <a href="javascript:void (0);" class="btn btn-xs btn-default delect"><i class="fa fa-trash"></i>删除</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="table-tr">
+                                            <ul class="table-tr clearfix">
+                                                <li class="table-td col-sm-1">2</li>
+                                                <li class="table-td col-sm-3">人力资源管理师</li>
+                                                <li class="table-td col-sm-1">真题演练</li>
+                                                <li class="table-td col-sm-1">2题/4.0分</li>
+                                                <li class="table-td col-sm-2"></li>
+                                                <li class="table-td col-sm-1"><span class="label label-default">未发布</span></li>
+                                                <li class="table-td col-sm-3 actions">
+                                                    <a href="topicList.html" class="btn btn-xs btn-default manage"><i class=" fa fa-cog"></i>管理</a>
+                                                    <a href="javascript:void (0);" class="btn btn-xs btn-default publish"><i class="fa fa-send-o"></i>发布</a>
+                                                    <a href="javascript:void (0);" class="btn btn-xs btn-default edit"><i class="fa fa-pencil"></i>编辑</a>
+                                                    <a href="javascript:void (0);" class="btn btn-xs btn-default delect"><i class="fa fa-trash"></i>删除</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="table-tr">
+                                            <ul class="table-tr clearfix">
+                                                <li class="table-td col-sm-1">3</li>
+                                                <li class="table-td col-sm-3">人力资源管理师</li>
+                                                <li class="table-td col-sm-1">万人模考</li>
+                                                <li class="table-td col-sm-1">2题/4.0分</li>
+                                                <li class="table-td col-sm-2"></li>
+                                                <li class="table-td col-sm-1"><span class="label label-danger">编辑中</span></li>
+                                                <li class="table-td col-sm-3 actions">
+                                                    <a href="topicList.html" class="btn btn-xs btn-default manage"><i class=" fa fa-cog"></i>管理</a>
+                                                    <a href="javascript:void (0);" class="btn btn-xs btn-default publish"><i class="fa fa-send-o"></i>发布</a>
+                                                    <a href="javascript:void (0);" class="btn btn-xs btn-default edit"><i class="fa fa-pencil"></i>编辑</a>
+                                                    <a href="javascript:void (0);" class="btn btn-xs btn-default delect"><i class="fa fa-trash"></i>删除</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="dataTables_info" role="status" aria-live="polite">共 165 条记录，当前第 1/9 ，每页 20 条记录</div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="dataTables_paginate clearfix">
+                                            <div class="paginate_skip pull-right">
+                                                <label>转到第 <input type="text" class="form-control input-sm">页</label>
+                                                <a href="javascript:;" class="skip_button">确定</a>
+                                            </div>
+                                            <ul class="pagination pull-right">
+                                                <li class="paginate_button previous">
+                                                    <a href="#">上一页</a>
+                                                </li>
+                                                <li class="paginate_button active">
+                                                    <a href="#">1</a>
+                                                </li>
+                                                <li class="paginate_button">
+                                                    <a href="#">2</a>
+                                                </li>
+                                                <li class="paginate_button ">
+                                                    <a href="#">3</a>
+                                                </li>
+                                                <li class="paginate_button ">
+                                                    <a href="#">4</a>
+                                                </li>
+                                                <li class="paginate_button next">
+                                                    <a href="#">下一页</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- panel-body -->
+                        </div> <!-- panel -->
+                    </div> <!-- col -->
+                </div> <!-- End row -->
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+
+        <footer class="footer text-right">
+            北京学慧网络教育科技有限公司
+        </footer>
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
+
+</div>
+<!--modal-->
+<div id="paper-edit-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" style="width: 150px">
+                            <span class="help-inline"><font color="red">*</font> </span>试卷名称
+                        </label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" style="width: 150px">试卷说明</label>
+                        <div class="col-md-9">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" style="width: 150px">
+                            <span class="help-inline"><font color="red">*</font> </span>所属科目
+                        </label>
+                        <div class="col-sm-3">
+                            <select class="form-control select2">
+                                <option>基础知识-全国</option>
+                                <option>专业技能-全国</option>
+                                <option>基础知识-北京</option>
+                                <option>专业技能-北京</option>
+                            </select>
+                        </div>
+                        <label class="col-sm-3 control-label"><span class="help-inline"><font color="red">*</font> </span>做题类型</label>
+                        <div class="col-sm-3">
+                            <select class="form-control">
+                                <option>模拟试卷</option>
+                                <option>真题演练</option>
+                                <option>章节练习</option>
+                                <option>易错题</option>
+                                <option>每日一练</option>
+                                <option>竞技赛场</option>
+                                <option>万人模考</option>
+                                <option>挑战难题</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" style="width: 150px"><span class="help-inline"><font color="red">*</font> </span>答题时间</label>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-sm-4"><input type="text" class="form-control" value="" style="width: 70px"></div>
+                                <div class="col-sm-6" style="line-height: 34px;">分钟</div>
+                            </div>
+                        </div>
+                        <label class="col-md-3 control-label">年份</label>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" value="" id="search_year">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" style="width: 150px">价格 ( 元 )</label>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-yen"></i></span>
+                                <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                            </div>
+                        </div>
+
+                        <label class="col-md-3 control-label">参考基数</label>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" name="example-input1-group2" class="form-control" placeholder="参考基数">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" style="width: 150px"><span class="help-inline"><font color="red">*</font> </span>试卷难度</label>
+                        <div class="col-sm-3">
+                            <div class="score clearfix" id="paper-diff">
+                                <span class="md md-grade active"></span>
+                                <span class="md md-grade active"></span>
+                                <span class="md md-grade"></span>
+                                <span class="md md-grade"></span>
+                                <span class="md md-grade"></span>
+                            </div>
+                        </div>
+                        <label class="col-sm-3 control-label"><span class="help-inline"><font color="red">*</font> </span>定时器</label>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" value="" id="datetimepicker-start">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal-->
+<!-- END wrapper -->
+<script>
+    var resizefunc = [];
+</script>
+
+<!-- jQuery  -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/waves.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="assets/jquery-detectmobile/detect.js"></script>
+<script src="assets/fastclick/fastclick.js"></script>
+<script src="assets/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script src="assets/jquery-blockui/jquery.blockUI.js"></script>
+
+<!-- Modal-Effect -->
+<script src="assets/modal-effect/js/classie.js"></script>
+<script src="assets/styling/uniform.min.js"></script>
+<script src="assets/modal-effect/js/modalEffects.js"></script>
+<script src="assets/bootstrap-multiselect/bootstrap_multiselect.js"></script>
+<script src="assets/jquery-blockui/jquery-ui.js"></script>
+<script src="assets/sweet-alert/sweet-alert.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="assets/select2/select2.min.js" type="text/javascript"></script>
+<!-- CUSTOM JS -->
+<script src="js/jquery.app.js"></script>
+<script src="js/comment-template.js"></script>
+
+<script>
+    new Vue({
+        el:'#wrapper'
+    });
+    $('.sortable').sortable({
+        axis:"y",
+        scroll:false,
+        cursor: "pointer"
+
+    });
+    $("#search_year").datetimepicker({
+        format: 'yyyy',
+        startView : "decade",
+        minView: 'decade',
+        language : 'zh-CN',
+        autoclose: true
+    });
+    $('#datetimepicker-start').datetimepicker({
+        format: "yyyy-mm-dd hh:ii:00", //选择日期后，文本框显示的日期格式
+        language: 'zh-CN', //汉化
+        autoclose:true //选择日期后自动关闭
+
+    });
+    $(".select2").select2({
+        width: '100%'
+    });
+    $(".delect").click(function(){
+        var _this=this;
+        swal({
+                title: "您确定要删除?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "删除",
+                closeOnConfirm: false,
+                cancelButtonText:"取消"
+
+            },
+            function(){
+                $(_this).parent().parent().parent().remove();
+                swal("Deleted!", "删除成功！", "success");
+            });
+    });
+    $(".publish").click(function(){
+        swal({
+                title: "您确定要发布这张试卷?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "发布",
+                closeOnConfirm: false,
+                cancelButtonText:"取消"
+
+            },
+            function(){
+                swal("Published!", "发布成功！", "success");
+            });
+    });
+    $(".edit").click(function () {
+        $("#paper-edit-modal").modal("show")
+    });
+    $("#paper-diff").score();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+
+    <link rel="shortcut icon" href="images/favicon_1.ico">
+
+    <title>题库后台管理</title>
+
+    <!-- Base Css Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Icons -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/ionicon/css/ionicons.min.css" rel="stylesheet" />
+    <link href="fonts/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/material-design-iconic-font.min.css" rel="stylesheet">
+
+    <!-- animate css -->
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <!-- Waves-effect -->
+    <link href="css/waves-effect.css" rel="stylesheet">
+
+
+    <!-- Plugins css -->
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link href="assets/modal-effect/css/component.css" rel="stylesheet">
+    <link href="assets/bootstrap-multiselect/multiselect.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/magnific-popup/magnific-popup.css" />
+
+    <!--sweet alerts-->
+    <link href="assets/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+
+
+    <!-- Custom Files -->
+    <link href="css/helper.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/modernizr.min.js"></script>
+</head>
+
+<body class="fixed-left">
+<!-- Begin page -->
+<div id="wrapper">
+    <!-- Top Bar Start -->
+    <topbar></topbar>
+    <!-- Top Bar End -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <side-menu></side-menu>
+    <!-- Left Sidebar End -->
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="pull-left page-title">科目</h4>
+                        <ol class="breadcrumb pull-right">
+                            <li><a href="#">题库管理</a></li>
+                            <li class="active">科目</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h3 class="panel-title">科目</h3></div>
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label"><span class="help-inline"><font color="red">*</font> </span>科目名称</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" value="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label"><span class="help-inline"><font color="red">*</font> </span>包含科目</label>
+                                        <div class="col-md-6">
+                                            <div class="set-table table">
+                                                <ul class="table-tr clearfix">
+                                                    <li class="col-sm-6 table-th">科目</li>
+                                                    <li class="col-sm-3 table-th">考试地域</li>
+                                                    <li class="col-sm-3 table-th actions">操作</li>
+                                                </ul>
+                                                <ul class="sortable table-tb">
+                                                    <li class="table-tr">
+                                                        <ul class="father table-tr clearfix odd">
+                                                            <li class="table-td col-sm-6"><span class="indenter"><a href="#" title="展开">&nbsp;</a></span>人力一级</li>
+                                                            <li class="table-td col-sm-3"></li>
+                                                            <li class="table-td col-sm-3 actions">
+                                                                <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i>编辑</a>
+                                                                <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="sortable children">
+                                                            <ul class="table-tr clearfix even">
+                                                                <li class="table-td col-sm-6"><span class="indenter"></span>基础知识</li>
+                                                                <li class="table-td col-sm-3">北京</li>
+                                                                <li class="table-td col-sm-3 actions">
+                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i>编辑</a>
+                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="table-tr clearfix even">
+                                                                <li class="table-td col-sm-6"><span class="indenter"></span>专业技能</li>
+                                                                <li class="table-td col-sm-3">上海</li>
+                                                                <li class="table-td col-sm-3 actions">
+                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i>编辑</a>
+                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li class="table-tr">
+                                                        <ul class="father table-tr clearfix odd">
+                                                            <li class="table-td col-sm-6"><span class="indenter"><a href="#" title="展开">&nbsp;</a></span>人力二级</li>
+                                                            <li class="table-td col-sm-3"></li>
+                                                            <li class="table-td col-sm-3 actions">
+                                                                <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i>编辑</a>
+                                                                <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="sortable children">
+                                                            <ul class="table-tr clearfix even">
+                                                                <li class="table-td col-sm-6"><span class="indenter"></span>基础知识</li>
+                                                                <li class="table-td col-sm-3">北京</li>
+                                                                <li class="table-td col-sm-3 actions">
+                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i>编辑</a>
+                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="table-tr clearfix even">
+                                                                <li class="table-td col-sm-6"><span class="indenter"></span>专业技能</li>
+                                                                <li class="table-td col-sm-3">上海</li>
+                                                                <li class="table-td col-sm-3 actions">
+                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i>编辑</a>
+                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="add-course m-b-5" id="add-course">
+                                                <i class="btn-info fa fa-plus"></i>
+                                                <span>添加科目</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-btn">
+                                        <div class="col-sm-9 col-xs-offset-3">
+                                            <button class="btn btn-success waves-effect waves-light col-sm-2" type="submit">保存</button>
+                                            <button class="btn btn-default waves-effect col-sm-2 col-xs-offset-2" type="button" onclick="window.history.back(-1)">取消</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div> <!-- panel-body -->
+                        </div> <!-- panel -->
+                    </div> <!-- col -->
+                </div> <!-- End row -->
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+
+        <footer class="footer text-right">
+            北京学慧网络教育科技有限公司
+        </footer>
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
+
+</div>
+<!-- END wrapper -->
+
+<!--modal-->
+<div id="con-course-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">添加科目</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label"><span class="help-inline"><font color="red">*</font> </span>一级科目</label>
+                            <input type="text" class="form-control" placeholder="请输入科目名称">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label"><span class="help-inline"><font color="red">*</font> </span>二级科目</label>
+                            <input type="text" class="form-control" placeholder="请输入二级科目名称">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label"><span class="help-inline"><font color="red">*</font> </span>考试地域</label>
+                            <div class="multi-select-full">
+                                <select class="multiselect-select-all" multiple="multiple">
+                                    <option value="北京">北京</option><option value="天津">天津</option><option value="上海">上海</option><option value="重庆">重庆</option><option value="河北">河北</option><option value="山西">山西</option><option value="内蒙古">内蒙古</option><option value="辽宁">辽宁</option><option value="吉林">吉林</option><option value="黑龙江">黑龙江</option><option value="江苏">江苏</option><option value="浙江">浙江</option><option value="安徽">安徽</option><option value="福建">福建</option><option value="江西">江西</option><option value="山东">山东</option><option value="河南">河南</option><option value="湖北">湖北</option><option value="湖南">湖南</option><option value="广东">广东</option><option value="广西">广西</option><option value="海南">海南</option><option value="四川">四川</option><option value="贵州">贵州</option><option value="云南">云南</option><option value="西藏">西藏</option><option value="陕西">陕西</option><option value="甘肃">甘肃</option><option value="青海">青海</option><option value="宁夏">宁夏</option><option value="新疆">新疆</option><option value="香港">香港</option><option value="澳门">澳门</option><option value="台湾">台湾</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-t-10" id="share-class">
+                    <label class="col-md-12 control-label">选择共享科目</label>
+                    <div class="col-md-12 add-course">
+                        <div class="form-title"></div>
+                        <i class="btn-danger fa fa-minus removeClass"></i>
+                    </div>
+                    <div class="col-md-11" style="margin-left: 40px">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="field-1" class="control-label"><span class="help-inline"><font color="red">*</font> </span>题库名称</label>
+                                    <select class="form-control">
+                                        <option>人力资源管理师题库</option>
+                                        <option>公共营养师题库</option>
+                                        <option>健康管理师题库</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label"><span class="help-inline"><font color="red">*</font> </span>一级科目</label>
+                                    <select class="form-control">
+                                        <option>人力一级</option>
+                                        <option>人力二级</option>
+                                        <option>人力三级</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label"><span class="help-inline"><font color="red">*</font> </span>二级科目</label>
+                                    <select class="form-control">
+                                        <option>基础知识</option>
+                                        <option>专业技能</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="edit-course-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="field-1" class="control-label"><span class="help-inline"><font color="red">*</font> </span>科目名称</label>
+                            <input type="text" class="form-control" id="field-1" placeholder="请输入科目名称">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label"><span class="help-inline"><font color="red">*</font> </span>考试地域</label>
+                            <div class="multi-select-full">
+                                <select class="multiselect-select-all" multiple="multiple">
+                                    <option value="北京">北京</option><option value="天津">天津</option><option value="上海">上海</option><option value="重庆">重庆</option><option value="河北">河北</option><option value="山西">山西</option><option value="内蒙古">内蒙古</option><option value="辽宁">辽宁</option><option value="吉林">吉林</option><option value="黑龙江">黑龙江</option><option value="江苏">江苏</option><option value="浙江">浙江</option><option value="安徽">安徽</option><option value="福建">福建</option><option value="江西">江西</option><option value="山东">山东</option><option value="河南">河南</option><option value="湖北">湖北</option><option value="湖南">湖南</option><option value="广东">广东</option><option value="广西">广西</option><option value="海南">海南</option><option value="四川">四川</option><option value="贵州">贵州</option><option value="云南">云南</option><option value="西藏">西藏</option><option value="陕西">陕西</option><option value="甘肃">甘肃</option><option value="青海">青海</option><option value="宁夏">宁夏</option><option value="新疆">新疆</option><option value="香港">香港</option><option value="澳门">澳门</option><option value="台湾">台湾</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 60px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal-->
+
+<script>
+    var resizefunc = [];
+</script>
+
+<!-- jQuery  -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/waves.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="assets/jquery-detectmobile/detect.js"></script>
+<script src="assets/fastclick/fastclick.js"></script>
+<script src="assets/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script src="assets/jquery-blockui/jquery.blockUI.js"></script>
+
+<!-- Modal-Effect -->
+<script src="assets/modal-effect/js/classie.js"></script>-->
+<script src="assets/styling/uniform.min.js"></script>
+<script src="assets/modal-effect/js/modalEffects.js"></script>-->
+<script src="assets/bootstrap-multiselect/bootstrap_multiselect.js"></script>
+<script src="assets/jquery-blockui/jquery-ui.js"></script>
+<script src="assets/sweet-alert/sweet-alert.min.js"></script>
+
+<!-- CUSTOM JS -->
+<script src="js/jquery.app.js"></script>
+<script src="js/comment-template.js"></script>
+
+<script>
+    new Vue({
+        el:'#wrapper'
+    });
+    $("#add-course").click(function () {
+        $("#con-course-modal").modal("show");
+    });
+
+    $(".edit").click(function () {
+        $("#edit-course-modal").modal("show");
+        return false
+
+    });
+
+    $(".delete").click(function () {
+        var _this=this;
+        swal({
+            title: "你确定要删除?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "删除",
+            cancelButtonText:"取消",
+            closeOnConfirm: false
+        }, function(){
+            if($(_this).parent().parent().is(".father")){
+                $(_this).parent().parent().parent().remove();
+            }else {
+                $(_this).parent().parent().remove();
+            }
+            swal("Deleted!", "删除成功！", "success");
+        });
+        return false
+    });
+
+    $('.sortable').sortable({
+        axis:"y",
+        scroll:false,
+        cursor: "pointer"
+
+    });
+    $(".father").click(function () {
+        $(this).next().slideToggle()
+    });
+    $('.multiselect-select-all').multiselect({
+        includeSelectAllOption:true,
+        nonSelectedText:'请选择地域',
+        nSelectedText:'项被选中',
+        selectAllText:'全国',
+        allSelectedText:'已选中所有地域',
+        onSelectAll: function() {
+            $.uniform.update();
+        },
+        maxHeight:300
+
+    });
+    $(".styled, .multiselect-container input").uniform({ radioClass: 'choice'});
+    $("#share-class").on("click",".removeClass",function () {
+        $(this).parent().next().remove();
+        $(this).parent().remove();
+    });
+</script>
+
+</body>
+</html>

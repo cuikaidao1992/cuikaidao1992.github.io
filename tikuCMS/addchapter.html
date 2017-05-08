@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+
+    <link rel="shortcut icon" href="images/favicon_1.ico">
+
+    <title>题库后台管理</title>
+
+    <!-- Base Css Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Icons -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/ionicon/css/ionicons.min.css" rel="stylesheet" />
+    <link href="fonts/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/material-design-iconic-font.min.css" rel="stylesheet">
+
+    <!-- animate css -->
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <!-- Waves-effect -->
+    <link href="css/waves-effect.css" rel="stylesheet">
+
+
+    <!-- Plugins css -->
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link href="assets/modal-effect/css/component.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/magnific-popup/magnific-popup.css" />
+
+    <!--sweet alerts-->
+    <link href="assets/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+    <link href="assets/select2/select2.css" rel="stylesheet" type="text/css">
+    <link href="assets/treeTable/css/jquery.treetable.css" rel="stylesheet" type="text/css">
+    <link href="assets/treeTable/css/jquery.treetable.theme.default.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom Files -->
+    <link href="css/helper.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/modernizr.min.js"></script>
+</head>
+<body class="fixed-left">
+<!-- Begin page -->
+<div id="wrapper">
+    <!-- Top Bar Start -->
+    <topbar></topbar>
+    <!-- Top Bar End -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <side-menu></side-menu>
+    <!-- Left Sidebar End -->
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="pull-left page-title m-t-15">
+                            <ul class="btn-group">
+                                <li class="btn btn-default col-sm-1"><a href="topicManage.html">题目</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="paperManage.html">试卷</a></li>
+                                <li class="btn btn-default col-sm-1 active"><a href="chapterManage.html">章节考点</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="easyWrong.html">易错题</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="dailyPractice.html">每日一练</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="#">竞技赛场</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="#">挑战难度</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="rankingList.html">排行榜</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="evaluate.html">评估</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="notes.html">笔记</a></li>
+                            </ul>
+                        </div>
+                        <ol class="breadcrumb pull-right">
+                            <li><a href="#">题库管理</a></li>
+                            <li><a href="#">管理</a></li>
+                            <li class="active">章节考点目录管理</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">添加章节考点</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <div class="table-toolbar">
+                                        <div class="btn-group">
+                                            <select class="form-control" style="width: 300px">
+                                                <option>基础知识-北京</option>
+                                                <option>技能精讲-全国</option>
+                                            </select>
+                                        </div>
+                                        <div class="btn-group pull-right">
+                                            <a href="javascript:;" class="btn btn-success add-chapter"><i class="fa fa-plus"></i> 添加章节</a>
+                                        </div>
+                                    </div>
+                                    <div class="set-chapter-list set-chapter">
+                                      <!-- <ul class="sortable set-chapter">
+                                            <li class="set-item" v-cloak v-for="item of treeList">
+                                                <div class="father clearfix">
+                                                    <div class="pull-left input-box">
+                                                        <span class="type-name"> {{item.title}}</span>
+                                                        <input type="text" class="form-control type-input" value="" v-model="item.title">
+                                                    </div>
+                                                    <div class="pull-right actions">
+                                                        <a href="javascript:;" class="hidden save btn btn btn-default btn-xs"><i class="fa fa-save"></i>保存</a>
+                                                        <a href="javascript:;" class="hidden cancel btn btn btn-default btn-xs"><i class="fa fa-times"></i>取消</a>
+                                                        <a href="javascript:;" class="edit btn btn btn-default btn-xs"><i class="fa fa-pencil"></i>编辑</a>
+                                                        <a href="javascript:;" class="remove btn btn-default btn-xs"><i class="fa fa-trash"></i>删除</a>
+                                                        <a href="javascript:;" class="add btn btn-default btn-xs"><i class="fa fa-plus"></i>添加</a>
+                                                    </div>
+                                                </div>
+                                                <tree-list v-if="item.children" :data='item.children'></tree-list>
+                                            </li>
+                                        </ul>-->
+                                    </div>
+                                    <div class="form-btn clearfix">
+                                        <div class="col-sm-10 col-xs-offset-2">
+                                            <button class="btn btn-success waves-effect waves-light col-sm-3 col-xs-offset-1" type="submit">保存</button>
+                                            <button class="btn btn-default waves-effect col-sm-3 col-xs-offset-2" type="button" onclick="window.history.back(-1)">取消</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- panel-body -->
+                        </div> <!-- panel -->
+                    </div> <!-- col -->
+                </div> <!-- End row -->
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+
+        <footer class="footer text-right">
+            北京学慧网络教育科技有限公司
+        </footer>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
+</div>
+<!-- END wrapper -->
+<script>
+    var resizefunc = [];
+</script>
+
+<!-- jQuery  -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/waves.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="assets/jquery-detectmobile/detect.js"></script>
+<script src="assets/fastclick/fastclick.js"></script>
+<script src="assets/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script src="assets/jquery-blockui/jquery.blockUI.js"></script>
+
+<!-- Modal-Effect -->
+<script src="assets/modal-effect/js/classie.js"></script>
+<script src="assets/styling/uniform.min.js"></script>
+<script src="assets/modal-effect/js/modalEffects.js"></script>
+<script src="assets/jquery-blockui/jquery-ui.js"></script>
+<script src="assets/sweet-alert/sweet-alert.min.js"></script>
+<!-- CUSTOM JS -->
+<script src="js/jquery.app.js"></script>
+<script src="js/comment-template.js"></script>
+<script>
+   /* var data=[{
+        title:'人力第一章',
+        children:[{
+            title:'人力第一节',
+            children:[{
+                title:'人力考点1',
+                children:[{
+                    title:'人力知识点1',
+                },{
+                    title:'人力知识点2'
+                }]
+            },{
+               title:'人力考点2'
+            }]
+        }],
+    }];
+    Vue.component('tree-list',{
+        props:['data'],
+        template:`<ul class="sortable children">
+                     <li class="set-item" v-cloak v-for="item of data">
+                        <div class="father clearfix">
+                            <div class="pull-left input-box" :class="{editing:item == edtorTodo}">
+                                <span class="type-name"> {{item.title}}</span>
+                                <input type="text" class="form-control type-input" value="" v-model="item.title">
+                            </div>
+                            <div class="pull-right actions">
+                                <a href="javascript:;" class="save btn btn btn-default btn-xs" :class="{hidden:item != edtorTodo}" @click="saveItem()"><i class="fa fa-save"></i>保存</a>
+                                <a href="javascript:;" class="cancel btn btn btn-default btn-xs" :class="{hidden:item != edtorTodo}" @click="cancelItem(item)"><i class="fa fa-times"></i>取消</a>
+                                <a href="javascript:;" class="edit btn btn btn-default btn-xs"  :class="{hidden:item == edtorTodo}" @click="editItem(item)"><i class="fa fa-pencil"></i>编辑</a>
+                                <a href="javascript:;" class="remove btn btn-default btn-xs"  :class="{hidden:item == edtorTodo}" @click="removeItem(item)"><i class="fa fa-trash"></i>删除</a>
+                                <a href="javascript:;" class="add btn btn-default btn-xs" @click="addItem(item)"><i class="fa fa-plus"></i>添加</a>
+                            </div>
+                        </div>
+                         <tree-list v-if="item.children" :data='item.children'></tree-list>
+                    </li>
+                </ul>`,
+        data:function () {
+            return {
+                edtorTodo:"",
+                beforeTitle:""
+            }
+        },
+        methods:{
+            addItem(todo){
+                var index=this.data.indexOf(todo);
+                if(this.data[index].children){
+                    this.data[index].children.push({title:'请点击编辑输入内容'});
+                }else {
+                    this.data.splice(index,1,{title:todo.title,children:[{title:'请点击编辑输入内容'}]});
+                }
+            },
+            editItem(todo){
+                var index=this.data.indexOf(todo);
+                this.edtorTodo=todo;
+                this.beforeTitle=todo.title;
+            },
+            saveItem(){
+                this.edtorTodo=''
+            },
+            cancelItem(todo){
+                todo.title=this.beforeTitle;
+                this.edtorTodo=''
+            },
+            removeItem(todo){
+                var index=this.data.indexOf(todo);
+                this.data.splice(index,1);
+            }
+        }
+    });
+    new Vue({
+        el:'#wrapper',
+        data:{
+            treeList:data
+        }
+    });
+    $('.sortable').sortable({
+        axis:"y",
+        scroll:false
+    });*/
+    /* 添加章节*/
+   new Vue({
+       el:'#wrapper'
+   });
+   var str='<li class="set-item">'+
+            '<div class="father clearfix">'+
+                '<div class="pull-left input-box">'+
+                    '<span class="type-name" style="display: none"></span>'+
+                    '<input type="text" class="form-control type-input" value="" style="display: block">'+
+                '</div>'+
+                '<div class="pull-right actions">'+
+                    '<a href="javascript:;" class="save btn btn btn-default btn-xs"><i class="fa fa-save"></i>保存</a>'+
+                    '<a href="javascript:;" class="hidden cancel btn btn btn-default btn-xs"><i class="fa fa-times"></i>取消</a>'+
+                    '<a href="javascript:;" class="hidden edit btn btn btn-default btn-xs"><i class="fa fa-pencil"></i>编辑</a>'+
+                    '<a href="javascript:;" class="remove btn btn-default btn-xs"><i class="fa fa-trash"></i>删除</a>'+
+                    '<a href="javascript:;" class="add btn btn-default btn-xs"><i class="fa fa-plus"></i>添加</a>'+
+                '</div>'+
+            '</div>'+
+        ' </li>';
+    $(".set-chapter-list").on("click",".save",function () {
+        var str=$(this).parent().parent().find(".type-input").val();
+        $(this).parent().parent().find(".type-name").text(str);
+        $(this).parent().parent().find(".type-name").show();
+        $(this).parent().parent().find(".type-input").hide();
+        $(this).addClass("hidden");
+        $(this).parent().find(".cancel").addClass("hidden");
+        $(this).parent().find(".edit").removeClass("hidden");
+        $(this).parent().find(".remove").removeClass("hidden");
+        return false
+    });
+    $(".set-chapter-list").on("click",".cancel",function () {
+        $(this).parent().parent().find(".type-name").show();
+        $(this).parent().parent().find(".type-input").hide();
+        $(this).addClass("hidden");
+        $(this).parent().find(".save").addClass("hidden");
+        $(this).parent().find(".edit").removeClass("hidden");
+        $(this).parent().find(".remove").removeClass("hidden");
+        return false
+    });
+    $(".set-chapter-list").on("click",".edit",function () {
+        var flag = false;
+        $(".set-chapter-list").find("input[type=text]").each(function(){
+            if($(this).is(":visible")){
+                flag = true;
+            }
+        });
+        if(flag){
+            $('<div class="c-fa">您还有未保存的分类，不能继续添加！</div>').appendTo('body').fadeIn(100).delay(1000).fadeOut(200,function(){
+                $(this).remove();
+            });
+            return false;
+        }
+        $(this).parent().parent().find(".type-name").hide();
+        $(this).parent().parent().find(".type-input").show();
+        $(this).addClass("hidden");
+        $(this).parent().find(".remove").addClass("hidden");
+        $(this).parent().find(".cancel").removeClass("hidden");
+        $(this).parent().find(".save").removeClass("hidden");
+        return false
+    });
+    $(".set-chapter-list").on("click",".remove",function () {
+        if( $(this).parent().parent().parent().prev().is("li")){
+            $(this).parent().parent().parent().remove();
+        }else{
+            $(this).parent().parent().parent().parent().remove();
+        }
+
+        return false
+    });
+    $(".set-chapter-list").on("click",".add",function () {
+        var flag = false;
+        $(".children").show();
+        $(".set-chapter-list").find("input[type=text]").each(function(){
+            if($(this).is(":visible")){
+                flag = true;
+            }
+        });
+        if(flag){
+            $('<div class="c-fa">您还有未保存的分类，不能继续添加！</div>').appendTo('body').fadeIn(100).delay(1000).fadeOut(200,function(){
+                $(this).remove();
+            });
+            return false;
+        }
+        if($(this).parent().parent().next().is("ul")){
+            $(this).parent().parent().next().append(str);
+        }else {
+            $(this).parent().parent().parent().append('<ul class="sortable children" style="display: block"></ul>');
+            $(this).parent().parent().next().append(str);
+        }
+        $('.sortable').sortable({
+            axis:"y",
+            scroll:false
+        });
+        return false
+    });
+    $(".add-chapter").click(function () {
+        var flag = false;
+        $(".set-chapter-list").find("input[type=text]").each(function(){
+            if($(this).is(":visible")){
+                flag = true;
+            }
+        });
+        if(flag){
+            $('<div class="c-fa">您还有未保存的分类，不能继续添加！</div>').appendTo('body').fadeIn(100).delay(1000).fadeOut(200,function(){
+                $(this).remove();
+            });
+            return false;
+        }
+        if($(".set-chapter-list").children().is("ul")){
+            $(".set-chapter-list").children().append(str);
+        }else {
+            $(".set-chapter-list").append('<ul class="sortable set-chapter children" style="display: block"></ul>');
+            $(".set-chapter-list").children().append(str);
+        }
+    });
+    $('.sortable').sortable({
+        axis:"y",
+        scroll:false
+    });
+    $(".set-chapter-list").on("click",".father",function () {
+        if($(this).next().is("ul")){
+            $(this).next().stop().slideToggle()
+        }
+    })
+</script>
+</body>
+</html>

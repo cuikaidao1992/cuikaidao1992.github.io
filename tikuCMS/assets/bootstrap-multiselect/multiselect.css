@@ -1,0 +1,1315 @@
+.no-transitions * {
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+.caret {
+    font-style: normal;
+    font-weight: normal;
+    border: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin-top: -1px;
+}
+.caret:after {
+    content: '\e9c5';
+    font-family: 'icomoon';
+    display: block;
+    font-size: 16px;
+    width: 16px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.btn,
+.navbar-link,
+.nav-tabs > li > a,
+.nav-tabs > li > a:after,
+.nav-pills > li > a,
+.nav li > a > .label,
+.nav li > a > .badge,
+.breadcrumb > li > a,
+.breadcrumb-elements > li > a,
+.tt-suggestion,
+.tokenfield .token,
+.selectboxit-btn,
+.bootstrap-select .btn-default,
+.select2-results__option,
+.select2-selection__choice__remove,
+.dropdown-menu > li > a,
+.dropdown-menu > li > label,
+.wizard .actions a,
+.checker span:after,
+.choice span:after,
+.selectboxit-option-anchor,
+.dt-autofill-list ul li,
+.dt-autofill-button .btn,
+.dataTable .select-checkbox:before,
+.dataTable .select-checkbox:after,
+.pika-button,
+.sp-input,
+.navbar-nav > li > a,
+.dropdown-content-footer a,
+.icons-list > li > a,
+.picker__nav--prev,
+.picker__nav--next,
+.multiselect.btn-default,
+.list-group-item,
+.pagination > li > a,
+.pagination > li > span,
+.pager > li > a,
+.pager > li > span,
+.datepicker-dropdown .day,
+a.label,
+a.badge,
+.ui-datepicker-buttonpane > button,
+.ui-button,
+.ui-menu-item,
+.ui-selectmenu-button,
+.ui-datepicker a,
+.media-link,
+.menu-list li > a,
+.plupload_file_action > a,
+.dataTables_paginate .paginate_button,
+.dataTables_filter input,
+.dt-button,
+.picker__list-item,
+.picker__day,
+.picker__footer,
+.sp-replacer,
+.sp-cancel,
+.sp-choose,
+.sp-palette-toggle,
+.daterangepicker td,
+.daterangepicker th,
+.noUi-handle,
+.fc-button,
+.plupload_button,
+.picker__footer button,
+.picker__list button,
+.AnyTime-btn,
+.plupload_filelist li,
+.password-indicator-group.input-group-addon,
+.password-indicator-label-absolute,
+.select2-selection--single:not([class*=bg-]),
+.select2-selection--multiple:not([class*=bg-]) .select2-selection__choice,
+.bootstrap-select.btn-group .dropdown-menu > li > a .check-mark {
+    -webkit-transition: all ease-in-out 0.15s;
+    -o-transition: all ease-in-out 0.15s;
+    transition: all ease-in-out 0.15s;
+}
+.close,
+.tag [data-role="remove"] {
+    -webkit-transition: opacity ease-in-out 0.15s;
+    -o-transition: opacity ease-in-out 0.15s;
+    transition: opacity ease-in-out 0.15s;
+}
+.checker span {
+    -webkit-transition: border-color ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s;
+}
+.table tr,
+.table th,
+.table td,
+.htContextMenu td,
+.ranges ul li {
+    -webkit-transition: background-color ease-in-out 0.15s;
+    -o-transition: background-color ease-in-out 0.15s;
+    transition: background-color ease-in-out 0.15s;
+}
+.checker {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.checker,
+.checker span,
+.checker input {
+    width: 18px;
+    height: 18px;
+}
+.checker span {
+    color: #455A64;
+    border: 2px solid #607D8B;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    border-radius: 2px;
+}
+.checker span:after {
+    content: "\e600";
+    font-family: 'icomoon';
+    font-size: 16px;
+    line-height: 1;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.checker span.checked:after {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.checker input[type=checkbox],
+.choice input[type=radio] {
+    border: none;
+    background: none;
+    display: -moz-inline-box;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    cursor: pointer;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: 2;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.checkbox .checker,
+.checkbox-inline .checker {
+    position: absolute;
+    top: 1px;
+    left: 0;
+}
+.form-horizontal .checkbox .checker,
+.form-horizontal .checkbox-inline .checker {
+    top: 16px;
+}
+.checkbox-right .checker {
+    left: auto;
+    right: 0;
+}
+.checker.disabled {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.checker.disabled,
+.checker.disabled input[type=checkbox] {
+    cursor: not-allowed;
+}
+.checkbox > label:active .checker.disabled span:after,
+.checkbox-inline:active .checker.disabled span:after {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.checkbox > label:active .checker.disabled span.checked:after,
+.checkbox-inline:active .checker.disabled span.checked:after {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.checker[class*=border-] span {
+    border-color: inherit;
+    color: inherit;
+}
+.dropdown-menu > .active:not(.disabled) .checker span,
+.dropdown-menu[class*=bg-] .checker span,
+.page-header-inverse .form-group > .checkbox .checker span,
+.page-header-inverse .form-group > .checkbox-inline .checker span,
+.navbar-inverse .navbar-form .form-group > .checkbox .checker span,
+.navbar-inverse .navbar-form .form-group > .checkbox-inline .checker span,
+.sidebar:not(.sidebar-default) .checkbox .checker span,
+.sidebar:not(.sidebar-default) .checkbox-inline .checker span {
+    border-color: #fff;
+    color: #fff;
+}
+.choice {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    border-radius: 100%;
+}
+.choice,
+.choice span,
+.choice input {
+    width: 18px;
+    height: 18px;
+}
+.choice span {
+    border: 2px solid #607D8B;
+    display: -moz-inline-box;
+    display: inline-block;
+    border-radius: 100%;
+    text-align: center;
+    position: relative;
+}
+.choice span:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border: 4px solid;
+    border-color: inherit;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.choice span.checked:after {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.radio .choice,
+.radio-inline .choice {
+    position: absolute;
+    top: 1px;
+    left: 0;
+}
+.form-horizontal .radio .choice,
+.form-horizontal .radio-inline .choice {
+    top: 9px;
+}
+.radio-right .choice {
+    left: auto;
+    right: 0;
+}
+.choice.disabled {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.choice.disabled,
+.choice.disabled input[type=radio] {
+    cursor: not-allowed;
+}
+.radio > label:active .choice.disabled span:after,
+.radio-inline:active .choice.disabled span:after {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.radio > label:active .choice.disabled span.checked:after,
+.radio-inline:active .choice.disabled span.checked:after {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.choice[class*=border-] span {
+    border-color: inherit;
+}
+.choice[class*=border-] span:after {
+    border-color: inherit;
+}
+.dropdown-menu > .active .choice span,
+.dropdown-menu[class*=bg-] .choice span,
+.page-header-inverse .form-group > .radio .choice span,
+.page-header-inverse .form-group > .radio-inline .choice span,
+.navbar-inverse .navbar-form .form-group > .radio .choice span,
+.navbar-inverse .navbar-form .form-group > .radio-inline .choice span,
+.sidebar:not(.sidebar-default) .radio .choice span,
+.sidebar:not(.sidebar-default) .radio-inline .choice span {
+    border-color: #fff;
+}
+.uploader {
+    width: 100%;
+    position: relative;
+    display: table;
+}
+.uploader .filename {
+    color: #999999;
+    height: 36px;
+    padding: 7px 12px;
+    cursor: pointer;
+    width: 100%;
+    display: table-cell;
+    cursor: default;
+    border: 1px solid #ddd;
+    border-right: 0;
+    background-color: #fff;
+    text-align: left;
+    word-break: break-word;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.uploader .action {
+    display: table-cell;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.uploader .action.btn {
+    margin-top: 0;
+}
+.uploader:hover .action,
+.uploader:focus .action {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.05) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.05) inset;
+}
+.uploader:hover .action.btn-default,
+.uploader:focus .action.btn-default {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.01) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.01) inset;
+}
+.uploader:active .action {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+}
+.uploader:active .action.btn-default {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.03) inset;
+}
+.uploader input[type=file] {
+    width: 100%;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 36px;
+    border: 0;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.uploader.disabled .filename {
+    background-color: #fafafa;
+    cursor: not-allowed;
+}
+.uploader-lg input[type=file],
+.uploader-lg .action,
+.uploader-lg .filename {
+    height: 40px;
+}
+.uploader-lg .filename {
+    padding: 9px 15px;
+    font-size: 14px;
+    line-height: 1.4285715;
+}
+.uploader-sm input[type=file],
+.uploader-sm .action,
+.uploader-sm .filename {
+    height: 34px;
+}
+.uploader-sm .filename {
+    padding: 6px 11px;
+    font-size: 12px;
+    line-height: 1.6666667;
+}
+.uploader-xs input[type=file],
+.uploader-xs .action,
+.uploader-xs .filename {
+    height: 32px;
+}
+.uploader-xs .filename {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.6666667;
+}
+/* ------------------------------------------------------------------------------
+*
+*  # Switchery toggles
+*
+*  Styles for switchery.min.js - toggle switches
+*
+*  Version: 1.0
+*  Latest update: Mar 25, 2015
+*
+* ---------------------------------------------------------------------------- */
+.switchery {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 100px;
+    cursor: pointer;
+    display: inline-block;
+    width: 44px;
+    height: 22px;
+    vertical-align: middle;
+    position: relative;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.checkbox-switchery .switchery {
+    position: absolute;
+    left: 0;
+    margin-top: -2px;
+}
+.switchery > small {
+    background-color: #fff;
+    border-radius: 100px;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 0;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.checkbox.checkbox-switchery {
+    margin-bottom: 14px;
+    padding-left: 0;
+}
+.checkbox.checkbox-switchery.disabled .switchery {
+    cursor: not-allowed;
+}
+.checkbox[class*=switchery-],
+.checkbox-inline[class*=switchery-] {
+    padding-left: 0;
+    padding-right: 0;
+}
+.switchery-lg.checkbox-switchery {
+    margin-bottom: 18px;
+}
+.switchery-lg.checkbox-switchery .switchery {
+    margin-top: -4px;
+}
+label.switchery-lg {
+    margin-bottom: 0;
+}
+.switchery-lg .switchery {
+    height: 26px;
+    width: 52px;
+}
+.switchery-lg .switchery > small {
+    height: 26px;
+    width: 26px;
+}
+.switchery-sm.checkbox-switchery {
+    margin-bottom: 10px;
+}
+.switchery-sm.checkbox-switchery .switchery {
+    margin-top: 0px;
+}
+label.switchery-sm {
+    margin-bottom: 0;
+}
+.switchery-sm .switchery {
+    height: 18px;
+    width: 36px;
+}
+.switchery-sm .switchery > small {
+    height: 18px;
+    width: 18px;
+}
+.switchery-xs.checkbox-switchery {
+    margin-bottom: 6px;
+}
+.switchery-xs.checkbox-switchery .switchery {
+    margin-top: 2px;
+}
+label.switchery-xs {
+    margin-bottom: 0;
+}
+.switchery-xs .switchery {
+    height: 14px;
+    width: 28px;
+}
+.switchery-xs .switchery > small {
+    height: 14px;
+    width: 14px;
+}
+.checkbox-switchery label,
+label.checkbox-switchery {
+    position: relative;
+    padding-left: 56px;
+    margin: 0;
+    cursor: pointer;
+}
+.checkbox-switchery.switchery-lg label,
+label.checkbox-switchery.switchery-lg {
+    padding-left: 64px;
+}
+.checkbox-switchery.switchery-sm label,
+label.checkbox-switchery.switchery-sm {
+    padding-left: 48px;
+}
+.checkbox-switchery.switchery-xs label,
+label.checkbox-switchery.switchery-xs {
+    padding-left: 40px;
+}
+.checkbox-switchery.checkbox-inline {
+    margin-bottom: 0;
+}
+.checkbox-switchery.checkbox-right .switchery {
+    left: auto;
+    right: 0;
+}
+.checkbox-switchery.checkbox-right label,
+label.checkbox-switchery.checkbox-right {
+    padding-left: 0;
+    padding-right: 56px;
+}
+.checkbox-switchery.checkbox-right.switchery-lg label,
+label.checkbox-switchery.checkbox-right.switchery-lg {
+    padding-left: 0;
+    padding-right: 64px;
+}
+.checkbox-switchery.checkbox-right.switchery-sm label,
+label.checkbox-switchery.checkbox-right.switchery-sm {
+    padding-left: 0;
+    padding-right: 48px;
+}
+.checkbox-switchery.checkbox-right.switchery-xs label,
+label.checkbox-switchery.checkbox-right.switchery-xs {
+    padding-left: 0;
+    padding-right: 40px;
+}
+.switchery-double .switchery {
+    position: relative;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-top: -7px;
+    margin-bottom: -5px;
+}
+.switchery-double.checkbox-switchery label,
+label.switchery-double.checkbox-switchery {
+    padding: 0;
+}
+.switchery-double.switchery-lg .switchery {
+    margin-top: -8px;
+    margin-bottom: -6px;
+}
+.switchery-double.switchery-sm .switchery {
+    margin-top: -6px;
+    margin-bottom: -4px;
+}
+.switchery-double.switchery-xs .switchery {
+    margin-top: -5px;
+    margin-bottom: -3px;
+}
+.multiselect {
+    width: 100%;
+    min-width: 100%;
+    text-align: left;
+    padding-left: 12px;
+    padding-right: 29px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.multiselect.btn-default,
+.multiselect.btn-default.disabled {
+    background-color: #fafafa;
+    color: rgba(0,0,0,0.6);
+    font-size: 14px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    box-shadow: none;
+    padding: 6px 12px;
+}
+.multiselect.btn-default:active,
+.btn-group.open .multiselect.btn-default {
+    border-color: #ddd;
+}
+.multiselect.btn-default:hover{
+    box-shadow:none;
+}
+.multiselect .caret {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -8px;
+    width: 16px;
+    text-align: right;
+}
+.multiselect.btn-lg {
+    padding-left: 15px;
+    padding-right: 30px;
+}
+.multiselect.btn-lg .caret {
+    right: 15px;
+}
+.multiselect.btn-sm {
+    padding-left: 11px;
+    padding-right: 22px;
+}
+.multiselect.btn-sm .caret {
+    right: 11px;
+}
+.multiselect.btn-xs {
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.multiselect.btn-xs .caret {
+    right: 10px;
+}
+.multiselect-container {
+    min-width: 180px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+.multiselect-container > li {
+    padding: 0;
+}
+.multiselect-container > li > a {
+    padding: 0;
+}
+.multiselect-container > li > a > label {
+    margin: 0;
+    height: 100%;
+    cursor: pointer;
+    padding: 8px 12px;
+    padding-left: 40px;
+}
+.navbar-form .multiselect-container > li > a > label {
+    display: block;
+}
+.multiselect-container > li > a .checker,
+.multiselect-container > li > a .choice {
+    top: 50%;
+    margin-top: -9px;
+    left: 12px;
+}
+.multiselect-container > li > a.multiselect-all label {
+    font-weight: 500;
+}
+.multiselect-container > li.disabled > a {
+    background-color: transparent;
+}
+.multiselect-container > li.disabled > a > label {
+    cursor: not-allowed;
+}
+.multiselect-container > li.multiselect-group > label,
+.multiselect-container > li.multiselect-group.active > label {
+    margin: 0;
+    padding: 8px 15px;
+    font-size: 11px;
+    line-height: 1.82;
+    color: #999999;
+    text-transform: uppercase;
+    margin-top: 14px;
+    background-color: transparent;
+    cursor: default;
+}
+.multiselect-container > li.multiselect-group.disabled {
+    color: #999999;
+}
+.multiselect-container > li.multiselect-group:first-child > label,
+.multiselect-container > li.multiselect-group:first-child.active > label {
+    margin-top: 7px;
+}
+.multiselect-container > li.multiselect-group.multiselect-group-clickable > label {
+    cursor: pointer;
+}
+.multiselect-container > li.multiselect-group.disabled label,
+.multiselect-container > li.multiselect-group.disabled:hover label,
+.multiselect-container > li.multiselect-group.disabled:focus label {
+    background-color: transparent;
+    cursor: not-allowed;
+}
+.multi-select-full > .btn-group {
+    width: 100%;
+}
+.multi-select-full > .btn-group .multiselect-container {
+    width: inherit;
+}
+.multi-select-fixed > .btn-group > .btn {
+    width: 250px;
+}
+.multi-select-auto > .btn-group > .btn {
+    width: auto;
+}
+div[class*=border-] > .btn-group {
+    border-color: inherit;
+}
+div[class*=border-] > .btn-group > .multiselect {
+    border-color: inherit;
+}
+li.multiselect-filter {
+    position: relative;
+    padding: 5px 12px;
+    margin-bottom: 5px;
+}
+li.multiselect-filter i {
+    font-size: 12px;
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    margin-top: -6px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+li.multiselect-filter .form-control {
+    padding-left: 36px;
+}
+.input-group-btn + .multi-select-full .multiselect:first-child,
+.input-group-addon + .multi-select-full .multiselect:first-child,
+.input-group-btn + .multi-select-auto .multiselect:first-child,
+.input-group-addon + .multi-select-auto .multiselect:first-child,
+.input-group-btn + .multi-select-fixed .multiselect:first-child,
+.input-group-addon + .multi-select-fixed .multiselect:first-child,
+.input-group-btn + .btn-group .multiselect:first-child,
+.input-group-addon + .btn-group .multiselect:first-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.btn-group-multiselect {
+    width: 100%;
+}
+.btn-group-multiselect .btn {
+    float: none;
+}
+.btn-group-multiselect .multiselect {
+    min-width: 0;
+}
+.btn-group > .btn-group:nth-child(2) > .multiselect.btn {
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}
+/* ------------------------------------------------------------------------------
+*
+*  # SelectBoxIt
+*
+*  Styles for selectbox.js - custom select boxes plugin
+*
+*  Version: 1.2
+*  Latest update: Mar 10, 2016
+*
+* ---------------------------------------------------------------------------- */
+/* # Core
+-------------------------------------------------- */
+.selectboxit-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 3px;
+}
+.selectboxit-container * {
+    -webkit-touch-callout: none;
+    outline: 0;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.selectboxit-container .selectboxit {
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+.selectboxit-container .selectboxit:focus {
+    outline: 0;
+}
+.selectboxit-container span,
+.selectboxit-container .selectboxit-options a {
+    display: block;
+}
+.selectboxit-container .selectboxit-options {
+    width: 100%;
+    max-height: 250px;
+    padding: 7px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 999;
+    text-align: left;
+}
+.selectboxit.selectboxit-disabled,
+.selectboxit-options .selectboxit-disabled,
+.selectboxit.selectboxit-disabled:hover,
+.selectboxit-options .selectboxit-disabled:hover,
+.selectboxit.selectboxit-disabled:focus,
+.selectboxit-options .selectboxit-disabled:focus {
+    cursor: not-allowed;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+}
+.selectboxit-rendering {
+    display: inline-block !important;
+    visibility: visible !important;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+.selectboxit-list {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 2px 0 0;
+    width: 100%;
+    min-width: 200px;
+    list-style: none;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.selectboxit-list .selectboxit-option-anchor {
+    color: #333333;
+}
+.selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor {
+    display: block;
+    background-color: #f5f5f5;
+    color: #333333;
+}
+.selectboxit-list > .selectboxit-selected > .selectboxit-option-anchor {
+    background-color: #2196F3;
+    color: #fff;
+}
+.selectboxit-list > .selectboxit-disabled > .selectboxit-option-anchor {
+    color: #999999;
+    cursor: not-allowed;
+}
+.selectbox-container[class*=border-] > .selectboxit-list {
+    border-color: inherit;
+}
+.selectbox-container[class*=bg-] > .selectboxit-list {
+    background-color: inherit;
+    border-color: inherit;
+}
+.selectbox-container[class*=bg-] > .selectboxit-list .selectboxit-option-anchor {
+    color: #fff;
+}
+.selectbox-container[class*=bg-] > .selectboxit-list > .selectboxit-focus .selectboxit-option-anchor {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.selectboxit-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333333;
+    border-radius: 3px;
+    height: 36px;
+    padding: 7px 12px;
+    padding-right: 29px;
+}
+.selectboxit-btn:hover {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.01) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.01) inset;
+}
+.selectboxit-btn.selectboxit-open,
+.selectboxit-btn:focus {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.03) inset;
+}
+.selectboxit-container[class*=bg-] .selectboxit-btn {
+    background-color: inherit;
+    border-color: inherit;
+    color: inherit;
+}
+.selectboxit-container[class*=border-] .selectboxit-btn {
+    border-color: inherit;
+}
+.selectboxit-btn[class*=bg-]:hover,
+.selectboxit-container[class*=bg-] .selectboxit-btn:hover {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.05) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.05) inset;
+}
+.selectboxit-btn[class*=bg-].selectboxit-open,
+.selectboxit-container[class*=bg-] .selectboxit-btn.selectboxit-open,
+.selectboxit-btn[class*=bg-]:focus,
+.selectboxit-container[class*=bg-] .selectboxit-btn:focus {
+    -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+}
+.input-group .selectboxit-container > .selectboxit-btn {
+    border-radius: 0;
+}
+.input-group .selectboxit-container:last-child > .selectboxit-btn {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.input-group > select:first-child + .selectboxit-container > .selectboxit-btn {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.selectboxit-text {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+}
+.selectboxit-default-arrow {
+    position: relative;
+    font-style: normal;
+}
+.selectboxit-default-arrow:after {
+    content: '\e9c5';
+    display: block;
+    font-family: 'icomoon';
+    font-size: 16px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.selectboxit-open .selectboxit-default-arrow:after {
+    content: '\e9c6';
+}
+.selectboxit-option {
+    margin: 0;
+    list-style-type: none;
+}
+.selectboxit-option .selectboxit-option-anchor {
+    padding: 7px 12px;
+}
+.selectboxit-optgroup-header {
+    margin: 0;
+    list-style-type: none;
+    padding: 7px 12px;
+    font-weight: 700;
+    color: #333333;
+    font-size: 11px;
+    line-height: 1.82;
+    text-transform: uppercase;
+}
+.selectboxit-optgroup-header:hover {
+    cursor: default;
+}
+.selectboxit-optgroup-option .selectboxit-option-anchor {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.selectboxit-arrow-container {
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    right: 12px;
+    margin-top: -8px;
+    text-align: right;
+    line-height: 1;
+}
+.selectboxit-arrow-container .selectboxit-arrow[class*=icon-] {
+    top: 0;
+}
+.selectboxit-arrow-container .caret:after {
+    text-align: right;
+}
+.selectboxit-option-icon-container {
+    float: left;
+}
+.selectboxit-option-icon-container > [class*=icon-] {
+    margin-right: 10px;
+    width: auto;
+}
+.selectboxit-option-icon-container .selectboxit-option-icon-url {
+    height: 20px;
+    width: 20px;
+    background-size: 20px 20px;
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+.selectboxit-option-first {
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+.selectboxit-optgroup-header + .selectboxit-option-first {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.selectboxit-option-last {
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+/* # Sizing
+-------------------------------------------------- */
+.selectbox-fixed + .selectboxit-container,
+.selectbox-fixed + .selectboxit-options {
+    width: 250px;
+}
+.selectbox-auto + .selectboxit-container,
+.selectbox-auto + .selectboxit-options {
+    width: auto;
+}
+.selectbox-lg + .selectboxit-container .selectboxit {
+    padding: 9px 15px;
+    padding-right: 30px;
+    height: 40px;
+    font-size: 14px;
+}
+.selectbox-lg + .selectboxit-container .selectboxit .selectboxit-arrow-container {
+    right: 15px;
+}
+.selectbox-sm + .selectboxit-container .selectboxit {
+    padding: 6px 11px;
+    padding-right: 22px;
+    height: 34px;
+}
+.selectbox-sm + .selectboxit-container .selectboxit .selectboxit-arrow-container {
+    right: 11px;
+}
+.selectbox-xs + .selectboxit-container .selectboxit {
+    padding: 5px 10px;
+    padding-right: 25px;
+    height: 32px;
+    font-size: 12px;
+    line-height: 1.6666667;
+}
+.selectbox-xs + .selectboxit-container .selectboxit .selectboxit-arrow-container {
+    right: 10px;
+}
+/* ------------------------------------------------------------------------------
+*
+*  # Bootstrap select
+*
+*  Styles for bootstrap_select.js - custom select boxes plugin
+*
+*  Version: 1.2
+*  Latest update: Aug 20, 2016
+*
+* ---------------------------------------------------------------------------- */
+.bootstrap-select {
+    width: 100%;
+}
+.bootstrap-select > .btn {
+    width: 100%;
+    padding-right: 34px;
+}
+.bootstrap-select > .btn.btn-default,
+.bootstrap-select > .btn.btn-default.disabled {
+    background-color: #fff;
+    border-color: #ddd;
+}
+.bootstrap-select > .btn.btn-default:active,
+.btn-group.open .bootstrap-select > .btn.btn-default {
+    border-color: #ddd;
+}
+.bootstrap-select.form-control {
+    padding: 0;
+    border: 0;
+}
+.bootstrap-select.form-control:not([class*="col-"]) {
+    width: 100%;
+}
+.bootstrap-select .popover-title {
+    font-size: 11px;
+    line-height: 1.82;
+    margin: 7px 0;
+    padding: 7px 12px;
+}
+.bootstrap-select[class*=border-] .btn,
+.bootstrap-select[class*=border-] .dropdown-menu {
+    border-color: inherit;
+}
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 220px;
+}
+.bootstrap-select.fit-width {
+    width: auto !important;
+}
+.bootstrap-select.btn-group.bs-container {
+    position: absolute;
+}
+.bootstrap-select.btn-group:not(.input-group-btn),
+.bootstrap-select.btn-group[class*="col-"] {
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+}
+.bootstrap-select.btn-group.dropdown-menu-right,
+.bootstrap-select.btn-group[class*="col-"].dropdown-menu-right {
+    float: right;
+}
+.bootstrap-select.btn-group > .disabled {
+    cursor: not-allowed;
+}
+.bootstrap-select.btn-group > .disabled:focus {
+    outline: 0;
+}
+.bootstrap-select.btn-group .btn .filter-option {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+.bootstrap-select.btn-group .btn .filter-option > i,
+.bootstrap-select.btn-group .dropdown-menu > li > a [class*=icon-] {
+    margin-right: 7px;
+    float: left;
+    margin-top: 2px;
+    top: 0;
+}
+.bootstrap-select.btn-group .btn .caret {
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    text-align: right;
+    right: 12px;
+    margin-top: -8px;
+}
+.bootstrap-select.btn-group[class*="col-"] .btn {
+    width: 100%;
+}
+.bootstrap-select.btn-group .btn-lg > .caret {
+    right: 15px;
+}
+.bootstrap-select.btn-group .btn-sm > .caret {
+    right: 11px;
+}
+.bootstrap-select.btn-group .btn-xs > .caret {
+    right: 10px;
+}
+.bootstrap-select.btn-group .dropdown-menu {
+    min-width: 100%;
+}
+.bootstrap-select.btn-group .dropdown-menu > li > a .check-mark {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    right: 12px;
+    margin-right: 0;
+    color: #fff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.bootstrap-select.btn-group .dropdown-menu > li > a .text {
+    display: inline-block;
+}
+.bootstrap-select.btn-group .dropdown-menu > li > a > .label,
+.bootstrap-select.btn-group .dropdown-menu > li > a > .badge {
+    float: none;
+}
+.bootstrap-select.btn-group .dropdown-menu > li > a.special-class,
+.bootstrap-select.btn-group .dropdown-menu > li > a.special-class:hover {
+    font-weight: 700;
+    color: #fff;
+    background: #F44336;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+.bootstrap-select.btn-group .dropdown-menu > li.disabled a {
+    cursor: not-allowed;
+}
+.bootstrap-select.btn-group .dropdown-menu > li small {
+    padding-left: 10px;
+}
+.bootstrap-select.btn-group .dropdown-menu > .selected > a {
+    background-color: #2196F3;
+    color: #fff;
+}
+.bootstrap-select.btn-group .dropdown-menu > .selected > a small {
+    color: #fff;
+}
+.bootstrap-select.btn-group .dropdown-menu.inner {
+    position: static;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.bootstrap-select.btn-group .dropdown-menu .notify {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 7px 12px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    pointer-events: none;
+}
+.bootstrap-select.btn-group .dropdown-header ~ li > a {
+    padding-left: 24px;
+}
+.bootstrap-select.btn-group .no-results {
+    padding: 7px 12px;
+    background: #f8f8f8;
+    margin-bottom: -7px;
+    border-top: 1px solid #ddd;
+}
+.bootstrap-select.btn-group.fit-width .btn .filter-option,
+.bootstrap-select.btn-group.fit-width .btn .caret {
+    position: static;
+}
+.bootstrap-select.btn-group.show-tick .dropdown-menu > li a .text {
+    margin-right: 40px;
+}
+.bootstrap-select.btn-group.show-tick .dropdown-menu > li.selected a .check-mark {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.input-group .bootstrap-select > .btn {
+    border-radius: 0;
+}
+.input-group > .bs-select-hidden:first-child + .bootstrap-select > .btn,
+.input-group > .bootstrap-select:first-child > .btn {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.input-group > .bootstrap-select:last-child > .btn {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.error .bootstrap-select .btn {
+    border: 1px solid #F44336;
+}
+.control-group.error .bootstrap-select .dropdown-toggle {
+    border-color: #F44336;
+}
+.bs-searchbox,
+.bs-actionsbox {
+    padding: 5px 12px;
+    margin-bottom: 5px;
+}
+.bs-searchbox {
+    position: relative;
+}
+.bs-searchbox > .form-control {
+    padding-left: 36px;
+}
+.bs-searchbox:after {
+    content: '\e98e';
+    font-family: 'icomoon';
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    color: inherit;
+    display: block;
+    font-size: 12px;
+    margin-top: -6px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+.bs-actionsbox {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.bs-actionsbox .btn-group button {
+    width: 50%;
+}
+.bs-searchbox + .bs-actionsbox {
+    padding: 0 12px 7px;
+}
+.mobile-device {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block !important;
+    width: 100%;
+    height: 100% !important;
+    opacity: 0;
+}
+select.bs-select-hidden,
+select.selectpicker {
+    display: none !important;
+}
+.bootstrap-select > select {
+    position: absolute!important;
+    bottom: 0;
+    left: 50%;
+    display: block!important;
+    width: .5px!important;
+    height: 100%!important;
+    padding: 0!important;
+    opacity: 0!important;
+    border: none;
+}

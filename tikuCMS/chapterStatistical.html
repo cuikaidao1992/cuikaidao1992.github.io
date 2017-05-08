@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+
+    <link rel="shortcut icon" href="images/favicon_1.ico">
+
+    <title>题库后台管理</title>
+
+    <!-- Base Css Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Icons -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/ionicon/css/ionicons.min.css" rel="stylesheet" />
+    <link href="css/material-design-iconic-font.min.css" rel="stylesheet">
+
+    <!-- animate css -->
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <!-- Waves-effect -->
+    <link href="css/waves-effect.css" rel="stylesheet">
+
+    <!-- sweet alerts -->
+    <link href="assets/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+
+    <!-- Plugin Css-->
+    <link rel="stylesheet" href="assets/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/jquery-datatables-editable/datatables.css" />
+    <link rel="stylesheet" href="assets/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/select2/select2.css">
+
+    <!-- Custom Files -->
+    <link href="css/helper.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/modernizr.min.js"></script>
+</head>
+<body class="fixed-left">
+<!-- Begin page -->
+<div id="wrapper">
+    <!-- Top Bar Start -->
+    <topbar></topbar>
+    <!-- Top Bar End -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <side-menu></side-menu>
+    <!-- Left Sidebar End -->
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="pull-left page-title m-t-15">
+                            <ul class="btn-group">
+                                <li class="btn btn-default col-sm-1"><a href="topicManage.html">题目</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="paperManage.html">试卷</a></li>
+                                <li class="btn btn-default col-sm-1 active"><a href="chapterManage.html">章节考点</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="easyWrong.html">易错题</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="dailyPractice.html">每日一练</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="#">竞技赛场</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="#">挑战难度</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="rankingList.html">排行榜</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="evaluate.html">评估</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="notes.html">笔记</a></li>
+                            </ul>
+                        </div>
+                        <ol class="breadcrumb pull-right">
+                            <li><a href="#">题库管理</a></li>
+                            <li><a href="#">管理</a></li>
+                            <li class="active">章节统计</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="panel  panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">章节统计</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-toolbar">
+                            <div class="btn-group" style="width: 200px">
+                                <select class="form-control select2">
+                                    <option value="" selected="selected">科目</option>
+                                    <option value="1">基础知识-北京</option>
+                                    <option value="2">专业技能-北京</option>
+                                    <option value="3">基础知识-全国</option>
+                                    <option value="4">专业技能-全国</option>
+                                </select>
+                            </div>
+                            <div class="btn-group">
+                                <input type="search" class="form-control" placeholder="请输入题目名称">
+                                <button type="button" class="btn btn-success"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th width="50%">章节名称</th>
+                                <th width="10%">总题数</th>
+                                <th width="10%">测试数</th>
+                                <th width="10%">正确率（平均）</th>
+                                <th width="20%">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>政治学概论第一章</td>
+                                <td>30</td>
+                                <td>16</td>
+                                <td>23%</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default btn btn-xs lookUp"><i class="fa fa-search-plus"></i>查阅</a>
+                                    <a href="#" class="btn-default btn btn-xs wrongList"><i class="fa fa-trophy"></i>错题榜</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>政治学概论第二章</td>
+                                <td>20</td>
+                                <td>15</td>
+                                <td>78%</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default btn btn-xs lookUp"><i class="fa fa-search-plus"></i>查阅</a>
+                                    <a href="#" class="btn-default btn btn-xs wrongList"><i class="fa fa-trophy"></i>错题榜</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>政治学概论第三章</td>
+                                <td>100</td>
+                                <td>43</td>
+                                <td>56%</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default btn btn-xs lookUp"><i class="fa fa-search-plus"></i>查阅</a>
+                                    <a href="#" class="btn-default btn btn-xs wrongList"><i class="fa fa-trophy"></i>错题榜</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>政治学概论第一章</td>
+                                <td>40</td>
+                                <td>27</td>
+                                <td>49%</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default btn btn-xs lookUp"><i class="fa fa-search-plus"></i>查阅</a>
+                                    <a href="#" class="btn-default btn btn-xs wrongList"><i class="fa fa-trophy"></i>错题榜</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="dataTables_info" role="status" aria-live="polite">共 165 条记录，当前第 1/9 ，每页 20 条记录</div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="dataTables_paginate clearfix">
+                                    <div class="paginate_skip pull-right">
+                                        <label>转到第 <input type="text" class="form-control input-sm">页</label>
+                                        <a href="javascript:;" class="skip_button">确定</a>
+                                    </div>
+                                    <ul class="pagination pull-right">
+                                        <li class="paginate_button previous">
+                                            <a href="#">上一页</a>
+                                        </li>
+                                        <li class="paginate_button active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li class="paginate_button">
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li class="paginate_button ">
+                                            <a href="#">3</a>
+                                        </li>
+                                        <li class="paginate_button ">
+                                            <a href="#">4</a>
+                                        </li>
+                                        <li class="paginate_button next">
+                                            <a href="#">下一页</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: page -->
+
+                </div> <!-- end Panel -->
+
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+        <footer class="footer text-right">
+            北京学慧网络教育科技有限公司
+        </footer>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
+</div>
+<!--modal-->
+<div id="chapter-view-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">查阅</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-toolbar">
+                    <div class="btn-group">
+                        <input type="text" class="form-control date-picker" placeholder="请输入查询日期">
+                    </div>
+                    <div class="btn-group">
+                        <input type="search" class="form-control" placeholder="请输入手机号/用户名">
+                        <button type="button" class="btn btn-success"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <table class="table table-bordered table-striped ">
+                    <thead>
+                    <tr>
+                        <th>答题时间</th>
+                        <th>参与者</th>
+                        <th>答题量</th>
+                        <th>正确率</th>
+                        <th>得分</th>
+                        <th>答题时长</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2017-01-01 11:30</td>
+                        <td>张三-15101599560</td>
+                        <td>20/100</td>
+                        <td>56%</td>
+                        <td>50</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>2017-04-15 10:30</td>
+                        <td>李四-15101599560</td>
+                        <td>60/100</td>
+                        <td>75%</td>
+                        <td>50</td>
+                        <td>120</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="wrong-view-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">错题榜</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-toolbar">
+                    <div class="btn-group">
+                        <select class="form-control">
+                            <option>单选题</option>
+                            <option>多选题</option>
+                            <option>判断题</option>
+                            <option>不定项题</option>
+                            <option>判断题</option>
+                            <option>简答题</option>
+                            <option>填空题</option>
+                            <option>材料题</option>
+                        </select>
+                    </div>
+                    <div class="btn-group">
+                        <input type="search" class="form-control" placeholder="请输入题目名称">
+                        <button type="button" class="btn btn-success"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <table class="table table-bordered table-striped ">
+                    <thead>
+                    <tr>
+                        <th>题目</th>
+                        <th>错误数/测试数</th>
+                        <th>正确率</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1.社会主义核心价值体系的灵魂是()</td>
+                        <td>20/100</td>
+                        <td>56%</td>
+                    </tr>
+                    <tr>
+                        <td>2.在共产主义社会，社会生产力高度发展，物质产品极大丰富，人民精神境界极大提高，消费资料实行()</td>
+                        <td>60/100</td>
+                        <td>75%</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal-->
+
+
+<!-- END wrapper -->
+<script>
+    var resizefunc = [];
+</script>
+
+<!-- jQuery  -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/waves.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="assets/jquery-detectmobile/detect.js"></script>
+<script src="assets/fastclick/fastclick.js"></script>
+<script src="assets/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script src="assets/jquery-blockui/jquery.blockUI.js"></script>
+<script src="assets/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="assets/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="assets/select2/select2.js"></script>
+
+
+<!-- CUSTOM JS -->
+<script src="js/jquery.app.js"></script>
+<script src="js/comment-template.js"></script>
+<script src="assets/sweet-alert/sweet-alert.min.js"></script>
+
+<!-- Examples -->
+<script src="assets/magnific-popup/magnific-popup.js"></script>
+<script>
+    new Vue({
+        el:'#wrapper'
+    });
+    $(".paper-type").click(function () {
+        $(this).next().slideToggle()
+    });
+    $(".lookUp").click(function () {
+        $("#chapter-view-modal").modal("show")
+    });
+    $(".wrongList").click(function () {
+        $("#wrong-view-modal").modal("show")
+    });
+    $("body").on("focus.page",".date-picker",function(){
+        $(this).datetimepicker({
+            format: "yyyy-mm-dd",
+            minView:2,
+            autoclose: true,
+            language: "zh-CN"
+        })
+    });
+    jQuery(".select2").select2({
+        width: '100%'
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,2233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+
+    <link rel="shortcut icon" href="images/favicon_1.ico">
+
+    <title>题库后台管理</title>
+
+    <!-- Base Css Files -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Font Icons -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/ionicon/css/ionicons.min.css" rel="stylesheet" />
+    <link href="fonts/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/material-design-iconic-font.min.css" rel="stylesheet">
+
+    <!-- animate css -->
+    <link href="css/animate.css" rel="stylesheet"/>
+
+    <!-- Waves-effect -->
+    <link href="css/waves-effect.css" rel="stylesheet">
+
+    <!-- Plugin Css-->
+    <link rel="stylesheet" href="assets/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/jquery-datatables-editable/datatables.css" />
+
+    <!-- Custom Files -->
+    <link href="css/helper.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/modernizr.min.js"></script>
+</head>
+<body class="fixed-sidebar full-height-layout gray-bg">
+<!-- Begin page -->
+<div id="wrapper">
+    <!-- Top Bar Start -->
+    <topbar></topbar>
+    <!-- Top Bar End -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <side-menu></side-menu>
+    <!-- Left Sidebar End -->
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="pull-left page-title m-t-15">
+                            <ul class="btn-group">
+                                <li class="btn btn-default col-sm-1"><a href="topicManage.html">题目</a></li>
+                                <li class="btn btn-default col-sm-1 active"><a href="paperManage.html">试卷</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="chapterManage.html">章节考点</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="easyWrong.html">易错题</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="dailyPractice.html">每日一练</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="#">竞技赛场</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="#">挑战难度</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="rankingList.html">排行榜</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="evaluate.html">评估</a></li>
+                                <li class="btn btn-default col-sm-1"><a href="notes.html">笔记</a></li>
+                            </ul>
+                        </div>
+                        <ol class="breadcrumb pull-right">
+                            <li><a href="#">题库管理</a></li>
+                            <li><a href="#">管理</a></li>
+                            <li class="active">试卷管理</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-body">
+                            <div class="table-toolbar">
+                                <div class="btn-group">
+                                    <select class="form-control">
+                                        <option value="" selected="selected">题目类型</option>
+                                        <option value="">单选题</option>
+                                        <option value="">多选题</option>
+                                        <option value="">判断题</option>
+                                        <option value="">不定项选择题</option>
+                                        <option value="">简答题</option>
+                                        <option value="">填空题</option>
+                                        <option value="">材料题</option>
+                                    </select>
+                                </div>
+                                <div class="btn-group">
+                                    <input autocomplete="off" type="text" value="" class="form-control" id="keyWord" name="identityId" placeholder="关键词">
+                                    <button class="btn btn-success" type="button">搜索</button>
+                                </div>
+                            </div>
+                            <table class="table table-bordered table-striped" id="datatable-editable">
+                                <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>题型</th>
+                                    <th>题目</th>
+                                    <th width="20%">操作项</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>单选题</td>
+                                    <td>社会主义核心价值体系的灵魂是()</td>
+                                    <td class="actions">
+                                        <a href="javascript:void (0);" class="btn single-edit waves-effect waves-light btn-default"><i class="fa fa-pencil"></i>编辑</a>
+                                        <a href="javascript:void (0);" class="btn single-replace waves-effect waves-light btn-default"><i class="fa fa-exchange"></i>替换</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>多选题</td>
+                                    <td> 在共产主义社会，社会生产力高度发展，物质产品极大丰富，人民精神境界极大提高，消费资料实行()</td>
+                                    <td class="actions">
+                                        <a href="javascript:void (0);" class="btn multiple-edit waves-effect waves-light btn-default"><i class="fa fa-pencil"></i>编辑</a>
+                                        <a href="javascript:void (0);" class="btn multiple-replace waves-effect waves-light btn-default"><i class="fa fa-exchange"></i>替换</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>判断题</td>
+                                    <td>职业道德只是有助于提高个人职业素养和本行业的发展。</td>
+                                    <td class="actions">
+                                        <a href="javascript:void (0);" class="btn judge-edit waves-effect waves-light btn-default"><i class="fa fa-pencil"></i>编辑</a>
+                                        <a href="javascript:void (0);" class="btn judge-replace waves-effect waves-light btn-default"><i class="fa fa-exchange"></i>替换</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>填空题</td>
+                                    <td>人们心灵世界的核心是()</td>
+                                    <td class="actions">
+                                        <a href="javascript:void (0);" class="btn filling-edit waves-effect waves-light btn-default"><i class="fa fa-pencil"></i>编辑</a>
+                                        <a href="javascript:void (0);" class="btn filling-replace waves-effect waves-light btn-default"><i class="fa fa-exchange"></i>替换</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>简答题</td>
+                                    <td>什么是思想道德素质和法律素质？二者的关系如何？</td>
+                                    <td class="actions">
+                                        <a href="javascript:void (0);" class="btn short-edit waves-effect waves-light btn-default"><i class="fa fa-pencil"></i>编辑</a>
+                                        <a href="javascript:void (0);" class="btn short-replace waves-effect waves-light btn-default"><i class="fa fa-exchange"></i>替换</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>材料题</td>
+                                    <td>根据以下材料，回答81-84题</td>
+                                    <td class="actions">
+                                        <a href="javascript:void (0);" class="btn material-edit waves-effect waves-light btn-default"><i class="fa fa-pencil"></i>编辑</a>
+                                        <a href="javascript:void (0);" class="btn material-replace waves-effect waves-light btn-default"><i class="fa fa-exchange"></i>替换</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="dataTables_info" role="status" aria-live="polite">共 165 条记录，当前第 1/9 ，每页 20 条记录</div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="dataTables_paginate clearfix">
+                                        <div class="paginate_skip pull-right">
+                                            <label>转到第 <input type="text" class="form-control input-sm">页</label>
+                                            <a href="javascript:;" class="skip_button">确定</a>
+                                        </div>
+                                        <ul class="pagination pull-right">
+                                            <li class="paginate_button previous">
+                                                <a href="#">上一页</a>
+                                            </li>
+                                            <li class="paginate_button active">
+                                                <a href="#">1</a>
+                                            </li>
+                                            <li class="paginate_button">
+                                                <a href="#">2</a>
+                                            </li>
+                                            <li class="paginate_button ">
+                                                <a href="#">3</a>
+                                            </li>
+                                            <li class="paginate_button ">
+                                                <a href="#">4</a>
+                                            </li>
+                                            <li class="paginate_button next">
+                                                <a href="#">下一页</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- end: page -->
+
+                </div> <!-- end Panel -->
+
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+
+        <footer class="footer text-right">
+            学慧网络教育科技有限公司
+        </footer>
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
+
+</div>
+<!-- END wrapper -->
+<div id="single-edit-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">科目名称</label>
+                        <div class="col-sm-9">
+                            <select class="form-control select2">
+                                <option>基础知识-全国</option>
+                                <option>专业技能-全国</option>
+                                <option>基础知识-北京</option>
+                                <option>专业技能-北京</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" value="	社会主义核心价值体系的灵魂是()">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选项</label>
+                        <div class="col-sm-9 select-group">
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <label class="xh-label">
+                                        <input class="xh-radio" type="radio" name="option1" checked="">
+                                        <span class="xh-radioInput"></span>A
+                                    </label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <label class="xh-label">
+                                        <input class="xh-radio" type="radio" name="option1">
+                                        <span class="xh-radioInput"></span>B
+                                    </label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <label class="xh-label">
+                                        <input class="xh-radio" type="radio" name="option1">
+                                        <span class="xh-radioInput"></span>C
+                                    </label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <label class="xh-label">
+                                        <input class="xh-radio" type="radio" name="option1">
+                                        <span class="xh-radioInput"></span>D
+                                    </label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="add-course m-b-5 single-add-select">
+                                <i class="btn-info fa fa-plus"></i>
+                                <span>增加选项</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目解析</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5">一、灵魂：马克思主义指导思想是社会主义核心价值体系的灵魂。二、主题：中国特色社会主义共同理想是社会主义核心价值体系的主题。三、精髓：以爱国主义为核心的民族精神和以改革创新为核心的时代精神是社会主义核心价值体系的精髓。四、基础：社会主义荣辱观是社会主义核心价值体系的基础。</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选择从属</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6 m-b-10">
+                                    <select class="form-control select2">
+                                        <option>请选择科目</option>
+                                        <option>基础知识-全国</option>
+                                        <option>专业技能-全国</option>
+                                        <option>基础知识-北京</option>
+                                        <option>专业技能-北京</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="select-group">
+                                        <div class="owner-type">
+                                            <span class="form-control" id="single-chosen">按从属选择</span>
+                                            <i class="select-arrow"></i>
+                                        </div>
+                                        <div class="owner-type-drop">
+                                            <div class="owner-type-search">
+                                                <label class="owner-type-offscreen"></label>
+                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+                                            </div>
+                                            <ul class="owner-type-results">
+                                                <li>
+                                                    <h3>第一章</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <h3 style="padding-left: 19px">第一节</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点1</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点2</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-25">
+                        <label class="col-sm-2 control-label">难度</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <label class="xh-label col-sm-2">
+                                    <input class="xh-radio" type="radio" name="option2">
+                                    <span class="xh-radioInput"></span>简单
+                                </label>
+                                <label class="xh-label col-sm-2">
+                                    <input class="xh-radio" type="radio" name="option2" checked>
+                                    <span class="xh-radioInput"></span>一般
+                                </label>
+                                <label class="xh-label col-sm-2">
+                                    <input class="xh-radio" type="radio" name="option2">
+                                    <span class="xh-radioInput"></span>困难
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="multiple-edit-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">科目名称</label>
+                        <div class="col-sm-9">
+                            <select class="form-control select2">
+                                <option>基础知识-全国</option>
+                                <option>专业技能-全国</option>
+                                <option>基础知识-北京</option>
+                                <option>专业技能-北京</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" value="在共产主义社会，社会生产力高度发展，物质产品极大丰富，人民精神境界极大提高，消费资料实行()">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选项</label>
+                        <div class="col-sm-9 select-group">
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <div class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <label class="p-l-15">A</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <div class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <label class="p-l-15">B</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <div class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <label class="p-l-15">C</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <div class="checkbox">
+                                        <input type="checkbox">
+                                        <label class="p-l-15">D</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="add-course m-b-5 add-select" id="multiple-add-select">
+                                <i class="btn-info fa fa-plus"></i>
+                                <span>增加选项</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目解析</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5">共产主义社会是指在生产资料公有制的条件下,在高度发达的社会生产力的基础上,实行各尽所能、按需分配原则的劳动者自由联合的社会经济形态.共产主义社会,是一种高级的社会主义社会,但也有许多与社会主义相似的地方,具体的共产主义社会是：本质依然是以人为本,建设的宗旨是各各方面都建设成非常和谐的社会,以道德为主,以法律为辅.同时也是社会主义社会发展到最科学和谐阶段的社会,是一个人人有尊严,公平、正义、和谐的社会.</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选择从属</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6 m-b-10">
+                                    <select class="form-control select2">
+                                        <option>请选择科目</option>
+                                        <option>基础知识-全国</option>
+                                        <option>专业技能-全国</option>
+                                        <option>基础知识-北京</option>
+                                        <option>专业技能-北京</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="select-group">
+                                        <div class="owner-type">
+                                            <span class="form-control" id="multiple-chosen">按从属选择</span>
+                                            <i class="select-arrow"></i>
+                                        </div>
+                                        <div class="owner-type-drop">
+                                            <div class="owner-type-search">
+                                                <label class="owner-type-offscreen"></label>
+                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+                                            </div>
+                                            <ul class="owner-type-results">
+                                                <li>
+                                                    <h3>第一章</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <h3 style="padding-left: 19px">第一节</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点1</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点2</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-25">
+                        <label class="col-sm-2 control-label">难度</label>
+                        <div class="col-sm-9">
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="e-dnd1">
+                                <label for="e-dnd1">简单</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" checked="" id="e-dnd2">
+                                <label for="e-dnd2">一般</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="e-dnd3">
+                                <label for="e-dnd3">困难</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="judge-edit-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">科目名称</label>
+                        <div class="col-sm-9">
+                            <select class="form-control select2">
+                                <option>基础知识-全国</option>
+                                <option>专业技能-全国</option>
+                                <option>基础知识-北京</option>
+                                <option>专业技能-北京</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">答案</label>
+                        <div class="col-sm-9 select-group">
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="option" value="true" id="me-pd1">
+                                <label for="me-pd1">正确</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="option" value="false" checked="" id="me-pd2">
+                                <label for="me-pd2">错误</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目解析</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选择从属</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6 m-b-10">
+                                    <select class="form-control select2">
+                                        <option>请选择科目</option>
+                                        <option>基础知识-全国</option>
+                                        <option>专业技能-全国</option>
+                                        <option>基础知识-北京</option>
+                                        <option>专业技能-北京</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="select-group">
+                                        <div class="owner-type">
+                                            <span class="form-control" id="judge-chosen">按从属选择</span>
+                                            <i class="select-arrow"></i>
+                                        </div>
+                                        <div class="owner-type-drop">
+                                            <div class="owner-type-search">
+                                                <label class="owner-type-offscreen"></label>
+                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+                                            </div>
+                                            <ul class="owner-type-results">
+                                                <li>
+                                                    <h3>第一章</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <h3 style="padding-left: 19px">第一节</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点1</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点2</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-25">
+                        <label class="col-sm-2 control-label">难度</label>
+                        <div class="col-sm-9">
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="nd1">
+                                <label for="nd1">简单</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" checked="" id="nd2">
+                                <label for="nd2">一般</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="nd3">
+                                <label for="nd3">困难</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="filling-edit-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">科目名称</label>
+                        <div class="col-sm-9">
+                            <select class="form-control select2">
+                                <option>基础知识-全国</option>
+                                <option>专业技能-全国</option>
+                                <option>基础知识-北京</option>
+                                <option>专业技能-北京</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" value="人们心灵世界的核心是()">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目解析</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5">人一定要有信仰,没有信仰的人生是荒芜人生.</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选择从属</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6 m-b-10">
+                                    <select class="form-control select2">
+                                        <option>请选择科目</option>
+                                        <option>基础知识-全国</option>
+                                        <option>专业技能-全国</option>
+                                        <option>基础知识-北京</option>
+                                        <option>专业技能-北京</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="select-group">
+                                        <div class="owner-type">
+                                            <span class="form-control" id="filling-chosen">按从属选择</span>
+                                            <i class="select-arrow"></i>
+                                        </div>
+                                        <div class="owner-type-drop">
+                                            <div class="owner-type-search">
+                                                <label class="owner-type-offscreen"></label>
+                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+                                            </div>
+                                            <ul class="owner-type-results">
+                                                <li>
+                                                    <h3>第一章</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <h3 style="padding-left: 19px">第一节</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点1</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点2</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-25">
+                        <label class="col-sm-2 control-label">难度</label>
+                        <div class="col-sm-9">
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="tnd1">
+                                <label for="tnd1">简单</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" checked="" id="tnd2">
+                                <label for="tnd2">一般</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="tnd3">
+                                <label for="tnd3">困难</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="short-edit-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">科目名称</label>
+                        <div class="col-sm-9">
+                            <select class="form-control select2">
+                                <option>基础知识-全国</option>
+                                <option>专业技能-全国</option>
+                                <option>基础知识-北京</option>
+                                <option>专业技能-北京</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" value="什么是思想道德素质和法律素质？二者的关系如何？">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目解析</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5">思想道德素质：思想道德素质主要包括思想政治素质和道德素质，思想政治素质是一种特殊的素养，是人们在为实现本阶级利益而进行的各种社会实践中表现出来的特定品质，道德素质是人们的道德认识和道德行为水平的综合反应，包含着一个人的道德修养和道德情操，体现着一个人的道德水平和道德风貌。</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选择从属</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6 m-b-10">
+                                    <select class="form-control select2">
+                                        <option>请选择科目</option>
+                                        <option>基础知识-全国</option>
+                                        <option>专业技能-全国</option>
+                                        <option>基础知识-北京</option>
+                                        <option>专业技能-北京</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="select-group">
+                                        <div class="owner-type">
+                                            <span class="form-control" id="short-chosen">按从属选择</span>
+                                            <i class="select-arrow"></i>
+                                        </div>
+                                        <div class="owner-type-drop">
+                                            <div class="owner-type-search">
+                                                <label class="owner-type-offscreen"></label>
+                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+                                            </div>
+                                            <ul class="owner-type-results">
+                                                <li>
+                                                    <h3>第一章</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <h3 style="padding-left: 19px">第一节</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点1</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点2</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-25">
+                        <label class="col-sm-2 control-label">难度</label>
+                        <div class="col-sm-9">
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="jnd1">
+                                <label for="jnd1">简单</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" checked="" id="jnd2">
+                                <label for="jnd2">一般</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="jnd3">
+                                <label for="jnd3">困难</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="material-edit-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">材料内容</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5">某法兰盘生产企业采用单对象流水线的生产组织方式，法兰盘的日生产量为50件，每日工作8小时，时间有效利用系数为0.90，假设废品率为0；流水线的第3道工序计算所需某精密设备为6台，现有5台该种设备投入生产。[2010年真题]
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">子题管理</label>
+                        <div class="col-sm-9">
+                            <div class="set-table">
+                                <ul class="table-tr clearfix">
+                                    <li class="col-sm-1 table-th">编号</li>
+                                    <li class="col-sm-8 table-th">题目内容</li>
+                                    <li class="col-sm-3 table-th actions">操作</li>
+                                </ul>
+                                <ul class="sortable table-tb">
+                                    <li class="table-tr">
+                                        <ul class="table-tr clearfix">
+                                            <li class="table-td col-sm-1">1</li>
+                                            <li class="table-td col-sm-8">下列对作品有关内容的分析和概括，最恰当的两项是(5分) </li>
+                                            <li class="table-td col-sm-3 actions">
+                                                <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
+                                                <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i> 删除</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="table-tr">
+                                        <ul class="table-tr clearfix">
+                                            <li class="table-td col-sm-1">2</li>
+                                            <li class="table-td col-sm-8">作品中的渡夫有哪些性格特点?请简要分析。(6分)</li>
+                                            <li class="table-td col-sm-3 actions">
+                                                <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
+                                                <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i> 删除</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="table-tr">
+                                        <ul class="table-tr clearfix">
+                                            <li class="table-td col-sm-1">3</li>
+                                            <li class="table-td col-sm-8">作品是怎样叙述渡夫的故事的?这样写有什么好处?请简要分析。(6分)</li>
+                                            <li class="table-td col-sm-3 actions">
+                                                <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
+                                                <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i> 删除</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="table-tr">
+                                        <ul class="table-tr clearfix">
+                                            <li class="table-td col-sm-1">4</li>
+                                            <li class="table-td col-sm-8">作品为什么以渡夫的任情高歌学科网为结尾?结合全文，谈谈你的看法。(8分) </li>
+                                            <li class="table-td col-sm-3 actions">
+                                                <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
+                                                <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i> 删除</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="add-course m-b-5 m-t-15">
+                                <i class="btn-info fa fa-plus" id="add-material"></i>
+                                <span>新增子题</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选择从属</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6 m-b-10">
+                                    <select class="form-control select2">
+                                        <option>请选择科目</option>
+                                        <option>基础知识-全国</option>
+                                        <option>专业技能-全国</option>
+                                        <option>基础知识-北京</option>
+                                        <option>专业技能-北京</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 m-b-10">
+                                    <div class="select-group">
+                                        <div class="owner-type">
+                                            <span class="form-control" id="material-chosen">按从属选择</span>
+                                            <i class="select-arrow"></i>
+                                        </div>
+                                        <div class="owner-type-drop">
+                                            <div class="owner-type-search">
+                                                <label class="owner-type-offscreen"></label>
+                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+                                            </div>
+                                            <ul class="owner-type-results">
+                                                <li>
+                                                    <h3>第一章</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <h3 style="padding-left: 19px">第一节</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点1</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点2</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-25">
+                        <label class="col-sm-2 control-label">难度</label>
+                        <div class="col-sm-9">
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="cnd1">
+                                <label for="cnd1">简单</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" checked="" id="cnd2">
+                                <label for="cnd2">一般</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="cnd3">
+                                <label for="cnd3">困难</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="single-replace-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">科目名称</label>
+                        <div class="col-sm-9">
+                            <select class="form-control select2">
+                                <option>基础知识-全国</option>
+                                <option>专业技能-全国</option>
+                                <option>基础知识-北京</option>
+                                <option>专业技能-北京</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选项</label>
+                        <div class="col-sm-9 select-group">
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <label class="xh-label">
+                                        <input class="xh-radio" type="radio" name="option1" checked="">
+                                        <span class="xh-radioInput"></span>A
+                                    </label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <label class="xh-label">
+                                        <input class="xh-radio" type="radio" name="option1">
+                                        <span class="xh-radioInput"></span>B
+                                    </label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <label class="xh-label">
+                                        <input class="xh-radio" type="radio" name="option1">
+                                        <span class="xh-radioInput"></span>C
+                                    </label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <label class="xh-label">
+                                        <input class="xh-radio" type="radio" name="option1">
+                                        <span class="xh-radioInput"></span>D
+                                    </label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="add-course m-b-5 single-add-select">
+                                <i class="btn-info fa fa-plus"></i>
+                                <span>增加选项</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目解析</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选择从属</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6 m-b-10">
+                                    <select class="form-control select2">
+                                        <option>请选择科目</option>
+                                        <option>基础知识-全国</option>
+                                        <option>专业技能-全国</option>
+                                        <option>基础知识-北京</option>
+                                        <option>专业技能-北京</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="select-group">
+                                        <div class="owner-type">
+                                            <span class="form-control" id="single-replace-chosen">按从属选择</span>
+                                            <i class="select-arrow"></i>
+                                        </div>
+                                        <div class="owner-type-drop">
+                                            <div class="owner-type-search">
+                                                <label class="owner-type-offscreen"></label>
+                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+                                            </div>
+                                            <ul class="owner-type-results">
+                                                <li>
+                                                    <h3>第一章</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <h3 style="padding-left: 19px">第一节</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点1</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点2</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-25">
+                        <label class="col-sm-2 control-label">难度</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <label class="xh-label col-sm-2">
+                                    <input class="xh-radio" type="radio" name="option2">
+                                    <span class="xh-radioInput"></span>简单
+                                </label>
+                                <label class="xh-label col-sm-2">
+                                    <input class="xh-radio" type="radio" name="option2" checked>
+                                    <span class="xh-radioInput"></span>一般
+                                </label>
+                                <label class="xh-label col-sm-2">
+                                    <input class="xh-radio" type="radio" name="option2">
+                                    <span class="xh-radioInput"></span>困难
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="multiple-replace-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">科目名称</label>
+                        <div class="col-sm-9">
+                            <select class="form-control select2">
+                                <option>基础知识-全国</option>
+                                <option>专业技能-全国</option>
+                                <option>基础知识-北京</option>
+                                <option>专业技能-北京</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选项</label>
+                        <div class="col-sm-9 select-group">
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <div class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <label class="p-l-15">A</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <div class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <label class="p-l-15">B</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <div class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <label class="p-l-15">C</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1">
+                                    <div class="checkbox">
+                                        <input type="checkbox">
+                                        <label class="p-l-15">D</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-1 add-course p-t-5">
+                                    <i class="btn-danger fa fa-minus remove-select"></i>
+                                </div>
+                            </div>
+                            <div class="add-course m-b-5 add-select">
+                                <i class="btn-info fa fa-plus"></i>
+                                <span>增加选项</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目解析</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选择从属</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6 m-b-10">
+                                    <select class="form-control select2">
+                                        <option>请选择科目</option>
+                                        <option>基础知识-全国</option>
+                                        <option>专业技能-全国</option>
+                                        <option>基础知识-北京</option>
+                                        <option>专业技能-北京</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="select-group">
+                                        <div class="owner-type">
+                                            <span class="form-control" id="multiple-replace-chosen">按从属选择</span>
+                                            <i class="select-arrow"></i>
+                                        </div>
+                                        <div class="owner-type-drop">
+                                            <div class="owner-type-search">
+                                                <label class="owner-type-offscreen"></label>
+                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+                                            </div>
+                                            <ul class="owner-type-results">
+                                                <li>
+                                                    <h3>第一章</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <h3 style="padding-left: 19px">第一节</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点1</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点2</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-25">
+                        <label class="col-sm-2 control-label">难度</label>
+                        <div class="col-sm-9">
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="dnd1">
+                                <label for="dnd1">简单</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" checked="" id="dnd2">
+                                <label for="dnd2">一般</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="dnd3">
+                                <label for="dnd3">困难</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="judge-replace-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">科目名称</label>
+                        <div class="col-sm-9">
+                            <select class="form-control select2">
+                                <option>基础知识-全国</option>
+                                <option>专业技能-全国</option>
+                                <option>基础知识-北京</option>
+                                <option>专业技能-北京</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">答案</label>
+                        <div class="col-sm-9 select-group">
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="option" value="true" id="m-pd1">
+                                <label for="m-pd1">正确</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="option" value="false" checked="" id="m-pd2">
+                                <label for="m-pd2">错误</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目解析</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选择从属</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6 m-b-10">
+                                    <select class="form-control select2">
+                                        <option>请选择科目</option>
+                                        <option>基础知识-全国</option>
+                                        <option>专业技能-全国</option>
+                                        <option>基础知识-北京</option>
+                                        <option>专业技能-北京</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="select-group">
+                                        <div class="owner-type">
+                                            <span class="form-control" id="judge-replace-chosen">按从属选择</span>
+                                            <i class="select-arrow"></i>
+                                        </div>
+                                        <div class="owner-type-drop">
+                                            <div class="owner-type-search">
+                                                <label class="owner-type-offscreen"></label>
+                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+                                            </div>
+                                            <ul class="owner-type-results">
+                                                <li>
+                                                    <h3>第一章</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <h3 style="padding-left: 19px">第一节</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点1</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点2</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-25">
+                        <label class="col-sm-2 control-label">难度</label>
+                        <div class="col-sm-9">
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="r-nd1">
+                                <label for="r-nd1">简单</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" checked="" id="r-nd2">
+                                <label for="r-nd2">一般</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="r-nd3">
+                                <label for="r-nd3">困难</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="filling-replace-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">科目名称</label>
+                        <div class="col-sm-9">
+                            <select class="form-control select2">
+                                <option>基础知识-全国</option>
+                                <option>专业技能-全国</option>
+                                <option>基础知识-北京</option>
+                                <option>专业技能-北京</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目解析</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选择从属</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6 m-b-10">
+                                    <select class="form-control select2">
+                                        <option>请选择科目</option>
+                                        <option>基础知识-全国</option>
+                                        <option>专业技能-全国</option>
+                                        <option>基础知识-北京</option>
+                                        <option>专业技能-北京</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="select-group">
+                                        <div class="owner-type">
+                                            <span class="form-control" id="filling-replace-chosen">按从属选择</span>
+                                            <i class="select-arrow"></i>
+                                        </div>
+                                        <div class="owner-type-drop">
+                                            <div class="owner-type-search">
+                                                <label class="owner-type-offscreen"></label>
+                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+                                            </div>
+                                            <ul class="owner-type-results">
+                                                <li>
+                                                    <h3>第一章</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <h3 style="padding-left: 19px">第一节</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点1</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点2</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-25">
+                        <label class="col-sm-2 control-label">难度</label>
+                        <div class="col-sm-9">
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="r-tnd1">
+                                <label for="r-tnd1">简单</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" checked="" id="r-tnd2">
+                                <label for="r-tnd2">一般</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="r-tnd3">
+                                <label for="r-tnd3">困难</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="short-replace-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">科目名称</label>
+                        <div class="col-sm-9">
+                            <select class="form-control select2">
+                                <option>基础知识-全国</option>
+                                <option>专业技能-全国</option>
+                                <option>基础知识-北京</option>
+                                <option>专业技能-北京</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">题目解析</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选择从属</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6 m-b-10">
+                                    <select class="form-control select2">
+                                        <option>请选择科目</option>
+                                        <option>基础知识-全国</option>
+                                        <option>专业技能-全国</option>
+                                        <option>基础知识-北京</option>
+                                        <option>专业技能-北京</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="select-group">
+                                        <div class="owner-type">
+                                            <span class="form-control" id="short-replace-chosen">按从属选择</span>
+                                            <i class="select-arrow"></i>
+                                        </div>
+                                        <div class="owner-type-drop">
+                                            <div class="owner-type-search">
+                                                <label class="owner-type-offscreen"></label>
+                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+                                            </div>
+                                            <ul class="owner-type-results">
+                                                <li>
+                                                    <h3>第一章</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <h3 style="padding-left: 19px">第一节</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点1</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点2</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-25">
+                        <label class="col-sm-2 control-label">难度</label>
+                        <div class="col-sm-9">
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="r-jnd1">
+                                <label for="r-jnd1">简单</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" checked="" id="r-jnd2">
+                                <label for="r-jnd2">一般</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="r-jnd3">
+                                <label for="r-jnd3">困难</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="material-replace-modal" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bordered-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">材料内容</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">子题管理</label>
+                        <div class="col-sm-9">
+                            <div class="set-table">
+                                <ul class="table-tr clearfix">
+                                    <li class="col-sm-1 table-th">编号</li>
+                                    <li class="col-sm-8 table-th">题目内容</li>
+                                    <li class="col-sm-3 table-th actions">操作</li>
+                                </ul>
+                                <ul class="sortable table-tb">
+                                    <li class="table-tr">
+                                        <ul class="table-tr clearfix">
+                                            <li class="table-td col-sm-1">1</li>
+                                            <li class="table-td col-sm-8">下列对作品有关内容的分析和概括，最恰当的两项是(5分) </li>
+                                            <li class="table-td col-sm-3 actions">
+                                                <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
+                                                <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i> 删除</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="table-tr">
+                                        <ul class="table-tr clearfix">
+                                            <li class="table-td col-sm-1">2</li>
+                                            <li class="table-td col-sm-8">作品中的渡夫有哪些性格特点?请简要分析。(6分)</li>
+                                            <li class="table-td col-sm-3 actions">
+                                                <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
+                                                <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i> 删除</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="table-tr">
+                                        <ul class="table-tr clearfix">
+                                            <li class="table-td col-sm-1">3</li>
+                                            <li class="table-td col-sm-8">作品是怎样叙述渡夫的故事的?这样写有什么好处?请简要分析。(6分)</li>
+                                            <li class="table-td col-sm-3 actions">
+                                                <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
+                                                <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i> 删除</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="table-tr">
+                                        <ul class="table-tr clearfix">
+                                            <li class="table-td col-sm-1">4</li>
+                                            <li class="table-td col-sm-8">作品为什么以渡夫的任情高歌学科网为结尾?结合全文，谈谈你的看法。(8分) </li>
+                                            <li class="table-td col-sm-3 actions">
+                                                <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
+                                                <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i> 删除</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="add-course m-b-5 m-t-15">
+                                <i class="btn-info fa fa-plus"></i>
+                                <span>新增子题</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">选择从属</label>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-6 m-b-10">
+                                    <select class="form-control select2">
+                                        <option>请选择科目</option>
+                                        <option>基础知识-全国</option>
+                                        <option>专业技能-全国</option>
+                                        <option>基础知识-北京</option>
+                                        <option>专业技能-北京</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 m-b-10">
+                                    <div class="select-group">
+                                        <div class="owner-type">
+                                            <span class="form-control" id="material-replace-chosen">按从属选择</span>
+                                            <i class="select-arrow"></i>
+                                        </div>
+                                        <div class="owner-type-drop">
+                                            <div class="owner-type-search">
+                                                <label class="owner-type-offscreen"></label>
+                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+                                            </div>
+                                            <ul class="owner-type-results">
+                                                <li>
+                                                    <h3>第一章</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <h3 style="padding-left: 19px">第一节</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点1</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    <h3 style="padding-left: 38px">考点2</h3>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点1</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点2</h3>
+                                                                        </li>
+                                                                        <li>
+                                                                            <h3 style="padding-left: 57px">知识点3</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-25">
+                        <label class="col-sm-2 control-label">难度</label>
+                        <div class="col-sm-9">
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="r-cnd1">
+                                <label for="r-cnd1">简单</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" checked="" id="r-cnd2">
+                                <label for="r-cnd2">一般</label>
+                            </div>
+                            <div class="radio col-sm-2">
+                                <input type="radio" name="radio2" value="option1" id="r-cnd3">
+                                <label for="r-cnd3">困难</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-9 col-xs-offset-3">
+                    <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                    <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 80px" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var resizefunc = [];
+</script>
+
+<!-- jQuery  -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/waves.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="assets/jquery-detectmobile/detect.js"></script>
+<script src="assets/fastclick/fastclick.js"></script>
+<script src="assets/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script src="assets/jquery-blockui/jquery.blockUI.js"></script>
+
+<!-- Examples -->
+<script src="assets/magnific-popup/magnific-popup.js"></script>
+<script src="assets/counterup/jquery.counterup.min.js"></script>
+
+<!-- CUSTOM JS -->
+<script src="js/jquery.app.js"></script>
+<script src="js/comment-template.js"></script>
+<script>
+    new Vue({
+        el:'#wrapper'
+    });
+
+    $(".single-edit").click(function () {
+        $("#single-edit-modal").modal("show")
+    });
+    $(".material-edit").click(function () {
+        $("#material-edit-modal").modal("show");
+    });
+    $(".judge-edit").click(function () {
+        $("#judge-edit-modal").modal("show");
+    });
+
+    $(".filling-edit").click(function () {
+        $("#filling-edit-modal").modal("show");
+    });
+    $(".short-edit").click(function () {
+        $("#short-edit-modal").modal("show")
+    });
+    $(".multiple-edit").click(function () {
+        $("#multiple-edit-modal").modal("show")
+    });
+
+    $(".single-replace").click(function () {
+        $("#single-replace-modal").modal("show")
+    });
+    $(".material-replace").click(function () {
+        $("#material-replace-modal").modal("show");
+    });
+    $(".judge-replace").click(function () {
+        $("#judge-replace-modal").modal("show");
+    });
+
+    $(".filling-replace").click(function () {
+        $("#filling-replace-modal").modal("show");
+    });
+    $(".short-replace").click(function () {
+        $("#short-replace-modal").modal("show")
+    });
+    $(".multiple-replace").click(function () {
+        $("#multiple-replace-modal").modal("show")
+    });
+
+    $("#single-chosen").selectType();
+    $("#short-chosen").selectType();
+    $("#material-chosen").selectType();
+</script>
+</body>
+</html>

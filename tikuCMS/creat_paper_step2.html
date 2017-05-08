@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+
+    <link rel="shortcut icon" href="images/favicon_1.ico">
+
+    <title>题库后台管理</title>
+
+    <!-- Base Css Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Icons -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/ionicon/css/ionicons.min.css" rel="stylesheet" />
+    <link href="fonts/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/material-design-iconic-font.min.css" rel="stylesheet">
+
+    <!-- animate css -->
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <!-- Waves-effect -->
+    <link href="css/waves-effect.css" rel="stylesheet">
+
+    <!-- Plugins css -->
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link href="assets/modal-effect/css/component.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/magnific-popup/magnific-popup.css" />
+    <link href="assets/select2/select2.css" rel="stylesheet" type="text/css">
+
+
+    <!-- ION Slider -->
+    <link href="assets/ion-rangeslider/ion.rangeSlider.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/ion-rangeslider/ion.rangeSlider.skinFlat.css" rel="stylesheet" type="text/css"/>
+
+
+    <!-- Custom Files -->
+    <link href="css/helper.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .dataTables_paginate{
+            float: right;
+            text-align: right;
+            margin: 0 0 20px 20px;
+        }
+        #datatable-editable_paginate{
+            margin: 0;
+        }
+        #datatable-editable_paginate .pagination{
+            margin: 5px;
+        }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/modernizr.min.js"></script>
+</head>
+
+
+
+<body class="fixed-left">
+<!-- Begin page -->
+<div id="wrapper">
+    <!-- Top Bar Start -->
+    <topbar></topbar>
+    <!-- Top Bar End -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <side-menu></side-menu>
+    <!-- Left Sidebar End -->
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="pull-left page-title">试卷生成方式</h4>
+                        <ol class="breadcrumb pull-right">
+                            <li><a href="#">试卷管理</a></li>
+                            <li><a href="#">创建试卷</a></li>
+                            <li class="active">试卷生成方式</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="col-sm-12 step-inline-block form-group">
+                                    <ul class="col-sm-9">
+                                        <li class=" mr-20" >1. 试卷基本信息</li>
+                                        <li class="step-active">2. 生成方式</li>
+                                    </ul>
+                                </div>
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" style="width: 150px">题目种类</label>
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                    <div class="radio radio-inline">
+                                                        <input type="radio" value="0" name="topicType" checked id="topicType1">
+                                                        <label for="topicType1">全部</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <div class="radio radio-inline">
+                                                        <input type="radio" value="1" name="topicType" id="topicType2">
+                                                        <label for="topicType2">真题</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <div class="radio radio-inline">
+                                                        <input type="radio" value="1" name="topicType" id="topicType3">
+                                                        <label for="topicType3">剔除真题</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <form class="form-horizontal select-auto-hand" role="form">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label"><span class="help-inline"><font color="red">*</font> </span>生成方式</label>
+                                        <div class="col-sm-6 help-inline">
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                    <div class="radio radio-inline">
+                                                        <input type="radio" id="autoplay" value="auto" checked name="produce_func">
+                                                        <label for="autoplay"> 自动生成 </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <div class="radio radio-inline">
+                                                        <input type="radio" id="handplay" value="hand" name="produce_func">
+                                                        <label for="handplay">手动生成 </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <form class="form-horizontal autocomplete"  role="form">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label"></label>
+                                        <div class="col-sm-6" id="setWay">
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                    <div class="radio radio-inline">
+                                                        <input type="radio" value="0" id="random-produce" checked name="inlineRadioOptions">
+                                                        <label for="random-produce"> 随机生成 </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <div class="radio radio-inline">
+                                                        <input type="radio" value="1" id="easy-leavl-produce" name="inlineRadioOptions">
+                                                        <label for="easy-leavl-produce">按难易生成 </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group set-type" id="filterType">
+                                        <label class="col-sm-2 control-label"><span class="help-inline"><font color="red">*</font> </span>过滤重复</label>
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                    <div class="radio radio-inline">
+                                                        <input type="radio" id="noRepeat" value="noRepeat" checked name="filterOptions">
+                                                        <label for="noRepeat"> 过滤重复 </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <div class="radio radio-inline">
+                                                        <input type="radio" id="repeat" value="repeat"  name="filterOptions">
+                                                        <label for="repeat"> 不过滤 </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group set-type" id="degree" style="display:none">
+                                        <label for="range_03" class="col-sm-2 control-label">试卷难易程度</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="range_03">
+                                            <div class="m-t-15 clearfix" style="display: block;">
+                                                <div class="col-sm-4">简单<span id="simple">20%</span></div>
+                                                <div class="col-sm-4">一般<span id="general">60%</span></div>
+                                                <div class="col-sm-4">困难<span id="difficulty">20%</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label"><span class="help-inline"><font color="red">*</font> </span>出题范围</label>
+                                        <div class="col-md-10">
+                                            <div class="row">
+                                                <div class="col-sm-1" style="width: 140px">
+                                                    <select class="form-control" id="select-range">
+                                                        <option value="0">全范围</option>
+                                                        <option value="1">按章节</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3 rangeType" style="display: none">
+                                                    <select class="form-control select2">
+                                                        <option>人力资源管理第一章</option>
+                                                        <option>人力资源管理第二章</option>
+                                                        <option>人力资源管理第三章</option>
+                                                        <option>人力资源管理第四章</option>
+                                                        <option>人力资源管理第五章</option>
+                                                        <option>人力资源管理第六章</option>
+                                                        <option>人力资源管理第七章</option>
+                                                        <option>人力资源管理第八章</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3 rangeType" style="display: none">
+                                                    <select class="form-control select2">
+                                                        <option>第一节</option>
+                                                        <option>第二节</option>
+                                                        <option>第三节</option>
+                                                        <option>第四节</option>
+                                                        <option>第五节</option>
+                                                        <option>第六节</option>
+                                                        <option>第七节</option>
+                                                        <option>第八节</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label"><span class="help-inline"><font color="red">*</font> </span>题目设置</label>
+                                        <div class="col-md-10">
+                                            <div class="setPaper">
+                                                <ul class="sortable">
+                                                    <li>
+                                                        <div class="col-sm-1 dragIco" style="width: 30px">
+                                                            <a href="javascript:;" class="fa fa-sort-alpha-desc"></a>
+                                                        </div>
+                                                        <div class="col-sm-1 paperType" style="width: 110px">
+                                                            <span>单选题</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 200px">
+                                                            <span class="input-group-addon">题目数量</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                            <span class="input-group-addon">100</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 160px">
+                                                            <span class="input-group-addon">每题分值</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width:250px">
+                                                            <span class="input-group-addon">题型显示名称</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="单选题">
+                                                        </div>
+                                                        <div class="input-group col-sm-4" style="width: 460px">
+                                                            <span class="input-group-addon">题型说明</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="一、单选题(本题型共20小题，每小题1分，共20分)">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="col-sm-1 dragIco" style="width: 30px">
+                                                            <a href="javascript:;" class="fa fa-sort-alpha-desc"></a>
+                                                        </div>
+                                                        <div class="col-sm-1 paperType" style="width: 110px">
+                                                            <span>多选题</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 200px">
+                                                            <span class="input-group-addon">题目数量</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                            <span class="input-group-addon">100</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 160px">
+                                                            <span class="input-group-addon">每题分值</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 160px">
+                                                            <span class="input-group-addon">漏选分值</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width:250px">
+                                                            <span class="input-group-addon">题型显示名称</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="多选题">
+                                                        </div>
+                                                        <div class="input-group col-sm-3" style="width: 400px">
+                                                            <span class="input-group-addon">题型说明</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="二、多选题(本题型共5小题，每小题3分，漏选一项1分，共15分)">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="col-sm-1 dragIco" style="width: 30px">
+                                                            <a href="javascript:;" class="fa fa-sort-alpha-desc"></a>
+                                                        </div>
+                                                        <div class="col-sm-1 paperType" style="width: 110px">
+                                                            <span>判断题</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 200px">
+                                                            <span class="input-group-addon">题目数量</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                            <span class="input-group-addon">100</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 160px">
+                                                            <span class="input-group-addon">每题分值</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width:250px">
+                                                            <span class="input-group-addon">题型显示名称</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="判断题">
+                                                        </div>
+                                                        <div class="input-group col-sm-4" style="width: 460px">
+                                                            <span class="input-group-addon">题型说明</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="三、判断题(本题型共10小题，每小题1分，共10分)">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="col-sm-1 dragIco" style="width: 30px">
+                                                            <a href="javascript:;" class="fa fa-sort-alpha-desc"></a>
+                                                        </div>
+                                                        <div class="col-sm-1 paperType" style="width: 110px">
+                                                            <span>不定项选择题</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 200px">
+                                                            <span class="input-group-addon">题目数量</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                            <span class="input-group-addon">100</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 160px">
+                                                            <span class="input-group-addon">每题分值</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 160px">
+                                                            <span class="input-group-addon">漏选分值</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width:250px">
+                                                            <span class="input-group-addon">题型显示名称</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="不定项选择题">
+                                                        </div>
+                                                        <div class="input-group col-sm-4" style="width: 400px">
+                                                            <span class="input-group-addon">题型说明</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="四、不定项选择题(本题型共5小题，每小题5分，漏选一项2分，共25分)">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="col-sm-1 dragIco" style="width: 30px">
+                                                            <a href="javascript:;" class="fa fa-sort-alpha-desc"></a>
+                                                        </div>
+                                                        <div class="col-sm-1 paperType" style="width: 110px">
+                                                            <span>简答题</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 200px">
+                                                            <span class="input-group-addon">题目数量</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                            <span class="input-group-addon">100</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 160px">
+                                                            <span class="input-group-addon">每题分值</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width:250px">
+                                                            <span class="input-group-addon">题型显示名称</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="简答题">
+                                                        </div>
+                                                        <div class="input-group col-sm-4" style="width: 460px">
+                                                            <span class="input-group-addon">题型说明</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="五、简答题(本题型共5小题，每小题5分，共25分)">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="col-sm-1 dragIco" style="width: 30px">
+                                                            <a href="javascript:;" class="fa fa-sort-alpha-desc"></a>
+                                                        </div>
+                                                        <div class="col-sm-1 paperType" style="width: 110px">
+                                                            <span>填空题</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 200px">
+                                                            <span class="input-group-addon">题目数量</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                            <span class="input-group-addon">100</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 160px">
+                                                            <span class="input-group-addon">每题分值</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width:250px">
+                                                            <span class="input-group-addon">题型显示名称</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="填空题">
+                                                        </div>
+                                                        <div class="input-group col-sm-4" style="width: 460px">
+                                                            <span class="input-group-addon">题型说明</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="六、填空题(本题型共10小题，每小题1分，共10分)">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="col-sm-1 dragIco" style="width: 30px">
+                                                            <a href="javascript:;" class="fa fa-sort-alpha-desc"></a>
+                                                        </div>
+                                                        <div class="col-sm-1 paperType" style="width: 110px">
+                                                            <span>材料题</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 200px">
+                                                            <span class="input-group-addon">题目数量</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                            <span class="input-group-addon">100</span>
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width: 160px">
+                                                            <span class="input-group-addon">每题分值</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                                        </div>
+                                                        <div class="input-group col-sm-2" style="width:250px">
+                                                            <span class="input-group-addon">题型显示名称</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="材料题">
+                                                        </div>
+                                                        <div class="input-group col-sm-4" style="width: 460px">
+                                                            <span class="input-group-addon">题型说明</span>
+                                                            <input type="text" name="example-input1-group2" class="form-control" value="七、材料题(本题型共4小题，每小题5分，共20分)">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" style="width: 150px">生成试卷数量</label>
+                                        <div class="col-md-2" style="width: 150px">
+                                             <input type="text" name="example-input1-group2" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-btn">
+                                        <div class="col-sm-9 col-xs-offset-3">
+                                            <button class="btn btn-success waves-effect waves-light col-sm-2" type="submit">保存</button>
+                                            <button class="btn btn-default waves-effect col-sm-2 col-xs-offset-2" type="button" onclick="window.history.back(-1)">取消</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <form class="form-horizontal handcomplete hide"  role="form">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" style="width: 150px"><span class="help-inline"><font color="red">*</font> </span>添加题目</label>
+                                        <div class="col-sm-7">
+                                            <ul class="nav nav-tabs navtab-bg table-bordered">
+                                                <li class="active">
+                                                    <a href="#single" data-toggle="tab" aria-expanded="true">
+                                                        <span class="visible-xs"><i class="fa fa-home"></i></span>
+                                                        <span class="hidden-xs">单选题</span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#multiple" data-toggle="tab" aria-expanded="false">
+                                                        <span class="visible-xs"><i class="fa fa-user"></i></span>
+                                                        <span class="hidden-xs">多选题</span>
+                                                    </a>
+                                                </li>
+
+                                                <li class="">
+                                                    <a href="#judge" data-toggle="tab" aria-expanded="false">
+                                                        <span class="visible-xs"><i class="fa fa-cog"></i></span>
+                                                        <span class="hidden-xs">判断题</span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#undefined-item" data-toggle="tab" aria-expanded="false">
+                                                        <span class="visible-xs"><i class="fa fa-envelope-o"></i></span>
+                                                        <span class="hidden-xs">不定型</span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#short" data-toggle="tab" aria-expanded="false">
+                                                        <span class="visible-xs"><i class="fa fa-cog"></i></span>
+                                                        <span class="hidden-xs">简答题</span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#filling" data-toggle="tab" aria-expanded="false">
+                                                        <span class="visible-xs"><i class="fa fa-cog"></i></span>
+                                                        <span class="hidden-xs">填空题</span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#material" data-toggle="tab" aria-expanded="false">
+                                                        <span class="visible-xs"><i class="fa fa-cog"></i></span>
+                                                        <span class="hidden-xs">材料题</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content table-bordered">
+                                                <div class="tab-pane active" id="single">
+                                                    <form role="form" class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">试题列表</label>
+                                                            <div class="col-sm-10">
+                                                                <div class="set-table table">
+                                                                    <ul class="table-tr clearfix">
+                                                                        <li class="col-sm-8 table-th">题目</li>
+                                                                        <li class="col-sm-1 table-th">难度</li>
+                                                                        <li class="col-sm-3 table-th actions">操作</li>
+                                                                    </ul>
+                                                                    <ul class="table-tb">
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中加点词语的使用，全都正确的一项是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中，没有语病的一句是（3分）</li>
+                                                                                <li class="table-td col-sm-1">2星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">填入下面文段空白处的词语，最恰当的一组是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="add-course m-b-5 m-t-15">
+                                                                    <i class="btn-info fa fa-plus select-btn"></i>
+                                                                    <span>选题</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型显示名称</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" value="单选题" style="width: 98%">
+                                                            </div>
+                                                            <label class="col-sm-2 control-label">每题分值</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control"  style="width: 100%">
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型说明</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control"  value="一、单选题(本题型共20小题，每小题1分，共20分)" style="width: 95%">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group form-btn">
+                                                            <div class="col-sm-10 col-sm-offset-2">
+                                                                <button class="btn btn-success waves-effect waves-light col-sm-3 col-sm-offset-1" type="submit">保存</button>
+                                                                <button class="btn btn-default waves-effect col-sm-3 col-sm-offset-2" type="button" onclick="window.history.back(-1)">取消</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="tab-pane" id="multiple">
+                                                    <form role="form" class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">试题列表</label>
+                                                            <div class="col-sm-10">
+                                                                <div class="set-table table">
+                                                                    <ul class="table-tr clearfix">
+                                                                        <li class="col-sm-8 table-th">题目</li>
+                                                                        <li class="col-sm-1 table-th">难度</li>
+                                                                        <li class="col-sm-3 table-th actions">操作</li>
+                                                                    </ul>
+                                                                    <ul class="table-tb">
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中加点词语的使用，全都正确的一项是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中，没有语病的一句是（3分）</li>
+                                                                                <li class="table-td col-sm-1">2星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">填入下面文段空白处的词语，最恰当的一组是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="add-course m-b-5 m-t-15">
+                                                                    <i class="btn-info fa fa-plus select-btn"></i>
+                                                                    <span>选题</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型显示名称</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" value="多选题" style="width: 98%">
+                                                            </div>
+                                                            <label class="col-sm-2 control-label">每题分值</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" style="width: 100%">
+                                                            </div>
+                                                            <label class="col-sm-2 control-label" style="width: 110px">漏题分值</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" style="width: 100%">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型说明</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control"  value="二、多选题(本题型共5小题，每小题3分，漏选一项1分，共15分)"  style="width: 95%">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group form-btn">
+                                                            <div class="col-sm-10 col-sm-offset-2">
+                                                                <button class="btn btn-success waves-effect waves-light col-sm-3 col-sm-offset-1" type="submit">保存</button>
+                                                                <button class="btn btn-default waves-effect col-sm-3 col-sm-offset-2" type="button" onclick="window.history.back(-1)">取消</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="tab-pane" id="judge">
+                                                    <form role="form" class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">试题列表</label>
+                                                            <div class="col-sm-10">
+                                                                <div class="set-table table">
+                                                                    <ul class="table-tr clearfix">
+                                                                        <li class="col-sm-8 table-th">题目</li>
+                                                                        <li class="col-sm-1 table-th">难度</li>
+                                                                        <li class="col-sm-3 table-th actions">操作</li>
+                                                                    </ul>
+                                                                    <ul class="table-tb">
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中加点词语的使用，全都正确的一项是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中，没有语病的一句是（3分）</li>
+                                                                                <li class="table-td col-sm-1">2星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">填入下面文段空白处的词语，最恰当的一组是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="add-course m-b-5 m-t-15">
+                                                                    <i class="btn-info fa fa-plus select-btn"></i>
+                                                                    <span>选题</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型显示名称</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" value="判断题" style="width: 98%">
+                                                            </div>
+                                                            <label class="col-sm-2 control-label">每题分值</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" style="width: 100%">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型说明</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control"  value="三、判断题(本题型共10小题，每小题1分，共10分)" style="width: 95%">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group form-btn">
+                                                            <div class="col-sm-10 col-sm-offset-2">
+                                                                <button class="btn btn-success waves-effect waves-light col-sm-3 col-sm-offset-1" type="submit">保存</button>
+                                                                <button class="btn btn-default waves-effect col-sm-3 col-sm-offset-2" type="button">取消</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="tab-pane" id="undefined-item">
+                                                    <form role="form" class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">试题列表</label>
+                                                            <div class="col-sm-10">
+                                                                <div class="set-table table">
+                                                                    <ul class="table-tr clearfix">
+                                                                        <li class="col-sm-8 table-th">题目</li>
+                                                                        <li class="col-sm-1 table-th">难度</li>
+                                                                        <li class="col-sm-3 table-th actions">操作</li>
+                                                                    </ul>
+                                                                    <ul class="table-tb">
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中加点词语的使用，全都正确的一项是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中，没有语病的一句是（3分）</li>
+                                                                                <li class="table-td col-sm-1">2星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">填入下面文段空白处的词语，最恰当的一组是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="add-course m-b-5 m-t-15">
+                                                                    <i class="btn-info fa fa-plus select-btn"></i>
+                                                                    <span>选题</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型显示名称</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" value="不定型" style="width: 98%">
+                                                            </div>
+                                                            <label class="col-sm-2 control-label">每题分值</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" style="width: 100%">
+                                                            </div>
+                                                            <label class="col-sm-2 control-label" style="width: 110px">漏题分值</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control"  style="width: 100%">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型说明</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control"  value="四、不定项选择题(本题型共5小题，每小题5分，漏选一项2分，共25分)" style="width: 95%">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group form-btn">
+                                                            <div class="col-sm-10 col-sm-offset-2">
+                                                                <button class="btn btn-success waves-effect waves-light col-sm-3 col-sm-offset-1" type="submit">保存</button>
+                                                                <button class="btn btn-default waves-effect col-sm-3 col-sm-offset-2" type="button">取消</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="tab-pane" id="short">
+                                                    <form role="form" class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">试题列表</label>
+                                                            <div class="col-sm-10">
+                                                                <div class="set-table table">
+                                                                    <ul class="table-tr clearfix">
+                                                                        <li class="col-sm-8 table-th">题目</li>
+                                                                        <li class="col-sm-1 table-th">难度</li>
+                                                                        <li class="col-sm-3 table-th actions">操作</li>
+                                                                    </ul>
+                                                                    <ul class="table-tb">
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中加点词语的使用，全都正确的一项是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中，没有语病的一句是（3分）</li>
+                                                                                <li class="table-td col-sm-1">2星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">填入下面文段空白处的词语，最恰当的一组是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="add-course m-b-5 m-t-15">
+                                                                    <i class="btn-info fa fa-plus select-btn"></i>
+                                                                    <span>选题</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型显示名称</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" value="简答题" style="width: 98%">
+                                                            </div>
+                                                            <label class="col-sm-2 control-label">每题分值</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" style="width: 100%">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型说明</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control"  value="五、简答题(本题型共5小题，每小题5分，共25分)" style="width: 95%">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group form-btn">
+                                                            <div class="col-sm-10 col-sm-offset-2">
+                                                                <button class="btn btn-success waves-effect waves-light col-sm-3 col-sm-offset-1" type="submit">保存</button>
+                                                                <button class="btn btn-default waves-effect col-sm-3 col-sm-offset-2" type="button" onclick="window.history.back(-1)">取消</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="tab-pane" id="filling">
+                                                    <form role="form" class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">试题列表</label>
+                                                            <div class="col-sm-10">
+                                                                <div class="set-table table">
+                                                                    <ul class="table-tr clearfix">
+                                                                        <li class="col-sm-8 table-th">题目</li>
+                                                                        <li class="col-sm-1 table-th">难度</li>
+                                                                        <li class="col-sm-3 table-th actions">操作</li>
+                                                                    </ul>
+                                                                    <ul class="table-tb">
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中加点词语的使用，全都正确的一项是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中，没有语病的一句是（3分）</li>
+                                                                                <li class="table-td col-sm-1">2星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">填入下面文段空白处的词语，最恰当的一组是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="add-course m-b-5 m-t-15">
+                                                                    <i class="btn-info fa fa-plus select-btn"></i>
+                                                                    <span>选题</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型显示名称</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" value="填空题" style="width: 98%">
+                                                            </div>
+                                                            <label class="col-sm-2 control-label">每题分值</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" style="width: 100%">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型说明</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control"  value="六、填空题(本题型共10小题，每小题1分，共10分)" style="width: 95%">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group form-btn">
+                                                            <div class="col-sm-10 col-sm-offset-2">
+                                                                <button class="btn btn-success waves-effect waves-light col-sm-3 col-sm-offset-1" type="submit">保存</button>
+                                                                <button class="btn btn-default waves-effect col-sm-3 col-sm-offset-2" type="button" onclick="window.history.back(-1)">取消</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="tab-pane" id="material">
+                                                    <form role="form" class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">试题列表</label>
+                                                            <div class="col-sm-10">
+                                                                <div class="set-table table">
+                                                                    <ul class="table-tr clearfix">
+                                                                        <li class="col-sm-8 table-th">题目</li>
+                                                                        <li class="col-sm-1 table-th">难度</li>
+                                                                        <li class="col-sm-3 table-th actions">操作</li>
+                                                                    </ul>
+                                                                    <ul class="table-tb">
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中加点词语的使用，全都正确的一项是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">下列各句中，没有语病的一句是（3分）</li>
+                                                                                <li class="table-td col-sm-1">2星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="table-tr">
+                                                                            <ul class="table-tr clearfix">
+                                                                                <li class="table-td col-sm-8">填入下面文段空白处的词语，最恰当的一组是（3分）</li>
+                                                                                <li class="table-td col-sm-1">3星</li>
+                                                                                <li class="table-td col-sm-3 actions">
+                                                                                    <a href="javascript:;" class="btn-default edit btn btn-xs"><i class="fa fa-eye"></i>预览</a>
+                                                                                    <a href="javascript:;" class="btn-default delete btn btn-xs"><i class="fa fa-trash-o"></i>删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="add-course m-b-5 m-t-15">
+                                                                    <i class="btn-info fa fa-plus select-btn"></i>
+                                                                    <span>选题</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型显示名称</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" value="材料题" style="width: 98%">
+                                                            </div>
+                                                            <label class="col-sm-2 control-label">每题分值</label>
+                                                            <div class="col-sm-2">
+                                                                <input type="text" class="form-control" style="width: 100%">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-2 control-label">题型说明</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control"  value="七、材料题(本题型共4小题，每小题5分，共20分)" style="width: 95%">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group form-btn">
+                                                            <div class="col-sm-10 col-sm-offset-2">
+                                                                <button class="btn btn-success waves-effect waves-light col-sm-3 col-sm-offset-1" type="submit">保存</button>
+                                                                <button class="btn btn-default waves-effect col-sm-3 col-sm-offset-2" type="button">取消</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div> <!-- panel-body -->
+                        </div> <!-- panel -->
+                    </div> <!-- col -->
+                </div> <!-- End row -->
+            </div> <!-- container -->
+        </div> <!-- content -->
+        <footer class="footer text-right">
+            学慧网络教育科技有限公司
+        </footer>
+
+        </div>
+    <!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <!--modal-->
+
+    <div id="con-select-type" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bordered-blue">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">选题</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="table-toolbar">
+                        <div class="btn-group">
+                            <select class="form-control">
+                                <option>题目名称</option>
+                                <option>编号</option>
+                            </select>
+                        </div>
+                        <div class="btn-group">
+                            <input type="search" class="form-control" placeholder="请输入题目名称">
+                            <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <table class="table table-bordered table-striped" id="datatable-editable">
+                        <thead>
+                        <tr>
+                            <th class="text-center"><label><input type="checkbox" class="checkAll" name="checkedAll"><span class="text"></span></label></th>
+                            <th>题目内容</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label> <input type="checkbox" class="slaver" name="checkbox"> <span class="text"></span> </label></td>
+                                <td>下列对原文有关内容的概括和分析，不正确的一项是（3分）</td>
+                                <td class="actions">
+                                    <a href="#" class="btn-default view btn btn-xs"><i class="fa fa-info-circle"></i>详情</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="modal-footer">
+                        <div class="col-sm-9 col-xs-offset-3">
+                            <button class="btn btn-success waves-light col-sm-3" type="submit">保存</button>
+                            <button class="btn btn-default col-sm-3" type="button" style=" margin-left: 60px" data-dismiss="modal">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal-->
+
+    <script>
+        var resizefunc = [];
+    </script>
+
+    <!-- jQuery  -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/waves.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="assets/jquery-detectmobile/detect.js"></script>
+    <script src="assets/fastclick/fastclick.js"></script>
+    <script src="assets/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="assets/jquery-blockui/jquery.blockUI.js"></script>
+
+    <!-- Modal-Effect -->
+    <script src="assets/modal-effect/js/classie.js"></script>
+    <script src="assets/styling/uniform.min.js"></script>
+    <script src="assets/modal-effect/js/modalEffects.js"></script>
+    <script src="assets/jquery-blockui/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/select2/select2.min.js" type="text/javascript"></script>
+
+    <script src="assets/ion-rangeslider/ion.rangeSlider.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="js/jquery.app.js"></script>
+    <script src="js/comment-template.js"></script>
+
+    <script>
+        new Vue({
+            el:'#wrapper'
+        });
+        /*根据全范围和章节 下拉章节显示隐藏*/
+        $('#select-all-section input[name=select-total]').change(function () {
+            if($('#select-section').prop('checked')){
+                $('.select-section-wrap').show()
+            }else {
+                $('.select-section-wrap').hide()
+            }
+        });
+
+        /*根据生成方式选择显示*/
+        $('input[name=produce_func]').change(function () {
+            $('.autocomplete,.handcomplete').removeClass('hide');
+            if($('#autoplay').prop('checked')){
+                $('.autocomplete').show();
+                $('.handcomplete').hide();
+            }
+            if($('#handplay').prop('checked')){
+                $('.handcomplete').show();
+                $('.autocomplete').hide()
+            }
+        });
+
+        $('.sortable').sortable({
+            axis:"y",
+            scroll:false,
+            cursor: "pointer"
+
+        });
+        jQuery(".select2").select2({
+            width: '100%'
+        });
+        $("#setWay").find("input[type=radio]").click(function(){
+            $(".set-type").hide();
+            if($(this).val()==0){
+                $(".set-type").eq(0).show();
+            }else{
+                $(".set-type").eq(1).show();
+            }
+        });
+        $("#select-range").change(function(){
+            if($(this).val()==0){
+                $(".rangeType").hide();
+            }else{
+                $(".rangeType").show();
+            }
+        });
+        $("#range_03").ionRangeSlider({
+            type: "double",
+            grid: true,
+            min: 0,
+            max: 100,
+            from: 25,
+            to: 80,
+            postfix: "%",
+            onChange: function(obj){
+                $("#simple").text(obj.from_percent+"%");
+                $("#general").text((obj.to_percent-obj.from_percent)+"%");
+                $("#difficulty").text((obj.max-obj.to_percent)+"%")
+            }
+        });
+
+        $(".select-btn").click(function () {
+            $("#con-select-type").modal("show")
+        });
+        $("[name='checkedAll']").click(function(){
+            var isChecked = $(this).prop("checked");
+            $.each($("[name='checkbox']"), function(i, n){
+                $(n).prop("checked", isChecked);
+            });
+        });
+        $("[name='checkbox']").click(function () {
+            var flags=true;
+            $("[name='checkbox']").filter(function () {
+                if(!$(this).prop("checked")){
+                    return flags=false;
+                }
+            });
+            $("[name='checkedAll']").prop("checked", flags);
+        });
+    </script>
+
+</body>
+</html>
